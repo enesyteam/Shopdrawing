@@ -1,0 +1,8 @@
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Tests\WPG.UnitTests\bin\Debug\WpfPropertyGrid.UnitTests.dll
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Tests\WPG.UnitTests\bin\Debug\WpfPropertyGrid.UnitTests.pdb
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Tests\WPG.UnitTests\bin\Debug\System.Windows.Controls.WpfPropertyGrid.dll
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Tests\WPG.UnitTests\bin\Debug\System.Windows.Controls.WpfPropertyGrid.pdb
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Tests\WPG.UnitTests\bin\Debug\System.Windows.Controls.WpfPropertyGrid.xml
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Tests\WPG.UnitTests\obj\Debug\WPG.UnitTests.csprojResolveAssemblyReference.cache
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Tests\WPG.UnitTests\obj\Debug\WpfPropertyGrid.UnitTests.dll
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Tests\WPG.UnitTests\obj\Debug\WpfPropertyGrid.UnitTests.pdb

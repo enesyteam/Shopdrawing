@@ -1,0 +1,71 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:System="clr-namespace:System;assembly=mscorlib">
+    
+    <FontFamily x:Key="DefaultFont">Segoe UI</FontFamily>
+
+    <System:Double x:Key="FontSize-Smallest">9</System:Double>
+    <System:Double x:Key="FontSize-Smaller">11</System:Double>
+    <System:Double x:Key="FontSize-Normal">12</System:Double>
+    <System:Double x:Key="FontSize-Large">13.333</System:Double>
+    <System:Double x:Key="FontSize-Larger">16</System:Double>
+    <System:Double x:Key="FontSize-Largest">22</System:Double>
+    <System:Double x:Key="FontSize-VeryLarge">48</System:Double>
+
+    <System:String x:Key="DefaultUIFont" x:Uid="System:String_1">Segoe UI</System:String>
+    <System:Double x:Key="{x:Static SystemFonts.IconFontSizeKey}" x:Uid="System:Double_5">10</System:Double>
+    <FontWeight x:Key="{x:Static SystemFonts.IconFontWeightKey}" x:Uid="FontWeight_4">Normal</FontWeight>
+    <System:Double x:Key="{x:Static SystemFonts.MessageFontSizeKey}" x:Uid="System:Double_6">11</System:Double>
+    <FontWeight x:Key="{x:Static SystemFonts.MessageFontWeightKey}" x:Uid="FontWeight_2">Normal</FontWeight>
+    <System:Double x:Key="{x:Static SystemFonts.CaptionFontSizeKey}" x:Uid="System:Double_7">12</System:Double>
+    <FontWeight x:Key="{x:Static SystemFonts.CaptionFontWeightKey}" x:Uid="FontWeight_3">Bold</FontWeight>
+    <System:Double x:Key="LargeText" x:Uid="System:Double_10">14</System:Double>
+    <System:Double x:Key="DefaultSpacing" x:Uid="System:Double_1">4</System:Double>
+    <System:Double x:Key="MediumSpacing" x:Uid="System:Double_2">8</System:Double>
+    <System:Double x:Key="LargeSpacing" x:Uid="System:Double_3">12</System:Double>
+    <System:Double x:Key="ExtraLargeSpacing" x:Uid="System:Double_4">16</System:Double>
+    <System:Double x:Key="-DefaultSpacing" x:Uid="System:Double_11">-4</System:Double>
+    <System:Double x:Key="-MediumSpacing" x:Uid="System:Double_12">-8</System:Double>
+    <System:Double x:Key="-LargeSpacing" x:Uid="System:Double_13">-12</System:Double>
+    <System:Double x:Key="-ExtraLargeSpacing" x:Uid="System:Double_8">-16</System:Double>
+    <Thickness x:Key="DefaultLeftMargin" x:Uid="Thickness_1" Left="{StaticResource DefaultSpacing}" Top="0"
+             Right="0" Bottom="0"/>
+    <Thickness x:Key="MediumLeftMargin" x:Uid="Thickness_7" Left="{StaticResource MediumSpacing}" Top="0"
+             Right="0" Bottom="0"/>
+    <Thickness x:Key="LargeLeftMargin" x:Uid="Thickness_11" Left="{StaticResource LargeSpacing}" Top="0" Right="0"
+             Bottom="0"/>
+    <Thickness x:Key="ExtraLargeLeftMargin" x:Uid="Thickness_12" Left="{StaticResource ExtraLargeSpacing}" Top="0"
+             Right="0" Bottom="0"/>
+    <Thickness x:Key="DefaultBottomMargin" x:Uid="Thickness_8" Left="0" Top="0" Right="0"
+             Bottom="{StaticResource DefaultSpacing}"/>
+    <Thickness x:Key="DefaultLeftTopMargin" x:Uid="Thickness_3" Left="{StaticResource DefaultSpacing}"
+             Top="{StaticResource DefaultSpacing}" Right="0" Bottom="0"/>
+    <Thickness x:Key="DefaultTopMargin" x:Uid="Thickness_2" Left="0" Top="{StaticResource DefaultSpacing}"
+             Right="0" Bottom="0"/>
+    <Thickness x:Key="MediumTopMargin" x:Uid="Thickness_4" Left="0" Top="{StaticResource MediumSpacing}" Right="0"
+             Bottom="0"/>
+    <Thickness x:Key="LargeTopMargin" x:Uid="Thickness_9" Left="0" Top="{StaticResource LargeSpacing}" Right="0"
+             Bottom="0"/>
+    <Thickness x:Key="LargeRightMargin" x:Uid="Thickness_13" Left="0" Top="0"
+             Right="{StaticResource LargeSpacing}" Bottom="0"/>
+    <Thickness x:Key="DefaultLeftMediumTopMargin" x:Uid="Thickness_14" Left="{StaticResource DefaultSpacing}"
+             Top="{StaticResource MediumSpacing}" Right="0" Bottom="0"/>
+    <Thickness x:Key="ExtraLargeTopMargin" x:Uid="Thickness_5" Left="0" Top="{StaticResource ExtraLargeSpacing}"
+             Right="0" Bottom="0"/>
+    <Thickness x:Key="ExtraLargeTopMarginWithDefaultLeftMargin" x:Uid="Thickness_18"
+             Left="{StaticResource DefaultSpacing}" Top="{StaticResource ExtraLargeSpacing}" Right="0"
+             Bottom="0"/>
+    <Thickness x:Key="ExtraLargeTopMarginWithMediumLeftMargin" x:Uid="Thickness_19"
+             Left="{StaticResource MediumSpacing}" Top="{StaticResource ExtraLargeSpacing}" Right="0" Bottom="0"/>
+    <Thickness x:Key="LargeMargin" x:Uid="Thickness_6" Left="{StaticResource LargeSpacing}"
+             Top="{StaticResource LargeSpacing}" Right="{StaticResource LargeSpacing}"
+             Bottom="{StaticResource LargeSpacing}"/>
+    <Thickness x:Key="SmallUniformMargin" x:Uid="Thickness_10">1,1,1,1</Thickness>
+    <Thickness x:Key="DefaultMargin" x:Uid="Thickness_15" Left="0" Top="3" Right="3" Bottom="0"/>
+    <Thickness x:Key="PaletteTabGroupMargin" x:Uid="Thickness_16" Left="0" Top="0" Right="8" Bottom="0"/>
+    <Thickness x:Key="PaletteViewHeaderTabGroupMargin" x:Uid="Thickness_17" Left="0" Top="0" Right="0" Bottom="0"/>
+    <CornerRadius x:Key="PaletteHeaderCornerRounding" x:Uid="CornerRadius_1">0,4,0,0</CornerRadius>
+    <System:Double x:Key="PaletteHeaderHeight" x:Uid="System:Double_9">22</System:Double>
+    <CornerRadius x:Key="PaletteCornerRounding" x:Uid="CornerRadius_7">0,4,4,4</CornerRadius>
+    <CornerRadius x:Key="PaletteCornerRoundingWithHeader" x:Uid="CornerRadius_2">0,0,4,4</CornerRadius>
+</ResourceDictionary>

@@ -1,0 +1,60 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="DefaultGrip" x:Uid="Style_150" TargetType="{x:Type Control}">
+        <Setter x:Uid="Setter_1460" Property="Control.IsTabStop" Value="false"/>
+        <Setter x:Uid="Setter_1461" Property="UIElement.Focusable" Value="false"/>
+        <Setter x:Uid="Setter_1462" Property="FrameworkElement.Cursor" Value="SizeNWSE"/>
+        <Setter x:Uid="Setter_1463" Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate x:Uid="ControlTemplate_91" TargetType="{x:Type Control}">
+                    <Grid x:Uid="Grid_74" Panel.Background="Transparent" FrameworkElement.Height="12"
+                FrameworkElement.Width="12">
+                        <Path x:Uid="Path_24" Shape.Fill="{DynamicResource ButtonOverBrush}" Shape.Stretch="Fill"
+                  FrameworkElement.Margin="-0.5,-0.5,-0.5,-0.5" Data="M 12,0 L 12,12 0,12 Z"/>
+                        <Path x:Uid="Path_25" Shape.Fill="{DynamicResource PaneBrush}" Shape.Stretch="Fill"
+                  FrameworkElement.HorizontalAlignment="Right" FrameworkElement.Margin="0,0,1.5,1.5"
+                  FrameworkElement.VerticalAlignment="Bottom" FrameworkElement.Width="4" FrameworkElement.Height="4"
+                  Data="M 10,7 L 10,10 7,10 Z"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Uid="Style_171" TargetType="{x:Type ResizeGrip}" BasedOn="{StaticResource DefaultGrip}"/>
+    <Style x:Uid="Style_23" TargetType="{x:Type GridSplitter}">
+        <Setter x:Uid="Setter_114" Property="FrameworkElement.MinWidth" Value="3"/>
+        <Setter x:Uid="Setter_115" Property="FrameworkElement.MinHeight" Value="3"/>
+        <Setter x:Uid="Setter_572" Property="UIElement.Focusable" Value="false"/>
+        <Setter x:Uid="Setter_1236" Property="Control.Background" Value="Transparent"/>
+        <Setter x:Uid="Setter_116" Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate x:Uid="ControlTemplate_12" TargetType="{x:Type GridSplitter}">
+                    <Rectangle x:Name="Background" x:Uid="Rectangle_15" Shape.Fill="{TemplateBinding Control.Background}"
+                     Shape.StrokeThickness="0" RadiusX="2" RadiusY="2"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="NarrowGridSplitter" x:Uid="Style_214" TargetType="{x:Type GridSplitter}">
+        <Setter x:Uid="Setter_1966" Property="Control.Background" Value="Transparent"/>
+        <Setter x:Uid="Setter_1967" Property="UIElement.Focusable" Value="false"/>
+        <Setter x:Uid="Setter_1968" Property="Panel.ZIndex" Value="1"/>
+        <Setter x:Uid="Setter_1969" Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate x:Uid="ControlTemplate_128" TargetType="{x:Type GridSplitter}">
+                    <Rectangle x:Name="Background" x:Uid="Background" Shape.Fill="{TemplateBinding Control.Background}"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger x:Uid="Trigger_1172" Property="GridSplitter.ResizeDirection" Value="Columns">
+                            <Setter x:Uid="Setter_1970" TargetName="Background" Property="FrameworkElement.Margin" Value="-1,0,-2,0"/>
+                            <Setter x:Uid="Setter_1963" Property="FrameworkElement.Width" Value="2"/>
+                        </Trigger>
+                        <Trigger x:Uid="Trigger_1173" Property="GridSplitter.ResizeDirection" Value="Rows">
+                            <Setter x:Uid="Setter_1964" TargetName="Background" Property="FrameworkElement.Margin" Value="0,-3,0,0"/>
+                            <Setter x:Uid="Setter_1965" Property="FrameworkElement.Height" Value="2"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

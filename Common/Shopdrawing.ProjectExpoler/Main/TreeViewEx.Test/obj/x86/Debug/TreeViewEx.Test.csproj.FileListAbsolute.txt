@@ -1,0 +1,14 @@
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\TreeViewEx.Test\bin\x86\Debug\TreeViewEx.Test.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\TreeViewEx.Test\bin\x86\Debug\TreeViewEx.Test.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\TreeViewEx.Test\bin\x86\Debug\BindingSample.exe
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\TreeViewEx.Test\bin\x86\Debug\FluentAssertions.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\TreeViewEx.Test\bin\x86\Debug\SimpleSample.exe
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\TreeViewEx.Test\bin\x86\Debug\TreeViewEx.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\TreeViewEx.Test\bin\x86\Debug\BindingSample.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\TreeViewEx.Test\bin\x86\Debug\SimpleSample.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\TreeViewEx.Test\bin\x86\Debug\TreeViewEx.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\TreeViewEx.Test\bin\x86\Debug\FluentAssertions.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\TreeViewEx.Test\bin\x86\Debug\FluentAssertions.xml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\TreeViewEx.Test\obj\x86\Debug\TreeViewEx.Test.csprojResolveAssemblyReference.cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\TreeViewEx.Test\obj\x86\Debug\TreeViewEx.Test.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\TreeViewEx.Test\obj\x86\Debug\TreeViewEx.Test.pdb

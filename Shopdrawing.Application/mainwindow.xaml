@@ -1,0 +1,14 @@
+<Grid xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:UserInterface="clr-namespace:Microsoft.Expression.Framework.UserInterface;assembly=Microsoft.Expression.Framework"
+      x:Uid="Grid_1" Panel.Background="{DynamicResource MainWindowBackgroundBrush}"
+      TextElement.Foreground="{DynamicResource Text1Brush}" UIElement.SnapsToDevicePixels="true">
+  <Grid.ColumnDefinitions>
+    <ColumnDefinition x:Uid="ColumnDefinition_1" Width="*"/>
+  </Grid.ColumnDefinitions>
+  <Grid.RowDefinitions>
+    <RowDefinition x:Uid="RowDefinition_1" Height="Auto"/>
+    <RowDefinition x:Uid="RowDefinition_2" Height="*"/>
+  </Grid.RowDefinitions>
+  <ContentControl x:Name="DockingControl" x:Uid="DockingControl" Grid.Column="0" Grid.Row="1"/>
+</Grid>

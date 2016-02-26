@@ -1,0 +1,128 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="ExpressionDialogHyperlink" x:Uid="Style_166" TargetType="{x:Type Hyperlink}">
+        <Setter x:Uid="Setter_1609" Property="TextElement.FontFamily"
+            Value="{DynamicResource {x:Static SystemFonts.IconFontFamilyKey}}"/>
+        <Setter x:Uid="Setter_1610" Property="TextElement.FontSize"
+            Value="{DynamicResource {x:Static SystemFonts.IconFontSizeKey}}"/>
+        <Setter x:Uid="Setter_1611" Property="TextElement.FontWeight"
+            Value="{DynamicResource {x:Static SystemFonts.IconFontWeightKey}}"/>
+        <Setter x:Uid="Setter_1612" Property="TextElement.Foreground" Value="#3399FF"/>
+        <Style.Triggers>
+            <Trigger x:Uid="Trigger_1125" Property="ContentElement.IsEnabled" Value="false">
+                <Setter x:Uid="Setter_1613" Property="TextElement.Foreground"
+                Value="{DynamicResource ButtonDisabledTextBrush}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="ExpressionDialogText" x:Uid="Style_5" TargetType="{x:Type TextBlock}">
+        <Setter x:Uid="Setter_1614" Property="TextBlock.TextWrapping" Value="Wrap"/>
+        <Setter x:Uid="Setter_1615" Property="TextBlock.TextTrimming" Value="None"/>
+        <Setter x:Uid="Setter_1616" Property="TextBlock.FontFamily"
+            Value="{DynamicResource {x:Static SystemFonts.IconFontFamilyKey}}"/>
+        <Setter x:Uid="Setter_1617" Property="TextBlock.FontSize"
+            Value="{DynamicResource {x:Static SystemFonts.IconFontSizeKey}}"/>
+        <Setter x:Uid="Setter_1618" Property="TextBlock.Foreground" Value="#FF3b3b3b"/>
+    </Style>
+    <SolidColorBrush x:Key="30pcGrayBrush" x:Uid="SolidColorBrush_33" Color="#FFB2B2B2"/>
+    <Style x:Key="ExpressionDialogCheckBox" x:Uid="Style_13" TargetType="{x:Type CheckBox}">
+        <Setter x:Uid="Setter_1189" Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate x:Uid="ControlTemplate_131" TargetType="{x:Type CheckBox}">
+                    <Grid x:Uid="Grid_42">
+                        <BulletDecorator x:Uid="BulletDecorator_2" Background="Transparent">
+                            <BulletDecorator.Bullet>
+                                <Grid x:Uid="Grid_83" FrameworkElement.Width="Auto" FrameworkElement.Height="Auto">
+                                    <Grid x:Uid="Grid_44" FrameworkElement.Width="12" FrameworkElement.Height="12"
+                        FrameworkElement.Margin="0,0,0,0">
+                                        <Border x:Name="Border" x:Uid="Border_95" Background="{TemplateBinding Control.Background}"
+                            BorderBrush="{DynamicResource 30pcGrayBrush}"
+                            BorderThickness="{TemplateBinding Control.BorderThickness}" FrameworkElement.Width="Auto"
+                            FrameworkElement.Height="Auto" CornerRadius="2,2,2,2"/>
+                                    </Grid>
+                                </Grid>
+                            </BulletDecorator.Bullet>
+                            <ContentPresenter x:Uid="ContentPresenter_58"
+                                FrameworkElement.HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+                                FrameworkElement.Margin="{TemplateBinding Control.Padding}"
+                                FrameworkElement.VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+                                RecognizesAccessKey="true"/>
+                        </BulletDecorator>
+                        <Path x:Name="CheckMark" x:Uid="CheckMark" Shape.StrokeThickness="2"
+                  UIElement.SnapsToDevicePixels="false"
+                  Data="M 2.3235174E-09,7 L 4,12 12,2 9,-3.8208896E-08 4,9 2,6 Z"
+                  Shape.Fill="{TemplateBinding Control.Foreground}" FrameworkElement.Margin="1.584,-1.542,0,0"
+                  FrameworkElement.HorizontalAlignment="Left" FrameworkElement.VerticalAlignment="Top"
+                  FrameworkElement.Width="12" FrameworkElement.Height="12"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger x:Uid="Trigger_24" Property="ToggleButton.IsChecked" Value="false">
+                            <Setter x:Uid="Setter_1190" TargetName="CheckMark" Property="UIElement.Visibility" Value="Hidden"/>
+                        </Trigger>
+                        <Trigger x:Uid="Trigger_1180" Property="UIElement.IsMouseOver" Value="true">
+                            <Setter x:Uid="Setter_1191" Value="{DynamicResource 50pcGrayMainText}" TargetName="Border"
+                      Property="Border.BorderBrush"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter x:Uid="Setter_1192" Property="Control.Foreground" Value="{DynamicResource 50pcGrayMainText}"/>
+    </Style>
+    <Style x:Uid="Style_170" TargetType="{x:Type Hyperlink}">
+        <Setter x:Uid="Setter_1757" Property="TextElement.Foreground" Value="{DynamicResource HyperlinkBrush}"/>
+        <Style.Triggers>
+            <Trigger x:Uid="Trigger_1142" Property="ContentElement.IsEnabled" Value="false">
+                <Setter x:Uid="Setter_1758" Property="TextElement.Foreground" Value="{DynamicResource FadedTextBrush}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="DialogRootContainer" x:Uid="Style_218" TargetType="{x:Type Border}">
+        <Setter x:Uid="Setter_1935" Property="Border.Background" Value="{DynamicResource DialogBackgroundBrush}"/>
+        <Setter x:Uid="Setter_1936" Property="Border.Padding" Value="{DynamicResource LargeMargin}"/>
+        <Setter x:Uid="Setter_1937" Property="Border.BorderBrush" Value="{DynamicResource WindowBorderBrush}"/>
+        <Setter x:Uid="Setter_2001" Property="TextElement.Foreground" Value="{DynamicResource DialogTextBrush}"/>
+        <Setter x:Uid="Setter_1484" Property="TextElement.FontFamily"
+            Value="{DynamicResource {x:Static SystemFonts.MessageFontFamilyKey}}"/>
+        <Setter x:Uid="Setter_1135" Property="TextElement.FontSize"
+            Value="{DynamicResource {x:Static SystemFonts.MessageFontSizeKey}}"/>
+        <Setter x:Uid="Setter_1136" Property="TextElement.FontWeight"
+            Value="{DynamicResource {x:Static SystemFonts.MessageFontWeightKey}}"/>
+        <Setter x:Uid="Setter_1241" Property="UIElement.SnapsToDevicePixels" Value="true"/>
+        <Style.Resources>
+            <Style x:Uid="Style_181" x:Key="DialogTextBoxBaseFocusVisualStyle">
+                <Setter x:Uid="Setter_1675" Property="Control.Template">
+                    <Setter.Value>
+                        <ControlTemplate x:Uid="ControlTemplate_108">
+                            <Rectangle x:Uid="Rectangle_62" UIElement.SnapsToDevicePixels="true"
+                         Shape.Stroke="{DynamicResource ControlFocusBorderBrush}" Shape.StrokeThickness="1" RadiusX="3"
+                         RadiusY="3"/>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style x:Uid="Style_182" TargetType="{x:Type TextBox}" BasedOn="{StaticResource {x:Type TextBox}}">
+                <Setter x:Uid="Setter_1676" Property="FrameworkElement.FocusVisualStyle"
+                Value="{StaticResource DialogTextBoxBaseFocusVisualStyle}"/>
+            </Style>
+            <Style x:Uid="Style_183" TargetType="{x:Type ComboBox}" BasedOn="{StaticResource {x:Type ComboBox}}">
+                <Setter x:Uid="Setter_1670" Property="FrameworkElement.FocusVisualStyle">
+                    <Setter.Value>
+                        <Style x:Uid="Style_180">
+                            <Setter x:Uid="Setter_1671" Property="Control.Template">
+                                <Setter.Value>
+                                    <ControlTemplate x:Uid="ControlTemplate_110">
+                                        <Rectangle x:Uid="Rectangle_64" UIElement.SnapsToDevicePixels="true"
+                               Shape.Stroke="{DynamicResource ControlFocusBorderBrush}" Shape.StrokeThickness="1" RadiusX="4"
+                               RadiusY="4"/>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            
+        </Style.Resources>
+    </Style>
+</ResourceDictionary>

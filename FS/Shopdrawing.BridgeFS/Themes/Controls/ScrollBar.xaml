@@ -1,0 +1,349 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+                    mc:Ignorable="d" xmlns:Microsoft_Windows_Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero"
+                    xmlns:Controls="clr-namespace:Microsoft.Expression.Framework.Controls;assembly=Shopdrawing.Framework"
+                    xmlns:ExpressionExtension="clr-namespace:Microsoft.Expression.Framework.Workspaces.Extension;assembly=Shopdrawing.Framework">
+    
+    <Style x:Key="ExpressionScrollBarRepeatButton" x:Uid="Style_99" TargetType="{x:Type RepeatButton}">
+        <Style.BasedOn>
+            <x:NullExtension/>
+        </Style.BasedOn>
+        <Setter x:Uid="Setter_288" Property="UIElement.Focusable" Value="false"/>
+        <Setter x:Uid="Setter_1708" Property="Control.Foreground" Value="{DynamicResource ButtonDefaultBrush}"/>
+        <Setter x:Uid="Setter_1064" Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate x:Uid="ControlTemplate_26" TargetType="{x:Type RepeatButton}">
+                    <Border x:Name="Border" x:Uid="Border_19" Background="Transparent">
+                        <ContentPresenter x:Name="ContentPresenter" x:Uid="ContentPresenter_18" FrameworkElement.HorizontalAlignment="Center"
+                              FrameworkElement.VerticalAlignment="Center" Content="{TemplateBinding ContentControl.Content}"
+                              ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}"
+                              ContentTemplateSelector="{TemplateBinding ContentControl.ContentTemplateSelector}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger x:Uid="Trigger_1010" Property="UIElement.IsMouseOver" Value="true">
+                            <Setter x:Uid="Setter_1073" Value="{DynamicResource ScrollbarMouseOverBrush}" Property="Control.Foreground"/>
+                        </Trigger>
+                        <Trigger x:Uid="Trigger_1014" Property="ButtonBase.IsPressed" Value="true">
+                            <Setter x:Uid="Setter_1077" Value="{DynamicResource ScrollbarPressedBrush}" Property="Control.Foreground"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Uid="Style_98" TargetType="{x:Type ScrollBar}">
+        <Setter x:Uid="Setter_1065" Property="Stylus.IsFlicksEnabled" Value="false"/>
+        <Setter x:Uid="Setter_1066" Property="Control.Foreground"
+            Value="{DynamicResource ScrollbarForegroundBrush}"/>
+        <Setter x:Uid="Setter_1067" Property="Control.Background"
+            Value="{DynamicResource ScrollbarBackgroundBrush}"/>
+        <Setter x:Uid="Setter_1068" Property="FrameworkElement.Width"
+            Value="{DynamicResource {x:Static ExpressionExtension:ExpressionDockingConstants.ScrollBarSize}}"/>
+        <Setter x:Uid="Setter_1069" Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate x:Uid="ControlTemplate_27" TargetType="{x:Type ScrollBar}">
+                    <Grid x:Name="GridRoot" x:Uid="Grid_33" Panel.Background="{TemplateBinding Control.Background}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition x:Uid="RowDefinition_6" MaxHeight="18"/>
+                            <RowDefinition x:Uid="RowDefinition_7" Height="0.00001*"/>
+                            <RowDefinition x:Uid="RowDefinition_8" MaxHeight="18"/>
+                        </Grid.RowDefinitions>
+                        <RepeatButton x:Name="DecreaseRepeat" x:Uid="RepeatButton_1" ButtonBase.Command="ScrollBar.LineUpCommand"
+                          FrameworkElement.Style="{StaticResource ExpressionScrollBarRepeatButton}"
+                          FrameworkElement.Margin="0,0,0,1">
+                            <Path x:Name="DecreaseArrow" x:Uid="Path_1" Data="M 0,7 L 3.5,0 7,7 Z"
+                    FrameworkElement.HorizontalAlignment="Center" FrameworkElement.VerticalAlignment="Center">
+                                <Shape.Fill>
+                                    <Binding ElementName="DecreaseRepeat" Path="Foreground"/>
+                                </Shape.Fill>
+                            </Path>
+                        </RepeatButton>
+                        <Track x:Name="PART_Track" x:Uid="Track_1" Grid.Row="1" IsDirectionReversed="true"
+                   UIElement.Focusable="false">
+                            <Track.Thumb>
+                                <Thumb x:Name="Thumb" x:Uid="Thumb_1" Control.Background="{DynamicResource ButtonDefaultBrush}">
+                                    <FrameworkElement.Style>
+                                        <Style x:Uid="Style_100" TargetType="{x:Type Thumb}">
+                                            <Style.BasedOn>
+                                                <x:NullExtension/>
+                                            </Style.BasedOn>
+                                            <Setter x:Uid="Setter_1070" Property="Control.Template">
+                                                <Setter.Value>
+                                                    <ControlTemplate x:Uid="ControlTemplate_28" TargetType="{x:Type Thumb}">
+                                                        <Grid x:Name="Grid" x:Uid="Grid_34">
+                                                            <Rectangle x:Uid="Rectangle_8" FrameworkElement.HorizontalAlignment="Stretch"
+                                         FrameworkElement.VerticalAlignment="Stretch" FrameworkElement.Width="Auto"
+                                         FrameworkElement.Height="Auto" Shape.Fill="Transparent"/>
+                                                            <Rectangle x:Name="Rectangle1" x:Uid="Rectangle_9" FrameworkElement.HorizontalAlignment="Stretch"
+                                         FrameworkElement.VerticalAlignment="Stretch" FrameworkElement.Width="7"
+                                         FrameworkElement.Height="Auto" RadiusX="4" RadiusY="4"
+                                         Shape.Fill="{TemplateBinding Control.Background}"/>
+                                                        </Grid>
+                                                        <ControlTemplate.Triggers>
+                                                            <Trigger x:Uid="Trigger_1009" Property="FrameworkElement.Tag" Value="Horizontal">
+                                                                <Setter x:Uid="Setter_1071" TargetName="Rectangle1" Property="FrameworkElement.Width" Value="Auto"/>
+                                                                <Setter x:Uid="Setter_1072" TargetName="Rectangle1" Property="FrameworkElement.Height" Value="7"/>
+                                                            </Trigger>
+                                                        </ControlTemplate.Triggers>
+                                                    </ControlTemplate>
+                                                </Setter.Value>
+                                            </Setter>
+                                        </Style>
+                                    </FrameworkElement.Style>
+                                </Thumb>
+                            </Track.Thumb>
+                            <Track.IncreaseRepeatButton>
+                                <RepeatButton x:Name="PageUp" x:Uid="RepeatButton_2" ButtonBase.Command="ScrollBar.PageDownCommand"
+                              UIElement.Opacity="0" UIElement.Focusable="false"/>
+                            </Track.IncreaseRepeatButton>
+                            <Track.DecreaseRepeatButton>
+                                <RepeatButton x:Name="PageDown" x:Uid="RepeatButton_3" ButtonBase.Command="ScrollBar.PageUpCommand"
+                              UIElement.Opacity="0" UIElement.Focusable="false"/>
+                            </Track.DecreaseRepeatButton>
+                        </Track>
+                        <RepeatButton x:Name="IncreaseRepeat" x:Uid="RepeatButton_4" Grid.Row="2"
+                          ButtonBase.Command="ScrollBar.LineDownCommand"
+                          FrameworkElement.Style="{StaticResource ExpressionScrollBarRepeatButton}"
+                          FrameworkElement.Margin="0,1,0,0">
+                            <Path x:Name="IncreaseArrow" x:Uid="Path_2" Data="M 0,0 L 3.5,7 7,0 Z"
+                    FrameworkElement.HorizontalAlignment="Center" FrameworkElement.VerticalAlignment="Center">
+                                <Shape.Fill>
+                                    <Binding ElementName="IncreaseRepeat" Path="Foreground"/>
+                                </Shape.Fill>
+                            </Path>
+                        </RepeatButton>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger x:Uid="Trigger_1012" SourceName="Thumb" Property="UIElement.IsMouseOver" Value="true">
+                            <Setter x:Uid="Setter_1075" Value="{DynamicResource ScrollbarMouseOverBrush}" TargetName="Thumb"
+                      Property="Control.Background"/>
+                        </Trigger>
+                        <Trigger x:Uid="Trigger_1013" SourceName="Thumb" Property="Thumb.IsDragging" Value="true">
+                            <Setter x:Uid="Setter_1076" Value="{DynamicResource ScrollbarPressedBrush}" TargetName="Thumb"
+                      Property="Control.Background"/>
+                        </Trigger>
+                        <Trigger x:Uid="Trigger_1016" Property="UIElement.IsEnabled" Value="false">
+                            <Setter x:Uid="Setter_1079" Value="{DynamicResource LayerChild1Brush}" TargetName="IncreaseArrow"
+                      Property="Shape.Fill"/>
+                            <Setter x:Uid="Setter_1080" Value="{DynamicResource LayerChild1Brush}" TargetName="DecreaseArrow"
+                      Property="Shape.Fill"/>
+                            <Setter x:Uid="Setter_1081" TargetName="Thumb" Property="UIElement.Visibility" Value="Collapsed"/>
+                        </Trigger>
+                        <Trigger x:Uid="Trigger_1017" Property="ScrollBar.Orientation" Value="Horizontal">
+                            <Setter x:Uid="Setter_1082" TargetName="GridRoot" Property="FrameworkElement.LayoutTransform">
+                                <Setter.Value>
+                                    <RotateTransform x:Uid="RotateTransform_1" Angle="-90"/>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter x:Uid="Setter_1083" TargetName="PART_Track" Property="FrameworkElement.LayoutTransform">
+                                <Setter.Value>
+                                    <RotateTransform x:Uid="RotateTransform_2" Angle="-90"/>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter x:Uid="Setter_1084" Property="FrameworkElement.Width" Value="Auto"/>
+                            <Setter x:Uid="Setter_1085" Property="FrameworkElement.Height" Value="17"/>
+                            <Setter x:Uid="Setter_1086" TargetName="Thumb" Property="FrameworkElement.Tag" Value="Horizontal"/>
+                            <Setter x:Uid="Setter_1087" TargetName="DecreaseRepeat" Property="ButtonBase.Command"
+                      Value="ScrollBar.LineLeftCommand"/>
+                            <Setter x:Uid="Setter_1088" TargetName="IncreaseRepeat" Property="ButtonBase.Command"
+                      Value="ScrollBar.LineRightCommand"/>
+                            <Setter x:Uid="Setter_1089" TargetName="PageDown" Property="ButtonBase.Command"
+                      Value="ScrollBar.PageLeftCommand"/>
+                            <Setter x:Uid="Setter_1090" TargetName="PageUp" Property="ButtonBase.Command"
+                      Value="ScrollBar.PageRightCommand"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Uid="Style_101" TargetType="{x:Type Controls:ExtendedScrollBar}"
+         BasedOn="{StaticResource {x:Type ScrollBar}}"/>
+    <Style x:Key="MenuScrollViewer" x:Uid="Style_78" TargetType="{x:Type ScrollViewer}">
+        <Style.BasedOn>
+            <x:NullExtension/>
+        </Style.BasedOn>
+        <Setter x:Uid="Setter_417" Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Hidden"/>
+        <Setter x:Uid="Setter_418" Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+        <Setter x:Uid="Setter_419" Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate x:Uid="ControlTemplate_39" TargetType="{x:Type ScrollViewer}">
+                    <Grid x:Uid="Grid_27">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition x:Uid="ColumnDefinition_21" Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition x:Uid="RowDefinition_14" Height="Auto"/>
+                            <RowDefinition x:Uid="RowDefinition_15" Height="*"/>
+                            <RowDefinition x:Uid="RowDefinition_16" Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Border x:Uid="Border_24" Grid.Column="0" Grid.Row="1">
+                            <ScrollContentPresenter x:Uid="ScrollContentPresenter_1"
+                                      ContentPresenter.Content="{TemplateBinding ContentControl.Content}"
+                                      ContentPresenter.ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}"
+                                      ContentPresenter.ContentTemplateSelector="{TemplateBinding ContentControl.ContentTemplateSelector}"
+                                      FrameworkElement.Margin="{TemplateBinding Control.Padding}"/>
+                        </Border>
+                        <RepeatButton x:Name="LineUpButton" x:Uid="RepeatButton_5" UIElement.Focusable="false" Grid.Column="0"
+                          Grid.Row="0" ButtonBase.Command="ScrollBar.LineUpCommand">
+                            <UIElement.Visibility>
+                                <MultiBinding x:Uid="MultiBinding_1" BindingBase.FallbackValue="Visibility.Collapsed" ConverterParameter="0">
+                                    <MultiBinding.Converter>
+                                        <MenuScrollingVisibilityConverter x:Uid="MenuScrollingVisibilityConverter_1"/>
+                                    </MultiBinding.Converter>
+                                    <Binding x:Uid="Binding_1" Path="ComputedVerticalScrollBarVisibility"
+                           RelativeSource="{RelativeSource TemplatedParent}"/>
+                                    <Binding x:Uid="Binding_2" Path="VerticalOffset" RelativeSource="{RelativeSource TemplatedParent}"/>
+                                    <Binding x:Uid="Binding_3" Path="ExtentHeight" RelativeSource="{RelativeSource TemplatedParent}"/>
+                                    <Binding x:Uid="Binding_4" Path="ViewportHeight" RelativeSource="{RelativeSource TemplatedParent}"/>
+                                </MultiBinding>
+                            </UIElement.Visibility>
+                            <FrameworkElement.Style>
+                                <Style x:Uid="Style_79" TargetType="{x:Type RepeatButton}">
+                                    <Style.BasedOn>
+                                        <x:NullExtension/>
+                                    </Style.BasedOn>
+                                    <Setter x:Uid="Setter_420" Property="ButtonBase.ClickMode" Value="Hover"/>
+                                    <Setter x:Uid="Setter_421" Property="FrameworkElement.MinWidth" Value="0"/>
+                                    <Setter x:Uid="Setter_422" Property="FrameworkElement.MinHeight" Value="0"/>
+                                    <Setter x:Uid="Setter_423" Property="Control.Template">
+                                        <Setter.Value>
+                                            <ControlTemplate x:Uid="ControlTemplate_40" TargetType="{x:Type RepeatButton}">
+                                                <DockPanel x:Uid="DockPanel_1" Panel.Background="#00FFFFFF">
+                                                    <Rectangle x:Name="R1" x:Uid="Rectangle_43" Shape.Fill="#00FFFFFF" FrameworkElement.Width="1"
+                                     DockPanel.Dock="Right"/>
+                                                    <Rectangle x:Name="B1" x:Uid="Rectangle_44" Shape.Fill="#00FFFFFF" FrameworkElement.Height="1"
+                                     DockPanel.Dock="Bottom"/>
+                                                    <Rectangle x:Name="L1" x:Uid="Rectangle_45" Shape.Fill="#00FFFFFF" FrameworkElement.Width="1"
+                                     DockPanel.Dock="Left"/>
+                                                    <Rectangle x:Name="T1" x:Uid="Rectangle_46" Shape.Fill="#00FFFFFF" FrameworkElement.Height="1"
+                                     DockPanel.Dock="Top"/>
+                                                    <ContentPresenter x:Name="ContentContainer" x:Uid="ContentPresenter_14"
+                                            Content="{TemplateBinding ContentControl.Content}"
+                                            ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}"
+                                            ContentTemplateSelector="{TemplateBinding ContentControl.ContentTemplateSelector}"
+                                            FrameworkElement.Margin="2,2,2,2" FrameworkElement.HorizontalAlignment="Center"
+                                            FrameworkElement.VerticalAlignment="Center"/>
+                                                </DockPanel>
+                                                <ControlTemplate.Triggers>
+                                                    <Trigger x:Uid="Trigger_70" Property="ButtonBase.IsPressed" Value="true">
+                                                        <Setter x:Uid="Setter_424" Value="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}"
+                                    TargetName="R1" Property="Shape.Fill"/>
+                                                        <Setter x:Uid="Setter_425" Value="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}"
+                                    TargetName="B1" Property="Shape.Fill"/>
+                                                        <Setter x:Uid="Setter_426" Value="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"
+                                    TargetName="L1" Property="Shape.Fill"/>
+                                                        <Setter x:Uid="Setter_427" Value="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"
+                                    TargetName="T1" Property="Shape.Fill"/>
+                                                        <Setter x:Uid="Setter_428" TargetName="ContentContainer" Property="FrameworkElement.Margin" Value="3,3,1,1"/>
+                                                    </Trigger>
+                                                </ControlTemplate.Triggers>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </FrameworkElement.Style>
+                            <ButtonBase.CommandTarget>
+                                <Binding x:Uid="Binding_5" RelativeSource="{RelativeSource TemplatedParent}"/>
+                            </ButtonBase.CommandTarget>
+                            <Path x:Uid="Path_6" Shape.Fill="{DynamicResource {x:Static SystemColors.MenuTextBrushKey}}">
+                                <Path.Data>
+                                    <PathGeometry x:Uid="PathGeometry_32">
+                                        <PathGeometry.Figures>
+                                            <PathFigureCollection x:Uid="PathFigureCollection_32">
+                                                <PathFigure x:Uid="PathFigure_32" StartPoint="0,4" IsFilled="true" IsClosed="true">
+                                                    <LineSegment x:Uid="LineSegment_49" Point="3.5,0"/>
+                                                    <LineSegment x:Uid="LineSegment_50" Point="7,4"/>
+                                                </PathFigure>
+                                            </PathFigureCollection>
+                                        </PathGeometry.Figures>
+                                    </PathGeometry>
+                                </Path.Data>
+                            </Path>
+                        </RepeatButton>
+                        <RepeatButton x:Name="LineDownButton" x:Uid="RepeatButton_6" UIElement.Focusable="false" Grid.Column="0"
+                          Grid.Row="2" ButtonBase.Command="ScrollBar.LineDownCommand">
+                            <UIElement.Visibility>
+                                <MultiBinding x:Uid="MultiBinding_2" BindingBase.FallbackValue="Visibility.Collapsed" ConverterParameter="100">
+                                    <MultiBinding.Converter>
+                                        <MenuScrollingVisibilityConverter x:Uid="MenuScrollingVisibilityConverter_2"/>
+                                    </MultiBinding.Converter>
+                                    <Binding x:Uid="Binding_6" Path="ComputedVerticalScrollBarVisibility"
+                           RelativeSource="{RelativeSource TemplatedParent}"/>
+                                    <Binding x:Uid="Binding_7" Path="VerticalOffset" RelativeSource="{RelativeSource TemplatedParent}"/>
+                                    <Binding x:Uid="Binding_8" Path="ExtentHeight" RelativeSource="{RelativeSource TemplatedParent}"/>
+                                    <Binding x:Uid="Binding_9" Path="ViewportHeight" RelativeSource="{RelativeSource TemplatedParent}"/>
+                                </MultiBinding>
+                            </UIElement.Visibility>
+                            <FrameworkElement.Style>
+                                <Style x:Uid="Style_80" TargetType="{x:Type RepeatButton}">
+                                    <Style.BasedOn>
+                                        <x:NullExtension/>
+                                    </Style.BasedOn>
+                                    <Setter x:Uid="Setter_429" Property="ButtonBase.ClickMode" Value="Hover"/>
+                                    <Setter x:Uid="Setter_430" Property="FrameworkElement.MinWidth" Value="0"/>
+                                    <Setter x:Uid="Setter_431" Property="FrameworkElement.MinHeight" Value="0"/>
+                                    <Setter x:Uid="Setter_432" Property="Control.Template">
+                                        <Setter.Value>
+                                            <ControlTemplate x:Uid="ControlTemplate_41" TargetType="{x:Type RepeatButton}">
+                                                <DockPanel x:Uid="DockPanel_2" Panel.Background="#00FFFFFF">
+                                                    <Rectangle x:Name="R1" x:Uid="Rectangle_47" Shape.Fill="#00FFFFFF" FrameworkElement.Width="1"
+                                     DockPanel.Dock="Right"/>
+                                                    <Rectangle x:Name="B1" x:Uid="Rectangle_48" Shape.Fill="#00FFFFFF" FrameworkElement.Height="1"
+                                     DockPanel.Dock="Bottom"/>
+                                                    <Rectangle x:Name="L1" x:Uid="Rectangle_49" Shape.Fill="#00FFFFFF" FrameworkElement.Width="1"
+                                     DockPanel.Dock="Left"/>
+                                                    <Rectangle x:Name="T1" x:Uid="Rectangle_50" Shape.Fill="#00FFFFFF" FrameworkElement.Height="1"
+                                     DockPanel.Dock="Top"/>
+                                                    <ContentPresenter x:Name="ContentContainer" x:Uid="ContentPresenter_15"
+                                            Content="{TemplateBinding ContentControl.Content}"
+                                            ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}"
+                                            ContentTemplateSelector="{TemplateBinding ContentControl.ContentTemplateSelector}"
+                                            FrameworkElement.Margin="2,2,2,2" FrameworkElement.HorizontalAlignment="Center"
+                                            FrameworkElement.VerticalAlignment="Center"/>
+                                                </DockPanel>
+                                                <ControlTemplate.Triggers>
+                                                    <Trigger x:Uid="Trigger_71" Property="ButtonBase.IsPressed" Value="true">
+                                                        <Setter x:Uid="Setter_433" Value="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}"
+                                    TargetName="R1" Property="Shape.Fill"/>
+                                                        <Setter x:Uid="Setter_434" Value="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}"
+                                    TargetName="B1" Property="Shape.Fill"/>
+                                                        <Setter x:Uid="Setter_435" Value="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"
+                                    TargetName="L1" Property="Shape.Fill"/>
+                                                        <Setter x:Uid="Setter_436" Value="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"
+                                    TargetName="T1" Property="Shape.Fill"/>
+                                                        <Setter x:Uid="Setter_437" TargetName="ContentContainer" Property="FrameworkElement.Margin" Value="3,3,1,1"/>
+                                                    </Trigger>
+                                                </ControlTemplate.Triggers>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </FrameworkElement.Style>
+                            <ButtonBase.CommandTarget>
+                                <Binding x:Uid="Binding_10" RelativeSource="{RelativeSource TemplatedParent}"/>
+                            </ButtonBase.CommandTarget>
+                            <Path x:Uid="Path_7" Shape.Fill="{DynamicResource {x:Static SystemColors.MenuTextBrushKey}}">
+                                <Path.Data>
+                                    <PathGeometry x:Uid="PathGeometry_33">
+                                        <PathGeometry.Figures>
+                                            <PathFigureCollection x:Uid="PathFigureCollection_33">
+                                                <PathFigure x:Uid="PathFigure_33" StartPoint="0,0" IsFilled="true" IsClosed="true">
+                                                    <LineSegment x:Uid="LineSegment_51" Point="3.5,4"/>
+                                                    <LineSegment x:Uid="LineSegment_52" Point="7,0"/>
+                                                </PathFigure>
+                                            </PathFigureCollection>
+                                        </PathGeometry.Figures>
+                                    </PathGeometry>
+                                </Path.Data>
+                            </Path>
+                        </RepeatButton>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

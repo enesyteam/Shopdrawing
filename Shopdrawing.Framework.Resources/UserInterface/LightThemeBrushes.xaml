@@ -1,0 +1,164 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:Framework="clr-namespace:Microsoft.Expression.Framework;assembly=Shopdrawing.Framework"
+                    xmlns:System="clr-namespace:System;assembly=mscorlib">
+    <Framework:StringWrapper x:Key="ThemeImagePrefix" Value="{x:Static Framework:SystemThemeNamePrefixes.LightThemePrefix}"/>
+    <DrawingBrush x:Key="DefaultArtboardBackgroundBrush" x:Uid="DrawingBrush_1" TileBrush.Stretch="Fill"
+                TileBrush.TileMode="Tile" TileBrush.Viewport="0,0,16,16" TileBrush.ViewportUnits="Absolute">
+        <DrawingBrush.Drawing>
+            <DrawingGroup x:Uid="DrawingGroup_1">
+                <GeometryDrawing x:Uid="GeometryDrawing_1" Brush="#FF5B5B5B" Geometry="M 0,0 L 2,0 2,2 0,2 Z"/>
+                <GeometryDrawing x:Uid="GeometryDrawing_2" Brush="#FF565656" Geometry="M 0,0 L 1,0 1,2 2,2 2,1 0,1 Z"/>
+            </DrawingGroup>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <SolidColorBrush x:Key="WhiteBrush" x:Uid="SolidColorBrush_25" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="RedBrush" x:Uid="SolidColorBrush_33" Color="#FFBD0000"/>
+    <SolidColorBrush x:Key="MainWindowBackgroundBrush" x:Uid="SolidColorBrush_40" Color="#FF5C5C5C"/>
+    <SolidColorBrush x:Key="WindowBorderBrush" x:Uid="SolidColorBrush_140" Color="#FF595959"/>
+    <Color x:Key="BackgroundColor" x:Uid="Color_11">#FFEDEDED</Color>
+    <SolidColorBrush x:Key="BackgroundBrush" x:Uid="SolidColorBrush_12" Color="{StaticResource BackgroundColor}"/>
+    <Color x:Key="ListBackgroundColor" x:Uid="Color_20">#FF8F8F8F</Color>
+    <SolidColorBrush x:Key="ListBackgroundBrush" x:Uid="SolidColorBrush_34" Color="{StaticResource ListBackgroundColor}"/>
+    <SolidColorBrush x:Key="PaletteBrush" x:Uid="SolidColorBrush_13" Color="#FF9C9C9C"/>
+    <SolidColorBrush x:Key="PaneBrush" x:Uid="SolidColorBrush_14" Color="#FF818181"/>
+    <SolidColorBrush x:Key="RecessedBrush" x:Uid="SolidColorBrush_17" Color="#FFCDCDCD"/>
+    <SolidColorBrush x:Key="LayerChild0Brush" x:Uid="SolidColorBrush_18" Color="#FFD9D9D9"/>
+    <SolidColorBrush x:Key="LayerChild1Brush" x:Uid="SolidColorBrush_28" Color="#FFB6B6B6"/>
+    <SolidColorBrush x:Key="LayerChild2Brush" x:Uid="SolidColorBrush_19" Color="#FF8F8F8F"/>
+    <SolidColorBrush x:Key="DarkBrush" x:Uid="SolidColorBrush_16" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="DarkBackgroundBrush" x:Uid="SolidColorBrush_38" Color="#FF707070"/>
+    <Color x:Key="Text1Color" x:Uid="Color_19">#FF000000</Color>
+    <SolidColorBrush x:Key="Text1Brush" x:Uid="SolidColorBrush_20" Color="{StaticResource Text1Color}"/>
+    <SolidColorBrush x:Key="DimmedTextBrush" x:Uid="SolidColorBrush_175" Color="#B0000000"/>
+    <SolidColorBrush x:Key="FadedTextBrush" x:Uid="SolidColorBrush_39" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="DisabledTextBrush" x:Uid="SolidColorBrush_76" Color="#FF707070"/>
+    <SolidColorBrush x:Key="DialogDisabledTextBrush" x:Uid="SolidColorBrush_75" Color="#FF8c8c8c"/>
+    <SolidColorBrush x:Key="InvertedTextBoxBackgroundBrush" x:Uid="SolidColorBrush_60"
+                   Color="{StaticResource BackgroundColor}"/>
+    <SolidColorBrush x:Key="InvertedTextBoxForegroundBrush" x:Uid="SolidColorBrush_41"
+                   Color="{StaticResource Text1Color}"/>
+    <SolidColorBrush x:Key="{x:Static SystemColors.ControlTextBrushKey}" x:Uid="SolidColorBrush_31"
+                   Color="{StaticResource Text1Color}"/>
+    <SolidColorBrush x:Key="{x:Static SystemColors.WindowTextBrushKey}" x:Uid="SolidColorBrush_30"
+                   Color="{StaticResource Text1Color}"/>
+    <SolidColorBrush x:Key="ListSelectedBrush" x:Uid="SolidColorBrush_80" Color="#FF757575"/>
+    <SolidColorBrush x:Key="ListSelectedTextBrush" x:Uid="SolidColorBrush_77" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="ListSubSelectedBrush" x:Uid="SolidColorBrush_226" Color="#FFBFBFBF"/>
+    <SolidColorBrush x:Key="ListSubSelectedTextBrush" x:Uid="SolidColorBrush_227" Color="{StaticResource Text1Color}"/>
+    <SolidColorBrush x:Key="ListHoverBrush" x:Uid="SolidColorBrush_184" Color="#FFA6A6A6"/>
+    <SolidColorBrush x:Key="ListHoverTextBrush" x:Uid="SolidColorBrush_219" Color="{StaticResource Text1Color}"/>
+    <SolidColorBrush x:Key="ListItemMouseOverBrush" x:Uid="SolidColorBrush_57" Color="#FF8D8D8D"/>
+    <SolidColorBrush x:Key="HyperlinkBrush" x:Uid="SolidColorBrush_90" Color="#FF13689e"/>
+    <SolidColorBrush x:Key="IconBrush" x:Uid="SolidColorBrush_21" Color="#FFE5E5E5"/>
+    <SolidColorBrush x:Key="TabSelectionBrush" x:Uid="SolidColorBrush_50" Color="#FFBFBFBF"/>
+    <SolidColorBrush x:Key="TabNormalBrush" x:Uid="SolidColorBrush_177" Color="#FF878787"/>
+    <SolidColorBrush x:Key="ControlFocusBorderBrush" x:Uid="SolidColorBrush_58" Color="#FF333333"/>
+    <SolidColorBrush x:Key="SliderBrush" x:Uid="SolidColorBrush_37" Color="#FFCDCDCD"/>
+    <SolidColorBrush x:Key="CheckMarkToggleButtonBackgroundBrush" x:Uid="SolidColorBrush_171" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="CheckMarkToggleButtonDefaultBorderBrush" x:Uid="SolidColorBrush_172" Color="#FF333333"/>
+    <SolidColorBrush x:Key="CheckMarkToggleButtonMouseOverBorderBrush" x:Uid="SolidColorBrush_173" Color="#FF000000"/>
+    <SolidColorBrush x:Key="CheckMarkToggleButtonDisabledBorderBrush" x:Uid="SolidColorBrush_174" Color="#FF939393"/>
+    <Color x:Key="AdvancedExpanderColor" x:Uid="Color_21">#FF949494</Color>
+    <SolidColorBrush x:Key="AdvancedExpanderBrush" x:Uid="SolidColorBrush_29"
+                   Color="{StaticResource AdvancedExpanderColor}"/>
+    <SolidColorBrush x:Key="AdvancedExpanderToggleBrush" x:Uid="SolidColorBrush_144" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="ArrowExpandCollapseDefaultBrush" x:Uid="SolidColorBrush_94" Color="#FF000000"/>
+    <SolidColorBrush x:Key="ArrowExpandCollapseMouseOverBrush" x:Uid="SolidColorBrush_95" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="SearchBoxIconHoverBrush" x:Uid="SolidColorBrush_194" Color="#FF5C5C5C"/>
+    <SolidColorBrush x:Key="SearchBoxIconNormalBrush" x:Uid="SolidColorBrush_195" Color="#FF9C9C9C"/>
+    <SolidColorBrush x:Key="SearchBoxBackgroundBrush" x:Uid="SolidColorBrush_196" Color="#FFEDEDED"/>
+    <SolidColorBrush x:Key="TransparentTextBoxBackgroundBrush" x:Uid="SolidColorBrush_197" Color="#00FFFFFF"/>
+    <SolidColorBrush x:Key="ProgressBarBorderBrush" x:Uid="SolidColorBrush_200" Color="#FFBDBDBD"/>
+    <SolidColorBrush x:Key="ProgressBarBackgroundBrush" x:Uid="SolidColorBrush_201" Color="#FFEDEDED"/>
+    <SolidColorBrush x:Key="ProgressBarProgressIndicatorBrush" x:Uid="SolidColorBrush_202" Color="#FF757575"/>
+    <SolidColorBrush x:Key="ScrollbarBackgroundBrush" x:Uid="SolidColorBrush_156" Color="#FF666666"/>
+    <SolidColorBrush x:Key="ScrollbarForegroundBrush" x:Uid="SolidColorBrush_220" Color="{StaticResource Text1Color}"/>
+    <SolidColorBrush x:Key="ScrollbarMouseOverBrush" x:Uid="SolidColorBrush_24" Color="#FFE5E5E5"/>
+    <SolidColorBrush x:Key="ScrollbarPressedBrush" x:Uid="SolidColorBrush_204" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="ScrollViewerCornerBorderBrush" x:Uid="SolidColorBrush_51" Color="#FF707070"/>
+    <SolidColorBrush x:Key="MenuBackgroundBrush" x:Uid="SolidColorBrush_47" Color="#FFd6d6d6"/>
+    <SolidColorBrush x:Key="MenuTextBrush" x:Uid="SolidColorBrush_59" Color="#FF000000"/>
+    <SolidColorBrush x:Key="MenuSeparatorBrush" x:Uid="SolidColorBrush_146" Color="#FF707070"/>
+    <SolidColorBrush x:Key="MenuDisabledTextBrush" x:Uid="SolidColorBrush_147" Color="#FF787878"/>
+    <SolidColorBrush x:Key="OuterDialogBorderBrush" x:Uid="SolidColorBrush_149" Color="#FFcccccc"/>
+    <SolidColorBrush x:Key="InnerDialogBorderBrush" x:Uid="SolidColorBrush_150" Color="#FF808080"/>
+    <SolidColorBrush x:Key="DialogTitleBarBrush" x:Uid="SolidColorBrush_151" Color="#FF9c9c9c"/>
+    <SolidColorBrush x:Key="DialogTextBrush" x:Uid="SolidColorBrush_210" Color="{StaticResource Text1Color}"/>
+    <SolidColorBrush x:Key="DialogTitleBarTextBrush" x:Uid="SolidColorBrush_209" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="DialogBackgroundBrush" x:Uid="SolidColorBrush_61" Color="#FFC4C4C4"/>
+    <SolidColorBrush x:Key="ButtonDefaultBackgroundBrush" x:Uid="SolidColorBrush_62" Color="#FFB6B6B6"/>
+    <SolidColorBrush x:Key="ButtonMouseOverBackgroundBrush" x:Uid="SolidColorBrush_63" Color="#FFB6B6B6"/>
+    <SolidColorBrush x:Key="ButtonPressedBackgroundBrush" x:Uid="SolidColorBrush_64" Color="#FFC9C9C9"/>
+    <SolidColorBrush x:Key="ButtonDisabledBackgroundBrush" x:Uid="SolidColorBrush_65" Color="#FF999999"/>
+    <SolidColorBrush x:Key="ButtonDefaultTextBrush" x:Uid="SolidColorBrush_66" Color="#FF3D3D3D"/>
+    <SolidColorBrush x:Key="ButtonMouseOverTextBrush" x:Uid="SolidColorBrush_67" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="ButtonDisabledTextBrush" x:Uid="SolidColorBrush_68" Color="#FFC9C9C9"/>
+    <SolidColorBrush x:Key="ButtonDefaultBorderBrush" x:Uid="SolidColorBrush_69" Color="#FF939393"/>
+    <SolidColorBrush x:Key="ButtonMouseOverBorderBrush" x:Uid="SolidColorBrush_70" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="ButtonPressedBorderBrush" x:Uid="SolidColorBrush_71" Color="#FFBABABA"/>
+    <SolidColorBrush x:Key="ButtonIsDefaultBorderBrush" x:Uid="SolidColorBrush_72" Color="#FF1D52B2"/>
+    <SolidColorBrush x:Key="ButtonIsFocusedBorderBrush" x:Uid="SolidColorBrush_73" Color="#FF3D3D3D"/>
+    <SolidColorBrush x:Key="ButtonDisabledBorderBrush" x:Uid="SolidColorBrush_74" Color="#FFC9C9C9"/>
+    <SolidColorBrush x:Key="ButtonDefaultBrush" x:Uid="SolidColorBrush_22" Color="#FFBFBFBF"/>
+    <SolidColorBrush x:Key="ButtonDefaultedBrush" x:Uid="SolidColorBrush_32" Color="#FF6AB4FF"/>
+    <SolidColorBrush x:Key="ButtonOverBrush" x:Uid="SolidColorBrush_23" Color="#FFA6A6A6"/>
+    <LinearGradientBrush x:Key="ButtonSelectionGrad" x:Uid="LinearGradientBrush_38" StartPoint="0,0" EndPoint="0,1">
+        <GradientBrush.GradientStops>
+            <GradientStop x:Uid="GradientStop_123" Color="#FFE5E5E5" Offset="0"/>
+            <GradientStop x:Uid="GradientStop_124" Color="#FF999999" Offset="1"/>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ComboBoxBackgroundBrush" x:Uid="SolidColorBrush_206" Color="#FFEDEDED"/>
+    <SolidColorBrush x:Key="ComboBoxBorderBrush" x:Uid="SolidColorBrush_207" Color="#FFEDEDED"/>
+    <SolidColorBrush x:Key="ComboBoxMouseOverBorderBrush" x:Uid="SolidColorBrush_223" Color="#FFEDEDED"/>
+    <SolidColorBrush x:Key="ComboBoxButtonBorderBrush" x:Uid="SolidColorBrush_224" Color="#FFCDCDCD"/>
+    <SolidColorBrush x:Key="NumberComboBoxBackgroundBrush" x:Uid="SolidColorBrush_221" Color="#FFEDEDED"/>
+    <SolidColorBrush x:Key="NumberComboBoxBorderBrush" x:Uid="SolidColorBrush_208" Color="#FFEDEDED"/>
+    <SolidColorBrush x:Key="NumberComboBoxFocusedForegroundBrush" x:Uid="SolidColorBrush_225"
+                   Color="{StaticResource Text1Color}"/>
+    <SolidColorBrush x:Key="NumberComboBoxMouseOverBorderBrush" x:Uid="SolidColorBrush_222" Color="#FFEDEDED"/>
+    <SolidColorBrush x:Key="ToolTipBorderBrush" x:Uid="SolidColorBrush_169" Color="#FF595959"/>
+    <SolidColorBrush x:Key="ToolTipBackgroundBrush" x:Uid="SolidColorBrush_170" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="PaletteTabDefaultBackgroundBrush" x:Uid="SolidColorBrush_178" Color="#FF878787"/>
+    <SolidColorBrush x:Key="PaletteTabDefaultForegroundBrush" x:Uid="SolidColorBrush_98" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="PaletteTabSelectedBackgroundBrush" x:Uid="SolidColorBrush_99" Color="#FF9C9C9C"/>
+    <SolidColorBrush x:Key="PaletteTabSelectedForegroundBrush" x:Uid="SolidColorBrush_217" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="PaletteTabMouseOverBackgroundBrush" x:Uid="SolidColorBrush_52" Color="#FFB6B6B6"/>
+    <SolidColorBrush x:Key="PaletteTabMouseOverForegroundBrush" x:Uid="SolidColorBrush_218" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="PaletteHeaderBackgroundBrush" x:Uid="SolidColorBrush_145" Color="Transparent"/>
+    <SolidColorBrush x:Key="PaletteHeaderMouseOverBackgroundBrush" x:Uid="SolidColorBrush_108" Color="#FF666666"/>
+    <SolidColorBrush x:Key="PaletteHeaderPressedBackgroundBrush" x:Uid="SolidColorBrush_142" Color="#FF757575"/>
+    <SolidColorBrush x:Key="AutoHideChannelBackgroundBrush" x:Uid="SolidColorBrush_105" Color="#FF5C5C5C"/>
+    <SolidColorBrush x:Key="DockAdornerPreviewWindowFillBrush" x:Uid="SolidColorBrush_109" Color="#59000000"/>
+    <SolidColorBrush x:Key="DockAdornerInsertionBrush" x:Uid="SolidColorBrush_137" Color="#FF6495ed"/>
+    <SolidColorBrush x:Key="PaletteInformationalTextBrush" x:Uid="SolidColorBrush_106" Color="#FF434343"/>
+    <SolidColorBrush x:Key="PaletteHyperlinkBrush" x:Uid="SolidColorBrush_179" Color="#FF033D85"/>
+    <SolidColorBrush x:Key="ToolbarRecessedBrush" x:Uid="SolidColorBrush_189" Color="#FFCDCDCD"/>
+    <SolidColorBrush x:Key="ToolSelectedBrush" x:Uid="SolidColorBrush_185" Color="#FF757575"/>
+    <SolidColorBrush x:Key="ToolHoverBrush" x:Uid="SolidColorBrush_186" Color="#FFBDBDBD"/>
+    <SolidColorBrush x:Key="ToolAssetBrush" x:Uid="SolidColorBrush_187" Color="#FF5C5C5C"/>
+    <SolidColorBrush x:Key="ToolExpansionTriangleBrush" x:Uid="SolidColorBrush_188" Color="#FF424242"/>
+    <SolidColorBrush x:Key="FlatMenuIconArrowNormalBrush" x:Uid="SolidColorBrush_126" Color="#FF000000"/>
+    <SolidColorBrush x:Key="FlatMenuIconArrowMouseOverBrush" x:Uid="SolidColorBrush_127" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="FlatToggleNormalBackgroundBrush" x:Uid="SolidColorBrush_128" Color="#FF8D8D8D"/>
+    <SolidColorBrush x:Key="FlatToggleNormalBorderBrush" x:Uid="SolidColorBrush_129" Color="#FF5E5E5E"/>
+    <SolidColorBrush x:Key="FlatToggleHoverBackgroundBrush" x:Uid="SolidColorBrush_130" Color="#FFA6A6A6"/>
+    <SolidColorBrush x:Key="FlatToggleHoverBorderBrush" x:Uid="SolidColorBrush_131" Color="#FF818181"/>
+    <SolidColorBrush x:Key="FlatToggleCheckedBackgroundBrush" x:Uid="SolidColorBrush_132" Color="#FFCDCDCD"/>
+    <SolidColorBrush x:Key="FlatToggleCheckedBorderBrush" x:Uid="SolidColorBrush_133" Color="#FF5E5E5E"/>
+    <SolidColorBrush x:Key="FlatToggleCheckedTextBrush" x:Uid="SolidColorBrush_205" Color="#FF000000"/>
+    <SolidColorBrush x:Key="FlatToggleDisabledBackgroundBrush" x:Uid="SolidColorBrush_134" Color="#FF818181"/>
+    <SolidColorBrush x:Key="FlatToggleDisabledBorderBrush" x:Uid="SolidColorBrush_135" Color="#FFADADAD"/>
+    <SolidColorBrush x:Key="FlatToggleButtonInnerBorderBrush" x:Uid="SolidColorBrush_148" Color="#FF898989"/>
+    <SolidColorBrush x:Key="CloseIconNormalBorderBrush" x:Uid="SolidColorBrush_152" Color="#FF575757"/>
+    <SolidColorBrush x:Key="CloseIconHoverBorderBrush" x:Uid="SolidColorBrush_153" Color="#FF808080"/>
+    <SolidColorBrush x:Key="CloseIconNormalFillBrush" x:Uid="SolidColorBrush_154" Color="#FFE5E5E5"/>
+    <SolidColorBrush x:Key="CloseIconHoverFillBrush" x:Uid="SolidColorBrush_155" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="ValueEditorTextBrush" x:Uid="SolidColorBrush_211" Color="{StaticResource Text1Color}"/>
+    <SolidColorBrush x:Key="ValueEditorBackgroundBrush" x:Uid="SolidColorBrush_212" Color="#FFEDEDED"/>
+    <SolidColorBrush x:Key="ValueEditorBorderBrush" x:Uid="SolidColorBrush_213" Color="#FFEDEDED"/>
+    <SolidColorBrush x:Key="ValueEditorDisabledBackgroundBrush" x:Uid="SolidColorBrush_214" Color="#FFCDCDCD"/>
+    <SolidColorBrush x:Key="ValueEditorDisabledBorderBrush" x:Uid="SolidColorBrush_215" Color="#FFEDEDED"/>
+    <SolidColorBrush x:Key="ValueEditorDisabledTextBrush" x:Uid="SolidColorBrush_216" Color="#FF707070"/>
+</ResourceDictionary>

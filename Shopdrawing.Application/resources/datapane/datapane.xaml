@@ -1,0 +1,860 @@
+<DataPane:DataPane xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                   xmlns:System="clr-namespace:System;assembly=Mscorlib"
+                   xmlns:Media="clr-namespace:System.Windows.Media;assembly=Mscorlib"
+                   xmlns:DataPane="clr-namespace:Microsoft.Expression.DesignSurface.UserInterface.DataPane"
+                   xmlns:SampleData="clr-namespace:Microsoft.Expression.DesignSurface.SampleData"
+                   xmlns:Framework="clr-namespace:Microsoft.Expression.Framework.Controls;assembly=Microsoft.Expression.Framework"
+                   xmlns:FrameworkUI="clr-namespace:Microsoft.Expression.Framework.UserInterface;assembly=Microsoft.Expression.Framework"
+                   xmlns:Databinding="clr-namespace:Microsoft.Expression.Framework.Data;assembly=Microsoft.Expression.Framework"
+                   xmlns:ValueEditors="clr-namespace:Microsoft.Expression.Framework.ValueEditors;assembly=Microsoft.Expression.Framework"
+                   xmlns:Automation="clr-namespace:Microsoft.Expression.Framework.Diagnostics;assembly=Microsoft.Expression.Framework"
+                   x:Uid="DataPane" Automation:AutomationElement.Id="Designer_DataPane">
+  <FrameworkElement.Resources>
+    <Databinding:BoolToCheckStateConverter x:Key="BoolToCheckStateConverter" x:Uid="Databinding:BoolToCheckStateConverter_1"/>
+    <Databinding:NotConverter x:Key="NotConverter" x:Uid="Databinding:NotCoverter_1"/>
+    <Databinding:BoolToVisibilityCollapsedConverter x:Key="BoolToVisibilityCollapsedConverter" x:Uid="Databinding:BoolToVisibilityCollapsedConverter_1"/>
+    <Databinding:BoolToVisibilityHiddenConverter x:Key="BoolToVisibilityHiddenConverter" x:Uid="Databinding:BoolToVisibilityHiddenConverter_1"/>
+    <Databinding:BoolToDoubleConverter x:Key="BoolToDoubleConverter" x:Uid="Databinding:BoolToDoubleConverter_1" TrueValue="1.0"
+                                       FalseValue="0.0"/>
+    <Databinding:InverseVisibilityConverter x:Key="InverseVisibilityConverter" x:Uid="Databinding:InverseVisibilityConverter_1"/>
+    <Databinding:NullToBoolConverter x:Key="NullToBoolConverter" x:Uid="Databinding:NullToBoolConverter_1"/>
+    <Databinding:MultiplyConverter x:Key="MultiplyConverter" x:Uid="tlctl:MultiplyConverter_1" MultiplyValue="18"/>
+    <Databinding:SingleMarginConverter x:Key="IndentationConverter" x:Uid="tlctl:LeftMarginConverter_4"
+                                       Databinding:MarginConverter.Left="18" TargetSubProperty="Left"
+                                       Databinding:MarginConverter.Converter="{StaticResource MultiplyConverter}"/>
+    <DataPane:ProvideIconForDataSourceConverter x:Key="ProvideIconForDataSourceConverter" x:Uid="DataPane:ProvideIconForDataSourceConverter_1"/>
+    <DataPane:DataSchemaItemCategoryIconConverter x:Key="DataSchemaItemCategoryIconConverter" x:Uid="DataPane:DataSchemaItemCategoryIconConverter_1"/>
+    <Thickness x:Key="InsetItemMargin" x:Uid="Thickness_1">8,0,0,0</Thickness>
+    <Thickness x:Key="DataTextBlockMargin" x:Uid="Thickness_2">2,2,2,3</Thickness>
+    <Thickness x:Key="SmallBorderMargin" x:Uid="Thickness_3">0,1,0,1</Thickness>
+    <Thickness x:Key="ExpanderMargin" x:Uid="Thickness_4">1,2,1,1</Thickness>
+    <System:Double x:Key="RowHeight" x:Uid="System:Double_1">22.0</System:Double>
+    <Style x:Key="AddDataSourceMenuButtonStyle" x:Uid="Style_201" TargetType="{x:Type Button}">
+      <Style.BasedOn>
+        <x:NullExtension/>
+      </Style.BasedOn>
+      <Setter x:Uid="Setter_1828" Property="Control.Background" Value="Transparent"/>
+      <Setter x:Uid="Setter_1829" Property="Control.Template">
+        <Setter.Value>
+          <ControlTemplate x:Uid="ControlTemplate_6" TargetType="{x:Type Button}">
+            <Grid x:Uid="Grid_12" Panel.Background="{TemplateBinding Control.Background}">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Uid="ColumnDefinition_19" Width="Auto"/>
+                <ColumnDefinition x:Uid="ColumnDefinition_20" Width="Auto"/>
+              </Grid.ColumnDefinitions>
+              <Framework:Icon x:Name="Icon" x:Uid="Framework:Icon_2" FrameworkElement.HorizontalAlignment="Center"
+                              FrameworkElement.VerticalAlignment="Center"
+                              Image.Source="{TemplateBinding Framework:Icon.DeselectedImage}"/>
+              <Path x:Name="DropDownArrow" x:Uid="Path_1" Grid.Column="1"
+                    FrameworkElement.Style="{DynamicResource DropDownArrowPath}" FrameworkElement.Margin="1,0,0,0"
+                    Shape.Fill="{DynamicResource Text1Brush}" UIElement.Opacity="0.55"/>
+            </Grid>
+            <ControlTemplate.Triggers>
+              <Trigger x:Uid="Trigger_1155" Property="UIElement.IsMouseOver" Value="true">
+                <Setter x:Uid="Setter_1830" TargetName="Icon" Property="Image.Source">
+                  <Setter.Value>
+                    <Binding Path="(Framework:Icon.SelectedImage)" RelativeSource="{RelativeSource TemplatedParent}"
+                             Mode="OneWay"/>
+                  </Setter.Value>
+                </Setter>
+                <Setter x:Uid="Setter_1831" TargetName="DropDownArrow"
+                        Value="{DynamicResource ArrowExpandCollapseMouseOverBrush}" Property="Shape.Fill"/>
+                <Setter x:Uid="Setter_1841" TargetName="DropDownArrow" Property="UIElement.Opacity" Value="1.0"/>
+              </Trigger>
+              <Trigger x:Uid="Trigger_1156" Property="UIElement.IsEnabled" Value="false">
+                <Setter x:Uid="Setter_1832" TargetName="Icon" Property="UIElement.Opacity" Value="0.5"/>
+                <Setter x:Uid="Setter_1833" TargetName="DropDownArrow" Property="UIElement.Opacity" Value="0.25"/>
+              </Trigger>
+            </ControlTemplate.Triggers>
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+    </Style>
+    <ContextMenu x:Key="NewPropertyOrCollectionContextMenu" x:Uid="ContextMenu_6">
+      <MenuItem x:Uid="MenuItem_8" Automation:AutomationElement.Id="AddBasicProperty"
+                HeaderedItemsControl.Header="Add Simple Property" Command="{Binding AddBasicPropertyCommand}"
+                UIElement.IsEnabled="{Binding IsAddBasicPropertyEnabled}"/>
+      <MenuItem x:Uid="MenuItem_9" Automation:AutomationElement.Id="AddCompositeProperty"
+                HeaderedItemsControl.Header="Add Complex Property" Command="{Binding AddCompositePropertyCommand}"
+                UIElement.IsEnabled="{Binding IsAddCompositePropertyEnabled}"
+                UIElement.Visibility="{Binding CanMakeCompositeProperty, Converter={StaticResource BoolToVisibilityCollapsedConverter}}"/>
+      <MenuItem x:Uid="MenuItem_10" Automation:AutomationElement.Id="AddCollectionProperty"
+                HeaderedItemsControl.Header="Add Collection Property" Command="{Binding AddCollectionCommand}"
+                UIElement.IsEnabled="{Binding IsAddCollectionPropertyEnabled}"
+                UIElement.Visibility="{Binding CanMakeCollectionProperty, Converter={StaticResource BoolToVisibilityCollapsedConverter}}"/>
+      <Separator x:Uid="Separator_1"
+                 UIElement.Visibility="{Binding CanMakeHierarchicalCollection, Converter={StaticResource BoolToVisibilityCollapsedConverter}}"/>
+      <MenuItem x:Uid="MenuItem_12" Automation:AutomationElement.Id="AddHierarchicalProperty"
+                HeaderedItemsControl.Header="Convert to Hierarchical Collection"
+                Command="{Binding MakeHierarchicalCollectionCommand}"
+                UIElement.IsEnabled="{Binding CanMakeHierarchicalCollection}"
+                UIElement.Visibility="{Binding CanMakeHierarchicalCollection, Converter={StaticResource BoolToVisibilityCollapsedConverter}}"/>
+    </ContextMenu>
+    <Style x:Key="DataPaneSplitButtonStyle" x:Uid="Style_191" TargetType="{x:Type Framework:MenuButton}"
+           BasedOn="{StaticResource MenuIconSplitButtonStyle}">
+      <Style.Setters>
+        <Setter x:Uid="Setter_1844" Property="Control.Padding" Value="4,2,3,2"/>
+      </Style.Setters>
+      <Style.Triggers>
+        <DataTrigger x:Uid="DataTrigger_14"
+                     Binding="{Binding DataContext.IsSelected, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataPane:SelectableItemControl}}}"
+                     Value="True">
+          <Setter x:Uid="Setter_1835" Property="Framework:MenuButton.DropDownArrowBrush"
+                  Value="{DynamicResource ListSelectedTextBrush}"/>
+        </DataTrigger>
+      </Style.Triggers>
+    </Style>
+    <Style x:Key="RowContainer" x:Uid="Style_2" TargetType="{x:Type Control}">
+      <Setter x:Uid="Setter_8" Property="Control.Template">
+        <Setter.Value>
+          <ControlTemplate x:Uid="ControlTemplate_2" TargetType="{x:Type Control}">
+            <StackPanel x:Uid="StackPanel_1" Orientation="Vertical" Panel.IsItemsHost="true"/>
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+    </Style>
+    <Style x:Key="SelectableDataNodeTextBlockStyle" x:Uid="Style_44" TargetType="{x:Type TextBlock}">
+      <Setter x:Uid="Setter_269" Property="FrameworkElement.Margin" Value="{StaticResource DataTextBlockMargin}"/>
+      <Setter x:Uid="Setter_270" Property="TextBlock.FontFamily"
+              Value="{DynamicResource {x:Static SystemFonts.MessageFontFamilyKey}}"/>
+      <Setter x:Uid="Setter_271" Property="TextBlock.FontSize"
+              Value="{DynamicResource {x:Static SystemFonts.MessageFontSizeKey}}"/>
+      <Setter x:Uid="Setter_272" Property="TextBlock.FontWeight"
+              Value="{DynamicResource {x:Static SystemFonts.MessageFontWeightKey}}"/>
+      <Setter x:Uid="Setter_282" Property="FrameworkElement.VerticalAlignment" Value="Bottom"/>
+      <Style.Triggers>
+        <DataTrigger x:Uid="DataTrigger_1" Binding="{Binding IsSelected, Mode=OneWay}" Value="true">
+          <Setter x:Uid="Setter_273" Property="TextBlock.Foreground" Value="{DynamicResource BackgroundBrush}"/>
+          <Setter x:Uid="Setter_283" Property="TextBlock.Background" Value="Transparent"/>
+        </DataTrigger>
+      </Style.Triggers>
+    </Style>
+    <Style x:Key="SelectableItemControlStyle" x:Uid="Style_50"
+           TargetType="{x:Type DataPane:SelectableItemControl}">
+      <Setter x:Uid="Setter_1837" Property="UIElement.Focusable" Value="false"/>
+      <Setter x:Uid="Setter_296" Property="DataPane:SelectableItemControl.IsSelected"
+              Value="{Binding IsSelected}"/>
+      <Setter x:Uid="Setter_297" Property="Automation:AutomationElement.Id" Value="{Binding UniqueId}"/>
+      <Setter x:Uid="Setter_298" Property="DataPane:SelectableItemControl.LeftControlMouseUpCommand"
+              Value="{Binding ToggleSelectCommand, Mode=OneWay}"/>
+      <Setter x:Uid="Setter_299" Property="DataPane:SelectableItemControl.LeftMouseUpCommand"
+              Value="{Binding SelectCommand, Mode=OneWay}"/>
+      <Setter x:Uid="Setter_300" Property="DataPane:SelectableItemControl.LeftMouseDownCommand"
+              Value="{Binding EnsureSelectedCommand, Mode=OneWay}"/>
+      <Setter x:Uid="Setter_301" Property="DataPane:SelectableItemControl.LeftDoubleClickCommand"
+              Value="{Binding DoubleClickCommand, Mode=OneWay}"/>
+      <Setter x:Uid="Setter_309" Property="DataPane:SelectableItemControl.RightMouseDownCommand"
+              Value="{Binding EnsureSelectedCommand, Mode=OneWay}"/>
+    </Style>
+    <Style x:Key="RangeSelectableItemControlStyle" x:Uid="Style_51"
+           TargetType="{x:Type DataPane:SelectableItemControl}"
+           BasedOn="{StaticResource SelectableItemControlStyle}">
+      <Setter x:Uid="Setter_302" Property="DataPane:SelectableItemControl.LeftShiftMouseDownCommand"
+              Value="{Binding RangeSelectCommand, Mode=OneWay}"/>
+      <Setter x:Uid="Setter_303" Property="DataPane:SelectableItemControl.LeftControlShiftMouseDownCommand"
+              Value="{Binding ExtendRangeSelectCommand, Mode=OneWay}"/>
+    </Style>
+    <Style x:Key="HoverableGrid" x:Uid="Style_45" TargetType="{x:Type Grid}">
+      <Style.Triggers>
+        <MultiDataTrigger x:Uid="MultiDataTrigger_1">
+          <MultiDataTrigger.Conditions>
+            <Condition x:Uid="Condition_1" Binding="{Binding IsMouseOver, RelativeSource={RelativeSource Self}}"
+                       Value="True"/>
+            <Condition x:Uid="Condition_2" Binding="{Binding IsSelectable}" Value="True"/>
+          </MultiDataTrigger.Conditions>
+          <Setter x:Uid="Setter_292" Property="Panel.Background" Value="{DynamicResource ListHoverBrush}"/>
+        </MultiDataTrigger>
+        <DataTrigger x:Uid="DataTrigger_2" Binding="{Binding IsSelected, Mode=OneWay}" Value="true">
+          <Setter x:Uid="Setter_275" Property="Panel.Background" Value="{DynamicResource ListSelectedBrush}"/>
+          <Setter x:Uid="Setter_294" Property="TextElement.Foreground" Value="{DynamicResource BackgroundBrush}"/>
+        </DataTrigger>
+      </Style.Triggers>
+      <Setter x:Uid="Setter_276" Property="TextElement.Foreground" Value="{DynamicResource Text1Brush}"/>
+      <Setter x:Uid="Setter_284" Property="Panel.Background" Value="{DynamicResource RecessedBrush}"/>
+    </Style>
+    <Style x:Key="HoverableDarkGrid" x:Uid="Style_48" TargetType="{x:Type Grid}"
+           BasedOn="{StaticResource HoverableGrid}">
+      <Setter x:Uid="Setter_285" Property="Panel.Background" Value="Transparent"/>
+    </Style>
+    <Style x:Key="ConfigurationPopupButtonStyle" x:Uid="Style_52" TargetType="{x:Type Button}">
+      <Style.BasedOn>
+        <x:NullExtension/>
+      </Style.BasedOn>
+      <Setter x:Uid="Setter_304" Property="Control.Background" Value="Transparent"/>
+      <Setter x:Uid="Setter_305" Property="Control.BorderBrush">
+        <Setter.Value>
+          <x:NullExtension/>
+        </Setter.Value>
+      </Setter>
+      <Setter x:Uid="Setter_306" Property="Control.Template">
+        <Setter.Value>
+          <ControlTemplate x:Uid="ControlTemplate_4" TargetType="{x:Type Button}">
+            <Grid x:Uid="Grid_13" Panel.Background="{TemplateBinding Control.Background}">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Uid="ColumnDefinition_21" Width="Auto"/>
+                <ColumnDefinition x:Uid="ColumnDefinition_22" Width="Auto"/>
+              </Grid.ColumnDefinitions>
+              <Framework:Icon x:Name="Icon" x:Uid="Framework:Icon_3" Grid.Column="0"
+                              FrameworkElement.HorizontalAlignment="Center" FrameworkElement.VerticalAlignment="Center"
+                              Image.Source="{TemplateBinding Framework:Icon.DeselectedImage}"/>
+              <Path x:Name="DropDownArrow" x:Uid="Path_2" Grid.Column="1"
+                    FrameworkElement.Style="{DynamicResource DropDownArrowPath}" FrameworkElement.Margin="1,0,0,0"
+                    Shape.Fill="{DynamicResource Text1Brush}" UIElement.Opacity="0.55"/>
+            </Grid>
+            <ControlTemplate.Triggers>
+              <DataTrigger x:Uid="DataTrigger_8" Value="True"
+                           Binding="{Binding DataContext.IsSelected, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataPane:SelectableItemControl}}}">
+                <Setter x:Uid="Setter_1838" TargetName="DropDownArrow" Value="{DynamicResource LayerChild1Brush}"
+                        Property="Shape.Fill"/>
+                <Setter x:Uid="Setter_1842" TargetName="DropDownArrow" Property="UIElement.Opacity" Value="1"/>
+              </DataTrigger>
+              <Trigger x:Uid="Trigger_1157" Property="UIElement.IsMouseOver" Value="true">
+                <Setter x:Uid="Setter_1834" TargetName="Icon" Property="Image.Source">
+                  <Setter.Value>
+                    <Binding Path="(Framework:Icon.SelectedImage)" RelativeSource="{RelativeSource TemplatedParent}"
+                             Mode="OneWay"/>
+                  </Setter.Value>
+                </Setter>
+                <Setter x:Uid="Setter_1840" TargetName="DropDownArrow"
+                        Value="{DynamicResource ArrowExpandCollapseMouseOverBrush}" Property="Shape.Fill"/>
+                <Setter x:Uid="Setter_1843" TargetName="DropDownArrow" Property="UIElement.Opacity" Value="1"/>
+              </Trigger>
+            </ControlTemplate.Triggers>
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+    </Style>
+    <DataPane:SchemaItemBasicTemplateSet x:Key="LiveDataSchemaItemTemplates" x:Uid="DataPane:SchemaItemBasicTemplateSet_1">
+      <DataPane:SchemaItemBasicTemplateSet.BasicTemplate>
+        <DataTemplate x:Uid="DataTemplate_7" DataType="{x:Type DataPane:DataSchemaItem}">
+          <Border x:Uid="Border_11" FrameworkElement.Height="{StaticResource RowHeight}" BorderThickness="0,0,0,1"
+                  BorderBrush="Transparent" Framework:ClickControl.ScrollIntoView="{Binding IsSelected, Mode=OneWay}">
+            <Framework:DragDropHelper.DragDropHandler>
+              <Binding/>
+            </Framework:DragDropHelper.DragDropHandler>
+            <DataPane:SelectableItemControl FrameworkElement.Name="SelectClickControl" x:Uid="SelectClickControl"
+                                            FrameworkElement.Style="{StaticResource RangeSelectableItemControlStyle}">
+              <Grid x:Name="BackgroundGrid" x:Uid="BackgroundGrid"
+                    FrameworkElement.Style="{StaticResource HoverableDarkGrid}">
+                <StackPanel x:Uid="StackPanel_16" Orientation="Horizontal"
+                            FrameworkElement.Margin="{Binding Depth, Converter={StaticResource IndentationConverter}}">
+                  <TextBlock x:Uid="TextBlock_8" Padding="20,0,0,0" FrameworkElement.VerticalAlignment="Center"
+                             FrameworkElement.Style="{StaticResource SelectableDataNodeTextBlockStyle}"
+                             Text="{Binding DisplayName}"/>
+                </StackPanel>
+              </Grid>
+            </DataPane:SelectableItemControl>
+          </Border>
+        </DataTemplate>
+      </DataPane:SchemaItemBasicTemplateSet.BasicTemplate>
+      <DataPane:SchemaItemBasicTemplateSet.CompositeTemplate>
+        <DataTemplate x:Uid="DataTemplate_8" DataType="{x:Type DataPane:DataSchemaItem}">
+          <Border x:Uid="Border_12" FrameworkElement.Height="{StaticResource RowHeight}" BorderThickness="0,0,0,1"
+                  BorderBrush="Transparent" Framework:ClickControl.ScrollIntoView="{Binding IsSelected, Mode=OneWay}">
+            <Framework:DragDropHelper.DragDropHandler>
+              <Binding/>
+            </Framework:DragDropHelper.DragDropHandler>
+            <DataPane:SelectableItemControl FrameworkElement.Name="SelectClickControl" x:Uid="DataPane:SelectableItemControl_1"
+                                            FrameworkElement.Style="{StaticResource RangeSelectableItemControlStyle}">
+              <Grid x:Name="BackgroundGrid" x:Uid="Grid_16" FrameworkElement.Style="{StaticResource HoverableDarkGrid}">
+                <StackPanel x:Uid="StackPanel_17" Orientation="Horizontal"
+                            FrameworkElement.Margin="{Binding Depth, Converter={StaticResource IndentationConverter}}">
+                  <CheckBox FrameworkElement.Name="ExpandCollapseCheckBox" x:Uid="ExpandCollapseCheckBox"
+                            FrameworkElement.VerticalAlignment="Center"
+                            FrameworkElement.Style="{DynamicResource ExpandCollapseCheckBox}" FrameworkElement.Width="20px"
+                            FrameworkElement.Margin="{StaticResource ExpanderMargin}"
+                            ToggleButton.IsChecked="{Binding IsExpanded, Mode=TwoWay, Converter={StaticResource BoolToCheckStateConverter}}"
+                            UIElement.Visibility="{Binding HasChildren, Mode=OneWay, Converter={StaticResource BoolToVisibilityHiddenConverter}}"/>
+                  <Framework:Icon x:Uid="Framework:Icon_6" FrameworkElement.Width="16" FrameworkElement.Height="16"
+                                  FrameworkElement.VerticalAlignment="Center">
+                    <Image.Source>
+                      <MultiBinding x:Uid="MultiBinding_3" Converter="{StaticResource DataSchemaItemCategoryIconConverter}">
+                        <Binding x:Uid="Binding_7"/>
+                      </MultiBinding>
+                    </Image.Source>
+                  </Framework:Icon>
+                  <TextBlock x:Uid="TextBlock_9" FrameworkElement.VerticalAlignment="Center"
+                             FrameworkElement.Style="{StaticResource SelectableDataNodeTextBlockStyle}"
+                             Text="{Binding DisplayName}"/>
+                </StackPanel>
+              </Grid>
+            </DataPane:SelectableItemControl>
+          </Border>
+        </DataTemplate>
+      </DataPane:SchemaItemBasicTemplateSet.CompositeTemplate>
+      <DataPane:SchemaItemBasicTemplateSet.CollectionTemplate>
+        <DataTemplate x:Uid="DataTemplate_9" DataType="{x:Type DataPane:DataSchemaItem}">
+          <Border x:Uid="Border_13" FrameworkElement.Height="{StaticResource RowHeight}" BorderThickness="0,0,0,1"
+                  BorderBrush="Transparent" Framework:ClickControl.ScrollIntoView="{Binding IsSelected, Mode=OneWay}">
+            <Framework:DragDropHelper.DragDropHandler>
+              <Binding/>
+            </Framework:DragDropHelper.DragDropHandler>
+            <DataPane:SelectableItemControl FrameworkElement.Name="SelectClickControl" x:Uid="DataPane:SelectableItemControl_2"
+                                            FrameworkElement.Style="{StaticResource RangeSelectableItemControlStyle}">
+              <Grid x:Name="BackgroundGrid" x:Uid="Grid_17" FrameworkElement.Style="{StaticResource HoverableDarkGrid}">
+                <StackPanel x:Uid="StackPanel_18" Orientation="Horizontal"
+                            FrameworkElement.Margin="{Binding Depth, Converter={StaticResource IndentationConverter}}">
+                  <CheckBox FrameworkElement.Name="ExpandCollapseCheckBox" x:Uid="CheckBox_2"
+                            FrameworkElement.VerticalAlignment="Center"
+                            FrameworkElement.Style="{DynamicResource ExpandCollapseCheckBox}" FrameworkElement.Width="20px"
+                            FrameworkElement.Margin="{StaticResource ExpanderMargin}"
+                            ToggleButton.IsChecked="{Binding IsExpanded, Mode=TwoWay, Converter={StaticResource BoolToCheckStateConverter}}"
+                            UIElement.Visibility="{Binding HasChildren, Mode=OneWay, Converter={StaticResource BoolToVisibilityHiddenConverter}}"/>
+                  <Framework:Icon x:Uid="Framework:Icon_7" FrameworkElement.Width="16" FrameworkElement.Height="16"
+                                  FrameworkElement.VerticalAlignment="Center">
+                    <Image.Source>
+                      <MultiBinding x:Uid="MultiBinding_4" Converter="{StaticResource DataSchemaItemCategoryIconConverter}">
+                        <Binding x:Uid="Binding_8"/>
+                        <Binding x:Uid="Binding_9" Path="DataContext.IsMasterModeSet"
+                                 RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type DataPane:DataPane}}"/>
+                      </MultiBinding>
+                    </Image.Source>
+                  </Framework:Icon>
+                  <TextBlock x:Uid="TextBlock_10" FrameworkElement.VerticalAlignment="Center"
+                             FrameworkElement.Style="{StaticResource SelectableDataNodeTextBlockStyle}"
+                             Text="{Binding DisplayName}"/>
+                </StackPanel>
+              </Grid>
+            </DataPane:SelectableItemControl>
+          </Border>
+        </DataTemplate>
+      </DataPane:SchemaItemBasicTemplateSet.CollectionTemplate>
+    </DataPane:SchemaItemBasicTemplateSet>
+    <DataPane:SchemaItemBasicTemplateSet x:Key="DesignDataSchemaItemTemplates" x:Uid="DataPane:SchemaItemBasicTemplateSet_2">
+      <DataPane:SchemaItemBasicTemplateSet.BasicTemplate>
+        <DataTemplate x:Uid="DataTemplate_10" DataType="{x:Type DataPane:DataSchemaItem}">
+          <Border x:Uid="Border_14" FrameworkElement.Height="{StaticResource RowHeight}" BorderThickness="0,0,0,1"
+                  BorderBrush="Transparent" Framework:ClickControl.ScrollIntoView="{Binding IsSelected, Mode=OneWay}">
+            <Framework:DragDropHelper.DragDropHandler>
+              <Binding/>
+            </Framework:DragDropHelper.DragDropHandler>
+            <DataPane:SelectableItemControl FrameworkElement.Name="SelectClickControl" x:Uid="DataPane:SelectableItemControl_3"
+                                            FrameworkElement.Style="{StaticResource RangeSelectableItemControlStyle}">
+              <Grid x:Name="BackgroundGrid" x:Uid="Grid_18" FrameworkElement.Style="{StaticResource HoverableDarkGrid}">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition x:Uid="ColumnDefinition_39" Width="*"/>
+                  <ColumnDefinition x:Uid="ColumnDefinition_40" Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel x:Uid="StackPanel_19" Orientation="Horizontal"
+                            FrameworkElement.Margin="{Binding Depth, Converter={StaticResource IndentationConverter}}">
+                  <TextBlock x:Uid="TextBlock_11" Padding="20,0,0,0" FrameworkElement.VerticalAlignment="Center"
+                             FrameworkElement.Style="{StaticResource SelectableDataNodeTextBlockStyle}"
+                             Text="{Binding DisplayName}"/>
+                </StackPanel>
+                <DataPane:DesignDataConfigurationButton x:Uid="DataPane:DesignDataConfigurationButton_1" FrameworkElement.ToolTip="Edit string values"
+                                                        FrameworkElement.Height="15" FrameworkElement.MinHeight="15" Control.Padding="0" Grid.Column="1"
+                                                        FrameworkElement.Margin="4,0,9,0" FrameworkElement.VerticalAlignment="Stretch"
+                                                        FrameworkElement.HorizontalAlignment="Right"
+                                                        FrameworkElement.Style="{DynamicResource ConfigurationPopupButtonStyle}"
+                                                        Framework:Icon.DeselectedImage="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Data/data_string_off_16x16.png"
+                                                        Framework:Icon.SelectedImage="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Data/data_string_on_16x16.png"
+                                                        Automation:AutomationElement.Id="DesignValueConfigurationButton"
+                                                        UIElement.Visibility="{Binding ShouldDisplay, Mode=OneWay, Converter={StaticResource BoolToVisibilityCollapsedConverter}}"/>
+              </Grid>
+            </DataPane:SelectableItemControl>
+          </Border>
+        </DataTemplate>
+      </DataPane:SchemaItemBasicTemplateSet.BasicTemplate>
+    </DataPane:SchemaItemBasicTemplateSet>
+    <DataPane:SampleDataTemplateSet x:Key="SampleDataSchemaItemTemplates" x:Uid="DataPane:SampleDataTemplateSet_1">
+      <DataPane:SchemaItemBasicTemplateSet.CompositeTemplate>
+        <DataTemplate x:Uid="DataTemplate_4" DataType="{x:Type DataPane:DataSchemaItem}">
+          <Border x:Uid="Border_6" FrameworkElement.Height="{StaticResource RowHeight}" BorderThickness="0,0,0,1"
+                  BorderBrush="Transparent" Framework:ClickControl.ScrollIntoView="{Binding IsSelected, Mode=OneWay}">
+            <Framework:DragDropHelper.DragDropHandler>
+              <Binding/>
+            </Framework:DragDropHelper.DragDropHandler>
+            <DataPane:SelectableItemControl FrameworkElement.Name="SelectClickControl" x:Uid="Framework:ClickControl_4"
+                                            FrameworkElement.Style="{StaticResource RangeSelectableItemControlStyle}">
+              <Grid x:Name="BackgroundGrid" x:Uid="Grid_6" FrameworkElement.Style="{StaticResource HoverableDarkGrid}">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition x:Uid="ColumnDefinition_8" Width="*"/>
+                  <ColumnDefinition x:Uid="ColumnDefinition_9" Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel UIElement.ClipToBounds="true" x:Uid="StackPanel_10" Orientation="Horizontal"
+                            FrameworkElement.Margin="{Binding Depth, Converter={StaticResource IndentationConverter}}">
+                  <CheckBox FrameworkElement.Name="ExpandCollapseCheckBox" x:Uid="CheckBox_3"
+                            FrameworkElement.VerticalAlignment="Center"
+                            FrameworkElement.Style="{DynamicResource ExpandCollapseCheckBox}" FrameworkElement.Width="20px"
+                            FrameworkElement.Margin="{StaticResource ExpanderMargin}"
+                            ToggleButton.IsChecked="{Binding IsExpanded, Mode=TwoWay, Converter={StaticResource BoolToCheckStateConverter}}"
+                            UIElement.Visibility="{Binding HasChildren, Mode=OneWay, Converter={StaticResource BoolToVisibilityHiddenConverter}}"/>
+                  <Framework:Icon x:Uid="Image_1" FrameworkElement.Width="16" FrameworkElement.Height="16"
+                                  FrameworkElement.VerticalAlignment="Center">
+                    <Image.Source>
+                      <MultiBinding x:Uid="MultiBinding_1" Converter="{StaticResource DataSchemaItemCategoryIconConverter}">
+                        <Binding x:Uid="Binding_4"/>
+                      </MultiBinding>
+                    </Image.Source>
+                  </Framework:Icon>
+                  <ValueEditors:InlineStringEditor x:Name="PathName" x:Uid="PathName" Automation:AutomationElement.Id="PathName"
+                                                   FrameworkElement.HorizontalAlignment="Left" FrameworkElement.VerticalAlignment="Center"
+                                                   FrameworkElement.Margin="{StaticResource DataTextBlockMargin}"
+                                                   DataPane:PendableEdit.IsPendingEdit="{Binding IsPendingRename, Mode=TwoWay}"
+                                                   IsSelected="{Binding IsSelected, Mode=OneWay}"
+                                                   TextBoxBase.IsReadOnly="{Binding IsRenameEnabled, Mode=OneWay, Converter={StaticResource NotConverter}}"
+                                                   ValueEditors:StringEditor.Value="{Binding PathName, Mode=TwoWay}"/>
+                </StackPanel>
+                <Framework:MenuButton x:Name="NewPropertyOrCollection" x:Uid="NewPropertyOrCollection"
+                                      Automation:AutomationElement.Id="NewPropertyOrCollection"
+                                      FrameworkElement.Style="{DynamicResource DataPaneSplitButtonStyle}"
+                                      FrameworkElement.HorizontalAlignment="Right" FrameworkElement.Margin="4,0,5,0" Grid.Column="1"
+                                      FrameworkElement.VerticalAlignment="Center" FrameworkElement.ToolTip="Add simple property"
+                                      Framework:Icon.SelectedImage="/Microsoft.Expression.Framework;Component/Resources/Icons/ux/ux_add_on_11x11.png"
+                                      Framework:Icon.DeselectedImage="/Microsoft.Expression.Framework;Component/Resources/Icons/ux/ux_add_off_11x11.png"
+                                      DropDownMenu="{StaticResource NewPropertyOrCollectionContextMenu}"
+                                      ButtonBase.Command="{Binding AddBasicPropertyCommand}"
+                                      UIElement.IsEnabled="{Binding IsAddPropertyEnabled}"
+                                      UIElement.Visibility="{Binding IsDataSetContextSampleData, Mode=OneWay, Converter={StaticResource BoolToVisibilityCollapsedConverter}}"/>
+                <Button x:Name="NewDataStoreProperty" x:Uid="NewDataStoreProperty"
+                        Automation:AutomationElement.Id="NewDataStoreProperty"
+                        FrameworkElement.Style="{DynamicResource FlatIconButtonStyle}"
+                        FrameworkElement.HorizontalAlignment="Right" FrameworkElement.Margin="4,0,9,0" Grid.Column="1"
+                        FrameworkElement.VerticalAlignment="Center" FrameworkElement.ToolTip="Add property"
+                        Framework:Icon.SelectedImage="/Microsoft.Expression.Framework;Component/Resources/Icons/ux/ux_add_on_11x11.png"
+                        Framework:Icon.DeselectedImage="/Microsoft.Expression.Framework;Component/Resources/Icons/ux/ux_add_off_11x11.png"
+                        ButtonBase.Command="{Binding AddBasicPropertyCommand}"
+                        UIElement.IsEnabled="{Binding IsAddPropertyEnabled}"
+                        UIElement.Visibility="{Binding IsDataSetContextDataStore, Mode=OneWay, Converter={StaticResource BoolToVisibilityCollapsedConverter}}"/>
+              </Grid>
+              <FrameworkElement.ContextMenu>
+                <ContextMenu x:Uid="ContextMenu_3">
+                  <MenuItem x:Uid="MenuItem_5" Automation:AutomationElement.Id="RemoveSampleDataSchemaItem"
+                            Command="{Binding RemoveCommand}" UIElement.IsEnabled="{Binding IsRemoveEnabled}">
+                    <HeaderedItemsControl.Header>
+                      <Binding x:Uid="Binding_1" Path="PathName">
+                        <Binding.Converter>
+                          <Databinding:StringFormatConverter x:Uid="Databinding:StringFormatConverter_1" Format="Remove &quot;{0}&quot;"/>
+                        </Binding.Converter>
+                      </Binding>
+                    </HeaderedItemsControl.Header>
+                  </MenuItem>
+                </ContextMenu>
+              </FrameworkElement.ContextMenu>
+            </DataPane:SelectableItemControl>
+          </Border>
+        </DataTemplate>
+      </DataPane:SchemaItemBasicTemplateSet.CompositeTemplate>
+      <DataPane:SchemaItemBasicTemplateSet.CollectionTemplate>
+        <DataTemplate x:Uid="DataTemplate_5" DataType="{x:Type DataPane:DataSchemaItem}">
+          <Border x:Uid="Border_7" FrameworkElement.Height="{StaticResource RowHeight}" BorderThickness="0,0,0,1"
+                  BorderBrush="Transparent" Framework:ClickControl.ScrollIntoView="{Binding IsSelected, Mode=OneWay}">
+            <Framework:DragDropHelper.DragDropHandler>
+              <Binding/>
+            </Framework:DragDropHelper.DragDropHandler>
+            <DataPane:SelectableItemControl FrameworkElement.Name="SelectClickControl" x:Uid="Framework:ClickControl_5"
+                                            FrameworkElement.Style="{StaticResource RangeSelectableItemControlStyle}">
+              <Grid x:Name="BackgroundGrid" x:Uid="Grid_7" FrameworkElement.Style="{StaticResource HoverableDarkGrid}">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition x:Uid="ColumnDefinition_3" Width="*"/>
+                  <ColumnDefinition x:Uid="ColumnDefinition_4" Width="Auto"/>
+                  <ColumnDefinition x:Uid="ColumnDefinition_28" Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel x:Uid="StackPanel_11" UIElement.ClipToBounds="true" Orientation="Horizontal"
+                            FrameworkElement.Margin="{Binding Depth, Converter={StaticResource IndentationConverter}}">
+                  <CheckBox FrameworkElement.Name="ExpandCollapseCheckBox" x:Uid="CheckBox_4"
+                            FrameworkElement.VerticalAlignment="Center"
+                            FrameworkElement.Style="{DynamicResource ExpandCollapseCheckBox}" FrameworkElement.Width="20px"
+                            FrameworkElement.Margin="{StaticResource ExpanderMargin}"
+                            ToggleButton.IsChecked="{Binding IsExpanded, Mode=TwoWay, Converter={StaticResource BoolToCheckStateConverter}}"
+                            UIElement.Visibility="{Binding HasChildren, Mode=OneWay, Converter={StaticResource BoolToVisibilityHiddenConverter}}"/>
+                  <Framework:Icon x:Uid="Image_2" FrameworkElement.Width="16" FrameworkElement.Height="16"
+                                  FrameworkElement.VerticalAlignment="Center">
+                    <Image.Source>
+                      <MultiBinding x:Uid="MultiBinding_2" Converter="{StaticResource DataSchemaItemCategoryIconConverter}">
+                        <Binding x:Uid="Binding_5"/>
+                        <Binding x:Uid="Binding_6" Path="DataContext.IsMasterModeSet"
+                                 RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type DataPane:DataPane}}"/>
+                      </MultiBinding>
+                    </Image.Source>
+                  </Framework:Icon>
+                  <ValueEditors:InlineStringEditor x:Name="PathName" x:Uid="ValueEditors:InlineStringEditor_1"
+                                                   Automation:AutomationElement.Id="PathName" FrameworkElement.HorizontalAlignment="Left"
+                                                   FrameworkElement.VerticalAlignment="Center"
+                                                   FrameworkElement.Margin="{StaticResource DataTextBlockMargin}"
+                                                   DataPane:PendableEdit.IsPendingEdit="{Binding IsPendingRename, Mode=TwoWay}"
+                                                   IsSelected="{Binding IsSelected, Mode=OneWay}"
+                                                   ValueEditors:StringEditor.Value="{Binding PathName, Mode=TwoWay}"/>
+                </StackPanel>
+                <Button x:Name="CollectionEditorInvokeButton" x:Uid="CollectionEditorInvokeButton"
+                        Automation:AutomationElement.Id="CollectionEditorInvokeButton"
+                        FrameworkElement.ToolTip="Edit sample values" FrameworkElement.Margin="4,0,5,0"
+                        FrameworkElement.Width="16" FrameworkElement.Height="16" Grid.Column="1"
+                        FrameworkElement.VerticalAlignment="Center"
+                        FrameworkElement.Style="{DynamicResource FlatIconButtonStyle}"
+                        Framework:Icon.DeselectedImage="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Data/collection_editor_off_16x16.png"
+                        Framework:Icon.SelectedImage="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Data/collection_editor_on_16x16.png"
+                        UIElement.IsEnabled="{Binding IsEditCollectionValuesEnabled}"
+                        ButtonBase.Command="{Binding EditCollectionValuesCommand}"/>
+                <Framework:MenuButton x:Name="NewPropertyOrCollection" x:Uid="Framework:MenuButton_1"
+                                      Automation:AutomationElement.Id="NewPropertyOrCollection"
+                                      FrameworkElement.Style="{DynamicResource DataPaneSplitButtonStyle}"
+                                      FrameworkElement.Margin="0,0,5,0" FrameworkElement.VerticalAlignment="Center" Grid.Column="2"
+                                      FrameworkElement.ToolTip="Add simple property"
+                                      Framework:Icon.SelectedImage="/Microsoft.Expression.Framework;Component/Resources/Icons/ux/ux_add_on_11x11.png"
+                                      Framework:Icon.DeselectedImage="/Microsoft.Expression.Framework;Component/Resources/Icons/ux/ux_add_off_11x11.png"
+                                      DropDownMenu="{StaticResource NewPropertyOrCollectionContextMenu}"
+                                      ButtonBase.Command="{Binding AddBasicPropertyCommand}"
+                                      UIElement.IsEnabled="{Binding IsAddPropertyEnabled}"/>
+              </Grid>
+              <FrameworkElement.ContextMenu>
+                <ContextMenu x:Uid="ContextMenu_4">
+                  <MenuItem x:Uid="MenuItem_6" Automation:AutomationElement.Id="RemoveSampleDataSchemaItem"
+                            Command="{Binding RemoveCommand}" UIElement.IsEnabled="{Binding IsRemoveEnabled}">
+                    <HeaderedItemsControl.Header>
+                      <Binding x:Uid="Binding_2" Path="PathName">
+                        <Binding.Converter>
+                          <Databinding:StringFormatConverter x:Uid="Databinding:StringFormatConverter_2" Format="Delete &quot;{0}&quot;"/>
+                        </Binding.Converter>
+                      </Binding>
+                    </HeaderedItemsControl.Header>
+                  </MenuItem>
+                </ContextMenu>
+              </FrameworkElement.ContextMenu>
+            </DataPane:SelectableItemControl>
+          </Border>
+        </DataTemplate>
+      </DataPane:SchemaItemBasicTemplateSet.CollectionTemplate>
+      <DataPane:SchemaItemBasicTemplateSet.BasicTemplate>
+        <DataTemplate x:Uid="DataTemplate_6" DataType="{x:Type DataPane:DataSchemaItem}">
+          <Border x:Uid="Border_8" FrameworkElement.Height="{StaticResource RowHeight}" BorderThickness="0,0,0,1"
+                  BorderBrush="Transparent" Framework:ClickControl.ScrollIntoView="{Binding IsSelected, Mode=OneWay}">
+            <Framework:DragDropHelper.DragDropHandler>
+              <Binding/>
+            </Framework:DragDropHelper.DragDropHandler>
+            <DataPane:SelectableItemControl FrameworkElement.Name="SelectClickControl" x:Uid="Framework:ClickControl_6"
+                                            FrameworkElement.Style="{StaticResource RangeSelectableItemControlStyle}">
+              <Grid x:Name="BackgroundGrid" x:Uid="Grid_8" FrameworkElement.Style="{StaticResource HoverableDarkGrid}">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition x:Uid="ColumnDefinition_6" Width="*"/>
+                  <ColumnDefinition x:Uid="ColumnDefinition_7" Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel x:Uid="StackPanel_12" UIElement.ClipToBounds="true" Orientation="Horizontal"
+                            FrameworkElement.Margin="{Binding Depth, Converter={StaticResource IndentationConverter}}">
+                  <ValueEditors:InlineStringEditor x:Name="PathName" x:Uid="ValueEditors:InlineStringEditor_2"
+                                                   Automation:AutomationElement.Id="PathName" FrameworkElement.HorizontalAlignment="Left"
+                                                   FrameworkElement.Margin="42,2,2,3"
+                                                   DataPane:PendableEdit.IsPendingEdit="{Binding IsPendingRename, Mode=TwoWay}"
+                                                   IsSelected="{Binding IsSelected, Mode=OneWay}"
+                                                   ValueEditors:StringEditor.Value="{Binding PathName, Mode=TwoWay}"/>
+                </StackPanel>
+                <DataPane:TypeConfigurationButton x:Uid="DataPane:TypeConfigurationButton_1" FrameworkElement.Height="15"
+                                                  FrameworkElement.MinHeight="15" Control.Padding="0" Grid.Column="1"
+                                                  FrameworkElement.VerticalAlignment="Stretch" FrameworkElement.HorizontalAlignment="Right"
+                                                  FrameworkElement.Margin="4,0,9,0" Automation:AutomationElement.Id="TypeConfigurationButton"
+                                                  FrameworkElement.ToolTip="Change property type"
+                                                  FrameworkElement.Style="{DynamicResource ConfigurationPopupButtonStyle}"
+                                                  UIElement.IsEnabled="{Binding HasNoErrors}"
+                                                  Framework:Icon.DeselectedImage="{Binding ButtonTypeIcon}"
+                                                  Framework:Icon.SelectedImage="{Binding ButtonTypeIconMouseOver}"
+                                                  UIElement.Visibility="{Binding IsDataSetContextSampleData, Mode=OneWay, Converter={StaticResource BoolToVisibilityCollapsedConverter}}"/>
+              </Grid>
+              <FrameworkElement.ContextMenu>
+                <ContextMenu x:Uid="ContextMenu_5">
+                  <MenuItem x:Uid="MenuItem_7" Automation:AutomationElement.Id="RemoveSampleDataSchemaItem"
+                            Command="{Binding RemoveCommand}" UIElement.IsEnabled="{Binding IsRemoveEnabled}">
+                    <HeaderedItemsControl.Header>
+                      <Binding x:Uid="Binding_3" Path="PathName">
+                        <Binding.Converter>
+                          <Databinding:StringFormatConverter x:Uid="Databinding:StringFormatConverter_3" Format="Remove &quot;{0}&quot;"/>
+                        </Binding.Converter>
+                      </Binding>
+                    </HeaderedItemsControl.Header>
+                  </MenuItem>
+                </ContextMenu>
+              </FrameworkElement.ContextMenu>
+            </DataPane:SelectableItemControl>
+          </Border>
+        </DataTemplate>
+      </DataPane:SchemaItemBasicTemplateSet.BasicTemplate>
+    </DataPane:SampleDataTemplateSet>
+    <DataPane:DataSchemaItemTemplateSelector x:Key="MainSchemaItemTemplates" LiveData="{StaticResource LiveDataSchemaItemTemplates}"
+                                             DesignData="{StaticResource DesignDataSchemaItemTemplates}"
+                                             SampleData="{StaticResource SampleDataSchemaItemTemplates}"
+                                             x:Uid="DataPane:DataSchemaItemTemplateSelector_1"/>
+    <DataPane:DataSchemaItemTemplateSelector x:Key="DataContextSchemaItemTemplates" LiveData="{StaticResource LiveDataSchemaItemTemplates}"
+                                             x:Uid="DataPane:DataSchemaItemTemplateSelector_2"/>
+    <DataTemplate x:Key="DataSourceNodeTemplate" x:Uid="DataTemplate_2">
+      <Grid x:Uid="Grid_5">
+        <StackPanel x:Uid="StackPanel_4" Orientation="Vertical">
+          <DataPane:SelectableItemControl FrameworkElement.Name="SelectClickControl" x:Uid="Framework:ClickControl_3"
+                                          FrameworkElement.Height="21px" FrameworkElement.Margin="0,0,0,1"
+                                          FrameworkElement.Style="{StaticResource SelectableItemControlStyle}">
+            <Grid x:Uid="Grid_3" FrameworkElement.Style="{StaticResource HoverableDarkGrid}">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Uid="ColumnDefinition_11" Width="*"/>
+                <ColumnDefinition x:Uid="ColumnDefinition_29" Width="Auto"/>
+                <ColumnDefinition x:Uid="ColumnDefinition_12" Width="Auto"/>
+              </Grid.ColumnDefinitions>
+              <StackPanel x:Uid="StackPanel_6" Orientation="Horizontal" FrameworkElement.Margin="18,0,0,0"
+                          FrameworkElement.VerticalAlignment="Bottom">
+                <Framework:Icon x:Name="DataSourceIcon" x:Uid="DataSourceIcon" Image.Stretch="None"
+                                FrameworkElement.Margin="2,0,4,0" FrameworkElement.Width="20px" FrameworkElement.Height="20px">
+                  <Image.Source>
+                    <Binding Converter="{StaticResource ProvideIconForDataSourceConverter}"/>
+                  </Image.Source>
+                </Framework:Icon>
+                <TextBlock x:Uid="TextBlock_2" FrameworkElement.Style="{StaticResource SelectableDataNodeTextBlockStyle}"
+                           Text="{Binding DisplayName}"/>
+                <Framework:Icon x:Name="HasErrorIcon" x:Uid="HasErrorIcon" FrameworkElement.Width="12" FrameworkElement.Height="12"
+                                FrameworkElement.Margin="6 2 6 0" FrameworkElement.VerticalAlignment="Center"
+                                Image.Source="pack://application:,,,/Microsoft.Expression.Framework;Component/Resources/Icons/shell_warning_on_12x12.png"
+                                FrameworkElement.ToolTip="{Binding ErrorMessage}"
+                                UIElement.Visibility="{Binding HasErrors, Mode=OneWay, Converter={StaticResource BoolToVisibilityCollapsedConverter}}"/>
+              </StackPanel>
+              <Button x:Name="ConfigureDataStore" UIElement.Visibility="Collapsed"
+                      FrameworkElement.ToolTip="Edit data store values"
+                      Automation:AutomationElement.Id="ConfigureDataStore" x:Uid="ConfigureDataStore"
+                      FrameworkElement.Style="{DynamicResource FlatIconButtonStyle}" FrameworkElement.Height="16"
+                      FrameworkElement.VerticalAlignment="Center" Grid.Column="1" FrameworkElement.Margin="4,0,4,0"
+                      Framework:Icon.DeselectedImage="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Data/collection_editor_off_16x16.png"
+                      Framework:Icon.SelectedImage="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Data/collection_editor_on_16x16.png"
+                      ButtonBase.Command="{Binding ConfigureDataStoreCommand}"/>
+              <Button x:Name="OpenDesignFileInvokeButton" x:Uid="OpenDesignFileInvokeButton"
+                      FrameworkElement.Style="{DynamicResource FlatIconButtonStyle}"
+                      Automation:AutomationElement.Id="OpenDesignFileInvokeButton"
+                      FrameworkElement.ToolTip="Edit sample data values" FrameworkElement.Margin="4,0,5,0"
+                      FrameworkElement.Width="16" FrameworkElement.Height="16" Grid.Column="1"
+                      FrameworkElement.VerticalAlignment="Center"
+                      Framework:Icon.DeselectedImage="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Data/collection_editor_off_16x16.png"
+                      Framework:Icon.SelectedImage="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Data/collection_editor_on_16x16.png"
+                      UIElement.Visibility="{Binding CanEditData, Converter={StaticResource BoolToVisibilityCollapsedConverter}}"
+                      UIElement.IsEnabled="{Binding CanEditData}" ButtonBase.Command="{Binding EditData}"/>
+              <Framework:MenuButton x:Name="SampleDataCommands" UIElement.Visibility="Collapsed"
+                                    FrameworkElement.ToolTip="Data source options" Automation:AutomationElement.Id="SampleDataCommands"
+                                    x:Uid="SampleDataCommands" FrameworkElement.Style="{DynamicResource ConfigurationPopupButtonStyle}"
+                                    FrameworkElement.Height="16" FrameworkElement.VerticalAlignment="Center" Grid.Column="2"
+                                    FrameworkElement.Margin="4,0,9,0"
+                                    Framework:Icon.DeselectedImage="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Data/LinkIcon_20x16_Off.PNG"
+                                    Framework:Icon.SelectedImage="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Data/LinkIcon_20x16_On.PNG"
+                                    DropDownMenu="{Binding ContextMenu}"/>
+              <FrameworkElement.ContextMenu>
+                <ContextMenu x:Uid="ContextMenu_7">
+                  <MenuItem x:Uid="MenuItem_11" Automation:AutomationElement.Id="RemoveSampleDataSource"
+                            HeaderedItemsControl.Header="Delete data source" Command="{Binding DeleteCommand}"
+                            UIElement.IsEnabled="{Binding IsRemoveEnabled}"/>
+                </ContextMenu>
+              </FrameworkElement.ContextMenu>
+              <FrameworkElement.ToolTip>
+                <StackPanel x:Uid="StackPanel_20">
+                  <TextBlock x:Uid="TextBlock_12" FontWeight="Bold" Text="{Binding DisplayName}"/>
+                  <TextBlock x:Uid="TextBlock_13" Text="{Binding ToolTip}"/>
+                </StackPanel>
+              </FrameworkElement.ToolTip>
+            </Grid>
+          </DataPane:SelectableItemControl>
+          <Grid x:Name="DataSchemaHighlightHost" x:Uid="DataSchemaHighlightHost">
+            <ItemsControl x:Name="ItemsControl" x:Uid="ItemsControl_4"
+                          ItemTemplateSelector="{StaticResource MainSchemaItemTemplates}" UIElement.Focusable="false"
+                          ItemsSource="{Binding SchemaItem.ItemList}"/>
+            <DataPane:FlattenedTreeViewSubtreeAdorner x:Name="SchemaHighlight" x:Uid="SchemaHighlight" FrameworkElement.HorizontalAlignment="Stretch"
+                                                      FrameworkElement.VerticalAlignment="Top" Border.BorderBrush="{DynamicResource DatabindingBrush}"
+                                                      Border.BorderThickness="1" UIElement.IsEnabled="false" TargetItemsControlName="ItemsControl"
+                                                      FrameworkElement.DataContext="{Binding ActiveChildItem}"/>
+          </Grid>
+        </StackPanel>
+        <Border x:Name="ActiveBorder" x:Uid="ActiveBorder" BorderThickness="0"
+                BorderBrush="{DynamicResource DatabindingBrush}"/>
+      </Grid>
+      <DataTemplate.Triggers>
+        <DataTrigger x:Uid="DataTrigger_3" Value="True" Binding="{Binding DataSourceNode.IsSampleDataSource}">
+          <Setter x:Uid="Setter_288" TargetName="SampleDataCommands" Property="UIElement.Visibility" Value="Visible"/>
+        </DataTrigger>
+        <DataTrigger x:Uid="DataTrigger_4" Value="True" Binding="{Binding IsActive}">
+          <Setter x:Uid="Setter_290" TargetName="ActiveBorder" Property="Border.BorderThickness" Value="1,1,1,1"/>
+        </DataTrigger>
+        <DataTrigger x:Uid="DataTrigger_5" Value="True" Binding="{Binding IsChildItemActive}">
+          <Setter x:Uid="Setter_291" TargetName="SchemaHighlight" Property="UIElement.IsEnabled" Value="true"/>
+        </DataTrigger>
+        <DataTrigger x:Uid="DataTrigger_15" Value="True" Binding="{Binding DataSourceNode.IsDataStoreSource}">
+          <Setter x:Uid="Setter_1845" TargetName="ConfigureDataStore" Property="UIElement.Visibility" Value="Visible"/>
+        </DataTrigger>
+      </DataTemplate.Triggers>
+    </DataTemplate>
+    <DataTemplate x:Uid="DataTemplate_3" DataType="{x:Type DataPane:DataHostItem}">
+      <StackPanel x:Uid="StackPanel_5" Orientation="Vertical">
+        <DataPane:SelectableItemControl FrameworkElement.Name="SelectClickControl" x:Uid="Framework:ClickControl_2"
+                                        FrameworkElement.Height="21px" FrameworkElement.Margin="0,0,0,1"
+                                        FrameworkElement.Style="{StaticResource SelectableItemControlStyle}"
+                                        Framework:ClickControl.ScrollIntoView="{Binding IsSelected, Mode=OneWay}">
+          <Grid x:Uid="Grid_4" FrameworkElement.Style="{StaticResource HoverableGrid}">
+            <StackPanel x:Uid="StackPanel_8" Orientation="Horizontal"
+                        FrameworkElement.Margin="{StaticResource DefaultMargin}"
+                        FrameworkElement.VerticalAlignment="Center">
+              <CheckBox FrameworkElement.Name="ExpandCollapseCheckBox" x:Uid="CheckBox_1" FrameworkElement.Width="20px"
+                        FrameworkElement.Style="{DynamicResource ExpandCollapseCheckBox}"
+                        ToggleButton.IsChecked="{Binding IsExpanded, Mode=TwoWay, Converter={StaticResource BoolToCheckStateConverter}}"
+                        UIElement.Visibility="{Binding HasDataSources, Mode=OneWay, Converter={StaticResource BoolToVisibilityHiddenConverter}}"/>
+              <Framework:Icon x:Uid="Image_3"
+                              Image.Source="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Data/data_host_16x16.png"
+                              FrameworkElement.Width="16" FrameworkElement.Height="16"/>
+              <TextBlock x:Uid="TextBlock_5" FrameworkElement.Style="{StaticResource SelectableDataNodeTextBlockStyle}"
+                         Text="{Binding DisplayName}"/>
+              <Framework:Icon x:Name="Icon" x:Uid="Framework:Icon_1" FrameworkElement.Width="12" FrameworkElement.Height="12"
+                              FrameworkElement.Margin="6,0,6,0" FrameworkElement.VerticalAlignment="Center"
+                              Image.Source="pack://application:,,,/Microsoft.Expression.Framework;Component/Resources/Icons/shell_warning_on_12x12.png"
+                              FrameworkElement.ToolTip="{Binding ErrorMessage}"
+                              UIElement.Visibility="{Binding DocumentHasErrors, Mode=OneWay, Converter={StaticResource BoolToVisibilityCollapsedConverter}}"/>
+            </StackPanel>
+          </Grid>
+        </DataPane:SelectableItemControl>
+        <ItemsControl x:Uid="ItemsControl_2" ItemTemplate="{StaticResource DataSourceNodeTemplate}"
+                      UIElement.Focusable="false" ItemsSource="{Binding DataSources}"
+                      UIElement.Visibility="{Binding IsExpanded, Mode=OneWay, Converter={StaticResource BoolToVisibilityCollapsedConverter}}"/>
+        <ItemsControl x:Uid="ItemsControl_3" FrameworkElement.Style="{StaticResource RowContainer}"
+                      UIElement.Focusable="false" ItemsSource="{Binding Children}"/>
+      </StackPanel>
+    </DataTemplate>
+    <Grid x:Key="PaletteHeaderContent" x:Uid="Grid_11" Row="0" FrameworkElement.MinWidth="110"
+          FrameworkElement.HorizontalAlignment="Stretch" FrameworkElement.Margin="2,0,0,0">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition x:Uid="ColumnDefinition_23" Width="Auto"/>
+        <ColumnDefinition x:Uid="ColumnDefinition_24" Width="*"/>
+        <ColumnDefinition x:Uid="ColumnDefinition_25" Width="Auto"/>
+        <ColumnDefinition x:Uid="ColumnDefinition_26" Width="Auto"/>
+      </Grid.ColumnDefinitions>
+      <Border x:Uid="Border_9" FrameworkElement.Height="18" Grid.Column="0"
+              FrameworkElement.HorizontalAlignment="Left"
+              BorderBrush="{DynamicResource FlatToggleNormalBorderBrush}" BorderThickness="1,1,1,1">
+        <Grid x:Uid="Grid_10">
+          <FrameworkElement.Resources>
+            <Style x:Uid="Style_202" TargetType="{x:Type ToolTip}" BasedOn="{StaticResource WrapToolTipStyle}"/>
+          </FrameworkElement.Resources>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Uid="ColumnDefinition_16" Width="Auto"/>
+            <ColumnDefinition x:Uid="ColumnDefinition_27" Width="1"/>
+            <ColumnDefinition x:Uid="ColumnDefinition_18" Width="Auto"/>
+          </Grid.ColumnDefinitions>
+          <Framework:WorkaroundRadioButton x:Uid="ToggleButton_1" Automation:AutomationElement.Id="DragDropMasterModeToggleButton"
+                                           Grid.Column="0" FrameworkElement.Width="20"
+                                           FrameworkElement.Style="{StaticResource FlatToggleIconButtonStyle}"
+                                           Framework:Icon.SelectedImage="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Data/master_mode_toggle_on_16x16.png"
+                                           Framework:Icon.DeselectedImage="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Data/master_mode_toggle_off_16x16.png"
+                                           Control.Padding="0,-2,0,0" Control.BorderThickness="1,1,0,1"
+                                           FrameworkElement.ToolTip="List ModeDragging a collection or collection item to the artboard will create a list control"
+                                           UIElement.IsEnabled="{Binding IsActive}"
+                                           ToggleButton.IsChecked="{Binding IsMasterModeSet, Mode=TwoWay}"/>
+          <Border x:Uid="Border_10" BorderBrush="{DynamicResource FlatToggleNormalBorderBrush}"
+                  BorderThickness="1,0,0,0" Grid.Column="1"/>
+          <Framework:WorkaroundRadioButton x:Uid="ToggleButton_2" Automation:AutomationElement.Id="DragDropDetailsModeToggleButton"
+                                           Grid.Column="2" FrameworkElement.Width="20"
+                                           FrameworkElement.Style="{StaticResource FlatToggleIconButtonStyle}"
+                                           Framework:Icon.SelectedImage="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Data/details_mode_toggle_on_16x16.png"
+                                           Framework:Icon.DeselectedImage="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Data/details_mode_toggle_off_16x16.png"
+                                           Control.Padding="0,-2,0,0" Control.BorderThickness="0,1,1,1"
+                                           FrameworkElement.ToolTip="Details ModeDragging a collection item to the artboard will create a control to display the item details"
+                                           UIElement.IsEnabled="{Binding IsActive}"
+                                           ToggleButton.IsChecked="{Binding IsDetailsModeSet, Mode=TwoWay}"/>
+        </Grid>
+      </Border>
+      <Framework:MenuButton Grid.Column="2" Automation:AutomationElement.Id="SampleData" x:Uid="SampleData"
+                            FrameworkElement.Margin="3,0,0,0" FrameworkElement.MinWidth="0"
+                            FrameworkElement.VerticalAlignment="Center" FrameworkElement.ToolTip="Create sample data"
+                            FrameworkElement.Style="{StaticResource AddDataSourceMenuButtonStyle}"
+                            Framework:Icon.DeselectedImage="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Data/sampleData_OFF.png"
+                            Framework:Icon.SelectedImage="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Data/sampleData_ON.png"
+                            UIElement.IsEnabled="{Binding CanInsertDataSource, Mode=OneWay}">
+        <Framework:MenuButton.DropDownMenu>
+          <ContextMenu x:Uid="ContextMenu_1">
+            <MenuItem x:Uid="MenuItem_1" Automation:AutomationElement.Id="Define_New_Sample_Data"
+                      HeaderedItemsControl.Header="New Sample Data..."
+                      Command="{Binding CreateSampleDataCommand, Mode=OneWay}"
+                      UIElement.IsEnabled="{Binding CanInsertDataSource, Mode=OneWay}"/>
+            <MenuItem x:Uid="MenuItem_2" Automation:AutomationElement.Id="Import_Sample_Data_From_Xml"
+                      HeaderedItemsControl.Header="Import Sample Data from XML..."
+                      Command="{Binding CreateSampleDataFromXmlCommand, Mode=OneWay}"
+                      UIElement.IsEnabled="{Binding CanInsertDataSource, Mode=OneWay}"/>
+            <MenuItem x:Uid="MenuItem_14" Automation:AutomationElement.Id="Define_New_CLR_Data"
+                      HeaderedItemsControl.Header="Create Sample Data from Class..."
+                      Command="{Binding CreateDesignDataCommand, Mode=OneWay}"/>
+          </ContextMenu>
+        </Framework:MenuButton.DropDownMenu>
+      </Framework:MenuButton>
+      <Framework:MenuButton Grid.Column="3" Automation:AutomationElement.Id="LiveData" x:Uid="LiveData"
+                            FrameworkElement.Margin="9,0,3,0" FrameworkElement.MinWidth="0"
+                            FrameworkElement.VerticalAlignment="Center" FrameworkElement.ToolTip="Create data source"
+                            FrameworkElement.Style="{StaticResource AddDataSourceMenuButtonStyle}"
+                            Framework:Icon.DeselectedImage="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Data/liveData_OFF.png"
+                            Framework:Icon.SelectedImage="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Data/liveData_ON.png"
+                            UIElement.IsEnabled="{Binding CanInsertDataSource, Mode=OneWay}">
+        <Framework:MenuButton.DropDownMenu>
+          <ContextMenu x:Uid="ContextMenu_2">
+            <MenuItem x:Uid="MenuItem_13" Automation:AutomationElement.Id="Define_New_Data_Store"
+                      HeaderedItemsControl.Header="New Data Store..."
+                      Command="{Binding CreateDataStoreCommand, Mode=OneWay}"
+                      UIElement.IsEnabled="{Binding CanInsertDataSource, Mode=OneWay}"
+                      UIElement.Visibility="{Binding CanInsertDataStore, Converter={StaticResource BoolToVisibilityCollapsedConverter}}"/>
+            <MenuItem x:Uid="MenuItem_3" Automation:AutomationElement.Id="Import_Xml_Data_Source"
+                      HeaderedItemsControl.Header="Create XML Data Source..."
+                      Command="{Binding AddXmlDataSourceCommand, Mode=OneWay}"
+                      UIElement.IsEnabled="{Binding CanInsertXmlDataSource, Mode=OneWay}"/>
+            <MenuItem x:Uid="MenuItem_4" Automation:AutomationElement.Id="Import_Clr_Data_Source"
+                      HeaderedItemsControl.Header="Create Object Data Source..."
+                      Command="{Binding AddClrObjectDataSourceCommand, Mode=OneWay}"
+                      UIElement.IsEnabled="{Binding IsAllXamlValid, Mode=OneWay}"/>
+          </ContextMenu>
+        </Framework:MenuButton.DropDownMenu>
+      </Framework:MenuButton>
+    </Grid>
+  </FrameworkElement.Resources>
+  <Border x:Uid="Border_1" CornerRadius="{DynamicResource PaletteCornerRoundingWithHeader}"
+          Background="{DynamicResource ListBackgroundBrush}">
+    <Grid x:Uid="DataPanel_1">
+      <Grid.RowDefinitions>
+        <RowDefinition x:Uid="RowDefinition_1" Height="Auto"/>
+        <RowDefinition x:Uid="RowDefinition_2" Height="2*"/>
+        <RowDefinition x:Uid="RowDefinition_3" Height="*"/>
+      </Grid.RowDefinitions>
+      <Grid x:Uid="DockPanel_1" Row="1" Automation:AutomationElement.Id="DataSourcesSection"
+            UIElement.Visibility="{Binding IsActive, Converter={StaticResource BoolToVisibilityHiddenConverter}}">
+        <Grid.RowDefinitions>
+          <RowDefinition x:Uid="RowDefinition_4" Height="Auto"/>
+          <RowDefinition x:Uid="RowDefinition_5" Height="*"/>
+        </Grid.RowDefinitions>
+        <ScrollViewer Grid.Row="1" x:Uid="ScrollViewer_1" HorizontalScrollBarVisibility="Disabled"
+                      VerticalScrollBarVisibility="Auto" FrameworkElement.Style="{DynamicResource RoundedScrollViewer}"
+                      UIElement.Focusable="false"
+                      UIElement.Opacity="{Binding HasDataHosts, Converter={StaticResource BoolToDoubleConverter}}">
+          <ItemsControl x:Uid="ItemsControl_5" UIElement.Focusable="false" ItemsSource="{Binding DataHosts}"/>
+        </ScrollViewer>
+      </Grid>
+      <GridSplitter x:Uid="GridSplitter_1" Grid.Row="1" FrameworkElement.HorizontalAlignment="Stretch"
+                    FrameworkElement.VerticalAlignment="Bottom" FrameworkElement.Height="3">
+        <Control.Template>
+          <ControlTemplate x:Uid="ControlTemplate_100">
+            <Border x:Uid="Border_15" Background="{DynamicResource MainWindowBackgroundBrush}"/>
+          </ControlTemplate>
+        </Control.Template>
+      </GridSplitter>
+      <Grid x:Uid="StackPanel_14" Row="2">
+        <Grid.RowDefinitions>
+          <RowDefinition x:Uid="RowDefinition_6" Height="Auto"/>
+          <RowDefinition x:Uid="RowDefinition_7" Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid x:Uid="Grid_15" Panel.Background="{DynamicResource PaletteBrush}" FrameworkElement.Height="21px"
+              FrameworkElement.Margin="1,1,1,0">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Uid="ColumnDefinition_33" Width="Auto"/>
+            <ColumnDefinition x:Uid="ColumnDefinition_34" Width="*"/>
+          </Grid.ColumnDefinitions>
+          <Framework:Icon x:Uid="Framework:Icon_5"
+                          Image.Source="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Data/data_host_16x16.png"
+                          FrameworkElement.Width="16" FrameworkElement.Height="16" FrameworkElement.Margin="3,3,3,2"
+                          FrameworkElement.VerticalAlignment="Center"/>
+          <TextBlock x:Uid="TextBlock_7" Grid.Column="1" Text="Data Context" FrameworkElement.VerticalAlignment="Center"/>
+        </Grid>
+        <ScrollViewer Grid.Row="1" x:Uid="ScrollViewer_2" HorizontalScrollBarVisibility="Disabled"
+                      VerticalScrollBarVisibility="Auto" FrameworkElement.Style="{DynamicResource RoundedScrollViewer}"
+                      UIElement.Focusable="false"
+                      UIElement.Opacity="{Binding HasActiveDataContext, Converter={StaticResource BoolToDoubleConverter}}">
+          <StackPanel x:Uid="StackPanel_15" Orientation="Vertical" Automation:AutomationElement.Id="DataContextSection">
+            <ItemsControl x:Name="ItemsControl" x:Uid="ItemsControl" FrameworkElement.Margin="-18,0,0,0"
+                          ItemTemplateSelector="{StaticResource DataContextSchemaItemTemplates}" UIElement.Focusable="false"
+                          ItemsSource="{Binding ActiveDataContext.ItemList}"/>
+          </StackPanel>
+        </ScrollViewer>
+      </Grid>
+    </Grid>
+  </Border>
+</DataPane:DataPane>

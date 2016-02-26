@@ -1,0 +1,1465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LocationInformation>
+  <Location Name="Afghanistan" Identifier="Afghanistan">
+    <TollNumber>
+      <Number>(971) (4) 391 7000</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Albania" Identifier="Albania">
+    <TollNumber>
+      <Number>(389) (2) 30 90 890</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Algeria" Identifier="Algeria">
+    <TollNumber>
+      <Number>(213) (21) 92 68 78</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="American Samoa" Identifier="American Samoa">
+    <TollNumber>
+      <Number>+ 61 2 9870 2131</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Andorra" Identifier="Andorra">
+    <TollNumber>
+      <Number>(33) (1) 7226 6080</Number>
+      <Comment>(French)</Comment>
+    </TollNumber>
+    <TollNumber>
+      <Number>(34) (91) 114 1464</Number>
+      <Comment>(Spanish)</Comment>
+    </TollNumber>
+  </Location>
+  <Location Name="Angola" Identifier="Angola">
+    <TollNumber>
+      <Number>(351) 214 154 065</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Anguilla" Identifier="Anguilla">
+    <TollFree>
+      <Number>1-866-993-9301</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Antarctica" Identifier="Antarctica">
+    <TollNumber>
+      <Number>+ 61 2 9870 2131</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Antigua and Barbuda" Identifier="Antigua and Barbuda">
+    <TollFree>
+      <Number>1-866-647-2707</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Argentina" Identifier="Argentina">
+    <TollFree>
+      <Number>0-800-999-4617</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>54-11-4317-2626</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Armenia" Identifier="Armenia">
+    <TollNumber>
+      <Number>(7) (495) 745 5445</Number>
+      <Comment>(Moscow, Russia)</Comment>
+    </TollNumber>
+  </Location>
+  <Location Name="Aruba" Identifier="Aruba">
+    <TollNumber>
+      <Number>1-305-603-4466</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Australia" Identifier="Australia">
+    <TollFree>
+      <Number>1800 642 008</Number>
+    </TollFree>
+    <TollFree>
+      <Number>13 20 58</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>+ 61 2 9870 2131</Number>
+    </TollNumber>
+    <TollNumber>
+      <Number>61 2 9870 2200</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Austria" Identifier="Austria">
+    <TollFree>
+      <Number>(0) (800) 000 000</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(43) (1)795 673 56</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Azerbaijan" Identifier="Azerbaijan">
+    <TollNumber>
+      <Number>(7) (495) 745 5445</Number>
+      <Comment>(Moscow, Russia)</Comment>
+    </TollNumber>
+  </Location>
+  <Location Name="Bahamas" Identifier="Bahamas">
+    <TollFree>
+      <Number>1-866-317-5700</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Bahrain" Identifier="Bahrain">
+    <TollFree>
+      <Number>(800) 04500</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(971) (4) 391 7000</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Bangladesh" Identifier="Bangladesh">
+    <TollNumber>
+      <Number> + 65-6324-8098</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Barbados" Identifier="Barbados">
+    <TollFree>
+      <Number>1-800-534-3365</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Belarus" Identifier="Belarus">
+    <TollFree>
+      <Number>(8) (820) 0071 0004</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(7) (495) 745 5445</Number>
+      <Comment>(Moscow, Russia)</Comment>
+    </TollNumber>
+  </Location>
+  <Location Name="Belgium" Identifier="Belgium">
+    <TollFree>
+      <Number>(0) (800) 40758</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(32) (2) 401 2650</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Belize" Identifier="Belize">
+    <TollFree>
+      <Number>815 / PIN 3141</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Benin" Identifier="Benin">
+    <TollFree>
+      <Number>(225) 2031 0500</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Bermuda" Identifier="Bermuda">
+    <TollFree>
+      <Number>1-866-263-1098</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Bhutan" Identifier="Bhutan">
+    <TollFree>
+      <Number>(65) 6324 8098</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Bolivia" Identifier="Bolivia">
+    <TollFree>
+      <Number>800 100 359</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Bosnia and Herzegovina" Identifier="Bosnia and Herzegovina">
+    <TollFree>
+      <Number>(0) (800) 20 230</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(387) (33) 606 100</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Botswana" Identifier="Botswana">
+    <TollNumber>
+      <Number>(27) (11) 361 7000</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Bouvet Island" Identifier="Bouvet Island">
+    <TollNumber>
+      <Number>(47) (23) 162 126</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Brazil" Identifier="Brazil">
+    <TollFree>
+      <Number>0-800-888-4081</Number>
+    </TollFree>
+  </Location>
+  <Location Name="British Indian Ocean Territories" Identifier="British Indian Ocean Territories">
+    <TollNumber>
+      <Number>(27) (11) 361 7000</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Brunei Darussalam" Identifier="Brunei Darussalam">
+    <TollNumber>
+      <Number> +84 (4) 3935-1053</Number>
+    </TollNumber>
+    <TollNumber>
+      <Number>+65 6324-8098</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Bulgaria" Identifier="Bulgaria">
+    <TollFree>
+      <Number>(0) (800) 1 5555</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(359) (2) 965 7100</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Burkina Faso" Identifier="Burkina Faso">
+    <TollNumber>
+      <Number>(225) 2031 0500</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Burundi" Identifier="Burundi">
+    <TollNumber>
+      <Number>(225) 2031 0500</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Cambodia" Identifier="Cambodia">
+    <TollNumber>
+      <Number> +84 (4) 3935-1053</Number>
+    </TollNumber>
+    <TollNumber>
+      <Number>+65 6324-8098</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Cameroon" Identifier="Cameroon">
+    <TollNumber>
+      <Number>(225) 2031 0500</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Canada" Identifier="Canada">
+    <TollFree>
+      <Number>1-888-652-2342</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Cape Verde" Identifier="Cape Verde">
+    <TollNumber>
+      <Number>(351) 214 154 065</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Cayman Islands" Identifier="Cayman Islands">
+    <TollFree>
+      <Number>1-866-263-7308</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Central African Republic" Identifier="Central African Republic">
+    <TollNumber>
+      <Number>(225) 2031 0500</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Chad" Identifier="Chad">
+    <TollNumber>
+      <Number>(225) 2031 0500</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Chile" Identifier="Chile">
+    <TollNumber>
+      <Number>800-330-600</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="China" Identifier="China">
+    <TollFree>
+      <Number>800 830 1832</Number>
+    </TollFree>
+    <TollFree>
+      <Number>800 820 3800</Number>
+    </TollFree>
+    <TollFree>
+      <Number>400 820 3800</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>+86 21 9608 1368</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Christmas Island" Identifier="Christmas Island">
+    <TollNumber>
+      <Number>+ 61 2 9870 2131</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Cocos Islands" Identifier="Cocos Islands">
+    <TollNumber>
+      <Number>+ 61 2 9870 2131</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Colombia" Identifier="Colombia">
+    <TollFree>
+      <Number>01-800-051-0595</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Comoros" Identifier="Comoros">
+    <TollNumber>
+      <Number>(27) (11) 361 7000</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Congo (DRC)" Identifier="Congo (DRC)">
+    <TollNumber>
+      <Number>(225) 2031 0500</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Cook Islands" Identifier="Cook Islands">
+    <TollNumber>
+      <Number>+ 61 2 9870 2131</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Costa Rica" Identifier="Costa Rica">
+    <TollFree>
+      <Number>0-800-012-1446</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Cote D'Ivoire" Identifier="Cote D'Ivoire">
+    <TollNumber>
+      <Number>(225) 2031 0500</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Croatia" Identifier="Croatia">
+    <TollFree>
+      <Number>(0) (800) 300 300</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(385) (1) 789 0300</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Cyprus" Identifier="Cyprus">
+    <TollFree>
+      <Number>(800) 90 900</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Czech Republic" Identifier="Czech Republic">
+    <TollNumber>
+      <Number>(420) 225 990 844</Number>
+    </TollNumber>
+    <TollFree>
+      <Number>(0800) 100-074</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Denmark" Identifier="Denmark">
+    <TollNumber>
+      <Number>(45) 38 487 131</Number>
+    </TollNumber>
+    <TollFree>
+      <Number>(807) 01315</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Djibouti" Identifier="Djibouti">
+    <TollNumber>
+      <Number>(225) 2031 0500</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Dominica" Identifier="Dominica">
+    <TollFree>
+      <Number>1-866-993-9311</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Dominican Republic" Identifier="Dominican Republic">
+    <TollFree>
+      <Number>1-888-751-2323</Number>
+    </TollFree>
+  </Location>
+  <Location Name="East Timor" Identifier="East Timor">
+    <TollNumber>
+      <Number> + 65-6324-8098</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Ecuador" Identifier="Ecuador">
+    <TollFree>
+      <Number>1-800-258-025</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Egypt" Identifier="Egypt">
+    <TollNumber>
+      <Number>(20) (2) 3764991</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="El Salvador" Identifier="El Salvador">
+    <TollFree>
+      <Number>800-7054</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Equatorial Guinea" Identifier="Equatorial Guinea">
+    <TollNumber>
+      <Number>(225) 2031 0500</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Eritrea" Identifier="Eritrea">
+    <TollNumber>
+      <Number>(254) 20 286 8800</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Estonia" Identifier="Estonia">
+    <TollFree>
+      <Number>(800) 2230</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(372) 686 8820</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Ethiopia" Identifier="Ethiopia">
+    <TollNumber>
+      <Number>(254) 20 286 8800</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Falkland Islands (Islas Malvinas)" Identifier="Falkland Islands (Islas Malvinas)">
+    <TollNumber>
+      <Number>1 305 603 4466</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Faroe Islands" Identifier="Faroe Islands">
+    <TollNumber>
+      <Number>(45) 38 487 131</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Fiji" Identifier="Fiji">
+    <TollNumber>
+      <Number>+ 61 2 9870 2131</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Finland" Identifier="Finland">
+    <TollFree>
+      <Number>(0) (800) 770 215</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>+(358) (9) 81 71 04 00</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="France" Identifier="France">
+    <TollFree>
+      <Number>(0) (805) 110 235</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(33) (1) 7226 6080</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="French Guiana" Identifier="French Guiana">
+    <TollNumber>
+      <Number>305 603 4466</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="French Polynesia" Identifier="French Polynesia">
+    <TollNumber>
+      <Number>(33) (1) 7226 6080</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="French Southern Territories" Identifier="French Southern Territories">
+    <TollNumber>
+      <Number>(33) (1) 7226 6080</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Gabon" Identifier="Gabon">
+    <TollNumber>
+      <Number>(225) 2031 0500</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Gambia" Identifier="Gambia">
+    <TollNumber>
+      <Number>(225) 2031 0500</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Georgia" Identifier="Georgia">
+    <TollNumber>
+      <Number>(7) (495) 745 5445</Number>
+      <Comment>(Moscow, Russia)</Comment>
+    </TollNumber>
+  </Location>
+  <Location Name="Germany" Identifier="Germany">
+    <TollFree>
+      <Number>(0) (800) 2848-283</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(49) (69) 2222 5494</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Ghana" Identifier="Ghana">
+    <TollNumber>
+      <Number>(44) (203) 147 4930</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Gibraltar" Identifier="Gibraltar">
+    <TollNumber>
+      <Number>(44) (203) 147 4930</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Greece" Identifier="Greece">
+    <TollFree>
+      <Number>(800) 1143 100</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(44) (870) 2411 963</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Greenland" Identifier="Greenland">
+    <TollNumber>
+      <Number>(45) 38 487 131</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Grenada" Identifier="Grenada">
+    <TollFree>
+      <Number>866 993 9312</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Guadeloupe" Identifier="Guadeloupe">
+    <TollNumber>
+      <Number>305-603-4466</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Guam" Identifier="Guam">
+    <TollNumber>
+      <Number>61 2 9870 2131</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Guatemala" Identifier="Guatemala">
+    <TollFree>
+      <Number>1-801-130-0100</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Guinea" Identifier="Guinea">
+    <TollNumber>
+      <Number>(225) 2031 0500</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Guinea-Bissau" Identifier="Guinea-Bissau">
+    <TollNumber>
+      <Number>(225) 2031 0500</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Guyana" Identifier="Guyana">
+    <TollNumber>
+      <Number>+1 305 603 4466</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Haiti" Identifier="Haiti">
+    <TollNumber>
+      <Number>193 / PIN 3141</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Heard Island and Mcdonald Islands" Identifier="Heard Island and Mcdonald Islands">
+    <TollNumber>
+      <Number>61 2 9870 2131</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Honduras" Identifier="Honduras">
+    <TollFree>
+      <Number>8000-122 PIN 5009</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Hong Kong" Identifier="Hong Kong">
+    <TollFree>
+      <Number>2388 9600</Number>
+    </TollFree>
+    <TollFree>
+      <Number>29042198</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Hungary" Identifier="Hungary">
+    <TollFree>
+      <Number>(06) 800 18749</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(36) (1) 267 4636</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Iceland" Identifier="Iceland">
+    <TollFree>
+      <Number>(800) 8236</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(47) (23) 162 126</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="India" Identifier="India">
+    <TollNumber>
+      <Number>91 80 40103000</Number>
+    </TollNumber>
+    <TollFree>
+      <Number>1800 1111 00</Number>
+    </TollFree>
+    <TollFree>
+      <Number>1800 102 1100</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Indonesia" Identifier="Indonesia">
+    <TollFree>
+      <Number>001 803 65 7668</Number>
+      <Comment>(ITFS)</Comment>
+    </TollFree>
+    <TollFree>
+      <Number>0800-120 1201</Number>
+    </TollFree>
+    <TollNumber>
+      <Number> +65-6324-8098</Number>
+    </TollNumber>
+    <TollNumber>
+      <Number>+62 (21) 2995 0700</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Iraq" Identifier="Iraq">
+    <TollNumber>
+      <Number>(971) (4) 391 7000</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Ireland" Identifier="Ireland">
+    <TollFree>
+      <Number>(1) (800) 930 031</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(353) (1) 447 5390</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Israel" Identifier="Israel">
+    <TollFree>
+      <Number>(1) (800) 350 444</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(44) (870) 2411 963</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Italy" Identifier="Italy">
+    <TollFree>
+      <Number>(800) 531 042</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(39) (02) 3604 6340</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Jamaica" Identifier="Jamaica">
+    <TollFree>
+      <Number>1-800-647-2701</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Japan" Identifier="Japan">
+    <TollFree>
+      <Number>0120-801-734</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>+81-3-6831-3460</Number>
+      <Comment>(Tokyo)</Comment>
+    </TollNumber>
+  </Location>
+  <Location Name="Jordan" Identifier="Jordan">
+    <TollFree>
+      <Number>(800) 22 731</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(962) (6) 5503451</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Kazakhstan" Identifier="Kazakhstan">
+    <TollFree>
+      <Number>(8) (800) 0801001</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(7) (727) 298 0127</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Kenya" Identifier="Kenya">
+    <TollNumber>
+      <Number>(254) (20) 286 8800</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Kiribati" Identifier="Kiribati">
+    <TollNumber>
+      <Number>+ 61 2 9870 2131</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Korea" Identifier="Korea">
+    <TollNumber>
+      <Number>1577-9700</Number>
+      <Comment>(Nation wide local toll only, no long distance tolls apply)</Comment>
+    </TollNumber>
+    <TollNumber>
+      <Number>+82 (2) 567-7881</Number>
+      <Comment>International: (International rates apply as applicable)</Comment>
+    </TollNumber>
+  </Location>
+  <Location Name="Kuwait" Identifier="Kuwait">
+    <TollNumber>
+      <Number>(965) 2243 1071</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Kyrgyzstan" Identifier="Kyrgyzstan">
+    <TollNumber>
+      <Number>(7) (495) 745 5445</Number>
+      <Comment>(Moscow, Russia)</Comment>
+    </TollNumber>
+  </Location>
+  <Location Name="Lao Peoples Democratic Republic" Identifier="Lao Peoples Democratic Republic">
+    <TollNumber>
+      <Number> +60 (3) 771 24 671</Number>
+    </TollNumber>
+    <TollNumber>
+      <Number>+84 (4) 3935 1053</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Latvia" Identifier="Latvia">
+    <TollFree>
+      <Number>(802) 00920</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(371) (67) 852 112</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Lebanon" Identifier="Lebanon">
+    <TollNumber>
+      <Number>(961) (1) 974 035</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Lesotho" Identifier="Lesotho">
+    <TollNumber>
+      <Number>(27) (11) 361 7000</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Liberia" Identifier="Liberia">
+    <TollNumber>
+      <Number>(225) 2031 0500</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Libya" Identifier="Libya">
+    <TollNumber>
+      <Number>(218) (21) 3330356</Number>
+    </TollNumber>
+    <TollFree>
+      <Number>(20) (2) 376 4991</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Liechtenstein" Identifier="Liechtenstein">
+    <TollNumber>
+      <Number>(41) (44) 580 7558</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Lithuania" Identifier="Lithuania">
+    <TollFree>
+      <Number>(800) 22032</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(370) 520 511 20</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Luxembourg" Identifier="Luxembourg">
+    <TollNumber>
+      <Number>(49) (69) 2222 5494</Number>
+      <Comment>(German)</Comment>
+    </TollNumber>
+    <TollNumber>
+      <Number>(33) (1) 7226 6080</Number>
+      <Comment>(French)</Comment>
+    </TollNumber>
+    <TollFree>
+      <Number>8002 99 77</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Macao SAR" Identifier="Macao SAR">
+    <TollNumber>
+      <Number>+ 852 2904-2198</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Macedonia (FYROM)" Identifier="Macedonia (FYROM)">
+    <TollNumber>
+      <Number>(389) (2) 3090 890</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Madagascar" Identifier="Madagascar">
+    <TollNumber>
+      <Number>(27) (11) 361 7000</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Malawi" Identifier="Malawi">
+    <TollNumber>
+      <Number>(27) (11) 361 7000</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Malaysia" Identifier="Malaysia">
+    <TollNumber>
+      <Number>+65-6324-8098 </Number>
+    </TollNumber>
+    <TollFree>
+      <Number>1800-80-1432</Number>
+    </TollFree>
+    <TollFree>
+      <Number>1800-88-6295</Number>
+    </TollFree>
+    <TollFree>
+      <Number>800 2468 1688</Number>
+      <Comment>(International Access Code)</Comment>
+    </TollFree>
+  </Location>
+  <Location Name="Maldives" Identifier="Maldives">
+    <TollNumber>
+      <Number> +65-6324-8098</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Mali" Identifier="Mali">
+    <TollNumber>
+      <Number>(225) 2031 0500</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Malta" Identifier="Malta">
+    <TollFree>
+      <Number>(800) 65 432</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Marshall Islands" Identifier="Marshall Islands">
+    <TollNumber>
+      <Number>+ 61 2 9870 2131</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Martinique" Identifier="Martinique">
+    <TollNumber>
+      <Number>1-305-603-4466</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Mauritania" Identifier="Mauritania">
+    <TollNumber>
+      <Number>(212) (22) 95 61 53</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Mauritius" Identifier="Mauritius">
+    <TollNumber>
+      <Number>(230) 202 8120 </Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Mayotte" Identifier="Mayotte">
+    <TollNumber>
+      <Number>(61) (2) 9870 2131</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Mexico" Identifier="Mexico">
+    <TollFree>
+      <Number>01-800-527-2000</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Micronesia" Identifier="Micronesia">
+    <TollNumber>
+      <Number>(61) (2) 9870 2131</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Moldova" Identifier="Moldova">
+    <TollNumber>
+      <Number>(4) (021) 203 61 53</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Monaco" Identifier="Monaco">
+    <TollFree>
+      <Number>(0) (805) 11 02 35</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(33) (1) 7226 6080</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Mongolia" Identifier="Mongolia">
+    <TollNumber>
+      <Number>(7) (495) 745 5445</Number>
+      <Comment>(Moscow, Russia)</Comment>
+    </TollNumber>
+  </Location>
+  <Location Name="Montenegro" Identifier="Montenegro">
+    <TollNumber>
+      <Number>(381) (11) 3305 500</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Montserrat" Identifier="Montserrat">
+    <TollFree>
+      <Number>1-866-993-9316</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Morocco" Identifier="Morocco">
+    <TollFree>
+      <Number>(0801) 000 809</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(212) (522) 998  985</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Mozambique" Identifier="Mozambique">
+    <TollNumber>
+      <Number>(351) 214 154 065</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Myanmar" Identifier="Myanmar">
+    <TollNumber>
+      <Number>+65 6324-8098</Number>
+    </TollNumber>
+    <TollNumber>
+      <Number> +84 (4) 3935-1053</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Namibia" Identifier="Namibia">
+    <TollNumber>
+      <Number>(27) (11) 361 7000</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Nauru" Identifier="Nauru">
+    <TollNumber>
+      <Number>+ 61 2 9870 2131</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Nepal" Identifier="Nepal">
+    <TollNumber>
+      <Number> +65-6324-8098</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Netherlands" Identifier="Netherlands">
+    <TollFree>
+      <Number>(0) (800) 023 3487</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(31) (20) 713 9240</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Netherlands Antilles" Identifier="Netherlands Antilles">
+    <TollFree>
+      <Number>00-1-866-322-0524</Number>
+    </TollFree>
+  </Location>
+  <Location Name="New Caledonia" Identifier="New Caledonia">
+    <TollNumber>
+      <Number>(33) (1) 7226 6080</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="New Zealand" Identifier="New Zealand">
+    <TollFree>
+      <Number>0800 676 334</Number>
+    </TollFree>
+    <TollFree>
+      <Number>0 800 800 004</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>+64 9 356 3093</Number>
+    </TollNumber>
+    <TollNumber>
+      <Number>+64 9 357 5575</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Nicaragua" Identifier="Nicaragua">
+    <TollFree>
+      <Number>001-800-220-1804</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Niger" Identifier="Niger">
+    <TollNumber>
+      <Number>(225) 2031 0500</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Nigeria" Identifier="Nigeria">
+    <TollNumber>
+      <Number>(234) (1) 27 10 156</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Niue" Identifier="Niue">
+    <TollNumber>
+      <Number>+ 61 2 9870 2131</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Norfolk Island" Identifier="Norfolk Island">
+    <TollNumber>
+      <Number>+ 61 2 9870 2131</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Northern Mariana Islands" Identifier="Northern Mariana Islands">
+    <TollNumber>
+      <Number>+ 61 2 9870 2131</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Norway" Identifier="Norway">
+    <TollFree>
+      <Number>(800) 56 615</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(47) (23) 162 126</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Oman" Identifier="Oman">
+    <TollNumber>
+      <Number>(968) 2444 6487</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Pakistan" Identifier="Pakistan">
+    <TollNumber>
+      <Number>(92) (21) 11167 4357</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Palau" Identifier="Palau">
+    <TollNumber>
+      <Number>+ 61 2 9870 2131</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Palestinian Authority" Identifier="Palestinian Authority">
+    <TollNumber>
+      <Number>(962) (6) 462 6969</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Panama" Identifier="Panama">
+    <TollFree>
+      <Number>00-1-800-507-1885</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Papua New Guinea" Identifier="Papua New Guinea">
+    <TollNumber>
+      <Number>+ 61 2 9870 2131</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Paraguay" Identifier="Paraguay">
+    <TollFree>
+      <Number>00-9-800-542-0004</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Peru" Identifier="Peru">
+    <TollFree>
+      <Number>0-800-51-900</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Philippines" Identifier="Philippines">
+    <TollNumber>
+      <Number>+65-6324-8098</Number>
+    </TollNumber>
+    <TollNumber>
+      <Number>+ 63 2 859 0505</Number>
+    </TollNumber>
+    <TollFree>
+      <Number>800-2468 1688</Number>
+      <Comment>(International Access Code)</Comment>
+    </TollFree>
+    <TollFree>
+      <Number> 1 800-1441-0158</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Pitcairn Islands" Identifier="Pitcairn Islands">
+    <TollNumber>
+      <Number>61 2 9870 2131</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Poland" Identifier="Poland">
+    <TollFree>
+      <Number>00 800 121 1654</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(48) (22) 594 19 99</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Portugal" Identifier="Portugal">
+    <TollFree>
+      <Number>(800) 849 102</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(351) (214) 154 065</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Puerto Rico" Identifier="Puerto Rico">
+    <TollFree>
+      <Number>1-866-584-6059</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Qatar" Identifier="Qatar">
+    <TollNumber>
+      <Number>(974) (4) 119420</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Reunion" Identifier="Reunion">
+    <TollFree>
+      <Number>(0800) 822 222</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(33) (1) 7226 6080</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Romania" Identifier="Romania">
+    <TollFree>
+      <Number>(0800) 822 222</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(40) (21) 204 70 15</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Russia" Identifier="Russia">
+    <TollFree>
+      <Number>(8) (800) 200 8002</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(7) (495) 745 5445</Number>
+      <Comment>(Moscow, Russia)</Comment>
+    </TollNumber>
+  </Location>
+  <Location Name="Rwanda" Identifier="Rwanda">
+    <TollNumber>
+      <Number>(225) 2031 0500</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Saint Helena " Identifier="Saint Helena ">
+    <TollNumber>
+      <Number>(27) (11) 361 7000</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Saint Kitts and Nevis" Identifier="Saint Kitts and Nevis">
+    <TollFree>
+      <Number>1-866-745-0644</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Saint Lucia" Identifier="Saint Lucia">
+    <TollFree>
+      <Number>1-866-796-2893</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Saint Maarteen" Identifier="Saint Maarteen">
+    <TollFree>
+      <Number>00-1-866-322-0524</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Saint Martin" Identifier="Saint Martin">
+    <TollNumber>
+      <Number>305-603-4466</Number>
+    </TollNumber>
+    <TollFree>
+      <Number>866 543 2085</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Saint Pierre and Miquelon" Identifier="Saint Pierre and Miquelon">
+    <TollNumber>
+      <Number>(27) (11) 361 7000</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Saint Thomas" Identifier="Saint Thomas">
+    <TollFree>
+      <Number>1-877-678-8034</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Saint Vincent and The Grenadines" Identifier="Saint Vincent and The Grenadines">
+    <TollFree>
+      <Number>1-866-796-2899</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Samoa" Identifier="Samoa">
+    <TollNumber>
+      <Number>+ 61 2 9870 2131</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="San Marino" Identifier="San Marino">
+    <TollFree>
+      <Number>(800) 531 042</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(39) (02) 3604 6340</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Sao Tome and Principe" Identifier="Sao Tome and Principe">
+    <TollNumber>
+      <Number>(27) (11) 361 7000</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Saudi Arabia" Identifier="Saudi Arabia">
+    <TollFree>
+      <Number>(800) 820 0135</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(966) (1) 218 8385</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Senegal" Identifier="Senegal">
+    <TollNumber>
+      <Number>(225) 2031 0500</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Serbia" Identifier="Serbia">
+    <TollFree>
+      <Number>(0) 700 300 300</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(381) (11) 3305 500</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Seychelles" Identifier="Seychelles">
+    <TollNumber>
+      <Number>(27) (11) 361 7000</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Sierra Leone" Identifier="Sierra Leone">
+    <TollNumber>
+      <Number>(225) 2031 0500</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Singapore" Identifier="Singapore">
+    <TollNumber>
+      <Number> + 65-6324-8098</Number>
+    </TollNumber>
+    <TollFree>
+      <Number>1800-324-8098</Number>
+    </TollFree>
+    <TollFree>
+      <Number>800-852-3543</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Slovakia" Identifier="Slovakia">
+    <TollFree>
+      <Number>(0) (800) 178 278</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(421) (2) 50 102 616</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Slovenia" Identifier="Slovenia">
+    <TollNumber>
+      <Number>(386) (1) 5853 449</Number>
+    </TollNumber>
+    <TollFree>
+      <Number>080 8028</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Solomon Islands" Identifier="Solomon Islands">
+    <TollNumber>
+      <Number>+ 61 2 9870 2131</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Somalia" Identifier="Somalia">
+    <TollNumber>
+      <Number>(27) (11) 361 7000</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="South Africa" Identifier="South Africa">
+    <TollFree>
+      <Number>(0) (801) 43 43 43</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(27) (11) 361 7000</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="South Georgia and Sandwich  Islands" Identifier="South Georgia and Sandwich  Islands">
+    <TollNumber>
+      <Number>54-11-4317-2626</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Spain" Identifier="Spain">
+    <TollFree>
+      <Number>(900) 150 889</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(34) (91) 114 1464</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Sri Lanka" Identifier="Sri Lanka">
+    <TollNumber>
+      <Number> +91 08 40103000</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Suriname" Identifier="Suriname">
+    <TollNumber>
+      <Number>(1) (305) 603 4466</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Svalbard and Jan Mayen" Identifier="Svalbard and Jan Mayen">
+    <TollNumber>
+      <Number>(47) (23) 162 126</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Swaziland" Identifier="Swaziland">
+    <TollNumber>
+      <Number>(27) (11) 361 7000</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Sweden" Identifier="Sweden">
+    <TollFree>
+      <Number>020 140 00 15</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(46) (8) 5033 4670</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Switzerland" Identifier="Switzerland">
+    <TollFree>
+      <Number>(800) 111 060</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(41) (44) 580 7558</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Taiwan" Identifier="Taiwan">
+    <TollFree>
+      <Number>00-800-2468-1668</Number>
+    </TollFree>
+    <TollFree>
+      <Number>0800-008833</Number>
+    </TollFree>
+    <TollNumber>
+      <Number> +886 2 2999 8833</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Tajikistan" Identifier="Tajikistan">
+    <TollNumber>
+      <Number>(7) (495) 745 5445</Number>
+      <Comment>(Moscow, Russia)</Comment>
+    </TollNumber>
+  </Location>
+  <Location Name="Tanzania" Identifier="Tanzania">
+    <TollNumber>
+      <Number>(27) (11) 361 7000</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Thailand" Identifier="Thailand">
+    <TollFree>
+      <Number>001-800-2468-1668</Number>
+      <Comment>(International Access Code)</Comment>
+    </TollFree>
+    <TollFree>
+      <Number>001-800-4410560</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>+65 6324 8098</Number>
+    </TollNumber>
+    <TollNumber>
+      <Number>66-2-263-6888</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Togo" Identifier="Togo">
+    <TollNumber>
+      <Number>(225) 2031 0500</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Tokelau" Identifier="Tokelau">
+    <TollNumber>
+      <Number>+ 61 2 9870 2131</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Tonga" Identifier="Tonga">
+    <TollNumber>
+      <Number>(61) (2) 9870 2131</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Trinidad and Tobago" Identifier="Trinidad and Tobago">
+    <TollFree>
+      <Number>1-888-801-2598</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Tunisia" Identifier="Tunisia">
+    <TollNumber>
+      <Number>(216) 71 16 68 02</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Turkey" Identifier="Turkey">
+    <TollFree>
+      <Number>(0800) 211 3939</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(90) (212) 33 66 999</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Turkmenistan" Identifier="Turkmenistan">
+    <TollNumber>
+      <Number>(7) (495) 745 5445</Number>
+      <Comment>(Moscow, Russia)</Comment>
+    </TollNumber>
+  </Location>
+  <Location Name="Turks and Caicos Islands" Identifier="Turks and Caicos Islands">
+    <TollFree>
+      <Number>1-866-745-7616</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Tuvalu" Identifier="Tuvalu">
+    <TollNumber>
+      <Number>+ 61 2 9870 2131</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Uganda" Identifier="Uganda">
+    <TollNumber>
+      <Number>(254) (20) 286 8800</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Ukraine" Identifier="Ukraine">
+    <TollFree>
+      <Number>(0) (800) 308 8002</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(380) (44) 2305102</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="United Arab Emirates" Identifier="United Arab Emirates">
+    <TollFree>
+      <Number>(800) 4089</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(971) (4) 391 7000</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="United Kingdom" Identifier="United Kingdom">
+    <TollFree>
+      <Number>(0) (800) 018 8354</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(44) (203) 147 4930</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="United States" Identifier="United States">
+    <TollFree>
+      <Number>1-888-652-2342</Number>
+    </TollFree>
+  </Location>
+  <Location Name="United States Minor Outlying Islands" Identifier="United States Minor Outlying Islands">
+    <TollFree>
+      <Number>1-888-652-2343</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Uruguay" Identifier="Uruguay">
+    <TollFree>
+      <Number>000-405-4349</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Uzbekistan" Identifier="Uzbekistan">
+    <TollNumber>
+      <Number>(7) (495) 745 5445</Number>
+      <Comment>(Moscow, Russia)</Comment>
+    </TollNumber>
+  </Location>
+  <Location Name="Vanuatu" Identifier="Vanuatu">
+    <TollNumber>
+      <Number>61 2 9870 2131</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Vatican City State" Identifier="Vatican City State">
+    <TollFree>
+      <Number>(800) 531 042</Number>
+    </TollFree>
+    <TollNumber>
+      <Number>(39) (02) 3604 6340</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Venezuela" Identifier="Venezuela">
+    <TollFree>
+      <Number>0-800-642-7676</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Vietnam" Identifier="Vietnam">
+    <TollNumber>
+      <Number> +65 6324 8098</Number>
+    </TollNumber>
+    <TollNumber>
+      <Number>+84 (4) 935-1053</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Virgin Islands (British)" Identifier="Virgin Islands (British)">
+    <TollFree>
+      <Number>1-866-993-9307</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Virgin Islands (U.S.)" Identifier="Virgin Islands (U.S.)">
+    <TollFree>
+      <Number>1-866-678-8034</Number>
+    </TollFree>
+  </Location>
+  <Location Name="Wallis And Futuna Islands" Identifier="Wallis And Futuna Islands">
+    <TollNumber>
+      <Number>+ 61 2 9870 2131</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Yemen" Identifier="Yemen">
+    <TollNumber>
+      <Number>(971) (4) 391 7000</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Zambia" Identifier="Zambia">
+    <TollNumber>
+      <Number>(27) (11) 361 7000</Number>
+    </TollNumber>
+  </Location>
+  <Location Name="Zimbabwe" Identifier="Zimbabwe">
+    <TollNumber>
+      <Number>(27) (11) 361 7000</Number>
+    </TollNumber>
+  </Location>
+</LocationInformation>

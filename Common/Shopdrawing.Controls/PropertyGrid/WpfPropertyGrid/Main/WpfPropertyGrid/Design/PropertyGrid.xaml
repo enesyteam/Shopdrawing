@@ -1,0 +1,16 @@
+﻿<Controls:PropertyGrid xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:Controls="clr-namespace:System.Windows.Controls.WpfPropertyGrid"
+                       xmlns:Design="clr-namespace:System.Windows.Controls.WpfPropertyGrid.Design"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--<Controls:PropertyGrid.Background>
+        <SolidColorBrush Color="Red"/>
+    </Controls:PropertyGrid.Background>-->
+    <Controls:PropertyGrid.Layout>
+        <Design:TabbedLayout >
+            <Design:CategorizedLayout Design:TabbedLayout.CanClose="False" Design:TabbedLayout.Header="Cat"/>
+            <Design:AlphabeticalLayout Design:TabbedLayout.CanClose="False" Design:TabbedLayout.Header="Abc"/>
+        </Design:TabbedLayout>
+    </Controls:PropertyGrid.Layout>
+
+</Controls:PropertyGrid>

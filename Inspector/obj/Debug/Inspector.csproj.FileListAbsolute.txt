@@ -1,0 +1,144 @@
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\bin\Inspector.exe
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\bin\Inspector.pdb
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\Inspector.csprojResolveAssemblyReference.cache
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\AboutWindow.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\AnalyzerConfigurationWindow.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\BindingEditorWindow.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\IssueListView.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\LogicalTreeView.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\SelectorWindow.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\AutomationTreeView.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\UsageHintWindow.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\VisualResources\Brushes.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\VisualResources\Controls\Button.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\VisualResources\Controls\CheckBox.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\VisualResources\Controls\ComboBox.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\VisualResources\Controls\Expander.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\VisualResources\Controls\ListView.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\VisualResources\Controls\Menu.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\VisualResources\Controls\ScrollBar.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\VisualResources\Controls\Separator.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\VisualResources\Controls\TabControl.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\VisualResources\Controls\ToggleButton.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\VisualResources\Controls\ToolTip.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\VisualResources\Inspector.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\VisualTreeView.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\App.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\AboutWindow.g.cs
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\AnalyzerConfigurationWindow.g.cs
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\BindingEditorWindow.g.cs
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\DataContextView.g.cs
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\EventsView.g.cs
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\IssueListView.g.cs
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\InspectorWindow.g.cs
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\LogicalTreeView.g.cs
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\PropertiesView.g.cs
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\ResourceEditor.g.cs
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\ResourcesView.g.cs
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\SelectorWindow.g.cs
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\StyleExplorerView.g.cs
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\TriggerView.g.cs
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\TestWindow.g.cs
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\AutomationTreeView.g.cs
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\UsageHintWindow.g.cs
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\VisualTreeView.g.cs
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\XamlView.g.cs
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\App.g.cs
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\Inspector_MarkupCompile.cache
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\Inspector_MarkupCompile.lref
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\DataContextView.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\EventsView.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\InspectorWindow.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\PropertiesView.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\ResourceEditor.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\ResourcesView.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\StyleExplorerView.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\TriggerView.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\TestWindow.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\VisualResources\Controls\BrushEditor.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\VisualResources\Controls\ColorPicker.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\VisualResources\Controls\ListBox.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\VisualResources\Controls\PopupContentControl.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\VisualResources\Controls\PropertyGrid.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\VisualResources\Controls\TextBlock.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\VisualResources\Controls\XamlTextBlock.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\VisualResources\DefaultDataTemplates.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\XamlView.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\UserInterface\VisualResources\Controls\TreeView.baml
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\Inspector.g.resources
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\ChristianMoser.WpfInspector.Properties.Resources.resources
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\Inspector.csproj.GenerateResource.Cache
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\Inspector.exe
+E:\Projects\C#\Tham khao\Property Inspector\trunk\source\Inspector\obj\Debug\Inspector.pdb
+E:\Projects\C#\ShopdrawingVer2\bin\Inspector.dll
+E:\Projects\C#\ShopdrawingVer2\bin\Inspector.pdb
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\Inspector.csprojResolveAssemblyReference.cache
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\AboutWindow.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\AnalyzerConfigurationWindow.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\BindingEditorWindow.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\IssueListView.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\LogicalTreeView.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\SelectorWindow.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\AutomationTreeView.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\UsageHintWindow.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\VisualResources\Brushes.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\VisualResources\Controls\Button.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\VisualResources\Controls\CheckBox.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\VisualResources\Controls\ComboBox.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\VisualResources\Controls\Expander.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\VisualResources\Controls\ListView.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\VisualResources\Controls\Menu.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\VisualResources\Controls\ScrollBar.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\VisualResources\Controls\Separator.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\VisualResources\Controls\TabControl.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\VisualResources\Controls\ToggleButton.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\VisualResources\Controls\ToolTip.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\VisualResources\Inspector.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\VisualTreeView.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\AboutWindow.g.cs
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\AnalyzerConfigurationWindow.g.cs
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\BindingEditorWindow.g.cs
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\DataContextView.g.cs
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\EventsView.g.cs
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\IssueListView.g.cs
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\InspectorWindow.g.cs
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\LogicalTreeView.g.cs
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\PropertiesView.g.cs
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\ResourceEditor.g.cs
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\ResourcesView.g.cs
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\SelectorWindow.g.cs
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\StyleExplorerView.g.cs
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\TriggerView.g.cs
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\TestWindow.g.cs
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\AutomationTreeView.g.cs
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\UsageHintWindow.g.cs
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\VisualTreeView.g.cs
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\XamlView.g.cs
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\Inspector_MarkupCompile.cache
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\Inspector_MarkupCompile.lref
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\DataContextView.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\EventsView.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\InspectorWindow.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\PropertiesView.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\ResourceEditor.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\ResourcesView.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\StyleExplorerView.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\TriggerView.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\TestWindow.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\VisualResources\Controls\BrushEditor.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\VisualResources\Controls\ColorPicker.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\VisualResources\Controls\ListBox.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\VisualResources\Controls\PopupContentControl.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\VisualResources\Controls\PropertyGrid.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\VisualResources\Controls\TextBlock.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\VisualResources\Controls\XamlTextBlock.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\VisualResources\DefaultDataTemplates.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\XamlView.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\UserInterface\VisualResources\Controls\TreeView.baml
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\Inspector.g.resources
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\ChristianMoser.WpfInspector.Properties.Resources.resources
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\Inspector.csproj.GenerateResource.Cache
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\Inspector.dll
+E:\Projects\C#\ShopdrawingVer2\Inspector\obj\Debug\Inspector.pdb

@@ -1,0 +1,28 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:controls="clr-namespace:Shopdrawing.Controls;assembly=Shopdrawing.Controls"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--Used for style select-->
+    <Style TargetType="controls:ListBoxEx">
+        <Setter Property="Background" Value="{DynamicResource ListBoxBackground}"/>
+        <Setter Property="Margin" Value="5,5,5,5"/>
+        <Style.Triggers>
+            <DataTrigger 
+            Binding="{Binding HasItems, RelativeSource={RelativeSource Self}}"
+            Value="False">
+                <Setter Property="Visibility" Value="Hidden" />
+            </DataTrigger>
+        </Style.Triggers>
+        <!--<Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="controls:ListBoxEx">
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="">
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>-->
+    </Style>
+
+</ResourceDictionary>

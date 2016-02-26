@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DDD8AADE-314E-419C-8E08-859BC6D3E863}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shopdawing.Utilities</RootNamespace>
+    <AssemblyName>Shopdawing.Utilities</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Collections\AggregatingNotifyingCollection`1.cs" />
+    <Compile Include="Collections\ArrayHelper.cs" />
+    <Compile Include="Collections\EnumerationChangedEventArgs`1.cs" />
+    <Compile Include="Collections\EnumerationChangeType.cs" />
+    <Compile Include="Collections\EnumerationChange`1.cs" />
+    <Compile Include="Collections\IIndexedHashSet`1.cs" />
+    <Compile Include="Collections\IndexedHashSet`1.cs" />
+    <Compile Include="Collections\INotifyingEnumerable`1.cs" />
+    <Compile Include="Collections\NotifyingCollectionBase`1.cs" />
+    <Compile Include="Collections\NotifyingCollection`1.cs" />
+    <Compile Include="Collections\NotifyingEnumerableExtensions.cs" />
+    <Compile Include="Collections\NotifyingIndexedHashSet`1.cs" />
+    <Compile Include="Collections\PresetCollection.cs" />
+    <Compile Include="Collections\ReadOnlyIndexedHashSet`1.cs" />
+    <Compile Include="Collections\ReadOnlyNotifyingCollection`1.cs" />
+    <Compile Include="Collections\SortedArrayList`1.cs" />
+    <Compile Include="Collections\SuspendableKeyedCollection`2.cs" />
+    <Compile Include="Collections\TransformingNotifyingEnumerable`2.cs" />
+    <Compile Include="Commands\CommandKeyBinding.cs" />
+    <Compile Include="Events\AggregatingSuspendingEventManager`1.cs" />
+    <Compile Include="Events\DependencyPropertyChangedListener.cs" />
+    <Compile Include="Events\EventArgs`1.cs" />
+    <Compile Include="Events\ISuspendingEventManager`1.cs" />
+    <Compile Include="Events\Suspender.cs" />
+    <Compile Include="Events\SuspendingEventManager`1.cs" />
+    <Compile Include="Events\WorkaroundEvents.cs" />
+    <Compile Include="ExceptionStringTable.cs" />
+    <Compile Include="Globalization\CultureInfoLcidComparer.cs" />
+    <Compile Include="Globalization\CultureManager.cs" />
+    <Compile Include="Globalization\LocalizationHelper.cs" />
+    <Compile Include="Globalization\WorkaroundComponentResourceManager.cs" />
+    <Compile Include="IAsyncMechanism.cs" />
+    <Compile Include="IEnumIDList.cs" />
+    <Compile Include="IExternalChanges.cs" />
+    <Compile Include="IFileDialog.cs" />
+    <Compile Include="IFileDialogEvents.cs" />
+    <Compile Include="IFileOpenDialog.cs" />
+    <Compile Include="IIDGuid.cs" />
+    <Compile Include="IInitializable.cs" />
+    <Compile Include="IModalWindow.cs" />
+    <Compile Include="INotifyCollectionChanges.cs" />
+    <Compile Include="InteractiveModeEventArgs.cs" />
+    <Compile Include="InteractiveModeRequestEventArgs.cs" />
+    <Compile Include="InteractiveModeRequestType.cs" />
+    <Compile Include="InteractiveModeState.cs" />
+    <Compile Include="Interop\EnumWindowsCB.cs" />
+    <Compile Include="Interop\ErrorHandler.cs" />
+    <Compile Include="Interop\NativeMethods.cs" />
+    <Compile Include="Interop\SafeModuleHandle.cs" />
+    <Compile Include="Interop\TypeHelper.cs" />
+    <Compile Include="Interop\UnsafeNativeMethods.cs" />
+    <Compile Include="IO\AccessHelper.cs" />
+    <Compile Include="IO\AccessService.cs" />
+    <Compile Include="IO\DocumentReference.cs" />
+    <Compile Include="IO\DocumentTypeIdentifier.cs" />
+    <Compile Include="IO\FallbackResourceManager.cs" />
+    <Compile Include="IO\FileChangeWatcher.cs" />
+    <Compile Include="IO\IAccessService.cs" />
+    <Compile Include="IO\IFileChangeWatcher.cs" />
+    <Compile Include="IO\IResourceManager.cs" />
+    <Compile Include="IO\IStaAccessService.cs" />
+    <Compile Include="IO\ManagedResourceManager.cs" />
+    <Compile Include="IO\MediaFileExtensions.cs" />
+    <Compile Include="IO\PathComparer.cs" />
+    <Compile Include="IO\PathFormat.cs" />
+    <Compile Include="IO\PathHelper.cs" />
+    <Compile Include="IO\RegistryHelper.cs" />
+    <Compile Include="IO\ResourceHelper.cs" />
+    <Compile Include="IO\ShadowCopyCacheResult.cs" />
+    <Compile Include="IO\ShadowCopyEventArgs.cs" />
+    <Compile Include="IO\ShadowCopyKey.cs" />
+    <Compile Include="IO\ShadowCopyLocation.cs" />
+    <Compile Include="IO\ShadowCopyResult.cs" />
+    <Compile Include="IO\SimpleShadowCopyEventArgs.cs" />
+    <Compile Include="IO\SimpleShadowCopyResult.cs" />
+    <Compile Include="IO\StaAccessHelper.cs" />
+    <Compile Include="IO\StaAccessService.cs" />
+    <Compile Include="IO\SystemIcon.cs" />
+    <Compile Include="IO\TemporaryDirectory.cs" />
+    <Compile Include="IO\UnmanagedResourceManager.cs" />
+    <Compile Include="IO\UriHelperUtility.cs" />
+    <Compile Include="IO\VisualStudioRegistryLocation.cs" />
+    <Compile Include="IO\ZipHelper.cs" />
+    <Compile Include="IReadOnlyCollection`1.cs" />
+    <Compile Include="IReadOnlyList`1.cs" />
+    <Compile Include="IReadOnlySearchList`2.cs" />
+    <Compile Include="IReferenceAssemblyContext.cs" />
+    <Compile Include="IReferenceAssemblyResolver.cs" />
+    <Compile Include="ISearchList`2.cs" />
+    <Compile Include="IShellFolder.cs" />
+    <Compile Include="IShellItem.cs" />
+    <Compile Include="IShellItemArray.cs" />
+    <Compile Include="ITypeNameFormatter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReferenceAssemblyMode.cs" />
+    <Compile Include="StringTable.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

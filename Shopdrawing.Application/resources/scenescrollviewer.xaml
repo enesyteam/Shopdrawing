@@ -1,0 +1,464 @@
+<Border xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:System="clr-namespace:System;assembly=mscorlib"
+        xmlns:FrameworkControls="clr-namespace:Microsoft.Expression.Framework.Controls;assembly=Microsoft.Expression.Framework"
+        xmlns:FrameworkDatabinding="clr-namespace:Microsoft.Expression.Framework.Data;assembly=Microsoft.Expression.Framework"
+        xmlns:FrameworkValueEditors="clr-namespace:Microsoft.Expression.Framework.ValueEditors;assembly=Microsoft.Expression.Framework"
+        xmlns:automation="clr-namespace:Microsoft.Expression.Framework.Diagnostics;assembly=Microsoft.Expression.Framework"
+        xmlns:DesignerUI="clr-namespace:Microsoft.Expression.DesignSurface.UserInterface"
+        xmlns:DesignView="clr-namespace:Microsoft.Expression.DesignSurface.View"
+        xmlns:DesignInstanceBuilders="clr-namespace:Microsoft.Expression.DesignModel.InstanceBuilders;assembly=Microsoft.Expression.DesignModel"
+        xmlns:Framework="clr-namespace:Microsoft.Expression.Framework;assembly=Microsoft.Expression.Framework"
+        x:Uid="Border_8" Background="{DynamicResource ListBackgroundBrush}" BorderThickness="1,1,0,0"
+        BorderBrush="{DynamicResource ListBackgroundBrush}"
+        CornerRadius="{DynamicResource PaletteCornerRoundingWithHeader}">
+  <FrameworkElement.Resources>
+    <FrameworkDatabinding:PercentageZoomConverter x:Key="PercentageZoomConverter" x:Uid="FrameworkDatabinding:PercentageZoomConverter_1"/>
+    <FrameworkDatabinding:PercentageFormatConverter x:Key="PercentageFormatConverter" x:Uid="FrameworkDatabinding:PercentageFormatConverter_1"/>
+    <BooleanToVisibilityConverter x:Key="BoolToVisibility" x:Uid="BooleanToVisibilityConverter_1"/>
+    <FrameworkDatabinding:BoolToVisibilityCollapsedConverter x:Key="BoolToVisibilityCollapsedConverter"
+                                                             x:Uid="FrameworkDatabinding:BoolToVisibilityCollapsedConverter_1"/>
+    <FrameworkDatabinding:NullToVisibilityCollapsedConverter x:Key="NullToVisibilityCollapsedConverter"
+                                                             x:Uid="FrameworkDatabinding:NullToVisibilityCollapsedConverter_1"/>
+    <FrameworkDatabinding:IsNullConverter x:Key="IsNullConverter" x:Uid="FrameworkDatabinding:IsNullConverter_1"/>
+    <Style x:Key="ModifiedIconToggleButtonStyle" x:Uid="Style_46" TargetType="{x:Type ToggleButton}"
+           BasedOn="{StaticResource FlatToggleIconButtonStyle}">
+      <Setter x:Uid="Setter_289" Property="UIElement.Focusable" Value="false"/>
+      <Setter x:Uid="Setter_287" Property="FrameworkControls:Icon.ShowSelectedIconOnMouseOver" Value="false"/>
+    </Style>
+  </FrameworkElement.Resources>
+  <Grid x:Uid="Grid_8">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition x:Uid="ColumnDefinition_1" Width="Auto"/>
+      <ColumnDefinition x:Uid="ColumnDefinition_2" Width="*"/>
+      <ColumnDefinition x:Uid="ColumnDefinition_3" Width="Auto"/>
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition x:Uid="RowDefinition_1" Height="Auto"/>
+      <RowDefinition x:Uid="RowDefinition_2" Height="*"/>
+      <RowDefinition x:Uid="RowDefinition_3" Height="Auto"/>
+    </Grid.RowDefinitions>
+    <Border x:Name="ArtboardBorder" x:Uid="Border_2" Grid.Row="1" Grid.ColumnSpan="2"
+            FrameworkElement.Margin="0,0,1,1" KeyboardNavigation.DirectionalNavigation="Contained"
+            Background="{Binding SceneScrollViewer.ArtboardBrush}"
+            UIElement.Visibility="{Binding MessageContent, Mode=OneWay, Converter={StaticResource NullToVisibilityCollapsedConverter}, ConverterParameter=True}"/>
+    <Border FrameworkElement.Name="MessageArea" x:Uid="MessageArea" Grid.Row="1" Grid.ColumnSpan="2"
+            FrameworkElement.HorizontalAlignment="Stretch" FrameworkElement.VerticalAlignment="Stretch"
+            Background="{Binding SceneScrollViewer.ArtboardBrush}"
+            UIElement.Visibility="{Binding MessageContent, Mode=OneWay, Converter={StaticResource NullToVisibilityCollapsedConverter}}">
+      <Grid x:Uid="Grid_2" FrameworkElement.HorizontalAlignment="Center"
+            FrameworkElement.VerticalAlignment="Center">
+        <ContentControl x:Uid="ContentControl_1" UIElement.Focusable="false" Content="{Binding MessageContent}">
+          <FrameworkElement.Resources>
+            <Style x:Key="BannerText" x:Uid="Style_1" TargetType="{x:Type TextBlock}">
+              <Setter x:Uid="Setter_4" Property="TextBlock.FontSize" Value="18"/>
+              <Setter x:Uid="Setter_6" Property="TextBlock.FontFamily"
+                      Value="{DynamicResource {x:Static SystemFonts.MessageFontFamilyKey}}"/>
+              <Setter x:Uid="Setter_273" Property="TextBlock.Foreground" Value="{DynamicResource Text1Brush}"/>
+              <Setter x:Uid="Setter_274" Property="FrameworkElement.VerticalAlignment" Value="Center"/>
+              <Setter x:Uid="Setter_275" Property="FrameworkElement.HorizontalAlignment" Value="Center"/>
+            </Style>
+            <Style x:Key="DetailsText" x:Uid="Style_42" TargetType="{x:Type TextBlock}">
+              <Setter x:Uid="Setter_276" Property="TextBlock.FontSize" Value="14"/>
+              <Setter x:Uid="Setter_277" Property="TextBlock.FontFamily"
+                      Value="{DynamicResource {x:Static SystemFonts.MessageFontFamilyKey}}"/>
+              <Setter x:Uid="Setter_278" Property="TextBlock.Foreground" Value="{DynamicResource Text1Brush}"/>
+              <Setter x:Uid="Setter_279" Property="FrameworkElement.VerticalAlignment" Value="Center"/>
+              <Setter x:Uid="Setter_280" Property="FrameworkElement.HorizontalAlignment" Value="Center"/>
+            </Style>
+            <Style x:Key="HyperlinkContentControl" x:Uid="Style_41" TargetType="{x:Type ContentControl}">
+              <Setter x:Uid="Setter_271" Property="Control.Template">
+                <Setter.Value>
+                  <ControlTemplate x:Uid="ControlTemplate_54" TargetType="{x:Type ContentControl}">
+                    <TextBlock x:Name="Content" x:Uid="TextBlock_1" Text="{TemplateBinding ContentControl.Content}"
+                               Foreground="{DynamicResource ButtonDefaultedBrush}" FontSize="12"
+                               TextDecorations="{x:Static TextDecorations.Underline}"/>
+                    <ControlTemplate.Triggers>
+                      <Trigger x:Uid="Trigger_38" Property="UIElement.IsMouseOver" Value="true">
+                        <Setter x:Uid="Setter_272" TargetName="Content" Property="FrameworkElement.Cursor" Value="Hand"/>
+                      </Trigger>
+                    </ControlTemplate.Triggers>
+                  </ControlTemplate>
+                </Setter.Value>
+              </Setter>
+            </Style>
+            <DataTemplate x:Uid="DataTemplate_2" DataType="{x:Type DesignInstanceBuilders:InstanceBuilderException}">
+              <Grid x:Uid="Grid_3" FrameworkElement.Width="550" FrameworkElement.Height="350">
+                <Border x:Uid="Border_3" BorderBrush="{StaticResource RedBrush}" BorderThickness="2"
+                        Background="{DynamicResource BackgroundBrush}">
+                  <Grid x:Uid="StackPanel_1">
+                    <Grid.RowDefinitions>
+                      <RowDefinition x:Uid="RowDefinition_7" Height="Auto"/>
+                      <RowDefinition x:Uid="RowDefinition_4" Height="*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock x:Uid="TextBlock_4" FrameworkElement.Style="{StaticResource BannerText}"
+                               FrameworkElement.Margin="8" TextWrapping="Wrap" Text="An Exception was thrown."/>
+                    <ScrollViewer x:Uid="ScrollViewer_2" Grid.Row="1" FrameworkElement.Margin="8"
+                                  HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"
+                                  FrameworkElement.HorizontalAlignment="Stretch" FrameworkElement.VerticalAlignment="Stretch">
+                      <TextBlock x:Uid="TextBlock_2" FrameworkElement.Style="{StaticResource DetailsText}"
+                                 FrameworkElement.HorizontalAlignment="Left" FrameworkElement.VerticalAlignment="Top"
+                                 TextWrapping="Wrap">
+                        <TextBlock.Text>
+                          <Binding x:Uid="Binding_3">
+                            <Binding.Converter>
+                              <DesignView:ExceptionMessageToStringConverter x:Uid="DesignSurfaceView:ExceptionMessageToStringConverter_1"/>
+                            </Binding.Converter>
+                          </Binding>
+                        </TextBlock.Text>
+                      </TextBlock>
+                    </ScrollViewer>
+                  </Grid>
+                </Border>
+              </Grid>
+            </DataTemplate>
+            <DataTemplate x:Uid="DataTemplate_1" DataType="{x:Type DesignerUI:FormattedException}">
+              <Grid x:Uid="Grid_4" FrameworkElement.Width="550" FrameworkElement.Height="350">
+                <Border x:Uid="Border_4" BorderBrush="{StaticResource RedBrush}" BorderThickness="2"
+                        Background="{DynamicResource BackgroundBrush}">
+                  <Grid x:Uid="Grid_5">
+                    <Grid.RowDefinitions>
+                      <RowDefinition x:Uid="RowDefinition_5" Height="Auto"/>
+                      <RowDefinition x:Uid="RowDefinition_6" Height="*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock x:Uid="TextBlock_7" FrameworkElement.Style="{StaticResource BannerText}"
+                               FrameworkElement.Margin="8" TextWrapping="Wrap" Text="An Exception was thrown."/>
+                    <ScrollViewer x:Uid="ScrollViewer_3" Grid.Row="1" FrameworkElement.Margin="8"
+                                  HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"
+                                  FrameworkElement.HorizontalAlignment="Stretch" FrameworkElement.VerticalAlignment="Stretch">
+                      <ContentPresenter x:Uid="ContentPresenter_1" ContentTemplate="{StaticResource FormattedExceptionViewTemplate}"
+                                        UIElement.Focusable="false">
+                        <ContentPresenter.Content>
+                          <Binding/>
+                        </ContentPresenter.Content>
+                      </ContentPresenter>
+                    </ScrollViewer>
+                  </Grid>
+                </Border>
+              </Grid>
+            </DataTemplate>
+            <DataTemplate x:Uid="DataTemplate_5" DataType="{x:Type DesignView:DesignViewMessage}">
+              <StackPanel x:Uid="StackPanel_2" FrameworkElement.VerticalAlignment="Center"
+                          FrameworkElement.HorizontalAlignment="Center">
+                <TextBlock x:Uid="TextBlock_8" FrameworkElement.Style="{DynamicResource BannerText}" TextWrapping="Wrap"
+                           FrameworkElement.Margin="8" Text="{Binding Header}"/>
+                <ScrollViewer x:Uid="ScrollViewer_4" Grid.Row="1" FrameworkElement.Margin="8,20,8,8"
+                              HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"
+                              FrameworkElement.HorizontalAlignment="Stretch" FrameworkElement.VerticalAlignment="Stretch">
+                  <TextBlock x:Uid="TextBlock_5" FrameworkElement.Style="{StaticResource DetailsText}" TextWrapping="Wrap"
+                             Text="{Binding Details}"/>
+                </ScrollViewer>
+              </StackPanel>
+            </DataTemplate>
+            <DataTemplate x:Uid="DataTemplate_3" DataType="{x:Type Framework:ErrorTaskCollection}">
+              <Grid x:Uid="Grid_7" FrameworkElement.Width="496" FrameworkElement.Height="240">
+                <Border x:Uid="Border_5" BorderBrush="{StaticResource RedBrush}" BorderThickness="2"
+                        Background="{DynamicResource BackgroundBrush}">
+                  <StackPanel x:Uid="StackPanel_3" FrameworkElement.VerticalAlignment="Center"
+                              FrameworkElement.HorizontalAlignment="Center">
+                    <TextBlock x:Uid="TextBlock_9" FrameworkElement.Style="{DynamicResource BannerText}" TextWrapping="Wrap"
+                               Text="Invalid XAML"/>
+                    <TextBlock x:Uid="TextBlock_10" FrameworkElement.Style="{StaticResource DetailsText}" TextWrapping="Wrap"
+                               FrameworkElement.Margin="0,20,0,0" Text="Check the Results panel for detailed information."/>
+                  </StackPanel>
+                </Border>
+                <Button x:Uid="Button_1" FrameworkElement.Style="{StaticResource HyperlinkContentControl}"
+                        FrameworkElement.HorizontalAlignment="Right" FrameworkElement.VerticalAlignment="Bottom"
+                        FrameworkElement.Margin="0,0,8,8" ContentControl.Content="View XAML code"
+                        ButtonBase.Command="{Binding DataContext.ViewCodeCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DesignerUI:SceneScrollViewer}}}"/>
+              </Grid>
+            </DataTemplate>
+          </FrameworkElement.Resources>
+        </ContentControl>
+      </Grid>
+    </Border>
+    <StackPanel FrameworkElement.Name="ZoomControls" x:Uid="ZoomControls" Grid.Row="2"
+                FrameworkElement.VerticalAlignment="Top" Orientation="Horizontal"
+                UIElement.Visibility="{Binding MessageContent, Mode=OneWay, Converter={StaticResource NullToVisibilityCollapsedConverter}, ConverterParameter=True}">
+      <FrameworkControls:NumberComboBox FrameworkElement.Name="ZoomComboBox" FrameworkElement.Width="75"
+                                        ItemsControl.IsTextSearchEnabled="false" FrameworkElement.ToolTip="Zoom"
+                                        Selector.SelectedValuePath="Content" NumberFormat="0.##'%'" IsSliderLogarithmic="true"
+                                        x:Uid="ZoomComboBox" Control.Background="{DynamicResource BackgroundBrush}"
+                                        Control.BorderBrush="{DynamicResource RecessedBrush}" FrameworkElement.MinHeight="0"
+                                        FrameworkElement.Height="17">
+        <Selector.SelectedValue>
+          <Binding Path="SceneScrollViewer.Artboard.Zoom" Mode="TwoWay"
+                   Converter="{StaticResource PercentageZoomConverter}"/>
+        </Selector.SelectedValue>
+        <FrameworkControls:NumberComboBox.FinishEditingCommand>
+          <Binding Path="SceneScrollViewer.FinishEditingZoomCommand"/>
+        </FrameworkControls:NumberComboBox.FinishEditingCommand>
+        <FrameworkControls:NumberComboBox.Value>
+          <Binding Path="SceneScrollViewer.Artboard.Zoom" Mode="TwoWay"
+                   Converter="{StaticResource PercentageZoomConverter}"/>
+        </FrameworkControls:NumberComboBox.Value>
+        <FrameworkControls:NumberComboBox.Minimum>
+          <Binding Path="SceneScrollViewer.Artboard.ZoomPresetCollection.Minimum" Mode="OneTime"
+                   Converter="{StaticResource PercentageZoomConverter}"/>
+        </FrameworkControls:NumberComboBox.Minimum>
+        <FrameworkControls:NumberComboBox.Maximum>
+          <Binding Path="SceneScrollViewer.Artboard.ZoomPresetCollection.Maximum" Mode="OneTime"
+                   Converter="{StaticResource PercentageZoomConverter}"/>
+        </FrameworkControls:NumberComboBox.Maximum>
+        <FrameworkElement.Resources>
+          <DataTemplate x:Uid="DataTemplate_4" DataType="{x:Type System:Double}">
+            <TextBlock x:Uid="TextBlock_6">
+              <TextBlock.Text>
+                <Binding Mode="OneTime" Converter="{StaticResource PercentageFormatConverter}"/>
+              </TextBlock.Text>
+            </TextBlock>
+          </DataTemplate>
+        </FrameworkElement.Resources>
+        <ComboBoxItem x:Uid="ComboBoxItem7">
+          <ContentControl.Content>
+            <Binding Path="SceneScrollViewer.Artboard.ZoomComboCollection[9]" Mode="OneTime"
+                     Converter="{StaticResource PercentageZoomConverter}"/>
+          </ContentControl.Content>
+        </ComboBoxItem>
+        <ComboBoxItem x:Uid="ComboBoxItem9">
+          <ContentControl.Content>
+            <Binding Path="SceneScrollViewer.Artboard.ZoomComboCollection[8]" Mode="OneTime"
+                     Converter="{StaticResource PercentageZoomConverter}"/>
+          </ContentControl.Content>
+        </ComboBoxItem>
+        <ComboBoxItem x:Uid="ComboBoxItem11">
+          <ContentControl.Content>
+            <Binding Path="SceneScrollViewer.Artboard.ZoomComboCollection[7]" Mode="OneTime"
+                     Converter="{StaticResource PercentageZoomConverter}"/>
+          </ContentControl.Content>
+        </ComboBoxItem>
+        <ComboBoxItem x:Uid="ComboBoxItem12">
+          <ContentControl.Content>
+            <Binding Path="SceneScrollViewer.Artboard.ZoomComboCollection[6]" Mode="OneTime"
+                     Converter="{StaticResource PercentageZoomConverter}"/>
+          </ContentControl.Content>
+        </ComboBoxItem>
+        <ComboBoxItem x:Uid="ComboBoxItem13">
+          <ContentControl.Content>
+            <Binding Path="SceneScrollViewer.Artboard.ZoomComboCollection[5]" Mode="OneTime"
+                     Converter="{StaticResource PercentageZoomConverter}"/>
+          </ContentControl.Content>
+        </ComboBoxItem>
+        <ComboBoxItem x:Uid="ComboBoxItem14">
+          <ContentControl.Content>
+            <Binding Path="SceneScrollViewer.Artboard.ZoomComboCollection[4]" Mode="OneTime"
+                     Converter="{StaticResource PercentageZoomConverter}"/>
+          </ContentControl.Content>
+        </ComboBoxItem>
+        <ComboBoxItem x:Uid="ComboBoxItem15">
+          <ContentControl.Content>
+            <Binding Path="SceneScrollViewer.Artboard.ZoomComboCollection[3]" Mode="OneTime"
+                     Converter="{StaticResource PercentageZoomConverter}"/>
+          </ContentControl.Content>
+        </ComboBoxItem>
+        <ComboBoxItem x:Uid="ComboBoxItem16">
+          <ContentControl.Content>
+            <Binding Path="SceneScrollViewer.Artboard.ZoomComboCollection[2]" Mode="OneTime"
+                     Converter="{StaticResource PercentageZoomConverter}"/>
+          </ContentControl.Content>
+        </ComboBoxItem>
+        <ComboBoxItem x:Uid="ComboBoxItem17">
+          <ContentControl.Content>
+            <Binding Path="SceneScrollViewer.Artboard.ZoomComboCollection[1]" Mode="OneTime"
+                     Converter="{StaticResource PercentageZoomConverter}"/>
+          </ContentControl.Content>
+        </ComboBoxItem>
+        <ComboBoxItem x:Uid="ComboBoxItem19">
+          <ContentControl.Content>
+            <Binding Path="SceneScrollViewer.Artboard.ZoomComboCollection[0]" Mode="OneTime"
+                     Converter="{StaticResource PercentageZoomConverter}"/>
+          </ContentControl.Content>
+        </ComboBoxItem>
+        <ComboBoxItem UIElement.IsEnabled="false" FrameworkElement.MinHeight="0" Control.Padding="0"
+                      Control.HorizontalContentAlignment="Stretch" x:Uid="ComboBoxItem24">
+          <Separator x:Uid="Separator1" FrameworkElement.Margin="1"/>
+        </ComboBoxItem>
+        <FrameworkControls:CommandComboBoxItem FrameworkElement.Name="ZoomFitToScreenItem" ContentControl.Content="Fit selection"
+                                               x:Uid="ZoomFitToScreenItem">
+          <FrameworkControls:CommandComboBoxItem.Command>
+            <Binding Path="SceneScrollViewer.ZoomToFitCommand"/>
+          </FrameworkControls:CommandComboBoxItem.Command>
+        </FrameworkControls:CommandComboBoxItem>
+      </FrameworkControls:NumberComboBox>
+      <Border x:Uid="Border_9">
+        <ToggleButton x:Uid="CheckBox_2" automation:AutomationElement.Id="ShowHideEffectsButton"
+                      FrameworkElement.Margin="4,0,0,0" FrameworkElement.Height="17"
+                      FrameworkElement.VerticalAlignment="Center" FrameworkElement.Width="22"
+                      FrameworkControls:Icon.DeselectedImage="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Artboard/artboard_effects_disabled_on_16X16.png"
+                      FrameworkControls:Icon.SelectedImage="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Artboard/artboard_effects_enabled_on_16X16.png"
+                      Control.BorderThickness="1,1,0,1">
+          <ToggleButton.IsChecked>
+            <Binding Path="SceneScrollViewer.EffectsEnabled" Mode="TwoWay"/>
+          </ToggleButton.IsChecked>
+          <FrameworkElement.Style>
+            <Style x:Uid="Style_43" TargetType="{x:Type ToggleButton}"
+                   BasedOn="{StaticResource ModifiedIconToggleButtonStyle}">
+              <Style.Triggers>
+                <DataTrigger x:Uid="DataTrigger_1" Binding="{Binding SceneScrollViewer.EffectsEnabled}" Value="True">
+                  <Setter x:Uid="Setter_292" Property="FrameworkElement.ToolTip"
+                          Localization.Attributes="Value (Readable Modifiable)" Value="Turn off rendering of Effects"/>
+                </DataTrigger>
+                <DataTrigger x:Uid="DataTrigger_2" Binding="{Binding SceneScrollViewer.EffectsEnabled}" Value="False">
+                  <Setter x:Uid="Setter_293" Property="FrameworkElement.ToolTip"
+                          Localization.Attributes="Value (Readable Modifiable)" Value="Turn on rendering of Effects"/>
+                </DataTrigger>
+                <DataTrigger x:Uid="DataTrigger_3" Binding="{Binding SceneScrollViewer.EffectButtonEnabled}" Value="False">
+                  <Setter x:Uid="Setter_294" Property="FrameworkElement.ToolTip"
+                          Localization.Attributes="Value (Readable Modifiable)"
+                          Value="{Binding SceneScrollViewer.EffectDisabledTooltip}"/>
+                  <Setter x:Uid="Setter_295" Property="UIElement.IsEnabled" Value="false"/>
+                  <Setter x:Uid="Setter_296" Property="UIElement.Opacity" Value="0.5"/>
+                </DataTrigger>
+              </Style.Triggers>
+            </Style>
+          </FrameworkElement.Style>
+        </ToggleButton>
+        <FrameworkElement.Style>
+          <Style x:Uid="Style_48" TargetType="{x:Type Border}">
+            <Style.Triggers>
+              <DataTrigger x:Uid="DataTrigger_4" Binding="{Binding SceneScrollViewer.EffectButtonEnabled}" Value="False">
+                <Setter x:Uid="Setter_297" Property="FrameworkElement.ToolTip"
+                        Localization.Attributes="Value (Readable Modifiable)"
+                        Value="{Binding SceneScrollViewer.EffectDisabledTooltip}"/>
+              </DataTrigger>
+            </Style.Triggers>
+          </Style>
+        </FrameworkElement.Style>
+      </Border>
+      <ToggleButton x:Uid="ToggleButton_1" automation:AutomationElement.Id="ShowHideSnapGridButton"
+                    FrameworkElement.Margin="1,0,0,0" FrameworkElement.Height="17"
+                    FrameworkElement.VerticalAlignment="Center" FrameworkElement.Width="22"
+                    FrameworkControls:Icon.DeselectedImage="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Artboard/artboard_grid_off_18x15.png"
+                    FrameworkControls:Icon.SelectedImage="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Artboard/artboard_grid_on_18x15.png"
+                    Control.BorderThickness="1,1,0,1">
+        <ToggleButton.IsChecked>
+          <Binding Path="SceneScrollViewer.ShowGrid" Mode="TwoWay"/>
+        </ToggleButton.IsChecked>
+        <FrameworkElement.Style>
+          <Style x:Uid="Style_49" TargetType="{x:Type ToggleButton}"
+                 BasedOn="{StaticResource ModifiedIconToggleButtonStyle}">
+            <Style.Triggers>
+              <Trigger x:Uid="Trigger_39" Property="ToggleButton.IsChecked" Value="False">
+                <Setter x:Uid="Setter_281" Property="FrameworkElement.ToolTip"
+                        Localization.Attributes="Value (Readable Modifiable)" Value="Show snap grid"/>
+              </Trigger>
+              <Trigger x:Uid="Trigger_40" Property="ToggleButton.IsChecked" Value="True">
+                <Setter x:Uid="Setter_282" Property="FrameworkElement.ToolTip"
+                        Localization.Attributes="Value (Readable Modifiable)" Value="Hide snap grid"/>
+              </Trigger>
+            </Style.Triggers>
+          </Style>
+        </FrameworkElement.Style>
+      </ToggleButton>
+      <ToggleButton x:Uid="CheckBox_1" automation:AutomationElement.Id="SnapToGridButton" FrameworkElement.Height="17"
+                    FrameworkElement.VerticalAlignment="Center" FrameworkElement.Margin="1,0,0,0"
+                    FrameworkElement.Width="22"
+                    FrameworkControls:Icon.DeselectedImage="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Artboard/artboard_snapGridOff_on_18x15.png"
+                    FrameworkControls:Icon.SelectedImage="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Artboard/artboard_snapGridOn_on_18x15.png"
+                    Control.BorderThickness="0,1,0,1">
+        <ToggleButton.IsChecked>
+          <Binding Path="SceneScrollViewer.SnapToGrid" Mode="TwoWay"/>
+        </ToggleButton.IsChecked>
+        <FrameworkElement.Style>
+          <Style x:Uid="Style_44" TargetType="{x:Type ToggleButton}"
+                 BasedOn="{StaticResource ModifiedIconToggleButtonStyle}">
+            <Style.Triggers>
+              <Trigger x:Uid="Trigger_41" Property="ToggleButton.IsChecked" Value="False">
+                <Setter x:Uid="Setter_283" Property="FrameworkElement.ToolTip"
+                        Localization.Attributes="Value (Readable Modifiable)" Value="Turn on snapping to gridlines"/>
+              </Trigger>
+              <Trigger x:Uid="Trigger_42" Property="ToggleButton.IsChecked" Value="True">
+                <Setter x:Uid="Setter_284" Property="FrameworkElement.ToolTip"
+                        Localization.Attributes="Value (Readable Modifiable)" Value="Turn off snapping to gridlines"/>
+              </Trigger>
+            </Style.Triggers>
+          </Style>
+        </FrameworkElement.Style>
+      </ToggleButton>
+      <ToggleButton x:Uid="CheckBox_3" automation:AutomationElement.Id="SnapToSnapLinesButton"
+                    FrameworkElement.Height="17" FrameworkElement.VerticalAlignment="Center"
+                    FrameworkElement.Margin="1,0,0,0" FrameworkElement.Width="22"
+                    FrameworkControls:Icon.DeselectedImage="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Artboard/artboard_snaplineOFF_on_18x15.png"
+                    FrameworkControls:Icon.SelectedImage="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Artboard/artboard_snaplineON_on_18x15.png"
+                    Control.BorderThickness="0,1,0,1">
+        <ToggleButton.IsChecked>
+          <Binding Path="SceneScrollViewer.SnapToSnapLines" Mode="TwoWay"/>
+        </ToggleButton.IsChecked>
+        <FrameworkElement.Style>
+          <Style x:Uid="Style_45" TargetType="{x:Type ToggleButton}"
+                 BasedOn="{StaticResource ModifiedIconToggleButtonStyle}">
+            <Style.Triggers>
+              <Trigger x:Uid="Trigger_43" Property="ToggleButton.IsChecked" Value="False">
+                <Setter x:Uid="Setter_285" Property="FrameworkElement.ToolTip"
+                        Localization.Attributes="Value (Readable Modifiable)" Value="Turn on snapping to snaplines"/>
+              </Trigger>
+              <Trigger x:Uid="Trigger_44" Property="ToggleButton.IsChecked" Value="True">
+                <Setter x:Uid="Setter_286" Property="FrameworkElement.ToolTip"
+                        Localization.Attributes="Value (Readable Modifiable)" Value="Turn off snapping to snaplines"/>
+              </Trigger>
+            </Style.Triggers>
+          </Style>
+        </FrameworkElement.Style>
+      </ToggleButton>
+      <ToggleButton x:Uid="CheckBox_4" automation:AutomationElement.Id="ShowAnnotationsButton"
+                    FrameworkElement.Margin="1,0,4,0" FrameworkElement.Height="17"
+                    FrameworkElement.VerticalAlignment="Center" FrameworkElement.Width="22"
+                    FrameworkControls:Icon.DeselectedImage="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Artboard/artboard_annotations_off_18x15.png"
+                    FrameworkControls:Icon.SelectedImage="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Artboard/artboard_annotations_on_18x15.png"
+                    Control.BorderThickness="0,1,1,1">
+        <UIElement.IsEnabled>
+          <Binding Path="SceneScrollViewer.AnnotationsEnabled" Mode="OneWay"/>
+        </UIElement.IsEnabled>
+        <ToggleButton.IsChecked>
+          <Binding Path="SceneScrollViewer.ShowAnnotations" Mode="TwoWay"/>
+        </ToggleButton.IsChecked>
+        <FrameworkElement.Style>
+          <Style x:Uid="Style_47" TargetType="{x:Type ToggleButton}"
+                 BasedOn="{StaticResource ModifiedIconToggleButtonStyle}">
+            <Style.Triggers>
+              <Trigger x:Uid="Trigger_46" Property="ToggleButton.IsChecked" Value="False">
+                <Setter x:Uid="Setter_290" Property="FrameworkElement.ToolTip"
+                        Localization.Attributes="Value (Readable Modifiable)" Value="Show annotations"/>
+              </Trigger>
+              <Trigger x:Uid="Trigger_47" Property="ToggleButton.IsChecked" Value="True">
+                <Setter x:Uid="Setter_291" Property="FrameworkElement.ToolTip"
+                        Localization.Attributes="Value (Readable Modifiable)" Value="Hide annotations"/>
+              </Trigger>
+            </Style.Triggers>
+          </Style>
+        </FrameworkElement.Style>
+      </ToggleButton>
+    </StackPanel>
+    <FrameworkControls:ExtendedScrollBar FrameworkElement.Name="HorizontalScrollBar" x:Uid="HorizontalScrollBar" Grid.Column="1"
+                                         Grid.Row="2" ScrollBar.Orientation="Horizontal" FrameworkElement.VerticalAlignment="Bottom"
+                                         UIElement.IsEnabled="{Binding MessageContent, Mode=OneWay, Converter={StaticResource IsNullConverter}}"/>
+    <FrameworkControls:ExtendedScrollBar FrameworkElement.Name="VerticalScrollBar" x:Uid="VerticalScrollBar" Grid.RowSpan="2"
+                                         Grid.Column="2" ScrollBar.Orientation="Vertical"
+                                         UIElement.IsEnabled="{Binding MessageContent, Mode=OneWay, Converter={StaticResource IsNullConverter}}"/>
+    <Border x:Uid="Border_7" CornerRadius="{DynamicResource ScrollViewerCornerRadius}"
+            Background="{DynamicResource ScrollbarBackgroundBrush}"
+            BorderBrush="{DynamicResource ScrollViewerCornerBorderBrush}" BorderThickness="1,1,0,0"
+            Grid.Column="2" Grid.Row="2">
+      <FrameworkElement.Width>
+        <Binding ElementName="VerticalScrollBar" Path="ActualWidth"/>
+      </FrameworkElement.Width>
+      <FrameworkElement.Height>
+        <Binding ElementName="HorizontalScrollBar" Path="ActualHeight"/>
+      </FrameworkElement.Height>
+    </Border>
+    <DesignView:RecordBar x:Name="RecordBar" x:Uid="DesignView:RecordBar_1" Grid.Row="1" Grid.ColumnSpan="2"
+                          FrameworkElement.VerticalAlignment="Top" FrameworkElement.HorizontalAlignment="Stretch"
+                          DefaultCommand="{Binding SceneScrollViewer.SwitchToDefaultStateCommand}"
+                          IsRecording="{Binding SceneScrollViewer.IsRecording, Mode=TwoWay}"
+                          IsOpen="{Binding SceneScrollViewer.CanRecord}"
+                          RecordTargetDescription="{Binding SceneScrollViewer.RecordTargetDescription}"/>
+    <Border x:Uid="Border_1" BorderThickness="1" BorderBrush="Red" Grid.Row="1" Grid.ColumnSpan="2"
+            UIElement.Visibility="{Binding SceneScrollViewer.IsRecording, Converter={StaticResource BoolToVisibility}}"/>
+    <DesignerUI:BreadcrumbBar x:Uid="DesignerUI:BreadcrumbBar_1" Grid.ColumnSpan="2">
+      <UIElement.Visibility>
+        <Binding Path="SceneScrollViewer.BreadcrumbBarModel.IsExpanded" Mode="OneWay"
+                 Converter="{StaticResource BoolToVisibilityCollapsedConverter}"/>
+      </UIElement.Visibility>
+    </DesignerUI:BreadcrumbBar>
+  </Grid>
+</Border>

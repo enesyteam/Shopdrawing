@@ -1,0 +1,92 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vs="clr-namespace:Microsoft.VisualStudio.PlatformUI.Shell.Controls"
+                    xmlns:automation="clr-namespace:Microsoft.Expression.Framework.Diagnostics"
+                    xmlns:fwctl="clr-namespace:Microsoft.Expression.Framework.Controls"
+                    x:Uid="ResourceDictionary_1">
+  <Style x:Uid="Style_1" TargetType="{x:Type vs:ViewHeader}">
+    <Setter x:Uid="Setter_1134" Property="Control.FontFamily"
+            Value="{DynamicResource {x:Static SystemFonts.MessageFontFamilyKey}}"/>
+    <Setter x:Uid="Setter_1637" Property="Control.FontSize"
+            Value="{DynamicResource {x:Static SystemFonts.MessageFontSizeKey}}"/>
+    <Setter x:Uid="Setter_1638" Property="Control.FontWeight"
+            Value="{DynamicResource {x:Static SystemFonts.MessageFontWeightKey}}"/>
+    <Setter x:Uid="Setter_1639" Property="Control.Background"
+            Value="{DynamicResource PaletteTabSelectedBackgroundBrush}"/>
+    <Setter x:Uid="Setter_1640" Property="Control.Foreground"
+            Value="{DynamicResource PaletteTabSelectedForegroundBrush}"/>
+    <Setter x:Uid="Setter_1" Property="Control.Template">
+      <Setter.Value>
+        <ControlTemplate x:Uid="ControlTemplate_1" TargetType="{x:Type vs:ViewHeader}">
+          <vs:DragUndockHeader x:Name="DragUndockHeader" x:Uid="DragUndockHeader"
+                               ViewElement="{TemplateBinding vs:ViewHeader.ContainingElement}" IsWindowTitleBar="false"
+                               vs:MouseCommands.MouseCommandAction="LeftDoubleClick"
+                               vs:MouseCommands.MouseCommand="{x:Static vs:ViewCommands.ToggleDocked}"
+                               vs:MouseCommands.MouseCommandParameter="{TemplateBinding vs:ViewHeader.ContainingElement}">
+            <Grid x:Uid="Grid_1">
+              <Grid.RowDefinitions>
+                <RowDefinition x:Uid="RowDefinition_1" Height="{DynamicResource HeaderBufferSize}"/>
+                <RowDefinition x:Uid="RowDefinition_2" Height="Auto"/>
+              </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Uid="ColumnDefinition_1" Width="*"/>
+                <ColumnDefinition x:Uid="ColumnDefinition_2" Width="Auto"/>
+                <ColumnDefinition x:Uid="ColumnDefinition_3" Width="Auto"/>
+              </Grid.ColumnDefinitions>
+              <Border x:Name="HighlightBackground" x:Uid="HighlightBackground" CornerRadius="4,4,0,0"
+                      FrameworkElement.Margin="0,1,0,0" Background="{DynamicResource PaletteHeaderBackgroundBrush}"
+                      Grid.RowSpan="2" Grid.ColumnSpan="3"/>
+              <Grid x:Uid="Grid_2" FrameworkElement.HorizontalAlignment="Left" Row="1"
+                    UIElement.SnapsToDevicePixels="true"
+                    FrameworkElement.Margin="{DynamicResource PaletteViewHeaderTabGroupMargin}">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition x:Uid="ColumnDefinition_4" Width="*"/>
+                  <ColumnDefinition x:Uid="ColumnDefinition_5" Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Path x:Name="RightSlope" x:Uid="RightSlope"
+                      Data="M 6.5,2.6 C 4.767,0.973 2.509,0 0,0 0,0 0,19 0,19 L 23,19 Z" Shape.Stretch="Fill"
+                      Shape.Fill="{TemplateBinding Control.Background}" Grid.Column="1" FrameworkElement.Width="23"
+                      FrameworkElement.VerticalAlignment="Stretch" FrameworkElement.HorizontalAlignment="Left"/>
+                <Border x:Uid="Border_1" CornerRadius="3,0,0,0" Background="{TemplateBinding Control.Background}">
+                  <fwctl:ToolTipTextBlock x:Name="TabTitle" x:Uid="TabTitle" automation:AutomationElement.Id="TabTitle"
+                                          TextBlock.TextTrimming="CharacterEllipsis" TextBlock.TextWrapping="NoWrap"
+                                          FrameworkElement.HorizontalAlignment="Stretch" FrameworkElement.VerticalAlignment="Center"
+                                          FrameworkElement.Margin="8,0,-1,0" TextBlock.Text="{Binding Title}"/>
+                </Border>
+              </Grid>
+              <Button x:Name="AutoHideButton" x:Uid="AutoHideButton"
+                      automation:AutomationElement.Id="PaletteAutoHideButton"
+                      FrameworkElement.Style="{DynamicResource AutoHideButtonStyle}"
+                      ButtonBase.CommandParameter="{TemplateBinding vs:ViewHeader.ContainingElement}" Grid.Row="1"
+                      Grid.Column="1" FrameworkElement.Margin="0,3,2,3"/>
+              <Button x:Name="CloseButton" x:Uid="CloseButton" automation:AutomationElement.Id="PaletteCloseButton"
+                      FrameworkElement.Style="{DynamicResource CloseButton8x8Style}"
+                      ButtonBase.Command="{x:Static vs:ViewCommands.HideViewCommand}"
+                      ButtonBase.CommandParameter="{TemplateBinding vs:ViewHeader.View}" Grid.Row="1" Grid.Column="2"
+                      FrameworkElement.Margin="0,3,2,3"/>
+            </Grid>
+          </vs:DragUndockHeader>
+          <ControlTemplate.Triggers>
+            <MultiTrigger x:Uid="MultiTrigger_2">
+              <MultiTrigger.Conditions>
+                <Condition x:Uid="Condition_3" Property="vs:FloatingWindow.IsFloating" Value="true"/>
+                <Condition x:Uid="Condition_4" Property="vs:FloatingWindow.HasMultipleOnScreenViews" Value="false"/>
+              </MultiTrigger.Conditions>
+              <Setter x:Uid="Setter_31" TargetName="DragUndockHeader" Property="vs:DragUndockHeader.IsWindowTitleBar"
+                      Value="true"/>
+            </MultiTrigger>
+            <Trigger x:Uid="Trigger_1" SourceName="HighlightBackground" Property="UIElement.IsMouseOver" Value="true">
+              <Setter x:Uid="Setter_1641" TargetName="HighlightBackground"
+                      Value="{DynamicResource PaletteHeaderMouseOverBackgroundBrush}" Property="Border.Background"/>
+            </Trigger>
+            <Trigger x:Uid="Trigger_2" SourceName="DragUndockHeader" Property="vs:DragUndockHeader.IsDragging"
+                     Value="true">
+              <Setter x:Uid="Setter_1642" TargetName="HighlightBackground"
+                      Value="{DynamicResource PaletteHeaderPressedBackgroundBrush}" Property="Border.Background"/>
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

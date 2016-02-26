@@ -1,0 +1,44 @@
+<ContextMenu xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:fwctl="clr-namespace:Microsoft.Expression.Framework.Controls;assembly=Microsoft.Expression.Framework"
+             xmlns:fwdata="clr-namespace:Microsoft.Expression.Framework.Data;assembly=Microsoft.Expression.Framework"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Uid="ContextMenu_1">
+  <FrameworkElement.Resources>
+    <fwdata:BoolToVisibilityCollapsedConverter x:Key="BoolToVisibilityCollapsedConverter" x:Uid="fwdata:BoolToVisibilityCollapsedConverter_1"/>
+    <Style x:Key="EaseMenuStyle" x:Uid="Style_1" BasedOn="{StaticResource {x:Type MenuItem}}"
+           TargetType="{x:Type MenuItem}">
+      <Setter x:Uid="Setter_1" Property="MenuItem.IsChecked">
+        <Setter.Value>
+          <Binding Path="IsSelected" Mode="TwoWay"/>
+        </Setter.Value>
+      </Setter>
+      <Setter x:Uid="Setter_2" Property="HeaderedItemsControl.Header">
+        <Setter.Value>
+          <Binding/>
+        </Setter.Value>
+      </Setter>
+      <Setter x:Uid="Setter_3" Property="MenuItem.IsCheckable" Value="true"/>
+    </Style>
+  </FrameworkElement.Resources>
+  <MenuItem x:Name="Cut" x:Uid="MenuItem_1" HeaderedItemsControl.Header="Cut"
+            Command="{Binding CutKeyFramesCommand}" UIElement.IsEnabled="{Binding CanCutKeyframes}"/>
+  <MenuItem x:Name="Copy" x:Uid="MenuItem_2" HeaderedItemsControl.Header="Copy"
+            Command="{Binding CopyKeyFramesCommand}" UIElement.IsEnabled="{Binding CanCopyKeyframes}"/>
+  <MenuItem x:Name="Delete" x:Uid="MenuItem_3"
+            HeaderedItemsControl.Header="{Binding DeleteKeyFramesCommandName}"
+            Command="{Binding DeleteKeyFramesCommand}" UIElement.IsEnabled="{Binding CanDeleteKeyframes}"/>
+  <Separator x:Uid="Separator_1"/>
+  <MenuItem x:Name="EaseInFlyout" x:Uid="MenuItem_4" HeaderedItemsControl.Header="Ease In"
+            ItemsControl.ItemContainerStyle="{StaticResource EaseMenuStyle}"
+            UIElement.Visibility="{Binding IsEaseInOutAvailable, Converter={StaticResource BoolToVisibilityCollapsedConverter}}"
+            UIElement.IsEnabled="{Binding CanEaseSelectedKeyFrames}"
+            ItemsControl.ItemsSource="{Binding EaseInCollectionSelectedKeyFrames}"/>
+  <MenuItem x:Name="EaseOutFlyout" x:Uid="MenuItem_5" HeaderedItemsControl.Header="Ease Out"
+            ItemsControl.ItemContainerStyle="{StaticResource EaseMenuStyle}"
+            UIElement.Visibility="{Binding IsEaseInOutAvailable, Converter={StaticResource BoolToVisibilityCollapsedConverter}}"
+            UIElement.IsEnabled="{Binding CanEaseSelectedKeyFrames}"
+            ItemsControl.ItemsSource="{Binding EaseOutCollectionSelectedKeyFrames}"/>
+  <MenuItem x:Name="HoldIn" x:Uid="MenuItem_6" HeaderedItemsControl.Header="Hold In" IsCheckable="true"
+            IsChecked="{Binding HoldInSelectedKeyFrames}"
+            UIElement.IsEnabled="{Binding CanEaseSelectedKeyFrames}"/>
+</ContextMenu>

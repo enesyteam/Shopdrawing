@@ -1,0 +1,51 @@
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\bin\Debug\ComplexProperty.exe
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\bin\Debug\ComplexProperty.pdb
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\bin\Debug\System.Windows.Controls.WpfPropertyGrid.dll
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\bin\Debug\System.Windows.Controls.WpfPropertyGrid.pdb
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\bin\Debug\System.Windows.Controls.WpfPropertyGrid.xml
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\obj\Debug\Window1.g.cs
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\obj\Debug\App.g.cs
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\obj\Debug\GeneratedInternalTypeHelper.g.cs
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\obj\Debug\ComplexProperty_MarkupCompile.cache
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\obj\Debug\ComplexProperty_MarkupCompile.lref
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\obj\Debug\Window1.baml
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\obj\Debug\ComplexProperty.g.resources
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\obj\Debug\ComplexProperty.Properties.Resources.resources
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\obj\Debug\WPG.ComplexProperty.csproj.GenerateResource.Cache
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\obj\Debug\ComplexProperty.exe
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\obj\Debug\ComplexProperty.pdb
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\obj\Debug\ComplexProperty.exe
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\obj\Debug\ComplexProperty.pdb
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\bin\Debug\ComplexProperty.exe
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\bin\Debug\ComplexProperty.pdb
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\bin\Debug\System.Windows.Controls.WpfPropertyGrid.dll
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\bin\Debug\System.Windows.Controls.WpfPropertyGrid.pdb
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\bin\Debug\System.Windows.Controls.WpfPropertyGrid.xml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\obj\Debug\WPG.ComplexProperty.csprojResolveAssemblyReference.cache
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\obj\Debug\Window1.g.cs
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\obj\Debug\App.g.cs
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\obj\Debug\GeneratedInternalTypeHelper.g.cs
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\obj\Debug\ComplexProperty_MarkupCompile.cache
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\obj\Debug\ComplexProperty_MarkupCompile.lref
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\obj\Debug\Window1.baml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\obj\Debug\ComplexProperty.g.resources
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\obj\Debug\ComplexProperty.Properties.Resources.resources
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\obj\Debug\WPG.ComplexProperty.csproj.GenerateResource.Cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\bin\Debug\ComplexProperty.exe.config
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\bin\Debug\ComplexProperty.exe
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\bin\Debug\ComplexProperty.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\bin\Debug\System.Windows.Controls.WpfPropertyGrid.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\bin\Debug\System.Windows.Controls.WpfPropertyGrid.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\bin\Debug\System.Windows.Controls.WpfPropertyGrid.xml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\obj\Debug\WPG.ComplexProperty.csprojResolveAssemblyReference.cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\obj\Debug\Window1.g.cs
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\obj\Debug\App.g.cs
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\obj\Debug\ComplexProperty_MarkupCompile.cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\obj\Debug\ComplexProperty_MarkupCompile.lref
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\obj\Debug\Window1.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\obj\Debug\ComplexProperty.g.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\obj\Debug\ComplexProperty.Properties.Resources.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\obj\Debug\WPG.ComplexProperty.csproj.GenerateResource.Cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\obj\Debug\ComplexProperty.exe
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.ComplexProperty\obj\Debug\ComplexProperty.pdb

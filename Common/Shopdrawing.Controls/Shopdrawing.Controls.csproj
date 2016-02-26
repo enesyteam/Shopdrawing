@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DE678F62-CB9B-4B5E-AE08-9FD4E34C5872}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shopdrawing.Controls</RootNamespace>
+    <AssemblyName>Shopdrawing.Controls</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GuiLabs.Undo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Main\DynamicGeometryLibrary\References\GuiLabs.Undo.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="INinchableControl.cs" />
+    <Compile Include="EditableComboBox.cs" />
+    <Compile Include="ProjectExplorer\Project.xaml.cs">
+      <DependentUpon>Project.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectExplorer\ProjectItem.cs" />
+    <Compile Include="StickyButton.cs" />
+    <Compile Include="VerifyingEditBox.cs" />
+    <Compile Include="ContextMenu\ContextMenuEx.cs" />
+    <Compile Include="GirdEx.cs" />
+    <Compile Include="MessageBox\AutomationElement.cs" />
+    <Compile Include="MessageBox\BoolToVisibilityCollapsedConverter.cs" />
+    <Compile Include="MessageBox\DelegateCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MessageBox\Dialog.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MessageBox\DispatcherHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MessageBox\ErrorArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MessageBox\ExpressionPropertyValueEditorCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MessageBox\ExpressionPropertyValueEditorCommandHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MessageBox\ExpressionValueEditorCommandArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MessageBox\ExpressionWindow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MessageBox\IExternalChanges.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MessageBox\IMessageDisplayService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MessageBox\MessageBoxArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MessageBox\MessageChoice.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MessageBox\MessageIcon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MessageBox\MessageWindow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MessageBox\MessageWindowDialog.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MessageBox\ModalDialogHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MessageBox\OnDemandControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MessageBox\StringTable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MessageBox\TemporaryCursor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MessageBox\UIThreadDispatcher.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MessageBox\UnsafeNativeMethods.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MessageBox\UpdateBindingType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MessageBox\UserControl1.xaml.cs">
+      <DependentUpon>UserControl1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBox\ValueEditorUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MessageBox\WebPageLauncher.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MessageBox\WindowHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PropertyGridHost\PropertyGridHost.cs" />
+    <Compile Include="PropertyGridHost\PropertyGridItems\CheckBoxEx.cs" />
+    <Compile Include="PropertyGridHost\PropertyGridItems\ComboBoxEx.cs" />
+    <Compile Include="PropertyGridHost\PropertyGridItems\ListBoxEx.cs" />
+    <Compile Include="PropertyGridHost\PropertyGridItems\PropertyItemName.cs" />
+    <Compile Include="PropertyGridHost\PropertyGridItems\TextBoxEx.cs" />
+    <Compile Include="PropertyGridHost\PropertyGridItems\PropertyUnitLabel.cs" />
+    <Compile Include="SdrToolbar.xaml.cs">
+      <DependentUpon>SdrToolbar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShopDrawingWindow\ShopDrawingWindow.cs" />
+    <Compile Include="StatusBar\NotifycationLabel.cs" />
+    <Compile Include="StatusBar\StatusBar.cs" />
+    <Compile Include="StatusBar\StatusButton.cs" />
+    <Compile Include="TitleLabel.cs" />
+    <Compile Include="Toolbar\Backup.cs" />
+    <Compile Include="Toolbar\SdrToolbar.cs" />
+    <Compile Include="Toolbar\SdrToolbarButton.cs" />
+    <Compile Include="Toolbar\SdrToolbarToggleButton.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NewFolder1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="MessageBox\UserControl1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProjectExplorer\Icons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ProjectExplorer\Project.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ProjectExplorer\Themes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SdrToolbar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Drawing\DynamicGeometry.2010.csproj">
+      <Project>{c8694ce9-c8fc-4a2d-94fe-0fb9ac01d16c}</Project>
+      <Name>DynamicGeometry.2010</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shopdrawing.Core.Utilities\Shopdrawing.Core.Utilities.csproj">
+      <Project>{049507b3-c1de-4f0a-a4c8-72add78fdce9}</Project>
+      <Name>Shopdrawing.Core.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shopdrawing.Core\Shopdrawing.Core.csproj">
+      <Project>{b5c5d3e2-79db-4839-8375-c0d1b5d832c8}</Project>
+      <Name>Shopdrawing.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shopdrawing.ProjectExpoler\ProjectExplorer.csproj">
+      <Project>{2854814f-ea3c-41d4-aa94-460c4694f430}</Project>
+      <Name>ProjectExplorer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shopdrawing.Resources\Shopdrawing.Resources.csproj">
+      <Project>{9dff9a1d-52fb-4956-af25-5d2a18dcb466}</Project>
+      <Name>Shopdrawing.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shopdrawing.Wpf\Shopdrawing.Wpf.csproj">
+      <Project>{a0dcbd9d-7e4c-41a0-a3d1-599a422abd27}</Project>
+      <Name>Shopdrawing.Wpf</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

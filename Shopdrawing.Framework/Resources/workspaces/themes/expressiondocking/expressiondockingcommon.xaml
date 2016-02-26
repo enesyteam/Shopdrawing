@@ -1,0 +1,74 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vs="clr-namespace:Microsoft.VisualStudio.PlatformUI.Shell.Controls"
+                    xmlns:System="clr-namespace:System;assembly=mscorlib"
+                    xmlns:Extension="clr-namespace:Microsoft.Expression.Framework.Workspaces.Extension"
+                    xmlns:fwctl="clr-namespace:Microsoft.Expression.Framework.Controls"
+                    xmlns:fwdata="clr-namespace:Microsoft.Expression.Framework.Data"
+                    xmlns:automation="clr-namespace:Microsoft.Expression.Framework.Diagnostics"
+                    x:Uid="ResourceDictionary_1">
+  <fwdata:BoolToVisibilityCollapsedConverter x:Key="BoolToVisibilityCollapsedConverter" x:Uid="fwdata:BoolToVisibilityCollapsedConverter_1"/>
+  <GridLength x:Key="HeaderBufferSize" x:Uid="GridLength_1">5</GridLength>
+  <Style x:Uid="Style_3" BasedOn="{StaticResource {x:Type vs:FloatingWindow}}"
+         TargetType="{x:Type Extension:ExpressionFloatingWindow}"/>
+  <Style x:Key="DockingTabItem" x:Uid="Style_4" TargetType="{x:Type TabItem}"
+         BasedOn="{StaticResource ExpressionTabItemBase}">
+    <Setter x:Uid="Setter_14" Property="Control.Background"
+            Value="{DynamicResource PaletteTabDefaultBackgroundBrush}"/>
+    <Setter x:Uid="Setter_15" Property="Control.Foreground"
+            Value="{DynamicResource PaletteTabDefaultForegroundBrush}"/>
+    <Style.Triggers>
+      <Trigger x:Uid="Trigger_3" Property="TabItem.IsSelected" Value="true">
+        <Setter x:Uid="Setter_16" Property="Panel.ZIndex" Value="100"/>
+        <Setter x:Uid="Setter_17" Property="Control.Background"
+                Value="{DynamicResource PaletteTabSelectedBackgroundBrush}"/>
+        <Setter x:Uid="Setter_18" Property="Control.Foreground"
+                Value="{DynamicResource PaletteTabSelectedForegroundBrush}"/>
+      </Trigger>
+      <MultiTrigger x:Uid="MultiTrigger_1">
+        <MultiTrigger.Conditions>
+          <Condition x:Uid="Condition_1" Property="UIElement.IsMouseOver" Value="true"/>
+          <Condition x:Uid="Condition_2" Property="TabItem.IsSelected" Value="false"/>
+        </MultiTrigger.Conditions>
+        <Setter x:Uid="Setter_19" Property="Control.Background"
+                Value="{DynamicResource PaletteTabMouseOverBackgroundBrush}"/>
+        <Setter x:Uid="Setter_20" Property="Control.Foreground"
+                Value="{DynamicResource PaletteTabMouseOverForegroundBrush}"/>
+      </MultiTrigger>
+    </Style.Triggers>
+  </Style>
+  <Style x:Key="AutoHideButtonStyle" x:Uid="Style_5" TargetType="{x:Type Button}"
+         BasedOn="{StaticResource FlatIconButtonStyle}">
+    <Setter x:Uid="Setter_5" Property="FrameworkElement.Width" Value="12"/>
+    <Setter x:Uid="Setter_6" Property="FrameworkElement.Height" Value="12"/>
+    <Setter x:Uid="Setter_21" Property="automation:AutomationElement.Id" Value="AutoHideButton"/>
+    <Setter x:Uid="Setter_22" Property="FrameworkElement.ToolTip"
+            Localization.Attributes="Value (Readable Modifiable)" Value="Turn on AutoHide"/>
+    <Setter x:Uid="Setter_23" Property="ButtonBase.Command"
+            Value="{x:Static vs:ViewCommands.AutoHideViewCommand}"/>
+    <Setter x:Uid="Setter_24" Property="UIElement.Visibility"
+            Value="{Binding View.IsAutoHideable, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource BoolToVisibilityCollapsedConverter}}"/>
+    <Setter x:Uid="Setter_25" Property="fwctl:Icon.SelectedDrawingBrush" Value="{StaticResource PinIconBrush}"/>
+    <Setter x:Uid="Setter_40" Property="fwctl:Icon.DeselectedDrawingBrush"
+            Value="{StaticResource PinIconBrush}"/>
+    <Setter x:Uid="Setter_35" Property="fwctl:Icon.RedChroma" Value="#FFC5C5C5"/>
+    <Setter x:Uid="Setter_36" Property="fwctl:Icon.GreenChroma" Value="#FF404040"/>
+    <Style.Triggers>
+      <Trigger x:Uid="Trigger_5" Property="UIElement.IsMouseOver" Value="true">
+        <Setter x:Uid="Setter_37" Property="fwctl:Icon.RedChroma" Value="#FFFFFFFF"/>
+        <Setter x:Uid="Setter_38" Property="fwctl:Icon.GreenChroma" Value="#FF262626"/>
+      </Trigger>
+      <Trigger x:Uid="Trigger_1" Property="vs:AutoHideWindow.IsAutoHidden" Value="true">
+        <Setter x:Uid="Setter_41" Property="fwctl:Icon.SelectedDrawingBrush"
+                Value="{StaticResource UnpinIconBrush}"/>
+        <Setter x:Uid="Setter_27" Property="fwctl:Icon.DeselectedDrawingBrush"
+                Value="{StaticResource UnpinIconBrush}"/>
+        <Setter x:Uid="Setter_29" Property="FrameworkElement.ToolTip"
+                Localization.Attributes="Value (Readable Modifiable)" Value="Turn off AutoHide"/>
+      </Trigger>
+      <Trigger x:Uid="Trigger_2" Property="vs:FloatingWindow.IsFloating" Value="true">
+        <Setter x:Uid="Setter_30" Property="UIElement.Visibility" Value="Collapsed"/>
+      </Trigger>
+    </Style.Triggers>
+  </Style>
+</ResourceDictionary>

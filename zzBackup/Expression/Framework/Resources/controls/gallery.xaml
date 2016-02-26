@@ -1,0 +1,319 @@
+<FrameworkControls:Gallery xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                           xmlns:FrameworkControls="clr-namespace:Microsoft.Expression.Framework.Controls"
+                           xmlns:FrameworkData="clr-namespace:Microsoft.Expression.Framework.Data"
+                           xmlns:Automation="clr-namespace:Microsoft.Expression.Framework.Diagnostics"
+                           x:Name="UserControlSelf" x:Uid="Control_1">
+  <FrameworkElement.Resources>
+    <FrameworkData:EqualsMultipleConverter x:Key="EqualsMultipleConverter" x:Uid="FrameworkData:EqualsMultipleConverter_1"/>
+    <Style x:Key="HorizontallyUnscrollableListBoxStyle" x:Uid="Style_2" TargetType="{x:Type ItemsControl}">
+      <Setter x:Uid="Setter_2" Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled"/>
+      <Setter x:Uid="Setter_3" Property="Control.Background" Value="{StaticResource ListBackgroundBrush}"/>
+    </Style>
+    <Style x:Uid="Style_5" TargetType="{x:Type FrameworkControls:SelectingListBox}"
+           BasedOn="{StaticResource {x:Type ListBox}}">
+      <Style.Triggers>
+        <DataTrigger x:Uid="DataTrigger_1" Value="true">
+          <DataTrigger.Binding>
+            <Binding ElementName="UserControlSelf" Path="IsGrouped"/>
+          </DataTrigger.Binding>
+          <Setter x:Uid="Setter_236" Property="Control.Template">
+            <Setter.Value>
+              <ControlTemplate x:Uid="ControlTemplate_23" TargetType="{x:Type ListBox}">
+                <Border x:Uid="Border_15" CornerRadius="2" Background="{TemplateBinding Control.Background}"
+                        BorderBrush="{TemplateBinding Control.BorderBrush}"
+                        BorderThickness="{TemplateBinding Control.BorderThickness}">
+                  <ScrollViewer x:Uid="ScrollViewer_3" CanContentScroll="true"
+                                HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}"
+                                VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}"
+                                KeyboardNavigation.DirectionalNavigation="Contained" KeyboardNavigation.TabNavigation="Once"
+                                Control.Padding="{TemplateBinding Control.Padding}">
+                    <ItemsPresenter x:Uid="StackPanel_3"/>
+                  </ScrollViewer>
+                </Border>
+              </ControlTemplate>
+            </Setter.Value>
+          </Setter>
+        </DataTrigger>
+        <DataTrigger x:Uid="DataTrigger_2" Value="false">
+          <DataTrigger.Binding>
+            <Binding ElementName="UserControlSelf" Path="IsGrouped"/>
+          </DataTrigger.Binding>
+          <Setter x:Uid="Setter_237" Property="Control.Template">
+            <Setter.Value>
+              <ControlTemplate x:Uid="ControlTemplate_24" TargetType="{x:Type ListBox}">
+                <Border x:Uid="Border_16" CornerRadius="2" Background="{TemplateBinding Control.Background}"
+                        BorderBrush="{TemplateBinding Control.BorderBrush}"
+                        BorderThickness="{TemplateBinding Control.BorderThickness}">
+                  <ScrollViewer x:Uid="ScrollViewer_4" CanContentScroll="true"
+                                HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}"
+                                VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}"
+                                KeyboardNavigation.DirectionalNavigation="Contained" KeyboardNavigation.TabNavigation="Once"
+                                Control.Padding="{TemplateBinding Control.Padding}">
+                    <ItemsPresenter x:Uid="ItemsPresenter_2"/>
+                  </ScrollViewer>
+                </Border>
+              </ControlTemplate>
+            </Setter.Value>
+          </Setter>
+        </DataTrigger>
+      </Style.Triggers>
+    </Style>
+    <Style x:Key="SimpleButtonStyle" x:Uid="Style_3" TargetType="{x:Type Button}">
+      <Setter x:Uid="Setter_4" Property="Control.Template">
+        <Setter.Value>
+          <ControlTemplate x:Uid="ControlTemplate_2" TargetType="{x:Type Button}">
+            <ContentPresenter x:Uid="ContentPresenter_1" FrameworkElement.VerticalAlignment="Center"
+                              Content="{TemplateBinding ContentControl.Content}"
+                              ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}"
+                              ContentTemplateSelector="{TemplateBinding ContentControl.ContentTemplateSelector}"
+                              FrameworkElement.Margin="{TemplateBinding Control.Padding}"/>
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+    </Style>
+    <DataTemplate x:Key="FavoriteItemDataTemplate" x:Uid="DataTemplate_1">
+      <Button x:Uid="Button_1" UIElement.Focusable="false"
+              FrameworkElement.Style="{StaticResource SimpleButtonStyle}"
+              FrameworkElement.HorizontalAlignment="Stretch" FrameworkElement.VerticalAlignment="Stretch"
+              Control.HorizontalContentAlignment="Left" Control.Padding="0,0,0,0"
+              ButtonBase.Command="{Binding SelectItemCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type FrameworkControls:Gallery}}}"
+              ContentControl.ContentTemplate="{Binding FavoriteDataTemplate, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type FrameworkControls:Gallery}}}">
+        <ButtonBase.CommandParameter>
+          <Binding/>
+        </ButtonBase.CommandParameter>
+        <ContentControl.Content>
+          <Binding/>
+        </ContentControl.Content>
+      </Button>
+    </DataTemplate>
+    <DataTemplate x:Key="MostRecentlyUsedItemDataTemplate" x:Uid="DataTemplate_2">
+      <Button x:Uid="Button_2" UIElement.Focusable="false"
+              FrameworkElement.Style="{StaticResource SimpleButtonStyle}"
+              FrameworkElement.HorizontalAlignment="Stretch" FrameworkElement.VerticalAlignment="Stretch"
+              Control.HorizontalContentAlignment="Left" Control.Padding="0,0,0,0"
+              ButtonBase.Command="{Binding SelectItemCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type FrameworkControls:Gallery}}}"
+              ContentControl.ContentTemplate="{Binding MostRecentlyUsedDataTemplate, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type FrameworkControls:Gallery}}}">
+        <ButtonBase.CommandParameter>
+          <Binding/>
+        </ButtonBase.CommandParameter>
+        <ContentControl.Content>
+          <Binding/>
+        </ContentControl.Content>
+      </Button>
+    </DataTemplate>
+    <Style x:Uid="Style_29" BasedOn="{StaticResource GalleryItemStyle}"
+           TargetType="{x:Type FrameworkControls:SelectingListBoxItem}">
+      <Setter x:Uid="Setter_1215" Property="FrameworkElement.MinHeight" Value="0"/>
+    </Style>
+    <Style x:Key="GalleryExpander" x:Uid="Style_121" TargetType="{x:Type Expander}"
+           BasedOn="{StaticResource ExpressionExpander}">
+      <Setter x:Uid="Setter_1205" Property="Control.Template">
+        <Setter.Value>
+          <ControlTemplate x:Uid="ControlTemplate_61" TargetType="{x:Type Expander}">
+            <Grid x:Uid="Grid_43">
+              <Grid.RowDefinitions>
+                <RowDefinition x:Uid="RowDefinition_24" Height="Auto"/>
+                <RowDefinition x:Name="ContentRow" x:Uid="RowDefinition_25" Height="*"/>
+              </Grid.RowDefinitions>
+              <Border x:Name="HeaderBorder" x:Uid="Border_31" Background="{DynamicResource RecessedBrush}"
+                      BorderBrush="{TemplateBinding Control.BorderBrush}" BorderThickness="0,0,0,0">
+                <Grid x:Uid="Grid_44" UIElement.Focusable="true">
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition x:Uid="ColumnDefinition_1" Width="Auto"/>
+                    <ColumnDefinition x:Uid="ColumnDefinition_2" Width="*"/>
+                  </Grid.ColumnDefinitions>
+                  <CheckBox x:Name="HeaderSite" x:Uid="CheckBox_5" Grid.Column="0" UIElement.Focusable="false"
+                            FrameworkElement.Style="{StaticResource ExpandCollapseCheckBox}"
+                            FrameworkControls:Icon.GreenChroma="#00000000" Control.Background="{DynamicResource Text1Brush}"
+                            FrameworkElement.OverridesDefaultStyle="true" FrameworkElement.HorizontalAlignment="Stretch"
+                            FrameworkElement.VerticalAlignment="Stretch">
+                    <ToggleButton.IsChecked>
+                      <Binding Path="IsExpanded" Mode="TwoWay" RelativeSource="{RelativeSource TemplatedParent}"/>
+                    </ToggleButton.IsChecked>
+                  </CheckBox>
+                  <ContentPresenter x:Uid="ContentPresenter_28" Grid.Column="1"
+                                    Content="{TemplateBinding HeaderedContentControl.Header}"
+                                    ContentTemplate="{TemplateBinding HeaderedContentControl.HeaderTemplate}"
+                                    ContentTemplateSelector="{TemplateBinding HeaderedContentControl.HeaderTemplateSelector}"/>
+                </Grid>
+              </Border>
+              <Border x:Name="ExpandSite" x:Uid="Border_32" UIElement.Visibility="Collapsed" Grid.Row="1"
+                      BorderBrush="{TemplateBinding Control.BorderBrush}" BorderThickness="0,0,0,0" Padding="0,1,0,0">
+                <ContentPresenter x:Uid="ContentPresenter_27"
+                                  FrameworkElement.HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+                                  FrameworkElement.VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+                                  FrameworkElement.Margin="{TemplateBinding Control.Padding}" UIElement.Focusable="false"/>
+              </Border>
+            </Grid>
+            <ControlTemplate.Triggers>
+              <Trigger x:Uid="Trigger_1036" Property="Expander.IsExpanded" Value="true">
+                <Setter x:Uid="Setter_1210" TargetName="ExpandSite" Property="UIElement.Visibility" Value="Visible"/>
+              </Trigger>
+              <Trigger x:Uid="Trigger_1037" Property="UIElement.IsKeyboardFocusWithin" Value="true">
+                <Setter x:Uid="Setter_1211" Value="{DynamicResource Text1Brush}" TargetName="HeaderBorder"
+                        Property="Border.Background"/>
+                <Setter x:Uid="Setter_1212" Value="{DynamicResource BackgroundBrush}" TargetName="HeaderSite"
+                        Property="FrameworkControls:Icon.RedChroma"/>
+              </Trigger>
+            </ControlTemplate.Triggers>
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+      <Style.Triggers>
+        <Trigger x:Uid="Trigger_1038" Property="UIElement.IsKeyboardFocusWithin" Value="true">
+          <Setter x:Uid="Setter_1213" Property="Control.Foreground" Value="{DynamicResource BackgroundBrush}"/>
+        </Trigger>
+      </Style.Triggers>
+    </Style>
+    <Style x:Uid="Style_122" TargetType="{x:Type FrameworkControls:Gallery}">
+      <Setter x:Uid="Setter_1214" Property="FrameworkControls:Gallery.GroupExpanderStyle"
+              Value="{StaticResource GalleryExpander}"/>
+    </Style>
+    <Style x:Key="GroupContainerStyle" x:Uid="Style_4" TargetType="{x:Type GroupItem}">
+      <Setter x:Uid="Setter_8" Property="FrameworkElement.Margin" Value="1,1,1,0"/>
+      <Setter x:Uid="Setter_9" Property="Control.Template">
+        <Setter.Value>
+          <ControlTemplate x:Uid="ControlTemplate_3" TargetType="{x:Type GroupItem}">
+            <Expander FrameworkElement.Name="GroupExpander" x:Uid="Expander_1" IsExpanded="true"
+                      Control.BorderBrush="Transparent">
+              <FrameworkElement.Style>
+                <Binding Path="GroupExpanderStyle" ElementName="UserControlSelf"/>
+              </FrameworkElement.Style>
+              <HeaderedContentControl.Header>
+                <TextBlock x:Uid="TextBlock_4" TextTrimming="CharacterEllipsis">
+                  <TextBlock.Text>
+                    <Binding Path="Name"/>
+                  </TextBlock.Text>
+                </TextBlock>
+              </HeaderedContentControl.Header>
+              <ContentControl.Content>
+                <ItemsPresenter x:Uid="ItemsPresenter_1"/>
+              </ContentControl.Content>
+            </Expander>
+            <ControlTemplate.Triggers>
+              <MultiDataTrigger x:Uid="MultiDataTrigger_3">
+                <MultiDataTrigger.Conditions>
+                  <Condition x:Uid="Condition_3" Value="1">
+                    <Condition.Binding>
+                      <Binding Path="ItemCount"/>
+                    </Condition.Binding>
+                  </Condition>
+                  <Condition x:Uid="Condition_4" Value="{x:Static FrameworkControls:Gallery.UnfetchedFolderItemName}">
+                    <Condition.Binding>
+                      <Binding Path="Items[0]"/>
+                    </Condition.Binding>
+                  </Condition>
+                </MultiDataTrigger.Conditions>
+                <MultiDataTrigger.Setters>
+                  <Setter x:Uid="Setter_11" TargetName="GroupExpander" Property="Expander.IsExpanded" Value="false"/>
+                </MultiDataTrigger.Setters>
+              </MultiDataTrigger>
+            </ControlTemplate.Triggers>
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+    </Style>
+  </FrameworkElement.Resources>
+  <Grid.RowDefinitions>
+    <RowDefinition x:Uid="RowDefinition_1" Height="Auto"/>
+    <RowDefinition x:Uid="RowDefinition_2" Height="Auto"/>
+    <RowDefinition x:Uid="RowDefinition_26" Height="12"/>
+    <RowDefinition x:Uid="RowDefinition_3" Height="Auto"/>
+    <RowDefinition x:Uid="RowDefinition_4" Height="Auto"/>
+    <RowDefinition x:Uid="RowDefinition_27" Height="12"/>
+    <RowDefinition x:Uid="RowDefinition_5" Height="Auto"/>
+    <RowDefinition x:Uid="RowDefinition_6" Height="*"/>
+  </Grid.RowDefinitions>
+  <TextBlock x:Uid="TextBlock_1" Text="Favorites"/>
+  <ItemsControl x:Uid="ItemsControl_1" Grid.Row="1" Automation:AutomationElement.Id="FavoriteItems"
+                FrameworkElement.Margin="{StaticResource DefaultTopMargin}"
+                Control.BorderBrush="{DynamicResource WhiteBrush}" Control.BorderThickness="1"
+                FrameworkElement.Style="{StaticResource HorizontallyUnscrollableListBoxStyle}"
+                UIElement.AllowDrop="true" UIElement.Focusable="false" IsTextSearchEnabled="true"
+                ItemTemplate="{StaticResource FavoriteItemDataTemplate}">
+    <TextSearch.TextPath>
+      <Binding ElementName="UserControlSelf" Path="TextSearch.TextPath"/>
+    </TextSearch.TextPath>
+    <ItemsControl.ItemContainerStyle>
+      <Binding Path="FavoritesItemContainerStyle">
+        <Binding.RelativeSource>
+          <RelativeSource Mode="FindAncestor" AncestorType="{x:Type FrameworkControls:Gallery}"/>
+        </Binding.RelativeSource>
+      </Binding>
+    </ItemsControl.ItemContainerStyle>
+    <ItemsControl.ItemsSource>
+      <Binding ElementName="UserControlSelf" Path="FavoriteItems"/>
+    </ItemsControl.ItemsSource>
+    <ItemsControl.ItemsPanel>
+      <Binding Path="FavoritesItemsPanelTemplate" ElementName="UserControlSelf"/>
+    </ItemsControl.ItemsPanel>
+  </ItemsControl>
+  <TextBlock x:Uid="TextBlock_2" Text="Most Recent" Grid.Row="3"/>
+  <ItemsControl x:Uid="ItemsControl_2" Grid.Row="4" Automation:AutomationElement.Id="MostRecentlyUsedItems"
+                Control.BorderBrush="{DynamicResource WhiteBrush}" Control.BorderThickness="1"
+                FrameworkElement.Margin="{StaticResource DefaultTopMargin}"
+                FrameworkElement.Style="{StaticResource HorizontallyUnscrollableListBoxStyle}"
+                UIElement.Focusable="false" IsTextSearchEnabled="true"
+                ItemTemplate="{StaticResource MostRecentlyUsedItemDataTemplate}">
+    <FrameworkElement.MinHeight>
+      <Binding ElementName="UserControlSelf" Path="MostRecentlyUsedMinHeight"/>
+    </FrameworkElement.MinHeight>
+    <TextSearch.TextPath>
+      <Binding ElementName="UserControlSelf" Path="TextSearch.TextPath"/>
+    </TextSearch.TextPath>
+    <ItemsControl.ItemContainerStyle>
+      <Binding Path="MostRecentlyUsedItemContainerStyle">
+        <Binding.RelativeSource>
+          <RelativeSource Mode="FindAncestor" AncestorType="{x:Type FrameworkControls:Gallery}"/>
+        </Binding.RelativeSource>
+      </Binding>
+    </ItemsControl.ItemContainerStyle>
+    <ItemsControl.ItemsSource>
+      <Binding ElementName="UserControlSelf" Path="MostRecentlyUsedItems"/>
+    </ItemsControl.ItemsSource>
+    <ItemsControl.ItemsPanel>
+      <Binding Path="MostRecentlyUsedItemsPanelTemplate" ElementName="UserControlSelf"/>
+    </ItemsControl.ItemsPanel>
+  </ItemsControl>
+  <TextBlock x:Uid="TextBlock_3" Grid.Row="6">
+    <TextBlock.Text>
+      <Binding Path="MainItemsHeader">
+        <Binding.RelativeSource>
+          <RelativeSource Mode="FindAncestor" AncestorType="{x:Type FrameworkControls:Gallery}"/>
+        </Binding.RelativeSource>
+      </Binding>
+    </TextBlock.Text>
+  </TextBlock>
+  <FrameworkControls:SelectingListBox x:Name="CategoryListBox" KeyDown="CategoryListBox_KeyDown"
+                                      x:Uid="FrameworkControls:SelectingListBox_1" Grid.Row="7"
+                                      ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                                      FrameworkElement.Margin="{StaticResource DefaultTopMargin}" Automation:AutomationElement.Id="Items"
+                                      Control.Background="{DynamicResource ListBackgroundBrush}"
+                                      Control.BorderBrush="{DynamicResource WhiteBrush}" Control.BorderThickness="1"
+                                      UIElement.Focusable="false" Selector.IsSynchronizedWithCurrentItem="true"
+                                      ItemsControl.IsTextSearchEnabled="true" Selector.SelectedIndex="0">
+    <TextSearch.TextPath>
+      <Binding ElementName="UserControlSelf" Path="TextSearch.TextPath"/>
+    </TextSearch.TextPath>
+    <ItemsControl.ItemsSource>
+      <Binding ElementName="UserControlSelf" Path="Items"/>
+    </ItemsControl.ItemsSource>
+    <Selector.SelectedItem>
+      <Binding Path="SelectedItem" ElementName="UserControlSelf" Mode="TwoWay"/>
+    </Selector.SelectedItem>
+    <ItemsControl.ItemTemplate>
+      <Binding Path="MainItemDataTemplate" ElementName="UserControlSelf" Mode="OneWay"/>
+    </ItemsControl.ItemTemplate>
+    <ItemsControl.ItemContainerStyle>
+      <Binding Path="MainItemContainerStyle">
+        <Binding.RelativeSource>
+          <RelativeSource Mode="FindAncestor" AncestorType="{x:Type FrameworkControls:Gallery}"/>
+        </Binding.RelativeSource>
+      </Binding>
+    </ItemsControl.ItemContainerStyle>
+    <ItemsControl.ItemsPanel>
+      <Binding Path="MainItemsPanelTemplate" ElementName="UserControlSelf"/>
+    </ItemsControl.ItemsPanel>
+  </FrameworkControls:SelectingListBox>
+</FrameworkControls:Gallery>

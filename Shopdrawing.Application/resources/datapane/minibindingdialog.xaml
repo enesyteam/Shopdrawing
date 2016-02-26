@@ -1,0 +1,146 @@
+<Border xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:designer="clr-namespace:Microsoft.Expression.DesignSurface.UserInterface.DataPane"
+        xmlns:framework="clr-namespace:Microsoft.Expression.Framework.Controls;assembly=Microsoft.Expression.Framework"
+        xmlns:fwve="clr-namespace:Microsoft.Expression.Framework.ValueEditors;assembly=Microsoft.Expression.Framework"
+        xmlns:Databinding="clr-namespace:Microsoft.Expression.Framework.Data;assembly=Microsoft.Expression.Framework"
+        xmlns:automation="clr-namespace:Microsoft.Expression.Framework.Diagnostics;assembly=Microsoft.Expression.Framework"
+        FrameworkElement.Name="DataBindingsDialog" x:Uid="DataBindingsDialog"
+        FrameworkElement.Style="{StaticResource DialogRootContainer}">
+  <FrameworkElement.Resources>
+    <designer:BindingModeToBoolConverter x:Key="BindingModeToBoolConverter" x:Uid="designer:BindingModeToBoolConverter_1"/>
+    <Databinding:AndConverter x:Key="AndConverter" x:Uid="DataBinding:AndConverter_1"/>
+    <DataTemplate x:Key="BindingFieldTemplate" x:Uid="DataTemplate_1">
+      <TextBlock x:Uid="TextBlock_26">
+        <TextBlock.Text>
+          <Binding Path="Name"/>
+        </TextBlock.Text>
+        <automation:AutomationElement.Id>
+          <Binding Path="Name"/>
+        </automation:AutomationElement.Id>
+      </TextBlock>
+    </DataTemplate>
+  </FrameworkElement.Resources>
+  <StackPanel x:Uid="StackPanel_13">
+    <Border x:Uid="Border_1" CornerRadius="4" Background="{DynamicResource ButtonDefaultBrush}"
+            BorderThickness="1" BorderBrush="{DynamicResource BackgroundBrush}">
+      <Grid x:Uid="Grid_16">
+        <Grid.RowDefinitions>
+          <RowDefinition x:Uid="RowDefinition_21" Height="*"/>
+          <RowDefinition x:Uid="RowDefinition_22" Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition x:Uid="ColumnDefinition_4" Width="*"/>
+          <ColumnDefinition x:Uid="ColumnDefinition_5" Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock FrameworkElement.HorizontalAlignment="Right" x:Uid="TextBlock_27" FrameworkElement.Margin="8,8,0,0"
+                   FrameworkElement.VerticalAlignment="Center" Text="{Binding Label}"/>
+        <fwve:ChoiceEditor x:Uid="BindingFieldSelectorComboBox" FrameworkElement.Width="200"
+                           FrameworkElement.HorizontalAlignment="Right" Grid.Column="1" FrameworkElement.Margin="4,8,8,0"
+                           ViewType="Combo" IsEditable="true" ScrollViewer.CanContentScroll="false"
+                           UseItemTemplateForSelection="false" ItemTemplate="{StaticResource BindingFieldTemplate}"
+                           Value="{Binding CurrentItem}" ItemsSource="{Binding BindingFields}"/>
+        <Expander FrameworkElement.Width="400" x:Uid="Expander_1" Grid.Row="1" Grid.ColumnSpan="2"
+                  FrameworkElement.Style="{StaticResource ExpressionAdvancedOptionsExpanderStyle}"
+                  FrameworkElement.Margin="1,8,1,1">
+          <Expander.IsExpanded>
+            <Binding Path="IsExpanded" Mode="TwoWay"/>
+          </Expander.IsExpanded>
+          <HeaderedContentControl.Header>
+            <TextBlock x:Uid="TextBlock_25">
+              <TextBlock.Text>
+                <Binding Path="ExpanderText"/>
+              </TextBlock.Text>
+            </TextBlock>
+          </HeaderedContentControl.Header>
+          <Grid x:Uid="Grid_11" FrameworkElement.Margin="3,0,3,3">
+            <Grid.RowDefinitions>
+              <RowDefinition x:Uid="RowDefinition_1" Height="Auto"/>
+              <RowDefinition x:Uid="RowDefinition_23" Height="Auto"/>
+              <RowDefinition x:Uid="RowDefinition_2" Height="Auto"/>
+              <RowDefinition x:Uid="RowDefinition_3" Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition x:Uid="ColumnDefinition_1" Width="*"/>
+              <ColumnDefinition x:Uid="ColumnDefinition_2" Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Uid="TextBlock_18" Grid.Row="0" Grid.Column="0" FrameworkElement.HorizontalAlignment="Right"
+                       FrameworkElement.VerticalAlignment="Top" FrameworkElement.Margin="4,8,0,0">Binding Direction</TextBlock>
+            <ListBox FrameworkElement.Name="BindDirectionComboBox" x:Uid="BindDirectionListBox"
+                     FrameworkElement.HorizontalAlignment="Left" Grid.Row="0" Grid.RowSpan="2" Grid.Column="1"
+                     FrameworkElement.Margin="{StaticResource DefaultLeftTopMargin}"
+                     FrameworkElement.Style="{DynamicResource ExpressionListBox}"
+                     Control.Background="{DynamicResource AdvancedExpanderBrush}">
+              <ItemsControl.ItemsSource>
+                <Binding Path="BindingModes"/>
+              </ItemsControl.ItemsSource>
+              <Selector.SelectedItem>
+                <Binding Path="CurrentBindingMode"/>
+              </Selector.SelectedItem>
+              <Control.BorderBrush>
+                <x:NullExtension/>
+              </Control.BorderBrush>
+              <ItemsControl.ItemContainerStyle>
+                <Style x:Uid="Style_40" TargetType="{x:Type ListBoxItem}">
+                  <Setter x:Uid="Setter_1" Property="Control.Template">
+                    <Setter.Value>
+                      <ControlTemplate x:Uid="ControlTemplate_1">
+                        <RadioButton x:Uid="RadioButton_1"
+                                     ToggleButton.IsChecked="{Binding IsSelected, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}">
+                          <ContentControl.Content>
+                            <Binding/>
+                          </ContentControl.Content>
+                        </RadioButton>
+                      </ControlTemplate>
+                    </Setter.Value>
+                  </Setter>
+                </Style>
+              </ItemsControl.ItemContainerStyle>
+            </ListBox>
+            <TextBlock x:Uid="TextBlock_19" Grid.Row="2" Grid.Column="0" FrameworkElement.HorizontalAlignment="Right"
+                       FrameworkElement.VerticalAlignment="Center"
+                       FrameworkElement.Margin="{StaticResource DefaultLeftTopMargin}">Update Source When</TextBlock>
+            <ComboBox FrameworkElement.Name="UpdateSourceTriggerComboBox" x:Uid="UpdateSourceTriggerComboBox"
+                      FrameworkElement.Width="200" Grid.Row="2" Grid.Column="1"
+                      FrameworkElement.Margin="{StaticResource DefaultLeftTopMargin}">
+              <ItemsControl.ItemsSource>
+                <Binding Path="UpdateSourceTriggers"/>
+              </ItemsControl.ItemsSource>
+              <Selector.SelectedItem>
+                <Binding Path="CurrentUpdateSourceTrigger"/>
+              </Selector.SelectedItem>
+              <UIElement.IsEnabled>
+                <MultiBinding x:Uid="MultiBinding_1" Mode="OneWay" Converter="{StaticResource AndConverter}">
+                  <Binding x:Uid="Binding_1" Path="IsUpdateSourceTriggerSupported"/>
+                  <Binding x:Uid="Binding_2" Path="BindingModes/" Converter="{StaticResource BindingModeToBoolConverter}"/>
+                </MultiBinding>
+              </UIElement.IsEnabled>
+            </ComboBox>
+            <TextBlock x:Uid="TextBlock_20" Grid.Row="3" Grid.Column="0" FrameworkElement.HorizontalAlignment="Right"
+                       FrameworkElement.VerticalAlignment="Center"
+                       FrameworkElement.Margin="{StaticResource DefaultLeftTopMargin}">
+              Binding Fallback Value
+            </TextBlock>
+            <TextBox FrameworkElement.Name="BindingFallbackValueTextBox" x:Uid="BindingFallbackValueTextBox"
+                     Grid.Row="3" Grid.Column="1" FrameworkElement.Margin="{StaticResource DefaultLeftTopMargin}"
+                     FrameworkElement.Width="200" UIElement.IsEnabled="{Binding IsBindingFallbackValueSupported}">
+              <TextBox.Text>
+                <Binding Path="BindingFallbackValue" UpdateSourceTrigger="PropertyChanged"/>
+              </TextBox.Text>
+            </TextBox>
+          </Grid>
+        </Expander>
+      </Grid>
+    </Border>
+    <StackPanel x:Uid="StackPanel_12" FrameworkElement.HorizontalAlignment="Right" Orientation="Horizontal"
+                FrameworkElement.Margin="{StaticResource ExtraLargeTopMargin}">
+      <Button FrameworkElement.Name="AcceptButton" x:Uid="AcceptButton"
+              FrameworkElement.Style="{DynamicResource DialogButton}"
+              FrameworkElement.HorizontalAlignment="Right">OK</Button>
+      <Button FrameworkElement.Name="CancelButton" x:Uid="CancelButton"
+              FrameworkElement.Style="{DynamicResource DialogButton}"
+              FrameworkElement.Margin="{StaticResource DefaultLeftMargin}" IsCancel="true"
+              FrameworkElement.HorizontalAlignment="Right">Cancel</Button>
+    </StackPanel>
+  </StackPanel>
+</Border>

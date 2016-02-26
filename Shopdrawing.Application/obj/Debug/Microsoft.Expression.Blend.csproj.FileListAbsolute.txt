@@ -1,0 +1,27 @@
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Microsoft.Expression.Blend\bin\Debug\Microsoft.Expression.Blend.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Microsoft.Expression.Blend\bin\Debug\Microsoft.Expression.Blend.pdb
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Microsoft.Expression.Blend\bin\Debug\Microsoft.Expression.Code.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Microsoft.Expression.Blend\bin\Debug\Microsoft.Expression.DesignModel.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Microsoft.Expression.Blend\bin\Debug\Microsoft.Expression.DesignSurface.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Microsoft.Expression.Blend\bin\Debug\Microsoft.Expression.Extensibility.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Microsoft.Expression.Blend\bin\Debug\Microsoft.Expression.Framework.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Microsoft.Expression.Blend\bin\Debug\Microsoft.Expression.Markup.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Microsoft.Expression.Blend\bin\Debug\Microsoft.Expression.Project.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Microsoft.Expression.Blend\bin\Debug\Microsoft.Windows.Design.Interaction.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Microsoft.Expression.Blend\bin\Debug\Microsoft.Windows.Design.Extensibility.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Microsoft.Expression.Blend\obj\Debug\Microsoft.Expression.Blend.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Microsoft.Expression.Blend\obj\Debug\Microsoft.Expression.Blend.pdb
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Rebuild thanh cong\Microsoft.Expression.Blend\bin\Debug\Microsoft.Expression.Blend.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Rebuild thanh cong\Microsoft.Expression.Blend\bin\Debug\Microsoft.Expression.Blend.pdb
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Rebuild thanh cong\Microsoft.Expression.Blend\bin\Debug\Microsoft.Expression.Code.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Rebuild thanh cong\Microsoft.Expression.Blend\bin\Debug\Microsoft.Expression.DesignModel.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Rebuild thanh cong\Microsoft.Expression.Blend\bin\Debug\Microsoft.Expression.DesignSurface.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Rebuild thanh cong\Microsoft.Expression.Blend\bin\Debug\Microsoft.Expression.Extensibility.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Rebuild thanh cong\Microsoft.Expression.Blend\bin\Debug\Microsoft.Expression.Framework.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Rebuild thanh cong\Microsoft.Expression.Blend\bin\Debug\Microsoft.Expression.Markup.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Rebuild thanh cong\Microsoft.Expression.Blend\bin\Debug\Microsoft.Expression.Project.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Rebuild thanh cong\Microsoft.Expression.Blend\bin\Debug\Microsoft.Windows.Design.Interaction.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Rebuild thanh cong\Microsoft.Expression.Blend\bin\Debug\Microsoft.Windows.Design.Extensibility.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Rebuild thanh cong\Microsoft.Expression.Blend\obj\Debug\Microsoft.Expression.Blend.csprojResolveAssemblyReference.cache
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Rebuild thanh cong\Microsoft.Expression.Blend\obj\Debug\Microsoft.Expression.Blend.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Rebuild thanh cong\Microsoft.Expression.Blend\obj\Debug\Microsoft.Expression.Blend.pdb

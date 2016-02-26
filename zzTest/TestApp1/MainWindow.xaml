@@ -1,0 +1,351 @@
+﻿<Window x:Class="TestApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:FrameworkControls="clr-namespace:Microsoft.Expression.Framework.Controls;assembly=Shopdrawing.Framework"
+        xmlns:Data="clr-namespace:Microsoft.Expression.Framework.Data;assembly=Shopdrawing.Framework"
+        xmlns:ShellControls="clr-namespace:Microsoft.VisualStudio.PlatformUI.Shell.Controls;assembly=Shopdrawing.Framework"
+        xmlns:ValueEditors="clr-namespace:Microsoft.Expression.Framework.ValueEditors;assembly=Shopdrawing.Framework" 
+    xmlns:ColorEditor="clr-namespace:Microsoft.Expression.Framework.ValueEditors.ColorEditor;assembly=Shopdrawing.Framework" 
+    xmlns:UserInterface="clr-namespace:Microsoft.Expression.Framework.UserInterface;assembly=Shopdrawing.Framework" 
+    xmlns:PlatformUI="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Shopdrawing.Framework"
+        xmlns:l="clr-namespace:ChristianMoser.WpfInspector.UserInterface;assembly=Inspector"
+        xmlns:pro="clr-namespace:ChristianMoser.WpfInspector.UserInterface.Controls;assembly=Inspector"
+        xmlns:avalonDock="http://schemas.xceed.com/wpf/xaml/avalondock"
+        xmlns:ExpressionExtension="clr-namespace:Microsoft.Expression.Framework.Workspaces.Extension;assembly=Shopdrawing.Framework"
+         xmlns:FrameworkDatabinding="clr-namespace:Microsoft.Expression.Framework.Data;assembly=Shopdrawing.Framework"
+        xmlns:System="clr-namespace:System;assembly=mscorlib"
+        xmlns:c="clr-namespace:Shopdrawing.Framework.Shopdrawing.Controls;assembly=Shopdrawing.Framework"
+        Title="BridgeFS" Height="350" Width="525" WindowState="Maximized">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Shopdrawing.Framework;component/Resources/Controls/Dictionary1.xaml" />
+                <ResourceDictionary Source="/Inspector;component/UserInterface/VisualResources/Inspector.xaml" />
+                <ResourceDictionary Source="/Shopdrawing.Themes;Component/Default/Generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <!--<Grid x:Name="mainGrid">
+        <pro:PropertyGrid x:Name="PropertyGrid"/>
+        <ToggleButton x:Name="ShowHideSnapGridButton"
+                         Margin="1,0,0,0"
+                         Height="17"
+                         VerticalAlignment="Center"
+                         Width="22"
+                         FrameworkControls:Icon.DeselectedImage="/Test.Resources;Component/Icons/adorners/adorner_auto_off_12x12.png"
+                         FrameworkControls:Icon.SelectedImage="/Test.Resources;Component/Icons/adorners/adorner_auto_on_12x12.png"
+                         BorderThickness="1,1,0,1"
+                         IsChecked="{Binding SceneScrollViewer.ShowGrid, Mode=TwoWay}">
+            <ToggleButton.Style>
+                <Style TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource ModifiedIconToggleButtonStyle}">
+                    <Style.Triggers>
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter Property="ToolTip"
+                    			Localization.Attributes="Value (Readable Modifiable)"
+                    			Value="Show snap grid"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="ToolTip"
+                    			Localization.Attributes="Value (Readable Modifiable)"
+                    			Value="Hide snap grid"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </ToggleButton.Style>
+        </ToggleButton>
+        <Button Content="Button" Click="Button_Click_1" HorizontalAlignment="Left" Margin="316,147,0,0" VerticalAlignment="Top" Width="75"/>
+    </Grid>-->
+    <Grid x:Name="layoutRoot">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!--Menu-->
+            <RowDefinition Height="Auto"/>
+            <!--Toolbar-->
+            <RowDefinition Height="*"/>
+            <!--Content-->
+            <RowDefinition Height="Auto"/>
+            <!--Statusbar-->
+            <RowDefinition Height="Auto"/>
+            <!--Statusbar-->
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0" Background="{DynamicResource MenuBackgroundBrush}">
+            <MenuItem Header="_File">
+                <MenuItem Header="New">
+                    <MenuItem Header="Project" Click="OnNewProjectClick"/>
+                    <Separator/>
+                    <MenuItem Header="_Bridge Project" Click="OnNewBridgeProjectClick"/>
+                    <MenuItem Header="Drawing" Click="OnNewDrawingClick"/>
+                    <MenuItem Header="_New Item" Click="OnNewItemClick"/>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Edit">
+                <MenuItem Command="Undo" />
+                <MenuItem Command="Redo" />
+                <Separator/>
+                <MenuItem Command="Cut" />
+                <MenuItem Command="Copy" />
+                <MenuItem Command="Paste" />
+            </MenuItem>
+
+            <MenuItem Header="View">
+                <!--<MenuItem Header="WinForms Window" Click="OnShowWinformsWindow"/>-->
+                <!--<MenuItem Header="Tool Window1" Click="OnShowToolWindow1"/>-->
+                <MenuItem Header="Project Explorer" Click="OnShowProjectExplorer"/>
+                <MenuItem Header="Properties" Click="OnShowPropertyGrid"/>
+            </MenuItem>
+            <MenuItem Header="Draw">
+                <!--<MenuItem Header="WinForms Window" Click="OnShowWinformsWindow"/>-->
+                <!--<MenuItem Header="Tool Window1" Click="OnShowToolWindow1"/>-->
+                <MenuItem Header="Culvert">
+                    <MenuItem Header="Add Culvert" Click="OnAddCulvertClick"/>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Layout">
+                <MenuItem Header="Save">
+                    <MenuItem Header="Layout_1" Click="OnSaveLayout"/>
+                    <MenuItem Header="Layout_2" Click="OnSaveLayout"/>
+                    <MenuItem Header="Layout_3" Click="OnSaveLayout"/>
+                    <MenuItem Header="Layout_4" Click="OnSaveLayout"/>
+                </MenuItem>
+                <MenuItem Header="Load">
+                    <MenuItem Header="Layout_1" Click="OnLoadLayout"/>
+                    <MenuItem Header="Layout_2" Click="OnLoadLayout"/>
+                    <MenuItem Header="Layout_3" Click="OnLoadLayout"/>
+                    <MenuItem Header="Layout_4" Click="OnLoadLayout"/>
+                </MenuItem>
+                <MenuItem Header="Dump To Console" Click="OnDumpToConsole"/>
+                <MenuItem Header="Unload Manager" Click="OnUnloadManager"/>
+                <MenuItem Header="Load Manager" Click="OnLoadManager"/>
+            </MenuItem>
+            <MenuItem Header="_Test">
+                <MenuItem Header="Framework Controls Tests">
+                    <MenuItem Header="Notification Bar" Click="OnNotificationBar"/>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Help">
+                <MenuItem Header="_About BridgeFS" Click="OnAboutClick">
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+
+        <!--<StackPanel Grid.Row="1" Orientation="Horizontal">
+            <c:XXX x:Name="NotificationBar" Width="150" />
+            <FrameworkControls:ClearableTextBox x:Name="SearchTextBox"  Width="150"
+                                    FrameworkElement.Height="20" FrameworkElement.Margin="0"
+                                    FrameworkElement.VerticalAlignment="Center" FrameworkElement.HorizontalAlignment="Stretch"
+                                    OverlayText="Search" Localization.Attributes="OverlayText(Readable Modifiable Text)"
+                                    Control.FontSize="{DynamicResource {x:Static SystemFonts.MessageFontSizeKey}}"
+                                    ClearTextFieldCommand="{Binding ClearFilterStringCommand}">
+                <FrameworkControls:ClearableTextBox.Text>
+                    <Binding Path="FilterString" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"/>
+                </FrameworkControls:ClearableTextBox.Text>
+            </FrameworkControls:ClearableTextBox>
+        </StackPanel>-->
+        
+        <!--<DesignView:NotificationBar Height="20" Grid.Row="1" />-->
+        <!--<StackPanel FrameworkElement.Name="ZoomControls" x:Uid="ZoomControls" Grid.Row="1"
+                FrameworkElement.VerticalAlignment="Top" Orientation="Horizontal"
+                UIElement.Visibility="{Binding MessageContent, Mode=OneWay, Converter={StaticResource NullToVisibilityCollapsedConverter}, ConverterParameter=True}">
+            <FrameworkControls:NumberComboBox FrameworkElement.Name="ZoomComboBox" FrameworkElement.Width="75"
+                                        ItemsControl.IsTextSearchEnabled="false" FrameworkElement.ToolTip="Zoom"
+                                        Selector.SelectedValuePath="Content" NumberFormat="0.##'%'" IsSliderLogarithmic="true"
+                                        x:Uid="ZoomComboBox" Control.Background="{DynamicResource BackgroundBrush}"
+                                        Control.BorderBrush="{DynamicResource RecessedBrush}" FrameworkElement.MinHeight="0"
+                                        FrameworkElement.Height="17">
+                <Selector.SelectedValue>
+                    <Binding Path="SceneScrollViewer.Artboard.Zoom" Mode="TwoWay"
+                   Converter="{StaticResource PercentageZoomConverter}"/>
+                </Selector.SelectedValue>
+                <FrameworkControls:NumberComboBox.FinishEditingCommand>
+                    <Binding Path="SceneScrollViewer.FinishEditingZoomCommand"/>
+                </FrameworkControls:NumberComboBox.FinishEditingCommand>
+                <FrameworkControls:NumberComboBox.Value>
+                    <Binding Path="SceneScrollViewer.Artboard.Zoom" Mode="TwoWay"
+                   Converter="{StaticResource PercentageZoomConverter}"/>
+                </FrameworkControls:NumberComboBox.Value>
+                <FrameworkControls:NumberComboBox.Minimum>
+                    <Binding Path="SceneScrollViewer.Artboard.ZoomPresetCollection.Minimum" Mode="OneTime"
+                   Converter="{StaticResource PercentageZoomConverter}"/>
+                </FrameworkControls:NumberComboBox.Minimum>
+                <FrameworkControls:NumberComboBox.Maximum>
+                    <Binding Path="SceneScrollViewer.Artboard.ZoomPresetCollection.Maximum" Mode="OneTime"
+                   Converter="{StaticResource PercentageZoomConverter}"/>
+                </FrameworkControls:NumberComboBox.Maximum>
+                <FrameworkElement.Resources>
+                    
+                    <DataTemplate x:Uid="DataTemplate_4" DataType="{x:Type System:Double}">
+                        <TextBlock x:Uid="TextBlock_6">
+                            <TextBlock.Text>
+                                <Binding Mode="OneTime" Converter="{StaticResource PercentageFormatConverter}"/>
+                            </TextBlock.Text>
+                        </TextBlock>
+                    </DataTemplate>
+                </FrameworkElement.Resources>
+                <ComboBoxItem x:Uid="ComboBoxItem7">
+                    <ContentControl.Content>
+                        <Binding Path="SceneScrollViewer.Artboard.ZoomComboCollection[9]" Mode="OneTime"
+                     Converter="{StaticResource PercentageZoomConverter}"/>
+                    </ContentControl.Content>
+                </ComboBoxItem>
+                <ComboBoxItem x:Uid="ComboBoxItem9">
+                    <ContentControl.Content>
+                        <Binding Path="SceneScrollViewer.Artboard.ZoomComboCollection[8]" Mode="OneTime"
+                     Converter="{StaticResource PercentageZoomConverter}"/>
+                    </ContentControl.Content>
+                </ComboBoxItem>
+                <ComboBoxItem x:Uid="ComboBoxItem11">
+                    <ContentControl.Content>
+                        <Binding Path="SceneScrollViewer.Artboard.ZoomComboCollection[7]" Mode="OneTime"
+                     Converter="{StaticResource PercentageZoomConverter}"/>
+                    </ContentControl.Content>
+                </ComboBoxItem>
+                <ComboBoxItem x:Uid="ComboBoxItem12">
+                    <ContentControl.Content>
+                        <Binding Path="SceneScrollViewer.Artboard.ZoomComboCollection[6]" Mode="OneTime"
+                     Converter="{StaticResource PercentageZoomConverter}"/>
+                    </ContentControl.Content>
+                </ComboBoxItem>
+                <ComboBoxItem x:Uid="ComboBoxItem13">
+                    <ContentControl.Content>
+                        <Binding Path="SceneScrollViewer.Artboard.ZoomComboCollection[5]" Mode="OneTime"
+                     Converter="{StaticResource PercentageZoomConverter}"/>
+                    </ContentControl.Content>
+                </ComboBoxItem>
+                <ComboBoxItem x:Uid="ComboBoxItem14">
+                    <ContentControl.Content>
+                        <Binding Path="SceneScrollViewer.Artboard.ZoomComboCollection[4]" Mode="OneTime"
+                     Converter="{StaticResource PercentageZoomConverter}"/>
+                    </ContentControl.Content>
+                </ComboBoxItem>
+                <ComboBoxItem x:Uid="ComboBoxItem15">
+                    <ContentControl.Content>
+                        <Binding Path="SceneScrollViewer.Artboard.ZoomComboCollection[3]" Mode="OneTime"
+                     Converter="{StaticResource PercentageZoomConverter}"/>
+                    </ContentControl.Content>
+                </ComboBoxItem>
+                <ComboBoxItem x:Uid="ComboBoxItem16">
+                    <ContentControl.Content>
+                        <Binding Path="SceneScrollViewer.Artboard.ZoomComboCollection[2]" Mode="OneTime"
+                     Converter="{StaticResource PercentageZoomConverter}"/>
+                    </ContentControl.Content>
+                </ComboBoxItem>
+                <ComboBoxItem x:Uid="ComboBoxItem17">
+                    <ContentControl.Content>
+                        <Binding Path="SceneScrollViewer.Artboard.ZoomComboCollection[1]" Mode="OneTime"
+                     Converter="{StaticResource PercentageZoomConverter}"/>
+                    </ContentControl.Content>
+                </ComboBoxItem>
+                <ComboBoxItem x:Uid="ComboBoxItem19">
+                    <ContentControl.Content>
+                        <Binding Path="SceneScrollViewer.Artboard.ZoomComboCollection[0]" Mode="OneTime"
+                     Converter="{StaticResource PercentageZoomConverter}"/>
+                    </ContentControl.Content>
+                </ComboBoxItem>
+                <ComboBoxItem UIElement.IsEnabled="false" FrameworkElement.MinHeight="0" Control.Padding="0"
+                      Control.HorizontalContentAlignment="Stretch" x:Uid="ComboBoxItem24">
+                    <Separator x:Uid="Separator1" FrameworkElement.Margin="1"/>
+                </ComboBoxItem>
+                <FrameworkControls:CommandComboBoxItem FrameworkElement.Name="ZoomFitToScreenItem" ContentControl.Content="Fit selection"
+                                               x:Uid="ZoomFitToScreenItem">
+                    <FrameworkControls:CommandComboBoxItem.Command>
+                        <Binding Path="SceneScrollViewer.ZoomToFitCommand"/>
+                    </FrameworkControls:CommandComboBoxItem.Command>
+                </FrameworkControls:CommandComboBoxItem>
+            </FrameworkControls:NumberComboBox>
+        </StackPanel>-->
+
+        <!--<FrameworkControls:ClearableTextBox x:Name="SearchTextBox" x:Uid="SearchBox" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+                                    FrameworkElement.Height="20" FrameworkElement.Margin="0"
+                                    FrameworkElement.VerticalAlignment="Center" FrameworkElement.HorizontalAlignment="Stretch"
+                                    OverlayText="Search" Localization.Attributes="OverlayText(Readable Modifiable Text)"
+                                    Control.FontSize="{DynamicResource {x:Static SystemFonts.MessageFontSizeKey}}"
+                                    ClearTextFieldCommand="{Binding ClearFilterStringCommand}">
+            <FrameworkControls:ClearableTextBox.Text>
+                <Binding Path="FilterString" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"/>
+            </FrameworkControls:ClearableTextBox.Text>
+        </FrameworkControls:ClearableTextBox>-->
+        <!--<controls:ShopdrawingToolbar x:Name="MainToolbar" Grid.Row="1" Drawing="{Binding DrawingHost.CurrentDrawing, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+            <TextBlock Text="xxx"/>
+            <Button Content="xxxxx"/>
+        </controls:ShopdrawingToolbar>-->
+        <!--<controls:SdrToolbar x:Name="MainToolbar" HorizontalAlignment="Stretch" Grid.Row="1"/>-->
+        <avalonDock:DockingManager Grid.Row="2" x:Name="dockManager" AllowMixedOrientation="True" DocumentClosing="dockManager_DocumentClosing">
+            <avalonDock:DockingManager.Theme>
+                <avalonDock:MetroTheme/>
+            </avalonDock:DockingManager.Theme>
+            <avalonDock:DockingManager.DocumentHeaderTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{Binding IconSource}" Margin="0,0,0,0"/>
+                        <TextBlock Text="{Binding Title}" TextTrimming="CharacterEllipsis"/>
+                    </StackPanel>
+                </DataTemplate>
+            </avalonDock:DockingManager.DocumentHeaderTemplate>
+            <avalonDock:LayoutRoot PropertyChanged="OnLayoutRootPropertyChanged">
+                <avalonDock:LayoutPanel Orientation="Horizontal">
+                    <avalonDock:LayoutAnchorablePaneGroup  DockWidth="450" Orientation="Horizontal">
+                        <avalonDock:LayoutAnchorablePane>
+
+                            <!--<avalonDock:LayoutAnchorable ContentId="toolWindow1" Title="Tool Window 1" Hiding="OnToolWindow1Hiding">
+                                <StackPanel>
+                                    <TextBox Text="{Binding TestTimer, Mode=OneWay, StringFormat='Tool Window 1 Attached to Timer ->\{0\}'}"/>
+                                </StackPanel>
+                            </avalonDock:LayoutAnchorable>
+                            <avalonDock:LayoutAnchorable ContentId="toolWindow2" Title="Tool Window 2">
+                                <TextBlock Text="{Binding FocusedElement}"/>
+                            </avalonDock:LayoutAnchorable>-->
+                        </avalonDock:LayoutAnchorablePane>
+                    </avalonDock:LayoutAnchorablePaneGroup>
+                    <avalonDock:LayoutDocumentPaneGroup>
+                        <avalonDock:LayoutDocumentPane>
+                            <!--<avalonDock:LayoutDocument ContentId="document1" Title="Document 1" > 
+                                <StackPanel>
+                                    <TextBox Text="Document 1 Content"/>
+                                    <Button Content="Click to add 2 documents" Click="AddTwoDocuments_click"/>
+                                </StackPanel>
+                            </avalonDock:LayoutDocument>
+                            <avalonDock:LayoutDocument ContentId="document2" Title="Document 2">
+                                <TextBox Text="{Binding TestTimer, Mode=OneWay, StringFormat='Document 2 Attached to Timer ->\{0\}'}"/>
+                            </avalonDock:LayoutDocument>-->
+                        </avalonDock:LayoutDocumentPane>
+                    </avalonDock:LayoutDocumentPaneGroup>
+                    <avalonDock:LayoutAnchorablePaneGroup  DockWidth="350" Orientation="Vertical">
+                        <avalonDock:LayoutAnchorablePane>
+
+                            <!--<avalonDock:LayoutAnchorable ContentId="toolWindow1" Title="Tool Window 1" Hiding="OnToolWindow1Hiding">
+                                <StackPanel>
+                                    <TextBox Text="{Binding TestTimer, Mode=OneWay, StringFormat='Tool Window 1 Attached to Timer ->\{0\}'}"/>
+                                </StackPanel>
+                            </avalonDock:LayoutAnchorable>
+                            <avalonDock:LayoutAnchorable ContentId="toolWindow2" Title="Tool Window 2">
+                                <TextBlock Text="{Binding FocusedElement}"/>
+                            </avalonDock:LayoutAnchorable>-->
+                        </avalonDock:LayoutAnchorablePane>
+                    </avalonDock:LayoutAnchorablePaneGroup>
+                </avalonDock:LayoutPanel>
+
+                <avalonDock:LayoutRoot.LeftSide>
+                    <avalonDock:LayoutAnchorSide>
+                        <avalonDock:LayoutAnchorGroup>
+                            
+                            <!--<avalonDock:LayoutAnchorable Title="AutoHide1 Content" ContentId="AutoHide1Content" >
+                                <TextBox Text="{Binding TestTimer, Mode=OneWay, StringFormat='AutoHide Attached to Timer ->\{0\}'}"/>
+                            </avalonDock:LayoutAnchorable>
+                            <avalonDock:LayoutAnchorable Title="AutoHide2 Content" ContentId="AutoHide2Content">
+                                <StackPanel Orientation="Vertical">
+                                    <TextBox/>
+                                    <TextBox/>
+                                </StackPanel>
+                            </avalonDock:LayoutAnchorable>-->
+                        </avalonDock:LayoutAnchorGroup>
+                    </avalonDock:LayoutAnchorSide>
+                </avalonDock:LayoutRoot.LeftSide>
+            </avalonDock:LayoutRoot>
+        </avalonDock:DockingManager>
+        <StatusBar Height="18" Grid.Row="3">
+           
+        </StatusBar>
+    </Grid>
+</Window>

@@ -1,0 +1,7 @@
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Design.Extensibility\bin\Debug\Shopdrawing.Design.Extensibility.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Design.Extensibility\bin\Debug\Shopdrawing.Design.Extensibility.pdb
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Design.Extensibility\obj\Debug\Shopdrawing.Design.Extensibility.csprojResolveAssemblyReference.cache
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Design.Extensibility\obj\Debug\MS.Internal.Properties.Resources.resources
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Design.Extensibility\obj\Debug\Shopdrawing.Design.Extensibility.csproj.GenerateResource.Cache
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Design.Extensibility\obj\Debug\Shopdrawing.Design.Extensibility.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Design.Extensibility\obj\Debug\Shopdrawing.Design.Extensibility.pdb

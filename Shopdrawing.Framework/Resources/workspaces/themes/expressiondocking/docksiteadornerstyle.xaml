@@ -1,0 +1,77 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vs="clr-namespace:Microsoft.VisualStudio.PlatformUI.Shell.Controls"
+                    xmlns:Extension="clr-namespace:Microsoft.Expression.Framework.Workspaces.Extension"
+                    x:Uid="ResourceDictionary_1">
+  <Style x:Uid="Style_1" TargetType="{x:Type vs:DockSiteAdorner}">
+    <Setter x:Uid="Setter_2" Property="FrameworkElement.MinWidth" Value="9"/>
+    <Setter x:Uid="Setter_6" Property="FrameworkElement.MinHeight" Value="9"/>
+    <Setter x:Uid="Setter_20" Property="Control.Background" Value="Transparent"/>
+    <Setter x:Uid="Setter_3" Property="vs:DockSiteAdorner.IsHighlighted">
+      <Setter.Value>
+        <Binding Path="(vs:FloatingWindow.IsFloatingWindowDragWithin)" RelativeSource="{RelativeSource Self}"/>
+      </Setter.Value>
+    </Setter>
+    <Setter x:Uid="Setter_4" Property="Control.Template">
+      <Setter.Value>
+        <ControlTemplate x:Uid="ControlTemplate_1" TargetType="{x:Type vs:DockSiteAdorner}">
+          <Grid x:Uid="Grid_1">
+            <Border x:Name="InsertionFill" x:Uid="InsertionFill" Background="{TemplateBinding Control.Background}"/>
+            <Border x:Name="InsertionBorder" x:Uid="InsertionBorder"
+                    BorderBrush="{DynamicResource DockAdornerInsertionBrush}"/>
+          </Grid>
+          <ControlTemplate.Triggers>
+            <Trigger x:Uid="Trigger_1" Property="vs:DockAdorner.DockDirection" Value="Left">
+              <Setter x:Uid="Setter_10" Property="FrameworkElement.Height">
+                <Setter.Value>
+                  <Binding Path="AdornedElement.ActualHeight" RelativeSource="{RelativeSource Self}"/>
+                </Setter.Value>
+              </Setter>
+              <Setter x:Uid="Setter_16" TargetName="InsertionBorder" Property="FrameworkElement.Height">
+                <Setter.Value>
+                  <Binding Path="AdornedElement.ActualHeight" RelativeSource="{RelativeSource Self}"/>
+                </Setter.Value>
+              </Setter>
+              <Setter x:Uid="Setter_17" TargetName="InsertionBorder" Property="FrameworkElement.Margin" Value="0,-25,0,0"/>
+              <Setter x:Uid="Setter_11" TargetName="InsertionBorder" Property="Border.BorderThickness" Value="2,0,0,0"/>
+            </Trigger>
+            <Trigger x:Uid="Trigger_2" Property="vs:DockAdorner.DockDirection" Value="Right">
+              <Setter x:Uid="Setter_12" Property="FrameworkElement.Height">
+                <Setter.Value>
+                  <Binding Path="AdornedElement.ActualHeight" RelativeSource="{RelativeSource Self}"/>
+                </Setter.Value>
+              </Setter>
+              <Setter x:Uid="Setter_18" TargetName="InsertionBorder" Property="FrameworkElement.Height">
+                <Setter.Value>
+                  <Binding Path="AdornedElement.ActualHeight" RelativeSource="{RelativeSource Self}"/>
+                </Setter.Value>
+              </Setter>
+              <Setter x:Uid="Setter_19" TargetName="InsertionBorder" Property="FrameworkElement.Margin" Value="0,-25,0,0"/>
+              <Setter x:Uid="Setter_7" TargetName="InsertionBorder" Property="Border.BorderThickness" Value="0,0,2,0"/>
+            </Trigger>
+            <Trigger x:Uid="Trigger_3" Property="vs:DockAdorner.DockDirection" Value="Top">
+              <Setter x:Uid="Setter_13" Property="FrameworkElement.Width">
+                <Setter.Value>
+                  <Binding Path="AdornedElement.ActualWidth" RelativeSource="{RelativeSource Self}"/>
+                </Setter.Value>
+              </Setter>
+              <Setter x:Uid="Setter_8" TargetName="InsertionBorder" Property="Border.BorderThickness" Value="0,2,0,0"/>
+              <Setter x:Uid="Setter_21" Property="FrameworkElement.MinHeight" Value="6"/>
+            </Trigger>
+            <Trigger x:Uid="Trigger_4" Property="vs:DockAdorner.DockDirection" Value="Bottom">
+              <Setter x:Uid="Setter_14" Property="FrameworkElement.Width">
+                <Setter.Value>
+                  <Binding Path="AdornedElement.ActualWidth" RelativeSource="{RelativeSource Self}"/>
+                </Setter.Value>
+              </Setter>
+              <Setter x:Uid="Setter_9" TargetName="InsertionBorder" Property="Border.BorderThickness" Value="0,0,0,2"/>
+            </Trigger>
+            <Trigger x:Uid="Trigger_5" Property="vs:DockSiteAdorner.IsHighlighted" Value="false">
+              <Setter x:Uid="Setter_15" TargetName="InsertionBorder" Property="Border.BorderThickness" Value="0"/>
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

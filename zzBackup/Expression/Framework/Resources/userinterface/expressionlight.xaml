@@ -1,0 +1,11 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+                    PresentationOptions:Freeze="true" x:Uid="ResourceDictionary">
+  <ResourceDictionary.MergedDictionaries>
+    <ResourceDictionary x:Uid="ResourceDictionary_1"
+                        Source="pack://application:,,,/Microsoft.Expression.Framework;Component/Resources/UserInterface/StylesCore.xaml"/>
+    <ResourceDictionary x:Uid="ResourceDictionary_2"
+                        Source="pack://application:,,,/Microsoft.Expression.Framework;Component/Resources/UserInterface/ExpressionLightTheme.xaml"/>
+  </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

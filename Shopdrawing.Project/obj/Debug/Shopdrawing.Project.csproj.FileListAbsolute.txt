@@ -1,0 +1,15 @@
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Project\obj\Debug\Shopdrawing.Project.csprojResolveAssemblyReference.cache
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Project\bin\Debug\Shopdrawing.Project.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Project\bin\Debug\Shopdrawing.Project.pdb
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Project\obj\Debug\Shopdrawing.Project.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Project\obj\Debug\Shopdrawing.Project.pdb
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Project\bin\Debug\Shopdrawing.Design.Extensibility.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Project\bin\Debug\Shopdrawing.Extensibility.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Project\bin\Debug\Shopdrawing.Extensibility.Project.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Project\bin\Debug\Shopdrawing.Framework.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Project\bin\Debug\Microsoft.Expression.Extensibility.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Project\bin\Debug\Microsoft.Expression.Licensing.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Project\bin\Debug\Shopdrawing.Design.Extensibility.pdb
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Project\bin\Debug\Shopdrawing.Extensibility.Project.pdb
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Project\bin\Debug\Shopdrawing.Extensibility.pdb
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Project\bin\Debug\Shopdrawing.Framework.pdb

@@ -1,0 +1,19 @@
+F:\Videos Hai\ribbon\LiveGeometry\Utilities\UndoFramework\bin\Debug\GuiLabs.Undo.dll
+F:\Videos Hai\ribbon\LiveGeometry\Utilities\UndoFramework\bin\Debug\GuiLabs.Undo.pdb
+F:\Videos Hai\ribbon\LiveGeometry\Utilities\UndoFramework\obj\Debug\GuiLabs.Undo.dll
+F:\Videos Hai\ribbon\LiveGeometry\Utilities\UndoFramework\obj\Debug\GuiLabs.Undo.pdb
+F:\Videos Hai\ribbon\LiveGeometry\UndoFramework\bin\Debug\GuiLabs.Undo.dll
+F:\Videos Hai\ribbon\LiveGeometry\UndoFramework\bin\Debug\GuiLabs.Undo.pdb
+F:\Videos Hai\ribbon\LiveGeometry\UndoFramework\obj\Debug\GuiLabs.Undo.dll
+F:\Videos Hai\ribbon\LiveGeometry\UndoFramework\obj\Debug\GuiLabs.Undo.pdb
+F:\Videos Hai\ribbon\LiveGeometry\UndoFramework\obj\Debug\UndoFramework.csprojResolveAssemblyReference.cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\UndoFramework\bin\Debug\GuiLabs.Undo.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\UndoFramework\bin\Debug\GuiLabs.Undo.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\UndoFramework\obj\Debug\GuiLabs.Undo.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\UndoFramework\obj\Debug\GuiLabs.Undo.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\UndoFramework\obj\Debug\UndoFramework.csprojResolveAssemblyReference.cache
+E:\Projects\C#\ShopdrawingVer2\Common\UndoFramework\bin\Debug\GuiLabs.Undo.dll
+E:\Projects\C#\ShopdrawingVer2\Common\UndoFramework\bin\Debug\GuiLabs.Undo.pdb
+E:\Projects\C#\ShopdrawingVer2\Common\UndoFramework\obj\Debug\UndoFramework.csprojResolveAssemblyReference.cache
+E:\Projects\C#\ShopdrawingVer2\Common\UndoFramework\obj\Debug\GuiLabs.Undo.dll
+E:\Projects\C#\ShopdrawingVer2\Common\UndoFramework\obj\Debug\GuiLabs.Undo.pdb

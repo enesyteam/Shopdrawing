@@ -1,0 +1,4 @@
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Markup-JetBrain\Microsoft.Expression.Markup\bin\Debug\Microsoft.Expression.Markup.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Markup-JetBrain\Microsoft.Expression.Markup\bin\Debug\Microsoft.Expression.Markup.pdb
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Markup-JetBrain\Microsoft.Expression.Markup\obj\Debug\Microsoft.Expression.Markup.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Markup-JetBrain\Microsoft.Expression.Markup\obj\Debug\Microsoft.Expression.Markup.pdb

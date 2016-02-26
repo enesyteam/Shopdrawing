@@ -1,0 +1,425 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    x:Uid="ResourceDictionary_1">
+  <DrawingImage x:Key="PlaybackHeadImage" x:Uid="DrawingImage_10">
+    <DrawingImage.Drawing>
+      <DrawingGroup x:Uid="DrawingGroup_90">
+        <DrawingGroup.Children>
+          <DrawingCollection x:Uid="DrawingCollection_90">
+            <DrawingGroup x:Uid="DrawingGroup_91">
+              <DrawingGroup.Children>
+                <DrawingCollection x:Uid="DrawingCollection_91">
+                  <GeometryDrawing x:Uid="GeometryDrawing_54" Brush="Transparent">
+                    <GeometryDrawing.Pen>
+                      <x:NullExtension/>
+                    </GeometryDrawing.Pen>
+                    <GeometryDrawing.Geometry>
+                      <RectangleGeometry x:Uid="RectangleGeometry_42" Rect="0,0,12,18"/>
+                    </GeometryDrawing.Geometry>
+                  </GeometryDrawing>
+                </DrawingCollection>
+              </DrawingGroup.Children>
+            </DrawingGroup>
+            <DrawingGroup x:Uid="DrawingGroup_93">
+              <DrawingGroup.Children>
+                <DrawingCollection x:Uid="DrawingCollection_93">
+                  <DrawingGroup x:Uid="DrawingGroup_94">
+                    <DrawingGroup.Children>
+                      <DrawingCollection x:Uid="DrawingCollection_94">
+                        <GeometryDrawing x:Uid="GeometryDrawing_56" Brush="{DynamicResource DatabindingBrush}">
+                          <GeometryDrawing.Pen>
+                            <Pen x:Uid="Pen_36" Brush="#00000000" Thickness="0" StartLineCap="Flat" EndLineCap="Flat" DashCap="Flat"
+                                 LineJoin="Miter" MiterLimit="1">
+                              <Pen.DashStyle>
+                                <DashStyle x:Uid="DashStyle_32" Offset="0"/>
+                              </Pen.DashStyle>
+                            </Pen>
+                          </GeometryDrawing.Pen>
+                          <GeometryDrawing.Geometry>
+                            <PathGeometry x:Uid="PathGeometry_12">
+                              <PathGeometry.Figures>
+                                <PathFigureCollection x:Uid="PathFigureCollection_12">
+                                  <PathFigure x:Uid="PathFigure_12" StartPoint="0,0" IsClosed="true" IsFilled="true">
+                                    <PathFigure.Segments>
+                                      <PathSegmentCollection x:Uid="PathSegmentCollection_12">
+                                        <LineSegment x:Uid="LineSegment_27" Point="5.86289874435284,3.98537748108691" PathSegment.IsStroked="true"/>
+                                        <LineSegment x:Uid="LineSegment_28" Point="12.0110299351489,0.000671033809559021" PathSegment.IsStroked="true"/>
+                                      </PathSegmentCollection>
+                                    </PathFigure.Segments>
+                                  </PathFigure>
+                                </PathFigureCollection>
+                              </PathGeometry.Figures>
+                            </PathGeometry>
+                          </GeometryDrawing.Geometry>
+                        </GeometryDrawing>
+                      </DrawingCollection>
+                    </DrawingGroup.Children>
+                  </DrawingGroup>
+                </DrawingCollection>
+              </DrawingGroup.Children>
+              <DrawingGroup.Transform>
+                <MatrixTransform x:Uid="MatrixTransform_1" Matrix="1,0,0,1,0,14"/>
+              </DrawingGroup.Transform>
+            </DrawingGroup>
+          </DrawingCollection>
+        </DrawingGroup.Children>
+      </DrawingGroup>
+    </DrawingImage.Drawing>
+  </DrawingImage>
+  <DrawingImage x:Key="RewindIcon" x:Uid="DrawingImage_13">
+    <DrawingImage.Drawing>
+      <DrawingGroup x:Uid="DrawingGroup_104">
+        <DrawingGroup.Children>
+          <DrawingCollection x:Uid="DrawingCollection_104">
+            <GeometryDrawing x:Uid="GeometryDrawing_100" Brush="Transparent">
+              <GeometryDrawing.Pen>
+                <x:NullExtension/>
+              </GeometryDrawing.Pen>
+              <GeometryDrawing.Geometry>
+                <RectangleGeometry x:Uid="RectangleGeometry_57" Rect="0,0,16,16"/>
+              </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+            <DrawingGroup x:Uid="DrawingGroup_105">
+              <DrawingGroup.Children>
+                <DrawingCollection x:Uid="DrawingCollection_105">
+                  <GeometryDrawing x:Uid="GeometryDrawing_64" Brush="#FFFF0000">
+                    <GeometryDrawing.Geometry>
+                      <PathGeometry x:Uid="PathGeometry_16">
+                        <PathGeometry.Figures>
+                          <PathFigureCollection x:Uid="PathFigureCollection_16">
+                            <PathFigure x:Uid="PathFigure_16" StartPoint="0,0" IsClosed="true">
+                              <PolyLineSegment x:Uid="PolyLineSegment_1" Points="1,0 1,8 0,8"/>
+                            </PathFigure>
+                          </PathFigureCollection>
+                        </PathGeometry.Figures>
+                      </PathGeometry>
+                    </GeometryDrawing.Geometry>
+                  </GeometryDrawing>
+                </DrawingCollection>
+              </DrawingGroup.Children>
+              <DrawingGroup.Transform>
+                <MatrixTransform x:Uid="MatrixTransform_13" Matrix="1,0,0,1,4,4"/>
+              </DrawingGroup.Transform>
+            </DrawingGroup>
+            <DrawingGroup x:Uid="DrawingGroup_106">
+              <DrawingGroup.Children>
+                <DrawingCollection x:Uid="DrawingCollection_106">
+                  <GeometryDrawing x:Uid="GeometryDrawing_65" Brush="#FFFF0000">
+                    <GeometryDrawing.Geometry>
+                      <PathGeometry x:Uid="PathGeometry_17">
+                        <PathGeometry.Figures>
+                          <PathFigureCollection x:Uid="PathFigureCollection_17">
+                            <PathFigure x:Uid="PathFigure_17" StartPoint="0,4.146484375" IsClosed="true">
+                              <PolyLineSegment x:Uid="PolyLineSegment_2" Points="5,0 5,8"/>
+                            </PathFigure>
+                          </PathFigureCollection>
+                        </PathGeometry.Figures>
+                      </PathGeometry>
+                    </GeometryDrawing.Geometry>
+                  </GeometryDrawing>
+                </DrawingCollection>
+              </DrawingGroup.Children>
+              <DrawingGroup.Transform>
+                <MatrixTransform x:Uid="MatrixTransform_14" Matrix="1,0,0,1,7,4"/>
+              </DrawingGroup.Transform>
+            </DrawingGroup>
+          </DrawingCollection>
+        </DrawingGroup.Children>
+      </DrawingGroup>
+    </DrawingImage.Drawing>
+  </DrawingImage>
+  <DrawingImage x:Key="PauseIcon" x:Uid="DrawingImage_14">
+    <DrawingImage.Drawing>
+      <DrawingGroup x:Uid="DrawingGroup_107">
+        <DrawingGroup.Children>
+          <DrawingCollection x:Uid="DrawingCollection_107">
+            <GeometryDrawing x:Uid="GeometryDrawing_102" Brush="Transparent">
+              <GeometryDrawing.Pen>
+                <x:NullExtension/>
+              </GeometryDrawing.Pen>
+              <GeometryDrawing.Geometry>
+                <RectangleGeometry x:Uid="RectangleGeometry_58" Rect="0,0,16,16"/>
+              </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+            <DrawingGroup x:Uid="DrawingGroup_108">
+              <DrawingGroup.Children>
+                <DrawingCollection x:Uid="DrawingCollection_108">
+                  <GeometryDrawing x:Uid="GeometryDrawing_66" Brush="#FFFF0000">
+                    <GeometryDrawing.Geometry>
+                      <PathGeometry x:Uid="PathGeometry_18">
+                        <PathGeometry.Figures>
+                          <PathFigureCollection x:Uid="PathFigureCollection_18">
+                            <PathFigure x:Uid="PathFigure_18" StartPoint="0,0" IsClosed="true">
+                              <PolyLineSegment x:Uid="PolyLineSegment_3" Points="1,0 1,8 0,8"/>
+                            </PathFigure>
+                          </PathFigureCollection>
+                        </PathGeometry.Figures>
+                      </PathGeometry>
+                    </GeometryDrawing.Geometry>
+                  </GeometryDrawing>
+                </DrawingCollection>
+              </DrawingGroup.Children>
+              <DrawingGroup.Transform>
+                <MatrixTransform x:Uid="MatrixTransform_15" Matrix="1,0,0,1,9,4"/>
+              </DrawingGroup.Transform>
+            </DrawingGroup>
+            <DrawingGroup x:Uid="DrawingGroup_109">
+              <DrawingGroup.Children>
+                <DrawingCollection x:Uid="DrawingCollection_109">
+                  <GeometryDrawing x:Uid="GeometryDrawing_67" Brush="#FFFF0000">
+                    <GeometryDrawing.Geometry>
+                      <PathGeometry x:Uid="PathGeometry_19">
+                        <PathGeometry.Figures>
+                          <PathFigureCollection x:Uid="PathFigureCollection_19">
+                            <PathFigure x:Uid="PathFigure_19" StartPoint="0,0" IsClosed="true">
+                              <PolyLineSegment x:Uid="PolyLineSegment_4" Points="1,0 1,8 0,8"/>
+                            </PathFigure>
+                          </PathFigureCollection>
+                        </PathGeometry.Figures>
+                      </PathGeometry>
+                    </GeometryDrawing.Geometry>
+                  </GeometryDrawing>
+                </DrawingCollection>
+              </DrawingGroup.Children>
+              <DrawingGroup.Transform>
+                <MatrixTransform x:Uid="MatrixTransform_16" Matrix="1,0,0,1,5,4"/>
+              </DrawingGroup.Transform>
+            </DrawingGroup>
+          </DrawingCollection>
+        </DrawingGroup.Children>
+      </DrawingGroup>
+    </DrawingImage.Drawing>
+  </DrawingImage>
+  <DrawingImage x:Key="PlayIcon" x:Uid="DrawingImage_15">
+    <DrawingImage.Drawing>
+      <DrawingGroup x:Uid="DrawingGroup_151">
+        <GeometryDrawing x:Uid="GeometryDrawing_103" Brush="Transparent">
+          <GeometryDrawing.Pen>
+            <x:NullExtension/>
+          </GeometryDrawing.Pen>
+          <GeometryDrawing.Geometry>
+            <RectangleGeometry x:Uid="RectangleGeometry_59" Rect="0,0,16,16"/>
+          </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <DrawingGroup x:Uid="DrawingGroup_110">
+          <DrawingGroup.Children>
+            <DrawingCollection x:Uid="DrawingCollection_110">
+              <GeometryDrawing x:Uid="GeometryDrawing_68" Brush="#FFFF0000">
+                <GeometryDrawing.Geometry>
+                  <PathGeometry x:Uid="PathGeometry_20">
+                    <PathGeometry.Figures>
+                      <PathFigureCollection x:Uid="PathFigureCollection_20">
+                        <PathFigure x:Uid="PathFigure_20" StartPoint="0,0">
+                          <PolyBezierSegment x:Uid="PolyBezierSegment_4" Points="0,0 0,10 0,10 0,10 8,5 8,5 8,5 0,0 0,0"/>
+                        </PathFigure>
+                      </PathFigureCollection>
+                    </PathGeometry.Figures>
+                  </PathGeometry>
+                </GeometryDrawing.Geometry>
+              </GeometryDrawing>
+            </DrawingCollection>
+          </DrawingGroup.Children>
+          <DrawingGroup.Transform>
+            <MatrixTransform x:Uid="MatrixTransform_17" Matrix="1,0,0,1,6,3"/>
+          </DrawingGroup.Transform>
+        </DrawingGroup>
+      </DrawingGroup>
+    </DrawingImage.Drawing>
+  </DrawingImage>
+  <DrawingImage x:Key="LastFrameIcon" x:Uid="DrawingImage_18">
+    <DrawingImage.Drawing>
+      <DrawingGroup x:Uid="DrawingGroup_140">
+        <DrawingGroup.Children>
+          <DrawingCollection x:Uid="DrawingCollection_140">
+            <GeometryDrawing x:Uid="GeometryDrawing_104" Brush="Transparent">
+              <GeometryDrawing.Pen>
+                <x:NullExtension/>
+              </GeometryDrawing.Pen>
+              <GeometryDrawing.Geometry>
+                <RectangleGeometry x:Uid="RectangleGeometry_60" Rect="0,0,16,16"/>
+              </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+            <DrawingGroup x:Uid="DrawingGroup_141">
+              <DrawingGroup.Children>
+                <DrawingCollection x:Uid="DrawingCollection_141">
+                  <GeometryDrawing x:Uid="GeometryDrawing_90" Brush="#FFFF0000">
+                    <GeometryDrawing.Geometry>
+                      <PathGeometry x:Uid="PathGeometry_41">
+                        <PathGeometry.Figures>
+                          <PathFigureCollection x:Uid="PathFigureCollection_41">
+                            <PathFigure x:Uid="PathFigure_41" StartPoint="0,0" IsClosed="true">
+                              <PolyLineSegment x:Uid="PolyLineSegment_15" Points="1,0 1,8 0,8"/>
+                            </PathFigure>
+                          </PathFigureCollection>
+                        </PathGeometry.Figures>
+                      </PathGeometry>
+                    </GeometryDrawing.Geometry>
+                  </GeometryDrawing>
+                </DrawingCollection>
+              </DrawingGroup.Children>
+              <DrawingGroup.Transform>
+                <MatrixTransform x:Uid="MatrixTransform_38" Matrix="1,0,0,1,4,4"/>
+              </DrawingGroup.Transform>
+            </DrawingGroup>
+            <DrawingGroup x:Uid="DrawingGroup_142">
+              <DrawingGroup.Children>
+                <DrawingCollection x:Uid="DrawingCollection_142">
+                  <GeometryDrawing x:Uid="GeometryDrawing_91" Brush="#FFFF0000">
+                    <GeometryDrawing.Geometry>
+                      <PathGeometry x:Uid="PathGeometry_42">
+                        <PathGeometry.Figures>
+                          <PathFigureCollection x:Uid="PathFigureCollection_42">
+                            <PathFigure x:Uid="PathFigure_42" StartPoint="0,4.146484375" IsClosed="true">
+                              <PolyLineSegment x:Uid="PolyLineSegment_16" Points="5,0 5,8"/>
+                            </PathFigure>
+                          </PathFigureCollection>
+                        </PathGeometry.Figures>
+                      </PathGeometry>
+                    </GeometryDrawing.Geometry>
+                  </GeometryDrawing>
+                </DrawingCollection>
+              </DrawingGroup.Children>
+              <DrawingGroup.Transform>
+                <MatrixTransform x:Uid="MatrixTransform_39" Matrix="1,0,0,1,7,4"/>
+              </DrawingGroup.Transform>
+            </DrawingGroup>
+          </DrawingCollection>
+        </DrawingGroup.Children>
+        <DrawingGroup.Transform>
+          <TransformGroup x:Uid="TransformGroup_14">
+            <TranslateTransform x:Uid="TranslateTransform_70" X="0" Y="0"/>
+            <ScaleTransform x:Uid="ScaleTransform_12" ScaleX="-1" ScaleY="1"/>
+            <SkewTransform x:Uid="SkewTransform_12" AngleX="0" AngleY="0"/>
+            <RotateTransform x:Uid="RotateTransform_12" Angle="0"/>
+            <TranslateTransform x:Uid="TranslateTransform_71" X="0" Y="0"/>
+            <TranslateTransform x:Uid="TranslateTransform_72" X="1" Y="0"/>
+          </TransformGroup>
+        </DrawingGroup.Transform>
+      </DrawingGroup>
+    </DrawingImage.Drawing>
+  </DrawingImage>
+  <DrawingImage x:Key="PreviousFrameIcon" x:Uid="DrawingImage_19">
+    <DrawingImage.Drawing>
+      <DrawingGroup x:Uid="DrawingGroup_121">
+        <DrawingGroup.Children>
+          <DrawingCollection x:Uid="DrawingCollection_121">
+            <GeometryDrawing x:Uid="GeometryDrawing_105" Brush="Transparent">
+              <GeometryDrawing.Pen>
+                <x:NullExtension/>
+              </GeometryDrawing.Pen>
+              <GeometryDrawing.Geometry>
+                <RectangleGeometry x:Uid="RectangleGeometry_61" Rect="0,0,16,16"/>
+              </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+            <DrawingGroup x:Uid="DrawingGroup_122">
+              <DrawingGroup.Children>
+                <DrawingCollection x:Uid="DrawingCollection_122">
+                  <GeometryDrawing x:Uid="GeometryDrawing_76" Brush="#FFFF0000">
+                    <GeometryDrawing.Geometry>
+                      <PathGeometry x:Uid="PathGeometry_27">
+                        <PathGeometry.Figures>
+                          <PathFigureCollection x:Uid="PathFigureCollection_27">
+                            <PathFigure x:Uid="PathFigure_27" StartPoint="0,0" IsClosed="true">
+                              <PolyLineSegment x:Uid="PolyLineSegment_9" Points="1,0 1,8 0,8"/>
+                            </PathFigure>
+                          </PathFigureCollection>
+                        </PathGeometry.Figures>
+                      </PathGeometry>
+                    </GeometryDrawing.Geometry>
+                  </GeometryDrawing>
+                </DrawingCollection>
+              </DrawingGroup.Children>
+              <DrawingGroup.Transform>
+                <MatrixTransform x:Uid="MatrixTransform_23" Matrix="1,0,0,1,12,4"/>
+              </DrawingGroup.Transform>
+            </DrawingGroup>
+            <DrawingGroup x:Uid="DrawingGroup_123">
+              <DrawingGroup.Children>
+                <DrawingCollection x:Uid="DrawingCollection_123">
+                  <GeometryDrawing x:Uid="GeometryDrawing_77" Brush="#FFFF0000">
+                    <GeometryDrawing.Geometry>
+                      <PathGeometry x:Uid="PathGeometry_28">
+                        <PathGeometry.Figures>
+                          <PathFigureCollection x:Uid="PathFigureCollection_28">
+                            <PathFigure x:Uid="PathFigure_28" StartPoint="0,4.146484375" IsClosed="true">
+                              <PolyLineSegment x:Uid="PolyLineSegment_10" Points="5,0 5,8"/>
+                            </PathFigure>
+                          </PathFigureCollection>
+                        </PathGeometry.Figures>
+                      </PathGeometry>
+                    </GeometryDrawing.Geometry>
+                  </GeometryDrawing>
+                </DrawingCollection>
+              </DrawingGroup.Children>
+              <DrawingGroup.Transform>
+                <MatrixTransform x:Uid="MatrixTransform_24" Matrix="1,0,0,1,4,4"/>
+              </DrawingGroup.Transform>
+            </DrawingGroup>
+          </DrawingCollection>
+        </DrawingGroup.Children>
+      </DrawingGroup>
+    </DrawingImage.Drawing>
+  </DrawingImage>
+  <DrawingImage x:Key="NextFrameIcon" x:Uid="DrawingImage_20">
+    <DrawingImage.Drawing>
+      <DrawingGroup x:Uid="DrawingGroup_124">
+        <DrawingGroup.Children>
+          <DrawingCollection x:Uid="DrawingCollection_124">
+            <GeometryDrawing x:Uid="GeometryDrawing_106" Brush="Transparent">
+              <GeometryDrawing.Pen>
+                <x:NullExtension/>
+              </GeometryDrawing.Pen>
+              <GeometryDrawing.Geometry>
+                <RectangleGeometry x:Uid="RectangleGeometry_62" Rect="0,0,16,16"/>
+              </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+            <DrawingGroup x:Uid="DrawingGroup_125">
+              <DrawingGroup.Children>
+                <DrawingCollection x:Uid="DrawingCollection_125">
+                  <GeometryDrawing x:Uid="GeometryDrawing_78" Brush="#FFFF0000">
+                    <GeometryDrawing.Geometry>
+                      <PathGeometry x:Uid="PathGeometry_29">
+                        <PathGeometry.Figures>
+                          <PathFigureCollection x:Uid="PathFigureCollection_29">
+                            <PathFigure x:Uid="PathFigure_29" StartPoint="0,0" IsClosed="true">
+                              <PolyLineSegment x:Uid="PolyLineSegment_11" Points="1,0 1,8 0,8"/>
+                            </PathFigure>
+                          </PathFigureCollection>
+                        </PathGeometry.Figures>
+                      </PathGeometry>
+                    </GeometryDrawing.Geometry>
+                  </GeometryDrawing>
+                </DrawingCollection>
+              </DrawingGroup.Children>
+              <DrawingGroup.Transform>
+                <MatrixTransform x:Uid="MatrixTransform_25" Matrix="1,0,0,1,5,4"/>
+              </DrawingGroup.Transform>
+            </DrawingGroup>
+            <DrawingGroup x:Uid="DrawingGroup_126">
+              <DrawingGroup.Children>
+                <DrawingCollection x:Uid="DrawingCollection_126">
+                  <GeometryDrawing x:Uid="GeometryDrawing_79" Brush="#FFFF0000">
+                    <GeometryDrawing.Geometry>
+                      <PathGeometry x:Uid="PathGeometry_30">
+                        <PathGeometry.Figures>
+                          <PathFigureCollection x:Uid="PathFigureCollection_30">
+                            <PathFigure x:Uid="PathFigure_30" StartPoint="5,4.0185546875" IsClosed="true">
+                              <PolyLineSegment x:Uid="PolyLineSegment_12" Points="0,0 0,8"/>
+                            </PathFigure>
+                          </PathFigureCollection>
+                        </PathGeometry.Figures>
+                      </PathGeometry>
+                    </GeometryDrawing.Geometry>
+                  </GeometryDrawing>
+                </DrawingCollection>
+              </DrawingGroup.Children>
+              <DrawingGroup.Transform>
+                <MatrixTransform x:Uid="MatrixTransform_26" Matrix="1,0,0,1,9,4"/>
+              </DrawingGroup.Transform>
+            </DrawingGroup>
+          </DrawingCollection>
+        </DrawingGroup.Children>
+      </DrawingGroup>
+    </DrawingImage.Drawing>
+  </DrawingImage>
+</ResourceDictionary>

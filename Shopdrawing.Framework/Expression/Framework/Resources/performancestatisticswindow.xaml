@@ -1,0 +1,60 @@
+<Grid xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:UI="clr-namespace:Microsoft.Expression.Framework.UserInterface"
+      x:Uid="Grid_1">
+  <Grid.RowDefinitions>
+    <RowDefinition x:Uid="RowDefinition_1" Height="*"/>
+    <RowDefinition x:Uid="RowDefinition_2" Height="Auto"/>
+  </Grid.RowDefinitions>
+  <FrameworkElement.Resources>
+    <Style x:Uid="Style_1" TargetType="{x:Type GridViewColumnHeader}">
+      <Setter x:Uid="Setter_1" Property="ButtonBase.Command"
+              Value="{x:Static UI:PerformanceStatisticsWindow.SortCommand}"/>
+      <Setter x:Uid="Setter_2" Property="Control.Foreground" Value="Black"/>
+    </Style>
+    <Style x:Uid="Style_2" TargetType="{x:Type TextBlock}">
+      <Setter x:Uid="Setter_3" Property="TextBlock.Foreground" Value="{DynamicResource Text1Brush}"/>
+    </Style>
+  </FrameworkElement.Resources>
+  <ListView x:Uid="ListView_1" Control.Background="{DynamicResource BackgroundBrush}"
+            ItemsControl.ItemsSource="{Binding Statistics}">
+    <ListView.View>
+      <GridView x:Uid="DetailsView_1">
+        <GridViewColumn x:Uid="Column_1" Header="Event" Width="200">
+          <GridViewColumn.DisplayMemberBinding>
+            <Binding Path="PeformanceEvent"/>
+          </GridViewColumn.DisplayMemberBinding>
+        </GridViewColumn>
+        <GridViewColumn x:Uid="Column_2" Header="Count">
+          <GridViewColumn.DisplayMemberBinding>
+            <Binding Path="EventCount"/>
+          </GridViewColumn.DisplayMemberBinding>
+        </GridViewColumn>
+        <GridViewColumn x:Uid="Column_3" Header="Min">
+          <GridViewColumn.DisplayMemberBinding>
+            <Binding Path="MinTime.TotalMilliseconds"/>
+          </GridViewColumn.DisplayMemberBinding>
+        </GridViewColumn>
+        <GridViewColumn x:Uid="Column_4" Header="Max">
+          <GridViewColumn.DisplayMemberBinding>
+            <Binding Path="MaxTime.TotalMilliseconds"/>
+          </GridViewColumn.DisplayMemberBinding>
+        </GridViewColumn>
+        <GridViewColumn x:Uid="Column_5" Header="Avg">
+          <GridViewColumn.DisplayMemberBinding>
+            <Binding Path="AverageTime.TotalMilliseconds"/>
+          </GridViewColumn.DisplayMemberBinding>
+        </GridViewColumn>
+        <GridViewColumn x:Uid="Column_6" Header="Total">
+          <GridViewColumn.DisplayMemberBinding>
+            <Binding Path="TotalTime.TotalMilliseconds"/>
+          </GridViewColumn.DisplayMemberBinding>
+        </GridViewColumn>
+      </GridView>
+    </ListView.View>
+  </ListView>
+  <StackPanel x:Uid="StackPanel_1" Orientation="Horizontal" Grid.Row="1">
+    <Button x:Uid="Button_1" ButtonBase.Command="{x:Static UI:PerformanceStatisticsWindow.RefreshCommand}">Refresh (F7)</Button>
+    <Button x:Uid="Button_2" ButtonBase.Command="{x:Static UI:PerformanceStatisticsWindow.ResetCommand}">Reset (F8)</Button>
+  </StackPanel>
+</Grid>

@@ -1,0 +1,87 @@
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\bin\Debug\Shopdrawing.Controls.dll
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\bin\Debug\Shopdrawing.Controls.pdb
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\obj\Debug\Shopdrawing.Controls.Properties.Resources.resources
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\obj\Debug\Shopdrawing.Controls.csproj.GenerateResource.Cache
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\obj\Debug\Shopdrawing.Controls.dll
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\obj\Debug\Shopdrawing.Controls.pdb
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\obj\Debug\NewProject.baml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\obj\Debug\NewProject.g.cs
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\obj\Debug\Shopdrawing.Controls_MarkupCompile.cache
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\obj\Debug\Shopdrawing.Controls.g.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\bin\Debug\Shopdrawing.Controls.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\bin\Debug\Shopdrawing.Controls.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\bin\Debug\Shopdrawing.Core.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\bin\Debug\Shopdrawing.Wpf.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\bin\Debug\Shopdrawing.Core.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\bin\Debug\Shopdrawing.Core.xml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\bin\Debug\Shopdrawing.Wpf.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\obj\Debug\Shopdrawing.Controls.csprojResolveAssemblyReference.cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\obj\Debug\Shopdrawing.Controls.Properties.Resources.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\obj\Debug\Shopdrawing.Controls.csproj.GenerateResource.Cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\obj\Debug\Shopdrawing.Controls.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\obj\Debug\Shopdrawing.Controls.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\obj\Debug\SdrToolbar.g.cs
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\obj\Debug\Shopdrawing.Controls_MarkupCompile.cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\obj\Debug\Shopdrawing.Controls_MarkupCompile.lref
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\obj\Debug\SdrToolbar.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\obj\Debug\Shopdrawing.Controls.g.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\bin\Debug\DynamicGeometry.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\bin\Debug\GuiLabs.Undo.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\bin\Debug\xref.NETdxf.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\bin\Debug\System.Windows.Controls.WpfPropertyGrid.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\bin\Debug\DynamicGeometry.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\bin\Debug\GuiLabs.Undo.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\bin\Debug\xref.NETdxf.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\bin\Debug\xref.NETdxf.xml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\bin\Debug\System.Windows.Controls.WpfPropertyGrid.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\bin\Debug\System.Windows.Controls.WpfPropertyGrid.xml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\bin\Debug\TreeViewEx.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\bin\Debug\TreeViewEx.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\obj\Debug\ProjectExplorer\Project.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\obj\Debug\ProjectExplorer\Project.g.cs
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\obj\Debug\ProjectExplorer\Themes.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\obj\Debug\ProjectExplorer\Icons.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\bin\Debug\Shopdrawing.Resources.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\bin\Debug\Shopdrawing.Resources.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\obj\Debug\MessageBox\UserControl1.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\obj\Debug\MessageBox\UserControl1.g.cs
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\bin\Debug\Shopdrawing.Core.Utilities.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\bin\Debug\Shopdrawing.Core.Utilities.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\bin\Debug\Shopdrawing.Core.Utilities.xml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Controls\bin\Debug\Shopdrawing.Controls.dll
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Controls\bin\Debug\Shopdrawing.Controls.pdb
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Controls\bin\Debug\DynamicGeometry.dll
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Controls\bin\Debug\Shopdrawing.Core.dll
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Controls\bin\Debug\Shopdrawing.Core.Utilities.dll
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Controls\bin\Debug\Shopdrawing.Resources.dll
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Controls\bin\Debug\Shopdrawing.Wpf.dll
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Controls\bin\Debug\TreeViewEx.dll
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Controls\bin\Debug\xref.NETdxf.dll
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Controls\bin\Debug\DynamicGeometry.pdb
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Controls\bin\Debug\Shopdrawing.Core.Utilities.pdb
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Controls\bin\Debug\Shopdrawing.Core.Utilities.xml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Controls\bin\Debug\Shopdrawing.Core.pdb
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Controls\bin\Debug\Shopdrawing.Core.xml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Controls\bin\Debug\TreeViewEx.pdb
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Controls\bin\Debug\Shopdrawing.Resources.pdb
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Controls\bin\Debug\Shopdrawing.Wpf.pdb
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Controls\bin\Debug\xref.NETdxf.pdb
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Controls\bin\Debug\xref.NETdxf.xml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Controls\obj\Debug\Shopdrawing.Controls.csprojResolveAssemblyReference.cache
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Controls\obj\Debug\MessageBox\UserControl1.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Controls\obj\Debug\ProjectExplorer\Icons.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Controls\obj\Debug\ProjectExplorer\Themes.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Controls\obj\Debug\MessageBox\UserControl1.g.cs
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Controls\obj\Debug\ProjectExplorer\Project.g.cs
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Controls\obj\Debug\SdrToolbar.g.cs
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Controls\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Controls\obj\Debug\Shopdrawing.Controls_MarkupCompile.cache
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Controls\obj\Debug\Shopdrawing.Controls_MarkupCompile.lref
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Controls\obj\Debug\ProjectExplorer\Project.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Controls\obj\Debug\SdrToolbar.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Controls\obj\Debug\Shopdrawing.Controls.g.resources
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Controls\obj\Debug\Shopdrawing.Controls.Properties.Resources.resources
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Controls\obj\Debug\Shopdrawing.Controls.csproj.GenerateResource.Cache
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Controls\obj\Debug\Shopdrawing.Controls.dll
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Controls\obj\Debug\Shopdrawing.Controls.pdb

@@ -1,0 +1,36 @@
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Resources\obj\Debug\Shopdrawing.Resources.Properties.Resources.resources
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Resources\obj\Debug\Shopdrawing.Resources.csproj.GenerateResource.Cache
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Resources\bin\Debug\Shopdrawing.Resources.dll
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Resources\bin\Debug\Shopdrawing.Resources.pdb
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Resources\obj\Debug\Shopdrawing.Resources.dll
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Resources\obj\Debug\Shopdrawing.Resources.pdb
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Resources\obj\Debug\Shopdrawing.Resources.g.resources
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Resources\obj\Debug\Shopdrawing.Resources.csprojResolveAssemblyReference.cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Resources\bin\Debug\Shopdrawing.Resources.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Resources\bin\Debug\Shopdrawing.Resources.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Resources\obj\Debug\Shopdrawing.Resources.g.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Resources\obj\Debug\Shopdrawing.Resources.Languages.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Resources\obj\Debug\Shopdrawing.Resources.Properties.Resources.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Resources\obj\Debug\Shopdrawing.Resources.csproj.GenerateResource.Cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Resources\obj\Debug\Shopdrawing.Resources.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Resources\obj\Debug\Shopdrawing.Resources.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Resources\obj\Debug\Icons\ToolbarButton.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Resources\obj\Debug\Shopdrawing.Resources_MarkupCompile.cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Resources\obj\Debug\Generic.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Resources\obj\Debug\Icons\ProjectIcons.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Resources\obj\Debug\Icons\Icons.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Resources\obj\Debug\Shopdrawing.Resources.csprojResolveAssemblyReference.cache
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Resources\bin\Debug\Shopdrawing.Resources.dll
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Resources\bin\Debug\Shopdrawing.Resources.pdb
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Resources\obj\Debug\Shopdrawing.Resources.csprojResolveAssemblyReference.cache
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Resources\obj\Debug\Generic.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Resources\obj\Debug\Icons\Icons.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Resources\obj\Debug\Icons\ProjectIcons.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Resources\obj\Debug\Icons\ToolbarButton.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Resources\obj\Debug\Shopdrawing.Resources_MarkupCompile.cache
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Resources\obj\Debug\Shopdrawing.Resources.g.resources
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Resources\obj\Debug\Shopdrawing.Resources.Languages.resources
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Resources\obj\Debug\Shopdrawing.Resources.Properties.Resources.resources
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Resources\obj\Debug\Shopdrawing.Resources.csproj.GenerateResource.Cache
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Resources\obj\Debug\Shopdrawing.Resources.dll
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Resources\obj\Debug\Shopdrawing.Resources.pdb

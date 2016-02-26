@@ -1,0 +1,75 @@
+<DrawingImage xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+              x:Uid="DrawingImage_1">
+  <DrawingImage.Drawing>
+    <DrawingGroup x:Uid="DrawingGroup_1">
+      <DrawingGroup.Children>
+        <DrawingCollection x:Uid="DrawingCollection_1">
+          <DrawingGroup x:Uid="DrawingGroup_2">
+            <DrawingGroup.Children>
+              <DrawingCollection x:Uid="DrawingCollection_2">
+                <GeometryDrawing x:Uid="GeometryDrawing_1" Brush="Orange">
+                  <GeometryDrawing.Geometry>
+                    <PathGeometry x:Uid="PathGeometry_1">
+                      <Geometry.Transform>
+                        <MatrixTransform x:Uid="MatrixTransform_1" Matrix="Identity"/>
+                      </Geometry.Transform>
+                      <PathGeometry.Figures>
+                        <PathFigureCollection x:Uid="PathFigureCollection_1">
+                          <PathFigure x:Uid="PathFigure_1" StartPoint="48,23.5" IsClosed="true">
+                            <BezierSegment x:Uid="BezierSegment_1" PathSegment.IsStroked="true" PathSegment.IsSmoothJoin="true"
+                                           Point1="48,36.4786916210236" Point2="37.254833995939,47" Point3="24,47"/>
+                            <BezierSegment x:Uid="BezierSegment_2" PathSegment.IsStroked="true" PathSegment.IsSmoothJoin="true"
+                                           Point1="10.745166004061,47" Point2="0,36.4786916210236" Point3="0,23.5"/>
+                            <BezierSegment x:Uid="BezierSegment_3" PathSegment.IsStroked="true" PathSegment.IsSmoothJoin="true"
+                                           Point1="0,10.5213083789764" Point2="10.745166004061,0" Point3="24,0"/>
+                            <BezierSegment x:Uid="BezierSegment_4" PathSegment.IsStroked="true" PathSegment.IsSmoothJoin="true"
+                                           Point1="37.254833995939,0" Point2="48,10.5213083789764" Point3="48,23.5"/>
+                          </PathFigure>
+                        </PathFigureCollection>
+                      </PathGeometry.Figures>
+                    </PathGeometry>
+                  </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+              </DrawingCollection>
+            </DrawingGroup.Children>
+          </DrawingGroup>
+          <DrawingGroup x:Uid="DrawingGroup_3">
+            <DrawingGroup.Children>
+              <DrawingCollection x:Uid="DrawingCollection_3">
+                <GeometryDrawing x:Uid="GeometryDrawing_2" Brush="sc#1, 1, 1, 1">
+                  <GeometryDrawing.Geometry>
+                    <PathGeometry x:Uid="PathGeometry_2">
+                      <Geometry.Transform>
+                        <MatrixTransform x:Uid="MatrixTransform_2" Matrix="1,0,0,1,-14.3125,-15.875675201416"/>
+                      </Geometry.Transform>
+                      <PathGeometry.Figures>
+                        <PathFigureCollection x:Uid="PathFigureCollection_2">
+                          <PathFigure x:Uid="PathFigure_2" StartPoint="14.59375,43.649112701416" IsFilled="true" IsClosed="true">
+                            <LineSegment x:Uid="LineSegment_1" PathSegment.IsStroked="true" Point="21.1796875,43.649112701416"/>
+                            <LineSegment x:Uid="LineSegment_2" PathSegment.IsStroked="true" Point="21.1796875,50.235050201416"/>
+                            <LineSegment x:Uid="LineSegment_3" PathSegment.IsStroked="true" Point="14.59375,50.235050201416"/>
+                          </PathFigure>
+                          <PathFigure x:Uid="PathFigure_3" StartPoint="14.3125,15.875675201416" IsFilled="true" IsClosed="true">
+                            <LineSegment x:Uid="LineSegment_4" PathSegment.IsStroked="true" Point="21.4375,15.875675201416"/>
+                            <LineSegment x:Uid="LineSegment_5" PathSegment.IsStroked="true" Point="21.4375,23.938175201416"/>
+                            <LineSegment x:Uid="LineSegment_6" PathSegment.IsStroked="true" Point="19.75,41.375675201416"/>
+                            <LineSegment x:Uid="LineSegment_7" PathSegment.IsStroked="true" Point="16.0234375,41.375675201416"/>
+                            <LineSegment x:Uid="LineSegment_8" PathSegment.IsStroked="true" Point="14.3125,23.938175201416"/>
+                          </PathFigure>
+                        </PathFigureCollection>
+                      </PathGeometry.Figures>
+                    </PathGeometry>
+                  </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+              </DrawingCollection>
+            </DrawingGroup.Children>
+            <DrawingGroup.Transform>
+              <MatrixTransform x:Uid="MatrixTransform_3" Matrix="1,0,0,1,20.5,6.3"/>
+            </DrawingGroup.Transform>
+          </DrawingGroup>
+        </DrawingCollection>
+      </DrawingGroup.Children>
+    </DrawingGroup>
+  </DrawingImage.Drawing>
+</DrawingImage>

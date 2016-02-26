@@ -1,0 +1,61 @@
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\bin\Debug\Samples.BrushCategory.exe
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\bin\Debug\Samples.BrushCategory.pdb
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\bin\Debug\System.Windows.Controls.WpfPropertyGrid.dll
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\bin\Debug\System.Windows.Controls.WpfPropertyGrid.Themes.dll
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\bin\Debug\System.Windows.Controls.WpfPropertyGrid.Themes.pdb
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\bin\Debug\System.Windows.Controls.WpfPropertyGrid.pdb
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\bin\Debug\System.Windows.Controls.WpfPropertyGrid.xml
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\WPG.BrushCategory.csprojResolveAssemblyReference.cache
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\Window1.g.cs
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\App.g.cs
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\GeneratedInternalTypeHelper.g.cs
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\Samples.BrushCategory_MarkupCompile.cache
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\Samples.BrushCategory_MarkupCompile.lref
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\App.baml
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\Window1.baml
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\Samples.BrushCategory.g.resources
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\Samples.BrushCategory.Properties.Resources.resources
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\WPG.BrushCategory.csproj.GenerateResource.Cache
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\Samples.BrushCategory.exe
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\Samples.BrushCategory.pdb
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\bin\Debug\Samples.BrushCategory.exe
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\bin\Debug\Samples.BrushCategory.pdb
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\bin\Debug\System.Windows.Controls.WpfPropertyGrid.dll
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\bin\Debug\System.Windows.Controls.WpfPropertyGrid.Themes.dll
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\bin\Debug\System.Windows.Controls.WpfPropertyGrid.Themes.pdb
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\bin\Debug\System.Windows.Controls.WpfPropertyGrid.pdb
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\bin\Debug\System.Windows.Controls.WpfPropertyGrid.xml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\WPG.BrushCategory.csprojResolveAssemblyReference.cache
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\Window1.g.cs
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\App.g.cs
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\GeneratedInternalTypeHelper.g.cs
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\Samples.BrushCategory_MarkupCompile.cache
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\Samples.BrushCategory_MarkupCompile.lref
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\App.baml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\Window1.baml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\Samples.BrushCategory.g.resources
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\Samples.BrushCategory.Properties.Resources.resources
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\WPG.BrushCategory.csproj.GenerateResource.Cache
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\Samples.BrushCategory.exe
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\Samples.BrushCategory.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\bin\Debug\Samples.BrushCategory.exe.config
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\bin\Debug\Samples.BrushCategory.exe
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\bin\Debug\Samples.BrushCategory.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\bin\Debug\System.Windows.Controls.WpfPropertyGrid.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\bin\Debug\System.Windows.Controls.WpfPropertyGrid.Themes.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\bin\Debug\System.Windows.Controls.WpfPropertyGrid.Themes.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\bin\Debug\System.Windows.Controls.WpfPropertyGrid.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\bin\Debug\System.Windows.Controls.WpfPropertyGrid.xml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\WPG.BrushCategory.csprojResolveAssemblyReference.cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\Window1.g.cs
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\App.g.cs
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\Samples.BrushCategory_MarkupCompile.cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\Samples.BrushCategory_MarkupCompile.lref
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\App.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\Window1.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\Samples.BrushCategory.g.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\Samples.BrushCategory.Properties.Resources.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\WPG.BrushCategory.csproj.GenerateResource.Cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\Samples.BrushCategory.exe
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.BrushCategory\obj\Debug\Samples.BrushCategory.pdb

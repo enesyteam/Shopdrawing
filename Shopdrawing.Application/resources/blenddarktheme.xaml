@@ -1,0 +1,51 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+                    xmlns:Framework="clr-namespace:Microsoft.Expression.Framework"
+                    xmlns:System="clr-namespace:System;assembly=mscorlib"
+                    PresentationOptions:Freeze="true" x:Uid="ResourceDictionary_1">
+  <SolidColorBrush x:Key="ArtboardViewTabSelectedBackgroundBrush" x:Uid="SolidColorBrush_141" Color="#FFB2B2B2"/>
+  <SolidColorBrush x:Key="ArtboardViewTabMouseOverBackgroundBrush" x:Uid="SolidColorBrush_107" Color="#FF777777"/>
+  <SolidColorBrush x:Key="BreadcrumbBarBackgroundBrush" x:Uid="SolidColorBrush_139" Color="#FF282828"/>
+  <SolidColorBrush x:Key="BreadcrumbSelectedBackgroundBrush" x:Uid="SolidColorBrush_180" Color="#FFBDBDBD"/>
+  <SolidColorBrush x:Key="BreadcrumbSelectedForegroundBrush" x:Uid="SolidColorBrush_181" Color="#FF000000"/>
+  <SolidColorBrush x:Key="BreadcrumbGhostedBackgroundBrush" x:Uid="SolidColorBrush_182" Color="#FF595959"/>
+  <SolidColorBrush x:Key="RecordingOnBackgroundBrush" x:Uid="SolidColorBrush_165" Color="#B2000000"/>
+  <SolidColorBrush x:Key="RecordingOffBackgroundBrush" x:Uid="SolidColorBrush_157" Color="#B22F2F2F"/>
+  <SolidColorBrush x:Key="TimelineEggDefaultBackgroundBrush" x:Uid="SolidColorBrush_166" Color="#FFEEEEEE"/>
+  <SolidColorBrush x:Key="TimelineEggDefaultStrokeBrush" x:Uid="SolidColorBrush_167" Color="#FF606060"/>
+  <SolidColorBrush x:Key="TimelineEggSelectedBackgroundBrush" x:Uid="SolidColorBrush_159" Color="#FF888888"/>
+  <SolidColorBrush x:Key="TimelineParentDurationBarBrush" x:Uid="SolidColorBrush_160" Color="#FFC2C2C2"/>
+  <SolidColorBrush x:Key="TimelineChildDurationBarBrush" x:Uid="SolidColorBrush_161" Color="#FF7A7A7A"/>
+  <SolidColorBrush x:Key="TimelineTransportControlButtonNormalBrush" x:Uid="SolidColorBrush_162" Color="#FFFFFFFF"/>
+  <SolidColorBrush x:Key="TimelineTransportControlButtonDisabledBrush" x:Uid="SolidColorBrush_163" Color="#FF666666"/>
+  <SolidColorBrush x:Key="StructureViewChildSelectedBrush" x:Uid="SolidColorBrush_164" Color="#FFBABABA"/>
+  <SolidColorBrush x:Key="StructureViewBlueBrush" x:Uid="SolidColorBrush_183" Color="#FF6495ED"/>
+  <SolidColorBrush x:Key="StateHoverBrush" x:Uid="SolidColorBrush_136" Color="#FF4A4A4A"/>
+  <SolidColorBrush x:Key="StateSelectedBrush" x:Uid="SolidColorBrush_138" Color="#FFB8B8B8"/>
+  <SolidColorBrush x:Key="StateGroupSelectedWithinBrush" x:Uid="SolidColorBrush_110" Color="#FFBABABA"/>
+  <SolidColorBrush x:Key="StateGroupPinnedWithinBrush" x:Uid="SolidColorBrush_111" Color="#FF595959"/>
+  <SolidColorBrush x:Key="StateSelectedTextBrush" x:Uid="SolidColorBrush_117" Color="#FFFFFFFF"/>
+  <SolidColorBrush x:Key="EasingFunctionPreviewIconNormalBrush" x:Uid="SolidColorBrush_198" Color="#FF8F8F8F"/>
+  <SolidColorBrush x:Key="EasingFunctionPreviewIconHoverBrush" x:Uid="SolidColorBrush_203" Color="#FFFFFFFF"/>
+  <SolidColorBrush x:Key="TransitionSelectedTextBrush" x:Uid="SolidColorBrush_118" Color="#FF333333"/>
+  <SolidColorBrush x:Key="MonkeytailNormalBrush" x:Uid="SolidColorBrush_112" Color="#FF595959"/>
+  <SolidColorBrush x:Key="MonkeytailSelectedBrush" x:Uid="SolidColorBrush_113" Color="#FF737373"/>
+  <SolidColorBrush x:Key="MonkeytailHoverBrush" x:Uid="SolidColorBrush_114" Color="#FF666666"/>
+  <SolidColorBrush x:Key="PlaceholderNormalBrush" x:Uid="SolidColorBrush_115" Color="#FF000000"/>
+  <SolidColorBrush x:Key="PlaceholderHoverBrush" x:Uid="SolidColorBrush_119" Color="#FFFFFFFF"/>
+  <SolidColorBrush x:Key="DeleteIconNormalFillBrush" x:Uid="SolidColorBrush_120" Color="#FF595959"/>
+  <SolidColorBrush x:Key="DeleteIconNormalStrokeBrush" x:Uid="SolidColorBrush_121" Color="#FF2E2E2E"/>
+  <SolidColorBrush x:Key="DeleteIconHoverFillBrush" x:Uid="SolidColorBrush_122" Color="#FFDCDCDC"/>
+  <SolidColorBrush x:Key="DeleteIconHoverStrokeBrush" x:Uid="SolidColorBrush_123" Color="#FF242424"/>
+  <SolidColorBrush x:Key="DeleteIconSelectedFillBrush" x:Uid="SolidColorBrush_124" Color="#FF6E6E6E"/>
+  <SolidColorBrush x:Key="DeleteIconSelectedStrokeBrush" x:Uid="SolidColorBrush_125" Color="#FF424242"/>
+  <SolidColorBrush x:Key="AssetPopupBackgroundBrush" x:Uid="SolidColorBrush_176" Color="#FF444444"/>
+  <SolidColorBrush x:Key="AssetPanelTextBrush" x:Uid="SolidColorBrush_78" Color="#FFFFFFFF"/>
+  <SolidColorBrush x:Key="AssetCountTextBrush" x:Uid="SolidColorBrush_168" Color="#FF8C8C8C"/>
+  <SolidColorBrush x:Key="AssetCategoryHoverBrush" x:Uid="SolidColorBrush_190" Color="#FF4A4A4A"/>
+  <SolidColorBrush x:Key="AssetCategorySelectedBrush" x:Uid="SolidColorBrush_191" Color="#FF404040"/>
+  <SolidColorBrush x:Key="AssetItemHoverBrush" x:Uid="SolidColorBrush_192" Color="#FF4A4A4A"/>
+  <SolidColorBrush x:Key="AssetItemSelectedBrush" x:Uid="SolidColorBrush_193" Color="#FFB8B8B8"/>
+  <SolidColorBrush x:Key="PropertyContainerInformationalTextBrush" x:Uid="SolidColorBrush_205" Color="#FFA6A6A6"/>
+</ResourceDictionary>

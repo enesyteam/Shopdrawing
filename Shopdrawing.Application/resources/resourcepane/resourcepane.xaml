@@ -1,0 +1,658 @@
+<ResourcePane:ResourcePane xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                           xmlns:ResourcePane="clr-namespace:Microsoft.Expression.DesignSurface.UserInterface.ResourcePane"
+                           xmlns:Controls="clr-namespace:Microsoft.Expression.Framework.Controls;assembly=Microsoft.Expression.Framework"
+                           xmlns:System="clr-namespace:System;assembly=Mscorlib"
+                           xmlns:Framework="clr-namespace:Microsoft.Expression.Framework.Data;assembly=Microsoft.Expression.Framework"
+                           xmlns:fwui="clr-namespace:Microsoft.Expression.Framework.UserInterface;assembly=Microsoft.Expression.Framework"
+                           xmlns:fwve="clr-namespace:Microsoft.Expression.Framework.ValueEditors;assembly=Microsoft.Expression.Framework"
+                           xmlns:PropertyInspector="clr-namespace:Microsoft.Expression.Framework.PropertyInspector"
+                           xmlns:PropertyEditing="clr-namespace:Microsoft.Windows.Design.PropertyEditing;assembly=Microsoft.Windows.Design.Interaction"
+                           xmlns:Automation="clr-namespace:Microsoft.Expression.Framework.Diagnostics;assembly=Microsoft.Expression.Framework"
+                           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                           x:Uid="ResourcePane" Border.CornerRadius="{DynamicResource PaletteCornerRounding}"
+                           Border.Background="{DynamicResource ListBackgroundBrush}"
+                           Border.BorderBrush="{DynamicResource ListBackgroundBrush}" Border.BorderThickness="1"
+                           fwui:FocusScopeManager.AllowedFocus="false" Automation:AutomationElement.Id="Designer_ResourcePane">
+  <FrameworkElement.Resources>
+    <ResourceDictionary x:Uid="ResourceDictionary_1">
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary x:Uid="ResourceDictionary_2"
+                            Source="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/UserInterface/PropertyInspector/PropertyInspectorResources.xaml"/>
+      </ResourceDictionary.MergedDictionaries>
+      <Framework:BoolToVisibilityCollapsedConverter x:Key="BoolToVisibilityCollapsedConverter" x:Uid="framework:BoolToVisibilityCollapsedConverter"/>
+      <Framework:NullToVisibilityCollapsedConverter x:Key="NullToVisibilityCollapsedConverter" x:Uid="framework:NullToVisibilityCollapsedConverter"/>
+      <ResourcePane:IconConverter x:Key="IconConverter" x:Uid="ResourcePane:IconConverter_1"/>
+      <ResourcePane:ResourceValueModelProvider x:Key="ResourceValueModelProvider" x:Uid="ResourcePane:ResourceValueModelProvider_1"/>
+      <Framework:AppendSuffixConverter x:Key="AppendLinkSuffixConverter" x:Uid="framework:AppendSuffixConverter" Suffix="_Link"/>
+      <Framework:AndConverter x:Key="AndConverter" x:Uid="Framework:AndConverter"/>
+      <Framework:IntegerZeroToVisibilityHiddenConverter x:Key="ZeroToVisibilityHiddenConverter" x:Uid="Framework:IntegerZeroToVisibilityHiddenConverter_1"/>
+      <Framework:NotConverter x:Key="NotConverter" x:Uid="data:NotConverter"/>
+      <System:Double x:Key="ResourceEntryHeight" x:Uid="System:Double_1">22.0</System:Double>
+      <Thickness x:Key="TreeIndentationMargin" x:Uid="Thickness_1" Left="19"/>
+      <ControlTemplate x:Key="RightAlignedExtendedPopupRowTemplate" x:Uid="ControlTemplate_4">
+        <StackPanel x:Uid="StackPanel_15">
+          <Control x:Uid="Control_1">
+            <Automation:AutomationElement.Id>
+              <Binding Path="PropertyName" Converter="{StaticResource PropertyValueClickControlConverter}"/>
+            </Automation:AutomationElement.Id>
+            <Control.Template>
+              <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="InlineRowTemplate" Mode="OneWay"/>
+            </Control.Template>
+          </Control>
+          <PropertyInspector:PropertyContainerWorkaroundPopup x:Uid="PropertyInspector:PropertyContainerWorkaroundPopup_1" UIElement.Focusable="false"
+                                                              Popup.Placement="Custom"
+                                                              Popup.CustomPopupPlacementCallback="{x:Static PropertyInspector:PropertyContainerWorkaroundPopup.RightAlignedPopupPlacement}"
+                                                              Popup.StaysOpen="true"
+                                                              Popup.PopupAnimation="{DynamicResource {x:Static SystemParameters.ComboBoxPopupAnimationKey}}"
+                                                              TextElement.Foreground="{DynamicResource Text1Brush}" Popup.IsOpen="true"
+                                                              FrameworkElement.MinWidth="{Binding RelativeParentActualWidth}">
+            <Border x:Uid="Border_16" Background="{DynamicResource PaneBrush}"
+                    BorderBrush="{DynamicResource WindowBorderBrush}" BorderThickness="1"
+                    FrameworkElement.MinWidth="280">
+              <ScrollViewer x:Uid="ScrollViewer_2" CanContentScroll="true"
+                            FrameworkElement.Style="{DynamicResource {ComponentResourceKey ResourceId=MenuScrollViewer, TypeInTargetAssembly={x:Type FrameworkElement}}}">
+                <ContentControl FrameworkElement.Name="FocusablePopupItem" x:Uid="FocusablePopupItem"
+                                FrameworkElement.MaxWidth="800" FrameworkElement.Margin="4">
+                  <ContentControl.Content>
+                    <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="PropertyEntry.PropertyValue"/>
+                  </ContentControl.Content>
+                  <ContentControl.ContentTemplate>
+                    <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="ExtendedEditorTemplate"/>
+                  </ContentControl.ContentTemplate>
+                </ContentControl>
+              </ScrollViewer>
+            </Border>
+          </PropertyInspector:PropertyContainerWorkaroundPopup>
+        </StackPanel>
+      </ControlTemplate>
+      <Style x:Key="ClickControlStyle" x:Uid="Style_7" TargetType="{x:Type Controls:ClickControl}">
+        <Setter x:Uid="Setter_1" Property="Control.Template">
+          <Setter.Value>
+            <ControlTemplate x:Uid="ControlTemplate_1" TargetType="{x:Type Controls:ClickControl}">
+              <Border x:Uid="Border_14" Background="Transparent">
+                <ContentPresenter x:Uid="ContentPresenter_1"/>
+              </Border>
+            </ControlTemplate>
+          </Setter.Value>
+        </Setter>
+      </Style>
+      <Style x:Key="ResourceClickControlStyle" x:Uid="Style_9" TargetType="{x:Type Controls:ClickControl}"
+             BasedOn="{StaticResource ClickControlStyle}">
+        <Setter x:Uid="Setter_7" Property="Controls:ClickControl.LeftClickCommand"
+                Value="{Binding SingleSelectCommand, Mode=OneWay}"/>
+        <Setter x:Uid="Setter_8" Property="Controls:ClickControl.RightClickCommand"
+                Value="{Binding SelectCommand, Mode=OneWay}"/>
+        <Setter x:Uid="Setter_9" Property="Controls:ClickControl.LeftControlClickCommand"
+                Value="{Binding ToggleSelectCommand, Mode=OneWay}"/>
+        <Setter x:Uid="Setter_10" Property="Controls:ClickControl.ScrollIntoView">
+          <Setter.Value>
+            <Binding Path="IsSelected" Mode="OneWay"/>
+          </Setter.Value>
+        </Setter>
+      </Style>
+      <Style x:Key="ResourceItemClickControlStyle" x:Uid="Style_6" TargetType="{x:Type Controls:ClickControl}"
+             BasedOn="{StaticResource ResourceClickControlStyle}">
+        <Setter x:Uid="Setter_12" Property="Controls:ClickControl.LeftDoubleClickCommand"
+                Value="{Binding EditCommand, Mode=OneWay}"/>
+      </Style>
+      <ControlTemplate x:Key="PropertyContainerRowTemplate" x:Uid="ControlTemplate_3">
+        <Grid x:Uid="Grid_1" fwui:FocusScopeManager.AllowedFocus="false">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Uid="ColumnDefinition_1" Width=".55*"/>
+            <ColumnDefinition x:Uid="ColumnDefinition_2" Width=".45*"/>
+          </Grid.ColumnDefinitions>
+          <fwve:InlineStringEditor x:Name="InlineEditor" x:Uid="Controls:InlineTextBox_1"
+                                   Automation:AutomationElement.Id="InlineEditor" FrameworkElement.VerticalAlignment="Stretch"
+                                   FrameworkElement.HorizontalAlignment="Left" FrameworkElement.Margin="0,1,4,1"
+                                   IsSelected="{Binding IsSelected, Mode=OneWay}"
+                                   fwve:StringEditor.IsEditing="{Binding IsEditing, Mode=OneWayToSource}"
+                                   fwve:StringEditor.Value="{Binding DataContext.Key, RelativeSource={RelativeSource AncestorType={x:Type Border}}, Mode=TwoWay}">
+            <FrameworkElement.DataContext>
+              <Binding Path="DataContext">
+                <Binding.RelativeSource>
+                  <RelativeSource AncestorType="{x:Type Border}"/>
+                </Binding.RelativeSource>
+              </Binding>
+            </FrameworkElement.DataContext>
+          </fwve:InlineStringEditor>
+          <Grid x:Uid="Grid_13" Column="1" FrameworkElement.VerticalAlignment="Center"
+                FrameworkElement.HorizontalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition x:Uid="ColumnDefinition_5" Width="*"/>
+              <ColumnDefinition x:Uid="ColumnDefinition_6" Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <PropertyInspector:PropertyEditorValueAreaControl x:Uid="PropertyInspector:PropertyEditorValueAreaControl_1"
+                                                              Automation:AutomationElement.Id="PropertyEditorValueAreaControl" Grid.Column="0"
+                                                              FrameworkElement.VerticalAlignment="Center" fwui:FocusScopeManager.AllowedFocus="true"
+                                                              FrameworkElement.HorizontalAlignment="Stretch">
+              <FrameworkElement.Style>
+                <Style x:Uid="Style_14" TargetType="{x:Type PropertyInspector:PropertyEditorValueAreaControl}"
+                       BasedOn="{StaticResource {x:Type PropertyInspector:PropertyEditorValueAreaControl}}">
+                  <Style.Triggers>
+                    <Trigger x:Uid="Trigger_15" Property="ContentPresenter.ContentTemplate">
+                      <Trigger.Value>
+                        <x:NullExtension/>
+                      </Trigger.Value>
+                      <Setter x:Uid="Setter_83" Property="UIElement.Visibility" Value="Collapsed"/>
+                    </Trigger>
+                  </Style.Triggers>
+                </Style>
+              </FrameworkElement.Style>
+            </PropertyInspector:PropertyEditorValueAreaControl>
+            <PropertyEditing:EditModeSwitchButton x:Name="EditModeSwitch" x:Uid="PropertyEditing:EditModeSwitchButton_1" Grid.Column="1"
+                                                  TargetEditMode="ExtendedPopup" SyncModeToOwningContainer="false"
+                                                  FrameworkElement.VerticalAlignment="Center" FrameworkElement.Width="16"
+                                                  FrameworkElement.Height="16">
+              <UIElement.Visibility>
+                <Binding Path="PropertyValueEditor.ExtendedEditorTemplate"
+                         Converter="{StaticResource NullToVisibilityCollapsedConverter}"
+                         BindingBase.FallbackValue="Collapsed"/>
+              </UIElement.Visibility>
+            </PropertyEditing:EditModeSwitchButton>
+          </Grid>
+        </Grid>
+        <ControlTemplate.Triggers>
+          <DataTrigger x:Uid="DataTrigger_1" Value="True"
+                       Binding="{Binding DataContext.IsSelected, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Controls:ClickControl}}}">
+            <Setter x:Uid="Setter_21" TargetName="EditModeSwitch" Value="{DynamicResource ListSelectedTextBrush}"
+                    Property="Control.Background"/>
+          </DataTrigger>
+        </ControlTemplate.Triggers>
+      </ControlTemplate>
+      <DataTemplate x:Uid="DataTemplate_1" DataType="{x:Type ResourcePane:ResourceEntryItem}">
+        <Grid x:Name="MainGrid" x:Uid="Grid_2" FrameworkElement.MinHeight="{StaticResource ResourceEntryHeight}"
+              FrameworkElement.ToolTip="{Binding ToolTip, Mode=OneWay}">
+          <Controls:DragDropHelper.DragDropHandler>
+            <Binding/>
+          </Controls:DragDropHelper.DragDropHandler>
+          <Controls:ClickControl x:Uid="Controls:ClickControl_1" FrameworkElement.Style="{StaticResource ResourceClickControlStyle}"
+                                 Grid.Column="0" Automation:AutomationElement.Id="ResourceItemClickControl"
+                                 FrameworkElement.VerticalAlignment="Center">
+            <Border x:Name="BackgroundBorder" x:Uid="Border_3" BorderThickness="0,0,0,1" Background="Transparent"
+                    BorderBrush="Transparent">
+              <Border x:Name="MainBorder" x:Uid="Border_4"
+                      FrameworkElement.Margin="{DynamicResource TreeIndentationMargin}" Background="Transparent"
+                      FrameworkElement.Height="{StaticResource ResourceEntryHeight}">
+                <ResourcePane:ResourceValueHost x:Name="EditorHost" x:Uid="ResourcePane:ResourceValueHost_1" FrameworkElement.Margin="0,1,4,1"
+                                                Grid.Column="1" UIElement.Focusable="false">
+                  <FrameworkElement.DataContext>
+                    <Binding Converter="{StaticResource ResourceValueModelProvider}"/>
+                  </FrameworkElement.DataContext>
+                  <ResourcePane:ResourceValueHost.ResourceValueModel>
+                    <Binding/>
+                  </ResourcePane:ResourceValueHost.ResourceValueModel>
+                  <PropertyEditing:PropertyContainer x:Name="PropertyContainer" x:Uid="PropertyEditing:PropertyContainer_1"
+                                                     FrameworkElement.VerticalAlignment="Stretch" fwui:FocusScopeManager.AllowedFocus="true"
+                                                     DefaultPropertyValueEditor="{DynamicResource PropertyContainerDefaultPropertyValueEditor}"
+                                                     DefaultStandardValuesPropertyValueEditor="{DynamicResource PropertyContainerDefaultStandardValuesPropertyValueEditor}"
+                                                     InlineRowTemplate="{StaticResource PropertyContainerRowTemplate}"
+                                                     ExtendedPopupRowTemplate="{StaticResource RightAlignedExtendedPopupRowTemplate}"
+                                                     FrameworkElement.DataContext="{Binding EditingProperty}">
+                    <Automation:AutomationElement.Id>
+                      <Binding RelativeSource="{RelativeSource Self}" Path="Parent.DataContext.Key" Mode="OneWay"/>
+                    </Automation:AutomationElement.Id>
+                    <PropertyEditing:PropertyContainer.PropertyEntry>
+                      <Binding/>
+                    </PropertyEditing:PropertyContainer.PropertyEntry>
+                  </PropertyEditing:PropertyContainer>
+                </ResourcePane:ResourceValueHost>
+              </Border>
+            </Border>
+          </Controls:ClickControl>
+        </Grid>
+        <DataTemplate.Triggers>
+          <DataTrigger x:Uid="InDragOver" Value="True" Binding="{Binding InDragOver}">
+            <Setter x:Uid="InDragOver2" TargetName="BackgroundBorder" Property="Border.BorderThickness" Value="0,0,0,3"/>
+            <Setter x:Uid="InDragOver3" TargetName="BackgroundBorder" Property="Border.BorderBrush" Value="Black"/>
+          </DataTrigger>
+          <Trigger x:Uid="Trigger_2" Property="UIElement.IsMouseOver" Value="true">
+            <Setter x:Uid="Setter_1605" TargetName="BackgroundBorder" Value="{DynamicResource ListHoverBrush}"
+                    Property="Border.Background"/>
+          </Trigger>
+          <DataTrigger x:Uid="DataTrigger_16" Value="True" Binding="{Binding IsSelected}">
+            <Setter x:Uid="Setter_20" TargetName="BackgroundBorder" Value="{DynamicResource ListSelectedBrush}"
+                    Property="Border.Background"/>
+            <Setter x:Uid="Setter_60" Value="{DynamicResource ListSelectedTextBrush}" Property="TextElement.Foreground"/>
+          </DataTrigger>
+          <Trigger x:Uid="Trigger_10" SourceName="PropertyContainer"
+                   Value="{x:Static PropertyEditing:PropertyContainerEditMode.ExtendedPinned}"
+                   Property="PropertyEditing:PropertyContainer.ActiveEditMode">
+            <Setter x:Uid="Setter_23" TargetName="MainBorder" Property="FrameworkElement.Height" Value="Auto"/>
+          </Trigger>
+        </DataTemplate.Triggers>
+      </DataTemplate>
+      <DataTemplate x:Uid="DataTemplate_2" DataType="{x:Type ResourcePane:TypedResourceItem}">
+        <Controls:ClickControl x:Uid="Controls:ClickControl_2"
+                               FrameworkElement.Style="{StaticResource ResourceItemClickControlStyle}"
+                               Automation:AutomationElement.Id="ResourceItemClickControl"
+                               FrameworkElement.ToolTip="{Binding ToolTip, Mode=OneWay}">
+          <Controls:DragDropHelper.DragDropHandler>
+            <Binding/>
+          </Controls:DragDropHelper.DragDropHandler>
+          <Grid x:Name="MainGrid" x:Uid="Grid_3" Panel.Background="Transparent">
+            <Border x:Name="BackgroundBorder" x:Uid="Border_5" BorderThickness="0,0,0,1" Background="Transparent"
+                    BorderBrush="Transparent">
+              <Grid x:Uid="Grid_4" FrameworkElement.Margin="{DynamicResource TreeIndentationMargin}"
+                    Automation:AutomationElement.Id="{Binding Key, Mode=OneWay}">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition x:Uid="ColumnDefinition_3" Width=".55*"/>
+                  <ColumnDefinition x:Uid="ColumnDefinition_4" Width=".45*"/>
+                </Grid.ColumnDefinitions>
+                <fwve:InlineStringEditor x:Name="InlineEditor" x:Uid="Controls:InlineTextBox_2"
+                                         Automation:AutomationElement.Id="InlineEditor" Grid.Column="0"
+                                         FrameworkElement.VerticalAlignment="Stretch" FrameworkElement.HorizontalAlignment="Left"
+                                         FrameworkElement.Margin="0,1,4,1" IsSelected="{Binding IsSelected, Mode=OneWay}"
+                                         fwve:StringEditor.IsEditing="{Binding IsEditing, Mode=OneWayToSource}"
+                                         fwve:StringEditor.Value="{Binding Key, Mode=TwoWay}"/>
+                <Button x:Uid="Button_1" Automation:AutomationElement.Id="InvokeEdit" FrameworkElement.Margin="0,1,0,1"
+                        FrameworkElement.VerticalAlignment="Center" Grid.Column="1"
+                        FrameworkElement.ToolTip="Edit resource" ButtonBase.Command="{Binding EditCommand}">
+                  <Controls:Icon x:Uid="Image_1" FrameworkElement.Width="15" FrameworkElement.Height="15"
+                                 FrameworkElement.VerticalAlignment="Center">
+                    <Controls:Icon.SourceBrush>
+                      <Binding Path="Type" Converter="{StaticResource IconConverter}"/>
+                    </Controls:Icon.SourceBrush>
+                  </Controls:Icon>
+                </Button>
+              </Grid>
+            </Border>
+          </Grid>
+        </Controls:ClickControl>
+        <DataTemplate.Triggers>
+          <DataTrigger x:Uid="DataTrigger_6" Value="True" Binding="{Binding InDragOver}">
+            <Setter x:Uid="Setter_41" TargetName="BackgroundBorder" Property="Border.BorderThickness" Value="0,0,0,3"/>
+            <Setter x:Uid="Setter_42" TargetName="BackgroundBorder" Property="Border.BorderBrush" Value="Black"/>
+          </DataTrigger>
+          <Trigger x:Uid="Trigger_4" Property="UIElement.IsMouseOver" Value="true">
+            <Setter x:Uid="Setter_25" TargetName="BackgroundBorder" Value="{DynamicResource ListHoverBrush}"
+                    Property="Border.Background"/>
+          </Trigger>
+          <DataTrigger x:Uid="DataTrigger_2" Value="True" Binding="{Binding IsSelected}">
+            <Setter x:Uid="Setter_24" TargetName="BackgroundBorder" Value="{DynamicResource ListSelectedBrush}"
+                    Property="Border.Background"/>
+            <Setter x:Uid="Setter_62" Value="{DynamicResource ListSelectedTextBrush}" Property="TextElement.Foreground"/>
+          </DataTrigger>
+        </DataTemplate.Triggers>
+      </DataTemplate>
+      <DataTemplate x:Uid="DataTemplate_3" DataType="{x:Type ResourcePane:ResourceDictionaryItem}">
+        <Controls:ClickControl x:Uid="Controls:ClickControl_3"
+                               FrameworkElement.Style="{StaticResource ResourceItemClickControlStyle}"
+                               Automation:AutomationElement.Id="ResourceItemClickControl"
+                               FrameworkElement.ToolTip="{Binding ToolTip, Mode=OneWay}">
+          <Controls:DragDropHelper.DragDropHandler>
+            <Binding/>
+          </Controls:DragDropHelper.DragDropHandler>
+          <Grid x:Name="MainGrid" x:Uid="Grid_5" Panel.Background="Transparent"
+                Automation:AutomationElement.Id="{Binding ToolTip, Converter={StaticResource AppendLinkSuffixConverter}, Mode=OneWay}">
+            <Border x:Name="BackgroundBorder" x:Uid="Border_6" BorderThickness="0,0,0,1" Background="Transparent"
+                    BorderBrush="Transparent">
+              <StackPanel x:Uid="StackPanel_1" Orientation="Horizontal"
+                          FrameworkElement.Height="{StaticResource ResourceEntryHeight}" Panel.Background="Transparent"
+                          FrameworkElement.Margin="{DynamicResource TreeIndentationMargin}">
+                <Controls:Icon x:Uid="Image_2" FrameworkElement.Width="12" FrameworkElement.Height="12"
+                               FrameworkElement.VerticalAlignment="Center"
+                               Image.Source="{x:Static ResourcePane:IconConverter.LinkedDocumentIcon}"
+                               FrameworkElement.Margin="-1,0,0,0"/>
+                <TextBlock x:Name="LinkedTo" x:Uid="TextBlock_4" FrameworkElement.Margin="6,0,0,0"
+                           FrameworkElement.VerticalAlignment="Center" FontWeight="Bold" Text="Linked To:"/>
+                <TextBlock x:Name="ItemName" x:Uid="DictionaryTextBlock" FrameworkElement.Margin="6,0,4,0"
+                           FrameworkElement.VerticalAlignment="Center">
+                  <TextBlock.Text>
+                    <Binding Path="DisplayName" Mode="OneWay"/>
+                  </TextBlock.Text>
+                </TextBlock>
+              </StackPanel>
+            </Border>
+          </Grid>
+        </Controls:ClickControl>
+        <DataTemplate.Triggers>
+          <Trigger x:Uid="Trigger_5" Property="UIElement.IsMouseOver" Value="true">
+            <Setter x:Uid="Setter_28" TargetName="BackgroundBorder" Value="{DynamicResource ListHoverBrush}"
+                    Property="Border.Background"/>
+          </Trigger>
+          <DataTrigger x:Uid="DataTrigger_3" Value="True" Binding="{Binding IsSelected}">
+            <Setter x:Uid="Setter_27" TargetName="BackgroundBorder" Value="{DynamicResource ListSelectedBrush}"
+                    Property="Border.Background"/>
+            <Setter x:Uid="Setter_55" TargetName="ItemName" Value="{DynamicResource ListSelectedTextBrush}"
+                    Property="TextBlock.Foreground"/>
+            <Setter x:Uid="Setter_75" TargetName="LinkedTo" Value="{DynamicResource ListSelectedTextBrush}"
+                    Property="TextBlock.Foreground"/>
+          </DataTrigger>
+        </DataTemplate.Triggers>
+      </DataTemplate>
+      <DataTemplate x:Uid="DataTemplate_4" DataType="{x:Type ResourcePane:NodeResourceContainer}">
+        <StackPanel x:Uid="StackPanel_2" Orientation="Vertical"
+                    Automation:AutomationElement.Id="{Binding UniqueId, Mode=OneWay}">
+          <Controls:ClickControl x:Name="RootClickControl" x:Uid="Controls:ClickControl_4"
+                                 FrameworkElement.Style="{StaticResource ResourceClickControlStyle}"
+                                 Automation:AutomationElement.Id="ResourceContainerClickControl"
+                                 LeftDoubleClickCommand="{Binding ToggleExpandCommand}"
+                                 FrameworkElement.ToolTip="{Binding ToolTip, Mode=OneWay}">
+            <Controls:DragDropHelper.DragDropHandler>
+              <Binding/>
+            </Controls:DragDropHelper.DragDropHandler>
+            <Grid x:Uid="Grid_6" Panel.Background="Transparent">
+              <Border x:Name="BackgroundBorder" x:Uid="Border_7" BorderThickness="0,0,0,1"
+                      Background="{DynamicResource RecessedBrush}" BorderBrush="Transparent">
+                <StackPanel x:Name="HeaderStackPanel" x:Uid="StackPanel_3" FrameworkElement.VerticalAlignment="Center"
+                            Orientation="Horizontal" FrameworkElement.Height="{StaticResource ResourceEntryHeight}">
+                  <CheckBox x:Name="ExpandToggleButton" x:Uid="ToggleButton_1"
+                            Automation:AutomationElement.Id="ExpandToggleButton"
+                            FrameworkElement.Style="{StaticResource ExpandCollapseCheckBox}"
+                            FrameworkElement.Margin="{DynamicResource TreeIndentationMargin}"
+                            ToggleButton.IsChecked="{Binding IsExpanded}"
+                            UIElement.Visibility="{Binding ResourceItems.Count, Mode=OneWay, Converter={StaticResource ZeroToVisibilityHiddenConverter}}"/>
+                  <StackPanel x:Uid="StackPanel_4" Orientation="Horizontal">
+                    <Controls:Icon x:Uid="Image_3" FrameworkElement.Width="12" FrameworkElement.Height="12"
+                                   FrameworkElement.VerticalAlignment="Center" FrameworkElement.Margin="0,0,4,0">
+                      <Controls:Icon.SourceBrush>
+                        <Binding Path="Node.Type" Converter="{StaticResource IconConverter}"/>
+                      </Controls:Icon.SourceBrush>
+                    </Controls:Icon>
+                    <TextBlock x:Name="Text" x:Uid="TextBlock_1" FrameworkElement.VerticalAlignment="Center">
+                      <TextBlock.Text>
+                        <Binding Path="Name"/>
+                      </TextBlock.Text>
+                    </TextBlock>
+                  </StackPanel>
+                </StackPanel>
+              </Border>
+            </Grid>
+          </Controls:ClickControl>
+          <ItemsControl x:Name="ItemsControl" x:Uid="ItemsControl_1" UIElement.Focusable="false" Panel.ZIndex="-1">
+            <UIElement.Visibility>
+              <Binding Path="IsExpanded" Converter="{StaticResource BoolToVisibilityCollapsedConverter}"/>
+            </UIElement.Visibility>
+            <ItemsControl.ItemsSource>
+              <Binding Path="ResourceItems"/>
+            </ItemsControl.ItemsSource>
+          </ItemsControl>
+        </StackPanel>
+        <DataTemplate.Triggers>
+          <DataTrigger x:Uid="DataTrigger_10" Value="True" Binding="{Binding InDragOver}">
+            <Setter x:Uid="Setter_52" TargetName="BackgroundBorder" Property="Border.BorderThickness" Value="0,0,0,3"/>
+            <Setter x:Uid="Setter_53" TargetName="BackgroundBorder" Property="Border.BorderBrush" Value="Black"/>
+          </DataTrigger>
+          <Trigger x:Uid="Trigger_6" SourceName="RootClickControl" Property="UIElement.IsMouseOver" Value="true">
+            <Setter x:Uid="Setter_31" TargetName="BackgroundBorder" Value="{DynamicResource ListHoverBrush}"
+                    Property="Border.Background"/>
+          </Trigger>
+          <DataTrigger x:Uid="DataTrigger_4" Value="True" Binding="{Binding IsSelected}">
+            <Setter x:Uid="Setter_30" TargetName="BackgroundBorder" Value="{DynamicResource ListSelectedBrush}"
+                    Property="Border.Background"/>
+            <Setter x:Uid="Setter_57" TargetName="BackgroundBorder" Value="{DynamicResource ListSelectedTextBrush}"
+                    Property="TextElement.Foreground"/>
+          </DataTrigger>
+        </DataTemplate.Triggers>
+      </DataTemplate>
+      <DataTemplate x:Uid="DataTemplate_7" DataType="{x:Type ResourcePane:SelectedElementsResourceObserver}">
+        <StackPanel x:Uid="StackPanel_9" Orientation="Vertical"
+                    Automation:AutomationElement.Id="{Binding UniqueId, Mode=OneWay}">
+          <Controls:ClickControl x:Name="RootClickControl" x:Uid="Controls:ClickControl_7"
+                                 FrameworkElement.Style="{StaticResource ResourceClickControlStyle}"
+                                 Automation:AutomationElement.Id="ResourceContainerClickControl"
+                                 LeftDoubleClickCommand="{Binding ToggleExpandCommand}"
+                                 FrameworkElement.ToolTip="{Binding ToolTip, Mode=OneWay}">
+            <Controls:DragDropHelper.DragDropHandler>
+              <Binding/>
+            </Controls:DragDropHelper.DragDropHandler>
+            <Grid x:Uid="Grid_11" Panel.Background="Transparent">
+              <Border x:Name="BackgroundBorder" x:Uid="Border_13" BorderThickness="0,0,0,1"
+                      Background="{DynamicResource RecessedBrush}" BorderBrush="Transparent">
+                <StackPanel x:Name="HeaderStackPanel" x:Uid="StackPanel_10" FrameworkElement.VerticalAlignment="Center"
+                            Orientation="Horizontal" FrameworkElement.Height="{StaticResource ResourceEntryHeight}">
+                  <CheckBox x:Name="ExpandToggleButton" x:Uid="CheckBox_1" Automation:AutomationElement.Id="ExpandToggleButton"
+                            FrameworkElement.Style="{StaticResource ExpandCollapseCheckBox}"
+                            UIElement.Visibility="{Binding ResourceItems.Count, Mode=OneWay, Converter={StaticResource ZeroToVisibilityHiddenConverter}}"
+                            ToggleButton.IsChecked="{Binding IsExpanded}"/>
+                  <StackPanel x:Uid="StackPanel_11" Orientation="Horizontal">
+                    <Controls:Icon x:Uid="Image_5" FrameworkElement.Width="12" FrameworkElement.Height="12"
+                                   FrameworkElement.Margin="0,0,4,0" FrameworkElement.VerticalAlignment="Center">
+                      <Controls:Icon.SourceBrush>
+                        <Binding Path="Type" Converter="{StaticResource IconConverter}"/>
+                      </Controls:Icon.SourceBrush>
+                    </Controls:Icon>
+                    <TextBlock x:Name="Text" x:Uid="TextBlock_3" FrameworkElement.VerticalAlignment="Center">
+                      <TextBlock.Text>
+                        <Binding Path="Name"/>
+                      </TextBlock.Text>
+                    </TextBlock>
+                  </StackPanel>
+                </StackPanel>
+              </Border>
+            </Grid>
+          </Controls:ClickControl>
+          <ItemsControl x:Name="ItemsControl" x:Uid="ItemsControl_3" UIElement.Focusable="false" Panel.ZIndex="-1"
+                        FrameworkElement.Margin="0,0,0,0">
+            <UIElement.Visibility>
+              <Binding Path="IsExpanded" Converter="{StaticResource BoolToVisibilityCollapsedConverter}"/>
+            </UIElement.Visibility>
+            <ItemsControl.ItemsSource>
+              <Binding Path="ResourceItems"/>
+            </ItemsControl.ItemsSource>
+          </ItemsControl>
+        </StackPanel>
+        <DataTemplate.Triggers>
+          <DataTrigger x:Uid="DataTrigger_11" Value="True" Binding="{Binding InDragOver}">
+            <Setter x:Uid="Setter_65" TargetName="BackgroundBorder" Property="Border.BorderThickness" Value="0,0,0,3"/>
+            <Setter x:Uid="Setter_66" TargetName="BackgroundBorder" Property="Border.BorderBrush" Value="Black"/>
+          </DataTrigger>
+          <Trigger x:Uid="Trigger_11" SourceName="RootClickControl" Property="UIElement.IsMouseOver" Value="true">
+            <Setter x:Uid="Setter_67" TargetName="BackgroundBorder" Value="{DynamicResource ListHoverBrush}"
+                    Property="Border.Background"/>
+          </Trigger>
+          <DataTrigger x:Uid="DataTrigger_12" Value="True" Binding="{Binding IsSelected}">
+            <Setter x:Uid="Setter_69" TargetName="BackgroundBorder" Value="{DynamicResource ListSelectedBrush}"
+                    Property="Border.Background"/>
+            <Setter x:Uid="Setter_70" TargetName="BackgroundBorder" Value="{DynamicResource ListSelectedTextBrush}"
+                    Property="TextElement.Foreground"/>
+          </DataTrigger>
+        </DataTemplate.Triggers>
+      </DataTemplate>
+      <DataTemplate x:Uid="DataTemplate_5" DataType="{x:Type ResourcePane:DocumentResourceContainer}">
+        <StackPanel x:Uid="StackPanel_5" Orientation="Vertical"
+                    Automation:AutomationElement.Id="{Binding Name, Mode=OneWay}">
+          <Controls:ClickControl x:Name="RootClickControl" x:Uid="Controls:ClickControl_5"
+                                 FrameworkElement.Style="{StaticResource ResourceClickControlStyle}"
+                                 Automation:AutomationElement.Id="ResourceContainerClickControl"
+                                 LeftDoubleClickCommand="{Binding ToggleExpandCommand}"
+                                 FrameworkElement.ToolTip="{Binding ToolTip, Mode=OneWay}">
+            <Controls:DragDropHelper.DragDropHandler>
+              <Binding/>
+            </Controls:DragDropHelper.DragDropHandler>
+            <Grid x:Uid="Grid_7" Panel.Background="Transparent">
+              <Border x:Name="BackgroundBorder" x:Uid="Border_8" BorderThickness="0,0,0,1"
+                      Background="{DynamicResource RecessedBrush}" BorderBrush="Transparent">
+                <StackPanel x:Name="HeaderStackPanel" x:Uid="StackPanel_6" FrameworkElement.VerticalAlignment="Center"
+                            Orientation="Horizontal" FrameworkElement.Height="{StaticResource ResourceEntryHeight}">
+                  <CheckBox x:Name="ExpandToggleButton" x:Uid="ToggleButton_2"
+                            FrameworkElement.Style="{StaticResource ExpandCollapseCheckBox}"
+                            UIElement.Visibility="{Binding ResourceItems.Count, Mode=OneWay, Converter={StaticResource ZeroToVisibilityHiddenConverter}}"
+                            ToggleButton.IsChecked="{Binding IsExpanded}"/>
+                  <StackPanel x:Uid="StackPanel_7" Orientation="Horizontal">
+                    <Controls:Icon x:Uid="Image_4" FrameworkElement.Width="12" FrameworkElement.Height="12"
+                                   FrameworkElement.Margin="0,0,4,0" FrameworkElement.VerticalAlignment="Center"
+                                   Image.Source="{x:Static ResourcePane:IconConverter.DocumentIcon}"/>
+                    <TextBlock x:Name="Text" x:Uid="TextBlock_2" FrameworkElement.VerticalAlignment="Center">
+                      <TextBlock.Text>
+                        <Binding Path="Name"/>
+                      </TextBlock.Text>
+                    </TextBlock>
+                    <Controls:Icon x:Name="Icon" x:Uid="Icon_1" FrameworkElement.Width="12" FrameworkElement.Height="12"
+                                   Image.Source="pack://application:,,,/Microsoft.Expression.Framework;Component/Resources/Icons/shell_warning_on_12x12.png"
+                                   FrameworkElement.Margin="6 2 6 0" FrameworkElement.VerticalAlignment="Center">
+                      <UIElement.Visibility>
+                        <Binding Path="DocumentHasErrors" Mode="OneWay"
+                                 Converter="{StaticResource BoolToVisibilityCollapsedConverter}"/>
+                      </UIElement.Visibility>
+                    </Controls:Icon>
+                  </StackPanel>
+                </StackPanel>
+              </Border>
+            </Grid>
+          </Controls:ClickControl>
+          <ItemsControl x:Name="ItemsControl" x:Uid="ItemsControl_2" UIElement.Focusable="false" Panel.ZIndex="-1"
+                        FrameworkElement.Margin="0,0,0,0">
+            <UIElement.Visibility>
+              <Binding Path="IsExpanded" Converter="{StaticResource BoolToVisibilityCollapsedConverter}"/>
+            </UIElement.Visibility>
+            <ItemsControl.ItemsSource>
+              <Binding Path="ResourceItems"/>
+            </ItemsControl.ItemsSource>
+          </ItemsControl>
+        </StackPanel>
+        <DataTemplate.Triggers>
+          <DataTrigger x:Uid="DataTrigger_9" Value="True" Binding="{Binding InDragOver}">
+            <Setter x:Uid="Setter_50" TargetName="BackgroundBorder" Property="Border.BorderThickness" Value="0,0,0,3"/>
+            <Setter x:Uid="Setter_51" TargetName="BackgroundBorder" Property="Border.BorderBrush" Value="Black"/>
+          </DataTrigger>
+          <Trigger x:Uid="Trigger_7" SourceName="RootClickControl" Property="UIElement.IsMouseOver" Value="true">
+            <Setter x:Uid="Setter_34" TargetName="BackgroundBorder" Value="{DynamicResource ListHoverBrush}"
+                    Property="Border.Background"/>
+          </Trigger>
+          <DataTrigger x:Uid="DataTrigger_5" Value="True" Binding="{Binding IsSelected}">
+            <Setter x:Uid="Setter_33" TargetName="BackgroundBorder" Value="{DynamicResource ListSelectedBrush}"
+                    Property="Border.Background"/>
+            <Setter x:Uid="Setter_59" TargetName="BackgroundBorder" Value="{DynamicResource ListSelectedTextBrush}"
+                    Property="TextElement.Foreground"/>
+          </DataTrigger>
+        </DataTemplate.Triggers>
+      </DataTemplate>
+      <DataTemplate x:Uid="DataTemplate_8" DataType="{x:Type ResourcePane:ActiveDocumentWrapper}">
+        <StackPanel x:Uid="StackPanel_12" Orientation="Vertical"
+                    Automation:AutomationElement.Id="{Binding Name, Mode=OneWay}">
+          <Controls:ClickControl x:Name="RootClickControl" x:Uid="Controls:ClickControl_8"
+                                 FrameworkElement.Style="{StaticResource ResourceClickControlStyle}"
+                                 Automation:AutomationElement.Id="ResourceContainerClickControl"
+                                 LeftDoubleClickCommand="{Binding ToggleExpandCommand}"
+                                 FrameworkElement.ToolTip="{Binding ToolTip, Mode=OneWay}"
+                                 UIElement.Visibility="{Binding IsEnabled, Converter={StaticResource BoolToVisibilityCollapsedConverter}}">
+            <Grid x:Uid="Grid_12" Panel.Background="Transparent">
+              <Border x:Name="BackgroundBorder" x:Uid="Border_15" BorderThickness="0,0,0,1"
+                      Background="{DynamicResource RecessedBrush}" BorderBrush="Transparent">
+                <StackPanel x:Name="HeaderStackPanel" x:Uid="StackPanel_13" FrameworkElement.VerticalAlignment="Center"
+                            Orientation="Horizontal" FrameworkElement.Height="{StaticResource ResourceEntryHeight}">
+                  <CheckBox x:Name="ExpandToggleButton" x:Uid="CheckBox_2"
+                            FrameworkElement.Style="{StaticResource ExpandCollapseCheckBox}"
+                            UIElement.Visibility="{Binding Children.Count, Mode=OneWay, Converter={StaticResource ZeroToVisibilityHiddenConverter}}"
+                            ToggleButton.IsChecked="{Binding IsExpanded}"/>
+                  <StackPanel x:Uid="StackPanel_14" Orientation="Horizontal">
+                    <Controls:Icon x:Uid="Image_6" FrameworkElement.Width="12" FrameworkElement.Height="12"
+                                   FrameworkElement.Margin="0,0,4,0" FrameworkElement.VerticalAlignment="Center"
+                                   Image.Source="{x:Static ResourcePane:IconConverter.DocumentIcon}"/>
+                    <TextBlock x:Name="Text" x:Uid="TextBlock_5" FrameworkElement.VerticalAlignment="Center">
+                      <TextBlock.Text>
+                        <Binding Path="Name"/>
+                      </TextBlock.Text>
+                    </TextBlock>
+                    <Controls:Icon x:Name="Icon" x:Uid="Controls:Icon_1" FrameworkElement.Width="12" FrameworkElement.Height="12"
+                                   Image.Source="pack://application:,,,/Microsoft.Expression.Framework;Component/Resources/Icons/shell_warning_on_12x12.png"
+                                   FrameworkElement.Margin="6 2 6 0" FrameworkElement.VerticalAlignment="Center">
+                      <UIElement.Visibility>
+                        <Binding Path="DocumentHasErrors" Mode="OneWay"
+                                 Converter="{StaticResource BoolToVisibilityCollapsedConverter}"/>
+                      </UIElement.Visibility>
+                    </Controls:Icon>
+                  </StackPanel>
+                </StackPanel>
+              </Border>
+            </Grid>
+          </Controls:ClickControl>
+          <ItemsControl x:Name="ItemsControl" x:Uid="ItemsControl_4" UIElement.Focusable="false" Panel.ZIndex="-1"
+                        FrameworkElement.Margin="0,0,0,0">
+            <UIElement.Visibility>
+              <Binding Path="IsExpanded" Converter="{StaticResource BoolToVisibilityCollapsedConverter}"/>
+            </UIElement.Visibility>
+            <ItemsControl.ItemsSource>
+              <Binding Path="Children"/>
+            </ItemsControl.ItemsSource>
+          </ItemsControl>
+        </StackPanel>
+        <DataTemplate.Triggers>
+          <DataTrigger x:Uid="DataTrigger_13" Value="True" Binding="{Binding InDragOver}">
+            <Setter x:Uid="Setter_76" TargetName="BackgroundBorder" Property="Border.BorderThickness" Value="0,0,0,3"/>
+            <Setter x:Uid="Setter_77" TargetName="BackgroundBorder" Property="Border.BorderBrush" Value="Black"/>
+          </DataTrigger>
+          <Trigger x:Uid="Trigger_14" SourceName="RootClickControl" Property="UIElement.IsMouseOver" Value="true">
+            <Setter x:Uid="Setter_78" TargetName="BackgroundBorder" Value="{DynamicResource ListHoverBrush}"
+                    Property="Border.Background"/>
+          </Trigger>
+          <DataTrigger x:Uid="DataTrigger_14" Value="True" Binding="{Binding IsSelected}">
+            <Setter x:Uid="Setter_80" TargetName="BackgroundBorder" Value="{DynamicResource ListSelectedBrush}"
+                    Property="Border.Background"/>
+            <Setter x:Uid="Setter_81" TargetName="BackgroundBorder" Value="{DynamicResource ListSelectedTextBrush}"
+                    Property="TextElement.Foreground"/>
+          </DataTrigger>
+        </DataTemplate.Triggers>
+      </DataTemplate>
+      <Grid x:Key="PaletteHeaderContent" x:Uid="Grid_51" FrameworkElement.MinWidth="100"
+            FrameworkElement.Margin="2,0,2,0">
+        <Border x:Uid="Border_17" FrameworkElement.Height="18" FrameworkElement.HorizontalAlignment="Left"
+                BorderBrush="{DynamicResource FlatToggleNormalBorderBrush}" BorderThickness="1,1,1,1">
+          <Grid x:Uid="Grid_52">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition x:Uid="ColumnDefinition_16" Width="Auto"/>
+              <ColumnDefinition x:Uid="ColumnDefinition_18" Width="Auto"/>
+              <ColumnDefinition x:Uid="ColumnDefinition_19" Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Controls:WorkaroundRadioButton x:Uid="Controls:WorkaroundRadioButton_1" Automation:AutomationElement.Id="ShowAllResourcesButton"
+                                            Grid.Column="0" FrameworkElement.Width="20"
+                                            FrameworkElement.Style="{StaticResource FlatToggleIconButtonStyle}"
+                                            Control.BorderThickness="1,1,0,1"
+                                            Controls:Icon.SelectedImage="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Resources/ShowAllResources_on.png"
+                                            Controls:Icon.DeselectedImage="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Resources/ShowAllResources_off.png"
+                                            FrameworkElement.ToolTip="Show all resources"
+                                            ToggleButton.IsChecked="{Binding IsFiltering, Converter={StaticResource NotConverter}, Mode=TwoWay}">
+              <UIElement.IsEnabled>
+                <MultiBinding x:Uid="MultiBinding_2" Mode="OneWay" Converter="{StaticResource AndConverter}">
+                  <Binding x:Uid="Binding_3" Path="HasTargetProject"/>
+                  <Binding x:Uid="Binding_4" Path="IsPaneEnabled"/>
+                </MultiBinding>
+              </UIElement.IsEnabled>
+            </Controls:WorkaroundRadioButton>
+            <Border x:Uid="Border_18" BorderBrush="{DynamicResource FlatToggleNormalBorderBrush}"
+                    BorderThickness="1,0,0,0" Grid.Column="1"/>
+            <Controls:WorkaroundRadioButton x:Uid="Controls:WorkaroundRadioButton_2"
+                                            Automation:AutomationElement.Id="FilterUsedResourcesButton" Grid.Column="2"
+                                            FrameworkElement.Width="20" FrameworkElement.Style="{StaticResource FlatToggleIconButtonStyle}"
+                                            Control.BorderThickness="0,1,1,1"
+                                            Controls:Icon.SelectedImage="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Resources/FilterUsedResources_on.png"
+                                            Controls:Icon.DeselectedImage="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Resources/FilterUsedResources_off.png"
+                                            FrameworkElement.ToolTip="Show resources used by selected element">
+              <ToggleButton.IsChecked>
+                <Binding Path="IsFiltering" Mode="TwoWay"/>
+              </ToggleButton.IsChecked>
+              <UIElement.IsEnabled>
+                <MultiBinding x:Uid="MultiBinding_3" Mode="OneWay" Converter="{StaticResource AndConverter}">
+                  <Binding x:Uid="Binding_5" Path="HasTargetProject"/>
+                  <Binding x:Uid="Binding_6" Path="IsPaneEnabled"/>
+                </MultiBinding>
+              </UIElement.IsEnabled>
+            </Controls:WorkaroundRadioButton>
+          </Grid>
+        </Border>
+        <Button x:Uid="AddNewResourceDictionaryButton" FrameworkElement.Margin="0,0,1,0"
+                FrameworkElement.Width="16" FrameworkElement.Height="16"
+                FrameworkElement.HorizontalAlignment="Right" FrameworkElement.VerticalAlignment="Center"
+                FrameworkElement.Style="{StaticResource FlatIconButtonStyle}"
+                Controls:Icon.SelectedImage="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Resources/AddNewDictionary_on.png"
+                Controls:Icon.DeselectedImage="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Resources/AddNewDictionary_off.png"
+                Automation:AutomationElement.Id="AddNewResourceDictionaryButton"
+                FrameworkElement.ToolTip="Create new resource dictionary"
+                ButtonBase.Command="{Binding AddNewResourceDictionaryCommand}"
+                UIElement.IsEnabled="{Binding IsEnabledNewDictionary}"/>
+      </Grid>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <ResourcePane:DragDropScrollViewer x:Name="ResourceScrollViewer" x:Uid="ScrollViewer_1"
+                                     Automation:AutomationElement.Id="ResourceScrollViewer"
+                                     ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                                     ScrollViewer.VerticalScrollBarVisibility="Auto" Control.Background="Transparent">
+    <ItemsControl FrameworkElement.Name="ResourceItemSelector" x:Uid="ResourceItemSelector"
+                  UIElement.Focusable="false">
+      <ItemsControl.ItemsSource>
+        <Binding Path="ResourceContainers"/>
+      </ItemsControl.ItemsSource>
+    </ItemsControl>
+  </ResourcePane:DragDropScrollViewer>
+</ResourcePane:ResourcePane>

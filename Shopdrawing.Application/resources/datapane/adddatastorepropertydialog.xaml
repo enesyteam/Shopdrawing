@@ -1,0 +1,74 @@
+<Border xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:DataPane="clr-namespace:Microsoft.Expression.DesignSurface.UserInterface.DataPane"
+        xmlns:Framework="clr-namespace:Microsoft.Expression.Framework.Controls;assembly=Microsoft.Expression.Framework"
+        xmlns:Databinding="clr-namespace:Microsoft.Expression.Framework.Data;assembly=Microsoft.Expression.Framework"
+        xmlns:ui="clr-namespace:Microsoft.Expression.DesignSurface.UserInterface"
+        xmlns:tlui="clr-namespace:Microsoft.Expression.DesignSurface.UserInterface.Timeline.UI"
+        xmlns:automation="clr-namespace:Microsoft.Expression.Framework.Diagnostics;assembly=Microsoft.Expression.Framework"
+        xmlns:fwdata="clr-namespace:Microsoft.Expression.Framework.Data;assembly=Microsoft.Expression.Framework"
+        xmlns:ValueEditors="clr-namespace:Microsoft.Expression.Framework.ValueEditors;assembly=Microsoft.Expression.Framework"
+        FrameworkElement.Name="AddDataStorePropertyDialog" x:Uid="AddDataStorePropertyDialog"
+        FrameworkElement.Style="{DynamicResource DialogRootContainer}">
+  <FrameworkElement.Resources>
+    <fwdata:NullToBoolConverter x:Key="NullToBoolConverter" x:Uid="fwdata:NullToBoolConverter_1"/>
+    <DataTemplate x:Key="DataStoresDataTemplate" x:Uid="DataTemplate_1">
+      <TextBlock x:Uid="TextBlock_1">
+        <TextBlock.Text>
+          <Binding/>
+        </TextBlock.Text>
+      </TextBlock>
+    </DataTemplate>
+  </FrameworkElement.Resources>
+  <Grid x:Uid="Grid_5">
+    <Grid.RowDefinitions>
+      <RowDefinition x:Uid="RowDefinition_3" Height="*"/>
+      <RowDefinition x:Uid="RowDefinition_4" Height="Auto"/>
+    </Grid.RowDefinitions>
+    <Grid x:Uid="Grid_6" Row="0" IsSharedSizeScope="true">
+      <Grid.RowDefinitions>
+        <RowDefinition x:Uid="RowDefinition_5" Height="Auto"/>
+        <RowDefinition x:Uid="RowDefinition_6" Height="*"/>
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition x:Uid="ColumnDefinition_1" Width="Auto"/>
+        <ColumnDefinition x:Uid="ColumnDefinition_2" Width="*"/>
+      </Grid.ColumnDefinitions>
+      <Label x:Uid="Label_1" Grid.Row="0" Grid.Column="0" ContentControl.Content="Property name"
+             FrameworkElement.Margin="2,0" FrameworkElement.HorizontalAlignment="Right"
+             FrameworkElement.VerticalAlignment="Center">
+        <Label.Target>
+          <Binding ElementName="ZoomGestureChoiceEditor"/>
+        </Label.Target>
+      </Label>
+      <ValueEditors:StringEditor x:Name="PropertyName" x:Uid="PropertyName" automation:AutomationElement.Id="PropertyName"
+                                 Grid.Column="1" Grid.Row="0" FrameworkElement.Margin="{StaticResource DefaultLeftMediumTopMargin}"
+                                 FrameworkElement.Width="150" FrameworkElement.HorizontalAlignment="Left" TextBox.MaxLength="150"
+                                 Value="{Binding PropertyName}"/>
+      <Label x:Uid="Label_2" Grid.Row="1" Grid.Column="0" ContentControl.Content="Data Store"
+             FrameworkElement.Margin="2,0" FrameworkElement.HorizontalAlignment="Right"
+             FrameworkElement.VerticalAlignment="Center">
+        <Label.Target>
+          <Binding ElementName="ZoomGestureChoiceEditor"/>
+        </Label.Target>
+      </Label>
+      <ValueEditors:ChoiceEditor x:Uid="ValueEditors:ChoiceEditor_1" Grid.Row="1" Grid.Column="1"
+                                 FrameworkElement.HorizontalAlignment="Stretch" ViewType="Combo"
+                                 FrameworkElement.Margin="{StaticResource DefaultLeftTopMargin}"
+                                 ItemTemplate="{StaticResource DataStoresDataTemplate}" IsEditable="false"
+                                 UIElement.Focusable="true" UseItemTemplateForSelection="true"
+                                 automation:AutomationElement.Id="DataStorePickerChoiceEditor" Value="{Binding SelectedDataStore}"
+                                 ItemsSource="{Binding DataStoreNames}"/>
+    </Grid>
+    <UniformGrid x:Uid="StackPanel_7" FrameworkElement.Margin="{StaticResource ExtraLargeTopMargin}" Grid.Row="1"
+                 FrameworkElement.HorizontalAlignment="Right" Rows="1">
+      <Button FrameworkElement.Name="AcceptButton" x:Uid="AcceptButton"
+              automation:AutomationElement.Id="AcceptButton"
+              FrameworkElement.Style="{StaticResource DialogButton}">OK</Button>
+      <Button FrameworkElement.Name="CancelButton" x:Uid="CancelButton"
+              automation:AutomationElement.Id="CancelButton"
+              FrameworkElement.Style="{StaticResource DialogButton}"
+              FrameworkElement.Margin="{StaticResource DefaultLeftMargin}" IsCancel="true">Cancel</Button>
+    </UniformGrid>
+  </Grid>
+</Border>

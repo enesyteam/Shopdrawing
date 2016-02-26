@@ -1,0 +1,33 @@
+<Border xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:automation="clr-namespace:Microsoft.Expression.Framework.Diagnostics;assembly=Microsoft.Expression.Framework"
+        x:Name="InsertHyperlinkDialog" x:Uid="InsertHyperlinkDialog" FrameworkElement.Width="400"
+        FrameworkElement.Style="{StaticResource DialogRootContainer}">
+  <Grid x:Uid="Grid_4">
+    <Grid.RowDefinitions>
+      <RowDefinition x:Uid="RowDefinition_1" Height="Auto"/>
+      <RowDefinition x:Uid="RowDefinition_2" Height="Auto"/>
+      <RowDefinition x:Uid="RowDefinition_3" Height="Auto"/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition x:Uid="ColumnDefinition_1" Width="Auto"/>
+      <ColumnDefinition x:Uid="ColumnDefinition_2"/>
+    </Grid.ColumnDefinitions>
+    <Label x:Uid="TextBlock_1" Grid.Row="0" Grid.Column="0" FrameworkElement.HorizontalAlignment="Right">Hyperlink Text</Label>
+    <Label x:Uid="TextBlock_2" Grid.Row="1" Grid.Column="0" FrameworkElement.HorizontalAlignment="Right"
+           FrameworkElement.Margin="{DynamicResource DefaultTopMargin}">Hyperlink URI</Label>
+    <TextBox x:Uid="TextBox_1" automation:AutomationElement.Id="HyperlinkText" Grid.Row="0" Grid.Column="1"
+             FrameworkElement.Margin="{DynamicResource DefaultLeftMargin}" Text="{Binding Text}"/>
+    <TextBox x:Uid="TextBox_2" automation:AutomationElement.Id="HyperlinkUri" Grid.Row="1" Grid.Column="1"
+             FrameworkElement.Margin="{DynamicResource DefaultLeftTopMargin}" Text="{Binding NavigateUri}"/>
+    <UniformGrid x:Uid="UniformGrid_1" FrameworkElement.HorizontalAlignment="Right" Rows="1"
+                 FrameworkElement.Margin="{DynamicResource ExtraLargeTopMargin}" Grid.Row="2" Grid.ColumnSpan="2">
+      <Button FrameworkElement.Name="AcceptButton" x:Uid="AcceptButton"
+              FrameworkElement.Style="{DynamicResource DialogButton}"
+              FrameworkElement.Margin="{DynamicResource DefaultLeftMargin}" IsDefault="true">OK</Button>
+      <Button FrameworkElement.Name="CancelButton" x:Uid="CancelButton"
+              FrameworkElement.Style="{DynamicResource DialogButton}"
+              FrameworkElement.Margin="{DynamicResource DefaultLeftMargin}" IsCancel="true">Cancel</Button>
+    </UniformGrid>
+  </Grid>
+</Border>

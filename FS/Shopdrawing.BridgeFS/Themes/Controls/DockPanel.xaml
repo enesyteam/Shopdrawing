@@ -1,0 +1,8 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="{x:Type DockPanel}">
+        <Setter Property="Background" Value="#0d0d0d">
+            
+        </Setter>
+    </Style>
+</ResourceDictionary>

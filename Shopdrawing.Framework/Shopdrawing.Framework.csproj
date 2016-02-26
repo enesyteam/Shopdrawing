@@ -1,0 +1,1197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shopdrawing.Framework</RootNamespace>
+    <AssemblyName>Shopdrawing.Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectGuid>{886371DD-23B6-434D-BDB6-81606416348F}</ProjectGuid>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>shopdrawing.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Expression.Licensing">
+      <HintPath>lib\Microsoft.Expression.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Properties\ExceptionStringTable.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExceptionStringTable.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Expression\Framework\ActivateCommand.cs" />
+    <Compile Include="Expression\Framework\ActivateResponse.cs" />
+    <Compile Include="Expression\Framework\ActivationDialogCreator.cs" />
+    <Compile Include="Expression\Framework\ActivationDialog\ActivationDialog.cs" />
+    <Compile Include="Expression\Framework\ActivationDialog\DataAccess\ActivationDataRepository.cs" />
+    <Compile Include="Expression\Framework\ActivationDialog\DataAccess\ActivationInfo.cs" />
+    <Compile Include="Expression\Framework\ActivationDialog\DataAccess\LocationInformation.cs" />
+    <Compile Include="Expression\Framework\ActivationDialog\DataAccess\PhoneActivationData.cs" />
+    <Compile Include="Expression\Framework\ActivationDialog\DataAccess\PhoneNumberInformation.cs" />
+    <Compile Include="Expression\Framework\ActivationDialog\DataAccess\PhoneNumberStore.cs" />
+    <Compile Include="Expression\Framework\ActivationDialog\ViewModel\ActivationWizardAction.cs" />
+    <Compile Include="Expression\Framework\ActivationDialog\ViewModel\ActivationWizardPageViewModelBase.cs" />
+    <Compile Include="Expression\Framework\ActivationDialog\ViewModel\ActivationWizardViewModel.cs" />
+    <Compile Include="Expression\Framework\ActivationDialog\ViewModel\ChooseActivationTypePageViewModel.cs" />
+    <Compile Include="Expression\Framework\ActivationDialog\ViewModel\InstallationIdPageViewModel.cs" />
+    <Compile Include="Expression\Framework\ActivationDialog\ViewModel\InternetActivationPageViewModel.cs" />
+    <Compile Include="Expression\Framework\ActivationDialog\ViewModel\PhoneNumbersPageViewModel.cs" />
+    <Compile Include="Expression\Framework\ActivationDialog\ViewModel\ValidationIdEntryPageViewModel.cs" />
+    <Compile Include="Expression\Framework\ActivationDialog\Views\ChooseActivationTypePageView.cs" />
+    <Compile Include="Expression\Framework\ActivationDialog\Views\InstallationIdPageView.cs" />
+    <Compile Include="Expression\Framework\ActivationDialog\Views\InternetActivationPageView.cs" />
+    <Compile Include="Expression\Framework\ActivationDialog\Views\PhoneNumbersPageView.cs" />
+    <Compile Include="Expression\Framework\ActivationDialog\Views\ValidationIdEntryPageView.cs" />
+    <Compile Include="Expression\Framework\ActivationGraceExpiredDialog.cs" />
+    <Compile Include="Expression\Framework\ActivationGraceExpiredDialogCreator.cs" />
+    <Compile Include="Expression\Framework\ActivationStatus.cs" />
+    <Compile Include="Expression\Framework\AsyncProcess.cs" />
+    <Compile Include="Expression\Framework\AsyncProcessResult.cs" />
+    <Compile Include="Expression\Framework\AsyncQueueProcess.cs" />
+    <Compile Include="Expression\Framework\BackgroundWorkerAsyncMechanism.cs" />
+    <Compile Include="Expression\Framework\BackgroundWorkMode.cs" />
+    <Compile Include="Expression\Framework\Clipboard\ClipboardService.cs" />
+    <Compile Include="Expression\Framework\Clipboard\Container.cs" />
+    <Compile Include="Expression\Framework\Clipboard\CopyBuffer.cs" />
+    <Compile Include="Expression\Framework\Clipboard\CopyItem.cs" />
+    <Compile Include="Expression\Framework\Clipboard\IClipboard.cs" />
+    <Compile Include="Expression\Framework\Clipboard\MemoryCopyItem.cs" />
+    <Compile Include="Expression\Framework\Clipboard\MetadataCopyItem.cs" />
+    <Compile Include="Expression\Framework\CLSIDGuid.cs" />
+    <Compile Include="Expression\Framework\Collections\ArrayHelper.cs" />
+    <Compile Include="Expression\Framework\Collections\IIndexedHashSet`1.cs" />
+    <Compile Include="Expression\Framework\Collections\IndexedHashSet`1.cs" />
+    <Compile Include="Expression\Framework\Collections\ReadOnlyIndexedHashSet`1.cs" />
+    <Compile Include="Expression\Framework\Collections\SortedArrayList`1.cs" />
+    <Compile Include="Expression\Framework\CommandLineService.cs" />
+    <Compile Include="Expression\Framework\Commands\AboutCommand.cs" />
+    <Compile Include="Expression\Framework\Commands\CheckCommandBase.cs" />
+    <Compile Include="Expression\Framework\Commands\Command.cs" />
+    <Compile Include="Expression\Framework\Commands\CommandChangedEventArgs.cs" />
+    <Compile Include="Expression\Framework\Commands\CommandChangedEventHandler.cs" />
+    <Compile Include="Expression\Framework\Commands\CommandCollection.cs" />
+    <Compile Include="Expression\Framework\Commands\CommandExecutionEventArgs.cs" />
+    <Compile Include="Expression\Framework\Commands\CommandExecutionEventHandler.cs" />
+    <Compile Include="Expression\Framework\Commands\CommandInvocationSource.cs" />
+    <Compile Include="Expression\Framework\Commands\CommandService.cs" />
+    <Compile Include="Expression\Framework\Commands\CommandTarget.cs" />
+    <Compile Include="Expression\Framework\Commands\DynamicMenuCommand.cs" />
+    <Compile Include="Expression\Framework\Commands\ICommand.cs" />
+    <Compile Include="Expression\Framework\Commands\ICommandCollection.cs" />
+    <Compile Include="Expression\Framework\Commands\ICommandService.cs" />
+    <Compile Include="Expression\Framework\Commands\ICommandTarget.cs" />
+    <Compile Include="Expression\Framework\Commands\Undo\IUndoService.cs" />
+    <Compile Include="Expression\Framework\Commands\Undo\IUndoTransaction.cs" />
+    <Compile Include="Expression\Framework\Commands\Undo\IUndoUnit.cs" />
+    <Compile Include="Expression\Framework\Commands\Undo\IUndoUnitContainer.cs" />
+    <Compile Include="Expression\Framework\Commands\Undo\UndoService.cs" />
+    <Compile Include="Expression\Framework\Commands\Undo\UndoStackChangedEventArgs.cs" />
+    <Compile Include="Expression\Framework\Commands\Undo\UndoStackChangedEventHandler.cs" />
+    <Compile Include="Expression\Framework\Commands\Undo\UndoStackChangeType.cs" />
+    <Compile Include="Expression\Framework\Commands\Undo\UndoUnit.cs" />
+    <Compile Include="Expression\Framework\Commands\Undo\UndoUnitContainer.cs" />
+    <Compile Include="Expression\Framework\Commands\Undo\UndoUnitMergeResult.cs" />
+    <Compile Include="Expression\Framework\CommonDialogCreator.cs" />
+    <Compile Include="Expression\Framework\Configuration\ConfigurationObject.cs" />
+    <Compile Include="Expression\Framework\Configuration\ConfigurationObjectCollection.cs" />
+    <Compile Include="Expression\Framework\Configuration\ConfigurationService.cs" />
+    <Compile Include="Expression\Framework\Configuration\ConfigurationServiceBase.cs" />
+    <Compile Include="Expression\Framework\Configuration\IConfigurationObject.cs" />
+    <Compile Include="Expression\Framework\Configuration\IConfigurationObjectCollection.cs" />
+    <Compile Include="Expression\Framework\Configuration\IConfigurationService.cs" />
+    <Compile Include="Expression\Framework\Configuration\IConfigurationSite.cs" />
+    <Compile Include="Expression\Framework\Configuration\IOptionsDialogService.cs" />
+    <Compile Include="Expression\Framework\Configuration\IOptionsPage.cs" />
+    <Compile Include="Expression\Framework\Configuration\IOptionsPageCollection.cs" />
+    <Compile Include="Expression\Framework\Configuration\OptionsDialogService.cs" />
+    <Compile Include="Expression\Framework\Configuration\SpecialFolderManager.cs" />
+    <Compile Include="Expression\Framework\Controls\AnimatedExpander.cs" />
+    <Compile Include="Expression\Framework\Controls\ClearableTextBox.cs" />
+    <Compile Include="Expression\Framework\Controls\ClickBehavior.cs" />
+    <Compile Include="Expression\Framework\Controls\ClickControl.cs" />
+    <Compile Include="Expression\Framework\Controls\ColorCallback.cs" />
+    <Compile Include="Expression\Framework\Controls\ColorSwapper.cs" />
+    <Compile Include="Expression\Framework\Controls\CommandComboBoxItem.cs" />
+    <Compile Include="Expression\Framework\Controls\ControlStylingUtilities.cs" />
+    <Compile Include="Expression\Framework\Controls\Dialog.cs" />
+    <Compile Include="Expression\Framework\Controls\DragBeginEventArgs.cs" />
+    <Compile Include="Expression\Framework\Controls\DragBeginHelper.cs" />
+    <Compile Include="Expression\Framework\Controls\DragDropHelper.cs" />
+    <Compile Include="Expression\Framework\Controls\EditableComboBox.cs" />
+    <Compile Include="Expression\Framework\Controls\EditTextBox.cs" />
+    <Compile Include="Expression\Framework\Controls\ExpressionFileDialog.cs" />
+    <Compile Include="Expression\Framework\Controls\ExpressionOpenFileDialog.cs" />
+    <Compile Include="Expression\Framework\Controls\ExpressionPopup.cs" />
+    <Compile Include="Expression\Framework\Controls\ExpressionWindow.cs" />
+    <Compile Include="Expression\Framework\Controls\ExtendedScrollBar.cs" />
+    <Compile Include="Expression\Framework\Controls\FocusDenyingTabControl.cs" />
+    <Compile Include="Expression\Framework\Controls\FocusReturningWorkaroundRadioButton.cs" />
+    <Compile Include="Expression\Framework\Controls\FormattingControl.cs" />
+    <Compile Include="Expression\Framework\Controls\FreezeBehavior.cs" />
+    <Compile Include="Expression\Framework\Controls\Gallery.cs" />
+    <Compile Include="Expression\Framework\Controls\GroupableComboBox.cs" />
+    <Compile Include="Expression\Framework\Controls\GroupNameClickedEventArgs.cs" />
+    <Compile Include="Expression\Framework\Controls\Icon.cs" />
+    <Compile Include="Expression\Framework\Controls\IDragDropDataProvider.cs" />
+    <Compile Include="Expression\Framework\Controls\IDragDropHandler.cs" />
+    <Compile Include="Expression\Framework\Controls\INinchableControl.cs" />
+    <Compile Include="Expression\Framework\Controls\ITreeViewItemProvider`1.cs" />
+    <Compile Include="Expression\Framework\Controls\IWorkaroundPopupController.cs" />
+    <Compile Include="Expression\Framework\Controls\MenuButton.cs" />
+    <Compile Include="Expression\Framework\Controls\MessageChoice.cs" />
+    <Compile Include="Expression\Framework\Controls\MessageIcon.cs" />
+    <Compile Include="Expression\Framework\Controls\MessageWindow.cs" />
+    <Compile Include="Expression\Framework\Controls\MessageWindowDialog.cs" />
+    <Compile Include="Expression\Framework\Controls\ModalDialogHelper.cs" />
+    <Compile Include="Expression\Framework\Controls\MultiSlider.cs" />
+    <Compile Include="Expression\Framework\Controls\MultiSliderThumb.cs" />
+    <Compile Include="Expression\Framework\Controls\NumberComboBox.cs" />
+    <Compile Include="Expression\Framework\Controls\OnDemandControl.cs" />
+    <Compile Include="Expression\Framework\Controls\OverlayTextBox.cs" />
+    <Compile Include="Expression\Framework\Controls\PositioningTextBlockContainer.cs" />
+    <Compile Include="Expression\Framework\Controls\ProductKeyEditControl.cs" />
+    <Compile Include="Expression\Framework\Controls\RadioButtonList.cs" />
+    <Compile Include="Expression\Framework\Controls\ResizablePopup.cs" />
+    <Compile Include="Expression\Framework\Controls\SelectingListBox.cs" />
+    <Compile Include="Expression\Framework\Controls\SelectingListBoxItem.cs" />
+    <Compile Include="Expression\Framework\Controls\SingleSelectionListBox.cs" />
+    <Compile Include="Expression\Framework\Controls\SingleSelectionListBoxItem.cs" />
+    <Compile Include="Expression\Framework\Controls\StickyButton.cs" />
+    <Compile Include="Expression\Framework\Controls\ToolTipTextBlock.cs" />
+    <Compile Include="Expression\Framework\Controls\VerifyingEditBox.cs" />
+    <Compile Include="Expression\Framework\Controls\VirtualizingTreeItemCollection`1.cs" />
+    <Compile Include="Expression\Framework\Controls\VirtualizingTreeItemFlattener`1.cs" />
+    <Compile Include="Expression\Framework\Controls\VirtualizingTreeItem`1.cs" />
+    <Compile Include="Expression\Framework\Controls\WorkaroundPopup.cs" />
+    <Compile Include="Expression\Framework\Controls\WorkaroundPopupLockOpen.cs" />
+    <Compile Include="Expression\Framework\Controls\WorkaroundRadioButton.cs" />
+    <Compile Include="Expression\Framework\Controls\WorkaroundVirtualizingStackPanel.cs" />
+    <Compile Include="Expression\Framework\CurrentDispatcherAsyncMechanism.cs" />
+    <Compile Include="Expression\Framework\CustomerFeedbackIdentifier.cs" />
+    <Compile Include="Expression\Framework\Data\AdditionConverter.cs" />
+    <Compile Include="Expression\Framework\Data\AdditionMultiConverter.cs" />
+    <Compile Include="Expression\Framework\Data\AndConverter.cs" />
+    <Compile Include="Expression\Framework\Data\AppendSuffixConverter.cs" />
+    <Compile Include="Expression\Framework\Data\ArgumentDelegateCommand.cs" />
+    <Compile Include="Expression\Framework\Data\ArrayInsertion.cs" />
+    <Compile Include="Expression\Framework\Data\ArrayInsertionConverter.cs" />
+    <Compile Include="Expression\Framework\Data\BoolToCheckStateConverter.cs" />
+    <Compile Include="Expression\Framework\Data\BoolToDoubleConverter.cs" />
+    <Compile Include="Expression\Framework\Data\BoolToFontWeightBoldConverter.cs" />
+    <Compile Include="Expression\Framework\Data\BoolToStringConverter.cs" />
+    <Compile Include="Expression\Framework\Data\BoolToTextDecorationUnderlineConverter.cs" />
+    <Compile Include="Expression\Framework\Data\BoolToThicknessConverter.cs" />
+    <Compile Include="Expression\Framework\Data\BoolToVisibilityCollapsedConverter.cs" />
+    <Compile Include="Expression\Framework\Data\BoolToVisibilityConverter.cs" />
+    <Compile Include="Expression\Framework\Data\BoolToVisibilityHiddenConverter.cs" />
+    <Compile Include="Expression\Framework\Data\ByteToDoubleConverter.cs" />
+    <Compile Include="Expression\Framework\Data\CollapseIfOneConverter.cs" />
+    <Compile Include="Expression\Framework\Data\ComposingConverter.cs" />
+    <Compile Include="Expression\Framework\Data\ConcatenationConverter.cs" />
+    <Compile Include="Expression\Framework\Data\DataBindingProxyCollectionView`1.cs" />
+    <Compile Include="Expression\Framework\Data\DeadCommand.cs" />
+    <Compile Include="Expression\Framework\Data\DelegateCommand.cs" />
+    <Compile Include="Expression\Framework\Data\DoubleToStringConverter.cs" />
+    <Compile Include="Expression\Framework\Data\EnumToIntConverter`1.cs" />
+    <Compile Include="Expression\Framework\Data\EqualsConverter.cs" />
+    <Compile Include="Expression\Framework\Data\EqualsMultipleConverter.cs" />
+    <Compile Include="Expression\Framework\Data\FloatToDoubleConverter.cs" />
+    <Compile Include="Expression\Framework\Data\FloatToInverseDoubleConverter.cs" />
+    <Compile Include="Expression\Framework\Data\GapList`1.cs" />
+    <Compile Include="Expression\Framework\Data\GridLengthConverter.cs" />
+    <Compile Include="Expression\Framework\Data\IDataBindingProxy.cs" />
+    <Compile Include="Expression\Framework\Data\IDataBindingProxy`1.cs" />
+    <Compile Include="Expression\Framework\Data\IFormatter.cs" />
+    <Compile Include="Expression\Framework\Data\IFormatter`1.cs" />
+    <Compile Include="Expression\Framework\Data\IntegerToVisibilityConverter.cs" />
+    <Compile Include="Expression\Framework\Data\IntegerZeroToVisibilityHiddenConverter.cs" />
+    <Compile Include="Expression\Framework\Data\IntervalClampingOffsetConverter.cs" />
+    <Compile Include="Expression\Framework\Data\IntToBoolConverter.cs" />
+    <Compile Include="Expression\Framework\Data\IntToDoubleConverter.cs" />
+    <Compile Include="Expression\Framework\Data\InverseVisibilityConverter.cs" />
+    <Compile Include="Expression\Framework\Data\IOrderedList`1.cs" />
+    <Compile Include="Expression\Framework\Data\IsNullConverter.cs" />
+    <Compile Include="Expression\Framework\Data\IValidatingConverter.cs" />
+    <Compile Include="Expression\Framework\Data\IValidatingConverter`1.cs" />
+    <Compile Include="Expression\Framework\Data\LessThanEqualsConverter.cs" />
+    <Compile Include="Expression\Framework\Data\LocalizableSwitchCase.cs" />
+    <Compile Include="Expression\Framework\Data\LocalizableSwitchConverter.cs" />
+    <Compile Include="Expression\Framework\Data\LogarithmicConverter.cs" />
+    <Compile Include="Expression\Framework\Data\MarginConverter.cs" />
+    <Compile Include="Expression\Framework\Data\MarginSubProperty.cs" />
+    <Compile Include="Expression\Framework\Data\MultiplyConverter.cs" />
+    <Compile Include="Expression\Framework\Data\NegateIntegerConverter.cs" />
+    <Compile Include="Expression\Framework\Data\NegatingThicknessConverter.cs" />
+    <Compile Include="Expression\Framework\Data\NotConverter.cs" />
+    <Compile Include="Expression\Framework\Data\NullableBoolToBoolConverter.cs" />
+    <Compile Include="Expression\Framework\Data\NullToBoolConverter.cs" />
+    <Compile Include="Expression\Framework\Data\NullToVisibilityCollapsedConverter.cs" />
+    <Compile Include="Expression\Framework\Data\ObservableCollectionWorkaround`1.cs" />
+    <Compile Include="Expression\Framework\Data\OrderedListExtensions.cs" />
+    <Compile Include="Expression\Framework\Data\OrderedList`1.cs" />
+    <Compile Include="Expression\Framework\Data\PercentageFormatConverter.cs" />
+    <Compile Include="Expression\Framework\Data\PercentageZoomConverter.cs" />
+    <Compile Include="Expression\Framework\Data\SafeDataObject.cs" />
+    <Compile Include="Expression\Framework\Data\ScaleToTransformConverter.cs" />
+    <Compile Include="Expression\Framework\Data\ShortToDoubleConverter.cs" />
+    <Compile Include="Expression\Framework\Data\SingleMarginConverter.cs" />
+    <Compile Include="Expression\Framework\Data\StickyButtonConverter.cs" />
+    <Compile Include="Expression\Framework\Data\StringEmptyToBoolConverter.cs" />
+    <Compile Include="Expression\Framework\Data\StringFormatConverter.cs" />
+    <Compile Include="Expression\Framework\Data\SwitchCase.cs" />
+    <Compile Include="Expression\Framework\Data\SwitchConverter.cs" />
+    <Compile Include="Expression\Framework\Data\UIntToDoubleConverter.cs" />
+    <Compile Include="Expression\Framework\Data\UriToImageConverter.cs" />
+    <Compile Include="Expression\Framework\Data\UShortToDoubleConverter.cs" />
+    <Compile Include="Expression\Framework\Data\ValueConverterUtilities.cs" />
+    <Compile Include="Expression\Framework\Data\VisibilityAndConverter.cs" />
+    <Compile Include="Expression\Framework\Data\VisibilityOrConverter.cs" />
+    <Compile Include="Expression\Framework\Data\VisibleWhenEqualConverter.cs" />
+    <Compile Include="Expression\Framework\DelegateAsyncProcess.cs" />
+    <Compile Include="Expression\Framework\DelegateComparer`1.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\AutomationElement.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\CLRProfilerControl.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\CountedString.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\DebugHelper.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\DebugVariables.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\Dump.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\DumpHeapOperation.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\DumpNode.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\DumpNodeToBrushConverter.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\DumpNodeToCountedStringListConverter.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\DumpNodeToTemplateListConverter.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\DumpNodeToTypeListConverter.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\EventTrace.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\EventTracingLogger.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\EventType.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\ExceptionHandler.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\FocusTracker.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\MeasureTimingOperation.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\MeasureWorkingSetEndOperation.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\MeasureWorkingSetStartOperation.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\OfficeProfiler.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\PerformanceEvent.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\PerformanceEventParser.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\PerformanceEventStatistics.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\PerformanceLogger.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\PerformanceSequence.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\PerformanceSequenceIteration.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\PerformanceSummary.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\PerformanceTestOperation.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\PerformanceUtility.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\ProfileLogger.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\PrototypeAttribute.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\ReflectPropertyDescriptorInfo.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\StatisticsLogger.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\TraceProvider.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\TreeStatistics.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\TreeStatisticsViewer.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\UnsafeNativeMethods.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\VisualTreeWalker.cs" />
+    <Compile Include="Expression\Framework\Diagnostics\VisualVisitor.cs" />
+    <Compile Include="Expression\Framework\DispatcherHelper.cs" />
+    <Compile Include="Expression\Framework\DispatcherTimerAsyncMechanism.cs" />
+    <Compile Include="Expression\Framework\Documents\Document.cs" />
+    <Compile Include="Expression\Framework\Documents\DocumentChangedEventArgs.cs" />
+    <Compile Include="Expression\Framework\Documents\DocumentChangedEventHandler.cs" />
+    <Compile Include="Expression\Framework\Documents\DocumentEventArgs.cs" />
+    <Compile Include="Expression\Framework\Documents\DocumentEventHandler.cs" />
+    <Compile Include="Expression\Framework\Documents\DocumentReference.cs" />
+    <Compile Include="Expression\Framework\Documents\DocumentService.cs" />
+    <Compile Include="Expression\Framework\Documents\DocumentUtilities.cs" />
+    <Compile Include="Expression\Framework\Documents\DocumentView.cs" />
+    <Compile Include="Expression\Framework\Documents\IDocument.cs" />
+    <Compile Include="Expression\Framework\Documents\IDocumentCollection.cs" />
+    <Compile Include="Expression\Framework\Documents\IDocumentContainer.cs" />
+    <Compile Include="Expression\Framework\Documents\IDocumentService.cs" />
+    <Compile Include="Expression\Framework\Documents\IDocumentView.cs" />
+    <Compile Include="Expression\Framework\Documents\IView.cs" />
+    <Compile Include="Expression\Framework\Documents\IViewCollection.cs" />
+    <Compile Include="Expression\Framework\Documents\IViewService.cs" />
+    <Compile Include="Expression\Framework\Documents\PathFormat.cs" />
+    <Compile Include="Expression\Framework\Documents\PathHelper.cs" />
+    <Compile Include="Expression\Framework\Documents\UndoDocument.cs" />
+    <Compile Include="Expression\Framework\Documents\View.cs" />
+    <Compile Include="Expression\Framework\Documents\ViewChangedEventArgs.cs" />
+    <Compile Include="Expression\Framework\Documents\ViewChangedEventHandler.cs" />
+    <Compile Include="Expression\Framework\Documents\ViewEventArgs.cs" />
+    <Compile Include="Expression\Framework\Documents\ViewEventHandler.cs" />
+    <Compile Include="Expression\Framework\EmptyList`1.cs" />
+    <Compile Include="Expression\Framework\EnterKeyResponse.cs" />
+    <Compile Include="Expression\Framework\EnterProductKeyCommand.cs" />
+    <Compile Include="Expression\Framework\EnterProductKeyDialog.cs" />
+    <Compile Include="Expression\Framework\EnumeratingAsyncProcess`1.cs" />
+    <Compile Include="Expression\Framework\EnumWindowsCB.cs" />
+    <Compile Include="Expression\Framework\ErrorArgs.cs" />
+    <Compile Include="Expression\Framework\ErrorSeverity.cs" />
+    <Compile Include="Expression\Framework\ErrorTaskCollection.cs" />
+    <Compile Include="Expression\Framework\ExpressionApplication.cs" />
+    <Compile Include="Expression\Framework\ExpressionInformationService.cs" />
+    <Compile Include="Expression\Framework\ExpressionMefHostingService.cs" />
+    <Compile Include="Expression\Framework\Extensions\Collections\CollectionExtensions.cs" />
+    <Compile Include="Expression\Framework\Extensions\Collections\DictionaryExtensions.cs" />
+    <Compile Include="Expression\Framework\Extensions\Collections\StackExtensions.cs" />
+    <Compile Include="Expression\Framework\Extensions\DependencyObject\DependencyObjectExtensions.cs" />
+    <Compile Include="Expression\Framework\Extensions\Enumerable\EnumerableExtensions.cs" />
+    <Compile Include="Expression\Framework\Extensions\FrameworkElement\FrameworkElementExtensions.cs" />
+    <Compile Include="Expression\Framework\Extensions\Math\DoubleMathExtensions.cs" />
+    <Compile Include="Expression\Framework\Extensions\Math\RectExtensions.cs" />
+    <Compile Include="Expression\Framework\Extensions\ServiceProvider\ServiceProviderExtensions.cs" />
+    <Compile Include="Expression\Framework\Feedback\CoreFeedbackValues.cs" />
+    <Compile Include="Expression\Framework\Feedback\DataIDs.cs" />
+    <Compile Include="Expression\Framework\Feedback\FeedbackService.cs" />
+    <Compile Include="Expression\Framework\Feedback\HSQMSESSION.cs" />
+    <Compile Include="Expression\Framework\Feedback\IFeedbackService.cs" />
+    <Compile Include="Expression\Framework\Feedback\LicenseClass.cs" />
+    <Compile Include="Expression\Framework\Feedback\RunTimeTracker.cs" />
+    <Compile Include="Expression\Framework\Feedback\SetupAppsInstalled.cs" />
+    <Compile Include="Expression\Framework\Feedback\SetupResult.cs" />
+    <Compile Include="Expression\Framework\Feedback\SetupSkuType.cs" />
+    <Compile Include="Expression\Framework\Feedback\SetupSqmOptIn.cs" />
+    <Compile Include="Expression\Framework\Feedback\UnsafeNativeMethods.cs" />
+    <Compile Include="Expression\Framework\FileOpenDialogRCW.cs" />
+    <Compile Include="Expression\Framework\FileResourceManager.cs" />
+    <Compile Include="Expression\Framework\FileTable.cs" />
+    <Compile Include="Expression\Framework\ForEachAction.cs" />
+    <Compile Include="Expression\Framework\Globalization\CultureManager.cs" />
+    <Compile Include="Expression\Framework\IActivateResponse.cs" />
+    <Compile Include="Expression\Framework\IAsyncMechanism.cs" />
+    <Compile Include="Expression\Framework\ICommandLineService.cs" />
+    <Compile Include="Expression\Framework\IEnterKeyResponse.cs" />
+    <Compile Include="Expression\Framework\IEnumIDList.cs" />
+    <Compile Include="Expression\Framework\IErrorService.cs" />
+    <Compile Include="Expression\Framework\IErrorTask.cs" />
+    <Compile Include="Expression\Framework\IErrorTaskCollection.cs" />
+    <Compile Include="Expression\Framework\IExpressionInformationService.cs" />
+    <Compile Include="Expression\Framework\IExpressionMefHostingService.cs" />
+    <Compile Include="Expression\Framework\IExternalChanges.cs" />
+    <Compile Include="Expression\Framework\IFileDialog.cs" />
+    <Compile Include="Expression\Framework\IFileDialogEvents.cs" />
+    <Compile Include="Expression\Framework\IFileOpenDialog.cs" />
+    <Compile Include="Expression\Framework\IIDGuid.cs" />
+    <Compile Include="Expression\Framework\ILicenseService.cs" />
+    <Compile Include="Expression\Framework\ILicenseSubServiceResponse.cs" />
+    <Compile Include="Expression\Framework\ILicensingDialogQuery.cs" />
+    <Compile Include="Expression\Framework\IMessageDisplayService.cs" />
+    <Compile Include="Expression\Framework\IMessageLoggingService.cs" />
+    <Compile Include="Expression\Framework\IModalWindow.cs" />
+    <Compile Include="Expression\Framework\Importers\IImporter.cs" />
+    <Compile Include="Expression\Framework\Importers\IImporterDataStore.cs" />
+    <Compile Include="Expression\Framework\Importers\IImporterService.cs" />
+    <Compile Include="Expression\Framework\Importers\Importer.cs" />
+    <Compile Include="Expression\Framework\Importers\ImporterCreatorCallback.cs" />
+    <Compile Include="Expression\Framework\Importers\ImporterService.cs" />
+    <Compile Include="Expression\Framework\INotifyCollectionChanges.cs" />
+    <Compile Include="Expression\Framework\Interop\ErrorHandler.cs" />
+    <Compile Include="Expression\Framework\Interop\TypeHelper.cs" />
+    <Compile Include="Expression\Framework\IReadOnlyCollection`1.cs" />
+    <Compile Include="Expression\Framework\IReadOnlyList`1.cs" />
+    <Compile Include="Expression\Framework\IShellFolder.cs" />
+    <Compile Include="Expression\Framework\IShellItem.cs" />
+    <Compile Include="Expression\Framework\IShellItemArray.cs" />
+    <Compile Include="Expression\Framework\IssueTracking\IField.cs" />
+    <Compile Include="Expression\Framework\IssueTracking\IIssueTrackingProvider.cs" />
+    <Compile Include="Expression\Framework\IssueTracking\IIssueTrackingService.cs" />
+    <Compile Include="Expression\Framework\IssueTracking\IProductGroup.cs" />
+    <Compile Include="Expression\Framework\IssueTracking\IssueTrackingProviderBase.cs" />
+    <Compile Include="Expression\Framework\IssueTracking\IssueTrackingProviderCreatorCallback.cs" />
+    <Compile Include="Expression\Framework\IssueTracking\IssueTrackingProviderEventArgs.cs" />
+    <Compile Include="Expression\Framework\IssueTracking\IssueTrackingService.cs" />
+    <Compile Include="Expression\Framework\IssueTracking\ItemField.cs" />
+    <Compile Include="Expression\Framework\IssueTracking\ItemFieldType.cs" />
+    <Compile Include="Expression\Framework\IssueTracking\ITrackedItem.cs" />
+    <Compile Include="Expression\Framework\IssueTracking\ITrackedItemType.cs" />
+    <Compile Include="Expression\Framework\IssueTracking\TrackedItemCreatedEventArgs.cs" />
+    <Compile Include="Expression\Framework\IssueTracking\TrackedItemFormBase.cs" />
+    <Compile Include="Expression\Framework\ItemizedLicensingComponentBase.cs" />
+    <Compile Include="Expression\Framework\ItemizedLicensingDialog.cs" />
+    <Compile Include="Expression\Framework\KeyComparer`2.cs" />
+    <Compile Include="Expression\Framework\LicenseDialogPopup.cs" />
+    <Compile Include="Expression\Framework\LicenseInformation.cs" />
+    <Compile Include="Expression\Framework\LicenseService.cs" />
+    <Compile Include="Expression\Framework\LicenseSubServiceResponse.cs" />
+    <Compile Include="Expression\Framework\Licenses\AggregateLicenseInformation.cs" />
+    <Compile Include="Expression\Framework\Licenses\ApplicationLicenses.cs" />
+    <Compile Include="Expression\Framework\Licenses\BlendBetaV4TrialLicenses.cs" />
+    <Compile Include="Expression\Framework\Licenses\BlendChinaTrialRtmV3Licenses.cs" />
+    <Compile Include="Expression\Framework\Licenses\BlendMobileRtmV4Licenses.cs" />
+    <Compile Include="Expression\Framework\Licenses\BlendRtm3Licenses.cs" />
+    <Compile Include="Expression\Framework\Licenses\BlendTrialRtmV3Licenses.cs" />
+    <Compile Include="Expression\Framework\Licenses\BlendTrialRtmV4Licenses.cs" />
+    <Compile Include="Expression\Framework\Licenses\DesignTrialRtmV4Licenses.cs" />
+    <Compile Include="Expression\Framework\Licenses\EncoderRtmV3ForEncoderRtmV4Licenses.cs" />
+    <Compile Include="Expression\Framework\Licenses\EncoderRtmV3Licenses.cs" />
+    <Compile Include="Expression\Framework\Licenses\EncoderTrialRtmV3Licenses.cs" />
+    <Compile Include="Expression\Framework\Licenses\EncoderUltimateRtmV4Licenses.cs" />
+    <Compile Include="Expression\Framework\Licenses\ExpressionBetaV4FeatureMapper.cs" />
+    <Compile Include="Expression\Framework\Licenses\ExpressionFeatureMapper.cs" />
+    <Compile Include="Expression\Framework\Licenses\ExpressionRtmV4FeatureMapper.cs" />
+    <Compile Include="Expression\Framework\Licenses\ILicenseSkuFeatureMapper.cs" />
+    <Compile Include="Expression\Framework\Licenses\SketchFlowDevV4Licenses.cs" />
+    <Compile Include="Expression\Framework\Licenses\StudioBetaV4Licenses.cs" />
+    <Compile Include="Expression\Framework\Licenses\StudioDevV4Licenses.cs" />
+    <Compile Include="Expression\Framework\Licenses\StudioPremiumRtmV4Licenses.cs" />
+    <Compile Include="Expression\Framework\Licenses\StudioRtmV3ForV4Licenses.cs" />
+    <Compile Include="Expression\Framework\Licenses\StudioRtmV3Licenses.cs" />
+    <Compile Include="Expression\Framework\Licenses\StudioUltimateRtmV4Licenses.cs" />
+    <Compile Include="Expression\Framework\Licenses\WebBetaV4Licenses.cs" />
+    <Compile Include="Expression\Framework\Licenses\WebStudioRtmV4Licenses.cs" />
+    <Compile Include="Expression\Framework\Licenses\WebTrialRtmV4Licenses.cs" />
+    <Compile Include="Expression\Framework\Licenses\XWebRtmV3ForV4Licenses.cs" />
+    <Compile Include="Expression\Framework\Licenses\XWebRtmV3Licenses.cs" />
+    <Compile Include="Expression\Framework\Licenses\XWebTrialRtmV3Licenses.cs" />
+    <Compile Include="Expression\Framework\LicensingDialog.cs" />
+    <Compile Include="Expression\Framework\LicensingDialogBase.cs" />
+    <Compile Include="Expression\Framework\LicensingDialogCreator.cs" />
+    <Compile Include="Expression\Framework\LicensingDialogHelper.cs" />
+    <Compile Include="Expression\Framework\LowMemoryMessage.cs" />
+    <Compile Include="Expression\Framework\MessageBoxArgs.cs" />
+    <Compile Include="Expression\Framework\MixedProperty.cs" />
+    <Compile Include="Expression\Framework\MoveInfo.cs" />
+    <Compile Include="Expression\Framework\MoveOptions.cs" />
+    <Compile Include="Expression\Framework\NativeFileOpenDialog.cs" />
+    <Compile Include="Expression\Framework\NativeMethods.cs" />
+    <Compile Include="Expression\Framework\NotifyingObject.cs" />
+    <Compile Include="Expression\Framework\PackageAttribute.cs" />
+    <Compile Include="Expression\Framework\ProgressAnimationControl.cs" />
+    <Compile Include="Expression\Framework\ReadOnlyList`1.cs" />
+    <Compile Include="Expression\Framework\RegistryHelper.cs" />
+    <Compile Include="Expression\Framework\Scheduler\ISchedulingService.cs" />
+    <Compile Include="Expression\Framework\Scheduler\ScheduleTask.cs" />
+    <Compile Include="Expression\Framework\Scheduler\SchedulingService.cs" />
+    <Compile Include="Expression\Framework\SerialAsyncProcess.cs" />
+    <Compile Include="Expression\Framework\Services.cs" />
+    <Compile Include="Expression\Framework\SldlHResult.cs" />
+    <Compile Include="Expression\Framework\SourceControl\ErrorLevel.cs" />
+    <Compile Include="Expression\Framework\SourceControl\ErrorMessage.cs" />
+    <Compile Include="Expression\Framework\SourceControl\ISourceControlProvider.cs" />
+    <Compile Include="Expression\Framework\SourceControl\ISourceControlService.cs" />
+    <Compile Include="Expression\Framework\SourceControl\OpenProjectDialog.cs" />
+    <Compile Include="Expression\Framework\SourceControl\SourceControlGetOption.cs" />
+    <Compile Include="Expression\Framework\SourceControl\SourceControlOnlineEventArgs.cs" />
+    <Compile Include="Expression\Framework\SourceControl\SourceControlOnlineStatus.cs" />
+    <Compile Include="Expression\Framework\SourceControl\SourceControlPackage.cs" />
+    <Compile Include="Expression\Framework\SourceControl\SourceControlProcess.cs" />
+    <Compile Include="Expression\Framework\SourceControl\SourceControlProcessModel.cs" />
+    <Compile Include="Expression\Framework\SourceControl\SourceControlProjectModel.cs" />
+    <Compile Include="Expression\Framework\SourceControl\SourceControlProviderBase.cs" />
+    <Compile Include="Expression\Framework\SourceControl\SourceControlProviderCreatorCallback.cs" />
+    <Compile Include="Expression\Framework\SourceControl\SourceControlProviderEventArgs.cs" />
+    <Compile Include="Expression\Framework\SourceControl\SourceControlProviderHost.cs" />
+    <Compile Include="Expression\Framework\SourceControl\SourceControlService.cs" />
+    <Compile Include="Expression\Framework\SourceControl\SourceControlStatus.cs" />
+    <Compile Include="Expression\Framework\SourceControl\SourceControlStatusToIconOrToolTipConverter.cs" />
+    <Compile Include="Expression\Framework\SourceControl\SourceControlSuccess.cs" />
+    <Compile Include="Expression\Framework\SourceControl\SourceControlUIUpdateModel.cs" />
+    <Compile Include="Expression\Framework\StringLogicalComparer.cs" />
+    <Compile Include="Expression\Framework\StringWrapper.cs" />
+    <Compile Include="Expression\Framework\SystemThemeNamePrefixes.cs" />
+    <Compile Include="Expression\Framework\Tolerances.cs" />
+    <Compile Include="Expression\Framework\TrialExpiredDialog.cs" />
+    <Compile Include="Expression\Framework\TrialExpiredDialogCreator.cs" />
+    <Compile Include="Expression\Framework\UIThreadDispatcher.cs" />
+    <Compile Include="Expression\Framework\UnlicensedReason.cs" />
+    <Compile Include="Expression\Framework\UnsafeNativeMethods.cs" />
+    <Compile Include="Expression\Framework\UserInterface\AboutDialog.cs" />
+    <Compile Include="Expression\Framework\UserInterface\ApplicationWindow.cs" />
+    <Compile Include="Expression\Framework\UserInterface\AsyncProcessDialog.cs" />
+    <Compile Include="Expression\Framework\UserInterface\CommandBar.cs" />
+    <Compile Include="Expression\Framework\UserInterface\CommandBarButton.cs" />
+    <Compile Include="Expression\Framework\UserInterface\CommandBarButtonBase.cs" />
+    <Compile Include="Expression\Framework\UserInterface\CommandBarCheckBox.cs" />
+    <Compile Include="Expression\Framework\UserInterface\CommandBarCollection.cs" />
+    <Compile Include="Expression\Framework\UserInterface\CommandBarContextMenu.cs" />
+    <Compile Include="Expression\Framework\UserInterface\CommandBarDynamicMenu.cs" />
+    <Compile Include="Expression\Framework\UserInterface\CommandBarHelper.cs" />
+    <Compile Include="Expression\Framework\UserInterface\CommandBarItemCollection.cs" />
+    <Compile Include="Expression\Framework\UserInterface\CommandBarMenu.cs" />
+    <Compile Include="Expression\Framework\UserInterface\CommandBarSeparator.cs" />
+    <Compile Include="Expression\Framework\UserInterface\CommandBarService.cs" />
+    <Compile Include="Expression\Framework\UserInterface\DocumentViewReference.cs" />
+    <Compile Include="Expression\Framework\UserInterface\ExpandoList.cs" />
+    <Compile Include="Expression\Framework\UserInterface\ExpandoListItem.cs" />
+    <Compile Include="Expression\Framework\UserInterface\ExpandoListItemModel.cs" />
+    <Compile Include="Expression\Framework\UserInterface\ExpandoSplitter.cs" />
+    <Compile Include="Expression\Framework\UserInterface\FeedbackDialog.cs" />
+    <Compile Include="Expression\Framework\UserInterface\FeedbackDialogModel.cs" />
+    <Compile Include="Expression\Framework\UserInterface\FeedbackOptionsCommand.cs" />
+    <Compile Include="Expression\Framework\UserInterface\FocusScopeManager.cs" />
+    <Compile Include="Expression\Framework\UserInterface\FocusScopeManagerActivateBehavior.cs" />
+    <Compile Include="Expression\Framework\UserInterface\ICommandBar.cs" />
+    <Compile Include="Expression\Framework\UserInterface\ICommandBarButton.cs" />
+    <Compile Include="Expression\Framework\UserInterface\ICommandBarCheckBox.cs" />
+    <Compile Include="Expression\Framework\UserInterface\ICommandBarCollection.cs" />
+    <Compile Include="Expression\Framework\UserInterface\ICommandBarDynamicMenu.cs" />
+    <Compile Include="Expression\Framework\UserInterface\ICommandBarItem.cs" />
+    <Compile Include="Expression\Framework\UserInterface\ICommandBarItemCollection.cs" />
+    <Compile Include="Expression\Framework\UserInterface\ICommandBarMenu.cs" />
+    <Compile Include="Expression\Framework\UserInterface\ICommandBarSeparator.cs" />
+    <Compile Include="Expression\Framework\UserInterface\ICommandBarService.cs" />
+    <Compile Include="Expression\Framework\UserInterface\IElementProvider.cs" />
+    <Compile Include="Expression\Framework\UserInterface\IMessageBubbleHelper.cs" />
+    <Compile Include="Expression\Framework\UserInterface\IMessageBubbleValidator.cs" />
+    <Compile Include="Expression\Framework\UserInterface\IOrderedViewProvider.cs" />
+    <Compile Include="Expression\Framework\UserInterface\ITheme.cs" />
+    <Compile Include="Expression\Framework\UserInterface\IThemeCollection.cs" />
+    <Compile Include="Expression\Framework\UserInterface\IWindow.cs" />
+    <Compile Include="Expression\Framework\UserInterface\IWindowService.cs" />
+    <Compile Include="Expression\Framework\UserInterface\IWorkspace.cs" />
+    <Compile Include="Expression\Framework\UserInterface\IWorkspaceService.cs" />
+    <Compile Include="Expression\Framework\UserInterface\ManageWorkspaceConfigurationsDialog.cs" />
+    <Compile Include="Expression\Framework\UserInterface\MessageBubble.cs" />
+    <Compile Include="Expression\Framework\UserInterface\MessageBubbleContent.cs" />
+    <Compile Include="Expression\Framework\UserInterface\MessageBubbleHelper.cs" />
+    <Compile Include="Expression\Framework\UserInterface\MessageBubbleType.cs" />
+    <Compile Include="Expression\Framework\UserInterface\MessageBubbleValidator`2.cs" />
+    <Compile Include="Expression\Framework\UserInterface\MessageDisplayService.cs" />
+    <Compile Include="Expression\Framework\UserInterface\MoreWorkspacesDialog.cs" />
+    <Compile Include="Expression\Framework\UserInterface\OptionsDialog.cs" />
+    <Compile Include="Expression\Framework\UserInterface\PaletteRegistry.cs" />
+    <Compile Include="Expression\Framework\UserInterface\PaletteRegistryEntry.cs" />
+    <Compile Include="Expression\Framework\UserInterface\PerformanceStatisticsWindow.cs" />
+    <Compile Include="Expression\Framework\UserInterface\ReturnFocusCallback.cs" />
+    <Compile Include="Expression\Framework\UserInterface\SaveConfigurationDialog.cs" />
+    <Compile Include="Expression\Framework\UserInterface\ShellOptionsControl.cs" />
+    <Compile Include="Expression\Framework\UserInterface\ShellOptionsModel.cs" />
+    <Compile Include="Expression\Framework\UserInterface\ShellOptionsPage.cs" />
+    <Compile Include="Expression\Framework\UserInterface\SplashScreen.cs" />
+    <Compile Include="Expression\Framework\UserInterface\SwitchToDialog.cs" />
+    <Compile Include="Expression\Framework\UserInterface\TeamFoundationClientDialog.cs" />
+    <Compile Include="Expression\Framework\UserInterface\TemporaryCursor.cs" />
+    <Compile Include="Expression\Framework\UserInterface\TextBoxHelper.cs" />
+    <Compile Include="Expression\Framework\UserInterface\Theme.cs" />
+    <Compile Include="Expression\Framework\UserInterface\UnsafeNativeMethods.cs" />
+    <Compile Include="Expression\Framework\UserInterface\ViewBridge.cs" />
+    <Compile Include="Expression\Framework\UserInterface\ViewServiceDialog.cs" />
+    <Compile Include="Expression\Framework\UserInterface\WelcomeSplashScreen.cs" />
+    <Compile Include="Expression\Framework\UserInterface\Win32MessageBox.cs" />
+    <Compile Include="Expression\Framework\UserInterface\WindowHelper.cs" />
+    <Compile Include="Expression\Framework\UserInterface\WindowService.cs" />
+    <Compile Include="Expression\Framework\UserInterface\Workspace.cs" />
+    <Compile Include="Expression\Framework\UserInterface\WorkspaceService.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\ChoiceEditor.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\ChoiceEditorViewType.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\ColorChannelEditor.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\ColorEditor\AlphaGradientConverter.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\ColorEditor\BaseGradientConverter.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\ColorEditor\BlackGradientConverter.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\ColorEditor\BlueGradientConverter.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\ColorEditor\CmykColor.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\ColorEditor\ColorEditor.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\ColorEditor\ColorEditorModel.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\ColorEditor\ColorEyedropper.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\ColorEditor\ColorEyedropperBase.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\ColorEditor\ColorModel.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\ColorEditor\ColorSpace.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\ColorEditor\ColorUtility.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\ColorEditor\CyanGradientConverter.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\ColorEditor\GreenGradientConverter.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\ColorEditor\HlsColor.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\ColorEditor\HlsLightnessGradientConverter.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\ColorEditor\HlsSaturationGradientConverter.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\ColorEditor\HsbBrightnessGradientConverter.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\ColorEditor\HsbColor.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\ColorEditor\HsbSaturationGradientConverter.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\ColorEditor\MagentaGradientConverter.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\ColorEditor\NavigatorRectangle.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\ColorEditor\RedGradientConverter.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\ColorEditor\RgbColor.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\ColorEditor\SharedColorSpaceManager.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\ColorEditor\YellowGradientConverter.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\ConverterContext.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\ExpressionPropertyValueEditorCommand.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\ExpressionPropertyValueEditorCommandHandler.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\ExpressionValueEditorCommandArgs.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\FadingDragBehavior.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\FontFamilyItem.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\FontGallery.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\IDragEditNotifier.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\IIconProvider.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\InlineStringEditor.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\InlineStringEditorMode.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\INotifyEdit.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\INumberEditorDragBehavior.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\IStringValueFilter.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\MouseCursor.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\NoNanDoubleConverter.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\NumberEditor.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\PercentageStringValueFilter.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\RenderUtils.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\SplitComboBox.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\StringEditor.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\SuperRoundedRectRenderer.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\UpdateBindingType.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\ValueEditorCursors.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\ValueEditorUtils.cs" />
+    <Compile Include="Expression\Framework\ValueEditors\ValueToIconConverter.cs" />
+    <Compile Include="Expression\Framework\WebPageLauncher.cs" />
+    <Compile Include="Expression\Framework\WebServer\IWebServerService.cs" />
+    <Compile Include="Expression\Framework\WebServer\IWebServerSettings.cs" />
+    <Compile Include="Expression\Framework\WebServer\WebServerPackage.cs" />
+    <Compile Include="Expression\Framework\WebServer\WebServerService.cs" />
+    <Compile Include="Expression\Framework\WebServer\WebServerSettings.cs" />
+    <Compile Include="Expression\Framework\WinHttpHResult.cs" />
+    <Compile Include="Expression\Framework\Workspaces\Extension\ActiveViewHelper.cs" />
+    <Compile Include="Expression\Framework\Workspaces\Extension\ConstrainedView.cs" />
+    <Compile Include="Expression\Framework\Workspaces\Extension\ExpressionDockGroup.cs" />
+    <Compile Include="Expression\Framework\Workspaces\Extension\ExpressionDockingConstants.cs" />
+    <Compile Include="Expression\Framework\Workspaces\Extension\ExpressionDockManager.cs" />
+    <Compile Include="Expression\Framework\Workspaces\Extension\ExpressionDockRoot.cs" />
+    <Compile Include="Expression\Framework\Workspaces\Extension\ExpressionDocumentGroup.cs" />
+    <Compile Include="Expression\Framework\Workspaces\Extension\ExpressionFloatingWindow.cs" />
+    <Compile Include="Expression\Framework\Workspaces\Extension\ExpressionFloatingWindowManager.cs" />
+    <Compile Include="Expression\Framework\Workspaces\Extension\ExpressionView.cs" />
+    <Compile Include="Expression\Framework\Workspaces\Extension\ExpressionViewElementFactory.cs" />
+    <Compile Include="Expression\Framework\Workspaces\Extension\ExpressionViewManager.cs" />
+    <Compile Include="Expression\Framework\Workspaces\Extension\ExpressionViewProperties.cs" />
+    <Compile Include="Expression\Framework\Workspaces\Extension\ExpressionWindowProfileValidator.cs" />
+    <Compile Include="Expression\Framework\Workspaces\Extension\IAdvancedLayoutPanel.cs" />
+    <Compile Include="Expression\Framework\Workspaces\Extension\LeftRightPaletteAdornerSizeConverter.cs" />
+    <Compile Include="Expression\Framework\Workspaces\Extension\PaletteScaledAdornerSizeConverter.cs" />
+    <Compile Include="Expression\Framework\Workspaces\Extension\StandaloneView.cs" />
+    <Compile Include="Expression\Framework\Workspaces\Extension\StandaloneViewProperties.cs" />
+    <Compile Include="Expression\Framework\Workspaces\Extension\WindowProfileValidationContext.cs" />
+    <Compile Include="Expression\Framework\Workspaces\Extension\WindowProfileValidator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\StringTable.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StringTable.resx</DependentUpon>
+      <CustomToolNamespace>Microsoft.Expression.Framework</CustomToolNamespace>
+    </Compile>
+    <Compile Include="Runtime\CommandMethodAttribute.cs" />
+    <Compile Include="Shopdrawing\Controls\2.xaml.cs">
+      <DependentUpon>2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Shopdrawing\Controls\CustomControl1.cs" />
+    <Compile Include="VisualStudio\PlatformUI\BITMAP.cs" />
+    <Compile Include="VisualStudio\PlatformUI\COLORREF.cs" />
+    <Compile Include="VisualStudio\PlatformUI\DisposableObject.cs" />
+    <Compile Include="VisualStudio\PlatformUI\DpiHelper.cs" />
+    <Compile Include="VisualStudio\PlatformUI\ExtensionMethods.cs" />
+    <Compile Include="VisualStudio\PlatformUI\IMAGEINFO.cs" />
+    <Compile Include="VisualStudio\PlatformUI\LayoutSynchronizedContentControl.cs" />
+    <Compile Include="VisualStudio\PlatformUI\LayoutSynchronizedItemsControl.cs" />
+    <Compile Include="VisualStudio\PlatformUI\LayoutSynchronizedTabControl.cs" />
+    <Compile Include="VisualStudio\PlatformUI\LayoutSynchronizedWindow.cs" />
+    <Compile Include="VisualStudio\PlatformUI\LayoutSynchronizer.cs" />
+    <Compile Include="VisualStudio\PlatformUI\MINMAXINFO.cs" />
+    <Compile Include="VisualStudio\PlatformUI\MONITORINFO.cs" />
+    <Compile Include="VisualStudio\PlatformUI\MultiValueConverter`3.cs" />
+    <Compile Include="VisualStudio\PlatformUI\MultiValueConverter`4.cs" />
+    <Compile Include="VisualStudio\PlatformUI\MultiValueHelper.cs" />
+    <Compile Include="VisualStudio\PlatformUI\NativeMethods.cs" />
+    <Compile Include="VisualStudio\PlatformUI\OLEIVERB.cs" />
+    <Compile Include="VisualStudio\PlatformUI\POINT.cs" />
+    <Compile Include="VisualStudio\PlatformUI\RECT.cs" />
+    <Compile Include="VisualStudio\PlatformUI\ScreenLocation.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\AutoHideChannel.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\AutoHideGroup.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\AutoHideRoot.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\ApplicationActivationMonitor.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\AutoHideChannelContextMenuEventArgs.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\AutoHideChannelControl.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\AutoHideGroupControl.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\AutoHideHwndContentControl.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\AutoHideHwndContentControlAutomationPeer.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\AutoHideRootControl.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\AutoHideTabItem.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\AutoHideTabItemAutomationPeer.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\AutoHideWindow.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\AutoHideWindowManager.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\BeveledBorder.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\DockAdorner.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\DockAdornerWindow.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\DockAdornerWindowAutomationPeer.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\DockGroupAdorner.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\DockGroupControl.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\DockManager.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\DockPreviewWindow.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\DockRootControl.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\DockRootControlAutomatinPeer.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\DockSiteAdorner.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\DockSiteAdornerAutomationPeer.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\DockTarget.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\DockTargetType.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\DocumentGroupContainerControl.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\DocumentGroupControl.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\DocumentGroupControlAutomationPeer.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\DocumentTabPanel.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\DragAbsoluteCompletedEventArgs.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\DragAbsoluteEventArgs.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\DragUndockHeader.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\DragUndockHeaderContextMenuEventArgs.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\DropDownButton.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\ExpressionDockPreviewWindow.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\FloatingElement.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\FloatingElementDockedEventArgs.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\FloatingOperationFinishedEventArgs.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\FloatingWindow.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\FloatingWindowAutomationPeer.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\FocusableHwndHost.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\FocusTracker.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\GlyphButton.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\GroupControl.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\HiddenHwndWrapper.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\HwndContentControl.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\HwndContentControlAutomationPeer.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\HwndSourceTracker.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\HwndWrapper.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\IDockPreviewWindow.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\IResizable.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\MenuItemIconConverter.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\MouseCommands.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\MouseHover.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\NakedViewControl.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\ReorderTabPanel.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\SelectedItemHiddenEventArgs.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\SingleRowTabPanel.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\SubtractionConverter.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\TabGroupBorderThicknessConverter.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\TabGroupBorderType.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\TabGroupContainerAutomationPeer.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\TabGroupControl.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\TabGroupControlAutomationPeer.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\TabItemTextControl.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\TrackFocusEventArgs.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\ViewCommands.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\ViewEventArgs.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\ViewFrame.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\ViewFrameAutomationPeer.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\ViewHeader.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\ViewHeaderAutomationPeer.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\ViewPresenter.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\ViewPresenterAutomationPeer.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\WindowResizeFrame.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\WindowResizeGrip.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\WindowResizeGripDirection.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Controls\WindowTitleBarButton.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\DependencyObjectCustomSerializer.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\DockAction.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\DockDirection.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\DockEventArgs.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\DockGroup.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\DockOperations.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\DockRestrictionType.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\DockRoot.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\DockSiteType.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\DocumentGroup.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\DocumentGroupContainer.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\DraggedTabInfo.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\ExtensionMethods.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\FloatingWindowManager.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\FloatSite.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\FocusHelper.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\ICustomXmlSerializable.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\ICustomXmlSerializer.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\IDependencyObjectCustomSerializerAccess.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\ImmutableObservableCollection`1.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\IObservableCollection`1.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\MainSite.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\NakedView.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\NestedGroup.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\NonXamlSerializedAttribute.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\OwnershipCollection`1.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Preferences\DockPreference.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Preferences\ViewManagerPreferences.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Serialization\AutoHideChannelCustomSerializer.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Serialization\DockGroupCustomSerializer.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Serialization\ExpressionDockGroupCustomSerializer.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Serialization\ExpressionDocumentGroupCustomSerializer.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Serialization\ExpressionViewCustomSerializer.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Serialization\StandaloneViewCustomSerializer.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Serialization\ViewBookmarkCustomSerializer.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Serialization\ViewCustomSerializer.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Serialization\ViewElementCustomSerializer.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Serialization\ViewGroupCustomSerializer.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\Serialization\WindowProfileCustomSerializer.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\TabGroup.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\UtilityMethods.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\View.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\ViewBookmark.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\ViewBookmarkType.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\ViewElement.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\ViewElementFactory.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\ViewGroup.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\ViewManager.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\ViewSite.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\WindowProfile.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\WindowProfileChangingEventArgs.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\WindowProfileSerializer.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\WindowProfileSerializerMode.cs" />
+    <Compile Include="VisualStudio\PlatformUI\Shell\WindowProfileValidator.cs" />
+    <Compile Include="VisualStudio\PlatformUI\SHFILEINFO.cs" />
+    <Compile Include="VisualStudio\PlatformUI\SHGFI.cs" />
+    <Compile Include="VisualStudio\PlatformUI\SplitterGrip.cs" />
+    <Compile Include="VisualStudio\PlatformUI\SplitterItem.cs" />
+    <Compile Include="VisualStudio\PlatformUI\SplitterItemsControl.cs" />
+    <Compile Include="VisualStudio\PlatformUI\SplitterLength.cs" />
+    <Compile Include="VisualStudio\PlatformUI\SplitterLengthConverter.cs" />
+    <Compile Include="VisualStudio\PlatformUI\SplitterPanel.cs" />
+    <Compile Include="VisualStudio\PlatformUI\SplitterUnitType.cs" />
+    <Compile Include="VisualStudio\PlatformUI\StreamConsts.cs" />
+    <Compile Include="VisualStudio\PlatformUI\StyleKey`1.cs" />
+    <Compile Include="VisualStudio\PlatformUI\ValueConverter`2.cs" />
+    <Compile Include="VisualStudio\PlatformUI\WINDOWINFO.cs" />
+    <Compile Include="VisualStudio\PlatformUI\WINDOWPOS.cs" />
+    <Compile Include="VisualStudio\PlatformUI\WNDCLASS.cs" />
+    <Compile Include="VisualStudio\PlatformUI\WNDCLASSEX.cs" />
+    <Compile Include="Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XamlGeneratedNamespace\GeneratedInternalTypeHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\ExceptionStringTable.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ExceptionStringTable.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Microsoft</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\StringTable.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StringTable.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Microsoft</CustomToolNamespace>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Expression\Framework\resources\icons\frameworkicons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\AboutDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\AboutResource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Controls\Dictionary1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\workspaces\datatemplates.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\autohidechannelcontrolstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\autohidegroupcontrolstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\autohiderootcontrolstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\autohidetabitemstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\autohidewindowstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\dockgroupadornerstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\dockgroupcontrolstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\dockpreviewwindowstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\dockrootcontrolstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\docksiteadornerstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\documentgroupcontainercontrolstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\documentgroupcontrolstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\documenttabitemstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\dragundockheaderstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\expressiondocking\autohidechannelcontrolstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\expressiondocking\autohidegroupcontrolstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\expressiondocking\autohiderootcontrolstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\expressiondocking\autohidetabitemstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\expressiondocking\autohidewindowstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\expressiondocking\dockgroupadornerstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\expressiondocking\dockgroupcontrolstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\expressiondocking\dockpreviewwindowstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\expressiondocking\dockrootcontrolstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\expressiondocking\docksiteadornerstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\expressiondocking\documentgroupcontainercontrolstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\expressiondocking\documentgroupcontrolstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\expressiondocking\documenttabitemstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\expressiondocking\expressiondockingcommon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\expressiondocking\floatingwindowstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\expressiondocking\generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\expressiondocking\splittergripstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\expressiondocking\splitteritemstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\expressiondocking\splitterpanelstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\expressiondocking\tabgroupcontrolstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\expressiondocking\tabgrouptabitemstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\expressiondocking\viewframestyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\expressiondocking\viewheaderstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\floatingwindowstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\glyphbuttonstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\nakedviewstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\splittergripstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\splitteritemscontrolstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\splitteritemstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\tabgroupcontrolstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\tabgrouptabitemstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\viewframestyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\viewheaderstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\windowresizegripstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\workspaces\themes\windowtitlebarbuttonstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\tabgroupcontrolstyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Shopdrawing\Controls\2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Expression\Framework\resources\cursors\cursor_numericaladjust.cur" />
+    <Resource Include="Expression\Framework\resources\cursors\eyedroppercursor.cur" />
+    <Resource Include="Expression\Framework\resources\icons\active-workspace_on_12.png" />
+    <Resource Include="Expression\Framework\resources\icons\help_off_16x16.png" />
+    <Resource Include="Expression\Framework\resources\icons\help_on_16x16.png" />
+    <Resource Include="Expression\Framework\resources\icons\pin_12x12_off.png" />
+    <Resource Include="Expression\Framework\resources\icons\pin_12x12_on.png" />
+    <Resource Include="Expression\Framework\resources\icons\properties_auto_off_12x12.png" />
+    <Resource Include="Expression\Framework\resources\icons\properties_auto_on_12x12.png" />
+    <Resource Include="Expression\Framework\resources\icons\properties_colorpickdropper_off_16x16.png" />
+    <Resource Include="Expression\Framework\resources\icons\properties_colorpickdropper_on_16x16.png" />
+    <Resource Include="Expression\Framework\resources\icons\shell_error_on_12x12.png" />
+    <Resource Include="Expression\Framework\resources\icons\shell_error_on_32x32.png" />
+    <Resource Include="Expression\Framework\resources\icons\shell_help_on_12x12.png" />
+    <Resource Include="Expression\Framework\resources\icons\shell_help_on_32x32.png" />
+    <Resource Include="Expression\Framework\resources\icons\shell_info_on_12x12.png" />
+    <Resource Include="Expression\Framework\resources\icons\shell_info_on_32x32.png" />
+    <Resource Include="Expression\Framework\resources\icons\shell_warning_on_12x12.png" />
+    <Resource Include="Expression\Framework\resources\icons\shell_warning_on_32x32.png" />
+    <Resource Include="Expression\Framework\resources\icons\sourcecontrol\add_off_16.png" />
+    <Resource Include="Expression\Framework\resources\icons\sourcecontrol\add_on_16.png" />
+    <Resource Include="Expression\Framework\resources\icons\sourcecontrol\checked-in_off_16.png" />
+    <Resource Include="Expression\Framework\resources\icons\sourcecontrol\checked-in_on_16.png" />
+    <Resource Include="Expression\Framework\resources\icons\sourcecontrol\checked-out_off_16.png" />
+    <Resource Include="Expression\Framework\resources\icons\sourcecontrol\checked-out_on_16.png" />
+    <Resource Include="Expression\Framework\resources\icons\sourcecontrol\rename_off_16.png" />
+    <Resource Include="Expression\Framework\resources\icons\sourcecontrol\rename_on_16.png" />
+    <Resource Include="Expression\Framework\resources\icons\sourcecontrol\status_none.png" />
+    <Resource Include="Expression\Framework\resources\icons\unpin_12x12_off.png" />
+    <Resource Include="Expression\Framework\resources\icons\unpin_12x12_on.png" />
+    <Resource Include="Expression\Framework\resources\icons\ux\ux_add_off_11x11.png" />
+    <Resource Include="Expression\Framework\resources\icons\ux\ux_add_on_11x11.png" />
+    <Resource Include="Expression\Framework\resources\icons\ux\ux_close_off_11x11.png" />
+    <Resource Include="Expression\Framework\resources\icons\ux\ux_close_on_11x11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shopdrawing.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shopdrawing.Extensibility\Shopdrawing.Extensibility.csproj">
+      <Project>{430dc17e-7541-4198-b8b2-f4d4529934a8}</Project>
+      <Name>Shopdrawing.Extensibility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\licensing-aboutdialog.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

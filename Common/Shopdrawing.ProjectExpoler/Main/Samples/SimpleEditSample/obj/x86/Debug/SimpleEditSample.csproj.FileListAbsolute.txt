@@ -1,0 +1,17 @@
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\SimpleEditSample\bin\Debug\SimpleSample.exe.config
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\SimpleEditSample\bin\Debug\SimpleSample.exe
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\SimpleEditSample\bin\Debug\SimpleSample.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\SimpleEditSample\bin\Debug\TreeViewEx.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\SimpleEditSample\bin\Debug\TreeViewEx.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\SimpleEditSample\obj\x86\Debug\MainWindow.g.cs
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\SimpleEditSample\obj\x86\Debug\App.g.cs
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\SimpleEditSample\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\SimpleEditSample\obj\x86\Debug\SimpleSample_MarkupCompile.cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\SimpleEditSample\obj\x86\Debug\SimpleSample_MarkupCompile.lref
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\SimpleEditSample\obj\x86\Debug\MainWindow.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\SimpleEditSample\obj\x86\Debug\SimpleSample.g.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\SimpleEditSample\obj\x86\Debug\TreeViewEx.SimpleSample.Properties.Resources.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\SimpleEditSample\obj\x86\Debug\SimpleEditSample.csproj.GenerateResource.Cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\SimpleEditSample\obj\x86\Debug\SimpleSample.exe
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\SimpleEditSample\obj\x86\Debug\SimpleSample.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\SimpleEditSample\obj\x86\Debug\SimpleEditSample.csprojResolveAssemblyReference.cache

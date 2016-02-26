@@ -1,0 +1,33 @@
+<Grid xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      x:Name="Window" x:Uid="Grid_1">
+  <FrameworkElement.Resources>
+    <Style x:Key="TextBlockStyle1" x:Uid="Style_2" TargetType="{x:Type TextBlock}">
+      <Setter x:Uid="Setter_1136" Property="TextBlock.TextWrapping" Value="Wrap"/>
+      <Setter x:Uid="Setter_1137" Property="TextBlock.TextTrimming" Value="None"/>
+      <Setter x:Uid="Setter_1138" Property="TextBlock.FontFamily"
+              Value="{DynamicResource {x:Static SystemFonts.MessageFontFamilyKey}}"/>
+      <Setter x:Uid="Setter_1139" Property="TextBlock.FontSize" Value="9"/>
+      <Setter x:Uid="Setter_1140" Property="TextBlock.Foreground" Value="{DynamicResource 50pcGrayMainText}"/>
+      <Setter x:Uid="Setter_1141" Property="TextBlock.TextAlignment" Value="Center"/>
+      <Setter x:Uid="Setter_1142" Property="TextBlock.LineHeight" Value="12"/>
+    </Style>
+  </FrameworkElement.Resources>
+  <Image x:Uid="Image_1" Stretch="None">
+    <Image.Source>
+      <Binding Path="BackgroundImage"/>
+    </Image.Source>
+  </Image>
+  <TextBlock x:Uid="TextBlock_1" FrameworkElement.Margin="45,0,56,33" FrameworkElement.Width="255"
+             FrameworkElement.HorizontalAlignment="Stretch" FrameworkElement.VerticalAlignment="Bottom"
+             FrameworkElement.Style="{DynamicResource TextBlockStyle1}" FontSize="9" TextAlignment="Center"
+             LineHeight="12" Foreground="#FF808080">
+    <Run x:Uid="Run_1">
+      © 2010 Microsoft Corporation. All rights reserved.
+    </Run>
+    <LineBreak x:Uid="LineBreak_1"/>
+    <Run x:Uid="Run_2">
+      This program is protected by U.S. and international copyright laws as described in Help/About.
+    </Run>
+  </TextBlock>
+</Grid>

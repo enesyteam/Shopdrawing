@@ -1,0 +1,10 @@
+C:\Users\M4600\Documents\00\obj\x86\Debug\Microsoft.Expression.DesignModel.csprojResolveAssemblyReference.cache
+C:\Users\M4600\Documents\00\bin\Debug\Microsoft.Expression.DesignModel.dll
+C:\Users\M4600\Documents\00\bin\Debug\Microsoft.Expression.DesignModel.pdb
+C:\Users\M4600\Documents\00\bin\Debug\Microsoft.Expression.Markup.dll
+C:\Users\M4600\Documents\00\bin\Debug\Microsoft.Windows.Design.Interaction.dll
+C:\Users\M4600\Documents\00\bin\Debug\Shopdrawing.Design.Extensibility.dll
+C:\Users\M4600\Documents\00\bin\Debug\Microsoft.Windows.Design.Extensibility.dll
+C:\Users\M4600\Documents\00\bin\Debug\Shopdrawing.Design.Extensibility.pdb
+C:\Users\M4600\Documents\00\obj\x86\Debug\Microsoft.Expression.DesignModel.dll
+C:\Users\M4600\Documents\00\obj\x86\Debug\Microsoft.Expression.DesignModel.pdb

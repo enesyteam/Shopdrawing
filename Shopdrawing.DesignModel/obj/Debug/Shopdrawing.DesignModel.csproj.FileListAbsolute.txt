@@ -1,0 +1,11 @@
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.DesignModel\bin\Debug\Shopdrawing.DesignModel.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.DesignModel\bin\Debug\Shopdrawing.DesignModel.pdb
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.DesignModel\bin\Debug\Shopdrawing.Design.Extensibility.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.DesignModel\bin\Debug\Shopdrawing.Design.Interaction.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.DesignModel\bin\Debug\Shopdrawing.Markup.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.DesignModel\bin\Debug\Shopdrawing.Design.Extensibility.pdb
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.DesignModel\bin\Debug\Shopdrawing.Design.Interaction.pdb
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.DesignModel\bin\Debug\Shopdrawing.Markup.pdb
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.DesignModel\obj\Debug\Shopdrawing.DesignModel.csprojResolveAssemblyReference.cache
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.DesignModel\obj\Debug\Shopdrawing.DesignModel.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.DesignModel\obj\Debug\Shopdrawing.DesignModel.pdb

@@ -1,0 +1,175 @@
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\obj\Debug\Shopdrawing.Themes.csprojResolveAssemblyReference.cache
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\bin\Debug\Shopdrawing.Themes.dll
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\bin\Debug\Shopdrawing.Themes.pdb
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\obj\Debug\Shopdrawing.Themes.Properties.Resources.resources
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\obj\Debug\Shopdrawing.Themes.csproj.GenerateResource.Cache
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\obj\Debug\Shopdrawing.Themes.dll
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\obj\Debug\Shopdrawing.Themes.pdb
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Generic.baml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\obj\Debug\Shopdrawing.Themes_MarkupCompile.cache
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\obj\Debug\Shopdrawing.Themes.g.resources
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Colors\Colors.baml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\bin\Debug\DynamicGeometry.dll
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\bin\Debug\GuiLabs.Undo.dll
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\bin\Debug\DynamicGeometry.pdb
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\bin\Debug\GuiLabs.Undo.pdb
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\PropertyGrid.baml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\MethodCallerButton.baml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\bin\Debug\Shopdrawing.Controls.dll
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\bin\Debug\Shopdrawing.Controls.pdb
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\PropertyGridHost.baml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\TextBoxEx.baml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\CheckBoxEx.baml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\ListBoxEx.baml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\ComboBoxEx.baml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\LabeledValueEditor.baml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Colors\MenuColors.baml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\Menu.baml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\MenuItems.baml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\ScrollBar.baml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Colors\Fonts.baml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\bin\Debug\System.Windows.Controls.WpfPropertyGrid.dll
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\bin\Debug\System.Windows.Controls.WpfPropertyGrid.pdb
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\bin\Debug\System.Windows.Controls.WpfPropertyGrid.xml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\bin\Debug\System.Windows.Controls.WpfPropertyGrid.Themes.dll
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\bin\Debug\System.Windows.Controls.WpfPropertyGrid.Themes.pdb
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\NewPropertyGrid.baml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\Expander.baml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\ShopDrawingWindow.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\bin\Debug\Shopdrawing.Themes.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\bin\Debug\Shopdrawing.Themes.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\bin\Debug\DynamicGeometry.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\bin\Debug\System.Windows.Controls.WpfPropertyGrid.Themes.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\bin\Debug\System.Windows.Controls.WpfPropertyGrid.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\bin\Debug\System.Windows.Controls.WpfPropertyGrid.xml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\bin\Debug\Shopdrawing.Controls.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\bin\Debug\GuiLabs.Undo.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\bin\Debug\Shopdrawing.Wpf.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\bin\Debug\Shopdrawing.Core.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\bin\Debug\Shopdrawing.Core.xml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Shopdrawing.Themes.csprojResolveAssemblyReference.cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Colors\Fonts.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Colors\MenuColors.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Colors\TextStyle.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\CheckBoxEx.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\ComboBoxEx.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\Expander.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\LabeledValueEditor.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\ListBoxEx.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\Menu.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\MenuItems.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\NewPropertyGrid.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\NotifycationLabel.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\PropertyGrid.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\MethodCallerButton.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Colors\Colors.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\PropertyGridHost.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\PropertyItemName.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\PropertyUnitLabel.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\ScrollBar.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\ShopDrawingWindow.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\StatusBar.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\StatusButton.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\TextBoxEx.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\TitleLabel.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\Window1.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Drawing\Drawing.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Generic.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Icons\ShopdrawingIcons.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Shopdrawing.Themes_MarkupCompile.cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Shopdrawing.Themes.g.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Shopdrawing.Themes.Properties.Resources.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Shopdrawing.Themes.csproj.GenerateResource.Cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Shopdrawing.Themes.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Shopdrawing.Themes.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\bin\Debug\xref.NETdxf.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\bin\Debug\xref.NETdxf.xml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\SdrToolbar.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Controls\DockPanel.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\bin\Debug\TreeViewEx.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Shopdrawing.Themes_MarkupCompile.lref
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Colors\BlendIcons.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Colors\BlendDarkTheme.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\obj\Debug\Default\Colors\BlendLightTheme.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\bin\Debug\Shopdrawing.Themes.dll
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\bin\Debug\Shopdrawing.Themes.pdb
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\bin\Debug\BridgeProject.dll
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\bin\Debug\DynamicGeometry.dll
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\bin\Debug\Infragistics.Windows.Toolkit.dll
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\bin\Debug\Shopdrawing.Controls.dll
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\bin\Debug\Shopdrawing.Framework.dll
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\bin\Debug\System.Windows.Controls.Input.Toolkit.dll
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\bin\Debug\GuiLabs.Undo.dll
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\bin\Debug\xref.NETdxf.dll
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\bin\Debug\ICSharpCode.TreeView.dll
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\bin\Debug\TreeViewEx.dll
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\bin\Debug\Shopdrawing.Extensibility.dll
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\bin\Debug\Microsoft.Expression.Licensing.dll
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\bin\Debug\Shopdrawing.Wpf.dll
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\bin\Debug\Shopdrawing.Core.dll
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\bin\Debug\DynamicGeometry.pdb
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\bin\Debug\BridgeProject.pdb
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\bin\Debug\Shopdrawing.Framework.pdb
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\bin\Debug\Shopdrawing.Controls.pdb
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\bin\Debug\GuiLabs.Undo.pdb
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\bin\Debug\xref.NETdxf.pdb
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\bin\Debug\xref.NETdxf.xml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\bin\Debug\ICSharpCode.TreeView.pdb
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\bin\Debug\TreeViewEx.pdb
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\bin\Debug\Shopdrawing.Extensibility.pdb
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\bin\Debug\Shopdrawing.Wpf.pdb
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\bin\Debug\Shopdrawing.Core.pdb
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\bin\Debug\Shopdrawing.Core.xml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Shopdrawing.Themes.csprojResolveAssemblyReference.cache
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Colors\BlendDarkTheme.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Colors\BlendIcons.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Colors\Fonts.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Colors\MenuColors.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Colors\TextStyle.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Controls\Border.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Controls\Button.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Controls\CheckBox.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Controls\ComboBox.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Controls\ContextMenu.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Controls\DockPanel.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Controls\Expander.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Controls\GridSplitter.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Controls\LabeledValueEditor.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Controls\ListBoxEx.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Controls\Menu.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Controls\MenuItems.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Controls\NotifycationLabel.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Controls\PropertyGrid.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Controls\MethodCallerButton.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Colors\Colors.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Controls\PropertyGridHost.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Controls\PropertyItemName.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Controls\PropertyUnitLabel.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Controls\RadioButton.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Controls\ScrollBar.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Controls\ScrollViewer.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Controls\SdrToolbar.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Controls\Search.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Controls\ShopDrawingWindow.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Controls\StatusBar.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Controls\TabControl.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Controls\TextBox.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Controls\TitleLabel.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Controls\ToggleButton.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Controls\ToolTip.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Controls\Treeview.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Controls\Window1.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Drawing\Drawing.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\FrameworkControls\FrameworkControls.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Generic.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Icons\FrameworkIcons.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Icons\ShopdrawingIcons.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Shopdrawing.Themes_MarkupCompile.cache
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Shopdrawing.Themes_MarkupCompile.lref
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Colors\BlendLightTheme.baml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Shopdrawing.Themes.g.resources
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Shopdrawing.Themes.Properties.Resources.resources
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Shopdrawing.Themes.csproj.GenerateResource.Cache
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Shopdrawing.Themes.dll
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Shopdrawing.Themes.pdb
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Themes\obj\Debug\Default\Controls\Core.baml

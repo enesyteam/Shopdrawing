@@ -1,0 +1,745 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AnimationWorkspaceName" xml:space="preserve">
+    <value>_Animation</value>
+  </data>
+  <data name="ApplicationAssemblyLoadErrorDialogMessage" xml:space="preserve">
+    <value>An error occurred while loading the assembly "{0}".
+{1}</value>
+  </data>
+  <data name="ApplicationSecurityExceptionDialogTitle" xml:space="preserve">
+    <value>Security Exception</value>
+  </data>
+  <data name="ApplicationTargetInvocationDialogMessage" xml:space="preserve">
+    <value>Inner exception: {0}</value>
+  </data>
+  <data name="ApplicationTargetInvocationDialogTitle" xml:space="preserve">
+    <value>Target Invocation Exception</value>
+  </data>
+  <data name="ApplicationTitle" xml:space="preserve">
+    <value>Microsoft Expression Blend 4</value>
+  </data>
+  <data name="ApplicationTitleFormatWithProjectName" xml:space="preserve">
+    <value>{0} - {1}</value>
+  </data>
+  <data name="ApplicationUnrecoverableErrorDialogMessage" xml:space="preserve">
+    <value>Blend has encountered an unrecoverable internal error and must close.
+
+Do you want to save your work?</value>
+  </data>
+  <data name="CopyToResourceMenu" xml:space="preserve">
+    <value>_Copy Into Source DrawingBrush</value>
+  </data>
+  <data name="DesignWorkspaceName" xml:space="preserve">
+    <value>_Design</value>
+  </data>
+  <data name="FindInFiles" xml:space="preserve">
+    <value>Find in Fi_les</value>
+  </data>
+  <data name="MefCompositionException" xml:space="preserve">
+    <value>Expression Blend could not load one or more of the installed extensions from {0}. Please uninstall and then reinstall the latest version of the extensions.
+
+See the Results panel for more information.
+</value>
+  </data>
+  <data name="MenuBarArrangeMenuAlign" xml:space="preserve">
+    <value>A_lign</value>
+  </data>
+  <data name="MenuBarArrangeMenuAlignBottom" xml:space="preserve">
+    <value>_Bottom Edges</value>
+  </data>
+  <data name="MenuBarArrangeMenuAlignCenterHorizontally" xml:space="preserve">
+    <value>_Horizontal Centers</value>
+  </data>
+  <data name="MenuBarArrangeMenuAlignLeft" xml:space="preserve">
+    <value>_Left Edges</value>
+  </data>
+  <data name="MenuBarArrangeMenuAlignMiddleVertically" xml:space="preserve">
+    <value>_Vertical Centers</value>
+  </data>
+  <data name="MenuBarArrangeMenuAlignRight" xml:space="preserve">
+    <value>_Right Edges</value>
+  </data>
+  <data name="MenuBarArrangeMenuAlignTop" xml:space="preserve">
+    <value>_Top Edges</value>
+  </data>
+  <data name="MenuBarArrangeMenuAutoSize" xml:space="preserve">
+    <value>Auto Si_ze</value>
+  </data>
+  <data name="MenuBarArrangeMenuAutoSizeBoth" xml:space="preserve">
+    <value>_Both</value>
+  </data>
+  <data name="MenuBarArrangeMenuAutoSizeFill" xml:space="preserve">
+    <value>_Fill</value>
+  </data>
+  <data name="MenuBarArrangeMenuAutoSizeHeight" xml:space="preserve">
+    <value>_Height</value>
+  </data>
+  <data name="MenuBarArrangeMenuAutoSizeWidth" xml:space="preserve">
+    <value>_Width</value>
+  </data>
+  <data name="MenuBarArrangeMenuFlip" xml:space="preserve">
+    <value>_Flip</value>
+  </data>
+  <data name="MenuBarArrangeMenuFlipHorizontal" xml:space="preserve">
+    <value>_Horizontal</value>
+  </data>
+  <data name="MenuBarArrangeMenuFlipVertical" xml:space="preserve">
+    <value>_Vertical</value>
+  </data>
+  <data name="MenuBarArrangeMenuGroup" xml:space="preserve">
+    <value>_Group</value>
+  </data>
+  <data name="MenuBarArrangeMenuGroupInto" xml:space="preserve">
+    <value>_Group Into</value>
+  </data>
+  <data name="MenuBarArrangeMenuMakeSameHeight" xml:space="preserve">
+    <value>_Height</value>
+  </data>
+  <data name="MenuBarArrangeMenuMakeSameSize" xml:space="preserve">
+    <value>_Size</value>
+  </data>
+  <data name="MenuBarArrangeMenuMakeSameWidth" xml:space="preserve">
+    <value>_Width</value>
+  </data>
+  <data name="MenuBarArrangeMenuOrder" xml:space="preserve">
+    <value>O_rder</value>
+  </data>
+  <data name="MenuBarArrangeMenuOrderBringForward" xml:space="preserve">
+    <value>Bring F_orward</value>
+  </data>
+  <data name="MenuBarArrangeMenuOrderBringToFront" xml:space="preserve">
+    <value>Bring to _Front</value>
+  </data>
+  <data name="MenuBarArrangeMenuOrderSendBackward" xml:space="preserve">
+    <value>Send B_ackward</value>
+  </data>
+  <data name="MenuBarArrangeMenuOrderSendToBack" xml:space="preserve">
+    <value>Send to _Back</value>
+  </data>
+  <data name="MenuBarArrangeMenuSize" xml:space="preserve">
+    <value>_Make Same</value>
+  </data>
+  <data name="MenuBarArrangeMenuUngroup" xml:space="preserve">
+    <value>_Ungroup</value>
+  </data>
+  <data name="MenuBarCopyAnnotationsInDocumentAsText" xml:space="preserve">
+    <value>_Copy Annotations as Text</value>
+  </data>
+  <data name="MenuBarCreateAnnotation" xml:space="preserve">
+    <value>Create _Annotation</value>
+  </data>
+  <data name="MenuBarDeleteAnnotationsInDocument" xml:space="preserve">
+    <value>_Delete Annotations</value>
+  </data>
+  <data name="MenuBarEdit" xml:space="preserve">
+    <value>_Edit</value>
+  </data>
+  <data name="MenuBarEditMenuCommentSelection" xml:space="preserve">
+    <value>C_omment Selection</value>
+  </data>
+  <data name="MenuBarEditMenuCopy" xml:space="preserve">
+    <value>_Copy</value>
+  </data>
+  <data name="MenuBarEditMenuCut" xml:space="preserve">
+    <value>Cu_t</value>
+  </data>
+  <data name="MenuBarEditMenuDelete" xml:space="preserve">
+    <value>_Delete</value>
+  </data>
+  <data name="MenuBarEditMenuFind" xml:space="preserve">
+    <value>_Find...</value>
+  </data>
+  <data name="MenuBarEditMenuFindNext" xml:space="preserve">
+    <value>Find _Next</value>
+  </data>
+  <data name="MenuBarEditMenuGoTo" xml:space="preserve">
+    <value>_Go To...</value>
+  </data>
+  <data name="MenuBarEditMenuPaste" xml:space="preserve">
+    <value>_Paste</value>
+  </data>
+  <data name="MenuBarEditMenuRedo" xml:space="preserve">
+    <value>_Redo</value>
+  </data>
+  <data name="MenuBarEditMenuReplace" xml:space="preserve">
+    <value>R_eplace...</value>
+  </data>
+  <data name="MenuBarEditMenuSelectAll" xml:space="preserve">
+    <value>Select _All</value>
+  </data>
+  <data name="MenuBarEditMenuSelectNone" xml:space="preserve">
+    <value>_Select None</value>
+  </data>
+  <data name="MenuBarEditMenuSetSetStartupScene" xml:space="preserve">
+    <value>Se_t as Startup</value>
+  </data>
+  <data name="MenuBarEditMenuUncommentSelection" xml:space="preserve">
+    <value>Unco_mment Selection</value>
+  </data>
+  <data name="MenuBarEditMenuUndo" xml:space="preserve">
+    <value>_Undo</value>
+  </data>
+  <data name="MenuBarFile" xml:space="preserve">
+    <value>_File</value>
+  </data>
+  <data name="MenuBarFileMenuClose" xml:space="preserve">
+    <value>_Close Document</value>
+  </data>
+  <data name="MenuBarFileMenuCloseAll" xml:space="preserve">
+    <value>Close All _Documents</value>
+  </data>
+  <data name="MenuBarFileMenuCloseOther" xml:space="preserve">
+    <value>Close Ot_her Documents</value>
+  </data>
+  <data name="MenuBarFileMenuExit" xml:space="preserve">
+    <value>E_xit</value>
+  </data>
+  <data name="MenuBarFileMenuImport" xml:space="preserve">
+    <value>_Import...</value>
+  </data>
+  <data name="MenuBarFileMenuImportIllustrator" xml:space="preserve">
+    <value>_Import Adobe Illustrator File...</value>
+  </data>
+  <data name="MenuBarFileMenuImportPhotoshop" xml:space="preserve">
+    <value>I_mport Adobe Photoshop File...</value>
+  </data>
+  <data name="MenuBarFileMenuNewItem" xml:space="preserve">
+    <value>_New Item...</value>
+  </data>
+  <data name="MenuBarFileMenuNewProject" xml:space="preserve">
+    <value>Ne_w Project...</value>
+  </data>
+  <data name="MenuBarFileMenuOpenProjectSolution" xml:space="preserve">
+    <value>_Open Project/Solution...</value>
+  </data>
+  <data name="MenuBarFileMenuSave" xml:space="preserve">
+    <value>_Save</value>
+  </data>
+  <data name="MenuBarFileMenuSaveAll" xml:space="preserve">
+    <value>Save A_ll</value>
+  </data>
+  <data name="MenuBarFileRecentProjects" xml:space="preserve">
+    <value>_Recent Projects</value>
+  </data>
+  <data name="MenuBarFormatMenuEditControl" xml:space="preserve">
+    <value>Edit Co_ntrol</value>
+  </data>
+  <data name="MenuBarFormatMenuEditCopyStyle" xml:space="preserve">
+    <value>Edit a _Copy...</value>
+  </data>
+  <data name="MenuBarFormatMenuEditExistingStyle" xml:space="preserve">
+    <value>Edit C_urrent</value>
+  </data>
+  <data name="MenuBarFormatMenuEditExistingTemplate" xml:space="preserve">
+    <value>Edit C_urrent</value>
+  </data>
+  <data name="MenuBarFormatMenuEditLocalResource" xml:space="preserve">
+    <value>_Apply Resource</value>
+  </data>
+  <data name="MenuBarFormatMenuEditNewStyle" xml:space="preserve">
+    <value>Create _Empty...</value>
+  </data>
+  <data name="MenuBarFormatMenuEditStyleMenuName" xml:space="preserve">
+    <value>Edit _Style</value>
+  </data>
+  <data name="MenuBarFormatMenuEditStyles" xml:space="preserve">
+    <value>Edit Additi_onal Styles</value>
+  </data>
+  <data name="MenuBarFormatMenuEditTemplateMenuName" xml:space="preserve">
+    <value>_Edit Template</value>
+  </data>
+  <data name="MenuBarFormatMenuEditTemplates" xml:space="preserve">
+    <value>E_dit Additional Templates</value>
+  </data>
+  <data name="MenuBarFormatMenuEditText" xml:space="preserve">
+    <value>Edit _Text</value>
+  </data>
+  <data name="MenuBarFormatMenuHideAllObjects" xml:space="preserve">
+    <value>Hide A_ll</value>
+  </data>
+  <data name="MenuBarFormatMenuHideObjects" xml:space="preserve">
+    <value>_Hide Selection</value>
+  </data>
+  <data name="MenuBarFormatMenuLockAllObjects" xml:space="preserve">
+    <value>Lock _All</value>
+  </data>
+  <data name="MenuBarFormatMenuLockMenuName" xml:space="preserve">
+    <value>Loc_k</value>
+  </data>
+  <data name="MenuBarFormatMenuLockObjects" xml:space="preserve">
+    <value>_Lock Selection</value>
+  </data>
+  <data name="MenuBarFormatMenuShowAllObjects" xml:space="preserve">
+    <value>Show _All</value>
+  </data>
+  <data name="MenuBarFormatMenuShowObjects" xml:space="preserve">
+    <value>_Show Selection</value>
+  </data>
+  <data name="MenuBarFormatMenuUnlockAllObjects" xml:space="preserve">
+    <value>_Unlock All</value>
+  </data>
+  <data name="MenuBarFormatMenuVisibilityMenuName" xml:space="preserve">
+    <value>_Visibility</value>
+  </data>
+  <data name="MenuBarHelp" xml:space="preserve">
+    <value>_Help</value>
+  </data>
+  <data name="MenuBarHelpMenuAbout" xml:space="preserve">
+    <value>_About {0}</value>
+  </data>
+  <data name="MenuBarHelpMenuActivateProduct" xml:space="preserve">
+    <value>Acti_vate Product</value>
+  </data>
+  <data name="MenuBarHelpMenuEnterProductKey" xml:space="preserve">
+    <value>_Enter Product Key</value>
+  </data>
+  <data name="MenuBarHelpMenuFeedbackOptions" xml:space="preserve">
+    <value>_Customer Experience Improvement Program</value>
+  </data>
+  <data name="MenuBarHelpMenuHelpTopics" xml:space="preserve">
+    <value>_User Guide</value>
+  </data>
+  <data name="MenuBarHelpMenuKeyboardShortcuts" xml:space="preserve">
+    <value>_Keyboard Shortcuts</value>
+  </data>
+  <data name="MenuBarHelpMenuPrivacyStatement" xml:space="preserve">
+    <value>_Privacy Statement</value>
+  </data>
+  <data name="MenuBarHelpMenuRegisterProduct" xml:space="preserve">
+    <value>_Register Expression Blend</value>
+  </data>
+  <data name="MenuBarHelpMenuSdkHelpTopics" xml:space="preserve">
+    <value>Expression Blend _SDK User Guide</value>
+  </data>
+  <data name="MenuBarHelpMenuWebsite" xml:space="preserve">
+    <value>_Online Community</value>
+  </data>
+  <data name="MenuBarHelpMenuWebsiteCommunityHome" xml:space="preserve">
+    <value>_Expression Community Home</value>
+  </data>
+  <data name="MenuBarHelpMenuWebsiteCommunityNews" xml:space="preserve">
+    <value>_Community News, Blogs, and Events</value>
+  </data>
+  <data name="MenuBarHelpMenuWebsiteDownloads" xml:space="preserve">
+    <value>_Downloads</value>
+  </data>
+  <data name="MenuBarHelpMenuWebsiteGallery" xml:space="preserve">
+    <value>_Gallery</value>
+  </data>
+  <data name="MenuBarHelpMenuWebsiteInsideExpression" xml:space="preserve">
+    <value>_Inside Expression</value>
+  </data>
+  <data name="MenuBarHelpMenuWebsiteLearn" xml:space="preserve">
+    <value>_Learn</value>
+  </data>
+  <data name="MenuBarHelpMenuWebsiteOnlineForums" xml:space="preserve">
+    <value>_Online Forums</value>
+  </data>
+  <data name="MenuBarHelpMenuWebsiteTeamBlog" xml:space="preserve">
+    <value>E_xpression Blend Team Blog</value>
+  </data>
+  <data name="MenuBarHelpMenuWelcomeScreen" xml:space="preserve">
+    <value>_Welcome Screen</value>
+  </data>
+  <data name="MenuBarLockInsertionPoint" xml:space="preserve">
+    <value>Pin _Active Container</value>
+  </data>
+  <data name="MenuBarObject" xml:space="preserve">
+    <value>_Object</value>
+  </data>
+  <data name="MenuBarObjectMenuConvertToMotionPath" xml:space="preserve">
+    <value>_Convert to Motion Path</value>
+  </data>
+  <data name="MenuBarObjectMenuConvertToPath" xml:space="preserve">
+    <value>Convert to _Path</value>
+  </data>
+  <data name="MenuBarObjectMenuMakeClippingPath" xml:space="preserve">
+    <value>M_ake Clipping Path</value>
+  </data>
+  <data name="MenuBarObjectMenuMakeCompoundPath" xml:space="preserve">
+    <value>_Make Compound Path</value>
+  </data>
+  <data name="MenuBarObjectMenuMakeLayoutPath" xml:space="preserve">
+    <value>Make _Layout Path</value>
+  </data>
+  <data name="MenuBarObjectMenuPath" xml:space="preserve">
+    <value>_Path</value>
+  </data>
+  <data name="MenuBarObjectMenuReleaseCompoundPath" xml:space="preserve">
+    <value>_Release Compound Path</value>
+  </data>
+  <data name="MenuBarObjectMenuRemoveClippingPath" xml:space="preserve">
+    <value>Relea_se Clipping Path</value>
+  </data>
+  <data name="MenuBarProject" xml:space="preserve">
+    <value>_Project</value>
+  </data>
+  <data name="MenuBarProjectAddExistingProject" xml:space="preserve">
+    <value>Add E_xisting Project...</value>
+  </data>
+  <data name="MenuBarProjectAddExistingWebsite" xml:space="preserve">
+    <value>Add _Existing Website...</value>
+  </data>
+  <data name="MenuBarProjectAddNewProject" xml:space="preserve">
+    <value>Add Ne_w Project...</value>
+  </data>
+  <data name="MenuBarProjectMenuAddExistingItem" xml:space="preserve">
+    <value>_Add Existing Item...</value>
+  </data>
+  <data name="MenuBarProjectMenuAddNewItem" xml:space="preserve">
+    <value>Add New _Item...</value>
+  </data>
+  <data name="MenuBarProjectMenuAddProjectReference" xml:space="preserve">
+    <value>Add _Project Reference</value>
+  </data>
+  <data name="MenuBarProjectMenuAddReference" xml:space="preserve">
+    <value>Add Re_ference...</value>
+  </data>
+  <data name="MenuBarProjectMenuEnableOutOfBrowser" xml:space="preserve">
+    <value>Enable Application _Outside Browser</value>
+  </data>
+  <data name="MenuBarProjectMenuEnablePreviewOutOfBrowser" xml:space="preserve">
+    <value>_Preview Application Outside Browser</value>
+  </data>
+  <data name="MenuBarProjectMenuLinkToExistingItem" xml:space="preserve">
+    <value>_Link to Existing Item...</value>
+  </data>
+  <data name="MenuBarProjectMenuNewFolder" xml:space="preserve">
+    <value>Add _New Folder</value>
+  </data>
+  <data name="MenuBarProjectMenuRequireElevatedPermissions" xml:space="preserve">
+    <value>Application Requires _Elevated Permission</value>
+  </data>
+  <data name="MenuBarProjectMenuSilverlightFlyoutMenu" xml:space="preserve">
+    <value>Sil_verlight Project Settings</value>
+  </data>
+  <data name="MenuBarProjectMenuUsePlatformExtensions" xml:space="preserve">
+    <value>Use Application _Library Caching</value>
+  </data>
+  <data name="MenuBarTools" xml:space="preserve">
+    <value>_Tools</value>
+  </data>
+  <data name="MenuBarToolsMenuClearPartAssignment" xml:space="preserve">
+    <value>C_lear Part Assignment</value>
+  </data>
+  <data name="MenuBarToolsMenuCombine" xml:space="preserve">
+    <value>_Combine</value>
+  </data>
+  <data name="MenuBarToolsMenuCopyAllStateProperties" xml:space="preserve">
+    <value>Copy State _To</value>
+  </data>
+  <data name="MenuBarToolsMenuCopySelectedStateProperties" xml:space="preserve">
+    <value>Copy Selected P_roperties of State To</value>
+  </data>
+  <data name="MenuBarToolsMenuDivide" xml:space="preserve">
+    <value>_Divide</value>
+  </data>
+  <data name="MenuBarToolsMenuEditTileBrush" xml:space="preserve">
+    <value>_Edit Brush Resource</value>
+  </data>
+  <data name="MenuBarToolsMenuExcludeOverlap" xml:space="preserve">
+    <value>_Exclude Overlap</value>
+  </data>
+  <data name="MenuBarToolsMenuIntersect" xml:space="preserve">
+    <value>_Intersect</value>
+  </data>
+  <data name="MenuBarToolsMenuMakeCompositionScreen" xml:space="preserve">
+    <value>Make Into Component _Screen...</value>
+  </data>
+  <data name="MenuBarToolsMenuMakeControl" xml:space="preserve">
+    <value>_Make Into Control...</value>
+  </data>
+  <data name="MenuBarToolsMenuMakeDrawingBrush" xml:space="preserve">
+    <value>Make _DrawingBrush Resource...</value>
+  </data>
+  <data name="MenuBarToolsMenuMakeImage3D" xml:space="preserve">
+    <value>Make _Image 3D</value>
+  </data>
+  <data name="MenuBarToolsMenuMakeImageBrush" xml:space="preserve">
+    <value>Make _ImageBrush Resource...</value>
+  </data>
+  <data name="MenuBarToolsMenuMakePart" xml:space="preserve">
+    <value>Make Into Part...</value>
+  </data>
+  <data name="MenuBarToolsMenuMakeTileBrush" xml:space="preserve">
+    <value>Ma_ke Brush Resource</value>
+  </data>
+  <data name="MenuBarToolsMenuMakeUserControl" xml:space="preserve">
+    <value>Make Into _UserControl...</value>
+  </data>
+  <data name="MenuBarToolsMenuMakeVideoBrush" xml:space="preserve">
+    <value>Make _VideoBrush Resource...</value>
+  </data>
+  <data name="MenuBarToolsMenuMakeVisualBrush" xml:space="preserve">
+    <value>Make _VisualBrush Resource...</value>
+  </data>
+  <data name="MenuBarToolsMenuSubtract" xml:space="preserve">
+    <value>_Subtract</value>
+  </data>
+  <data name="MenuBarToolsMenuUnite" xml:space="preserve">
+    <value>_Unite</value>
+  </data>
+  <data name="MenuBarToolsNameInteractiveElements" xml:space="preserve">
+    <value>_Name Interactive Elements</value>
+  </data>
+  <data name="MenuBarToolsOptions" xml:space="preserve">
+    <value>_Options...</value>
+  </data>
+  <data name="MenuBarToolsSetupFontEmbedding" xml:space="preserve">
+    <value>_Font Manager...</value>
+  </data>
+  <data name="MenuBarView" xml:space="preserve">
+    <value>_View</value>
+  </data>
+  <data name="MenuBarViewMenuActualSize" xml:space="preserve">
+    <value>_Actual Size</value>
+  </data>
+  <data name="MenuBarViewMenuCycle" xml:space="preserve">
+    <value>Switch Active Document _View</value>
+  </data>
+  <data name="MenuBarViewMenuDesign" xml:space="preserve">
+    <value>_Design View</value>
+  </data>
+  <data name="MenuBarViewMenuDocumentMenu" xml:space="preserve">
+    <value>Active Document _View</value>
+  </data>
+  <data name="MenuBarViewMenuFitToAll" xml:space="preserve">
+    <value>Fi_t All</value>
+  </data>
+  <data name="MenuBarViewMenuFitToScreen" xml:space="preserve">
+    <value>_Fit to Screen</value>
+  </data>
+  <data name="MenuBarViewMenuFitToSelection" xml:space="preserve">
+    <value>_Fit Selection</value>
+  </data>
+  <data name="MenuBarViewMenuShowActiveContainer" xml:space="preserve">
+    <value>Show Active _Container</value>
+  </data>
+  <data name="MenuBarViewMenuShowAdorners" xml:space="preserve">
+    <value>Show _Handles</value>
+  </data>
+  <data name="MenuBarViewMenuShowAlignmentAdorners" xml:space="preserve">
+    <value>Show Alignment A_dorners</value>
+  </data>
+  <data name="MenuBarViewMenuShowAnnotations" xml:space="preserve">
+    <value>Show A_nnotations</value>
+  </data>
+  <data name="MenuBarViewMenuShowBoundaries" xml:space="preserve">
+    <value>Show Object _Boundaries</value>
+  </data>
+  <data name="MenuBarViewMenuShowObjectsWithProjections" xml:space="preserve">
+    <value>Apply _Projections</value>
+  </data>
+  <data name="MenuBarViewMenuShowSelectionPreview" xml:space="preserve">
+    <value>Show S_election Preview</value>
+  </data>
+  <data name="MenuBarViewMenuSplit" xml:space="preserve">
+    <value>_Split View</value>
+  </data>
+  <data name="MenuBarViewMenuSplitDesignOnTop" xml:space="preserve">
+    <value>_Swap Design and XAML Panes</value>
+  </data>
+  <data name="MenuBarViewMenuSplitHorizontally" xml:space="preserve">
+    <value>Arrange Panes _Horizontally</value>
+  </data>
+  <data name="MenuBarViewMenuSplitMenu" xml:space="preserve">
+    <value>_Split View Orientation</value>
+  </data>
+  <data name="MenuBarViewMenuSplitVertically" xml:space="preserve">
+    <value>Arrange Panes _Vertically</value>
+  </data>
+  <data name="MenuBarViewMenuToggleLights" xml:space="preserve">
+    <value>Show/Hide 3D _Lights</value>
+  </data>
+  <data name="MenuBarViewMenuXaml" xml:space="preserve">
+    <value>_XAML View</value>
+  </data>
+  <data name="MenuBarViewMenuZoomIn" xml:space="preserve">
+    <value>Zoom _In</value>
+  </data>
+  <data name="MenuBarViewMenuZoomOut" xml:space="preserve">
+    <value>Zoom _Out</value>
+  </data>
+  <data name="MenuBarWindow" xml:space="preserve">
+    <value>_Window</value>
+  </data>
+  <data name="MenuBarWindowCycleWorkspaces" xml:space="preserve">
+    <value>Switch Active _Workspace</value>
+  </data>
+  <data name="MenuBarWindowMenuAllWorkspaces" xml:space="preserve">
+    <value>All _Workspaces...</value>
+  </data>
+  <data name="MenuBarWindowMenuHideWorkspacePalettes" xml:space="preserve">
+    <value>Auto_Hide All Panels</value>
+  </data>
+  <data name="MenuBarWindowMenuManageWorkspaces" xml:space="preserve">
+    <value>_Manage Workspaces...</value>
+  </data>
+  <data name="MenuBarWindowMenuResetWorkspace" xml:space="preserve">
+    <value>_Reset Current Workspace</value>
+  </data>
+  <data name="MenuBarWindowMenuSaveAsNewWorkspace" xml:space="preserve">
+    <value>Sa_ve as New Workspace...</value>
+  </data>
+  <data name="MenuBarWindowsEmpty" xml:space="preserve">
+    <value>(Empty)</value>
+  </data>
+  <data name="MenuBarWindowsMore" xml:space="preserve">
+    <value>_All Windows...</value>
+  </data>
+  <data name="MenuBarWindowsWorkspace" xml:space="preserve">
+    <value>_Workspaces</value>
+  </data>
+  <data name="MoveToResourceMenu" xml:space="preserve">
+    <value>_Move Into Source DrawingBrush</value>
+  </data>
+  <data name="RenderTierOneMessage" xml:space="preserve">
+    <value>Some optimized rendering is supported by your system and video drivers.</value>
+  </data>
+  <data name="RenderTierTwoMessage" xml:space="preserve">
+    <value>Full optimized rendering is supported by your system and video drivers.</value>
+  </data>
+  <data name="RenderTierZeroMessage" xml:space="preserve">
+    <value>Optimized rendering is not supported by your system or video drivers.</value>
+  </data>
+  <data name="SketchFlowEnabled" xml:space="preserve">
+    <value>You have entered a license that adds SketchFlow support. Restart Expression Blend to start using SketchFlow.</value>
+  </data>
+  <data name="ThemeNameExpressionDark" xml:space="preserve">
+    <value>Expression dark</value>
+  </data>
+  <data name="ThemeNameExpressionLight" xml:space="preserve">
+    <value>Expression light</value>
+  </data>
+  <data name="ThemeNameWindows" xml:space="preserve">
+    <value>Windows</value>
+  </data>
+  <data name="TimebombExpiredMessage" xml:space="preserve">
+    <value>The prereleased version of this product has expired.
+You must update to a newer release.</value>
+  </data>
+  <data name="TimebombExpiredTitle" xml:space="preserve">
+    <value>Expired version</value>
+  </data>
+  <data name="WelcomeScreenTitle" xml:space="preserve">
+    <value>Welcome to Microsoft Expression Blend</value>
+  </data>
+</root>

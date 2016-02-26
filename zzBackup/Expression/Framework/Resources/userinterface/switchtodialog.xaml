@@ -1,0 +1,44 @@
+<Border xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:automation="clr-namespace:Microsoft.Expression.Framework.Diagnostics"
+        xmlns:userinterface="clr-namespace:Microsoft.Expression.Framework.UserInterface"
+        FrameworkElement.Width="400" FrameworkElement.MinHeight="100" FrameworkElement.MaxHeight="450"
+        x:Uid="Grid1" BorderThickness="1" BorderBrush="{DynamicResource WindowBorderBrush}"
+        FrameworkElement.Style="{DynamicResource DialogRootContainer}">
+  <FrameworkElement.Resources>
+    <DataTemplate x:Uid="DataTemplate_2" DataType="{x:Type userinterface:DocumentViewReference}">
+      <TextBlock x:Uid="TextBlock_2">
+        <automation:AutomationElement.Id>
+          <Binding Path="Path" Mode="OneTime"/>
+        </automation:AutomationElement.Id>
+        <TextBlock.Text>
+          <Binding Path="Caption" Mode="OneTime"/>
+        </TextBlock.Text>
+      </TextBlock>
+    </DataTemplate>
+  </FrameworkElement.Resources>
+  <Grid x:Uid="Grid_3">
+    <Grid.RowDefinitions>
+      <RowDefinition x:Uid="RowDefinition_3" Height="Auto"/>
+      <RowDefinition x:Uid="RowDefinition_1" Height="*"/>
+      <RowDefinition x:Uid="RowDefinition_2" Height="Auto"/>
+    </Grid.RowDefinitions>
+    <TextBlock FrameworkElement.Name="SwitchToLabel" x:Uid="SwitchToLabel" Text="Switch To"/>
+    <ListBox FrameworkElement.Name="DocumentList" Grid.Row="1"
+             FrameworkElement.Style="{StaticResource ExpressionListBox}" x:Uid="DocumentList"
+             UIElement.Focusable="false" FrameworkElement.Margin="{DynamicResource DefaultTopMargin}"
+             Selector.IsSynchronizedWithCurrentItem="true">
+      <ItemsControl.ItemsSource>
+        <Binding Path="DocumentViewReferences"/>
+      </ItemsControl.ItemsSource>
+    </ListBox>
+    <TextBlock FrameworkElement.Name="CurrentSelection" Grid.Row="2" FrameworkElement.VerticalAlignment="Bottom"
+               FrameworkElement.Margin="{DynamicResource LargeTopMargin}"
+               Foreground="{DynamicResource Text1Brush}" UIElement.Focusable="false" TextWrapping="Wrap"
+               x:Uid="TextBlock1">
+      <TextBlock.Text>
+        <Binding Path="DocumentViewReferences/Path"/>
+      </TextBlock.Text>
+    </TextBlock>
+  </Grid>
+</Border>

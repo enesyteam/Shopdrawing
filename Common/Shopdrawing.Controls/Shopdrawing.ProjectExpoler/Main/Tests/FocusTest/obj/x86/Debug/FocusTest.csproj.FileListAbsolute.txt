@@ -1,0 +1,15 @@
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Tests\FocusTest\bin\Debug\FocusTest.exe
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Tests\FocusTest\bin\Debug\FocusTest.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Tests\FocusTest\bin\Debug\TreeViewEx.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Tests\FocusTest\bin\Debug\TreeViewEx.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Tests\FocusTest\obj\x86\Debug\MainWindow.g.cs
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Tests\FocusTest\obj\x86\Debug\App.g.cs
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Tests\FocusTest\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Tests\FocusTest\obj\x86\Debug\FocusTest_MarkupCompile.cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Tests\FocusTest\obj\x86\Debug\FocusTest_MarkupCompile.lref
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Tests\FocusTest\obj\x86\Debug\MainWindow.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Tests\FocusTest\obj\x86\Debug\FocusTest.g.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Tests\FocusTest\obj\x86\Debug\TreeViewEx.FocusTest.Properties.Resources.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Tests\FocusTest\obj\x86\Debug\FocusTest.csproj.GenerateResource.Cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Tests\FocusTest\obj\x86\Debug\FocusTest.exe
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Tests\FocusTest\obj\x86\Debug\FocusTest.pdb

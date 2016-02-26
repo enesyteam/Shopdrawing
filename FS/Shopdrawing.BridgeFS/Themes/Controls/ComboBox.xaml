@@ -1,0 +1,356 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+                    mc:Ignorable="d" xmlns:Microsoft_Windows_Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero"
+                    xmlns:Controls="clr-namespace:Microsoft.Expression.Framework.Controls;assembly=Shopdrawing.Framework"
+                    xmlns:ValueEditors="clr-namespace:Microsoft.Expression.Framework.ValueEditors;assembly=Shopdrawing.Framework">
+
+    <Style x:Key="ExpressionComboBoxButton" x:Uid="Style_33" TargetType="{x:Type ToggleButton}">
+        <Setter x:Uid="Setter_182" Property="FrameworkElement.MinWidth" Value="0"/>
+        <Setter x:Uid="Setter_183" Property="FrameworkElement.MinHeight" Value="0"/>
+        <Setter x:Uid="Setter_184" Property="FrameworkElement.Width" Value="Auto"/>
+        <Setter x:Uid="Setter_185" Property="FrameworkElement.Height" Value="Auto"/>
+        <Setter x:Uid="Setter_186" Property="Control.Background" Value="Transparent"/>
+        <Setter x:Uid="Setter_187" Property="UIElement.Focusable" Value="false"/>
+        <Setter x:Uid="Setter_1262" Property="Control.BorderBrush"
+            Value="{DynamicResource ComboBoxButtonBorderBrush}"/>
+        <Setter x:Uid="Setter_1263" Property="Controls:ControlStylingUtilities.CustomAccentBrush"
+            Value="{DynamicResource ButtonDefaultBrush}"/>
+        <Setter x:Uid="Setter_188" Property="ButtonBase.ClickMode" Value="Press"/>
+        <Setter x:Uid="Setter_1549" Property="Control.BorderThickness" Value="1"/>
+        <Setter x:Uid="Setter_189" Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate x:Uid="ControlTemplate_18" TargetType="{x:Type ToggleButton}">
+                    <Grid x:Uid="Grid_14" Panel.Background="{TemplateBinding Control.Background}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition x:Uid="ColumnDefinition_8" Width="*"/>
+                            <ColumnDefinition x:Uid="ColumnDefinition_9" Width="Auto" DefinitionBase.SharedSizeGroup="ComboBoxButton"/>
+                        </Grid.ColumnDefinitions>
+                        <Border FrameworkElement.Name="ComboBoxButtonBorder" x:Uid="ComboBoxButtonBorder" Grid.Column="1"
+                    FrameworkElement.Width="16" CornerRadius="2"
+                    Background="{TemplateBinding Controls:ControlStylingUtilities.CustomAccentBrush}"
+                    BorderThickness="{TemplateBinding Control.BorderThickness}"
+                    BorderBrush="{TemplateBinding Control.BorderBrush}">
+                            <Image FrameworkElement.Name="ComboBoxButtonArrow" x:Uid="ComboBoxButtonArrow" Stretch="Fill"
+                     FrameworkElement.Width="8" FrameworkElement.Height="5"
+                     Source="{DynamicResource ExpressionComboBoxButtonIcon}"/>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger x:Uid="Trigger_1018" Property="UIElement.IsFocused" Value="true">
+                            <Setter x:Uid="Setter_1094" TargetName="ComboBoxButtonBorder" Value="{DynamicResource Text1Brush}"
+                      Property="Border.BorderBrush"/>
+                        </Trigger>
+                        <Trigger x:Uid="Trigger_1019" Property="UIElement.IsMouseOver" Value="true">
+                            <Setter x:Uid="Setter_1095" TargetName="ComboBoxButtonBorder" Value="{DynamicResource ButtonOverBrush}"
+                      Property="Border.Background"/>
+                        </Trigger>
+                        <Trigger x:Uid="Trigger_1020" Property="ButtonBase.IsPressed" Value="true">
+                            <Setter x:Uid="Setter_1097" TargetName="ComboBoxButtonBorder" Value="{DynamicResource DarkBrush}"
+                      Property="Border.BorderBrush"/>
+                            <Setter x:Uid="Setter_1098" TargetName="ComboBoxButtonBorder" Value="{DynamicResource RecessedBrush}"
+                      Property="Border.Background"/>
+                        </Trigger>
+                        <Trigger x:Uid="Trigger_1021" Property="UIElement.IsEnabled" Value="false">
+                            <Setter x:Uid="Setter_1099" TargetName="ComboBoxButtonArrow" Property="UIElement.Visibility" Value="Hidden"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="BaseComboBoxItem" x:Uid="Style_34" TargetType="{x:Type ComboBoxItem}">
+        <Setter x:Uid="Setter_1765" Property="FrameworkElement.MinHeight" Value="20"/>
+        <Setter x:Uid="Setter_1767" Property="FrameworkElement.FocusVisualStyle">
+            <Setter.Value>
+                <x:NullExtension/>
+            </Setter.Value>
+        </Setter>
+        <Setter x:Uid="Setter_1103" Property="Control.Foreground" Value="{DynamicResource Text1Brush}"/>
+        <Setter x:Uid="Setter_1140" Property="Control.FontFamily"
+            Value="{DynamicResource {x:Static SystemFonts.MessageFontFamilyKey}}"/>
+        <Setter x:Uid="Setter_1141" Property="Control.FontSize"
+            Value="{DynamicResource {x:Static SystemFonts.MessageFontSizeKey}}"/>
+        <Setter x:Uid="Setter_1142" Property="Control.FontWeight"
+            Value="{DynamicResource {x:Static SystemFonts.MessageFontWeightKey}}"/>
+        <Setter x:Uid="Setter_1106" Property="Control.Padding" Value="4,2,4,2"/>
+        <Setter x:Uid="Setter_1107" Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate x:Uid="ControlTemplate_29" TargetType="{x:Type ComboBoxItem}">
+                    <Border FrameworkElement.Name="ListBoxItemRoot" x:Uid="Border_27"
+                  BorderThickness="{TemplateBinding Control.BorderThickness}"
+                  BorderBrush="{TemplateBinding Control.BorderBrush}"
+                  Background="{TemplateBinding Control.Background}">
+                        <ContentPresenter x:Uid="ContentPresenter_19" Content="{TemplateBinding ContentControl.Content}"
+                              ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}"
+                              ContentTemplateSelector="{TemplateBinding ContentControl.ContentTemplateSelector}"
+                              FrameworkElement.HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+                              FrameworkElement.VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+                              FrameworkElement.Margin="{TemplateBinding Control.Padding}"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <MultiTrigger x:Uid="MultiTrigger_9">
+                <MultiTrigger.Conditions>
+                    <Condition x:Uid="Condition_19" Property="UIElement.IsMouseOver" Value="true"/>
+                    <Condition x:Uid="Condition_20" Property="ListBoxItem.IsSelected" Value="false"/>
+                </MultiTrigger.Conditions>
+                <Setter x:Uid="Setter_1108" Property="Control.Background" Value="{DynamicResource ListHoverBrush}"/>
+            </MultiTrigger>
+            <MultiDataTrigger x:Uid="MultiDataTrigger_1">
+                <MultiDataTrigger.Conditions>
+                    <Condition x:Uid="Condition_46" Value="True">
+                        <Condition.Binding>
+                            <Binding Path="IsSelected" RelativeSource="{RelativeSource Self}"/>
+                        </Condition.Binding>
+                    </Condition>
+                    <Condition x:Uid="Condition_47" Value="True">
+                        <Condition.Binding>
+                            <Binding Path="IsEditable" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type ComboBox}}"/>
+                        </Condition.Binding>
+                    </Condition>
+                </MultiDataTrigger.Conditions>
+                <Setter x:Uid="Setter_1110" Property="Control.Background" Value="{DynamicResource ListSelectedBrush}"/>
+                <Setter x:Uid="Setter_1111" Property="Control.Foreground" Value="{DynamicResource ListSelectedTextBrush}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger x:Uid="MultiDataTrigger_2">
+                <MultiDataTrigger.Conditions>
+                    <Condition x:Uid="Condition_48" Value="True">
+                        <Condition.Binding>
+                            <Binding Path="IsFocused" RelativeSource="{RelativeSource Self}"/>
+                        </Condition.Binding>
+                    </Condition>
+                    <Condition x:Uid="Condition_49" Value="False">
+                        <Condition.Binding>
+                            <Binding Path="IsEditable" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type ComboBox}}"/>
+                        </Condition.Binding>
+                    </Condition>
+                </MultiDataTrigger.Conditions>
+                <Setter x:Uid="Setter_1772" Property="Control.Background" Value="{DynamicResource ListSelectedBrush}"/>
+                <Setter x:Uid="Setter_1773" Property="Control.Foreground" Value="{DynamicResource ListSelectedTextBrush}"/>
+            </MultiDataTrigger>
+            <Trigger x:Uid="Trigger_1023" Property="UIElement.IsEnabled" Value="false">
+                <Setter x:Uid="Setter_1112" Property="Control.Background" Value="{DynamicResource ListBackgroundBrush}"/>
+                <Setter x:Uid="Setter_1113" Property="Control.Foreground" Value="{DynamicResource DisabledTextBrush}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Uid="Style_69" TargetType="{x:Type ComboBoxItem}" BasedOn="{StaticResource BaseComboBoxItem}"/>
+    <Style x:Uid="Style_108" TargetType="{x:Type Controls:CommandComboBoxItem}"
+         BasedOn="{StaticResource {x:Type ComboBoxItem}}"/>
+    <Style x:Uid="Style_37" TargetType="{x:Type ComboBox}">
+        <Setter x:Uid="Setter_194" Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+        <Setter x:Uid="Setter_195" Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+        <Setter x:Uid="Setter_1703" Property="Control.Padding" Value="1"/>
+        <Setter x:Uid="Setter_196" Property="FrameworkElement.MinWidth" Value="40"/>
+        <Setter x:Uid="Setter_1114" Property="FrameworkElement.MinHeight" Value="20"/>
+        <Setter x:Uid="Setter_1143" Property="Control.FontFamily"
+            Value="{DynamicResource {x:Static SystemFonts.MessageFontFamilyKey}}"/>
+        <Setter x:Uid="Setter_1144" Property="Control.FontSize"
+            Value="{DynamicResource {x:Static SystemFonts.MessageFontSizeKey}}"/>
+        <Setter x:Uid="Setter_1145" Property="Control.FontWeight"
+            Value="{DynamicResource {x:Static SystemFonts.MessageFontWeightKey}}"/>
+        <Setter x:Uid="Setter_1264" Property="Control.BorderBrush" Value="{DynamicResource ComboBoxBorderBrush}"/>
+        <Setter x:Uid="Setter_1265" Property="Control.Background" Value="{DynamicResource ComboBoxBackgroundBrush}"/>
+        <Setter x:Uid="Setter_1266" Property="Controls:ControlStylingUtilities.CustomAccentBrush"
+            Value="{DynamicResource ButtonDefaultBrush}"/>
+        <Setter x:Uid="Setter_199" Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate x:Uid="ControlTemplate_19" TargetType="{x:Type ComboBox}">
+                    <Grid x:Uid="Grid_15">
+                        <Border x:Uid="Border_12" Background="{TemplateBinding Control.BorderBrush}"
+                    Padding="{TemplateBinding Control.Padding}" CornerRadius="4">
+                            <Grid x:Uid="Grid_16" IsSharedSizeScope="true">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition x:Uid="ColumnDefinition_10" Width="1"/>
+                                    <ColumnDefinition x:Uid="ColumnDefinition_11" Width="*"/>
+                                    <ColumnDefinition x:Uid="ColumnDefinition_12" Width="Auto" DefinitionBase.SharedSizeGroup="ComboBoxButton"/>
+                                </Grid.ColumnDefinitions>
+                                <Border x:Name="SelectedItemBorder" x:Uid="Border_13" Grid.ColumnSpan="2" FrameworkElement.Margin="1"
+                        CornerRadius="2" Background="{TemplateBinding Control.Background}"/>
+                                <ContentPresenter x:Name="ContentSite" x:Uid="ContentPresenter_10" Grid.Column="1"
+                                  Content="{TemplateBinding ComboBox.SelectionBoxItem}"
+                                  ContentTemplate="{TemplateBinding ComboBox.SelectionBoxItemTemplate}"
+                                  ContentTemplateSelector="{TemplateBinding ItemsControl.ItemTemplateSelector}"
+                                  FrameworkElement.Margin="4,2,1,2" FrameworkElement.VerticalAlignment="Center"
+                                  TextElement.Foreground="{DynamicResource Text1Brush}"/>
+                                <TextBox x:Name="PART_EditableTextBox" x:Uid="TextBox_1" FrameworkElement.MinHeight="0"
+                         FrameworkElement.Height="Auto" Grid.Column="1" UIElement.Visibility="Collapsed" Control.Padding="0"
+                         FrameworkElement.Margin="1,0,0,0">
+                                    <TextBoxBase.IsReadOnly>
+                                        <Binding Path="IsReadOnly" RelativeSource="{RelativeSource TemplatedParent}"/>
+                                    </TextBoxBase.IsReadOnly>
+                                </TextBox>
+                                <ToggleButton x:Name="DropDownButton" x:Uid="ToggleButton_1" UIElement.Focusable="false"
+                              FrameworkElement.Margin="0" Grid.Column="0" Grid.ColumnSpan="3"
+                              FrameworkElement.Style="{StaticResource ExpressionComboBoxButton}"
+                              Controls:ControlStylingUtilities.CustomAccentBrush="{TemplateBinding Controls:ControlStylingUtilities.CustomAccentBrush}">
+                                    <ToggleButton.IsChecked>
+                                        <Binding Path="IsDropDownOpen" Mode="TwoWay" RelativeSource="{RelativeSource TemplatedParent}"/>
+                                    </ToggleButton.IsChecked>
+                                </ToggleButton>
+                            </Grid>
+                        </Border>
+                        <Controls:ExpressionPopup FrameworkElement.Name="PART_Popup" x:Uid="Popup_1" Popup.Placement="Bottom"
+                                      UIElement.Focusable="false"
+                                      Popup.PopupAnimation="{DynamicResource {x:Static SystemParameters.ComboBoxPopupAnimationKey}}">
+                            <Popup.IsOpen>
+                                <Binding Path="IsDropDownOpen" RelativeSource="{RelativeSource TemplatedParent}"/>
+                            </Popup.IsOpen>
+                            <Border x:Name="DropDownBorder" x:Uid="Border_14" BorderThickness="1"
+                      BorderBrush="{DynamicResource MenuSeparatorBrush}" Background="{DynamicResource BackgroundBrush}"
+                      FrameworkElement.MinWidth="{TemplateBinding FrameworkElement.ActualWidth}"
+                      FrameworkElement.MaxHeight="{TemplateBinding ComboBox.MaxDropDownHeight}">
+                                <ScrollViewer x:Uid="ScrollViewer_2" CanContentScroll="{TemplateBinding ScrollViewer.CanContentScroll}"
+                              UIElement.Focusable="false"
+                              HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}"
+                              VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}">
+                                    <ItemsPresenter x:Uid="ItemsPresenter_1" KeyboardNavigation.DirectionalNavigation="Contained"
+                                  FrameworkElement.Margin="1"/>
+                                </ScrollViewer>
+                            </Border>
+                        </Controls:ExpressionPopup>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <MultiTrigger x:Uid="MultiTrigger_7">
+                            <MultiTrigger.Conditions>
+                                <Condition x:Uid="Condition_13" Property="UIElement.IsKeyboardFocusWithin" Value="true"/>
+                                <Condition x:Uid="Condition_14" Property="ComboBox.IsDropDownOpen" Value="false"/>
+                                <Condition x:Uid="Condition_15" Property="ComboBox.IsEditable" Value="false"/>
+                            </MultiTrigger.Conditions>
+                            <Setter x:Uid="Setter_201" TargetName="PART_EditableTextBox" Value="{DynamicResource Text1Brush}"
+                      Property="Control.Foreground"/>
+                            <Setter x:Uid="Setter_202" TargetName="ContentSite" Value="{DynamicResource Text1Brush}"
+                      Property="Control.Foreground"/>
+                        </MultiTrigger>
+                        <Trigger x:Uid="Trigger_27" Property="ComboBox.IsEditable" Value="true">
+                            <Setter x:Uid="Setter_204" TargetName="SelectedItemBorder" Property="UIElement.Visibility"
+                      Value="Collapsed"/>
+                            <Setter x:Uid="Setter_205" TargetName="ContentSite" Property="UIElement.Visibility" Value="Collapsed"/>
+                            <Setter x:Uid="Setter_206" TargetName="PART_EditableTextBox" Property="UIElement.Visibility"
+                      Value="Visible"/>
+                        </Trigger>
+                        <Trigger x:Uid="Trigger_1176" Property="UIElement.IsMouseOver" Value="true">
+                            <Setter x:Uid="Setter_1995" Value="{DynamicResource ComboBoxMouseOverBorderBrush}"
+                      Property="Control.BorderBrush"/>
+                        </Trigger>
+                        <Trigger x:Uid="Trigger_28" Property="ItemsControl.HasItems" Value="false">
+                            <Setter x:Uid="Setter_208" TargetName="DropDownBorder" Property="FrameworkElement.MinHeight" Value="95"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger x:Uid="Trigger_29" Property="UIElement.IsEnabled" Value="false">
+                <Setter x:Uid="Setter_209" Property="UIElement.Opacity" Value="0.5"/>
+            </Trigger>
+            <MultiTrigger x:Uid="MultiTrigger_8">
+                <MultiTrigger.Conditions>
+                    <Condition x:Uid="Condition_16" Property="UIElement.IsKeyboardFocusWithin" Value="true"/>
+                    <Condition x:Uid="Condition_17" Property="ComboBox.IsDropDownOpen" Value="false"/>
+                    <Condition x:Uid="Condition_18" Property="ComboBox.IsEditable" Value="false"/>
+                </MultiTrigger.Conditions>
+                <Setter x:Uid="Setter_210" Property="Control.Foreground" Value="{DynamicResource Text1Brush}"/>
+            </MultiTrigger>
+            <Trigger x:Uid="Trigger_30" Property="ComboBox.IsEditable" Value="true">
+                <Setter x:Uid="Setter_211" Property="Control.IsTabStop" Value="false"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Uid="Style_104" TargetType="{x:Type Controls:EditableComboBox}"
+         BasedOn="{StaticResource {x:Type ComboBox}}"/>
+    <Style x:Uid="Style_219" TargetType="{x:Type ValueEditors:SplitComboBox}">
+        <Setter x:Uid="Setter_2006" Property="UIElement.Focusable" Value="false"/>
+    </Style>
+    <Style x:Key="NumberComboBoxStyle" x:Uid="Style_131" TargetType="{x:Type Controls:NumberComboBox}"
+         BasedOn="{StaticResource {x:Type ComboBox}}">
+        <Setter x:Uid="Setter_1996" Property="Control.BorderBrush"
+            Value="{DynamicResource NumberComboBoxBorderBrush}"/>
+        <Setter x:Uid="Setter_1997" Property="Control.Background"
+            Value="{DynamicResource NumberComboBoxBackgroundBrush}"/>
+        <Setter x:Uid="Setter_1322" Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate x:Uid="ControlTemplate_73" TargetType="{x:Type Controls:NumberComboBox}">
+                    <Grid x:Uid="Grid_55">
+                        <Border x:Uid="Border_47" Background="{TemplateBinding Control.BorderBrush}" Padding="0" CornerRadius="4">
+                            <Grid x:Uid="Grid_56" IsSharedSizeScope="true">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition x:Uid="ColumnDefinition_48" Width="*"/>
+                                    <ColumnDefinition x:Uid="ColumnDefinition_49" Width="Auto" DefinitionBase.SharedSizeGroup="ComboBoxButton"/>
+                                </Grid.ColumnDefinitions>
+                                <Border x:Name="SelectedItemBorder" x:Uid="Border_48" FrameworkElement.Margin="1" CornerRadius="2"
+                        Background="{TemplateBinding Control.Background}"/>
+                                <ValueEditors:NumberEditor x:Name="PART_EditableTextBox"
+                                           FinishEditingCommand="{TemplateBinding Controls:NumberComboBox.FinishEditingCommand}"
+                                           Control.BorderBrush="{TemplateBinding Control.BorderBrush}"
+                                           Control.Background="{TemplateBinding Control.Background}" x:Uid="ValueEditors:NumberEditor_1"
+                                           FrameworkElement.MinHeight="0" FrameworkElement.Height="Auto"
+                                           IsSliderLogarithmic="{TemplateBinding Controls:NumberComboBox.IsSliderLogarithmic}"
+                                           Format="{TemplateBinding Controls:NumberComboBox.NumberFormat}"
+                                           Minimum="{TemplateBinding Controls:NumberComboBox.Minimum}"
+                                           Maximum="{TemplateBinding Controls:NumberComboBox.Maximum}">
+                                    <ValueEditors:NumberEditor.Value>
+                                        <Binding Path="Value" RelativeSource="{RelativeSource TemplatedParent}"/>
+                                    </ValueEditors:NumberEditor.Value>
+                                </ValueEditors:NumberEditor>
+                                <ToggleButton x:Name="DropDownButton" x:Uid="ToggleButton_5" UIElement.Focusable="false" Grid.Column="1"
+                              FrameworkElement.Style="{StaticResource ExpressionComboBoxButton}"
+                              Controls:ControlStylingUtilities.CustomAccentBrush="{TemplateBinding Controls:ControlStylingUtilities.CustomAccentBrush}">
+                                    <ToggleButton.IsChecked>
+                                        <Binding Path="IsDropDownOpen" Mode="TwoWay" RelativeSource="{RelativeSource TemplatedParent}"/>
+                                    </ToggleButton.IsChecked>
+                                </ToggleButton>
+                            </Grid>
+                        </Border>
+                        <Controls:ExpressionPopup x:Uid="Popup_4" Popup.Placement="Bottom" UIElement.Focusable="false"
+                                      Popup.PopupAnimation="{DynamicResource {x:Static SystemParameters.ComboBoxPopupAnimationKey}}">
+                            <Popup.IsOpen>
+                                <Binding Path="IsDropDownOpen" RelativeSource="{RelativeSource TemplatedParent}"/>
+                            </Popup.IsOpen>
+                            <Border x:Name="DropDownBorder" x:Uid="Border_49" BorderThickness="1"
+                      BorderBrush="{DynamicResource MenuSeparatorBrush}" Background="{DynamicResource BackgroundBrush}"
+                      FrameworkElement.MinWidth="{TemplateBinding FrameworkElement.ActualWidth}"
+                      FrameworkElement.MaxHeight="{TemplateBinding ComboBox.MaxDropDownHeight}">
+                                <ScrollViewer x:Uid="ScrollViewer_8" CanContentScroll="true" UIElement.Focusable="false"
+                              HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}"
+                              VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}">
+                                    <ItemsPresenter x:Uid="ItemsPresenter_4" KeyboardNavigation.DirectionalNavigation="Contained"
+                                  FrameworkElement.Margin="1"/>
+                                </ScrollViewer>
+                            </Border>
+                        </Controls:ExpressionPopup>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <MultiTrigger x:Uid="MultiTrigger_17">
+                            <MultiTrigger.Conditions>
+                                <Condition x:Uid="Condition_35" Property="UIElement.IsKeyboardFocusWithin" Value="true"/>
+                                <Condition x:Uid="Condition_36" Property="ComboBox.IsDropDownOpen" Value="false"/>
+                                <Condition x:Uid="Condition_37" Property="ComboBox.IsEditable" Value="false"/>
+                            </MultiTrigger.Conditions>
+                            <Setter x:Uid="Setter_1323" Value="{DynamicResource NumberComboBoxFocusedForegroundBrush}"
+                      Property="Control.Foreground"/>
+                        </MultiTrigger>
+                        <Trigger x:Uid="Trigger_1069" Property="ComboBox.IsEditable" Value="true">
+                            <Setter x:Uid="Setter_1324" TargetName="SelectedItemBorder" Property="UIElement.Visibility"
+                      Value="Collapsed"/>
+                        </Trigger>
+                        <Trigger x:Uid="Trigger_1070" Property="ItemsControl.HasItems" Value="false">
+                            <Setter x:Uid="Setter_1325" TargetName="DropDownBorder" Property="FrameworkElement.MinHeight" Value="95"/>
+                        </Trigger>
+                        <Trigger x:Uid="Trigger_1177" Property="UIElement.IsMouseOver" Value="true">
+                            <Setter x:Uid="Setter_1998" Value="{DynamicResource NumberComboBoxMouseOverBorderBrush}"
+                      Property="Control.BorderBrush"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Uid="Style_209" TargetType="{x:Type Controls:NumberComboBox}"
+         BasedOn="{StaticResource NumberComboBoxStyle}"/>
+
+</ResourceDictionary>

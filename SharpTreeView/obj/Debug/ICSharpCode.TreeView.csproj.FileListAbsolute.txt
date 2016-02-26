@@ -1,0 +1,20 @@
+E:\Setup\net decompiler\ILSpy-2.3.1\SharpTreeView\bin\Debug\ICSharpCode.TreeView.dll
+E:\Setup\net decompiler\ILSpy-2.3.1\SharpTreeView\bin\Debug\ICSharpCode.TreeView.pdb
+E:\Setup\net decompiler\ILSpy-2.3.1\SharpTreeView\obj\Debug\ICSharpCode.TreeView.csprojResolveAssemblyReference.cache
+E:\Setup\net decompiler\ILSpy-2.3.1\SharpTreeView\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Setup\net decompiler\ILSpy-2.3.1\SharpTreeView\obj\Debug\ICSharpCode.TreeView_MarkupCompile.cache
+E:\Setup\net decompiler\ILSpy-2.3.1\SharpTreeView\obj\Debug\ICSharpCode.TreeView_MarkupCompile.lref
+E:\Setup\net decompiler\ILSpy-2.3.1\SharpTreeView\obj\Debug\Themes\Generic.baml
+E:\Setup\net decompiler\ILSpy-2.3.1\SharpTreeView\obj\Debug\ICSharpCode.TreeView.g.resources
+E:\Setup\net decompiler\ILSpy-2.3.1\SharpTreeView\obj\Debug\ICSharpCode.TreeView.dll
+E:\Setup\net decompiler\ILSpy-2.3.1\SharpTreeView\obj\Debug\ICSharpCode.TreeView.pdb
+E:\Projects\C#\ShopdrawingVer2\SharpTreeView\bin\Debug\ICSharpCode.TreeView.dll
+E:\Projects\C#\ShopdrawingVer2\SharpTreeView\bin\Debug\ICSharpCode.TreeView.pdb
+E:\Projects\C#\ShopdrawingVer2\SharpTreeView\obj\Debug\ICSharpCode.TreeView.csprojResolveAssemblyReference.cache
+E:\Projects\C#\ShopdrawingVer2\SharpTreeView\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Projects\C#\ShopdrawingVer2\SharpTreeView\obj\Debug\ICSharpCode.TreeView_MarkupCompile.cache
+E:\Projects\C#\ShopdrawingVer2\SharpTreeView\obj\Debug\ICSharpCode.TreeView_MarkupCompile.lref
+E:\Projects\C#\ShopdrawingVer2\SharpTreeView\obj\Debug\Themes\Generic.baml
+E:\Projects\C#\ShopdrawingVer2\SharpTreeView\obj\Debug\ICSharpCode.TreeView.g.resources
+E:\Projects\C#\ShopdrawingVer2\SharpTreeView\obj\Debug\ICSharpCode.TreeView.dll
+E:\Projects\C#\ShopdrawingVer2\SharpTreeView\obj\Debug\ICSharpCode.TreeView.pdb

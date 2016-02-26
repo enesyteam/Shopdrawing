@@ -1,0 +1,16 @@
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\SelectionBinding\bin\Debug\BindingSample.exe
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\SelectionBinding\bin\Debug\BindingSample.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\SelectionBinding\bin\Debug\TreeViewEx.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\SelectionBinding\bin\Debug\TreeViewEx.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\SelectionBinding\obj\x86\Debug\BindingSample.csprojResolveAssemblyReference.cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\SelectionBinding\obj\x86\Debug\MainWindow.g.cs
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\SelectionBinding\obj\x86\Debug\App.g.cs
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\SelectionBinding\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\SelectionBinding\obj\x86\Debug\BindingSample_MarkupCompile.cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\SelectionBinding\obj\x86\Debug\BindingSample_MarkupCompile.lref
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\SelectionBinding\obj\x86\Debug\MainWindow.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\SelectionBinding\obj\x86\Debug\BindingSample.g.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\SelectionBinding\obj\x86\Debug\BindingSample.Properties.Resources.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\SelectionBinding\obj\x86\Debug\BindingSample.csproj.GenerateResource.Cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\SelectionBinding\obj\x86\Debug\BindingSample.exe
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\SelectionBinding\obj\x86\Debug\BindingSample.pdb

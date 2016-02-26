@@ -1,0 +1,111 @@
+﻿<Controls:MessageWindowDialog xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                              xmlns:Controls="clr-namespace:Microsoft.Expression.Framework.Controls;assembly=Shopdrawing.Framework"
+                              xmlns:Data="clr-namespace:Microsoft.Expression.Framework.Data"
+                              xmlns:Automation="clr-namespace:Microsoft.Expression.Framework.Diagnostics"
+                              xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                              x:Uid="Window" Window.ResizeMode="NoResize" Window.ShowInTaskbar="false"
+                              Window.SizeToContent="WidthAndHeight" FrameworkElement.MaxWidth="600"
+                              Controls:Dialog.OverrideFocus="false" Window.Title="{Binding Title, Mode=OneTime}"
+                              Automation:AutomationElement.Id="{Binding AutomationId, Mode=OneTime}">
+    <FrameworkElement.Resources>
+        <Data:BoolToVisibilityCollapsedConverter x:Key="BoolToVisibilityCollapsedConverter" x:Uid="Data:BoolToVisibilityCollapsedConverter_1"/>
+    </FrameworkElement.Resources>
+    <Border x:Uid="Border_1" FrameworkElement.Style="{DynamicResource DialogRootContainer}">
+        <StackPanel x:Uid="StackPanel_1" Orientation="Vertical">
+            <Grid x:Uid="Grid_1" FrameworkElement.VerticalAlignment="Stretch"
+            FrameworkElement.HorizontalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition x:Uid="ColumnDefinition_1" Width="Auto"/>
+                    <ColumnDefinition x:Uid="ColumnDefinition_2" Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Controls:Icon x:Uid="Icon_1" FrameworkElement.Width="32" FrameworkElement.Height="32"
+                       FrameworkElement.Margin="0,0,8,0" FrameworkElement.VerticalAlignment="Top">
+                    <UIElement.Visibility>
+                        <Binding x:Uid="Binding_1" Path="ShowIcon" Mode="OneTime">
+                            <Binding.Converter>
+                                <Data:BoolToVisibilityCollapsedConverter x:Uid="BoolToVisibilityCollapsedConverter_1"/>
+                            </Binding.Converter>
+                        </Binding>
+                    </UIElement.Visibility>
+                    <FrameworkElement.Style>
+                        <Style x:Uid="Style_1" TargetType="{x:Type Controls:Icon}">
+                            <Style.Triggers>
+                                <DataTrigger x:Uid="DataTrigger_1" Value="{x:Static Controls:MessageIcon.Error}"
+                             Binding="{Binding Icon, Mode=OneTime}">
+                                    <Setter x:Uid="Setter_1" Property="Image.Source" Value="../Icons/shell_error_on_32x32.png"/>
+                                </DataTrigger>
+                                <DataTrigger x:Uid="DataTrigger_2" Value="{x:Static Controls:MessageIcon.Warning}"
+                             Binding="{Binding Icon, Mode=OneTime}">
+                                    <Setter x:Uid="Setter_2" Property="Image.Source" Value="../Icons/shell_warning_on_32x32.png"/>
+                                </DataTrigger>
+                                <DataTrigger x:Uid="DataTrigger_3" Value="{x:Static Controls:MessageIcon.Information}"
+                             Binding="{Binding Icon, Mode=OneTime}">
+                                    <Setter x:Uid="Setter_3" Property="Image.Source" Value="../Icons/shell_info_on_32x32.png"/>
+                                </DataTrigger>
+                                <DataTrigger x:Uid="DataTrigger_4" Value="{x:Static Controls:MessageIcon.Question}"
+                             Binding="{Binding Icon, Mode=OneTime}">
+                                    <Setter x:Uid="Setter_4" Property="Image.Source" Value="../Icons/shell_help_on_32x32.png"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </FrameworkElement.Style>
+                </Controls:Icon>
+                <TextBlock x:Uid="TextBlock_1" Automation:AutomationElement.Id="Content"
+                   FrameworkElement.VerticalAlignment="Center" TextWrapping="Wrap" Grid.Column="1"
+                   Text="{Binding Content, Mode=OneTime}"/>
+            </Grid>
+            <Controls:OnDemandControl x:Name="HyperlinkOnDemand" x:Uid="HyperlinkOnDemand"
+                                UIElement.Visibility="{Binding ShowHyperlink, Converter={StaticResource BoolToVisibilityCollapsedConverter}, Mode=OneTime}">
+                <Controls:OnDemandControl.OnDemandTemplate>
+                    <ControlTemplate x:Uid="ControlTemplate_2">
+                        <TextBlock x:Uid="TextBlock_2" Automation:AutomationElement.Id="WebPageLink"
+                       FrameworkElement.HorizontalAlignment="Left" TextWrapping="Wrap" FrameworkElement.Margin="40,15,0,0">
+              <Hyperlink x:Uid="Hyperlink_1" Automation:AutomationElement.Id="MessageWindowHyperlink"
+                         ContentElement.IsEnabled="{Binding ShowHyperlink, Mode=OneTime}"
+                         NavigateUri="{Binding HyperlinkUri, Mode=OneTime}">
+                <TextBlock x:Uid="TextBlock_3" Text="{Binding HyperlinkMessage, Mode=OneTime}"/>
+              </Hyperlink>
+            </TextBlock>
+                    </ControlTemplate>
+                </Controls:OnDemandControl.OnDemandTemplate>
+            </Controls:OnDemandControl>
+            <CheckBox x:Uid="CheckBox_1" Automation:AutomationElement.Id="DontAskAgain"
+                FrameworkElement.Margin="40,15,0,0" ContentControl.Content="{Binding CheckBoxMessage, Mode=OneWay}"
+                ToggleButton.IsChecked="{Binding DontAskAgain, Mode=TwoWay}"
+                UIElement.Visibility="{Binding EnableDontAskAgain, Converter={StaticResource BoolToVisibilityCollapsedConverter}, Mode=OneTime}">
+                <FrameworkElement.Resources>
+                    <DataTemplate x:Uid="DataTemplate_1" DataType="{x:Type sys:String}">
+                        <AccessText x:Uid="AccessText_1" TextWrapping="Wrap">
+                            <AccessText.Text>
+                                <Binding Mode="OneTime"/>
+                            </AccessText.Text>
+                        </AccessText>
+                    </DataTemplate>
+                </FrameworkElement.Resources>
+            </CheckBox>
+            <ItemsControl x:Name="ButtonsControl" x:Uid="ItemsControl_1" FrameworkElement.HorizontalAlignment="Center"
+                    UIElement.Focusable="false" FrameworkElement.Margin="-4,16,0,0"
+                    ItemsSource="{Binding Choices, Mode=OneTime}">
+                <Control.Template>
+                    <ControlTemplate x:Uid="ControlTemplate_1">
+                        <UniformGrid x:Uid="UniformGrid_1" Rows="1" Panel.IsItemsHost="true"/>
+                    </ControlTemplate>
+                </Control.Template>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate x:Uid="DataTemplate_2">
+                        <Button x:Uid="Button_1" FrameworkElement.Margin="{DynamicResource DefaultLeftMargin}"
+                    FrameworkElement.Style="{DynamicResource DialogButton}" Control.Padding="8,0,8,1"
+                    Automation:AutomationElement.Id="{Binding AutomationId, Mode=OneTime}"
+                    IsDefault="{Binding IsDefault, Mode=OneTime}" IsCancel="{Binding IsCancel, Mode=OneTime}"
+                    ContentControl.Content="{Binding Label, Mode=OneTime}">
+                            <ButtonBase.Command>
+                                <Binding Mode="OneTime"/>
+                            </ButtonBase.Command>
+                        </Button>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+    </Border>
+</Controls:MessageWindowDialog>

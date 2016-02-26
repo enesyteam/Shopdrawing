@@ -1,0 +1,20 @@
+<Border xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Uid="Border_1" FrameworkElement.Style="{DynamicResource DialogRootContainer}"
+        KeyboardNavigation.TabNavigation="Cycle">
+  <Grid x:Uid="Grid_1">
+    <Grid.RowDefinitions>
+      <RowDefinition x:Uid="RowDefinition_1" Height="*"/>
+      <RowDefinition x:Uid="RowDefinition_2" Height="Auto"/>
+    </Grid.RowDefinitions>
+    <ContentControl x:Name="ContentHost" x:Uid="ContentControl_1" UIElement.Focusable="false"/>
+    <UniformGrid x:Uid="UniformGrid_1" Rows="1" Grid.Row="1" FrameworkElement.HorizontalAlignment="Right"
+                 FrameworkElement.Margin="{DynamicResource ExtraLargeTopMargin}">
+      <Button FrameworkElement.Name="AcceptButton" x:Uid="AcceptButton"
+              FrameworkElement.Style="{DynamicResource DialogButton}">OK</Button>
+      <Button FrameworkElement.Name="CancelButton" x:Uid="CancelButton"
+              FrameworkElement.Style="{DynamicResource DialogButton}" IsCancel="true"
+              FrameworkElement.Margin="{DynamicResource DefaultLeftMargin}">Cancel</Button>
+    </UniformGrid>
+  </Grid>
+</Border>

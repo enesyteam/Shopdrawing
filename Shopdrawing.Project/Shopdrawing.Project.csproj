@@ -1,0 +1,562 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6107BD17-411B-4B52-9FFE-71681EE4E6DB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shopdrawing.Project</RootNamespace>
+    <AssemblyName>Shopdrawing.Project</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Build" />
+    <Reference Include="Microsoft.Build.Framework" />
+    <Reference Include="Microsoft.Build.Utilities.v4.0" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="StringTable.cs" />
+    <Compile Include="ExceptionStringTable.cs" />
+    <Compile Include="MetadataStringTable.cs" />
+    <Compile Include="Microsoft.Expression.Extensibility.Project\Project.cs" />
+    <Compile Include="Microsoft.Expression.Extensibility.Project\ProjectItem.cs" />
+    <Compile Include="Microsoft.Expression.Extensibility.Project\ProjectStore.cs" />
+    <Compile Include="Microsoft.Expression.Extensibility.Project\Solution.cs" />
+    <Compile Include="Microsoft.Expression.Extensibility.Project\SolutionService.cs" />
+    <Compile Include="Microsoft.Expression.Project\AppDomainListEvent.cs" />
+    <Compile Include="Microsoft.Expression.Project\AssemblyCache.cs" />
+    <Compile Include="Microsoft.Expression.Project\AssemblyCachedEventArgs.cs" />
+    <Compile Include="Microsoft.Expression.Project\AssemblyCachedHandler.cs" />
+    <Compile Include="Microsoft.Expression.Project\AssemblyCopiedEventArgs.cs" />
+    <Compile Include="Microsoft.Expression.Project\AssemblyCopiedHandler.cs" />
+    <Compile Include="Microsoft.Expression.Project\AssemblyDocumentType.cs" />
+    <Compile Include="Microsoft.Expression.Project\AssemblyInformation.cs" />
+    <Compile Include="Microsoft.Expression.Project\AssemblyLoadedEvent.cs" />
+    <Compile Include="Microsoft.Expression.Project\AssemblyLoadingAppDomain.cs" />
+    <Compile Include="Microsoft.Expression.Project\AssemblyLoggingEvent.cs" />
+    <Compile Include="Microsoft.Expression.Project\AssemblyLoggingService.cs" />
+    <Compile Include="Microsoft.Expression.Project\AssemblyProjectItem.cs" />
+    <Compile Include="Microsoft.Expression.Project\AssemblyReferenceDocumentType.cs" />
+    <Compile Include="Microsoft.Expression.Project\AssemblyReferenceHelper.cs" />
+    <Compile Include="Microsoft.Expression.Project\AssemblyReferenceProjectItem.cs" />
+    <Compile Include="Microsoft.Expression.Project\AssemblyResolveEvent.cs" />
+    <Compile Include="Microsoft.Expression.Project\AssemblyService.cs" />
+    <Compile Include="Microsoft.Expression.Project\Blend3SdkInfo.cs" />
+    <Compile Include="Microsoft.Expression.Project\Blend4MobileSdkInfo.cs" />
+    <Compile Include="Microsoft.Expression.Project\Blend4SilverlightSdkInfo.cs" />
+    <Compile Include="Microsoft.Expression.Project\Blend4WpfSdkInfo.cs" />
+    <Compile Include="Microsoft.Expression.Project\BlendAssemblyResolver.cs" />
+    <Compile Include="Microsoft.Expression.Project\BlendSdkAssemblyResolver.cs" />
+    <Compile Include="Microsoft.Expression.Project\BlendSdkHelper.cs" />
+    <Compile Include="Microsoft.Expression.Project\BlendSdkInfoBase.cs" />
+    <Compile Include="Microsoft.Expression.Project\BuildTaskInfo.cs" />
+    <Compile Include="Microsoft.Expression.Project\BuildTaskInfoPopulator.cs" />
+    <Compile Include="Microsoft.Expression.Project\Build\BuildCompletedEventArgs.cs" />
+    <Compile Include="Microsoft.Expression.Project\Build\BuildErrorTask.cs" />
+    <Compile Include="Microsoft.Expression.Project\Build\BuildManager.cs" />
+    <Compile Include="Microsoft.Expression.Project\Build\BuildResult.cs" />
+    <Compile Include="Microsoft.Expression.Project\Build\BuildStartingEventArgs.cs" />
+    <Compile Include="Microsoft.Expression.Project\Build\CodeGenerator.cs" />
+    <Compile Include="Microsoft.Expression.Project\Build\HostLogger.cs" />
+    <Compile Include="Microsoft.Expression.Project\Build\IBuildWorker.cs" />
+    <Compile Include="Microsoft.Expression.Project\Build\IExecutable.cs" />
+    <Compile Include="Microsoft.Expression.Project\Build\IProjectBuildContext.cs" />
+    <Compile Include="Microsoft.Expression.Project\Build\PartialXamlBuilder.cs" />
+    <Compile Include="Microsoft.Expression.Project\Build\PartialXamlBuildFinishedEventArgs.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\AddExistingItemCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\AddExistingItemOfTypeCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\AddExistingProjectCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\AddExistingWebsiteCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\AddNewProjectCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\AddProjectItemCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\AddProjectReferenceCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\AddToSourceControlCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\BaseNewProjectCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\BaseOpenCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\BaseSaveCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\BuildCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\CheckInCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\CheckOutCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\CleanCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\CloseAllDocumentsCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\CloseProjectCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\CutCopyCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\DeleteProjectItemCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\EditExternallyCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\ExploreProjectCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\GetCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\GoOnlineCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\InsertIntoActiveDocumentCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\IProjectCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\ItemCollectionCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\LinkToExistingItemCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\NewFolderCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\OpenProjectCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\OpenRecentProject.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\PasteCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\ProjectCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\ProjectCommandExtensions.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\ProjectDynamicMenuCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\ProjectItemCreationCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\ProjectNewCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\RebuildCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\RefreshCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\RefreshStatusCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\RemoveProjectItemCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\ResolveCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\SaveAllCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\SaveSolutionCopyCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\SetStartupProjectCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\SetStartupSceneCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\SetStartupSceneMenuCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\SourceControlCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\TestProjectCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\UndoPendingChangesCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\UpgradeProjectCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\Commands\ViewHistoryCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\CommonVersions.cs" />
+    <Compile Include="Microsoft.Expression.Project\ComReferenceDocumentType.cs" />
+    <Compile Include="Microsoft.Expression.Project\ComReferenceProjectItem.cs" />
+    <Compile Include="Microsoft.Expression.Project\ComStream.cs" />
+    <Compile Include="Microsoft.Expression.Project\Conversion\AggregatedConverter.cs" />
+    <Compile Include="Microsoft.Expression.Project\Conversion\BlendSdkConverter.cs" />
+    <Compile Include="Microsoft.Expression.Project\Conversion\ConversionHelper.cs" />
+    <Compile Include="Microsoft.Expression.Project\Conversion\ConversionSupressor.cs" />
+    <Compile Include="Microsoft.Expression.Project\Conversion\ConversionTarget.cs" />
+    <Compile Include="Microsoft.Expression.Project\Conversion\ConversionType.cs" />
+    <Compile Include="Microsoft.Expression.Project\Conversion\ConversionTypeConverter.cs" />
+    <Compile Include="Microsoft.Expression.Project\Conversion\FontEmbeddingSdkConverter.cs" />
+    <Compile Include="Microsoft.Expression.Project\Conversion\IProjectConverter.cs" />
+    <Compile Include="Microsoft.Expression.Project\Conversion\ProjectConverter.cs" />
+    <Compile Include="Microsoft.Expression.Project\Conversion\ProjectConverterBase.cs" />
+    <Compile Include="Microsoft.Expression.Project\Conversion\SilverlightProjectConverter.cs" />
+    <Compile Include="Microsoft.Expression.Project\Conversion\SolutionConverter.cs" />
+    <Compile Include="Microsoft.Expression.Project\Conversion\ToolsVersionConverter.cs" />
+    <Compile Include="Microsoft.Expression.Project\Conversion\UpgradeAction.cs" />
+    <Compile Include="Microsoft.Expression.Project\Conversion\WebProjectConverter.cs" />
+    <Compile Include="Microsoft.Expression.Project\Conversion\WpfProjectConverter.cs" />
+    <Compile Include="Microsoft.Expression.Project\CreationOptions.cs" />
+    <Compile Include="Microsoft.Expression.Project\CurrentDirectoryHelper.cs" />
+    <Compile Include="Microsoft.Expression.Project\CursorDocumentType.cs" />
+    <Compile Include="Microsoft.Expression.Project\CutBuffer.cs" />
+    <Compile Include="Microsoft.Expression.Project\DeepZoomDocumentType.cs" />
+    <Compile Include="Microsoft.Expression.Project\DeepZoomHelper.cs" />
+    <Compile Include="Microsoft.Expression.Project\DeepZoomProjectItem.cs" />
+    <Compile Include="Microsoft.Expression.Project\DelegatingPropertiesCollection.cs" />
+    <Compile Include="Microsoft.Expression.Project\DocumentCreationInfo.cs" />
+    <Compile Include="Microsoft.Expression.Project\DocumentItemBase.cs" />
+    <Compile Include="Microsoft.Expression.Project\DocumentItemExtensions.cs" />
+    <Compile Include="Microsoft.Expression.Project\DocumentItemUrlComparer_TDocumentItem_.cs" />
+    <Compile Include="Microsoft.Expression.Project\Documents\ISetCaretPosition.cs" />
+    <Compile Include="Microsoft.Expression.Project\DocumentType.cs" />
+    <Compile Include="Microsoft.Expression.Project\DocumentTypeManager.cs" />
+    <Compile Include="Microsoft.Expression.Project\DocumentTypeNamesHelper.cs" />
+    <Compile Include="Microsoft.Expression.Project\ErrorHandling.cs" />
+    <Compile Include="Microsoft.Expression.Project\ExecutableProject.cs" />
+    <Compile Include="Microsoft.Expression.Project\ExecutableProjectBase.cs" />
+    <Compile Include="Microsoft.Expression.Project\ExecutableProjectType.cs" />
+    <Compile Include="Microsoft.Expression.Project\Extensions\ConfigurationExtensions.cs" />
+    <Compile Include="Microsoft.Expression.Project\FileSystemProjectStore.cs" />
+    <Compile Include="Microsoft.Expression.Project\FileTable.cs" />
+    <Compile Include="Microsoft.Expression.Project\FileWatcherBase.cs" />
+    <Compile Include="Microsoft.Expression.Project\FolderDocumentType.cs" />
+    <Compile Include="Microsoft.Expression.Project\FolderProjectItem.cs" />
+    <Compile Include="Microsoft.Expression.Project\FrameworkNameDictionary_T_.cs" />
+    <Compile Include="Microsoft.Expression.Project\FrameworkNameEqualityComparer.cs" />
+    <Compile Include="Microsoft.Expression.Project\HandlerBasedProjectActionContext.cs" />
+    <Compile Include="Microsoft.Expression.Project\IAssemblyCollection.cs" />
+    <Compile Include="Microsoft.Expression.Project\IAssemblyLoggingService.cs" />
+    <Compile Include="Microsoft.Expression.Project\IAssemblyResolver.cs" />
+    <Compile Include="Microsoft.Expression.Project\IAssemblyService.cs" />
+    <Compile Include="Microsoft.Expression.Project\IBlendSdkInfo.cs" />
+    <Compile Include="Microsoft.Expression.Project\ICodeDocumentType.cs" />
+    <Compile Include="Microsoft.Expression.Project\ICodeGeneratorHost.cs" />
+    <Compile Include="Microsoft.Expression.Project\IDocumentItem.cs" />
+    <Compile Include="Microsoft.Expression.Project\IDocumentType.cs" />
+    <Compile Include="Microsoft.Expression.Project\IDocumentTypeCollection.cs" />
+    <Compile Include="Microsoft.Expression.Project\IDocumentTypeManager.cs" />
+    <Compile Include="Microsoft.Expression.Project\IFileWatcher.cs" />
+    <Compile Include="Microsoft.Expression.Project\IMetadataStore.cs" />
+    <Compile Include="Microsoft.Expression.Project\IMSBuildBasedProject.cs" />
+    <Compile Include="Microsoft.Expression.Project\IMSBuildItem.cs" />
+    <Compile Include="Microsoft.Expression.Project\IMSBuildItemInternal.cs" />
+    <Compile Include="Microsoft.Expression.Project\INamedProject.cs" />
+    <Compile Include="Microsoft.Expression.Project\InvalidProjectStore.cs" />
+    <Compile Include="Microsoft.Expression.Project\IOutOfBrowserDeploymentService.cs" />
+    <Compile Include="Microsoft.Expression.Project\IProject.cs" />
+    <Compile Include="Microsoft.Expression.Project\IProjectActionContext.cs" />
+    <Compile Include="Microsoft.Expression.Project\IProjectAdapterService.cs" />
+    <Compile Include="Microsoft.Expression.Project\IProjectCreateError.cs" />
+    <Compile Include="Microsoft.Expression.Project\IProjectItem.cs" />
+    <Compile Include="Microsoft.Expression.Project\IProjectItemData.cs" />
+    <Compile Include="Microsoft.Expression.Project\IProjectItemTemplate.cs" />
+    <Compile Include="Microsoft.Expression.Project\IProjectLogger.cs" />
+    <Compile Include="Microsoft.Expression.Project\IProjectManager.cs" />
+    <Compile Include="Microsoft.Expression.Project\IProjectOutputReferenceInformation.cs" />
+    <Compile Include="Microsoft.Expression.Project\IProjectOutputReferenceResolver.cs" />
+    <Compile Include="Microsoft.Expression.Project\IProjectStore.cs" />
+    <Compile Include="Microsoft.Expression.Project\IProjectTemplate.cs" />
+    <Compile Include="Microsoft.Expression.Project\IProjectType.cs" />
+    <Compile Include="Microsoft.Expression.Project\IProjectTypeCollection.cs" />
+    <Compile Include="Microsoft.Expression.Project\IProjectTypeManager.cs" />
+    <Compile Include="Microsoft.Expression.Project\IPropertiesCollection.cs" />
+    <Compile Include="Microsoft.Expression.Project\IPrototypingProjectService.cs" />
+    <Compile Include="Microsoft.Expression.Project\IReferenceAssemblyContext.cs" />
+    <Compile Include="Microsoft.Expression.Project\ISatelliteAssemblyResolver.cs" />
+    <Compile Include="Microsoft.Expression.Project\ISolution.cs" />
+    <Compile Include="Microsoft.Expression.Project\ISolutionManagement.cs" />
+    <Compile Include="Microsoft.Expression.Project\ITemplate.cs" />
+    <Compile Include="Microsoft.Expression.Project\ITemplateManager.cs" />
+    <Compile Include="Microsoft.Expression.Project\ItemResolutionPair.cs" />
+    <Compile Include="Microsoft.Expression.Project\ItemSelectionSet.cs" />
+    <Compile Include="Microsoft.Expression.Project\IWebsiteProject.cs" />
+    <Compile Include="Microsoft.Expression.Project\KnownDocumentTypes.cs" />
+    <Compile Include="Microsoft.Expression.Project\KnownProjectBase.cs" />
+    <Compile Include="Microsoft.Expression.Project\KnownProjectExtensions.cs" />
+    <Compile Include="Microsoft.Expression.Project\Licensing\ItemizedLicensingComponent.cs" />
+    <Compile Include="Microsoft.Expression.Project\Licensing\ItemizedLicensingDialogCreator.cs" />
+    <Compile Include="Microsoft.Expression.Project\Licensing\LicenseState.cs" />
+    <Compile Include="Microsoft.Expression.Project\Licensing\LicensingHelper.cs" />
+    <Compile Include="Microsoft.Expression.Project\Licensing\ProjectLicenseGroup.cs" />
+    <Compile Include="Microsoft.Expression.Project\MigratingMSBuildStore.cs" />
+    <Compile Include="Microsoft.Expression.Project\MoveInfo.cs" />
+    <Compile Include="Microsoft.Expression.Project\MoveOptions.cs" />
+    <Compile Include="Microsoft.Expression.Project\MoveResult.cs" />
+    <Compile Include="Microsoft.Expression.Project\MSBuildBasedProject.cs" />
+    <Compile Include="Microsoft.Expression.Project\MSBuildBasedProjectStore.cs" />
+    <Compile Include="Microsoft.Expression.Project\MSBuildBasedProjectType.cs" />
+    <Compile Include="Microsoft.Expression.Project\MSBuildProjectItemData.cs" />
+    <Compile Include="Microsoft.Expression.Project\MSBuildProjectSolution.cs" />
+    <Compile Include="Microsoft.Expression.Project\NamedProjectEventArgs.cs" />
+    <Compile Include="Microsoft.Expression.Project\NativeMethods.cs" />
+    <Compile Include="Microsoft.Expression.Project\PerformanceTests\PerformanceTestProjectOperation.cs" />
+    <Compile Include="Microsoft.Expression.Project\PerformanceTests\PerformanceTestProjectUtilities.cs" />
+    <Compile Include="Microsoft.Expression.Project\PerformanceTests\ShutdownOperation.cs" />
+    <Compile Include="Microsoft.Expression.Project\PlatformIdentifier.cs" />
+    <Compile Include="Microsoft.Expression.Project\PreferredExternalEditCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectAdapterHelper.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectAdapterService.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectAssembly.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectAssemblyHelper.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectBase.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectBuildContext.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectCapabilities.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectCreateError.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectCreator.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectEventArgs.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectFileInformation.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectItem.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectItemBase.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectItemChangedEventArgs.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectItemEventArgs.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectItemEventOptions.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectItemProperties.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectItemRenamedEventArgs.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectItemRenameError.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectItemRenameException.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectLanguage.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectLog.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectManager.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectPackage.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectPathHelper.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectPropertyInfo.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectPropertyValue.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectReferenceDocumentType.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectReferenceProjectItem.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectStoreBase.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectStoreHelper.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectStoreUnsupportedException.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectTemplate.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectType.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectTypeGuidsHelper.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectTypeManager.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectTypeNamesHelper.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectUpgradeContext.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectUpgradeLogger.cs" />
+    <Compile Include="Microsoft.Expression.Project\ProjectWatcher.cs" />
+    <Compile Include="Microsoft.Expression.Project\PropertyValuesStringTable.cs" />
+    <Compile Include="Microsoft.Expression.Project\ReferenceAssemblyContext.cs" />
+    <Compile Include="Microsoft.Expression.Project\ReferenceAssemblyMode.cs" />
+    <Compile Include="Microsoft.Expression.Project\ReferenceAssemblyResolver.cs" />
+    <Compile Include="Microsoft.Expression.Project\ResourceReferenceCreator.cs" />
+    <Compile Include="Microsoft.Expression.Project\ServiceExtensions\Documents\DocumentServiceExtensions.cs" />
+    <Compile Include="Microsoft.Expression.Project\ServiceExtensions\ErrorHandling\ErrorHandlingServiceExtensions.cs" />
+    <Compile Include="Microsoft.Expression.Project\ServiceExtensions\InternalServiceExtensions.cs" />
+    <Compile Include="Microsoft.Expression.Project\ServiceExtensions\Messaging\MessagingServiceExtensions.cs" />
+    <Compile Include="Microsoft.Expression.Project\ServiceExtensions\Selection\SelectionServiceExtensions.cs" />
+    <Compile Include="Microsoft.Expression.Project\ServiceExtensions\ServiceExtensions.cs" />
+    <Compile Include="Microsoft.Expression.Project\ServiceExtensions\Solution\SolutionServiceExtensions.cs" />
+    <Compile Include="Microsoft.Expression.Project\ServiceExtensions\View\ViewServiceExtensions.cs" />
+    <Compile Include="Microsoft.Expression.Project\ShadowCopyAssemblyEvent.cs" />
+    <Compile Include="Microsoft.Expression.Project\SilverlightProjectHelper.cs" />
+    <Compile Include="Microsoft.Expression.Project\SingleProjectSolution.cs" />
+    <Compile Include="Microsoft.Expression.Project\SolutionBase.cs" />
+    <Compile Include="Microsoft.Expression.Project\SolutionConfigurationManager.cs" />
+    <Compile Include="Microsoft.Expression.Project\SolutionEventArgs.cs" />
+    <Compile Include="Microsoft.Expression.Project\SolutionParseException.cs" />
+    <Compile Include="Microsoft.Expression.Project\SolutionSettingsManager.cs" />
+    <Compile Include="Microsoft.Expression.Project\SolutionWatcher.cs" />
+    <Compile Include="Microsoft.Expression.Project\SourceControlHelper.cs" />
+    <Compile Include="Microsoft.Expression.Project\SourceControlStatusCache.cs" />
+    <Compile Include="Microsoft.Expression.Project\StructuredStorage.cs" />
+    <Compile Include="Microsoft.Expression.Project\TargetFrameworkChangedException.cs" />
+    <Compile Include="Microsoft.Expression.Project\TemplateArgument.cs" />
+    <Compile Include="Microsoft.Expression.Project\TemplateBase.cs" />
+    <Compile Include="Microsoft.Expression.Project\TemplateManager.cs" />
+    <Compile Include="Microsoft.Expression.Project\TemplateParser.cs" />
+    <Compile Include="Microsoft.Expression.Project\Templates\Folder.cs" />
+    <Compile Include="Microsoft.Expression.Project\Templates\NameDescriptionIcon.cs" />
+    <Compile Include="Microsoft.Expression.Project\Templates\ProjectItem.cs" />
+    <Compile Include="Microsoft.Expression.Project\Templates\ProjectItemTemplate.cs" />
+    <Compile Include="Microsoft.Expression.Project\Templates\ProjectTemplateLink.cs" />
+    <Compile Include="Microsoft.Expression.Project\Templates\SolutionFolder.cs" />
+    <Compile Include="Microsoft.Expression.Project\Templates\TemplateItemHelper.cs" />
+    <Compile Include="Microsoft.Expression.Project\Templates\VSTemplate.cs" />
+    <Compile Include="Microsoft.Expression.Project\Templates\VSTemplateExtensibilityWrapper.cs" />
+    <Compile Include="Microsoft.Expression.Project\Templates\VSTemplateTemplateContent.cs" />
+    <Compile Include="Microsoft.Expression.Project\Templates\VSTemplateTemplateContentCustomParameter.cs" />
+    <Compile Include="Microsoft.Expression.Project\Templates\VSTemplateTemplateContentProject.cs" />
+    <Compile Include="Microsoft.Expression.Project\Templates\VSTemplateTemplateContentProjectCollection.cs" />
+    <Compile Include="Microsoft.Expression.Project\Templates\VSTemplateTemplateContentProjectItem.cs" />
+    <Compile Include="Microsoft.Expression.Project\Templates\VSTemplateTemplateContentReferences.cs" />
+    <Compile Include="Microsoft.Expression.Project\Templates\VSTemplateTemplateContentReferencesReference.cs" />
+    <Compile Include="Microsoft.Expression.Project\Templates\VSTemplateTemplateData.cs" />
+    <Compile Include="Microsoft.Expression.Project\Templates\VSTemplateTemplateDataExtensibilityWrapper.cs" />
+    <Compile Include="Microsoft.Expression.Project\Templates\VSTemplateTemplateDataLocationField.cs" />
+    <Compile Include="Microsoft.Expression.Project\Templates\VSTemplateTemplateDataMaxFrameworkVersion.cs" />
+    <Compile Include="Microsoft.Expression.Project\Templates\VSTemplateTemplateDataRequiredFrameworkVersion.cs" />
+    <Compile Include="Microsoft.Expression.Project\Templates\VSTemplateWizardData.cs" />
+    <Compile Include="Microsoft.Expression.Project\Templates\VSTemplateWizardExtension.cs" />
+    <Compile Include="Microsoft.Expression.Project\UnknownDocumentType.cs" />
+    <Compile Include="Microsoft.Expression.Project\UnknownProject.cs" />
+    <Compile Include="Microsoft.Expression.Project\UnknownProjectType.cs" />
+    <Compile Include="Microsoft.Expression.Project\UnlicensedProject.cs" />
+    <Compile Include="Microsoft.Expression.Project\UpdateSourceControlActions.cs" />
+    <Compile Include="Microsoft.Expression.Project\UpgradingFilesEventArgs.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\AlphabeticThenNumericComparer.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\BasicItemModel.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\CreateProjectDialog.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\DirtyProjectItem.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\FileDropUtility.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\FolderNode.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\FolderStandIn.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\HierarchicalNode.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\ItemListBaseDialog.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\ItemModel.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\ItemsListDialog.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\KnownProjectNode.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\MultipleItemsToVisibilityCollapsedConverter.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\MultipleItemsToVisibilityVisibleConverter.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\NewNamePathDialog.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\NewProjectDialog.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\OverwriteFilesDialog.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\ProjectDialog.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\ProjectDialogResult.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\ProjectItemNameValidator.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\ProjectItemNode.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\ProjectNameValidator.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\ProjectNode.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\ProjectPane.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\ProjectPaneWorkaroundVirtualizingStackPanel.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\ProjectSystemOptionsControl.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\ProjectSystemOptionsModel.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\ProjectSystemOptionsPage.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\ProjectTemplateCategoryTreeItem.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\ProjectValidatorBase.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\RenameProjectItemCommand.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\RootHierarchicalNode.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\SaveFilesDialog.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\SearchTransaction.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\SelectionTracker_T_.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\SolutionNode.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\UpgradeProjectDialog.cs" />
+    <Compile Include="Microsoft.Expression.Project\UserInterface\UpgradeWizard.cs" />
+    <Compile Include="Microsoft.Expression.Project\ValidPropertyConverter.cs" />
+    <Compile Include="Microsoft.Expression.Project\VisualStudioSolution.cs" />
+    <Compile Include="Microsoft.Expression.Project\VisualStudioSolutionAttribute.cs" />
+    <Compile Include="Microsoft.Expression.Project\VSWebsites\DesignTimeData.cs" />
+    <Compile Include="Microsoft.Expression.Project\VSWebsites\VSWebsitesHelper.cs" />
+    <Compile Include="Microsoft.Expression.Project\VSWebsites\VSWebsitesWebsite.cs" />
+    <Compile Include="Microsoft.Expression.Project\WatcherSuspender.cs" />
+    <Compile Include="Microsoft.Expression.Project\WebApplicationProject.cs" />
+    <Compile Include="Microsoft.Expression.Project\WebApplicationProjectType.cs" />
+    <Compile Include="Microsoft.Expression.Project\WebProjectSolution.cs" />
+    <Compile Include="Microsoft.Expression.Project\WebsiteProject.cs" />
+    <Compile Include="Microsoft.Expression.Project\WebsiteProjectType.cs" />
+    <Compile Include="Microsoft.Expression.Project\WindowsExecutableProject.cs" />
+    <Compile Include="Microsoft.Expression.Project\WindowsExecutableProjectType.cs" />
+    <Compile Include="Microsoft.Expression.Project\WpfToolkitRemover.cs" />
+    <Compile Include="Microsoft.Expression.Project\XmlMSBuildProjectStore.cs" />
+    <Compile Include="Microsoft.Expression.Project\ZipHelper.cs" />
+    <Compile Include="Microsoft.Expression.SubsetFontTask\Crc32.cs" />
+    <Compile Include="Microsoft.Expression.SubsetFontTask\Zip\ByteBuffer.cs" />
+    <Compile Include="Microsoft.Expression.SubsetFontTask\Zip\RepairedMemoryStream.cs" />
+    <Compile Include="Microsoft.Expression.SubsetFontTask\Zip\ZipArchive.cs" />
+    <Compile Include="Microsoft.Expression.SubsetFontTask\Zip\ZipArchiveFile.cs" />
+    <Compile Include="Microsoft.MetadataReader\ArrayFabricatedAddressMethodInfo.cs" />
+    <Compile Include="Microsoft.MetadataReader\ArrayFabricatedConstructorInfo.cs" />
+    <Compile Include="Microsoft.MetadataReader\ArrayFabricatedGetMethodInfo.cs" />
+    <Compile Include="Microsoft.MetadataReader\ArrayFabricatedMethodInfo.cs" />
+    <Compile Include="Microsoft.MetadataReader\ArrayFabricatedSetMethodInfo.cs" />
+    <Compile Include="Microsoft.MetadataReader\AssemblyFactory.cs" />
+    <Compile Include="Microsoft.MetadataReader\AssemblyMetaData.cs" />
+    <Compile Include="Microsoft.MetadataReader\AssemblyNameHelper.cs" />
+    <Compile Include="Microsoft.MetadataReader\AssemblyRef.cs" />
+    <Compile Include="Microsoft.MetadataReader\CommonIdeHelper.cs" />
+    <Compile Include="Microsoft.MetadataReader\ConstructorInfoRef.cs" />
+    <Compile Include="Microsoft.MetadataReader\CorCallingConvention.cs" />
+    <Compile Include="Microsoft.MetadataReader\CorFileFlags.cs" />
+    <Compile Include="Microsoft.MetadataReader\CorManifestResourceFlags.cs" />
+    <Compile Include="Microsoft.MetadataReader\CorTypeAttr.cs" />
+    <Compile Include="Microsoft.MetadataReader\CustomModifiers.cs" />
+    <Compile Include="Microsoft.MetadataReader\DefaultFactory.cs" />
+    <Compile Include="Microsoft.MetadataReader\DefaultUniverse.cs" />
+    <Compile Include="Microsoft.MetadataReader\GenericContext.cs" />
+    <Compile Include="Microsoft.MetadataReader\HCORENUM.cs" />
+    <Compile Include="Microsoft.MetadataReader\IMetadataAssemblyImport.cs" />
+    <Compile Include="Microsoft.MetadataReader\IMetadataExtensionsPolicy.cs" />
+    <Compile Include="Microsoft.MetadataReader\IMetadataImport.cs" />
+    <Compile Include="Microsoft.MetadataReader\IMetadataImport2.cs" />
+    <Compile Include="Microsoft.MetadataReader\IMetadataTables.cs" />
+    <Compile Include="Microsoft.MetadataReader\Internal\Debug.cs" />
+    <Compile Include="Microsoft.MetadataReader\IReflectionFactory.cs" />
+    <Compile Include="Microsoft.MetadataReader\Loader.cs" />
+    <Compile Include="Microsoft.MetadataReader\MetadataExtensionsPolicy20.cs" />
+    <Compile Include="Microsoft.MetadataReader\MetadataOnlyArrayType.cs" />
+    <Compile Include="Microsoft.MetadataReader\MetadataOnlyAssembly.cs" />
+    <Compile Include="Microsoft.MetadataReader\MetadataOnlyCommonArrayType.cs" />
+    <Compile Include="Microsoft.MetadataReader\MetadataOnlyCommonType.cs" />
+    <Compile Include="Microsoft.MetadataReader\MetadataOnlyConstructorInfo.cs" />
+    <Compile Include="Microsoft.MetadataReader\MetadataOnlyCustomAttributeData.cs" />
+    <Compile Include="Microsoft.MetadataReader\MetadataOnlyEventInfo.cs" />
+    <Compile Include="Microsoft.MetadataReader\MetadataOnlyFieldInfo.cs" />
+    <Compile Include="Microsoft.MetadataReader\MetadataOnlyLocalVariableInfo.cs" />
+    <Compile Include="Microsoft.MetadataReader\MetadataOnlyMethodBody.cs" />
+    <Compile Include="Microsoft.MetadataReader\MetadataOnlyMethodBodyWorker.cs" />
+    <Compile Include="Microsoft.MetadataReader\MetadataOnlyMethodInfo.cs" />
+    <Compile Include="Microsoft.MetadataReader\MetadataOnlyModifiedType.cs" />
+    <Compile Include="Microsoft.MetadataReader\MetadataOnlyModule.cs" />
+    <Compile Include="Microsoft.MetadataReader\MetadataOnlyParameterInfo.cs" />
+    <Compile Include="Microsoft.MetadataReader\MetadataOnlyPropertyInfo.cs" />
+    <Compile Include="Microsoft.MetadataReader\MetadataOnlyTypeDef.cs" />
+    <Compile Include="Microsoft.MetadataReader\MetadataOnlyTypeReference.cs" />
+    <Compile Include="Microsoft.MetadataReader\MetadataOnlyTypeVariable.cs" />
+    <Compile Include="Microsoft.MetadataReader\MetadataOnlyTypeVariableRef.cs" />
+    <Compile Include="Microsoft.MetadataReader\MetadataOnlyVectorType.cs" />
+    <Compile Include="Microsoft.MetadataReader\MethodFilter.cs" />
+    <Compile Include="Microsoft.MetadataReader\MethodSignatureDescriptor.cs" />
+    <Compile Include="Microsoft.MetadataReader\NamedArgumentType.cs" />
+    <Compile Include="Microsoft.MetadataReader\OpenGenericContext.cs" />
+    <Compile Include="Microsoft.MetadataReader\ProxyGenericType.cs" />
+    <Compile Include="Microsoft.MetadataReader\PseudoCustomAttributes.cs" />
+    <Compile Include="Microsoft.MetadataReader\SignatureBlob.cs" />
+    <Compile Include="Microsoft.MetadataReader\SignatureComparer.cs" />
+    <Compile Include="Microsoft.MetadataReader\SignatureUtil.cs" />
+    <Compile Include="Microsoft.MetadataReader\SimpleParameterInfo.cs" />
+    <Compile Include="Microsoft.MetadataReader\TypeNameQuoter.cs" />
+    <Compile Include="Microsoft.MetadataReader\TypeProxy.cs" />
+    <Compile Include="Microsoft.MetadataReader\TypeSignatureDescriptor.cs" />
+    <Compile Include="Microsoft.MetadataReader\TypeSpec.cs" />
+    <Compile Include="Microsoft.MetadataReader\UnmanagedStringMemoryHandle.cs" />
+    <Compile Include="Microsoft.MetadataReader\UnresolvedTypeName.cs" />
+    <Compile Include="Microsoft.MetadataReader\UnusedIntPtr.cs" />
+    <Compile Include="Microsoft.MetadataReader\Utility.cs" />
+    <Compile Include="Microsoft.VisualStudio.Silverlight\AssemblyMetadataHelper.cs" />
+    <Compile Include="Microsoft.VisualStudio.Silverlight\AssemblyNameVersion.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System.Reflection.Adds\AssemblyProxy.cs" />
+    <Compile Include="System.Reflection.Adds\ConstructorInfoProxy.cs" />
+    <Compile Include="System.Reflection.Adds\CorElementType.cs" />
+    <Compile Include="System.Reflection.Adds\ElementTypeUtility.cs" />
+    <Compile Include="System.Reflection.Adds\EmbeddedBlobPointer.cs" />
+    <Compile Include="System.Reflection.Adds\FileMapping.cs" />
+    <Compile Include="System.Reflection.Adds\Helpers.cs" />
+    <Compile Include="System.Reflection.Adds\IAssembly2.cs" />
+    <Compile Include="System.Reflection.Adds\IFieldInfo2.cs" />
+    <Compile Include="System.Reflection.Adds\ImageHelper.cs" />
+    <Compile Include="System.Reflection.Adds\ImageType.cs" />
+    <Compile Include="System.Reflection.Adds\IModule2.cs" />
+    <Compile Include="System.Reflection.Adds\IMutableTypeUniverse.cs" />
+    <Compile Include="System.Reflection.Adds\ITypeProxy.cs" />
+    <Compile Include="System.Reflection.Adds\ITypeReference.cs" />
+    <Compile Include="System.Reflection.Adds\ITypeSignatureBlob.cs" />
+    <Compile Include="System.Reflection.Adds\ITypeSpec.cs" />
+    <Compile Include="System.Reflection.Adds\ITypeUniverse.cs" />
+    <Compile Include="System.Reflection.Adds\MetadataDispenser.cs" />
+    <Compile Include="System.Reflection.Adds\MetadataFile.cs" />
+    <Compile Include="System.Reflection.Adds\MetadataFileAndRvaResolver.cs" />
+    <Compile Include="System.Reflection.Adds\MetadataTable.cs" />
+    <Compile Include="System.Reflection.Adds\NativeMethods.cs" />
+    <Compile Include="System.Reflection.Adds\ResolveAssemblyNameEventArgs.cs" />
+    <Compile Include="System.Reflection.Adds\SimpleUniverse.cs" />
+    <Compile Include="System.Reflection.Adds\Token.cs" />
+    <Compile Include="System.Reflection.Adds\TokenType.cs" />
+    <Compile Include="System.Reflection.Adds\TypeNameParser.cs" />
+    <Compile Include="System.Reflection.Adds\UnresolvedAssemblyException.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shopdrawing.Design.Extensibility\Shopdrawing.Design.Extensibility.csproj">
+      <Project>{cab662e1-637c-4f61-8ab3-b16ffa935ff5}</Project>
+      <Name>Shopdrawing.Design.Extensibility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shopdrawing.Extensibility.Project\Shopdrawing.Extensibility.Project.csproj">
+      <Project>{e51eb890-57c9-423a-98e1-059a0448d922}</Project>
+      <Name>Shopdrawing.Extensibility.Project</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shopdrawing.Extensibility\Shopdrawing.Extensibility.csproj">
+      <Project>{430dc17e-7541-4198-b8b2-f4d4529934a8}</Project>
+      <Name>Shopdrawing.Extensibility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shopdrawing.Framework\Shopdrawing.Framework.csproj">
+      <Project>{886371dd-23b6-434d-bdb6-81606416348f}</Project>
+      <Name>Shopdrawing.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Microsoft.Expression.ProjectReferences\Microsoft.Expression.Extensibility.dll" />
+    <Content Include="Microsoft.Expression.ProjectReferences\Microsoft.Expression.Extensibility.Project.dll" />
+    <Content Include="Microsoft.Expression.ProjectReferences\Microsoft.Expression.Framework.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

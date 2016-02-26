@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Error_ObjectAlreadyActive" xml:space="preserve">
+    <value>The object '{0}' has already been activated.</value>
+  </data>
+  <data name="Error_ValidationNoMatchingMember" xml:space="preserve">
+    <value>The member named '{0}' does not exist on type '{1}'.</value>
+  </data>
+  <data name="Error_NoPropertyValue" xml:space="preserve">
+    <value>The property '{0}' does not have a value.</value>
+  </data>
+  <data name="Error_IncorrectTypePassed" xml:space="preserve">
+    <value>The type passed must derive from '{0}'.</value>
+  </data>
+  <data name="Error_InvalidRedirectParent" xml:space="preserve">
+    <value>The extension '{0}' returned an invalid value from RedirectParent.  If you do not want to support redirection, return the original parent.</value>
+  </data>
+  <data name="Error_ParentNotSupported" xml:space="preserve">
+    <value>An object of type '{0}' does not support parenting an object of type '{1}'.</value>
+  </data>
+  <data name="Error_RequiredService" xml:space="preserve">
+    <value>This feature requires service '{0}' to be present, but it could not be located.</value>
+  </data>
+  <data name="Error_EnumerationNotReady" xml:space="preserve">
+    <value>The enumeration either has ended or has not yet been started.</value>
+  </data>
+  <data name="Error_DuplicateService" xml:space="preserve">
+    <value>The service '{0}' has already been published by another object.</value>
+  </data>
+  <data name="Error_ObjectNotActive" xml:space="preserve">
+    <value>The object '{0}' is not currently activated.</value>
+  </data>
+  <data name="Error_ValueSetFailed" xml:space="preserve">
+    <value>Set of Value failed.</value>
+  </data>
+  <data name="Error_InvalidFactoryType" xml:space="preserve">
+    <value>FactoryType must be set to a type that derives from NewItemFactory.</value>
+  </data>
+  <data name="Error_DerivedContextItem" xml:space="preserve">
+    <value>The context item type '{0}' derives from the base item type of '{1}'.  Always pass a the base context item type.</value>
+  </data>
+  <data name="Error_PropertyValueEditor_InvalidDialogValueEditorEditorValue" xml:space="preserve">
+    <value>Expected PropertyValue.OwningEditor to be non-null and to be a subclass of PropertyValueEditorDialogBase.</value>
+  </data>
+  <data name="Error_CannotUpdateValueFromStringValue" xml:space="preserve">
+    <value>Cannot update Value from StringValue.</value>
+  </data>
+  <data name="Error_ValueGetFailed" xml:space="preserve">
+    <value>Get of Value failed.</value>
+  </data>
+  <data name="Error_IncompatiblePositionReference" xml:space="preserve">
+    <value>The PositionReference contained in each reference value must be the same.</value>
+  </data>
+  <data name="Error_TableValidationFailed" xml:space="preserve">
+    <value>Validation of the attribute table has failed.</value>
+  </data>
+  <data name="Error_RecursionResolvingService" xml:space="preserve">
+    <value>While resolving the service '{0}' a recursive request was made for the same service.</value>
+  </data>
+  <data name="ToolDescription_CreateInstance" xml:space="preserve">
+    <value>Create new '{0}'</value>
+  </data>
+  <data name="Error_InvalidArrayIndex" xml:space="preserve">
+    <value>The index '{0}' is beyond the bounds of the array.</value>
+  </data>
+  <data name="Error_NullImplementation" xml:space="preserve">
+    <value>The method '{0}' has returned null, but that is not allowed in the implementation.</value>
+  </data>
+  <data name="Error_PropertyNotFound" xml:space="preserve">
+    <value>The property '{0}' does not exist on objects of type '{1}'.</value>
+  </data>
+  <data name="Error_UnknownMemberDescriptor" xml:space="preserve">
+    <value>MemberDescriptors of type '{0}' are not supported.</value>
+  </data>
+  <data name="Error_ValidationAmbiguousMember" xml:space="preserve">
+    <value>The member named '{0}' was found as both a property and an event on type '{1}'.  Members with the same name are not supported.</value>
+  </data>
+  <data name="Error_ToolAlreadyActive" xml:space="preserve">
+    <value>The tool '{0}' is already active in this editing context.  You cannot activate the same instance of a task tool more than once.</value>
+  </data>
+  <data name="Error_NullService" xml:space="preserve">
+    <value>An object '{0}' has published a service of type '{1}' but the returned instance was null.</value>
+  </data>
+  <data name="Error_NoCreationType" xml:space="preserve">
+    <value>You cannot create an instance of an object if CreationType has not been set.  Set CreationType to a valid type and try again.</value>
+  </data>
+  <data name="Error_IncorrectServiceType" xml:space="preserve">
+    <value>An object '{0}' has published a service of type '{1}' but the service instance was returned as '{2}'.</value>
+  </data>
+  <data name="Error_ArgIncorrectType" xml:space="preserve">
+    <value>The argument '{0}' must be of type '{1}'.</value>
+  </data>
+  <data name="Error_CannotConvertValueToString" xml:space="preserve">
+    <value>Cannot convert Value to string.</value>
+  </data>
+  <data name="Error_LocalAssemblyNameChanged" xml:space="preserve">
+    <value>The property 'LocalAssemblyName' cannot be changed.</value>
+  </data>
+  <data name="Error_DesignerActionItemSharing" xml:space="preserve">
+    <value>DesignerActionProviders '{0}' and '{1}' are both attempting to provide the same instance of DesignerActionItem '{2}'.  This is illegal.</value>
+  </data>
+  <data name="Error_DuplicateItem" xml:space="preserve">
+    <value>An item for '{0}' already exists in the collection.</value>
+  </data>
+  <data name="Error_PropertyValueEditor_InvalidDialogValueEditorCommandInvocation" xml:space="preserve">
+    <value>Expected e.Parameter to be non-null and to be a PropertyValue. CommandParameter should have a Binding to the PropertyValue.</value>
+  </data>
+  <data name="Error_PropertyIsReadOnly" xml:space="preserve">
+    <value>The property '{0}' is readonly.</value>
+  </data>
+  <data name="Error_ArgIncorrectTypeValue" xml:space="preserve">
+    <value>The argument '{0}' must be a type that is or derives from '{1}'.</value>
+  </data>
+</root>

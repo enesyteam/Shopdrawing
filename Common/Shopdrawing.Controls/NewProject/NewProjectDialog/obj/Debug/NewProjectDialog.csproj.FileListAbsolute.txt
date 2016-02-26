@@ -1,0 +1,8 @@
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\NewProject\NewProjectDialog\bin\Debug\NewProjectDialog.exe
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\NewProject\NewProjectDialog\bin\Debug\NewProjectDialog.pdb
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\NewProject\NewProjectDialog\obj\Debug\NewProjectDialog.csprojResolveAssemblyReference.cache
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\NewProject\NewProjectDialog\obj\Debug\NewProjectDialog.Form1.resources
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\NewProject\NewProjectDialog\obj\Debug\NewProjectDialog.Properties.Resources.resources
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\NewProject\NewProjectDialog\obj\Debug\NewProjectDialog.csproj.GenerateResource.Cache
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\NewProject\NewProjectDialog\obj\Debug\NewProjectDialog.exe
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\NewProject\NewProjectDialog\obj\Debug\NewProjectDialog.pdb

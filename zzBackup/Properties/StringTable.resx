@@ -1,0 +1,544 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutDialogFullyLicensedAndActivatedMessage" xml:space="preserve">
+    <value>This is a fully licensed and activated copy.</value>
+  </data>
+  <data name="AboutDialogFullyLicensedMessage" xml:space="preserve">
+    <value>This is a fully licensed copy.</value>
+  </data>
+  <data name="AboutDialogLicenseExpirationMessage" xml:space="preserve">
+    <value>This software license expires on {0}.</value>
+  </data>
+  <data name="AboutDialogRemainingDaysToActivateMessagePlural" xml:space="preserve">
+    <value>You must activate your product in {0} days.</value>
+  </data>
+  <data name="AboutDialogRemainingDaysToActivateMessageSingular" xml:space="preserve">
+    <value>You must activate your product in 1 day.</value>
+  </data>
+  <data name="AboutDialogRemainingTrialDaysMessagePlural" xml:space="preserve">
+    <value>You must enter a product key in {0} days.</value>
+  </data>
+  <data name="AboutDialogRemainingTrialDaysMessageSingular" xml:space="preserve">
+    <value>You must enter a product key in 1 day.</value>
+  </data>
+  <data name="AboutDialogWarningText" xml:space="preserve">
+    <value>Warning: This computer program is protected by copyright laws and international treaties. Unauthorized reproduction or redistribution of this program, or any portion of it, may result in severe civil and criminal penalties, and will be prosecuted to the maximum extent possible under the law. Microsoft and {0} are trademarks of the Microsoft group of companies. All other trademarks are property of their respective owners.</value>
+  </data>
+  <data name="AllWorkspacesDialogTitle" xml:space="preserve">
+    <value>All Workspaces</value>
+  </data>
+  <data name="AltKeyText" xml:space="preserve">
+    <value>Alt</value>
+  </data>
+  <data name="ApplicationAssemblyLoadErrorDialogMessage" xml:space="preserve">
+    <value>An error occurred while loading the assembly "{0}".
+{1}</value>
+  </data>
+  <data name="ApplicationSecurityExceptionDialogTitle" xml:space="preserve">
+    <value>Security Exception</value>
+  </data>
+  <data name="ApplicationTargetInvocationDialogMessage" xml:space="preserve">
+    <value>Inner exception: {0}</value>
+  </data>
+  <data name="ApplicationTargetInvocationDialogTitle" xml:space="preserve">
+    <value>Target Invocation Exception</value>
+  </data>
+  <data name="AsyncProcessStatusText" xml:space="preserve">
+    <value>Processing...</value>
+  </data>
+  <data name="CannotConnectToRemoteServer" xml:space="preserve">
+    <value>Cannot connect to the activation server.</value>
+  </data>
+  <data name="CheckedIn" xml:space="preserve">
+    <value>Checked into source control</value>
+  </data>
+  <data name="CheckedOutToMe" xml:space="preserve">
+    <value>Checked out to me</value>
+  </data>
+  <data name="CheckedOutToMeExclusively" xml:space="preserve">
+    <value>Checked out to me exclusively</value>
+  </data>
+  <data name="ConfirmMultipleWorkspaceDeletionDialogText" xml:space="preserve">
+    <value>Are you sure you want to delete these workspaces?</value>
+  </data>
+  <data name="ConfirmWorkspaceDeletionDialogText" xml:space="preserve">
+    <value>Are you sure you want to delete this workspace?</value>
+  </data>
+  <data name="ConnectionAttemptToRemoteServerTimedOut" xml:space="preserve">
+    <value>Connection attempt to the activation server timed out.</value>
+  </data>
+  <data name="ControlKeyText" xml:space="preserve">
+    <value>Ctrl</value>
+  </data>
+  <data name="CustomTabDisplayNameFormat" xml:space="preserve">
+    <value>{0} ({1})</value>
+  </data>
+  <data name="DefaultCustomWorkspaceName" xml:space="preserve">
+    <value>Workspace</value>
+  </data>
+  <data name="DefaultMessageBoxCaption" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="DefaultMessageWindowCheckboxMessage" xml:space="preserve">
+    <value>Don't show this message again</value>
+  </data>
+  <data name="DeleteKeyText" xml:space="preserve">
+    <value>Del</value>
+  </data>
+  <data name="DeleteWorkspaceInUseDialogText" xml:space="preserve">
+    <value>Cannot delete the {0} workspace because it is currently in use.  Switch to a different workspace and try again.</value>
+  </data>
+  <data name="DownKeyText" xml:space="preserve">
+    <value>Down</value>
+  </data>
+  <data name="EmptyMenuItemText" xml:space="preserve">
+    <value>(Empty)</value>
+  </data>
+  <data name="EndKeyText" xml:space="preserve">
+    <value>End</value>
+  </data>
+  <data name="ErrorMessageWithException" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="ErrorMessageWithInnerException" xml:space="preserve">
+    <value>{0} {1}
+		
+{2}</value>
+  </data>
+  <data name="FeedbackDialogHeaderText" xml:space="preserve">
+    <value>Do you want to join the {0} Customer Experience Improvement Program?</value>
+  </data>
+  <data name="FeedbackDialogOptInText" xml:space="preserve">
+    <value>_Join the {0} Customer Experience Improvement Program</value>
+  </data>
+  <data name="FeedbackDialogOptOutText" xml:space="preserve">
+    <value>I do_n't want to join the program at this time</value>
+  </data>
+  <data name="FeedbackDialogParagraphText" xml:space="preserve">
+    <value>The program collects information about your computer hardware and how you use {0}, without interrupting you. The information helps Microsoft improve this and other Microsoft software. No information collected is used to identify or contact you.</value>
+  </data>
+  <data name="FeedbackDialogTitle" xml:space="preserve">
+    <value>Customer Experience Improvement Program</value>
+  </data>
+  <data name="GalleryMainItemDefaultHeader" xml:space="preserve">
+    <value>Categories</value>
+  </data>
+  <data name="InvalidNameCharacters" xml:space="preserve">
+    <value>The name cannot contain any of the following characters: / \ : * ? " &lt; &gt; |</value>
+  </data>
+  <data name="InvalidNameDeviceName" xml:space="preserve">
+    <value>The name cannot contain a system device name such as CON, PRN, AUX, NUL, COM1, or LPT2.</value>
+  </data>
+  <data name="InvalidNameEmpty" xml:space="preserve">
+    <value>The name cannot be empty.</value>
+  </data>
+  <data name="InvalidNameEndingPeriodOrSpace" xml:space="preserve">
+    <value>The name cannot end in a period or a space.</value>
+  </data>
+  <data name="InvalidPathAllDots" xml:space="preserve">
+    <value>The path cannot contain consecutive periods between path separators.</value>
+  </data>
+  <data name="InvalidPathBadUncFormat" xml:space="preserve">
+    <value>Share paths must use the following format: \\Server\Share</value>
+  </data>
+  <data name="InvalidPathCharacters" xml:space="preserve">
+    <value>The path cannot contain any of the following characters:  * : ? " &lt; &gt; |</value>
+  </data>
+  <data name="InvalidPathDeviceName" xml:space="preserve">
+    <value>The path cannot contain a system device such as CON, PRN, AUX, NUL, COM1, or LPT2.</value>
+  </data>
+  <data name="InvalidPathEmpty" xml:space="preserve">
+    <value>The path cannot be empty.</value>
+  </data>
+  <data name="InvalidPathEndingPeriodOrSpace" xml:space="preserve">
+    <value>The path cannot contain segments between path separators that end in a period or space.</value>
+  </data>
+  <data name="InvalidPathUnknownFormat" xml:space="preserve">
+    <value>Unknown path format.</value>
+  </data>
+  <data name="LeftKeyText" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="LicensingActivationPhoneNumberNotAvailable" xml:space="preserve">
+    <value>Not Available</value>
+  </data>
+  <data name="LicensingActivationPhoneNumberTollFreeNumber" xml:space="preserve">
+    <value>(Toll-Free)</value>
+  </data>
+  <data name="LicensingActivationPhoneNumberTollNumber" xml:space="preserve">
+    <value>(Toll)</value>
+  </data>
+  <data name="LicensingAlreadyActivatedMessage" xml:space="preserve">
+    <value>Your Expression product is activated already.</value>
+  </data>
+  <data name="LicensingContinueUsingCurrentLicense" xml:space="preserve">
+    <value>Continue using your current license.</value>
+  </data>
+  <data name="LicensingEnterKeySucceededAndActivationFailed" xml:space="preserve">
+    <value>Product key is valid, but activation could not be completed.</value>
+  </data>
+  <data name="LicensingInitializationFailureMessage" xml:space="preserve">
+    <value>A licensing installation error has occurred. Please contact customer support for more assistance.</value>
+  </data>
+  <data name="LicensingInsufficientRightsMessage" xml:space="preserve">
+    <value>In order to license the product, you must be running as an Administrator.</value>
+  </data>
+  <data name="LicensingInvalidKeyMessage" xml:space="preserve">
+    <value>The key you have entered is not valid.  Please enter a valid product key.</value>
+  </data>
+  <data name="LicensingItemizedDialogActivateButton" xml:space="preserve">
+    <value>Activate now</value>
+  </data>
+  <data name="LicensingItemizedDialogEnterKeyButton" xml:space="preserve">
+    <value>Enter key</value>
+  </data>
+  <data name="LicensingItemizedDialogExpiredText" xml:space="preserve">
+    <value>License expired</value>
+  </data>
+  <data name="LicensingItemizedDialogLicensedText" xml:space="preserve">
+    <value>Fully licensed</value>
+  </data>
+  <data name="LicensingItemizedDialogTempLicensePluralText" xml:space="preserve">
+    <value>License expires in {0} days</value>
+  </data>
+  <data name="LicensingItemizedDialogTempLicenseSingularText" xml:space="preserve">
+    <value>License expires in 1 day</value>
+  </data>
+  <data name="LicensingItemizedDialogTrialTextDaysPlural" xml:space="preserve">
+    <value>{0} days remaining</value>
+  </data>
+  <data name="LicensingItemizedDialogTrialTextDaysSingular" xml:space="preserve">
+    <value>1 day remaining</value>
+  </data>
+  <data name="LicensingMultipleActivateableSkus" xml:space="preserve">
+    <value>You have entered more than one product key that you can use to activate your Expression product. Verify which product key you want to use, and then click Enter Product Key on the Help menu to reenter the product key and activate your Expression product.</value>
+  </data>
+  <data name="LicensingMustActivateDialogActivateNowOption" xml:space="preserve">
+    <value>Activate product now</value>
+  </data>
+  <data name="LicensingMustActivateDialogHeader" xml:space="preserve">
+    <value>You have 0 days remaining to activate your Expression product. You must activate your product now.</value>
+  </data>
+  <data name="LicensingNoActivateableKeyMessage" xml:space="preserve">
+    <value>Cannot activate using the current product key. Enter a valid product key, and then try to activate again.</value>
+  </data>
+  <data name="LicensingNotLicensedWarningMessage" xml:space="preserve">
+    <value>You have not completed the licensing process so the product will now exit.
+    
+Are you sure you want to close the licensing dialog?</value>
+  </data>
+  <data name="LicensingPhoneActivationFailedMessage" xml:space="preserve">
+    <value>Activation by phone could not be completed. Verify the confirmation ID and try again.</value>
+  </data>
+  <data name="LicensingProductSkuLicenseNotInstalledMessage" xml:space="preserve">
+    <value>A licensing error has occurred. Restart your Expression program and try again. If you continue to receive this error message, reinstall your Expression program to make sure that the license installs correctly.</value>
+  </data>
+  <data name="LicensingRemainingDaysInActivationTextPlural" xml:space="preserve">
+    <value>Continue using your current license. You have {0} days remaining to activate your Expression product.</value>
+  </data>
+  <data name="LicensingRemainingDaysInActivationTextSingular" xml:space="preserve">
+    <value>Continue using your current license. You have 1 day remaining to activate your Expression product.</value>
+  </data>
+  <data name="LicensingSuccessfulActivationMessage" xml:space="preserve">
+    <value>Activation successful. Thank you!</value>
+  </data>
+  <data name="LicensingTrialDaysRemainingText" xml:space="preserve">
+    <value>You have {0} days remaining before you must purchase a product license.</value>
+  </data>
+  <data name="LicensingTrialExpiredText" xml:space="preserve">
+    <value>Thank you for evaluating the product. Your trial period has now expired. If you'd like to continue to use the product, please enter a valid product key.</value>
+  </data>
+  <data name="LicensingTrialKeyInstallationFailureMessage" xml:space="preserve">
+    <value>Installation of the trial key failed.  Please contact customer support for more assistance.</value>
+  </data>
+  <data name="LicensingUseTrialTextPlural" xml:space="preserve">
+    <value>Continue using the trial version of the product ({0} days remaining). At the end of the trial period you will need to get a product key.</value>
+  </data>
+  <data name="LicensingUseTrialTextSingular" xml:space="preserve">
+    <value>Continue using the trial version of the product (1 day remaining). At the end of the trial period you will need to get a product key.</value>
+  </data>
+  <data name="LicensingValidationFailureMessage" xml:space="preserve">
+    <value>The licensing didn't start properly.</value>
+  </data>
+  <data name="LicensingValidMessage" xml:space="preserve">
+    <value>Thank you for licensing this product. You will not be prompted for the key again.</value>
+  </data>
+  <data name="LicensingYouNeedToActivate" xml:space="preserve">
+    <value>You have entered a key corresponding to an expired license. You must activate your Expression product.</value>
+  </data>
+  <data name="ManageWorkspaceConfigurationsDialogTitle" xml:space="preserve">
+    <value>Manage Workspaces</value>
+  </data>
+  <data name="MaximumUnlockExceeded" xml:space="preserve">
+    <value>This product key has been used the maximum number of times allowed by the Microsoft Software License Terms.</value>
+  </data>
+  <data name="MemoryLowErrorMessage" xml:space="preserve">
+    <value>There is not enough virtual memory available.  Please save your work and restart {0}.</value>
+  </data>
+  <data name="MessageWindowCancelLabel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="MessageWindowCloseLabel" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="MessageWindowHelpLabel" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="MessageWindowNoLabel" xml:space="preserve">
+    <value>_No</value>
+  </data>
+  <data name="MessageWindowOKLabel" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="MessageWindowYesLabel" xml:space="preserve">
+    <value>_Yes</value>
+  </data>
+  <data name="MoreDetailsErrorMessage" xml:space="preserve">
+    <value>{0}
+
+{1}</value>
+  </data>
+  <data name="MultipleKeyboardShortcutFormat" xml:space="preserve">
+    <value>{0}, {1}</value>
+  </data>
+  <data name="NewlyAddedFile" xml:space="preserve">
+    <value>Newly added file</value>
+  </data>
+  <data name="NumberEditorAutoFormat" xml:space="preserve">
+    <value>Auto ({0})</value>
+  </data>
+  <data name="NumberEditorNinchedValue" xml:space="preserve">
+    <value>---</value>
+  </data>
+  <data name="OptionsDialogTitle" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="OverwriteConfirmationMessage" xml:space="preserve">
+    <value>Cannot save the file "{0}" because it is read-only.
+
+Expression Blend can attempt to make the file writable and then overwrite the file in its current location.
+
+Do you want to attempt to overwrite the file?</value>
+  </data>
+  <data name="ProductSkuNotInstalled" xml:space="preserve">
+    <value>This product key is not compatible with this Expression product. Install the Expression product that is compatible with this product key, or try another valid product key.</value>
+  </data>
+  <data name="RemoteChange" xml:space="preserve">
+    <value>Checked out by someone else or in another place</value>
+  </data>
+  <data name="RenderTierOneMessage" xml:space="preserve">
+    <value>Some optimized rendering is supported by your system and video drivers.</value>
+  </data>
+  <data name="RenderTierTwoMessage" xml:space="preserve">
+    <value>Full optimized rendering is supported by your system and video drivers.</value>
+  </data>
+  <data name="RenderTierZeroMessage" xml:space="preserve">
+    <value>No optimized rendering is supported by your system and video drivers.</value>
+  </data>
+  <data name="RightKeyText" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="SaveAccessError" xml:space="preserve">
+    <value>An error occurred while saving the file "{0}":
+
+{1}</value>
+  </data>
+  <data name="SaveAsNewWorkspaceDialogTitle" xml:space="preserve">
+    <value>Save as New Workspace</value>
+  </data>
+  <data name="SaveChangesNoResponse" xml:space="preserve">
+    <value>Do_n't save</value>
+  </data>
+  <data name="SaveChangesTo" xml:space="preserve">
+    <value>Save changes to {0}?</value>
+  </data>
+  <data name="SaveChangesYesResponse" xml:space="preserve">
+    <value>_Save</value>
+  </data>
+  <data name="ShellOptionsPageTitle" xml:space="preserve">
+    <value>Workspace</value>
+  </data>
+  <data name="ShiftKeyText" xml:space="preserve">
+    <value>Shift</value>
+  </data>
+  <data name="SourceControlOfflineDialogIntroduction" xml:space="preserve">
+    <value>Unable to connect to source control server. Source control functionality will be disabled.</value>
+  </data>
+  <data name="SourceControlOpenProjectDialogTitle" xml:space="preserve">
+    <value>Enlist in Source Control</value>
+  </data>
+  <data name="SpaceKeyText" xml:space="preserve">
+    <value>Space</value>
+  </data>
+  <data name="StyleIconDefaultText" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="SwitchToDialogTitle" xml:space="preserve">
+    <value>Switch To</value>
+  </data>
+  <data name="UnableToAccessLicensingInformation" xml:space="preserve">
+    <value>Unable to access Licensing information.</value>
+  </data>
+  <data name="UnableToFindRemoteServer" xml:space="preserve">
+    <value>Cannot locate the activation server. Check your network connection and settings, and try again.</value>
+  </data>
+  <data name="UpKeyText" xml:space="preserve">
+    <value>Up</value>
+  </data>
+  <data name="WebNavigationFailedMessage" xml:space="preserve">
+    <value>Microsoft Expression tried to open a web page using your current browser but the navigation failed. To view the web page, connect to the Internet, open your browser, and then enter the following address: {0}</value>
+  </data>
+  <data name="WebServerCannotLaunch" xml:space="preserve">
+    <value>Cannot launch the Microsoft Expression Web Server. An error occured trying to preview {0}.</value>
+  </data>
+  <data name="WindowsKeyText" xml:space="preserve">
+    <value>Windows</value>
+  </data>
+  <data name="WorkspaceConfigurationErrorExistingNameDialogText" xml:space="preserve">
+    <value>A workspace with the new name already exists.</value>
+  </data>
+  <data name="WorkspaceConfigurationLoadAccessError" xml:space="preserve">
+    <value>Cannot load the selected workspace. The workspace configuration files could not be accessed at {0}.</value>
+  </data>
+  <data name="WorkspaceConfigurationLoadConfigNotFound" xml:space="preserve">
+    <value>Cannot load the selected workspace. The workspace configuration files could not be found at {0}.</value>
+  </data>
+  <data name="WorkspaceConfigurationLoadError" xml:space="preserve">
+    <value>Cannot load the selected workspace. The workspace configuration files may be corrupt at {0}.</value>
+  </data>
+  <data name="WorkspaceConfigurationLoadIOError" xml:space="preserve">
+    <value>Cannot load the selected workspace. An error occurred when opening the workspace configuration files at {0}.</value>
+  </data>
+  <data name="WorkspaceConfigurationProceedSwitching" xml:space="preserve">
+    <value>Do you want to switch the workspace anyway?</value>
+  </data>
+  <data name="WorkspaceConfigurationSaveAccessError" xml:space="preserve">
+    <value>Cannot save the selected workspace. The workspace configuration files could not be accessed at {0}.</value>
+  </data>
+  <data name="WorkspaceConfigurationSaveError" xml:space="preserve">
+    <value>Cannot save the selected workspace. The workspace configuration files may be corrupt at {0}.</value>
+  </data>
+  <data name="WorkspaceConfigurationSaveIOError" xml:space="preserve">
+    <value>Cannot save the selected workspace. An error occurred when opening the workspace configuration files at {0}.</value>
+  </data>
+  <data name="WorkspaceNameIsTooLong" xml:space="preserve">
+    <value>The workspace name that you entered is too long. The name must contain fewer than 50 characters.</value>
+  </data>
+</root>

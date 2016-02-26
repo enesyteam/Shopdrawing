@@ -1,0 +1,7 @@
+E:\Bridge Design\zzOriginal\x\CODE.Framework.Core\obj\Debug\CODE.Framework.Core.csproj.GenerateResource.Cache
+E:\Bridge Design\zzOriginal\x\CODE.Framework.Core\bin\Debug\STRUCTURES.DESIGN.Core.xml
+E:\Bridge Design\zzOriginal\x\CODE.Framework.Core\bin\Debug\STRUCTURES.DESIGN.Core.dll
+E:\Bridge Design\zzOriginal\x\CODE.Framework.Core\bin\Debug\STRUCTURES.DESIGN.Core.pdb
+E:\Bridge Design\zzOriginal\x\CODE.Framework.Core\obj\Debug\STRUCTURES.DESIGN.Core.Properties.Resources.resources
+E:\Bridge Design\zzOriginal\x\CODE.Framework.Core\obj\Debug\STRUCTURES.DESIGN.Core.dll
+E:\Bridge Design\zzOriginal\x\CODE.Framework.Core\obj\Debug\STRUCTURES.DESIGN.Core.pdb

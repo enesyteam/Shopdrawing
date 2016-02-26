@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+ xmlns:vs="clr-namespace:Microsoft.VisualStudio.PlatformUI.Shell.Controls;assembly=Shopdrawing.Framework">
+    <Style x:Key="{x:Type vs:AutoHideGroupControl}" TargetType="{x:Type vs:AutoHideGroupControl}">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type vs:AutoHideGroupControl}">
+                    <StackPanel Margin="3"
+                                 Orientation="{TemplateBinding vs:AutoHideChannelControl.Orientation}"
+                                 IsItemsHost="True"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

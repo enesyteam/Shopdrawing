@@ -1,0 +1,419 @@
+<Grid xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:uidt="clr-namespace:Microsoft.Expression.DesignSurface.UserInterface"
+      xmlns:ui="clr-namespace:Microsoft.Expression.DesignSurface.UserInterface.Triggers"
+      xmlns:fwctl="clr-namespace:Microsoft.Expression.Framework.Controls;assembly=Microsoft.Expression.Framework"
+      xmlns:fwd="clr-namespace:Microsoft.Expression.Framework.Data;assembly=Microsoft.Expression.Framework"
+      xmlns:vm="clr-namespace:Microsoft.Expression.DesignSurface.ViewModel"
+      xmlns:system="clr-namespace:System;assembly=mscorlib"
+      xmlns:automation="clr-namespace:Microsoft.Expression.Framework.Diagnostics;assembly=Microsoft.Expression.Framework"
+      x:Uid="Grid_1" automation:AutomationElement.Id="Designer_TriggersPane">
+  <FrameworkElement.Resources>
+    <ResourceDictionary x:Uid="ResourceDictionary_3">
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Microsoft.Expression.DesignSurface;component/resources/triggerspane/triggerresources.xaml"
+                            x:Uid="ResourceDictionary_2"/>
+      </ResourceDictionary.MergedDictionaries>
+      <BooleanToVisibilityConverter x:Key="BoolToVisibilityConverter" x:Uid="BooleanToVisibilityConverter_1"/>
+      <fwd:BoolToVisibilityHiddenConverter x:Key="BoolToHiddenConverter" x:Uid="fwd:BoolToVisibilityHiddenConverter_1"/>
+      <DataTemplate DataType="{x:Type ui:ConditionModelCollection}" x:Uid="DataTemplate_12">
+        <ItemsControl Grid.Row="1" x:Uid="ListBox_3" FrameworkElement.HorizontalAlignment="Stretch"
+                      Control.HorizontalContentAlignment="Stretch" ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                      ScrollViewer.HorizontalScrollBarVisibility="Disabled" automation:AutomationElement.Id="Conditions"
+                      UIElement.Focusable="false">
+          <ItemsControl.ItemsSource>
+            <Binding/>
+          </ItemsControl.ItemsSource>
+        </ItemsControl>
+      </DataTemplate>
+      <DataTemplate x:Uid="DataTemplate_16" DataType="{x:Type ui:StoryboardOption}">
+        <TextBlock x:Uid="TextBlock_41" Text="{Binding Name}"/>
+      </DataTemplate>
+      <Style x:Key="HasEffectIcon" x:Uid="Style_1" TargetType="{x:Type Control}">
+        <Setter x:Uid="Setter_1" Property="UIElement.Visibility"
+                Value="{Binding HasEffect, Converter={StaticResource BoolToHiddenConverter}}"/>
+        <Setter x:Uid="Setter_2" Property="Control.Template">
+          <Setter.Value>
+            <ControlTemplate x:Uid="ControlTemplate_50" TargetType="{x:Type Control}">
+              <fwctl:Icon x:Uid="fwctl:Icon_1" FrameworkElement.Height="12" FrameworkElement.Width="12"
+                          Image.Source="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Triggers/triggers_hasEffect_12x12.png"/>
+            </ControlTemplate>
+          </Setter.Value>
+        </Setter>
+      </Style>
+      <DataTemplate DataType="{x:Type ui:EventTriggerModel}" x:Uid="HierarchicalDataTemplate_3">
+        <Grid x:Uid="Grid_12">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" x:Uid="ColumnDefinition_1"/>
+            <ColumnDefinition Width="20" x:Uid="ColumnDefinition_2"/>
+          </Grid.ColumnDefinitions>
+          <Control x:Uid="Control_1" FrameworkElement.Style="{StaticResource HasEffectIcon}"
+                   FrameworkElement.Width="16" FrameworkElement.HorizontalAlignment="Left"/>
+          <TextBlock FrameworkElement.HorizontalAlignment="Left" TextTrimming="CharacterEllipsis" x:Uid="TextBlock_8"
+                     FrameworkElement.Margin="20,0,0,0" automation:AutomationElement.Id="TriggerName"
+                     FrameworkElement.ToolTip="{Binding Text, RelativeSource={RelativeSource Self}}">
+            <TextBlock.Text>
+              <MultiBinding x:Uid="MultiBinding_1">
+                <MultiBinding.Converter>
+                  <fwd:StringFormatConverter Format="{0}.{1}" x:Uid="fwd:StringFormatConverter_2"/>
+                </MultiBinding.Converter>
+                <Binding Path="EventSourceDisplayName" x:Uid="Binding_2"/>
+                <Binding Path="EventTrigger.DisplayName" x:Uid="Binding_1"/>
+              </MultiBinding>
+            </TextBlock.Text>
+          </TextBlock>
+        </Grid>
+      </DataTemplate>
+      <DataTemplate DataType="{x:Type ui:PropertyTriggerModel}" x:Uid="HierarchicalDataTemplate_5">
+        <Grid x:Uid="Grid_13">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" x:Uid="ColumnDefinition_3"/>
+            <ColumnDefinition Width="20" x:Uid="ColumnDefinition_4"/>
+          </Grid.ColumnDefinitions>
+          <StackPanel x:Uid="StackPanel_5" Orientation="Horizontal">
+            <ToggleButton x:Uid="ToggleButton_1" FrameworkElement.MinWidth="0" FrameworkElement.MinHeight="0"
+                          FrameworkElement.Width="12" FrameworkElement.Height="12" FrameworkElement.Margin="0,0,4,0"
+                          automation:AutomationElement.Id="Record"
+                          UIElement.Visibility="{Binding IsSelected, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListBoxItem}}, Converter={StaticResource BoolToHiddenConverter}}"
+                          IsChecked="{Binding IsRecording, Mode=TwoWay}">
+              <Control.Template>
+                <ControlTemplate x:Uid="ControlTemplate_49" TargetType="{x:Type ToggleButton}">
+                  <Ellipse FrameworkElement.Name="RecordIcon" x:Uid="RecordIcon"
+                           Shape.Fill="{TemplateBinding Control.Background}" Shape.Stroke="{DynamicResource WhiteBrush}"
+                           Shape.StrokeThickness="1"/>
+                  <ControlTemplate.Triggers>
+                    <Trigger x:Uid="Trigger_40" Property="ToggleButton.IsChecked" Value="True">
+                      <Setter x:Uid="Setter_3" Value="{DynamicResource RedBrush}" Property="Control.Background"/>
+                    </Trigger>
+                    <Trigger x:Uid="Trigger_41" Property="ToggleButton.IsChecked" Value="False">
+                      <Setter x:Uid="Setter_4" Property="Control.Background" Value="Gray"/>
+                    </Trigger>
+                  </ControlTemplate.Triggers>
+                </ControlTemplate>
+              </Control.Template>
+            </ToggleButton>
+            <Control x:Uid="Control_2" FrameworkElement.Style="{StaticResource HasEffectIcon}"
+                     FrameworkElement.Width="16" FrameworkElement.HorizontalAlignment="Left"/>
+            <TextBlock TextTrimming="CharacterEllipsis" x:Uid="TextBlock_10"
+                       FrameworkElement.ToolTip="{Binding Text, RelativeSource={RelativeSource Self}}">
+              <TextBlock.Text>
+                <Binding Path="TriggerNode.PresentationName"/>
+              </TextBlock.Text>
+            </TextBlock>
+          </StackPanel>
+        </Grid>
+      </DataTemplate>
+      <DataTemplate DataType="{x:Type ui:NoneTriggerModel}" x:Uid="HierarchicalDataTemplate_4">
+        <TextBlock Text="Default" x:Uid="TextBlock_9"/>
+      </DataTemplate>
+      <DataTemplate DataType="{x:Type ui:ConditionModel}" x:Uid="DataTemplate_5">
+        <Grid FrameworkElement.Style="{StaticResource TriggerRowStyle}" FrameworkElement.Margin="0,0,0,4"
+              x:Uid="Grid_14">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" x:Uid="ColumnDefinition_5"/>
+            <ColumnDefinition Width="20" x:Uid="ColumnDefinition_6"/>
+          </Grid.ColumnDefinitions>
+          <fwctl:FormattingControl x:Uid="fwctl:FormattingControl_1" FormatString="{0}.{1} = {2}">
+            <Control.Template>
+              <ControlTemplate x:Uid="ControlTemplate_51">
+                <WrapPanel x:Name="PART_Panel" x:Uid="WrapPanel_3"/>
+              </ControlTemplate>
+            </Control.Template>
+            <ui:OnDemandComboBox x:Name="TriggerSource" FrameworkElement.Style="{StaticResource EditSourceStyleWithRollover}"
+                                 x:Uid="ui:OnDemandComboBox_1" automation:AutomationElement.Id="TriggerTargetPicker"
+                                 ItemsList="{Binding AvailableTriggerSources}" Selection="{Binding TriggerSource}"/>
+            <ui:OnDemandComboBox FrameworkElement.Style="{StaticResource TriggerSourceComboBox}" x:Uid="fwctl:GroupableComboBox_1"
+                                 automation:AutomationElement.Id="TriggerPropertyPicker" ItemsList="{Binding AvailableProperties}"
+                                 Selection="{Binding Property}"/>
+            <ui:ValuePopup x:Uid="ui:ValuePopup_1" automation:AutomationElement.Id="TriggerValue">
+              <ui:ValuePopup.Value>
+                <Binding Path="TriggerValue" Mode="TwoWay"/>
+              </ui:ValuePopup.Value>
+            </ui:ValuePopup>
+          </fwctl:FormattingControl>
+          <Button FrameworkElement.Style="{StaticResource DeleteButtonStyle}"
+                  FrameworkElement.ToolTip="Delete this condition" x:Uid="Button_3"
+                  automation:AutomationElement.Id="Delete"/>
+        </Grid>
+      </DataTemplate>
+      <DataTemplate DataType="{x:Type ui:SetterModel}" x:Uid="DataTemplate_6">
+        <Grid FrameworkElement.Style="{StaticResource TriggerRowStyle}" FrameworkElement.Margin="0,4,0,0"
+              x:Uid="Grid_15" automation:AutomationElement.Id="{Binding Property}">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" x:Uid="ColumnDefinition_7"/>
+            <ColumnDefinition Width="20" x:Uid="ColumnDefinition_8"/>
+          </Grid.ColumnDefinitions>
+          <Button x:Uid="Button_10" Control.Template="{StaticResource InvisibleButton}"
+                  FrameworkElement.HorizontalAlignment="Left" FrameworkElement.Cursor="Hand"
+                  ButtonBase.Command="{Binding SelectTargetCommand}">
+            <TextBlock TextTrimming="CharacterEllipsis" x:Uid="TextBlock_36"
+                       automation:AutomationElement.Id="SetterDescription" FrameworkElement.ToolTip="{Binding Tooltip}">
+              <TextBlock.Text>
+                <MultiBinding x:Uid="MultiBinding_2">
+                  <MultiBinding.Converter>
+                    <fwd:StringFormatConverter Format="{0}.{1} = {2}" x:Uid="fwd:StringFormatConverter_3"/>
+                  </MultiBinding.Converter>
+                  <Binding Path="TargetDisplayName" x:Uid="Binding_4"/>
+                  <Binding Path="Property" x:Uid="Binding_3"/>
+                  <Binding Path="UserFriendlyValue" x:Uid="Binding_8"/>
+                </MultiBinding>
+              </TextBlock.Text>
+            </TextBlock>
+          </Button>
+          <Button FrameworkElement.Style="{StaticResource DeleteButtonStyle}"
+                  FrameworkElement.ToolTip="Delete this value" x:Uid="Button_4"/>
+        </Grid>
+      </DataTemplate>
+      <DataTemplate DataType="{x:Type ui:TimelineActionModel}" x:Uid="DataTemplate_7">
+        <Grid FrameworkElement.Style="{StaticResource TriggerRowStyle}" FrameworkElement.Margin="0,4,0,0"
+              x:Uid="Grid_16"
+              UIElement.Visibility="{Binding IsValid, Converter={StaticResource BoolToVisibilityConverter}}">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" x:Uid="ColumnDefinition_9"/>
+            <ColumnDefinition Width="24" x:Uid="ColumnDefinition_10"/>
+          </Grid.ColumnDefinitions>
+          <WrapPanel FrameworkElement.VerticalAlignment="Top" x:Uid="WrapPanel_2">
+            <ui:OnDemandComboBox FrameworkElement.Style="{StaticResource HyperComboBox}" x:Uid="ComboBox_2"
+                                 automation:AutomationElement.Id="Storyboard" ItemsList="{Binding AvailableStoryboards}"
+                                 Selection="{Binding Storyboard}"/>
+            <TextBlock FrameworkElement.Margin="4,0,4,0" Text="." x:Uid="TextBlock_14"/>
+            <ComboBox FrameworkElement.Style="{StaticResource HyperComboBox}"
+                      Selector.IsSynchronizedWithCurrentItem="True" x:Uid="ComboBox_1"
+                      automation:AutomationElement.Id="TimelineAction"
+                      ItemsControl.ItemsSource="{Binding OperationsView}"/>
+          </WrapPanel>
+          <Button FrameworkElement.Style="{StaticResource DeleteButtonStyle}" FrameworkElement.Margin="4,0,0,0"
+                  FrameworkElement.ToolTip="Delete this action" x:Uid="Button_5"
+                  automation:AutomationElement.Id="Delete"/>
+        </Grid>
+      </DataTemplate>
+      <DataTemplate x:Uid="DataTemplate_18" DataType="{x:Type ui:TriggerActionModel}">
+        <Grid FrameworkElement.Style="{StaticResource TriggerRowStyle}" FrameworkElement.Margin="0,4,0,0"
+              x:Uid="Grid_25"
+              UIElement.Visibility="{Binding IsValid, Converter={StaticResource BoolToVisibilityConverter}}">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" x:Uid="ColumnDefinition_34"/>
+            <ColumnDefinition Width="24" x:Uid="ColumnDefinition_35"/>
+          </Grid.ColumnDefinitions>
+          <WrapPanel FrameworkElement.VerticalAlignment="Top" x:Uid="WrapPanel_5">
+            <TextBlock x:Uid="TextBlock_46" FrameworkElement.Margin="4,0,4,0" Text="{Binding Description}"/>
+          </WrapPanel>
+          <Button FrameworkElement.Style="{StaticResource DeleteButtonStyle}" FrameworkElement.Margin="4,0,0,0"
+                  FrameworkElement.ToolTip="Delete this action" x:Uid="Button_13"
+                  automation:AutomationElement.Id="Delete"/>
+        </Grid>
+      </DataTemplate>
+      <DataTemplate DataType="{x:Type vm:SceneNode}" x:Uid="DataTemplate_15">
+        <TextBlock x:Uid="TextBlock_38"
+                   automation:AutomationElement.Id="{Binding Text, RelativeSource={RelativeSource Self}}">
+          <TextBlock.Text>
+            <Binding x:Uid="Binding_7">
+              <Binding.Converter>
+                <ui:SceneNodeToStringConverter x:Uid="ui:SceneNodeToStringConverter_1"/>
+              </Binding.Converter>
+            </Binding>
+          </TextBlock.Text>
+        </TextBlock>
+      </DataTemplate>
+      <DataTemplate DataType="{x:Type uidt:RoutedEventInformation}" x:Uid="DataTemplate_17">
+        <TextBlock x:Uid="TextBlock_42" Text="{Binding DisplayName}"/>
+      </DataTemplate>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <Grid.RowDefinitions>
+    <RowDefinition Height="0.6*" MinHeight="45" x:Uid="RowDefinition_8"/>
+    <RowDefinition Height="Auto" x:Uid="RowDefinition_9"/>
+    <RowDefinition Height="*" MinHeight="16" x:Uid="RowDefinition_10"/>
+  </Grid.RowDefinitions>
+  <Border x:Uid="Border_1" Background="{DynamicResource ListBackgroundBrush}"
+          CornerRadius="{DynamicResource PaletteCornerRounding}">
+    <Grid x:Uid="Grid_17" FrameworkElement.Margin="1">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" x:Uid="RowDefinition_20"/>
+        <RowDefinition Height="*" x:Uid="RowDefinition_21"/>
+      </Grid.RowDefinitions>
+      <UniformGrid Grid.Row="0" x:Uid="Grid_18" Columns="3" Rows="1">
+        <Button Grid.Column="0" automation:AutomationElement.Id="AddEventTrigger" x:Uid="Hyperlink_1"
+                FrameworkElement.HorizontalAlignment="Stretch" FrameworkElement.ToolTip="Add event trigger"
+                ButtonBase.Command="{Binding AddTriggerCommand}">+ Event</Button>
+        <Button x:Uid="Button_11" Grid.Column="1" FrameworkElement.Margin="1,0,0,0"
+                automation:AutomationElement.Id="AddPropertyTrigger" FrameworkElement.HorizontalAlignment="Stretch"
+                FrameworkElement.ToolTip="Add property trigger"
+                ButtonBase.Command="{Binding AddPropertyTriggerCommand}">+ Property</Button>
+        <Button x:Uid="Button_12" Grid.Column="2" FrameworkElement.Margin="1,0,0,0"
+                automation:AutomationElement.Id="DeleteTrigger" FrameworkElement.HorizontalAlignment="Stretch"
+                FrameworkElement.ToolTip="Delete trigger" ButtonBase.Command="{Binding DeleteTriggerCommand}">- Trigger</Button>
+      </UniformGrid>
+      <fwctl:SelectingListBox x:Name="TriggerList" FrameworkElement.Style="{DynamicResource ExpressionListBox}" Grid.Row="1"
+                              x:Uid="ListBox_4" Control.HorizontalContentAlignment="Stretch"
+                              ScrollViewer.HorizontalScrollBarVisibility="Disabled" automation:AutomationElement.Id="TriggerList"
+                              ItemsControl.ItemsSource="{Binding Triggers}"
+                              Selector.SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
+        <ItemsControl.ItemsPanel>
+          <ItemsPanelTemplate x:Uid="ItemsPanelTemplate_1">
+            <StackPanel x:Uid="StackPanel_4"/>
+          </ItemsPanelTemplate>
+        </ItemsControl.ItemsPanel>
+      </fwctl:SelectingListBox>
+    </Grid>
+  </Border>
+  <GridSplitter x:Uid="SplitterSlider" FrameworkElement.Style="{DynamicResource NarrowGridSplitter}"
+                ResizeDirection="Rows" Grid.Row="1" FrameworkElement.HorizontalAlignment="Stretch"/>
+  <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" x:Uid="ScrollViewer_1"
+                Grid.Row="2" Control.Background="{DynamicResource ListBackgroundBrush}"
+                FrameworkElement.Style="{DynamicResource RoundedScrollViewer}">
+    <ContentControl FrameworkElement.Name="DetailedView" x:Uid="DetailedView" FrameworkElement.VerticalAlignment="Top">
+      <ContentControl.Content>
+        <Binding ElementName="TriggerList" Path="SelectedItem"/>
+      </ContentControl.Content>
+      <FrameworkElement.Resources>
+        <DataTemplate DataType="{x:Type ui:EventTriggerModel}" x:Uid="DataTemplate_8">
+          <StackPanel x:Uid="StackPanel_2" automation:AutomationElement.Id="SelectedEventTrigger">
+            <Grid FrameworkElement.Style="{StaticResource TriggerRowStyle}" x:Uid="Grid_19">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" x:Uid="ColumnDefinition_11"/>
+                <ColumnDefinition Width="20" x:Uid="ColumnDefinition_12"/>
+              </Grid.ColumnDefinitions>
+              <Rectangle FrameworkElement.Style="{StaticResource SectionTitleBacking}" x:Uid="Rectangle_1"/>
+              <fwctl:FormattingControl x:Uid="fwctl:FormattingControl_2" FrameworkElement.HorizontalAlignment="Left"
+                                       FormatString="When {0}.{1} is raised" FrameworkElement.Margin="10,0,0,0">
+                <Control.Template>
+                  <ControlTemplate x:Uid="ControlTemplate_52">
+                    <WrapPanel x:Name="PART_Panel" x:Uid="WrapPanel_4"/>
+                  </ControlTemplate>
+                </Control.Template>
+                <ui:OnDemandComboBox FrameworkElement.Style="{StaticResource EditSourceStyle}" x:Uid="ui:OnDemandComboBox_2"
+                                     automation:AutomationElement.Id="EventSourcePicker" ItemsList="{Binding AvailableEventSources}"
+                                     Selection="{Binding EventSource}"/>
+                <ui:OnDemandComboBox FrameworkElement.Style="{StaticResource TriggerSourceComboBox}" x:Uid="fwctl:GroupableComboBox_2"
+                                     automation:AutomationElement.Id="EventPicker" ItemsList="{Binding AvailableTriggerSources}"
+                                     Selection="{Binding EventTrigger}"/>
+              </fwctl:FormattingControl>
+              <Button FrameworkElement.Style="{StaticResource AddButtonStyle}" FrameworkElement.ToolTip="Add new action"
+                      x:Uid="Button_6" automation:AutomationElement.Id="AddAction"
+                      ButtonBase.Command="{Binding CreateActionCommand}"/>
+            </Grid>
+            <ContentControl FrameworkElement.Margin="30,0,0,0" x:Uid="ContentControl_1" Content="{Binding Actions}"/>
+          </StackPanel>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type ui:PropertyTriggerModel}" x:Uid="DataTemplate_9">
+          <StackPanel x:Uid="StackPanel_3" automation:AutomationElement.Id="SelectedPropertyTrigger">
+            <Grid Panel.Background="{DynamicResource RecessedBrush}" x:Uid="Grid_20">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Uid="ColumnDefinition_23" Width="Auto"/>
+                <ColumnDefinition Width="*" x:Uid="ColumnDefinition_13"/>
+                <ColumnDefinition Width="20" x:Uid="ColumnDefinition_14"/>
+              </Grid.ColumnDefinitions>
+              <fwctl:Icon x:Uid="fwctl:Icon_6" Grid.Column="0" FrameworkElement.Margin="5,0,0,0" FrameworkElement.Height="16"
+                          FrameworkElement.Width="16"
+                          Image.Source="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Triggers/triggers_propertiesActive_on_16x16.png"
+                          FrameworkElement.VerticalAlignment="Center"/>
+              <TextBlock x:Uid="TextBlock_43" Grid.Column="1" Text="Properties when active"
+                         FrameworkElement.Style="{StaticResource SectionTitleStyle}"
+                         FrameworkElement.VerticalAlignment="Center"/>
+            </Grid>
+            <ContentControl FrameworkElement.Margin="24,2,0,0" x:Uid="ContentControl_5" Content="{Binding Setters}"/>
+            <Grid Panel.Background="{DynamicResource RecessedBrush}" x:Uid="Grid_21">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Uid="ColumnDefinition_24" Width="Auto"/>
+                <ColumnDefinition Width="*" x:Uid="ColumnDefinition_25"/>
+                <ColumnDefinition Width="20" x:Uid="ColumnDefinition_26"/>
+              </Grid.ColumnDefinitions>
+              <fwctl:Icon x:Uid="fwctl:Icon_2" Grid.Column="0" FrameworkElement.Margin="5,0,0,0" FrameworkElement.Height="16"
+                          FrameworkElement.Width="16"
+                          Image.Source="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Triggers/triggers_activeWhen_on_16x16.png"
+                          FrameworkElement.VerticalAlignment="Center"/>
+              <TextBlock Grid.Column="1" Text="Activated when" FrameworkElement.Style="{StaticResource SectionTitleStyle}"
+                         FrameworkElement.VerticalAlignment="Center" x:Uid="TextBlock_32"/>
+              <Button Grid.Column="2" FrameworkElement.Style="{StaticResource AddButtonStyle}"
+                      FrameworkElement.ToolTip="Add new value" x:Uid="Button_7"
+                      automation:AutomationElement.Id="AddCondition" FrameworkElement.VerticalAlignment="Center"
+                      ButtonBase.Command="{Binding AddConditionCommand}"/>
+            </Grid>
+            <ContentControl FrameworkElement.Margin="24,2,0,0" x:Uid="ContentControl_2" Content="{Binding Conditions}"/>
+            <Grid x:Uid="Grid_22" Panel.Background="{DynamicResource RecessedBrush}">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Uid="ColumnDefinition_27" Width="Auto"/>
+                <ColumnDefinition x:Uid="ColumnDefinition_28" Width="*"/>
+                <ColumnDefinition x:Uid="ColumnDefinition_29" Width="20"/>
+              </Grid.ColumnDefinitions>
+              <fwctl:Icon x:Uid="fwctl:Icon_3" Grid.Column="0" FrameworkElement.Margin="5,0,0,0" FrameworkElement.Height="16"
+                          FrameworkElement.Width="16"
+                          Image.Source="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Triggers/triggers_actionsActivate_on_16x16.png"
+                          FrameworkElement.VerticalAlignment="Center"/>
+              <TextBlock x:Uid="TextBlock_44" Grid.Column="1" Text="Actions when activating"
+                         FrameworkElement.Style="{StaticResource SectionTitleStyle}"
+                         FrameworkElement.VerticalAlignment="Center"/>
+              <Button Grid.Column="2" FrameworkElement.Style="{StaticResource AddButtonStyle}"
+                      FrameworkElement.ToolTip="Add new action" x:Uid="Button_8"
+                      automation:AutomationElement.Id="AddEnterAction" FrameworkElement.VerticalAlignment="Center"
+                      ButtonBase.Command="{Binding CreateEnterActionCommand}"/>
+            </Grid>
+            <ContentControl x:Uid="ContentControl_7" FrameworkElement.Margin="24,2,0,0"
+                            automation:AutomationElement.Id="EnterActions" Content="{Binding EnterActions}"/>
+            <Grid x:Uid="Grid_23" Panel.Background="{DynamicResource RecessedBrush}">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Uid="ColumnDefinition_30" Width="Auto"/>
+                <ColumnDefinition x:Uid="ColumnDefinition_31" Width="*"/>
+                <ColumnDefinition x:Uid="ColumnDefinition_32" Width="20"/>
+              </Grid.ColumnDefinitions>
+              <fwctl:Icon x:Uid="fwctl:Icon_4" Grid.Column="0" FrameworkElement.Margin="5,0,0,0" FrameworkElement.Height="16"
+                          FrameworkElement.Width="16"
+                          Image.Source="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Triggers/triggers_actionsDeactivate_on_16x16.png"
+                          FrameworkElement.VerticalAlignment="Center"/>
+              <TextBlock x:Uid="TextBlock_45" Grid.Column="1" Text="Actions when deactivating"
+                         FrameworkElement.Style="{StaticResource SectionTitleStyle}"
+                         FrameworkElement.VerticalAlignment="Center"/>
+              <Button Grid.Column="2" FrameworkElement.Style="{StaticResource AddButtonStyle}"
+                      FrameworkElement.ToolTip="Add new action" x:Uid="Button_9"
+                      automation:AutomationElement.Id="AddExitAction" FrameworkElement.VerticalAlignment="Center"
+                      ButtonBase.Command="{Binding CreateExitActionCommand}"/>
+            </Grid>
+            <ContentControl FrameworkElement.Margin="24,2,0,0" x:Uid="ContentControl_4"
+                            automation:AutomationElement.Id="ExitActions" Content="{Binding ExitActions}"/>
+          </StackPanel>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type ui:NoneTriggerModel}" x:Uid="DataTemplate_11">
+          <StackPanel x:Uid="Grid_11"
+                      UIElement.Visibility="{Binding CanContainSetters, Converter={StaticResource BoolToVisibilityConverter}}">
+            <Grid x:Uid="Grid_24" Panel.Background="{DynamicResource RecessedBrush}">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Uid="ColumnDefinition_33" Width="Auto"/>
+                <ColumnDefinition Width="*" x:Uid="ColumnDefinition_21"/>
+                <ColumnDefinition Width="20" x:Uid="ColumnDefinition_22"/>
+              </Grid.ColumnDefinitions>
+              <fwctl:Icon x:Uid="fwctl:Icon_5" Grid.Column="0" FrameworkElement.Margin="5,0,0,0" FrameworkElement.Height="16"
+                          FrameworkElement.Width="16"
+                          Image.Source="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Triggers/triggers_propertiesActive_on_16x16.png"
+                          FrameworkElement.VerticalAlignment="Center"/>
+              <TextBlock Grid.Column="1" Text="Property values set when no trigger is active"
+                         FrameworkElement.Style="{StaticResource SectionTitleStyle}" x:Uid="TextBlock_37"
+                         FrameworkElement.VerticalAlignment="Center"/>
+            </Grid>
+            <ContentControl FrameworkElement.Margin="24,2,0,0" x:Uid="ContentControl_6" Content="{Binding Setters}"/>
+          </StackPanel>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type ui:ActionCollection}" x:Uid="DataTemplate_10">
+          <ItemsControl Grid.Row="1" x:Uid="ActionList" FrameworkElement.HorizontalAlignment="Stretch"
+                        ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                        ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                        automation:AutomationElement.Id="TimelineActions" UIElement.Focusable="false">
+            <ItemsControl.ItemsSource>
+              <Binding/>
+            </ItemsControl.ItemsSource>
+          </ItemsControl>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type ui:SetterCollection}" x:Uid="DataTemplate_14">
+          <ItemsControl Grid.Row="1" x:Uid="ItemsControl_1" FrameworkElement.HorizontalAlignment="Stretch"
+                        ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                        ScrollViewer.HorizontalScrollBarVisibility="Disabled" automation:AutomationElement.Id="Setters"
+                        UIElement.Focusable="false">
+            <ItemsControl.ItemsSource>
+              <Binding/>
+            </ItemsControl.ItemsSource>
+          </ItemsControl>
+        </DataTemplate>
+      </FrameworkElement.Resources>
+    </ContentControl>
+  </ScrollViewer>
+</Grid>

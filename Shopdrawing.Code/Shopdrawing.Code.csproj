@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files (x86)\Microsoft Expression\Blend 4\Microsoft.Expression.Code.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{264C1558-58AC-4149-A5B3-0C5BD777C8AF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.Expression.Code</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <ApplicationVersion>4.0.20525.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ActiproSoftware.SyntaxEditor.Net20">
+      <HintPath>lib\ActiproSoftware.SyntaxEditor.Net20.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiproSoftware.SyntaxEditor.Addons.DotNet.Net20">
+      <HintPath>lib\ActiproSoftware.SyntaxEditor.Addons.DotNet.Net20.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Framework, Version=5.0.30709.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Microsoft.Expression.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Platform">
+      <HintPath>lib\Microsoft.VisualStudio.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="Microsoft.Expression.Project">
+      <HintPath>lib\Microsoft.Expression.Project.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="ActiproSoftware.WinUICore.Net20">
+      <HintPath>lib\ActiproSoftware.WinUICore.Net20.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.AssetSystem">
+      <HintPath>lib\Microsoft.VisualStudio.AssetSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="Microsoft.JScript" />
+    <Reference Include="Microsoft.VisualStudio.AssetSystem.Loader">
+      <HintPath>lib\Microsoft.VisualStudio.AssetSystem.Loader.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.AssetSystem.CompositionModel">
+      <HintPath>lib\Microsoft.VisualStudio.AssetSystem.CompositionModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="ActiproSoftware.Shared.Net20">
+      <HintPath>lib\ActiproSoftware.Shared.Net20.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="StringTable.cs" />
+    <Compile Include="ExceptionStringTable.cs" />
+    <Compile Include="Microsoft\Expression\VisualStudioAutomation\NativeMethods.cs" />
+    <Compile Include="Microsoft\Expression\VisualStudioAutomation\OleMessageFilter.cs" />
+    <Compile Include="Microsoft\Expression\VisualStudioAutomation\MessageFilter.cs" />
+    <Compile Include="Microsoft\Expression\VisualStudioAutomation\ISolutionModelProvider.cs" />
+    <Compile Include="Microsoft\Expression\VisualStudioAutomation\SolutionModel.cs" />
+    <Compile Include="Microsoft\Expression\VisualStudioAutomation\VSLaunchFlags.cs" />
+    <Compile Include="Microsoft\Expression\VisualStudioAutomation\VSAutomation.cs" />
+    <Compile Include="Microsoft\Expression\Code\CodeModelService.cs" />
+    <Compile Include="Microsoft\Expression\Code\CodePackage.cs" />
+    <Compile Include="Microsoft\Expression\Code\ICodeProject.cs" />
+    <Compile Include="Microsoft\Expression\Code\CodeProject.cs" />
+    <Compile Include="Microsoft\Expression\Code\DocumentTypes.cs" />
+    <Compile Include="Microsoft\Expression\Code\EditingService.cs" />
+    <Compile Include="Microsoft\Expression\Code\EditVisualStudioCommand.cs" />
+    <Compile Include="Microsoft\Expression\Code\FileTable.cs" />
+    <Compile Include="Microsoft\Expression\Code\TypeNameFormatter.cs" />
+    <Compile Include="Microsoft\Expression\Code\Actipro\ActiproEditor.cs" />
+    <Compile Include="Microsoft\Expression\Code\Actipro\ActiproSyntaxEditorRenderer.cs" />
+    <Compile Include="Microsoft\Expression\Code\Actipro\ICodeProjectService.cs" />
+    <Compile Include="Microsoft\Expression\Code\Actipro\CodeProjectService.cs" />
+    <Compile Include="Microsoft\Expression\Code\Actipro\CommandExecutionRequestedEventArgs.cs" />
+    <Compile Include="Microsoft\Expression\Code\Actipro\ActiproCommand.cs" />
+    <Compile Include="Microsoft\Expression\Code\Actipro\UndoCommand.cs" />
+    <Compile Include="Microsoft\Expression\Code\Actipro\RedoCommand.cs" />
+    <Compile Include="Microsoft\Expression\Code\Actipro\CutCommand.cs" />
+    <Compile Include="Microsoft\Expression\Code\Actipro\CopyCommand.cs" />
+    <Compile Include="Microsoft\Expression\Code\Actipro\PasteCommand.cs" />
+    <Compile Include="Microsoft\Expression\Code\Actipro\DeleteCommand.cs" />
+    <Compile Include="Microsoft\Expression\Code\Actipro\SelectAllCommand.cs" />
+    <Compile Include="Microsoft\Expression\Code\Actipro\SelectNoneCommand.cs" />
+    <Compile Include="Microsoft\Expression\Code\Actipro\GoToLineCommand.cs" />
+    <Compile Include="Microsoft\Expression\Code\Actipro\CommentLinesCommand.cs" />
+    <Compile Include="Microsoft\Expression\Code\Actipro\UncommentLinesCommand.cs" />
+    <Compile Include="Microsoft\Expression\Code\Actipro\CSharpExtendedSyntaxLanguage.cs" />
+    <Compile Include="Microsoft\Expression\Code\Actipro\InsertEventHandlerEventArgs.cs" />
+    <Compile Include="Microsoft\Expression\Code\Classifiers\CharacterScanner.cs" />
+    <Compile Include="Microsoft\Expression\Code\Classifiers\Connector.cs" />
+    <Compile Include="Microsoft\Expression\Code\Classifiers\IClassificationScanner`1.cs" />
+    <Compile Include="Microsoft\Expression\Code\Classifiers\IStateManagement`1.cs" />
+    <Compile Include="Microsoft\Expression\Code\Classifiers\CodeClassifications.cs" />
+    <Compile Include="Microsoft\Expression\Code\Classifiers\XamlAnalyzer.cs" />
+    <Compile Include="Microsoft\Expression\Code\Classifiers\StatefulClassifier`1.cs" />
+    <Compile Include="Microsoft\Expression\Code\Classifiers\XamlNamePositionFlags.cs" />
+    <Compile Include="Microsoft\Expression\Code\Classifiers\XamlNameDecomposition.cs" />
+    <Compile Include="Microsoft\Expression\Code\Classifiers\XamlTokenizerState.cs" />
+    <Compile Include="Microsoft\Expression\Code\Classifiers\XamlTokenizerContext.cs" />
+    <Compile Include="Microsoft\Expression\Code\Classifiers\XamlTokens.cs" />
+    <Compile Include="Microsoft\Expression\Code\Classifiers\XamlTokenizer.cs" />
+    <Compile Include="Microsoft\Expression\Code\Classifiers\LineBasedStateManagement`1.cs" />
+    <Compile Include="Microsoft\Expression\Code\Classifiers\RuleState.cs" />
+    <Compile Include="Microsoft\Expression\Code\Classifiers\IRule.cs" />
+    <Compile Include="Microsoft\Expression\Code\Classifiers\PatternRule.cs" />
+    <Compile Include="Microsoft\Expression\Code\Classifiers\RuleScannerState.cs" />
+    <Compile Include="Microsoft\Expression\Code\Classifiers\RuleBasedScanner.cs" />
+    <Compile Include="Microsoft\Expression\Code\Classifiers\WordRule.cs" />
+    <Compile Include="Microsoft\Expression\Code\Classifiers\ClassificationPosition.cs" />
+    <Compile Include="Microsoft\Expression\Code\Classifiers\TextSnapshotScannerSource.cs" />
+    <Compile Include="Microsoft\Expression\Code\Classifiers\TokenClassification.cs" />
+    <Compile Include="Microsoft\Expression\Code\Classifiers\TokenClassificationStore.cs" />
+    <Compile Include="Microsoft\Expression\Code\CodeAid\CodeAidIntellisensePresenter.cs" />
+    <Compile Include="Microsoft\Expression\Code\CodeAid\Xaml\CompletionType.cs" />
+    <Compile Include="Microsoft\Expression\Code\CodeAid\Xaml\ICodeAidCompletion.cs" />
+    <Compile Include="Microsoft\Expression\Code\CodeAid\Xaml\XamlCompletion.cs" />
+    <Compile Include="Microsoft\Expression\Code\CodeAid\Xaml\CodeAidMemberInfoTypes.cs" />
+    <Compile Include="Microsoft\Expression\Code\CodeAid\Xaml\XamlCompletionProvider.cs" />
+    <Compile Include="Microsoft\Expression\Code\CodeAid\Xaml\CompletionSessionExtensions.cs" />
+    <Compile Include="Microsoft\Expression\Code\CodeAid\Xaml\CodeAidActionType.cs" />
+    <Compile Include="Microsoft\Expression\Code\CodeAid\Xaml\CodeAidAction.cs" />
+    <Compile Include="Microsoft\Expression\Code\CodeAid\Xaml\CodeAidContext.cs" />
+    <Compile Include="Microsoft\Expression\Code\CodeAid\Xaml\XamlCodeAidEngine.cs" />
+    <Compile Include="Microsoft\Expression\Code\UserInterface\EditorSpecificOptionsModel.cs" />
+    <Compile Include="Microsoft\Expression\Code\UserInterface\EditorType.cs" />
+    <Compile Include="Microsoft\Expression\Code\UserInterface\CodeOptionsModel.cs" />
+    <Compile Include="Microsoft\Expression\Code\UserInterface\CodeEditorCorner.cs" />
+    <Compile Include="Microsoft\Expression\Code\UserInterface\PointToPixelConverter.cs" />
+    <Compile Include="Microsoft\Expression\Code\UserInterface\CodeOptionsControl.cs" />
+    <Compile Include="Microsoft\Expression\Code\UserInterface\CodeOptionsPage.cs" />
+    <Compile Include="Microsoft\Expression\Code\UserInterface\FindDialog.cs" />
+    <Compile Include="Microsoft\Expression\Code\UserInterface\FindInFilesDialog.cs" />
+    <Compile Include="Microsoft\Expression\Code\UserInterface\FindInFilesResult.cs" />
+    <Compile Include="Microsoft\Expression\Code\UserInterface\FindReplaceModel.cs" />
+    <Compile Include="Microsoft\Expression\Code\UserInterface\GoToLineDialog.cs" />
+    <Compile Include="Microsoft\Expression\Code\UserInterface\DescriptionToVisibilityConverter.cs" />
+    <Compile Include="Microsoft\Expression\Code\UserInterface\DescriptionToToolTipConverter.cs" />
+    <Compile Include="Microsoft\Expression\Code\UserInterface\SelectableCompletion.cs" />
+    <Compile Include="Microsoft\Expression\Code\UserInterface\IsActiveSelectedValueConverter.cs" />
+    <Compile Include="Microsoft\Expression\Code\UserInterface\IntellisenseMenu.cs" />
+    <Compile Include="Microsoft\Expression\Code\UserInterface\ReplaceDialog.cs" />
+    <Compile Include="Microsoft\Expression\Code\Documents\CodeDocument.cs" />
+    <Compile Include="Microsoft\Expression\Code\Documents\CodeDocumentType.cs" />
+    <Compile Include="Microsoft\Expression\Code\Documents\CodeEditor.cs" />
+    <Compile Include="Microsoft\Expression\Code\Documents\CodeEditorOperations.cs" />
+    <Compile Include="Microsoft\Expression\Code\Documents\CodeView.cs" />
+    <Compile Include="Microsoft\Expression\Code\Documents\CPlusPlusDocumentType.cs" />
+    <Compile Include="Microsoft\Expression\Code\Documents\CSharpDocumentType.cs" />
+    <Compile Include="Microsoft\Expression\Code\Documents\EditableTextBuffer.cs" />
+    <Compile Include="Microsoft\Expression\Code\Documents\FindReplaceCommand.cs" />
+    <Compile Include="Microsoft\Expression\Code\Documents\FindCommand.cs" />
+    <Compile Include="Microsoft\Expression\Code\Documents\FindNextCommand.cs" />
+    <Compile Include="Microsoft\Expression\Code\Documents\ReplaceCommand.cs" />
+    <Compile Include="Microsoft\Expression\Code\Documents\FindInFilesCommand.cs" />
+    <Compile Include="Microsoft\Expression\Code\Documents\FSharpDocumentType.cs" />
+    <Compile Include="Microsoft\Expression\Code\Documents\FSharpScriptDocumentType.cs" />
+    <Compile Include="Microsoft\Expression\Code\Documents\FSharpTemplateDocumentType.cs" />
+    <Compile Include="Microsoft\Expression\Code\Documents\LimitedDocumentType.cs" />
+    <Compile Include="Microsoft\Expression\Code\Documents\FxgDocumentType.cs" />
+    <Compile Include="Microsoft\Expression\Code\Documents\HeaderDocumentType.cs" />
+    <Compile Include="Microsoft\Expression\Code\Documents\HTMLDocumentType.cs" />
+    <Compile Include="Microsoft\Expression\Code\Documents\JavascriptDocumentType.cs" />
+    <Compile Include="Microsoft\Expression\Code\Documents\LimitedDocument.cs" />
+    <Compile Include="Microsoft\Expression\Code\Documents\LimitedDocumentView.cs" />
+    <Compile Include="Microsoft\Expression\Code\Documents\LimitedXamlDocumentType.cs" />
+    <Compile Include="Microsoft\Expression\Code\Documents\VisualBasicDocumentType.cs" />
+    <Compile Include="Microsoft\Expression\Code\Documents\XmlDocumentType.cs" />
+    <Compile Include="Microsoft\Expression\Code\Nautilus\CodeEditorStandardCommands.cs" />
+    <Compile Include="Microsoft\Expression\Code\Nautilus\CodeEditorCommand.cs" />
+    <Compile Include="Microsoft\Expression\Code\Nautilus\UndoCommand.cs" />
+    <Compile Include="Microsoft\Expression\Code\Nautilus\RedoCommand.cs" />
+    <Compile Include="Microsoft\Expression\Code\Nautilus\PasteCommand.cs" />
+    <Compile Include="Microsoft\Expression\Code\Nautilus\CutCommand.cs" />
+    <Compile Include="Microsoft\Expression\Code\Nautilus\CopyCommand.cs" />
+    <Compile Include="Microsoft\Expression\Code\Nautilus\DeleteCommand.cs" />
+    <Compile Include="Microsoft\Expression\Code\Nautilus\SelectAllCommand.cs" />
+    <Compile Include="Microsoft\Expression\Code\Nautilus\SelectNoneCommand.cs" />
+    <Compile Include="Microsoft\Expression\Code\Nautilus\GoToLineCommand.cs" />
+    <Compile Include="MS\Internal\Design\Markup\IScannerSource.cs" />
+    <Compile Include="MS\Internal\Design\Markup\Error.cs" />
+    <Compile Include="MS\Internal\Design\Markup\State.cs" />
+    <Compile Include="MS\Internal\Design\Markup\ScannerErrorHandler.cs" />
+    <Compile Include="MS\Internal\Design\Markup\Scanner.cs" />
+    <Compile Include="MS\Internal\Design\Markup\Token.cs" />
+    <Compile Include="XamlGeneratedNamespace\GeneratedInternalTypeHelper.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shopdrawing.DesignModel\Shopdrawing.DesignModel.csproj">
+      <Project>{3c5aaf72-beab-4693-b062-77ee3d8105fc}</Project>
+      <Name>Shopdrawing.DesignModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shopdrawing.Extensibility\Shopdrawing.Extensibility.csproj">
+      <Project>{430dc17e-7541-4198-b8b2-f4d4529934a8}</Project>
+      <Name>Shopdrawing.Extensibility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shopdrawing.Markup\Shopdrawing.Markup.csproj">
+      <Project>{05453e05-826b-4ceb-b940-03870afd97ad}</Project>
+      <Name>Shopdrawing.Markup</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

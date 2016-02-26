@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Shopdrawing.Structures.Culvert</name>
+    </assembly>
+    <members>
+        <member name="T:Shopdrawing.Structures.Culvert.BoxculvertSectionBase">
+            <summary>
+            Lớp cơ sở mặt cắt ngang cống họpp
+            </summary>
+        </member>
+        <member name="F:Shopdrawing.Structures.Culvert.NumberOfCells.OneCells">
+            <summary>
+            Cống hộp 1 ngăn
+            </summary>
+        </member>
+        <member name="P:Shopdrawing.Structures.Culvert.IBoxCulvertSection.NumberOfCells">
+            <summary>
+            Số cell trên mặt cắt ngang (Với cống hộp)
+            </summary>
+        </member>
+        <member name="P:Shopdrawing.Structures.Culvert.IBoxCulvertSection.B">
+            <summary>
+            Bề rộng mỗi cell
+            </summary>
+        </member>
+        <member name="P:Shopdrawing.Structures.Culvert.IBoxCulvertSection.H">
+            <summary>
+            Chiều cao mỗi cell
+            </summary>
+        </member>
+        <member name="P:Shopdrawing.Structures.Culvert.IBoxCulvertSection.TopThickness">
+            <summary>
+            Chiều dày bản trên
+            </summary>
+        </member>
+        <member name="P:Shopdrawing.Structures.Culvert.IBoxCulvertSection.BottomThickness">
+            <summary>
+            Chiều dày bản dưới
+            </summary>
+        </member>
+        <member name="P:Shopdrawing.Structures.Culvert.IBoxCulvertSection.ExternalWallThickness">
+            <summary>
+            Bề dày thành ngoài
+            </summary>
+        </member>
+        <member name="P:Shopdrawing.Structures.Culvert.IBoxCulvertSection.InternalWallThickness">
+            <summary>
+            Bề dày thành trong
+            </summary>
+        </member>
+        <member name="P:Shopdrawing.Structures.Culvert.IBoxCulvertSection.HasApproachSlabOnTheLeft">
+            <summary>
+            Có bản quá độ phía trái
+            </summary>
+        </member>
+        <member name="P:Shopdrawing.Structures.Culvert.IBoxCulvertSection.HasApproachSlabOnTheRight">
+            <summary>
+            Có bản quá độ phía phải
+            </summary>
+        </member>
+        <member name="T:Shopdrawing.Structures.Culvert.BoxCulvertSection">
+            <summary>
+            Mặt cắt ngang cống hộp
+            </summary>
+        </member>
+        <member name="F:Shopdrawing.Structures.Culvert.BoxCulvertSection.CurrentUnit">
+            <summary>
+            Đơn vị độ dài hiện tại
+            </summary>
+        </member>
+        <member name="M:Shopdrawing.Structures.Culvert.BoxCulvertSection.GetDefaultSettingsSection">
+            <summary>
+            Test
+            </summary>
+        </member>
+        <member name="M:Shopdrawing.Structures.Culvert.BoxCulvertSection.CreateBound">
+            <summary>
+            Tạo bound
+            </summary>
+        </member>
+        <member name="M:Shopdrawing.Structures.Culvert.BoxCulvertSection.CreateCells">
+            <summary>
+            Tạo cells
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Shopdrawing.Structures.Culvert.BoxCulvertSection.GetBoundDependencies">
+            <summary>
+            Tính toán các điểm Dependencies của Bound
+            </summary>
+        </member>
+        <member name="P:Shopdrawing.Structures.Culvert.BoxCulvertSection.ParentCulver">
+            <summary>
+            Parent Culvert of this Section
+            </summary>
+        </member>
+        <member name="P:Shopdrawing.Structures.Culvert.BoxCulvertSection.TotalHeight">
+            <summary>
+            Tổng chiều cao mặt cắt ngang
+            </summary>
+        </member>
+        <member name="P:Shopdrawing.Structures.Culvert.BoxCulvertSection.TotalWidth">
+            <summary>
+            Tổng bề rộng mặt cắt ngang
+            </summary>
+        </member>
+        <member name="P:Shopdrawing.Structures.Culvert.BoxCulvertSection.NumberOfCells">
+            <summary>
+            Số Cells trên mặt cắt ngang cống
+            </summary>
+        </member>
+        <member name="P:Shopdrawing.Structures.Culvert.BoxCulvertSection.B">
+            <summary>
+            Bề rộng mỗi Cell
+            </summary>
+        </member>
+        <member name="P:Shopdrawing.Structures.Culvert.BoxCulvertSection.H">
+            <summary>
+            Chiều cao mỗi Cell
+            </summary>
+        </member>
+        <member name="P:Shopdrawing.Structures.Culvert.BoxCulvertSection.TopThickness">
+            <summary>
+            Chiều dày bản trên
+            </summary>
+        </member>
+        <member name="P:Shopdrawing.Structures.Culvert.BoxCulvertSection.BottomThickness">
+            <summary>
+            Chiều dày bản dưới
+            </summary>
+        </member>
+        <member name="P:Shopdrawing.Structures.Culvert.BoxCulvertSection.InternalWallThickness">
+            <summary>
+            Chiều dày thành trong
+            </summary>
+        </member>
+        <member name="P:Shopdrawing.Structures.Culvert.BoxCulvertSection.ExternalWallThickness">
+            <summary>
+            Chiều dày thành ngoài
+            </summary>
+        </member>
+        <member name="P:Shopdrawing.Structures.Culvert.BoxCulvertSection.HasApproachSlabOnTheLeft">
+            <summary>
+            Có bản quá độ phía bên trái
+            </summary>
+        </member>
+        <member name="P:Shopdrawing.Structures.Culvert.BoxCulvertSection.HasApproachSlabOnTheRight">
+            <summary>
+            Có bản quá độ phía bên trái
+            </summary>
+        </member>
+        <member name="P:Shopdrawing.Structures.Culvert.BoxCulvertSection.d1">
+            <summary>
+            Dim for B
+            </summary>
+        </member>
+        <member name="F:Shopdrawing.Structures.Culvert.CulvertSectionType.Circle">
+            <summary>
+            Cống tròn
+            </summary>
+        </member>
+        <member name="F:Shopdrawing.Structures.Culvert.CulvertSectionType.BoxCulvert">
+            <summary>
+            Cống hộp
+            </summary>
+        </member>
+        <member name="F:Shopdrawing.Structures.Culvert.CulvertSectionType.Others">
+            <summary>
+            Loại khác
+            </summary>
+        </member>
+    </members>
+</doc>

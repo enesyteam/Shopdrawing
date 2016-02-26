@@ -1,0 +1,17 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:System="clr-namespace:System;assembly=System"
+                    xmlns:Mscorlib="clr-namespace:System;assembly=Mscorlib"
+                    x:Uid="ResourceDictionary_1">
+  <Mscorlib:String x:Key="AboutDialogTitle" x:Uid="Mscorlib:String_1">
+    About Microsoft® Expression Blend® 4
+  </Mscorlib:String>
+  <Mscorlib:String x:Key="ApplicationVersionTitle" x:Uid="Mscorlib:String_2">
+    Microsoft® Expression Blend® 4
+Version {0}
+  </Mscorlib:String>
+  <BitmapImage x:Key="AboutDialogBackgroundImage" x:Uid="BitmapImage_1" UriSource="AboutDialog.png"/>
+  <Mscorlib:String x:Key="AboutDialogDisclaimerText" x:Uid="Mscorlib:String_3">
+    Preview Version - Not For Distribution
+  </Mscorlib:String>
+</ResourceDictionary>

@@ -1,0 +1,218 @@
+<Border xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:designer="clr-namespace:Microsoft.Expression.DesignSurface.UserInterface.DataPane"
+        xmlns:Framework="clr-namespace:Microsoft.Expression.Framework.Controls;assembly=Microsoft.Expression.Framework"
+        xmlns:Databinding="clr-namespace:Microsoft.Expression.Framework.Data;assembly=Microsoft.Expression.Framework"
+        xmlns:automation="clr-namespace:Microsoft.Expression.Framework.Diagnostics;assembly=Microsoft.Expression.Framework"
+        xmlns:fwve="clr-namespace:Microsoft.Expression.Framework.ValueEditors;assembly=Microsoft.Expression.Framework"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        FrameworkElement.Name="EditDataStorePropertiesDialog" x:Uid="EditDataStorePropertiesDialog"
+        FrameworkElement.Style="{DynamicResource DialogRootContainer}">
+  <Grid x:Uid="Grid_1">
+    <Grid.RowDefinitions>
+      <RowDefinition x:Uid="RowDefinition_1" Height="*"/>
+      <RowDefinition x:Uid="RowDefinition_2" Height="Auto"/>
+    </Grid.RowDefinitions>
+    <FrameworkElement.Resources>
+      <Databinding:BoolToVisibilityCollapsedConverter x:Key="BoolToVisibilityCollapsedConverter" x:Uid="Databinding:BoolToVisibilityCollapsedConverter_1"/>
+      <Databinding:BoolToVisibilityCollapsedConverter x:Key="InverseBoolToVisibilityCollapsedConverter"
+                                                      x:Uid="framework:BoolToVisibilityCollapsedConverter_2" InvertBoolean="true"/>
+      <SolidColorBrush x:Key="DataGridBorderBrush" x:Uid="SolidColorBrush_1" Color="#FF333333"/>
+      <Thickness x:Key="DefaultRightTopMargin" x:Uid="Thickness_1" Left="0" Top="{StaticResource DefaultSpacing}"
+                 Right="{StaticResource DefaultSpacing}" Bottom="0"/>
+      <Style x:Uid="Style_164" TargetType="{x:Type TextBox}">
+        <Style.BasedOn>
+          <x:NullExtension/>
+        </Style.BasedOn>
+        <Setter x:Uid="Setter_1535" Property="Control.Foreground" Value="Black"/>
+        <Setter x:Uid="Setter_1536" Property="Control.BorderBrush">
+          <Setter.Value>
+            <x:NullExtension/>
+          </Setter.Value>
+        </Setter>
+        <Setter x:Uid="Setter_1537" Property="Control.Padding" Value="0,2,0,0"/>
+      </Style>
+      <ObjectDataProvider x:Key="DataStoreTypesEnum" x:Uid="ObjectDataProvider_1" MethodName="GetValues"
+                          ObjectType="{x:Type sys:Enum}">
+        <ObjectDataProvider.MethodParameters>
+          <x:TypeExtension x:Uid="x:Type_1" Type="{x:Type designer:DataStoreType}"/>
+        </ObjectDataProvider.MethodParameters>
+      </ObjectDataProvider>
+      <DataTemplate x:Key="DataGridValueCellTemplate" x:Uid="DataTemplate_1">
+        <StackPanel FrameworkElement.Height="Auto" x:Uid="StackPanel_1" Orientation="Vertical">
+          <TextBlock x:Uid="TextBlock_1" Padding="5,5" Text="{Binding PropertyValue, Mode=TwoWay}">
+            <UIElement.Visibility>
+              <Binding Path="IsPropertyTypeBoolean" Converter="{StaticResource InverseBoolToVisibilityCollapsedConverter}"/>
+            </UIElement.Visibility>
+          </TextBlock>
+          <Border x:Uid="Border_68" FrameworkElement.VerticalAlignment="Center" FrameworkElement.Height="37">
+            <CheckBox x:Uid="CheckBox_1" FrameworkElement.VerticalAlignment="Center" Control.Padding="5,5"
+                      FrameworkElement.HorizontalAlignment="Center">
+              <FrameworkElement.DataContext>
+                <Binding/>
+              </FrameworkElement.DataContext>
+              <ToggleButton.IsChecked>
+                <Binding Path="PropertyValueAsBoolean" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"/>
+              </ToggleButton.IsChecked>
+              <UIElement.Visibility>
+                <Binding Path="IsPropertyTypeBoolean" Converter="{StaticResource BoolToVisibilityCollapsedConverter}"/>
+              </UIElement.Visibility>
+            </CheckBox>
+          </Border>
+        </StackPanel>
+      </DataTemplate>
+      <DataTemplate x:Key="StringValueEditDataTemplate" x:Uid="DataTemplate_2">
+        <TextBox x:Uid="TextBox_1" Control.BorderThickness="0" Text="{Binding PropertyValue}"/>
+      </DataTemplate>
+      <DataTemplate x:Key="BoolValueEditDataTemplate" x:Uid="DataTemplate_3">
+        <CheckBox x:Uid="CheckBox_2" FrameworkElement.VerticalAlignment="Center" Control.Padding="5,5"
+                  FrameworkElement.HorizontalAlignment="Center">
+          <FrameworkElement.DataContext>
+            <Binding/>
+          </FrameworkElement.DataContext>
+          <ToggleButton.IsChecked>
+            <Binding Path="PropertyValueAsBoolean" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"/>
+          </ToggleButton.IsChecked>
+          <UIElement.Visibility>
+            <Binding Path="IsPropertyTypeBoolean" Converter="{StaticResource BoolToVisibilityCollapsedConverter}"/>
+          </UIElement.Visibility>
+        </CheckBox>
+      </DataTemplate>
+      <designer:ConfigureDataStoreValueTemplateSelector x:Key="DataGridValueCellEditingTemplateSelector" x:Uid="designer:DataGridValueTemplateSelector_1"
+                                                        TextEditingTemplate="{StaticResource StringValueEditDataTemplate}"
+                                                        BoolEditingTemplate="{StaticResource BoolValueEditDataTemplate}"/>
+      <designer:ConfigureDataStoreValueTemplateSelector x:Key="DataGridValueCellTemplateSelector" x:Uid="designer:DataGridValueTemplateSelector_2"
+                                                        TextEditingTemplate="{StaticResource DataGridValueCellTemplate}"
+                                                        BoolEditingTemplate="{StaticResource DataGridValueCellTemplate}"/>
+    </FrameworkElement.Resources>
+    <Border x:Uid="Border_67" Background="{DynamicResource PaletteBrush}" Grid.Row="0">
+      <DataGrid x:Name="DataStoreGrid" x:Uid="DataStoreGrid" AutoGenerateColumns="false"
+                RowBackground="{StaticResource RecessedBrush}"
+                AlternatingRowBackground="{StaticResource RecessedBrush}"
+                VerticalGridLinesBrush="{StaticResource DataGridBorderBrush}"
+                HorizontalGridLinesBrush="{StaticResource DataGridBorderBrush}"
+                Control.BorderBrush="{StaticResource DataGridBorderBrush}"
+                Control.Background="{StaticResource RecessedBrush}" CanUserSortColumns="false"
+                CanUserResizeRows="false" CanUserReorderColumns="false" CanUserDeleteRows="false"
+                CanUserAddRows="false" HorizontalScrollBarVisibility="Auto" HeadersVisibility="Column"
+                SelectionUnit="Cell" EnableRowVirtualization="false"
+                automation:AutomationElement.Id="DataStoreGrid">
+        <ItemsControl.ItemsSource>
+          <Binding Path="Properties"/>
+        </ItemsControl.ItemsSource>
+        <DataGrid.Columns>
+          <DataGridTextColumn x:Uid="DataGridTextColumn_1" DataGridColumn.Header="Property" DataGridColumn.MinWidth="200"
+                              automation:AutomationElement.Id="PropertyNameColumn"
+                              DataGridBoundColumn.Binding="{Binding PropertyName}">
+            <DataGridBoundColumn.ElementStyle>
+              <Style x:Uid="Style_166" TargetType="{x:Type TextBlock}">
+                <Setter x:Uid="Setter_1544" Property="TextBlock.Padding" Value="5,5"/>
+              </Style>
+            </DataGridBoundColumn.ElementStyle>
+            <DataGridBoundColumn.EditingElementStyle>
+              <Style x:Uid="Style_165" TargetType="{x:Type TextBox}">
+                <Setter x:Uid="Setter_1524" Property="Control.Foreground" Value="Black"/>
+                <Setter x:Uid="Setter_1545" Property="Control.Padding" Value="5,5"/>
+              </Style>
+            </DataGridBoundColumn.EditingElementStyle>
+          </DataGridTextColumn>
+          <DataGridTemplateColumn x:Uid="DataGridTemplateColumn_1" DataGridColumn.Header="Value" DataGridColumn.MinWidth="200"
+                                  automation:AutomationElement.Id="PropertyValueColumn"
+                                  CellEditingTemplateSelector="{StaticResource DataGridValueCellEditingTemplateSelector}"
+                                  CellTemplateSelector="{StaticResource DataGridValueCellTemplateSelector}"/>
+          <DataGridTemplateColumn x:Uid="DataGridTemplateColumn_2" DataGridColumn.Header="Type" DataGridColumn.MinWidth="200"
+                                  automation:AutomationElement.Id="PropertyTypeColumn">
+            <DataGridTemplateColumn.CellTemplate>
+              <DataTemplate x:Uid="DataTemplate_4">
+                <TextBlock x:Uid="TextBlock_2" Padding="5,5">
+                  <TextBlock.Text>
+                    <Binding Path="PropertyType" Mode="OneWay"/>
+                  </TextBlock.Text>
+                </TextBlock>
+              </DataTemplate>
+            </DataGridTemplateColumn.CellTemplate>
+            <DataGridTemplateColumn.CellEditingTemplate>
+              <DataTemplate x:Uid="DataTemplate_5">
+                <Border x:Uid="Border_69" Background="{DynamicResource BackgroundBrush}">
+                  <ComboBox x:Uid="ComboBox_1" IsEditable="false" Control.Padding="5,5"
+                            Selector.SelectedItem="{Binding PropertyType, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                    <ItemsControl.ItemsSource>
+                      <Binding Source="{StaticResource DataStoreTypesEnum}"/>
+                    </ItemsControl.ItemsSource>
+                  </ComboBox>
+                </Border>
+              </DataTemplate>
+            </DataGridTemplateColumn.CellEditingTemplate>
+          </DataGridTemplateColumn>
+        </DataGrid.Columns>
+        <DataGrid.RowStyle>
+          <Style x:Uid="Style_160" TargetType="{x:Type DataGridRow}">
+            <Setter x:Uid="Setter_1543" Property="Control.Foreground" Value="{StaticResource Text1Brush}"/>
+            <Setter x:Uid="Setter_1525" Property="FrameworkElement.Height" Value="40"/>
+          </Style>
+        </DataGrid.RowStyle>
+        <DataGrid.ColumnHeaderStyle>
+          <Style x:Uid="Style_162" TargetType="{x:Type DataGridColumnHeader}">
+            <Setter x:Uid="Setter_1527" Property="Control.Background" Value="{StaticResource PaletteBrush}"/>
+            <Setter x:Uid="Setter_1528" Property="Control.HorizontalContentAlignment" Value="Stretch"/>
+            <Setter x:Uid="Setter_1529" Property="FrameworkElement.Height" Value="22"/>
+            <Setter x:Uid="Setter_1530" Property="Control.BorderThickness" Value="0,0,1,0"/>
+            <Setter x:Uid="Setter_1546" Property="FrameworkElement.Margin" Value="5,0,0,0"/>
+            <Setter x:Uid="Setter_1531" Property="Control.BorderBrush" Value="{StaticResource DataGridBorderBrush}"/>
+          </Style>
+        </DataGrid.ColumnHeaderStyle>
+        <FrameworkElement.Resources>
+          <Style x:Uid="Style_159" TargetType="{x:Type DataGridColumnHeadersPresenter}">
+            <Style.BasedOn>
+              <x:NullExtension/>
+            </Style.BasedOn>
+            <Setter x:Uid="Setter_1521" Property="Control.Template">
+              <Setter.Value>
+                <ControlTemplate x:Uid="ControlTemplate_97" TargetType="{x:Type DataGridColumnHeadersPresenter}">
+                  <Grid x:Uid="Grid_2" FrameworkElement.Height="22">
+                    <DataGridColumnHeader x:Uid="dg:DataGridColumnHeader_1" UIElement.IsHitTestVisible="false"
+                                          Control.Background="{StaticResource PaletteBrush}"/>
+                    <ItemsPresenter x:Uid="ItemsPresenter_1"/>
+                  </Grid>
+                </ControlTemplate>
+              </Setter.Value>
+            </Setter>
+          </Style>
+          <Style x:Uid="Style_163" TargetType="{x:Type DataGridCell}"
+                 BasedOn="{StaticResource {x:Type DataGridCell}}">
+            <Setter x:Uid="Setter_1526" Property="Control.BorderBrush">
+              <Setter.Value>
+                <x:NullExtension/>
+              </Setter.Value>
+            </Setter>
+            <Setter x:Uid="Setter_1540" Property="Control.Background" Value="Transparent"/>
+            <Setter x:Uid="Setter_1541" Property="Control.BorderBrush" Value="Transparent"/>
+            <Setter x:Uid="Setter_1542" Property="Control.BorderThickness" Value="1"/>
+            <Style.Triggers>
+              <Trigger x:Uid="Trigger_1106" Property="DataGridCell.IsSelected" Value="true">
+                <Setter x:Uid="Setter_1532" Property="Control.Background" Value="{DynamicResource ListSelectedBrush}"/>
+                <Setter x:Uid="Setter_1533" Property="Control.Foreground" Value="{DynamicResource ListSelectedTextBrush}"/>
+              </Trigger>
+              <Trigger x:Uid="Trigger_1107" Property="UIElement.IsKeyboardFocusWithin" Value="true">
+                <Setter x:Uid="Setter_1534" Property="Control.BorderBrush" Value="#00FFFFFF"/>
+              </Trigger>
+              <Trigger x:Uid="Trigger_1108" Property="DataGridCell.IsEditing" Value="true">
+                <Setter x:Uid="Setter_1538" Property="Control.BorderBrush" Value="#00FFFFFF"/>
+                <Setter x:Uid="Setter_1539" Property="Control.Foreground" Value="Black"/>
+              </Trigger>
+            </Style.Triggers>
+          </Style>
+        </FrameworkElement.Resources>
+      </DataGrid>
+    </Border>
+    <UniformGrid x:Uid="DialogButtonGrid" Grid.Row="1" FrameworkElement.HorizontalAlignment="Right"
+                 FrameworkElement.Margin="{DynamicResource ExtraLargeTopMargin}">
+      <Button FrameworkElement.Name="AcceptButton" x:Uid="AcceptButton"
+              FrameworkElement.Style="{DynamicResource DialogButton}"
+              UIElement.IsEnabled="{Binding InputIsValid, Mode=OneWay}">OK</Button>
+      <Button FrameworkElement.Name="CancelButton" x:Uid="CancelButton"
+              FrameworkElement.Style="{DynamicResource DialogButton}" IsCancel="true"
+              FrameworkElement.Margin="{DynamicResource DefaultLeftMargin}">Cancel</Button>
+    </UniformGrid>
+  </Grid>
+</Border>

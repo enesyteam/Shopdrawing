@@ -1,0 +1,221 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <CornerRadius x:Key="ScrollViewerCornerRadius" x:Uid="CornerRadius_8">0,0,4,0</CornerRadius>
+    <Style x:Key="ExpressionScrollViewer" x:Uid="Style_193" TargetType="{x:Type ScrollViewer}">
+        <Style.Triggers>
+            <Trigger x:Uid="Trigger_1143" Property="UIElement.IsEnabled" Value="false">
+                <Setter x:Uid="Setter_1762" Property="Control.Foreground" Value="{DynamicResource DialogDisabledTextBrush}"/>
+            </Trigger>
+        </Style.Triggers>
+        <Setter x:Uid="Setter_1763" Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate x:Uid="ControlTemplate_113" TargetType="{x:Type ScrollViewer}">
+                    <Grid x:Name="Grid" x:Uid="Grid">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition x:Uid="ColumnDefinition_77" Width="*"/>
+                            <ColumnDefinition x:Uid="ColumnDefinition_78" Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition x:Uid="RowDefinition_47" Height="*"/>
+                            <RowDefinition x:Uid="RowDefinition_48" Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Border x:Name="ScrollViewerCorner" x:Uid="Border_7"
+                    Background="{DynamicResource ScrollbarBackgroundBrush}"
+                    CornerRadius="{DynamicResource ScrollViewerCornerRadius}"
+                    BorderBrush="{DynamicResource ScrollViewerCornerBorderBrush}" BorderThickness="1,1,0,0"
+                    Grid.Column="1" Grid.Row="1"/>
+                        <Border x:Uid="Border_80" Background="{TemplateBinding Control.Background}">
+                            <ScrollContentPresenter x:Name="PART_ScrollContentPresenter" x:Uid="PART_ScrollContentPresenter"
+                                      FrameworkElement.Margin="{TemplateBinding Control.Padding}" Grid.Column="0" Grid.Row="0"
+                                      ContentPresenter.Content="{TemplateBinding ContentControl.Content}"
+                                      ContentPresenter.ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}"
+                                      CanContentScroll="{TemplateBinding ScrollViewer.CanContentScroll}" CanHorizontallyScroll="false"
+                                      CanVerticallyScroll="false"/>
+                        </Border>
+                        <ScrollBar x:Name="PART_VerticalScrollBar" x:Uid="PART_VerticalScrollBar"
+                       UIElement.Visibility="{TemplateBinding ScrollViewer.ComputedVerticalScrollBarVisibility}"
+                       FrameworkElement.Cursor="Arrow" Grid.Column="1" Grid.Row="0"
+                       ViewportSize="{TemplateBinding ScrollViewer.ViewportHeight}"
+                       RangeBase.Maximum="{TemplateBinding ScrollViewer.ScrollableHeight}" RangeBase.Minimum="0">
+                            <RangeBase.Value>
+                                <Binding Path="VerticalOffset" Mode="OneWay" RelativeSource="{RelativeSource TemplatedParent}"/>
+                            </RangeBase.Value>
+                        </ScrollBar>
+                        <ScrollBar x:Name="PART_HorizontalScrollBar" x:Uid="PART_HorizontalScrollBar"
+                       UIElement.Visibility="{TemplateBinding ScrollViewer.ComputedHorizontalScrollBarVisibility}"
+                       FrameworkElement.Cursor="Arrow" Grid.Column="0" Grid.Row="1" Orientation="Horizontal"
+                       ViewportSize="{TemplateBinding ScrollViewer.ViewportWidth}"
+                       RangeBase.Maximum="{TemplateBinding ScrollViewer.ScrollableWidth}" RangeBase.Minimum="0">
+                            <RangeBase.Value>
+                                <Binding Path="HorizontalOffset" Mode="OneWay" RelativeSource="{RelativeSource TemplatedParent}"/>
+                            </RangeBase.Value>
+                        </ScrollBar>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger x:Uid="Trigger_1168" SourceName="PART_VerticalScrollBar" Property="UIElement.Visibility"
+                     Value="Collapsed">
+                            <Setter x:Uid="Setter_1945" TargetName="ScrollViewerCorner" Property="UIElement.Visibility"
+                      Value="Collapsed"/>
+                        </Trigger>
+                        <Trigger x:Uid="Trigger_1169" SourceName="PART_HorizontalScrollBar" Property="UIElement.Visibility"
+                     Value="Collapsed">
+                            <Setter x:Uid="Setter_1946" TargetName="ScrollViewerCorner" Property="UIElement.Visibility"
+                      Value="Collapsed"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="{x:Static GridView.GridViewScrollViewerStyleKey}" x:Uid="Style_217"
+         TargetType="{x:Type ScrollViewer}" BasedOn="{StaticResource ExpressionScrollViewer}">
+        <Setter x:Uid="Setter_2002" Property="UIElement.Focusable" Value="false"/>
+        <Setter x:Uid="Setter_2003" Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate x:Uid="ControlTemplate_130" TargetType="{x:Type ScrollViewer}">
+                    <Grid x:Uid="Grid_82" Panel.Background="{TemplateBinding Control.Background}"
+                UIElement.SnapsToDevicePixels="true">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition x:Uid="ColumnDefinition_85" Width="*"/>
+                            <ColumnDefinition x:Uid="ColumnDefinition_86" Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition x:Uid="RowDefinition_53" Height="*"/>
+                            <RowDefinition x:Uid="RowDefinition_54" Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Border x:Name="ScrollViewerCorner" x:Uid="Border_94"
+                    Background="{DynamicResource ScrollbarBackgroundBrush}"
+                    CornerRadius="{DynamicResource ScrollViewerCornerRadius}"
+                    BorderBrush="{DynamicResource ScrollViewerCornerBorderBrush}" BorderThickness="1,1,0,0"
+                    Grid.Column="1" Grid.Row="1"/>
+                        <DockPanel x:Uid="DockPanel_7" FrameworkElement.Margin="{TemplateBinding Control.Padding}">
+                            <ScrollViewer x:Uid="ScrollViewer_12" DockPanel.Dock="Top" HorizontalScrollBarVisibility="Hidden"
+                            VerticalScrollBarVisibility="Hidden" UIElement.Focusable="false">
+                                <GridViewHeaderRowPresenter x:Uid="GridViewHeaderRowPresenter_1" FrameworkElement.Margin="2,0,2,0"
+                                            UIElement.SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}">
+                                    <GridViewRowPresenterBase.Columns>
+                                        <Binding Path="TemplatedParent.View.Columns" RelativeSource="{RelativeSource TemplatedParent}"/>
+                                    </GridViewRowPresenterBase.Columns>
+                                    <GridViewHeaderRowPresenter.ColumnHeaderContainerStyle>
+                                        <Binding Path="TemplatedParent.View.ColumnHeaderContainerStyle"
+                             RelativeSource="{RelativeSource TemplatedParent}"/>
+                                    </GridViewHeaderRowPresenter.ColumnHeaderContainerStyle>
+                                    <GridViewHeaderRowPresenter.ColumnHeaderTemplate>
+                                        <Binding Path="TemplatedParent.View.ColumnHeaderTemplate" RelativeSource="{RelativeSource TemplatedParent}"/>
+                                    </GridViewHeaderRowPresenter.ColumnHeaderTemplate>
+                                    <GridViewHeaderRowPresenter.ColumnHeaderTemplateSelector>
+                                        <Binding Path="TemplatedParent.View.ColumnHeaderTemplateSelector"
+                             RelativeSource="{RelativeSource TemplatedParent}"/>
+                                    </GridViewHeaderRowPresenter.ColumnHeaderTemplateSelector>
+                                    <GridViewHeaderRowPresenter.AllowsColumnReorder>
+                                        <Binding Path="TemplatedParent.View.AllowsColumnReorder" RelativeSource="{RelativeSource TemplatedParent}"/>
+                                    </GridViewHeaderRowPresenter.AllowsColumnReorder>
+                                    <GridViewHeaderRowPresenter.ColumnHeaderContextMenu>
+                                        <Binding Path="TemplatedParent.View.ColumnHeaderContextMenu"
+                             RelativeSource="{RelativeSource TemplatedParent}"/>
+                                    </GridViewHeaderRowPresenter.ColumnHeaderContextMenu>
+                                    <GridViewHeaderRowPresenter.ColumnHeaderToolTip>
+                                        <Binding Path="TemplatedParent.View.ColumnHeaderToolTip" RelativeSource="{RelativeSource TemplatedParent}"/>
+                                    </GridViewHeaderRowPresenter.ColumnHeaderToolTip>
+                                </GridViewHeaderRowPresenter>
+                            </ScrollViewer>
+                            <ScrollContentPresenter FrameworkElement.Name="PART_ScrollContentPresenter" x:Uid="ScrollContentPresenter_3"
+                                      KeyboardNavigation.DirectionalNavigation="Local"
+                                      ContentPresenter.Content="{TemplateBinding ContentControl.Content}"
+                                      ContentPresenter.ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}"
+                                      CanContentScroll="{TemplateBinding ScrollViewer.CanContentScroll}"
+                                      UIElement.SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"/>
+                        </DockPanel>
+                        <ScrollBar FrameworkElement.Name="PART_HorizontalScrollBar" x:Uid="ScrollBar_3" Orientation="Horizontal"
+                       Grid.Row="1" RangeBase.Minimum="0.0"
+                       RangeBase.Maximum="{TemplateBinding ScrollViewer.ScrollableWidth}"
+                       ViewportSize="{TemplateBinding ScrollViewer.ViewportWidth}"
+                       UIElement.Visibility="{TemplateBinding ScrollViewer.ComputedHorizontalScrollBarVisibility}"
+                       FrameworkElement.Cursor="Arrow">
+                            <RangeBase.Value>
+                                <Binding Path="HorizontalOffset" RelativeSource="{RelativeSource TemplatedParent}" Mode="OneWay"/>
+                            </RangeBase.Value>
+                        </ScrollBar>
+                        <ScrollBar FrameworkElement.Name="PART_VerticalScrollBar" x:Uid="ScrollBar_4" Orientation="Vertical"
+                       Grid.Column="1" RangeBase.Minimum="0.0"
+                       RangeBase.Maximum="{TemplateBinding ScrollViewer.ScrollableHeight}"
+                       ViewportSize="{TemplateBinding ScrollViewer.ViewportHeight}"
+                       UIElement.Visibility="{TemplateBinding ScrollViewer.ComputedVerticalScrollBarVisibility}"
+                       FrameworkElement.Cursor="Arrow">
+                            <RangeBase.Value>
+                                <Binding Path="VerticalOffset" RelativeSource="{RelativeSource TemplatedParent}" Mode="OneWay"/>
+                            </RangeBase.Value>
+                        </ScrollBar>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style  TargetType="{x:Type ScrollViewer}"
+         BasedOn="{StaticResource ExpressionScrollViewer}"/>
+    
+    <Style x:Key="RoundedScrollViewer" x:Uid="Style_128" TargetType="{x:Type ScrollViewer}">
+        <Setter x:Uid="Setter_1893" Property="Control.BorderThickness" Value="1"/>
+        <Setter x:Uid="Setter_1261" Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate x:Uid="ControlTemplate_65" TargetType="{x:Type ScrollViewer}">
+                    <Border x:Uid="Border_37" Background="{TemplateBinding Control.Background}" CornerRadius="4"
+                  BorderBrush="{TemplateBinding Control.Background}"
+                  BorderThickness="{TemplateBinding Control.BorderThickness}">
+                        <Grid x:Name="Grid" x:Uid="Grid_48">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition x:Uid="ColumnDefinition_33" Width="*"/>
+                                <ColumnDefinition x:Uid="ColumnDefinition_34" Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition x:Uid="RowDefinition_30" Height="*"/>
+                                <RowDefinition x:Uid="RowDefinition_31" Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Border x:Name="ScrollViewerCorner" x:Uid="ScrollViewerCorner"
+                      Background="{DynamicResource ScrollbarBackgroundBrush}"
+                      CornerRadius="{DynamicResource ScrollViewerCornerRadius}"
+                      BorderBrush="{DynamicResource ScrollViewerCornerBorderBrush}" BorderThickness="1,1,0,0"
+                      Grid.Column="1" Grid.Row="1"/>
+                            <ScrollContentPresenter x:Name="ScrollContentPresenter" x:Uid="ScrollContentPresenter_2" Grid.Column="0" Grid.Row="0"
+                                      FrameworkElement.Margin="{TemplateBinding Control.Padding}"
+                                      ContentPresenter.Content="{TemplateBinding ContentControl.Content}"
+                                      ContentPresenter.ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}"
+                                      CanContentScroll="{TemplateBinding ScrollViewer.CanContentScroll}"/>
+                            <ScrollBar x:Name="PART_HorizontalScrollBar" x:Uid="ScrollBar_1"
+                         UIElement.Visibility="{TemplateBinding ScrollViewer.ComputedHorizontalScrollBarVisibility}"
+                         Grid.Column="0" Grid.Row="1" Orientation="Horizontal"
+                         ViewportSize="{TemplateBinding ScrollViewer.ViewportWidth}" RangeBase.Minimum="0"
+                         RangeBase.Maximum="{TemplateBinding ScrollViewer.ScrollableWidth}">
+                                <RangeBase.Value>
+                                    <Binding Path="HorizontalOffset" Mode="OneWay" RelativeSource="{RelativeSource TemplatedParent}"/>
+                                </RangeBase.Value>
+                            </ScrollBar>
+                            <ScrollBar x:Name="PART_VerticalScrollBar" x:Uid="ScrollBar_2" FrameworkElement.Margin="1,0,0,0"
+                         UIElement.Visibility="{TemplateBinding ScrollViewer.ComputedVerticalScrollBarVisibility}"
+                         Grid.Column="1" Grid.Row="0" Orientation="Vertical"
+                         ViewportSize="{TemplateBinding ScrollViewer.ViewportHeight}" RangeBase.Minimum="0"
+                         RangeBase.Maximum="{TemplateBinding ScrollViewer.ScrollableHeight}">
+                                <RangeBase.Value>
+                                    <Binding Path="VerticalOffset" Mode="OneWay" RelativeSource="{RelativeSource TemplatedParent}"/>
+                                </RangeBase.Value>
+                            </ScrollBar>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger x:Uid="Trigger_1170" SourceName="PART_VerticalScrollBar" Property="UIElement.Visibility"
+                     Value="Collapsed">
+                            <Setter x:Uid="Setter_1947" TargetName="ScrollViewerCorner" Property="UIElement.Visibility"
+                      Value="Collapsed"/>
+                        </Trigger>
+                        <Trigger x:Uid="Trigger_1171" SourceName="PART_HorizontalScrollBar" Property="UIElement.Visibility"
+                     Value="Collapsed">
+                            <Setter x:Uid="Setter_1948" TargetName="ScrollViewerCorner" Property="UIElement.Visibility"
+                      Value="Collapsed"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

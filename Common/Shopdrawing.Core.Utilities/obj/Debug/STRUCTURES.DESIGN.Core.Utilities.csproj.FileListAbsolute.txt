@@ -1,0 +1,22 @@
+E:\Bridge Design\zzOriginal\x\CODE.Framework.Core.Utilities\bin\Debug\STRUCTURES.DESIGN.Core.Utilities.xml
+E:\Bridge Design\zzOriginal\x\CODE.Framework.Core.Utilities\bin\Debug\STRUCTURES.DESIGN.Core.Utilities.dll
+E:\Bridge Design\zzOriginal\x\CODE.Framework.Core.Utilities\bin\Debug\STRUCTURES.DESIGN.Core.Utilities.pdb
+E:\Bridge Design\zzOriginal\x\CODE.Framework.Core.Utilities\bin\Debug\STRUCTURES.DESIGN.Core.dll
+E:\Bridge Design\zzOriginal\x\CODE.Framework.Core.Utilities\bin\Debug\STRUCTURES.DESIGN.Core.pdb
+E:\Bridge Design\zzOriginal\x\CODE.Framework.Core.Utilities\bin\Debug\STRUCTURES.DESIGN.Core.xml
+E:\Bridge Design\zzOriginal\x\CODE.Framework.Core.Utilities\obj\Debug\STRUCTURES.DESIGN.Core.Utilities.csprojResolveAssemblyReference.cache
+E:\Bridge Design\zzOriginal\x\CODE.Framework.Core.Utilities\obj\Debug\STRUCTURES.DESIGN.Core.Utilities.Properties.Resources.resources
+E:\Bridge Design\zzOriginal\x\CODE.Framework.Core.Utilities\obj\Debug\STRUCTURES.DESIGN.Core.Utilities.csproj.GenerateResource.Cache
+E:\Bridge Design\zzOriginal\x\CODE.Framework.Core.Utilities\obj\Debug\STRUCTURES.DESIGN.Core.Utilities.dll
+E:\Bridge Design\zzOriginal\x\CODE.Framework.Core.Utilities\obj\Debug\STRUCTURES.DESIGN.Core.Utilities.pdb
+E:\Projects\C#\Shopdrawing\Tham khao\Bridge Design\zzOriginal\x\CODE.Framework.Core.Utilities\bin\Debug\STRUCTURES.DESIGN.Core.Utilities.xml
+E:\Projects\C#\Shopdrawing\Tham khao\Bridge Design\zzOriginal\x\CODE.Framework.Core.Utilities\bin\Debug\STRUCTURES.DESIGN.Core.Utilities.dll
+E:\Projects\C#\Shopdrawing\Tham khao\Bridge Design\zzOriginal\x\CODE.Framework.Core.Utilities\bin\Debug\STRUCTURES.DESIGN.Core.Utilities.pdb
+E:\Projects\C#\Shopdrawing\Tham khao\Bridge Design\zzOriginal\x\CODE.Framework.Core.Utilities\bin\Debug\STRUCTURES.DESIGN.Core.dll
+E:\Projects\C#\Shopdrawing\Tham khao\Bridge Design\zzOriginal\x\CODE.Framework.Core.Utilities\bin\Debug\STRUCTURES.DESIGN.Core.pdb
+E:\Projects\C#\Shopdrawing\Tham khao\Bridge Design\zzOriginal\x\CODE.Framework.Core.Utilities\bin\Debug\STRUCTURES.DESIGN.Core.xml
+E:\Projects\C#\Shopdrawing\Tham khao\Bridge Design\zzOriginal\x\CODE.Framework.Core.Utilities\obj\Debug\STRUCTURES.DESIGN.Core.Utilities.csprojResolveAssemblyReference.cache
+E:\Projects\C#\Shopdrawing\Tham khao\Bridge Design\zzOriginal\x\CODE.Framework.Core.Utilities\obj\Debug\STRUCTURES.DESIGN.Core.Utilities.Properties.Resources.resources
+E:\Projects\C#\Shopdrawing\Tham khao\Bridge Design\zzOriginal\x\CODE.Framework.Core.Utilities\obj\Debug\STRUCTURES.DESIGN.Core.Utilities.csproj.GenerateResource.Cache
+E:\Projects\C#\Shopdrawing\Tham khao\Bridge Design\zzOriginal\x\CODE.Framework.Core.Utilities\obj\Debug\STRUCTURES.DESIGN.Core.Utilities.dll
+E:\Projects\C#\Shopdrawing\Tham khao\Bridge Design\zzOriginal\x\CODE.Framework.Core.Utilities\obj\Debug\STRUCTURES.DESIGN.Core.Utilities.pdb

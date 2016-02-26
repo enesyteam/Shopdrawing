@@ -1,0 +1,111 @@
+﻿<Controls:MessageWindowDialog xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+ xmlns:Controls="clr-namespace:Microsoft.Expression.Framework.Controls"
+ xmlns:Data="clr-namespace:Microsoft.Expression.Framework.Data"
+ xmlns:Automation="clr-namespace:Microsoft.Expression.Framework.Diagnostics"
+ xmlns:sys="clr-namespace:System;assembly=mscorlib"
+ ResizeMode="NoResize"
+     ShowInTaskbar="False"
+     SizeToContent="WidthAndHeight"
+     MaxWidth="600"
+     OverrideFocus="False"
+     Title="{Binding Title,Mode=OneTime}"
+     Automation:AutomationElement.Id="{Binding AutomationId,Mode=OneTime}">
+   
+    <Controls:MessageWindowDialog.Resources>
+        <Data:BoolToVisibilityCollapsedConverter x:Key="BoolToVisibilityCollapsedConverter"/>
+    </Controls:MessageWindowDialog.Resources>
+    <Border Style="{DynamicResource DialogRootContainer}">
+        <StackPanel Orientation="Vertical">
+            <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Controls:Icon Width="32"
+                             Height="32"
+                             Margin="0,0,8,0"
+                             VerticalAlignment="Top"
+                             Icon.Visibility="{Binding Uid=Binding_1,Path=ShowIcon,Mode=OneTime,Converter=}">
+                    <Controls:Icon.Style>
+                        <Style TargetType="{x:Type Controls:Icon}">
+                            <Style.Triggers>
+                                <DataTrigger Value="{x:Static Controls:MessageIcon.Error}" Binding="{Binding Icon,Mode=OneTime}">
+                                    <Setter Property="Image.Source" Value="../Icons/shell_error_on_32x32.png"/>
+                                </DataTrigger>
+                                <DataTrigger Value="{x:Static Controls:MessageIcon.Warning}" Binding="{Binding Icon,Mode=OneTime}">
+                                    <Setter Property="Image.Source" Value="../Icons/shell_warning_on_32x32.png"/>
+                                </DataTrigger>
+                                <DataTrigger Value="{x:Static Controls:MessageIcon.Information}" Binding="{Binding Icon,Mode=OneTime}">
+                                    <Setter Property="Image.Source" Value="../Icons/shell_info_on_32x32.png"/>
+                                </DataTrigger>
+                                <DataTrigger Value="{x:Static Controls:MessageIcon.Question}" Binding="{Binding Icon,Mode=OneTime}">
+                                    <Setter Property="Image.Source" Value="../Icons/shell_help_on_32x32.png"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Controls:Icon.Style>
+                </Controls:Icon>
+                <TextBlock Automation:AutomationElement.Id="Content"
+                             VerticalAlignment="Center"
+                             TextWrapping="Wrap"
+                             Grid.Column="1"
+                             Text="{Binding Content,Mode=OneTime}"/>
+            </Grid>
+            <Controls:OnDemandControl x:ConnectionId="1"
+                     Name="HyperlinkOnDemand"
+                     Visibility="{Binding ShowHyperlink,Converter={StaticResource BoolToVisibilityCollapsedConverter},Mode=OneTime}">
+                <Controls:OnDemandControl.OnDemandTemplate>
+                    <ControlTemplate>
+                        <TextBlock Automation:AutomationElement.Id="WebPageLink"
+                                     HorizontalAlignment="Left"
+                                     TextWrapping="Wrap"
+                                     Margin="40,15,0,0">
+                                        <Hyperlink x:ConnectionId="2"
+                                             Automation:AutomationElement.Id="MessageWindowHyperlink"
+                                             IsEnabled="{Binding ShowHyperlink,Mode=OneTime}"
+                                             NavigateUri="{Binding HyperlinkUri,Mode=OneTime}">
+                                                <TextBlock Text="{Binding HyperlinkMessage,Mode=OneTime}"/>
+                                        </Hyperlink>
+                                </TextBlock>
+                    </ControlTemplate>
+                </Controls:OnDemandControl.OnDemandTemplate>
+            </Controls:OnDemandControl>
+            <CheckBox Automation:AutomationElement.Id="DontAskAgain"
+                     Margin="40,15,0,0"
+                     Content="{Binding CheckBoxMessage,Mode=OneWay}"
+                     IsChecked="{Binding DontAskAgain,Mode=TwoWay}"
+                     Visibility="{Binding EnableDontAskAgain,Converter={StaticResource BoolToVisibilityCollapsedConverter},Mode=OneTime}">
+                <CheckBox.Resources>
+                    <DataTemplate x:Key="{DataTemplateKey {x:Type sys:String}}" DataType="{x:Type sys:String}">
+                        <AccessText TextWrapping="Wrap" Text="{Binding Mode=OneTime}"/>
+                    </DataTemplate>
+                </CheckBox.Resources>
+            </CheckBox>
+            <ItemsControl x:ConnectionId="3"
+                     Name="ButtonsControl"
+                     HorizontalAlignment="Center"
+                     Focusable="False"
+                     Margin="-4,16,0,0"
+                     ItemsSource="{Binding Choices,Mode=OneTime}">
+                <ItemsControl.Template>
+                    <ControlTemplate>
+                        <UniformGrid Rows="1" IsItemsHost="True"/>
+                    </ControlTemplate>
+                </ItemsControl.Template>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Button Margin="{DynamicResource DefaultLeftMargin}"
+                                     Style="{DynamicResource DialogButton}"
+                                     Padding="8,0,8,1"
+                                     Automation:AutomationElement.Id="{Binding AutomationId,Mode=OneTime}"
+                                     IsDefault="{Binding IsDefault,Mode=OneTime}"
+                                     IsCancel="{Binding IsCancel,Mode=OneTime}"
+                                     Content="{Binding Label,Mode=OneTime}"
+                                     Command="{Binding Mode=OneTime}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+    </Border>
+</Controls:MessageWindowDialog>

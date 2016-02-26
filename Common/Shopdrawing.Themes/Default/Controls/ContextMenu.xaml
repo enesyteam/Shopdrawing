@@ -1,0 +1,42 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="DropShadowBorderStyle" x:Uid="Style_211" TargetType="{x:Type Border}">
+        <Setter x:Uid="Setter_1986" Property="FrameworkElement.Tag"
+            Value="{DynamicResource {x:Static SystemParameters.DropShadowKey}}"/>
+        <Style.Triggers>
+            <DataTrigger x:Uid="DataTrigger_2" Binding="{Binding Tag, RelativeSource={RelativeSource Self}}" Value="True">
+                <Setter x:Uid="Setter_1954" Property="Border.Background" Value="Transparent"/>
+                <Setter x:Uid="Setter_1955" Property="Border.Padding" Value="0,0,5,5"/>
+                <Setter x:Uid="Setter_1956" Property="UIElement.Effect">
+                    <Setter.Value>
+                        <DropShadowEffect x:Uid="DropShadowEffect_1" BlurRadius="4" ShadowDepth="1" Opacity="0.8"/>
+                    </Setter.Value>
+                </Setter>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    <Style TargetType="{x:Type ContextMenu}">
+        <Setter x:Uid="Setter_1329" Property="Control.Background" Value="{DynamicResource MenuBackgroundBrush}"/>
+        <Setter x:Uid="Setter_1330" Property="Control.BorderThickness" Value="1"/>
+        <Setter x:Uid="Setter_1895" Property="Control.BorderBrush" Value="{DynamicResource WindowBorderBrush}"/>
+        <Setter x:Uid="Setter_1331" Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate x:Uid="ControlTemplate_74" TargetType="{x:Type ContextMenu}">
+                    <Border x:Uid="Border_93" FrameworkElement.Style="{StaticResource DropShadowBorderStyle}">
+                        <Border x:Uid="Border_50" Background="{TemplateBinding Control.Background}"
+                    BorderBrush="{TemplateBinding Control.BorderBrush}"
+                    BorderThickness="{TemplateBinding Control.BorderThickness}">
+                            <ScrollViewer x:Uid="ScrollViewer_9" CanContentScroll="true"
+                            FrameworkElement.Style="{DynamicResource {ComponentResourceKey TypeInTargetAssembly={x:Type FrameworkElement}, ResourceId=MenuScrollViewer}}">
+                                <ItemsPresenter x:Uid="ItemsPresenter_5" FrameworkElement.Margin="{TemplateBinding Control.Padding}"
+                                KeyboardNavigation.DirectionalNavigation="Cycle"
+                                UIElement.SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"/>
+                            </ScrollViewer>
+                        </Border>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

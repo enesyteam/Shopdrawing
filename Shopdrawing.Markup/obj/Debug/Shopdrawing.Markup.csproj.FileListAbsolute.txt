@@ -1,0 +1,9 @@
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Markup-JetBrain\Microsoft.Expression.Markup\bin\Debug\Shopdrawing.Markup.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Markup-JetBrain\Microsoft.Expression.Markup\bin\Debug\Shopdrawing.Markup.pdb
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Markup-JetBrain\Microsoft.Expression.Markup\obj\Debug\Shopdrawing.Markup.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Markup-JetBrain\Microsoft.Expression.Markup\obj\Debug\Shopdrawing.Markup.pdb
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Markup\bin\Debug\Shopdrawing.Markup.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Markup\bin\Debug\Shopdrawing.Markup.pdb
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Markup\obj\Debug\Shopdrawing.Markup.csprojResolveAssemblyReference.cache
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Markup\obj\Debug\Shopdrawing.Markup.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Markup\obj\Debug\Shopdrawing.Markup.pdb

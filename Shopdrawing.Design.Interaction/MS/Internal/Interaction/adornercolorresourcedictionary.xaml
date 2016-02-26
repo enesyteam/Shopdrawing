@@ -1,0 +1,43 @@
+<!--<ResourceDictionary x:Class="MS.Internal.Interaction.AdornerColorResourceDictionary"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:i="clr-namespace:Microsoft.Windows.Design.Interaction">
+  <SolidColorBrush Color="{StaticResource {x:Static i:AdornerColors.AlignmentMarkColorKey}}"
+                   x:Key="{x:Static i:AdornerColors.AlignmentMarkBrushKey}"/>
+  <SolidColorBrush Color="{StaticResource {x:Static i:AdornerColors.ElementBorderColorKey}}"
+                   x:Key="{x:Static i:AdornerColors.ElementBorderBrushKey}"/>
+  <SolidColorBrush Color="{StaticResource {x:Static i:AdornerColors.GlyphFillColorKey}}"
+                   x:Key="{x:Static i:AdornerColors.GlyphFillBrushKey}"/>
+  <SolidColorBrush Color="{StaticResource {x:Static i:AdornerColors.HandleBorderColorKey}}"
+                   x:Key="{x:Static i:AdornerColors.HandleBorderBrushKey}"/>
+  <SolidColorBrush Color="{StaticResource {x:Static i:AdornerColors.HandleFillColorKey}}"
+                   x:Key="{x:Static i:AdornerColors.HandleFillBrushKey}"/>
+  <SolidColorBrush Color="{StaticResource {x:Static i:AdornerColors.HandleFillHoverColorKey}}"
+                   x:Key="{x:Static i:AdornerColors.HandleFillHoverBrushKey}"/>
+  <SolidColorBrush Color="{StaticResource {x:Static i:AdornerColors.HandleFillPressedColorKey}}"
+                   x:Key="{x:Static i:AdornerColors.HandleFillPressedBrushKey}"/>
+  <SolidColorBrush Color="{StaticResource {x:Static i:AdornerColors.MoveHandleContentColorKey}}"
+                   x:Key="{x:Static i:AdornerColors.MoveHandleContentBrushKey}"/>
+  <SolidColorBrush Color="{StaticResource {x:Static i:AdornerColors.MoveHandleFillColorKey}}"
+                   x:Key="{x:Static i:AdornerColors.MoveHandleFillBrushKey}"/>
+  <SolidColorBrush Color="{StaticResource {x:Static i:AdornerColors.MoveHandleFillHoverColorKey}}"
+                   x:Key="{x:Static i:AdornerColors.MoveHandleFillHoverBrushKey}"/>
+  <SolidColorBrush Color="{StaticResource {x:Static i:AdornerColors.RailFillColorKey}}"
+                   x:Key="{x:Static i:AdornerColors.RailFillBrushKey}"/>
+  <SolidColorBrush Color="{StaticResource {x:Static i:AdornerColors.SelectionFrameBorderColorKey}}"
+                   x:Key="{x:Static i:AdornerColors.SelectionFrameBorderBrushKey}"/>
+  <SolidColorBrush Color="{StaticResource {x:Static i:AdornerColors.SelectionFrameFillColorKey}}"
+                   x:Key="{x:Static i:AdornerColors.SelectionFrameFillBrushKey}"/>
+  <SolidColorBrush x:Key="{x:Static i:AdornerColors.SimpleWashBrushKey}"/>
+  <SolidColorBrush Color="{StaticResource {x:Static i:AdornerColors.ToggledGlyphFillColorKey}}"
+                   x:Key="{x:Static i:AdornerColors.ToggledGlyphFillBrushKey}"/>
+  <SolidColorBrush Color="{StaticResource {x:Static i:AdornerColors.HandleEmptyFillColorKey}}"
+                   x:Key="{x:Static i:AdornerColors.HandleEmptyFillBrushKey}"/>
+</ResourceDictionary>-->
+
+
+<ResourceDictionary  x:Class="MS.Internal.Interaction.AdornerColorResourceDictionary"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+</ResourceDictionary>

@@ -1,0 +1,7 @@
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Framework\Microsoft.Expression.Framework\obj\Debug\Microsoft.Expression.Framework.csprojResolveAssemblyReference.cache
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Framework\Microsoft.Expression.Framework\bin\Debug\Microsoft.Expression.Framework.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Framework\Microsoft.Expression.Framework\bin\Debug\Microsoft.Expression.Framework.pdb
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Framework\Microsoft.Expression.Framework\bin\Debug\Microsoft.Expression.Extensibility.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Framework\Microsoft.Expression.Framework\bin\Debug\Microsoft.Expression.Licensing.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Framework\Microsoft.Expression.Framework\obj\Debug\Microsoft.Expression.Framework.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Framework\Microsoft.Expression.Framework\obj\Debug\Microsoft.Expression.Framework.pdb

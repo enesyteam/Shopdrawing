@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7D2DEB46-BC83-44EC-87FF-85E3CB570CF7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shopdrawing.BridgeFS</RootNamespace>
+    <AssemblyName>Shopdrawing.BridgeFS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ActiproSoftware.Shared.Net20">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\ActiproSoftware.Shared.Net20.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiproSoftware.SyntaxEditor.Addons.DotNet.Net20">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\ActiproSoftware.SyntaxEditor.Addons.DotNet.Net20.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiproSoftware.SyntaxEditor.Net20">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\ActiproSoftware.SyntaxEditor.Net20.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiproSoftware.WinUICore.Net20">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\ActiproSoftware.WinUICore.Net20.dll</HintPath>
+    </Reference>
+    <Reference Include="DynamicGeometry, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\DynamicGeometry.dll</HintPath>
+    </Reference>
+    <Reference Include="GuiLabs.Undo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\GuiLabs.Undo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Blend">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Microsoft.Expression.Blend.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Code">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Microsoft.Expression.Code.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.DesignModel">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Microsoft.Expression.DesignModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.DesignSurface">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Microsoft.Expression.DesignSurface.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Extensibility">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Microsoft.Expression.Extensibility.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Extensibility.Designer">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Microsoft.Expression.Extensibility.Designer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Extensibility.Project">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Microsoft.Expression.Extensibility.Project.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Framework">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Microsoft.Expression.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Licensing, Version=4.0.1000.1000, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Microsoft.Expression.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Markup">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Microsoft.Expression.Markup.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Project">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Microsoft.Expression.Project.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.AssetSystem">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Microsoft.VisualStudio.AssetSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.AssetSystem.CompositionModel">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Microsoft.VisualStudio.AssetSystem.CompositionModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.AssetSystem.Loader">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Microsoft.VisualStudio.AssetSystem.Loader.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Platform">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Microsoft.VisualStudio.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="MixModes.Synergy.Resources">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\MixModes.Synergy.Resources.dll</HintPath>
+    </Reference>
+    <Reference Include="MixModes.Synergy.Themes">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\MixModes.Synergy.Themes.dll</HintPath>
+    </Reference>
+    <Reference Include="MixModes.Synergy.Utilities">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\MixModes.Synergy.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="MixModes.Synergy.VisualFramework">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\MixModes.Synergy.VisualFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Shopdrawing.Controls">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Shopdrawing.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Shopdrawing.Core">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Shopdrawing.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Shopdrawing.Core.Utilities">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Shopdrawing.Core.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Shopdrawing.Dimensions">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Shopdrawing.Dimensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Shopdrawing.Extensibility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Shopdrawing.Extensibility.dll</HintPath>
+    </Reference>
+    <Reference Include="Shopdrawing.Framework, Version=4.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Shopdrawing.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Shopdrawing.Reinforcement">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Shopdrawing.Reinforcement.dll</HintPath>
+    </Reference>
+    <Reference Include="Shopdrawing.Resources, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Shopdrawing.Resources.dll</HintPath>
+    </Reference>
+    <Reference Include="Shopdrawing.SdrWindows">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Shopdrawing.SdrWindows.dll</HintPath>
+    </Reference>
+    <Reference Include="Shopdrawing.Secs">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Shopdrawing.Secs.dll</HintPath>
+    </Reference>
+    <Reference Include="Shopdrawing.Settings">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Shopdrawing.Settings.dll</HintPath>
+    </Reference>
+    <Reference Include="Shopdrawing.Structures.Abutment">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Shopdrawing.Structures.Abutment.dll</HintPath>
+    </Reference>
+    <Reference Include="Shopdrawing.Structures.Culvert">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Shopdrawing.Structures.Culvert.dll</HintPath>
+    </Reference>
+    <Reference Include="Shopdrawing.Structures.Girder">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Shopdrawing.Structures.Girder.dll</HintPath>
+    </Reference>
+    <Reference Include="Shopdrawing.Structures.Miscellaneous">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Shopdrawing.Structures.Miscellaneous.dll</HintPath>
+    </Reference>
+    <Reference Include="Shopdrawing.Structures.Pier">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Shopdrawing.Structures.Pier.dll</HintPath>
+    </Reference>
+    <Reference Include="Shopdrawing.Structures.Pile">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Shopdrawing.Structures.Pile.dll</HintPath>
+    </Reference>
+    <Reference Include="Shopdrawing.Themes, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Shopdrawing.Themes.dll</HintPath>
+    </Reference>
+    <Reference Include="Shopdrawing.Utilities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Shopdrawing.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Shopdrawing.Windows.WindowsBase">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Shopdrawing.Windows.WindowsBase.dll</HintPath>
+    </Reference>
+    <Reference Include="Shopdrawing.Wpf">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Shopdrawing.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Controls.WpfPropertyGrid, Version=2010.11.10.0, Culture=neutral, PublicKeyToken=be4b71144cd8a3e5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\System.Windows.Controls.WpfPropertyGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Technewlogic.WpfDialogManagement">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Technewlogic.WpfDialogManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="TreeViewEx">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\TreeViewEx.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Xceed.Wpf.AvalonDock">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Expression">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Xceed.Wpf.AvalonDock.Themes.Expression.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010">
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="xref.NETdxf, Version=0.9.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Shopdrawing\LiveGeometry\Main\WPFClient\bin\x86\Debug\xref.NETdxf.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Abut\Abut.cs" />
+    <Compile Include="Abut\AbutDimensionWindow.xaml.cs">
+      <DependentUpon>AbutDimensionWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Bridge.cs" />
+    <Compile Include="BridgeItem.cs" />
+    <Compile Include="BridgeParts.cs" />
+    <Compile Include="BusinessData\Model.cs" />
+    <Compile Include="IBridge.cs" />
+    <Compile Include="IBridgeItem.cs" />
+    <Compile Include="Unit.cs" />
+    <Compile Include="UnitType.cs" />
+    <Page Include="Abut\AbutDimensionWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Inspector\Inspector.csproj">
+      <Project>{20c048f8-7ca0-4ffb-9431-af55e9f4d6b6}</Project>
+      <Name>Inspector</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

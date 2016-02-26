@@ -1,0 +1,12 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:ui="clr-namespace:Microsoft.VisualStudio.PlatformUI"
+                    xmlns:vs="clr-namespace:Microsoft.VisualStudio.PlatformUI.Shell.Controls"
+                    xmlns:ExpressionExtension="clr-namespace:Microsoft.Expression.Framework.Workspaces.Extension"
+                    x:Uid="ResourceDictionary_1">
+  <Style x:Uid="Style_1" TargetType="{x:Type vs:DockGroupControl}"
+         BasedOn="{StaticResource DockGroupControlStyle}">
+    <Setter x:Uid="Setter_1" Property="ui:SplitterItemsControl.SplitterGripSize"
+            Value="{x:Static ExpressionExtension:ExpressionDockingConstants.SplitterGripSize}"/>
+  </Style>
+</ResourceDictionary>

@@ -1,0 +1,14 @@
+C:\Documents and Settings\buenor\My Documents\Visual Studio 2008\Projects\WpfApplicationTest1\ListBoxSelectionColorChange\bin\Debug\ListBoxSelectionColorChange.exe
+C:\Documents and Settings\buenor\My Documents\Visual Studio 2008\Projects\WpfApplicationTest1\ListBoxSelectionColorChange\bin\Debug\ListBoxSelectionColorChange.pdb
+C:\Documents and Settings\buenor\My Documents\Visual Studio 2008\Projects\WpfApplicationTest1\ListBoxSelectionColorChange\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\buenor\My Documents\Visual Studio 2008\Projects\WpfApplicationTest1\ListBoxSelectionColorChange\obj\Debug\Window1.baml
+C:\Documents and Settings\buenor\My Documents\Visual Studio 2008\Projects\WpfApplicationTest1\ListBoxSelectionColorChange\obj\Debug\Window1.g.cs
+C:\Documents and Settings\buenor\My Documents\Visual Studio 2008\Projects\WpfApplicationTest1\ListBoxSelectionColorChange\obj\Debug\App.g.cs
+C:\Documents and Settings\buenor\My Documents\Visual Studio 2008\Projects\WpfApplicationTest1\ListBoxSelectionColorChange\obj\Debug\ListBoxSelectionColorChange_MarkupCompile.cache
+C:\Documents and Settings\buenor\My Documents\Visual Studio 2008\Projects\WpfApplicationTest1\ListBoxSelectionColorChange\obj\Debug\ListBoxSelectionColorChange.g.resources
+C:\Documents and Settings\buenor\My Documents\Visual Studio 2008\Projects\WpfApplicationTest1\ListBoxSelectionColorChange\obj\Debug\ListBoxSelectionColorChange.Properties.Resources.resources
+C:\Documents and Settings\buenor\My Documents\Visual Studio 2008\Projects\WpfApplicationTest1\ListBoxSelectionColorChange\obj\Debug\ListBoxSelectionColorChange.csproj.GenerateResource.Cache
+C:\Documents and Settings\buenor\My Documents\Visual Studio 2008\Projects\WpfApplicationTest1\ListBoxSelectionColorChange\obj\Debug\ListBoxSelectionColorChange.exe
+C:\Documents and Settings\buenor\My Documents\Visual Studio 2008\Projects\WpfApplicationTest1\ListBoxSelectionColorChange\obj\Debug\ListBoxSelectionColorChange.pdb
+C:\Documents and Settings\buenor\My Documents\Visual Studio 2008\Projects\WpfApplicationTest1\ListBoxSelectionColorChange\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Documents and Settings\buenor\My Documents\Visual Studio 2008\Projects\WpfApplicationTest1\ListBoxSelectionColorChange\obj\Debug\ListBoxSelectionColorChange_MarkupCompile.lref

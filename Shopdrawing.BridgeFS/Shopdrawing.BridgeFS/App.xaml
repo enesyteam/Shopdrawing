@@ -1,0 +1,13 @@
+﻿<Application x:Class="Shopdrawing.BridgeFS.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="Abut/AbutDimensionWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Shopdrawing.Framework;component/Themes/Generic.xaml" />
+                <!--<ResourceDictionary Source="/Shopdrawing.Themes;Component/Default/Generic.xaml" />-->
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

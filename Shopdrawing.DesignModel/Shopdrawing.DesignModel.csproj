@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3C5AAF72-BEAB-4693-B062-77EE3D8105FC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shopdrawing.DesignModel</RootNamespace>
+    <AssemblyName>Shopdrawing.DesignModel</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ExceptionStringTable.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Code\ICodeAidAssemblyInfo.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Code\ICodeAidMarkupExtensionInfo.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Code\ICodeAidMemberInfo.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Code\ICodeAidPropertyInfo.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Code\ICodeAidProvider.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Code\ICodeAidTypeInfo.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Code\ICodeModelService.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Code\IParameterDeclaration.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Code\ITextBufferUndo.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Code\ITextEditor.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Code\ITextEditorService.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Code\ITextUndoTransaction.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Code\ITypeDeclaration.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Code\TextEditorErrorInformation.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Code\TextRange.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Code\TextUndoCompletedEventArgs.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Code\TextUndoCompletionResult.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\AnnotationDefaults.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\ApplyEffectMethod_I, E_.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\ArrayItemList_T_.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\BindingWrapper_T_.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\CategoryNames.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\DefaultXamlSerializerFilter.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\DispatcherHelper.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\DocumentChildNodeReference.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\DocumentIndexedPropertyNodeReference.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\DocumentLocator.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\DocumentNodeCloneableValue.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\DocumentNodeMarkerUtilities.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\DocumentNodePath.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\DocumentNodeReference.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\DocumentNodeReferenceValue.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\DocumentNodeStructValue_T_.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\DocumentNodeUtilities.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\DocumentPropertyNodeReference.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\DocumentPropertyNodeReferenceBase.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\EffectManager_I, E_.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\ExpressionEvaluator.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\FolderBasedThemeManager.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\FontFamilyHelper.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\FrugalListBase_T_.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\FrugalListStoreState.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\FrugalObjectList_T_.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\FrugalStructList_T_.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\GenericHandlerFactory_Key, Handler_.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\ICanonicalTransform.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\IDesignTimeResourceResolver.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\IDocumentLocator.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\IEffectManager.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\ImageHost.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\IPlatform.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\IPlatformCreator.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\IPlatformGeometryHelper.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\IPlatformHost.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\IPlatformService.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\IPlatformSpecificView.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\ISupportsResources.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\NodePathEntry.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\PathGeometrySerializationHelper.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\PathMetadata.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\PlatformBase.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\PlatformCreatorBase.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\PlatformCreatorCallback.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\PlatformEventArgs.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\PlatformService.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\PointSerializationHelper.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\ReferenceStepQuery.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\ResourceNodeHelper.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\ResourceReferenceType.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\ResourceSite.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\RoundingHelper.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\SingleItemList_T_.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\SixItemList_T_.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\ThemeManager.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\ThreeItemList_T_.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\TypeHandlerFactory_TypeHandler_.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\TypeIdHandlerFactory_TypeHandler_.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\UIThreadDispatcherHelper.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Core\WeakReferenceHelper.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\ArrayInstanceBuilder.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\AttachmentOrder.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\BindingInstanceBuilderBase.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\ClrObjectInstanceBuilder.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\CrossDocumentUpdateContext.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\DependencyObjectInstanceBuilderBase_T_.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\DesignDataExtension.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\DesignDataInstanceBuilder.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\DesignerBitmapCache.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\DesignInstanceExtension.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\DesignTypeInstanceBuilder.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\DictionaryInstanceBuilder.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\ExceptionDictionary.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\ExpressionCache.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\ExpressionSite.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\FallbackControl.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\FallbackInstanceBuilder_FallbackControlType_.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\IAttachViewRoot.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\ICrossDocumentUpdateContext.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\IExceptionDictionary.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\IExpressionCache.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\IInstanceBuilder.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\IInstanceBuilderContext.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\IInstanceBuilderFactory.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\IInstanceDictionary.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\IInstantiatedElementViewNode.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\InstanceBuilderContextBase.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\InstanceBuilderException.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\InstanceBuilderFactory.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\InstanceBuilderOperations.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\InstanceDictionary.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\InstanceState.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\InstanceStateType.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\InstanceTypeReplacement.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\InstantiatedElementList.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\InstantiatedElementViewNode.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\InstantiatedUserControlViewNode.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\IPreviewControl.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\IResourceDictionaryHost.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\ISerializationContext.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\IUserControlInstanceBuilder.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\IViewNodeManagerFactory.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\IViewRootResolver.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\IWarningDictionary.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\MarkupExtensionInstanceBuilderBase.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\OverlayLayer.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\PersistentData_T_.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\PersistentViewNodeDictionary_T_.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\ProjectTypeInstanceBuilderHelper.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\PropertyModification.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\SetterBaseInstanceBuilderHelper.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\StyleControlTemplateHelper.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\TemplateBindingInstanceBuilderBase.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\UriInstanceBuilder.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\UserControlInstanceBuilderHelper.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\UserControlViewNode.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\ViewNode.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\ViewNodeDictionary.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\ViewNodeId.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\ViewNodeIdConverter.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\ViewNodeManager.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.InstanceBuilders\WarningDictionary.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\ApplicationMetadata.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\AssemblyGroup.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\AssemblyHelper.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\AssemblyId.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\AssemblySource.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\AttachedClrPropertyImplementation.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\AttachedEventImplementation.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\AttributeData.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\AttributeDataCache.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\BaseMethod.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\BuildingTypeInfo.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\CanonicalTransform3DOrder.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\CanonicalTransformOrder.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\ClrObjectMetadata.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\ClrPropertyImplementationBase.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\ClrPropertyReferenceStep.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\CollectionAdapterDescription.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\CollectionGenerator.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\CommonProperties.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\ConditionalAutoLengthConverter.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\Constructor.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\ControlEditingDesignTypeGenerator.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\DataContextPathExtensionAttribute.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\DataContextWithoutSourceBreakFixer.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\DefaultPlatformReferenceContext.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\DefaultTypeResolver.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\DelayedInstance_T_.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\DependencyPropertyImplementation.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\DependencyPropertyImplementationBase.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\DependencyPropertyReferenceStep.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\DesignTimeMediaElementAttribute.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\DesignTimeProperties.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\DesignTypeGenerator.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\DesignTypeResult.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\DocumentOnlyDesignTimePropertiesHost.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\DualDataContextAttribute.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\Event.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\EventImplementationBase.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\FieldReferenceStep.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\FullNameTypeId.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\ICachedMemberInfo.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\IDesignTimePropertyImplementor.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\IDesignTypeGeneratorContext.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\IDesignTypeGeneratorExtension.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\IEventImplementation.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\IMutableMembers.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\IndexedClrPropertyReferenceStep.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\IPlatformReferenceContext.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\IPlatformRuntimeContext.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\IPlatformTypes.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\IPropertyImplementation.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\IReferenceType.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\IReflectionAssembly.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\IReflectionType.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\IResolvableRuntimeType.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\ITypeExtensions.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\ITypeMetadataFactory.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\IUnreferencedTypeId.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\KnownProperties.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\KnownTypes.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\KnownUnreferencedType.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\LayoutOverrides.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\LocalClrPropertyImplementation.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\LocalEventImplementation.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\Member.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\MemberCollection.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\MetadataFactoryCallback.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\MetadataStore.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\Method.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\MissingClrEventImplementation.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\PlatformNeutralAttributeHelper.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\PlatformNeutralPropertyId.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\PlatformNeutralTypeId.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\PlatformType.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\PlatformTypeHelper.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\PlatformTypes.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\PlatformTypesValidationExtension.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\PointVectorConverter.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\ProjectContextType.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\ProjectNeutralTypeId.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\ProjectNeutralTypes.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\ProjectNeutralTypesAttributeTable.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\Property.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\PropertyImplementationBase.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\PropertyOrderTokens.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\PropertyReference.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\PropertySortValue.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\ProxyClrPropertyImplementation.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\ProxyEventImplementation.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\ReadOnlyCollections_T_.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\ReferenceAssembly.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\ReferenceStep.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\ReflectionCollectionDescription.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\RoutedEventDescription.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\RoutedEventImplementation.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\RoutedEventImplementationBase.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\RuntimeAssembly.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\RuntimeGeneratedTypesHelper.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\SilverlightConverterService.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\SystemThemeAssemblies.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\TypeMetadataFactory.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\TypeResolver.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\TypeUtilities.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\UnbuiltTypeDescription.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\UndefinedClrPropertyImplementation.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\UndefinedDependencyPropertyImplementation.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\UnknownMember.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\UnknownType.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\VisualStateGroupMetadata.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\VisualStateManagerMetadata.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\VisualStateMetadata.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\VisualTransitionMetadata.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\WpfAttributeTableExtensions.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\XDataType.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.Metadata\XmlnsDefinitionMap.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.NodeBuilders\DocumentNodeBuilderBase.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.NodeBuilders\DocumentNodeBuilderFactory.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.NodeBuilders\DocumentNodeChildBuilderFactory.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.NodeBuilders\DocumentNodePropertyBuilderFactory.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.NodeBuilders\IDocumentNodeBuilder.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.NodeBuilders\IDocumentNodeBuilderFactory.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.NodeBuilders\IDocumentNodeChildBuilder.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.NodeBuilders\IDocumentNodeChildBuilderFactory.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.NodeBuilders\IDocumentNodePropertyBuilder.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.NodeBuilders\IDocumentNodePropertyBuilderFactory.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.NodeBuilders\NodeBuilderContext.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.NodeBuilders\TextDecorationCollectionHelper.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.NodeBuilders\TimeSpanHelper.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\ContentProviderParameters.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\EasingFunctionDefinitionHelper.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\EasingMode.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\IEasingFunctionDefinition.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\IParentChainProvider.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\IViewColumnDefinition.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\IViewContentProviderFactory.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\IViewControl.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\IViewFlowDocumentEditor.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\IViewGrid.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\IViewHitTestResult.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\IViewItemsControl.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\IViewObject.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\IViewObjectBuilder.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\IViewObjectFactory.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\IViewPanel.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\IViewPlaneProjection.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\IViewResourceDictionary.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\IViewRichTextBox.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\IViewRowDefinition.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\IViewShape.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\IViewStoryboard.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\IViewStyle.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\IViewTextBlock.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\IViewTextBox.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\IViewTextBoxBase.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\IViewVisual.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\StateTransitionPreviewInfo.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\TextObjects\IViewBlock.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\TextObjects\IViewBlockContainer.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\TextObjects\IViewFlowDocument.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\TextObjects\IViewHyperlink.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\TextObjects\IViewInline.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\TextObjects\IViewInlineContainer.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\TextObjects\IViewInlineUIContainer.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\TextObjects\IViewParagraph.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\TextObjects\IViewRun.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\TextObjects\IViewSpan.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\TextObjects\IViewTextElement.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\TextObjects\IViewTextObjectFactory.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\TextObjects\IViewTextPointer.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\TextObjects\IViewTextRange.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\TextObjects\IViewTextSelection.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\TextObjects\ViewTextBoxType.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\TransitionCompletedCallback.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\ViewContent.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\ViewContentManager.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\ViewContentProvider.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\ViewContentType.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\ViewContentValueProvider.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\ViewHitTestFilterCallback.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\ViewHitTestResultCallback.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\ViewObject.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\ViewObjectBuilder_PlatformType_.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\ViewObjectCollectionEnumerator_TViewObjectType_.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\ViewObjectCollection_TPlatformObjectType, TViewObjectType_.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\ViewObjectFactory.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\ViewStoryboardApplyOptions.cs" />
+    <Compile Include="Microsoft.Expression.DesignModel.ViewObjects\ViewStoryboardState.cs" />
+    <Compile Include="PresentationFrameworkStringTable.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringTable.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shopdrawing.Design.Extensibility\Shopdrawing.Design.Extensibility.csproj">
+      <Project>{cab662e1-637c-4f61-8ab3-b16ffa935ff5}</Project>
+      <Name>Shopdrawing.Design.Extensibility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shopdrawing.Design.Interaction\Shopdrawing.Design.Interaction.csproj">
+      <Project>{6724c818-9368-46cb-916e-42456c9b9d9f}</Project>
+      <Name>Shopdrawing.Design.Interaction</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shopdrawing.Markup\Shopdrawing.Markup.csproj">
+      <Project>{05453e05-826b-4ceb-b940-03870afd97ad}</Project>
+      <Name>Shopdrawing.Markup</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Microsoft.Expression.DesignModel.csproj" />
+    <Content Include="Microsoft.Expression.DesignModel.sln" />
+    <Content Include="Microsoft.Expression.DesignModelReferences\Microsoft.Expression.Markup.dll" />
+    <Content Include="Microsoft.Expression.DesignModelReferences\Microsoft.Windows.Design.Interaction.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Microsoft.Expression.DesignModel.v11.suo" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

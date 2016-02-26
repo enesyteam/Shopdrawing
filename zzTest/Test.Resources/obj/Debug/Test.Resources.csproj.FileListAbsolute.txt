@@ -1,0 +1,10 @@
+E:\Projects\C#\ShopdrawingVer2\zzTest\Test.Resources\bin\Debug\Test.Resources.dll
+E:\Projects\C#\ShopdrawingVer2\zzTest\Test.Resources\bin\Debug\Test.Resources.pdb
+E:\Projects\C#\ShopdrawingVer2\zzTest\Test.Resources\obj\Debug\Test.Resources.csprojResolveAssemblyReference.cache
+E:\Projects\C#\ShopdrawingVer2\zzTest\Test.Resources\obj\Debug\icons\designsurfaceicons.baml
+E:\Projects\C#\ShopdrawingVer2\zzTest\Test.Resources\obj\Debug\Test.Resources_MarkupCompile.cache
+E:\Projects\C#\ShopdrawingVer2\zzTest\Test.Resources\obj\Debug\Test.Resources.g.resources
+E:\Projects\C#\ShopdrawingVer2\zzTest\Test.Resources\obj\Debug\Test.Resources.Resources.resources
+E:\Projects\C#\ShopdrawingVer2\zzTest\Test.Resources\obj\Debug\Test.Resources.csproj.GenerateResource.Cache
+E:\Projects\C#\ShopdrawingVer2\zzTest\Test.Resources\obj\Debug\Test.Resources.dll
+E:\Projects\C#\ShopdrawingVer2\zzTest\Test.Resources\obj\Debug\Test.Resources.pdb

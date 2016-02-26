@@ -1,0 +1,83 @@
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\bin\Debug\Xceed.Wpf.AvalonDock.dll
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\bin\Debug\Xceed.Wpf.AvalonDock.pdb
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\obj\Debug\Xceed.Wpf.AvalonDock.csprojResolveAssemblyReference.cache
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\obj\Debug\Xceed.Wpf.AvalonDock_MarkupCompile.cache
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\obj\Debug\Xceed.Wpf.AvalonDock_MarkupCompile.lref
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\obj\Debug\Themes\generic.baml
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\obj\Debug\Xceed.Wpf.AvalonDock.g.resources
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\obj\Debug\Xceed.Wpf.AvalonDock.Properties.Resources.resources
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\obj\Debug\Xceed.Wpf.AvalonDock.Properties.Resources.hu.resources
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\obj\Debug\Xceed.Wpf.AvalonDock.Properties.Resources.it.resources
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\obj\Debug\Xceed.Wpf.AvalonDock.Properties.Resources.fr.resources
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\obj\Debug\Xceed.Wpf.AvalonDock.Properties.Resources.es.resources
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\obj\Debug\Xceed.Wpf.AvalonDock.Properties.Resources.pt-BR.resources
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\obj\Debug\Xceed.Wpf.AvalonDock.Properties.Resources.ru.resources
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\obj\Debug\Xceed.Wpf.AvalonDock.Properties.Resources.de.resources
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\obj\Debug\Xceed.Wpf.AvalonDock.Properties.Resources.sv.resources
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\obj\Debug\Xceed.Wpf.AvalonDock.Properties.Resources.zh-Hans.resources
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\obj\Debug\Xceed.Wpf.AvalonDock.Properties.Resources.ro.resources
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\obj\Debug\Xceed.Wpf.AvalonDock.csproj.GenerateResource.Cache
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\obj\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\obj\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\obj\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\obj\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\obj\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\obj\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\obj\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\obj\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\obj\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\obj\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\obj\Debug\Xceed.Wpf.AvalonDock.dll
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock\obj\Debug\Xceed.Wpf.AvalonDock.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\bin\Debug\Xceed.Wpf.AvalonDock.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\bin\Debug\Xceed.Wpf.AvalonDock.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\obj\Debug\Xceed.Wpf.AvalonDock_MarkupCompile.cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\obj\Debug\Xceed.Wpf.AvalonDock_MarkupCompile.lref
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\obj\Debug\Themes\generic.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\obj\Debug\Xceed.Wpf.AvalonDock.g.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\obj\Debug\Xceed.Wpf.AvalonDock.Properties.Resources.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\obj\Debug\Xceed.Wpf.AvalonDock.Properties.Resources.hu.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\obj\Debug\Xceed.Wpf.AvalonDock.Properties.Resources.it.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\obj\Debug\Xceed.Wpf.AvalonDock.Properties.Resources.fr.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\obj\Debug\Xceed.Wpf.AvalonDock.Properties.Resources.es.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\obj\Debug\Xceed.Wpf.AvalonDock.Properties.Resources.pt-BR.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\obj\Debug\Xceed.Wpf.AvalonDock.Properties.Resources.ru.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\obj\Debug\Xceed.Wpf.AvalonDock.Properties.Resources.de.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\obj\Debug\Xceed.Wpf.AvalonDock.Properties.Resources.sv.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\obj\Debug\Xceed.Wpf.AvalonDock.Properties.Resources.zh-Hans.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\obj\Debug\Xceed.Wpf.AvalonDock.Properties.Resources.ro.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\obj\Debug\Xceed.Wpf.AvalonDock.csproj.GenerateResource.Cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\obj\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\obj\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\obj\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\obj\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\obj\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\obj\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\obj\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\obj\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\obj\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\obj\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\obj\Debug\Xceed.Wpf.AvalonDock.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\obj\Debug\Xceed.Wpf.AvalonDock.pdb

@@ -1,0 +1,119 @@
+<DesignSurfaceView:SceneViewTabControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                                       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                                       xmlns:System="clr-namespace:System;assembly=mscorlib"
+                                       xmlns:DesignSurfaceView="clr-namespace:Microsoft.Expression.DesignSurface.View"
+                                       xmlns:fwctl="clr-namespace:Microsoft.Expression.Framework.Controls;assembly=Microsoft.Expression.Framework"
+                                       x:Uid="Root" Control.Background="{DynamicResource MainWindowBackgroundBrush}">
+  <FrameworkElement.Style>
+    <Style x:Uid="Style_106" TargetType="{x:Type TabControl}" BasedOn="{StaticResource ExpressionTabControl}">
+      <Setter x:Uid="Setter_1164" Property="TabControl.TabStripPlacement" Value="Right"/>
+      <Setter x:Uid="Setter_1037" Property="ItemsControl.ItemContainerStyle">
+        <Setter.Value>
+          <Style x:Uid="Style_107" TargetType="{x:Type TabItem}">
+            <Style.BasedOn>
+              <x:NullExtension/>
+            </Style.BasedOn>
+            <Setter x:Uid="Setter_1036" Property="FrameworkElement.MinHeight"
+                    Value="{DynamicResource {x:Static SystemParameters.HorizontalScrollBarHeightKey}}"/>
+            <Setter x:Uid="Setter_1033" Property="Control.Background">
+              <Setter.Value>
+                <x:NullExtension/>
+              </Setter.Value>
+            </Setter>
+            <Setter x:Uid="Setter_1034" Property="Control.BorderBrush">
+              <Setter.Value>
+                <x:NullExtension/>
+              </Setter.Value>
+            </Setter>
+            <Setter x:Uid="Setter_1058" Property="UIElement.SnapsToDevicePixels" Value="true"/>
+            <Setter x:Uid="Setter_1163" Property="Control.IsTabStop" Value="false"/>
+            <Setter x:Uid="Setter_1039" Property="Control.Template">
+              <Setter.Value>
+                <ControlTemplate x:Uid="ControlTemplate_2" TargetType="{x:Type TabItem}">
+                  <Border x:Uid="Border_3" FrameworkElement.Margin="0,0,0,2"
+                          Background="{TemplateBinding Control.Background}"
+                          BorderBrush="{TemplateBinding Control.BorderBrush}" BorderThickness="0" CornerRadius="2"
+                          FrameworkElement.Height="{TemplateBinding FrameworkElement.Height}">
+                    <fwctl:Icon x:Uid="fwctl:Icon_1" FrameworkElement.Style="{DynamicResource TabItemIconStyle}"
+                                FrameworkElement.Width="{DynamicResource {x:Static SystemParameters.HorizontalScrollBarHeightKey}}"
+                                FrameworkElement.Height="{DynamicResource {x:Static SystemParameters.HorizontalScrollBarHeightKey}}"
+                                DeselectedDrawingBrush="{TemplateBinding fwctl:Icon.DeselectedDrawingBrush}"
+                                SelectedDrawingBrush="{TemplateBinding fwctl:Icon.SelectedDrawingBrush}"/>
+                  </Border>
+                </ControlTemplate>
+              </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+              <Trigger x:Uid="Trigger_1" Property="TabItem.IsSelected" Value="true">
+                <Setter x:Uid="Setter_1165" Property="Panel.ZIndex" Value="100"/>
+                <Setter x:Uid="Setter_1166" Property="Control.Background"
+                        Value="{DynamicResource ArtboardViewTabSelectedBackgroundBrush}"/>
+              </Trigger>
+              <MultiTrigger x:Uid="MultiTrigger_1">
+                <MultiTrigger.Conditions>
+                  <Condition x:Uid="Condition_1" Property="UIElement.IsMouseOver" Value="true"/>
+                  <Condition x:Uid="Condition_2" Property="TabItem.IsSelected" Value="false"/>
+                </MultiTrigger.Conditions>
+                <Setter x:Uid="Setter_1167" Property="Control.Background"
+                        Value="{DynamicResource ArtboardViewTabMouseOverBackgroundBrush}"/>
+              </MultiTrigger>
+            </Style.Triggers>
+          </Style>
+        </Setter.Value>
+      </Setter>
+    </Style>
+  </FrameworkElement.Style>
+  <Control.Template>
+    <ControlTemplate x:Uid="ControlTemplate_1" TargetType="{x:Type DesignSurfaceView:SceneViewTabControl}">
+      <Grid x:Name="Grid" x:Uid="Grid_2" KeyboardNavigation.TabNavigation="Local">
+        <Border x:Uid="Border_4" FrameworkElement.VerticalAlignment="Top"
+                FrameworkElement.HorizontalAlignment="Right" Panel.ZIndex="1"
+                Background="{DynamicResource ListBackgroundBrush}">
+          <TabPanel x:Name="HeaderPanel" x:Uid="TabPanel_1" FrameworkElement.Margin="0,1,0,0" Panel.IsItemsHost="true"
+                    KeyboardNavigation.TabIndex="1"/>
+        </Border>
+        <Border x:Name="ContentPanel" x:Uid="Border_2" BorderThickness="{TemplateBinding Control.BorderThickness}"
+                BorderBrush="{TemplateBinding Control.BorderBrush}"
+                Background="{TemplateBinding Control.Background}" KeyboardNavigation.TabNavigation="Local"
+                KeyboardNavigation.DirectionalNavigation="Contained" KeyboardNavigation.TabIndex="2"
+                CornerRadius="0,0,3,3">
+          <Grid x:Uid="Grid_3" FrameworkElement.Margin="{TemplateBinding Control.Padding}">
+            <ContentPresenter x:Name="ContentSite" x:Uid="ContentPresenter_1"
+                              Content="{TemplateBinding DesignSurfaceView:SceneViewTabControl.MainContent}"
+                              ContentTemplate="{TemplateBinding TabControl.SelectedContentTemplate}"
+                              ContentTemplateSelector="{TemplateBinding TabControl.SelectedContentTemplateSelector}"/>
+            <DesignSurfaceView:NotificationBar x:Uid="DesignSurfaceView:NotificationBar_1" FrameworkElement.VerticalAlignment="Bottom"
+                                               FrameworkElement.HorizontalAlignment="Stretch" CloseDelay="3">
+              <DesignSurfaceView:NotificationBar.IsBuilding>
+                <Binding Path="IsBuilding" Mode="OneWay"/>
+              </DesignSurfaceView:NotificationBar.IsBuilding>
+              <DesignSurfaceView:NotificationBar.BuildMessage>
+                <Binding Path="BuildMessage" Mode="OneWay"/>
+              </DesignSurfaceView:NotificationBar.BuildMessage>
+            </DesignSurfaceView:NotificationBar>
+          </Grid>
+        </Border>
+      </Grid>
+    </ControlTemplate>
+  </Control.Template>
+  <Selector.SelectedIndex>
+    <Binding x:Uid="Binding_1" Path="ViewMode">
+      <Binding.Converter>
+        <DesignSurfaceView:ViewModeToIntConverter x:Uid="DesignSurfaceView:ViewModeToIntConverter_1"/>
+      </Binding.Converter>
+    </Binding>
+  </Selector.SelectedIndex>
+  <TabItem FrameworkElement.Name="DesignContentTabItem" x:Uid="DesignContentTabItem"
+           FrameworkElement.ToolTip="Design" fwctl:Icon.DeselectedDrawingBrush="{StaticResource design_off}"
+           fwctl:Icon.SelectedDrawingBrush="{StaticResource design_on}">
+    <Grid x:Uid="Grid_1">
+      <ContentControl FrameworkElement.Name="DesignContent" x:Uid="DesignContent" UIElement.Focusable="false"/>
+    </Grid>
+  </TabItem>
+  <TabItem FrameworkElement.Name="CodeContent" x:Uid="CodeContent" FrameworkElement.ToolTip="XAML"
+           fwctl:Icon.DeselectedDrawingBrush="{StaticResource xaml_off}"
+           fwctl:Icon.SelectedDrawingBrush="{StaticResource xaml_on}"/>
+  <TabItem FrameworkElement.Name="SplitViewContent" x:Uid="SplitViewContent" FrameworkElement.ToolTip="Split"
+           fwctl:Icon.DeselectedDrawingBrush="{StaticResource split_off}"
+           fwctl:Icon.SelectedDrawingBrush="{StaticResource split_on}"/>
+</DesignSurfaceView:SceneViewTabControl>

@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D918D756-C3B5-45F9-B0A0-B4CF33C0A5CD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BridgeProject</RootNamespace>
+    <AssemblyName>BridgeProject</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\BridgeItem.cs" />
+    <Compile Include="Base\IBridgeItem.cs" />
+    <Compile Include="BridgeItems\Bridge.cs" />
+    <Compile Include="BridgeItems\Pier.cs" />
+    <Compile Include="BridgeItems\Substructures.cs" />
+    <Compile Include="BridgeProject\RelayCommand.cs" />
+    <Compile Include="BridgeItems\Abutment.cs" />
+    <Compile Include="BridgeProject\Substructures\ISubstructures.cs" />
+    <Compile Include="BridgeProject\Substructures\SubstructureItem.cs" />
+    <Compile Include="BridgeProject\TestTreeNode.cs" />
+    <Compile Include="BridgeProject\TreeViewHelper.cs" />
+    <Compile Include="BridgeProject\ViewModelBase.cs" />
+    <Compile Include="BridgeProject\ProjectItem.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="ContextMenuEntry.cs" />
+    <Compile Include="Images\AccessOverlayIcon.cs" />
+    <Compile Include="Images\Images.cs" />
+    <Compile Include="Images\MemberIcon.cs" />
+    <Compile Include="Images\TypeIcon.cs" />
+    <Compile Include="IPane.cs" />
+    <Compile Include="ClassA.cs" />
+    <Compile Include="ClassB.cs" />
+    <Compile Include="ClassC.cs" />
+    <Compile Include="IItem.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="Items\Bridge.cs" />
+    <Compile Include="Items\BridgeItemBase.cs" />
+    <Compile Include="Items\BridgesList.cs" />
+    <Compile Include="Items\Abutment.cs" />
+    <Compile Include="Items\AbutmentsList.cs" />
+    <Compile Include="Items\ICanGetQuantities.cs" />
+    <Compile Include="Items\IHaveCenterPoint.cs" />
+    <Compile Include="Items\Pier.cs" />
+    <Compile Include="Items\PiersList.cs" />
+    <Compile Include="Items\Substructures.cs" />
+    <Compile Include="Items\MileStone.cs" />
+    <Compile Include="Items\Point3d.cs" />
+    <Compile Include="ProjectTemplate\VSTemplateTemplateData.cs" />
+    <Compile Include="ProjectTemplate\VSTemplateTemplateDataLocationField.cs" />
+    <Compile Include="ProjectTemplate\VSTemplateTemplateDataRequiredFrameworkVersion.cs" />
+    <Compile Include="ProjectTemplate\VSTemplateTemplateDataMaxFrameworkVersion.cs" />
+    <Compile Include="ProjectTemplate\SolutionFolder.cs" />
+    <Compile Include="ProjectTemplate\ProjectTemplateLink.cs" />
+    <Compile Include="ProjectTemplate\ProjectItem.cs" />
+    <Compile Include="ProjectTemplate\NameDescriptionIcon.cs" />
+    <Compile Include="ProjectTemplate\Folder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Images\ILSpy.pdn" />
+    <None Include="Images\Untitled-1.psd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock.Themes.Metro\Xceed.Wpf.AvalonDock.Themes.Metro.csproj">
+      <Project>{89286eb4-b4a1-418c-839a-067b00f442d8}</Project>
+      <Name>Xceed.Wpf.AvalonDock.Themes.Metro</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\Xceed.Wpf.AvalonDock.csproj">
+      <Project>{db81988f-e0f2-45a0-a1fd-8c37f3d35244}</Project>
+      <Name>Xceed.Wpf.AvalonDock</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Mono.Cecil\Mono.Cecil.csproj">
+      <Project>{d68133bd-1e63-496e-9ede-4fbdbf77b486}</Project>
+      <Name>Mono.Cecil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Shopdrawing.Core.Utilities\Shopdrawing.Core.Utilities.csproj">
+      <Project>{049507b3-c1de-4f0a-a4c8-72add78fdce9}</Project>
+      <Name>Shopdrawing.Core.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Shopdrawing.Core\Shopdrawing.Core.csproj">
+      <Project>{b5c5d3e2-79db-4839-8375-c0d1b5d832c8}</Project>
+      <Name>Shopdrawing.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Shopdrawing.ProjectExpoler\ProjectExplorer.csproj">
+      <Project>{2854814f-ea3c-41d4-aa94-460c4694f430}</Project>
+      <Name>ProjectExplorer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Shopdrawing.Wpf\Shopdrawing.Wpf.csproj">
+      <Project>{a0dcbd9d-7e4c-41a0-a3d1-599a422abd27}</Project>
+      <Name>Shopdrawing.Wpf</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Inspector\Inspector.csproj">
+      <Project>{20c048f8-7ca0-4ffb-9431-af55e9f4d6b6}</Project>
+      <Name>Inspector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SharpTreeView\ICSharpCode.TreeView.csproj">
+      <Project>{dde2a481-8271-4eac-a330-8fa6a38d13d1}</Project>
+      <Name>ICSharpCode.TreeView</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shopdrawing.Framework\Shopdrawing.Framework.csproj">
+      <Project>{886371dd-23b6-434d-bdb6-81606416348f}</Project>
+      <Name>Shopdrawing.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\M4600\tr\ComplexDataTemplates\ComplexDataTemplates\ComplexDataTemplates.csproj">
+      <Project>{11440e2a-0411-4d7d-b23b-ec29d0ba6ca0}</Project>
+      <Name>ComplexDataTemplates</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="BridgeProject\Icons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BridgeProject\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BridgeProject\Themes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ClassA.png" />
+    <Resource Include="Images\ClassB.png" />
+    <Resource Include="Images\ClassBs.png" />
+    <Resource Include="Images\ClassC.png" />
+    <Resource Include="Images\ClassCs.png" />
+    <Resource Include="Images\icecream.png" />
+    <Resource Include="Images\Item.png" />
+    <Resource Include="Images\pickle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sub.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\abut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Assembly.png" />
+    <Resource Include="Images\AssemblyList.png" />
+    <Resource Include="Images\AssemblyListGAC.png" />
+    <Resource Include="Images\AssemblyWarning.png" />
+    <Resource Include="Images\Back.png" />
+    <Resource Include="Images\Break.png" />
+    <Resource Include="Images\Breakpoint.png" />
+    <Resource Include="Images\Class.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ClearSearch.png" />
+    <Resource Include="Images\Constructor.png" />
+    <Resource Include="Images\CurrentLine.png" />
+    <Resource Include="Images\Delegate.png" />
+    <Resource Include="Images\Delete.png" />
+    <Resource Include="Images\DisabledBreakpoint.png" />
+    <Resource Include="Images\Enum.png" />
+    <Resource Include="Images\EnumValue.png" />
+    <Resource Include="Images\Event.png" />
+    <Resource Include="Images\ExtensionMethod.png" />
+    <Resource Include="Images\Field.png" />
+    <Resource Include="Images\FieldReadOnly.png" />
+    <Resource Include="Images\Find.png" />
+    <Resource Include="Images\FindAssembly.png" />
+    <Resource Include="Images\Folder.Closed.png" />
+    <Resource Include="Images\Folder.Open.png" />
+    <Resource Include="Images\Forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ILSpy-Large.ico" />
+    <Resource Include="Images\ILSpy.ico" />
+    <Resource Include="Images\ILSpyNewIconList.txt" />
+    <Resource Include="Images\Indexer.png" />
+    <Resource Include="Images\Interface.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Library.png" />
+    <Resource Include="Images\Literal.png" />
+    <Resource Include="Images\Method.png" />
+    <Resource Include="Images\NameSpace.png" />
+    <Resource Include="Images\OK.png" />
+    <Resource Include="Images\Open.png" />
+    <Resource Include="Images\Operator.png" />
+    <Resource Include="Images\OverlayCompilerControlled.png" />
+    <Resource Include="Images\OverlayInternal.png" />
+    <Resource Include="Images\OverlayPrivate.png" />
+    <Resource Include="Images\OverlayProtected.png" />
+    <Resource Include="Images\OverlayProtectedInternal.png" />
+    <Resource Include="Images\OverlayStatic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\PInvokeMethod.png" />
+    <Resource Include="Images\PrivateInternal.png" />
+    <Resource Include="Images\Property.png" />
+    <Resource Include="Images\ReferenceFolder.Closed.png" />
+    <Resource Include="Images\ReferenceFolder.Open.png" />
+    <Resource Include="Images\Refresh.png" />
+    <Resource Include="Images\Resource.png" />
+    <Resource Include="Images\ResourceImage.png" />
+    <Resource Include="Images\ResourceResourcesFile.png" />
+    <Resource Include="Images\ResourceXml.png" />
+    <Resource Include="Images\ResourceXsd.png" />
+    <Resource Include="Images\ResourceXsl.png" />
+    <Resource Include="Images\ResourceXslt.png" />
+    <Resource Include="Images\SaveFile.png" />
+    <Resource Include="Images\Search.png" />
+    <Resource Include="Images\StaticClass.png" />
+    <Resource Include="Images\Struct.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\SubTypes.png" />
+    <Resource Include="Images\SuperTypes.png" />
+    <Resource Include="Images\ViewCode.png" />
+    <Resource Include="Images\VirtualMethod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Bridge.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

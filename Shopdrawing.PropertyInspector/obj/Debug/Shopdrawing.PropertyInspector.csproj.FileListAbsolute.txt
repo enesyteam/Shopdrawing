@@ -1,0 +1,12 @@
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.PropertyInspector\bin\Debug\Shopdrawing.PropertyInspector.dll.config
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.PropertyInspector\bin\Debug\Shopdrawing.PropertyInspector.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.PropertyInspector\bin\Debug\Shopdrawing.PropertyInspector.pdb
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.PropertyInspector\bin\Debug\Shopdrawing.Design.Interaction.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.PropertyInspector\bin\Debug\Shopdrawing.Design.Extensibility.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.PropertyInspector\bin\Debug\Shopdrawing.Design.Interaction.pdb
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.PropertyInspector\bin\Debug\Shopdrawing.Design.Extensibility.pdb
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.PropertyInspector\obj\Debug\Shopdrawing.PropertyInspector.csprojResolveAssemblyReference.cache
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.PropertyInspector\obj\Debug\Shopdrawing.PropertyInspector.Properties.Resources.resources
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.PropertyInspector\obj\Debug\Shopdrawing.PropertyInspector.csproj.GenerateResource.Cache
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.PropertyInspector\obj\Debug\Shopdrawing.PropertyInspector.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.PropertyInspector\obj\Debug\Shopdrawing.PropertyInspector.pdb

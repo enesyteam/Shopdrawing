@@ -1,0 +1,8 @@
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Designsurface2\bin\Debug\Shopdrawing.Designsurface2.dll.config
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Designsurface2\bin\Debug\Shopdrawing.Designsurface2.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Designsurface2\bin\Debug\Shopdrawing.Designsurface2.pdb
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Designsurface2\obj\Debug\Shopdrawing.Designsurface2.Properties.Resources.resources
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Designsurface2\obj\Debug\Shopdrawing.Designsurface2.csproj.GenerateResource.Cache
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Designsurface2\obj\Debug\Shopdrawing.Designsurface2.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Designsurface2\obj\Debug\Shopdrawing.Designsurface2.pdb
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Designsurface2\obj\Debug\Shopdrawing.Designsurface2.csprojResolveAssemblyReference.cache

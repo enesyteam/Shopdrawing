@@ -1,0 +1,71 @@
+﻿<DesignView:NotificationBar
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+ xmlns:DesignView="clr-namespace:Microsoft.Expression.DesignSurface.View"
+ xmlns:automation="clr-namespace:Microsoft.Expression.Framework.Diagnostics"
+ xmlns:FrameworkDatabinding="clr-namespace:Microsoft.Expression.Framework.Data"
+ xmlns:FrameworkControls="clr-namespace:Microsoft.Expression.Framework.Controls">
+    <DesignView:NotificationBar.Template>
+
+                <ControlTemplate TargetType="{x:Type DesignView:NotificationBar}">
+                    <ControlTemplate.Resources>
+                        <!--<DesignView:NegateConverter/>-->
+                        <Storyboard x:Key="EnterAnimation">
+                            <DoubleAnimation To="0"
+                             Storyboard.TargetName="MainBar"
+                             Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)"
+                             Duration="0:0:0.3"/>
+                        </Storyboard>
+                        <Storyboard x:Key="ExitAnimation">
+                            <DoubleAnimation Storyboard.TargetName="MainBar"
+                             Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)"
+                             Duration="0:0:0.3"/>
+                        </Storyboard>
+                    </ControlTemplate.Resources>
+                    <Grid Name="MainBar"
+                     automation:AutomationElement.Id="NotificationMainBar"
+                     Height="Auto"
+                     VerticalAlignment="Bottom"
+                     Background="{DynamicResource BackgroundBrush}">
+                        <Grid.RenderTransform>
+                            <TranslateTransform X="0" Y="{Binding Path=ActualHeight,ElementName=MainBar}"/>
+                        </Grid.RenderTransform>
+                        <TextBlock Name="MainText"
+                             automation:AutomationElement.Id="NotificationMainBarText"
+                             HorizontalAlignment="Left"
+                             VerticalAlignment="Center"
+                             Margin="2,2,0,2"
+                             Text="{Binding BuildMessage,RelativeSource={RelativeSource TemplatedParent}}"/>
+                        <Button automation:AutomationElement.Id="NotificationMainBarDismissButton"
+                             HorizontalAlignment="Right"
+                             VerticalAlignment="Center"
+                             Margin="0,1,1,0"
+                             MinWidth="0"
+                             MinHeight="0"
+                             Width="17"
+                             Height="17"
+                             Focusable="False"
+                             ToolTip="Close"
+
+
+                             Command="{Binding DismissCommand,RelativeSource={RelativeSource TemplatedParent}}"/>
+                        <!--Style="{DynamicResource IconButton}"
+                FrameworkControls:Icon.SelectedImage="/Microsoft.Expression.Framework;Component/Resources/Icons/ux/ux_close_on_11x11.png"
+                             FrameworkControls:Icon.DeselectedImage="/Microsoft.Expression.Framework;Component/Resources/Icons/ux/ux_close_off_11x11.png"-->
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="DesignView:NotificationBar.IsOpen" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource EnterAnimation}"/>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource ExitAnimation}"/>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+    </DesignView:NotificationBar.Template>
+    <Grid>
+            
+    </Grid>
+</DesignView:NotificationBar>

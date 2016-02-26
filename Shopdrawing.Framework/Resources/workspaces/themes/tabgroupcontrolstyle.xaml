@@ -1,0 +1,112 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vs="clr-namespace:Microsoft.VisualStudio.PlatformUI.Shell.Controls"
+                    xmlns:vsshell="clr-namespace:Microsoft.VisualStudio.PlatformUI.Shell"
+                    x:Uid="ResourceDictionary_1">
+  <Style x:Uid="Style_1" TargetType="{x:Type vs:TabGroupControl}">
+    <Style.Resources>
+      <DataTemplate x:Uid="DataTemplate_1" DataType="{x:Type vsshell:View}">
+        <vs:ViewPresenter x:Uid="vs:ViewPresenter_1" ContentControl.Content="{Binding Content}">
+          <vs:ViewPresenter.View>
+            <Binding/>
+          </vs:ViewPresenter.View>
+          <vs:ViewPresenter.ContainingElement>
+            <Binding/>
+          </vs:ViewPresenter.ContainingElement>
+        </vs:ViewPresenter>
+      </DataTemplate>
+      <vs:TabGroupBorderThicknessConverter x:Uid="vs:TabGroupBorderThicknessConverter_1" x:Key="TabGroupBorderThicknessConverter"/>
+    </Style.Resources>
+    <Setter x:Uid="Setter_1" Property="TabControl.TabStripPlacement" Value="Bottom"/>
+    <Setter x:Uid="Setter_2" Property="Control.BorderBrush" Value="DarkGray"/>
+    <Setter x:Uid="Setter_3" Property="Control.BorderThickness" Value="1"/>
+    <Setter x:Uid="Setter_4" Property="Control.Padding" Value="5,0,5,0"/>
+    <Setter x:Uid="Setter_5" Property="Control.Template">
+      <Setter.Value>
+        <ControlTemplate x:Uid="ControlTemplate_1" TargetType="{x:Type vs:TabGroupControl}">
+          <vs:DockTarget x:Uid="vs:DockTarget_1" DockTargetType="Inside" Border.Background="Transparent">
+            <Grid x:Name="TabGroupControlPanel" x:Uid="TabGroupControlPanel">
+              <Grid.RowDefinitions>
+                <RowDefinition x:Uid="RowDefinition_1" Height="Auto"/>
+                <RowDefinition x:Uid="RowDefinition_2" Height="*"/>
+                <RowDefinition x:Uid="RowDefinition_3" Height="Auto"/>
+              </Grid.RowDefinitions>
+              <Border x:Uid="Border_1" Background="{TemplateBinding Control.Background}"
+                      BorderBrush="{TemplateBinding Control.BorderBrush}" Grid.Row="0"
+                      BorderThickness="{TemplateBinding BorderThickness, Converter={StaticResource TabGroupBorderThicknessConverter}, ConverterParameter={x:Static vs:TabGroupBorderType.HeaderBorder}}">
+                <vs:DockTarget x:Uid="vs:DockTarget_2" DockTargetType="FillPreview">
+                  <vs:DockTarget.AdornmentTarget>
+                    <Binding ElementName="TabGroupControlPanel"/>
+                  </vs:DockTarget.AdornmentTarget>
+                  <vs:ViewHeader x:Name="PART_Header" x:Uid="PART_Header" View="{Binding SelectedElement}">
+                    <vs:ViewHeader.ContainingElement>
+                      <Binding/>
+                    </vs:ViewHeader.ContainingElement>
+                    <vs:ViewHeader.ContainingFrameworkElement>
+                      <Binding RelativeSource="{RelativeSource TemplatedParent}"/>
+                    </vs:ViewHeader.ContainingFrameworkElement>
+                  </vs:ViewHeader>
+                </vs:DockTarget>
+              </Border>
+              <Border x:Uid="Border_2" Background="{TemplateBinding Control.Background}"
+                      BorderBrush="{TemplateBinding Control.BorderBrush}" KeyboardNavigation.TabNavigation="Local"
+                      KeyboardNavigation.DirectionalNavigation="Contained" KeyboardNavigation.TabIndex="2" Grid.Row="1"
+                      BorderThickness="{TemplateBinding BorderThickness, Converter={StaticResource TabGroupBorderThicknessConverter}, ConverterParameter={x:Static vs:TabGroupBorderType.ContentBorder}}">
+                <ContentPresenter x:Name="PART_SelectedContentHost" x:Uid="PART_SelectedContentHost"
+                                  UIElement.SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+                                  FrameworkElement.Margin="{TemplateBinding Control.Padding}">
+                  <ContentPresenter.Content>
+                    <Binding Path="SelectedItem" RelativeSource="{RelativeSource TemplatedParent}"/>
+                  </ContentPresenter.Content>
+                </ContentPresenter>
+              </Border>
+              <vs:DockTarget x:Name="TabPanelTarget" x:Uid="TabPanelTarget" DockTargetType="FillPreview" Grid.Row="2">
+                <vs:DockTarget.AdornmentTarget>
+                  <Binding ElementName="TabGroupControlPanel"/>
+                </vs:DockTarget.AdornmentTarget>
+                <Border x:Name="HeaderPanel" x:Uid="HeaderPanel" Background="White">
+                  <vs:SingleRowTabPanel x:Uid="vs:SingleRowTabPanel_1" Panel.ZIndex="2" KeyboardNavigation.TabIndex="1"
+                                        FrameworkElement.Margin="2,0,2,2" Panel.IsItemsHost="true"/>
+                </Border>
+              </vs:DockTarget>
+            </Grid>
+          </vs:DockTarget>
+          <ControlTemplate.Triggers>
+            <Trigger x:Uid="Trigger_1" Property="UIElement.IsEnabled" Value="false">
+              <Setter x:Uid="Setter_6" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"
+                      Property="Control.Foreground"/>
+            </Trigger>
+            <DataTrigger x:Uid="DataTrigger_1" Value="1">
+              <DataTrigger.Binding>
+                <Binding Path="Items.Count" RelativeSource="{RelativeSource Self}"/>
+              </DataTrigger.Binding>
+              <Setter x:Uid="Setter_7" TargetName="HeaderPanel" Property="UIElement.Visibility" Value="Collapsed"/>
+              <Setter x:Uid="Setter_8" TargetName="TabPanelTarget" Property="UIElement.Visibility" Value="Collapsed"/>
+            </DataTrigger>
+            <DataTrigger x:Uid="DataTrigger_2" Value="True">
+              <DataTrigger.Binding>
+                <Binding Source="{x:Static vsshell:ViewManager.Instance}" Path="Preferences.AllowTabGroupTabAutoDocking"/>
+              </DataTrigger.Binding>
+              <Setter x:Uid="Setter_9" TargetName="TabPanelTarget" Property="vs:DockTarget.DockTargetType" Value="Auto"/>
+            </DataTrigger>
+            <Trigger x:Uid="Trigger_2" Property="vs:FloatingWindow.IsFloating" Value="false">
+              <Setter x:Uid="Setter_10" Property="Control.Padding" Value="0"/>
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+    <Setter x:Uid="Setter_11" Property="ItemsControl.ItemTemplate">
+      <Setter.Value>
+        <DataTemplate x:Uid="DataTemplate_2" DataType="{x:Type vsshell:View}">
+          <vs:DragUndockHeader x:Uid="vs:DragUndockHeader_1" ViewFrameworkElement="{Binding Content}">
+            <vs:DragUndockHeader.ViewElement>
+              <Binding/>
+            </vs:DragUndockHeader.ViewElement>
+            <ContentControl x:Uid="ContentControl_1" Content="{Binding Title}" ContentTemplate="{Binding TabTitleTemplate}"/>
+          </vs:DragUndockHeader>
+        </DataTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

@@ -1,0 +1,179 @@
+<FontFamily xmlns="http://schemas.microsoft.com/winfx/2006/xaml/composite-font"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:System="clr-namespace:System;assembly=mscorlib"
+            x:Uid="FontFamily_1" Baseline="1.0909" LineSpacing="1.45454545">
+  <FontFamily.FamilyNames>
+    <System:String x:Uid="System:String_1" x:Key="en-US">
+      Portable User Interface
+    </System:String>
+  </FontFamily.FamilyNames>
+  <FontFamily.FamilyTypefaces>
+    <FamilyTypeface x:Uid="FamilyTypeface_1" Weight="Normal" Stretch="Normal" Style="Normal" UnderlinePosition="-0.1"
+                    UnderlineThickness="0.05" StrikethroughPosition="0.3" StrikethroughThickness="0.05"
+                    CapsHeight="0.5" XHeight="0.3"/>
+    <FamilyTypeface x:Uid="FamilyTypeface_2" Weight="Bold" Stretch="Normal" Style="Normal" UnderlinePosition="-0.1"
+                    UnderlineThickness="0.05" StrikethroughPosition="0.3" StrikethroughThickness="0.05"
+                    CapsHeight="0.5" XHeight="0.3"/>
+  </FontFamily.FamilyTypefaces>
+  <FontFamily.FamilyMaps>
+    <FontFamilyMap x:Uid="FontFamilyMap_1"
+                   Unicode="0000-052F, 0590-05FF, 1D00-1FFF, 2C60-2C7F, A720-A7FF, FB00-FB0F, FB1D-FB4F, FE20-FE2F"
+                   Target="Verdana, Arial, Arial Unicode MS, Lucida Sans Unicode, Lucida Grande" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_2" Unicode="0600-06FF, 0750-077F, FB50-FDCF, FDF0-FDFF, FE70-FEFE"
+                   Language="zh-Hans" Target="Arial, Arial Unicode MS" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_3" Unicode="0600-06FF, 0750-077F, FB50-FDCF, FDF0-FDFF, FE70-FEFE"
+                   Target="Arial, Arial Unicode MS" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_72" Unicode="0900-097F" Target="Mangal" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_73" Unicode="0980-09FF" Target="Vrinda" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_74" Unicode="0A00-0A7F" Target="Raavi" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_75" Unicode="0A80-0AFF" Target="Shruti" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_76" Unicode="0B00-0B7F" Target="Kalinga" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_77" Unicode="0B80-0BFF" Target="Latha" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_78" Unicode="0C00-0C7F" Target="Gautami" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_79" Unicode="0C80-0CFF" Target="Tunga" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_80" Unicode="0D00-0D7F" Target="Kartika" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_81" Unicode="0E00-0E7F"
+                   Target="BrowalliaUPC, Browallia New, Tahoma, Arial Unicode MS, Lucida Grande" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_82" Unicode="0E80-0EFF" Target="DokChampa" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_4" Unicode="10A0-10FF, 2D00-2D2F" Target="Arial Unicode MS" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_5" Unicode="1100-11FF, 3130-318F, 3200-321F, 3260-327F, AC00-D7AF"
+                   Target="AppleGothic, Malgun Gothic, Gulim" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_6" Unicode="2000-245F, 2500-26FF, 27C0-2BFF" Language="zh-Hans"
+                   Target="Verdana, Arial, Apple Symbols, Arial Unicode MS, Microsoft YaHei, Meiryo, SimSun, MS Gothic, Segoe UI Symbol, Cambria Math"
+                   Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_7" Unicode="2000-245F, 2500-26FF, 27C0-2BFF" Language="zh-Hant"
+                   Target="Verdana, Arial, Apple Symbols, Arial Unicode MS, Microsoft JhengHei, Meiryo, MingLiU, MS Gothic, Segoe UI Symbol, Cambria Math"
+                   Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_8" Unicode="2000-245F, 2500-26FF, 27C0-2BFF" Language="ko"
+                   Target="Verdana, Arial, Apple Symbols, Arial Unicode MS, Malgun Gothic, Gulim, MS Gothic, Segoe UI Symbol, Cambria Math"
+                   Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_9" Unicode="2000-245F, 2500-26FF, 27C0-2BFF"
+                   Target="Verdana, Arial, Apple Symbols, Arial Unicode MS, Meiryo, MS Gothic, Segoe UI Symbol, Cambria Math"
+                   Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_10" Unicode="2460-24FF"
+                   Target="Hiragino Kaku Gothic Pro, STHeiti, Arial Unicode MS, Meiryo, MS Gothic" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_11" Unicode="2700-27BF" Target="Zapf Dingbats, Arial Unicode MS" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_12" Unicode="2E00-2E7F" Target="Helvetica" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_13" Unicode="2E80-2FDF, 4DC0-4DFF, A700-A71F"
+                   Target="Apple Symbols, Meiryo, Microsoft YaHei, MingLiu, SimSun" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_14" Unicode="2FF0-2FFF" Target="STHeiti, SimSun" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_15" Unicode="3000-30FF, 31F0-31FF" Language="zh-Hans"
+                   Target="STHeiti, LiHei Pro, Hiragino Kaku Gothic Pro, AppleGothic, Microsoft Yahei, MS Gothic, SimSun, Arial Unicode MS"
+                   Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_16" Unicode="3000-30FF, 31F0-31FF" Language="zh-Hant"
+                   Target="LiHei Pro, STHeiti, Hiragino Kaku Gothic Pro, AppleGothic, Microsoft JhengHei, MS Gothic, MingLiu, Arial Unicode MS"
+                   Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_17" Unicode="3000-30FF, 31F0-31FF" Language="ko"
+                   Target="AppleGothic, Hiragino Kaku Gothic Pro, STHeiti, LiHei Pro, Malgun Gothic, Meiryo, Microsoft Yahei, Gulim, MS Gothic, MingLiu, Arial Unicode MS"
+                   Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_18" Unicode="3000-30FF, 31F0-31FF"
+                   Target="Hiragino Kaku Gothic Pro, AppleGothic, STHeiti, LiHei Pro, Meiryo, Microsoft Yahei, MS Gothic, MingLiu, Arial Unicode MS"
+                   Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_19" Unicode="3100-312F, 31A0-31BF" Language="zh-Hans"
+                   Target="STHeiti, Microsoft Yahei, SimSun, Arial Unicode MS" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_20" Unicode="3100-312F, 31A0-31BF" Language="zh-Hant"
+                   Target="LiHei Pro, Microsoft JhengHei, MingLiu, Arial Unicode MS" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_21" Unicode="3100-312F, 31A0-31BF"
+                   Target="LiHei Pro, Microsoft Yahei, MingLiu, Arial Unicode MS" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_22" Unicode="3190-319F"
+                   Target="Hiragino Kaku Gothic Pro, Microsoft Yahei, MingLiu" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_23" Unicode="31C0-31EF" Target="LiHei Pro, MingLiu" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_24" Unicode="3220-324F,3251-325F, 3280-32CB, 32D0-3376, 337B-337F, 33E0-33FF"
+                   Target="Hiragino Kaku Gothic Pro, Meiryo, MS Gothic, Arial Unicode MS" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_25" Unicode="3380-33DF"
+                   Target="Hiragino Kaku Gothic Pro, AppleGothic, STHeiti, Meiryo, MS Gothic, Arial Unicode MS"
+                   Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_26" Unicode="3400-4DBF, 4E00-9FBB" Language="zh-Hans"
+                   Target="STHeiti, LiHei Pro, Microsoft Yahei, SimSun, SimSun-18030" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_27" Unicode="3400-4DBF, 4E00-9FBB" Language="zh-HK"
+                   Target="LiHei Pro, STHeiti, Microsoft JhengHei, Microsoft YaHei, MingLiU_HKSCS, MingLiU, SimSun, SimSun-18030"
+                   Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_28" Unicode="3400-4DBF, 4E00-9FBB" Language="zh-Hant"
+                   Target="LiHei Pro, STHeiti, Microsoft JhengHei, Microsoft Yahei, MingLiu, SimSun, SimSun-18030"
+                   Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_29" Unicode="3400-4DBF, 4E00-9FBB" Language="ja"
+                   Target="Hiragino Kaku Gothic Pro, AppleGothic, STHeiti, LiHei Pro, Meiryo, MS Gothic, Microsoft Yahei, SimSun"
+                   Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_30" Unicode="3400-4DBF, 4E00-9FBB" Language="ko"
+                   Target="AppleGothic, Hiragino Kaku Gothic Pro, STHeiti, LiHei Pro, Gulim, Microsoft YaHei, MS Gothic, Simsun"
+                   Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_31" Unicode="3400-4DBF, 4E00-9FBB"
+                   Target="STHeiti, LiHei Pro, Meiryo, Microsoft Yahei, MS Gothic, SimSun" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_32" Unicode="A000-A4CF" Target="Microsoft Yi Baiti, STHeiti" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_33" Unicode="F900-FAFF" Language="zh-Hans"
+                   Target="AppleGothic, Hiragino Kaku Gothic Pro, STHeiti, Microsoft YaHei, Microsoft JhengHei, Meiryo, MS Gothic, Gulim"
+                   Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_34" Unicode="F900-FAFF" Language="zh-Hant"
+                   Target="AppleGothic, Hiragino Kaku Gothic Pro, LiHei Pro, Microsoft JhengHei, Meiryo, MS Gothic, Gulim"
+                   Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_35" Unicode="F900-FAFF" Language="ko"
+                   Target="AppleGothic, Hiragino Kaku Gothic Pro, STHeiti, Meiryo, Microsoft JhengHei, Gulim, MS Gothic"
+                   Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_36" Unicode="F900-FAFF"
+                   Target="AppleGothic, Hiragino Kaku Gothic Pro, STHeiti, Meiryo, Microsoft JhengHei, MS Gothic, Gulim"
+                   Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_37" Unicode="FE10-FE1F" Language="zh-Hans" Target="STHeiti, Microsoft YaHei"
+                   Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_38" Unicode="FE10-FE1F" Language="ko"
+                   Target="STHeiti, Malgun Gothic, Microsoft JhengHei" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_39" Unicode="FE10-FE1F" Target="STHeiti, Microsoft JhengHei" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_40" Unicode="FE30-FE6F" Language="zh-Hans"
+                   Target="STHeiti, Hiragino Kaku Gothic Pro, Microsoft YaHei, SimSun" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_41" Unicode="FE30-FE6F" Language="zh-Hant"
+                   Target="LiHei Pro, Hiragino Kaku Gothic Pro, Microsoft JhengHei, MingLiU" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_42" Unicode="FE30-FE6F" Language="ja"
+                   Target="Hiragino Kaku Gothic Pro, STHeiti, Meiryo, Microsoft JhengHei, MingLiu" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_43" Unicode="FE30-FE6F" Language="ko"
+                   Target="STHeiti, Hiragino Kaku Gothic Pro, Malgun Gothic, Microsoft JhengHei, MingLiu" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_44" Unicode="FE30-FE6F"
+                   Target="STHeiti, Hiragino Kaku Gothic Pro, Microsoft JhengHei, MingLiu" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_45" Unicode="FF00-FF60" Language="zh-Hans"
+                   Target="STHeiti, Hiragino Kaku Gothic Pro, Microsoft YaHei, MS Gothic" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_46" Unicode="FF00-FF60" Language="zh-Hant"
+                   Target="LiHei Pro, Hiragino Kaku Gothic Pro, Microsoft JhengHei, MS Gothic" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_47" Unicode="FF00-FF60" Language="ko"
+                   Target="Hiragino Kaku Gothic Pro, Malgun Gothic, Meiryo, Gulim, MS Gothic" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_48" Unicode="FF00-FF60" Target="Hiragino Kaku Gothic Pro, Meiryo, MS Gothic"
+                   Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_49" Unicode="FF61-FF9F" Language="zh-Hans"
+                   Target="STHeiti, Hiragino Kaku Gothic Pro, Microsoft YaHei, MingLiU" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_50" Unicode="FF61-FF9F" Language="zh-Hant"
+                   Target="LiHei Pro, Hiragino Kaku Gothic Pro, Microsoft JhengHei, MingLiU" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_51" Unicode="FF61-FF9F" Target="Hiragino Kaku Gothic Pro, Meiryo, MS Gothic"
+                   Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_52" Unicode="FFA0-FFDC" Target="Arial Unicode MS" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_53" Unicode="FFE0-FFEE" Language="zh-Hans"
+                   Target="STHeiti, Apple Symbols, Microsoft YaHei, MS Gothic" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_54" Unicode="FFE0-FFEE" Language="zh-Hant"
+                   Target="LiHei Pro, Apple Symbols, Microsoft JhengHei, MS Gothic" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_55" Unicode="FFE0-FFEE" Language="ja"
+                   Target="Hiragino Kaku Gothic Pro, Apple Symbols, Meiryo, Microsoft JhengHei, MS Gothic" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_56" Unicode="FFE0-FFEE" Language="ko"
+                   Target="Hiragino Kaku Gothic Pro, Apple Symbols, Malgun Gothic, Meiryo, Microsoft JhengHei, Gulim, MS Gothic"
+                   Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_57" Unicode="FFE0-FFEE"
+                   Target="Hiragino Kaku Gothic Pro, Apple Symbols, Microsoft JhengHei, MS Gothic" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_58" Unicode="FFF0-FFFD" Target="Apple Symbols, Tahoma" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_59" Unicode="10100-1018F" Target="Apple Symbols" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_60" Unicode="10400-1047F" Target="Apple Symbols, Segoe UI Symbol" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_61" Unicode="1D100-1D1FF" Target="Apple Symbols" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_62" Unicode="1D300-1D37F" Target="Apple Symbols" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_63" Unicode="1D400-1D7FF" Target="Cambria Math, Apple Symbols" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_64" Unicode="20000-2A6DF" Language="zh-Hans"
+                   Target="SimSun-ExtB, STHeiti, LiHei Pro, Hiragino Kaku Gothic Pro" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_65" Unicode="20000-2A6DF" Language="zh-Hant"
+                   Target="MingLiU-ExtB, LiHei Pro, STHeiti, Hiragino Kaku Gothic Pro" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_66" Unicode="20000-2A6DF" Language="ja"
+                   Target="Hiragino Kaku Gothic Pro, STHeiti, LiHei Pro, Meiryo, MS Gothic, MingLiU-ExtB" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_67" Unicode="20000-2A6DF"
+                   Target="MingLiU-ExtB, STHeiti, LiHei Pro, Hiragino Kaku Gothic Pro" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_68" Unicode="2F800-2FA1F" Language="zh-Hans"
+                   Target="SimSun-ExtB, Hiragino Kaku Gothic Pro, LiHei Pro" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_69" Unicode="2F800-2FA1F" Language="zh-HK"
+                   Target="MingLiU_HKSCS-ExtB, MingLiU-ExtB, Hiragino Kaku Gothic Pro, LiHei Pro" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_70" Unicode="2F800-2FA1F" Language="zh-Hant"
+                   Target="MingLiU-ExtB, Hiragino Kaku Gothic Pro, LiHei Pro" Scale="1.0"/>
+    <FontFamilyMap x:Uid="FontFamilyMap_71" Unicode="2F800-2FA1F"
+                   Target="Hiragino Kaku Gothic Pro, LiHei Pro, Meiryo, MingLiU-ExtB" Scale="1.0"/>
+  </FontFamily.FamilyMaps>
+</FontFamily>

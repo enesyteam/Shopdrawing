@@ -1,0 +1,11 @@
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Settings\DefaultSettings\bin\Debug\Shopdrawing.DefaultSettings.dll
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Settings\DefaultSettings\bin\Debug\Shopdrawing.DefaultSettings.pdb
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Settings\DefaultSettings\bin\Debug\DynamicGeometry.dll
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Settings\DefaultSettings\bin\Debug\GuiLabs.Undo.dll
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Settings\DefaultSettings\bin\Debug\Shopdrawing.Controls.dll
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Settings\DefaultSettings\bin\Debug\DynamicGeometry.pdb
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Settings\DefaultSettings\bin\Debug\GuiLabs.Undo.pdb
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Settings\DefaultSettings\bin\Debug\Shopdrawing.Controls.pdb
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Settings\DefaultSettings\obj\Debug\DefaultSettings.csprojResolveAssemblyReference.cache
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Settings\DefaultSettings\obj\Debug\Shopdrawing.DefaultSettings.dll
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Settings\DefaultSettings\obj\Debug\Shopdrawing.DefaultSettings.pdb

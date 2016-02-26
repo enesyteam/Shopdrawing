@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddServiceMustBeCalledWithAnInstanceOfSpecifiedType" xml:space="preserve">
+    <value>AddService must be called with an instance of the specified type.</value>
+  </data>
+  <data name="AssemblyDoesNotExist" xml:space="preserve">
+    <value>The assembly does not exist.</value>
+  </data>
+  <data name="CannotAddAtomicUnitToUndoManager" xml:space="preserve">
+    <value>Cannot add an atomic undo unit to undo manager.</value>
+  </data>
+  <data name="CannotAddUndoUnitsToAnUndoContainerThatIsAlreadyClosed" xml:space="preserve">
+    <value>Cannot add undo units to an undo container that is already closed.</value>
+  </data>
+  <data name="CannotClearFromWithinAnOpenUndoContainer" xml:space="preserve">
+    <value>Cannot clear the undo stack from within an open undo container.</value>
+  </data>
+  <data name="CannotCreateTransactionDuringUndo" xml:space="preserve">
+    <value>Cannot create an undo transaction while performing an undo operation.</value>
+  </data>
+  <data name="CannotCreateWorkspacesFolder" xml:space="preserve">
+    <value>Unable to create or access Workspaces folder: {0}</value>
+  </data>
+  <data name="CannotEndClosedUndoContainer" xml:space="preserve">
+    <value>Cannot end a closed undo unit container.</value>
+  </data>
+  <data name="CannotEndUndoContainersOutOfOrder" xml:space="preserve">
+    <value>Cannot end undo unit containers out of order.</value>
+  </data>
+  <data name="CannotEndWithoutOpenUndoContainer" xml:space="preserve">
+    <value>Cannot end without an open undo unit container.</value>
+  </data>
+  <data name="CannotFindATypeConverterForType" xml:space="preserve">
+    <value>Cannot find a TypeConverter for type {0} while parsing ConfigurationObject.</value>
+  </data>
+  <data name="CannotModifySealedUndoUnitContainer" xml:space="preserve">
+    <value>Cannot change a sealed undo unit container.</value>
+  </data>
+  <data name="CannotNestAdds" xml:space="preserve">
+    <value>Cannot nest calls to add undo units.</value>
+  </data>
+  <data name="CannotReachHere" xml:space="preserve">
+    <value>Cannot reach here.</value>
+  </data>
+  <data name="CannotRedoFromWithinAnOpenUndoContainer" xml:space="preserve">
+    <value>Cannot redo from within an open undo unit container.</value>
+  </data>
+  <data name="CannotUndoFromWithinAnOpenUndoContainer" xml:space="preserve">
+    <value>Cannot undo from within an open undo unit container.</value>
+  </data>
+  <data name="CanOnlySetFocusScopePriorityOnAnElementThatIsAFocusScope" xml:space="preserve">
+    <value>Can only set FocusScopePriority on an element that is a FocusScope.</value>
+  </data>
+  <data name="CantRegisterADependencyOnANonexistentTask" xml:space="preserve">
+    <value>Can't register a dependency on a nonexistent task.</value>
+  </data>
+  <data name="CantRegisterADependencyOnATaskAtALowerPriorityThanYourself" xml:space="preserve">
+    <value>Can't register a dependency on a task at a lower priority than yourself.</value>
+  </data>
+  <data name="CantRegisterTwoTasksWithSameName" xml:space="preserve">
+    <value>Can't register two tasks with the same name.</value>
+  </data>
+  <data name="CantRemoveATaskThatOtherTasksDependOn" xml:space="preserve">
+    <value>Can't remove a task that other tasks depend on.</value>
+  </data>
+  <data name="ConvertBackNotImplementedOnMarginConverter" xml:space="preserve">
+    <value>ConvertBack not implemented on MarginConverter.</value>
+  </data>
+  <data name="ConvertNotImplementedOnMarginConverter" xml:space="preserve">
+    <value>Convert not implemented on MarginConverter.</value>
+  </data>
+  <data name="DocumentAlreadyOpen" xml:space="preserve">
+    <value>The document "{0}" is already open.</value>
+  </data>
+  <data name="DocumentIsReadOnly" xml:space="preserve">
+    <value>The document "{0}" is read-only.</value>
+  </data>
+  <data name="DocumentNotIncludedInOpenDocumentList" xml:space="preserve">
+    <value>The document "{0}" is not included in the open document list.</value>
+  </data>
+  <data name="Error_ConverterFunctionNotDefined" xml:space="preserve">
+    <value>{0} is not defined for this converter.</value>
+  </data>
+  <data name="Error_InsufficientSourceParameters" xml:space="preserve">
+    <value>Converter requires {0} source parameters.</value>
+  </data>
+  <data name="Error_InsufficientTypeParameters" xml:space="preserve">
+    <value>Converter requires {0} type parameters.</value>
+  </data>
+  <data name="Error_TargetAtOffsetNotExtendingType" xml:space="preserve">
+    <value>Target type at offset {0} must extend {1}.</value>
+  </data>
+  <data name="Error_TargetNotExtendingType" xml:space="preserve">
+    <value>Target type must extend {0}.</value>
+  </data>
+  <data name="Error_ValueAtOffsetNotOfType" xml:space="preserve">
+    <value>Value at offset {0} must be of type {1}.</value>
+  </data>
+  <data name="Error_ValueNotOfType" xml:space="preserve">
+    <value>Value must be of type {0}.</value>
+  </data>
+  <data name="ImportClickGestureConverterInvalidArgument" xml:space="preserve">
+    <value>Argument must be of type 'System.String'</value>
+  </data>
+  <data name="ImportClickGestureConverterInvalidGestureFormat" xml:space="preserve">
+    <value>Invalid gesture format, should be in the form 'Event' or 'KeyModifier+Event'</value>
+  </data>
+  <data name="ImportDuplicateImporter" xml:space="preserve">
+    <value>importer added more than once</value>
+  </data>
+  <data name="ImportFilePathCannotBeEmpty" xml:space="preserve">
+    <value>filePath cannot be empty, it should be a path to a full file or a file extension</value>
+  </data>
+  <data name="ImportImagingLibraryIsMissing" xml:space="preserve">
+    <value>The imaging library was not found.  Re-installing the application may fix this problem.</value>
+  </data>
+  <data name="ImportInputGestureInvalidType" xml:space="preserve">
+    <value>Invalid InputGesture Type, found '{0}' expected '{1}'.</value>
+  </data>
+  <data name="ImportInvalidNumberOfImporters" xml:space="preserve">
+    <value>An invalid number of importers were found to handle this file. Found '{0}', expected 1</value>
+  </data>
+  <data name="ImportOptionsIncorrectType" xml:space="preserve">
+    <value>You must supply defaultOptions of Type Microsoft.Expression.Framework.Import.LayeredImages.Psd.PsdImportOptions</value>
+  </data>
+  <data name="ImportPsdCodecIsMissing" xml:space="preserve">
+    <value>No codec was found for the Photoshop file format.    Re-installing the application may fix this problem.</value>
+  </data>
+  <data name="ImportUnableToCreateRenderer" xml:space="preserve">
+    <value>Unable to create renderer</value>
+  </data>
+  <data name="ImportUnableToReadFile" xml:space="preserve">
+    <value>Unable to read the specified file</value>
+  </data>
+  <data name="InvalidTargetSubProperty" xml:space="preserve">
+    <value>Invalid TargetSubProperty.</value>
+  </data>
+  <data name="ItemIsAlreadyPresentInList" xml:space="preserve">
+    <value>Item is already present in list.</value>
+  </data>
+  <data name="MethodOrOperationIsNotImplemented" xml:space="preserve">
+    <value>The method or operation is not implemented.</value>
+  </data>
+  <data name="NoConvertBackForValueToIconConverter" xml:space="preserve">
+    <value>No ConvertBack for ValueToIcon converter.</value>
+  </data>
+  <data name="PaletteNameMustBeRegisteredBeforeAddingPalette" xml:space="preserve">
+    <value>Palette name '{0}' must be registered before adding palette.</value>
+  </data>
+  <data name="RedoStackIsEmpty" xml:space="preserve">
+    <value>The redo stack is empty.</value>
+  </data>
+  <data name="SwitchConverterIsOneWay" xml:space="preserve">
+    <value>A SwitchConverter cannot be used for a two-way bind.</value>
+  </data>
+  <data name="UIElementToStringConverterNoInverse" xml:space="preserve">
+    <value>A string cannot be transformed to a UIElement.</value>
+  </data>
+  <data name="UndoStackIsEmpty" xml:space="preserve">
+    <value>The undo stack is empty.</value>
+  </data>
+  <data name="UnexpectedBrushType" xml:space="preserve">
+    <value>Unexpected brush type {0}.</value>
+  </data>
+  <data name="UnexpectedDrawingType" xml:space="preserve">
+    <value>Unexpected drawing type {0}.</value>
+  </data>
+  <data name="UnexpectedImageSourceType" xml:space="preserve">
+    <value>Unexpected image source type {0}.</value>
+  </data>
+  <data name="ValueMustBeAString" xml:space="preserve">
+    <value>Value must be a string.</value>
+  </data>
+  <data name="ViewAlreadyOpen" xml:space="preserve">
+    <value>The view is already open.</value>
+  </data>
+</root>

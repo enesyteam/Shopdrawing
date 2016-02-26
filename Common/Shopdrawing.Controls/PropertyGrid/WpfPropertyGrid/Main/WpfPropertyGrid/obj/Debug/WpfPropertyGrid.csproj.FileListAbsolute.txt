@@ -1,0 +1,63 @@
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\bin\Debug\System.Windows.Controls.WpfPropertyGrid.xml
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\bin\Debug\System.Windows.Controls.WpfPropertyGrid.dll
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\bin\Debug\System.Windows.Controls.WpfPropertyGrid.pdb
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\Themes\Generic.baml
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\GeneratedInternalTypeHelper.g.cs
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\System.Windows.Controls.WpfPropertyGrid_MarkupCompile.cache
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\System.Windows.Controls.WpfPropertyGrid_MarkupCompile.lref
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\Design\AlphabeticalLayout.baml
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\Design\CategorizedLayout.baml
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\Design\TabbedLayout.baml
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\Themes\EditorResources.baml
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\Themes\DoubleEditor.baml
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\Themes\PropertyGrid.baml
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\Themes\SearchTextBox.baml
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\System.Windows.Controls.WpfPropertyGrid.g.resources
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\Sytem.Windows.Controls.WpfPropertyGrid.Properties.Resources.resources
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\WpfPropertyGrid.csproj.GenerateResource.Cache
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\System.Windows.Controls.WpfPropertyGrid.dll
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\System.Windows.Controls.WpfPropertyGrid.pdb
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\bin\Debug\System.Windows.Controls.WpfPropertyGrid.xml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\bin\Debug\System.Windows.Controls.WpfPropertyGrid.dll
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\bin\Debug\System.Windows.Controls.WpfPropertyGrid.pdb
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\Themes\Generic.baml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\GeneratedInternalTypeHelper.g.cs
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\System.Windows.Controls.WpfPropertyGrid_MarkupCompile.cache
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\System.Windows.Controls.WpfPropertyGrid_MarkupCompile.lref
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\Design\AlphabeticalLayout.baml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\Design\CategorizedLayout.baml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\Design\TabbedLayout.baml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\Themes\EditorResources.baml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\Themes\DoubleEditor.baml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\Themes\PropertyGrid.baml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\Themes\SearchTextBox.baml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\System.Windows.Controls.WpfPropertyGrid.g.resources
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\Sytem.Windows.Controls.WpfPropertyGrid.Properties.Resources.resources
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\WpfPropertyGrid.csproj.GenerateResource.Cache
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\System.Windows.Controls.WpfPropertyGrid.dll
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\System.Windows.Controls.WpfPropertyGrid.pdb
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\WpfPropertyGrid.csprojResolveAssemblyReference.cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\bin\Debug\System.Windows.Controls.WpfPropertyGrid.xml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\bin\Debug\System.Windows.Controls.WpfPropertyGrid.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\bin\Debug\System.Windows.Controls.WpfPropertyGrid.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\WpfPropertyGrid.csprojResolveAssemblyReference.cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\Themes\Generic.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\System.Windows.Controls.WpfPropertyGrid_MarkupCompile.cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\System.Windows.Controls.WpfPropertyGrid_MarkupCompile.lref
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\Design\AlphabeticalLayout.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\Design\CategorizedLayout.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\Design\TabbedLayout.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\Themes\EditorResources.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\Themes\DoubleEditor.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\Themes\PropertyGrid.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\Themes\PropertyItemName.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\Themes\SearchTextBox.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\System.Windows.Controls.WpfPropertyGrid.g.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\Sytem.Windows.Controls.WpfPropertyGrid.Properties.Resources.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\WpfPropertyGrid.csproj.GenerateResource.Cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\System.Windows.Controls.WpfPropertyGrid.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\System.Windows.Controls.WpfPropertyGrid.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\bin\Debug\Shopdrawing.Resources.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\bin\Debug\Shopdrawing.Resources.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Main\WpfPropertyGrid\obj\Debug\Design\PropertyGrid.baml

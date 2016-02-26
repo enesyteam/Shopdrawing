@@ -1,0 +1,8 @@
+<!--<ResourceDictionary x:Class="Microsoft.Windows.Design.Interaction.AdornerFontResourceDictionary"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:i="clr-namespace:Microsoft.Windows.Design.Interaction"/>-->
+
+<ResourceDictionary x:Class="Microsoft.Windows.Design.Interaction.AdornerFontResourceDictionary"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"/>

@@ -1,0 +1,32 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vs="clr-namespace:Microsoft.VisualStudio.PlatformUI.Shell.Controls"
+                    x:Uid="ResourceDictionary_1">
+  <Style x:Key="AutoHideRootControlStyle" x:Uid="Style_1" TargetType="{x:Type vs:AutoHideRootControl}">
+    <Setter x:Uid="Setter_2" Property="Control.Background">
+      <Setter.Value>
+        <x:NullExtension/>
+      </Setter.Value>
+    </Setter>
+    <Setter x:Uid="Setter_1" Property="Control.Template">
+      <Setter.Value>
+        <ControlTemplate x:Uid="ControlTemplate_1" TargetType="{x:Type vs:AutoHideRootControl}">
+          <Grid x:Uid="Grid_1" Panel.IsItemsHost="true" Panel.Background="{TemplateBinding Control.Background}">
+            <Grid.RowDefinitions>
+              <RowDefinition x:Uid="RowDefinition_1" Height="Auto"/>
+              <RowDefinition x:Uid="RowDefinition_2"/>
+              <RowDefinition x:Uid="RowDefinition_3" Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition x:Uid="ColumnDefinition_1" Width="Auto"/>
+              <ColumnDefinition x:Uid="ColumnDefinition_2"/>
+              <ColumnDefinition x:Uid="ColumnDefinition_3" Width="Auto"/>
+            </Grid.ColumnDefinitions>
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Uid="Style_2" TargetType="{x:Type vs:AutoHideRootControl}"
+         BasedOn="{StaticResource AutoHideRootControlStyle}"/>
+</ResourceDictionary>

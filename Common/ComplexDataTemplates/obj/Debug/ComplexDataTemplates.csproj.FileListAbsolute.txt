@@ -1,0 +1,4 @@
+C:\Users\M4600\tr\ComplexDataTemplates\ComplexDataTemplates\bin\Debug\ComplexDataTemplates.dll
+C:\Users\M4600\tr\ComplexDataTemplates\ComplexDataTemplates\bin\Debug\ComplexDataTemplates.pdb
+C:\Users\M4600\tr\ComplexDataTemplates\ComplexDataTemplates\obj\Debug\ComplexDataTemplates.dll
+C:\Users\M4600\tr\ComplexDataTemplates\ComplexDataTemplates\obj\Debug\ComplexDataTemplates.pdb

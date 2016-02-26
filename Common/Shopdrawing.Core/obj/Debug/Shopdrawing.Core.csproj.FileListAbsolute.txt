@@ -1,0 +1,15 @@
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Core\bin\Debug\Shopdrawing.Core.xml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Core\bin\Debug\Shopdrawing.Core.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Core\bin\Debug\Shopdrawing.Core.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Core\obj\Debug\Shopdrawing.Core.Properties.Resources.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Core\obj\Debug\Shopdrawing.Core.csproj.GenerateResource.Cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Core\obj\Debug\Shopdrawing.Core.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Core\obj\Debug\Shopdrawing.Core.pdb
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Core\bin\Debug\Shopdrawing.Core.xml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Core\bin\Debug\Shopdrawing.Core.dll
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Core\bin\Debug\Shopdrawing.Core.pdb
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Core\obj\Debug\Shopdrawing.Core.csprojResolveAssemblyReference.cache
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Core\obj\Debug\Shopdrawing.Core.Properties.Resources.resources
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Core\obj\Debug\Shopdrawing.Core.csproj.GenerateResource.Cache
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Core\obj\Debug\Shopdrawing.Core.dll
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Core\obj\Debug\Shopdrawing.Core.pdb

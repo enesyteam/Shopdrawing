@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shopdrawing.BridgeFS", "Shopdrawing.BridgeFS\Shopdrawing.BridgeFS.csproj", "{7D2DEB46-BC83-44EC-87FF-85E3CB570CF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inspector", "..\Inspector\Inspector.csproj", "{20C048F8-7CA0-4FFB-9431-AF55E9F4D6B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shopdrawing.Themes", "..\Common\Shopdrawing.Themes\Shopdrawing.Themes.csproj", "{C585AAD0-B51C-4FB8-8B77-091CBED5B141}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shopdrawing.Resources", "..\Common\Shopdrawing.Resources\Shopdrawing.Resources.csproj", "{9DFF9A1D-52FB-4956-AF25-5D2A18DCB466}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D2DEB46-BC83-44EC-87FF-85E3CB570CF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D2DEB46-BC83-44EC-87FF-85E3CB570CF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D2DEB46-BC83-44EC-87FF-85E3CB570CF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D2DEB46-BC83-44EC-87FF-85E3CB570CF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20C048F8-7CA0-4FFB-9431-AF55E9F4D6B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20C048F8-7CA0-4FFB-9431-AF55E9F4D6B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20C048F8-7CA0-4FFB-9431-AF55E9F4D6B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20C048F8-7CA0-4FFB-9431-AF55E9F4D6B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C585AAD0-B51C-4FB8-8B77-091CBED5B141}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C585AAD0-B51C-4FB8-8B77-091CBED5B141}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C585AAD0-B51C-4FB8-8B77-091CBED5B141}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C585AAD0-B51C-4FB8-8B77-091CBED5B141}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DFF9A1D-52FB-4956-AF25-5D2A18DCB466}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DFF9A1D-52FB-4956-AF25-5D2A18DCB466}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DFF9A1D-52FB-4956-AF25-5D2A18DCB466}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DFF9A1D-52FB-4956-AF25-5D2A18DCB466}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

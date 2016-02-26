@@ -1,0 +1,16 @@
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Wpf\Shopdrawing.Wpf\bin\Debug\Shopdrawing.Wpf.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Wpf\Shopdrawing.Wpf\bin\Debug\Shopdrawing.Wpf.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Wpf\Shopdrawing.Wpf\bin\Debug\Shopdrawing.Core.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Wpf\Shopdrawing.Wpf\bin\Debug\Shopdrawing.Core.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Wpf\Shopdrawing.Wpf\bin\Debug\Shopdrawing.Core.xml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Wpf\Shopdrawing.Wpf\obj\Debug\Shopdrawing.Wpf.csprojResolveAssemblyReference.cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Wpf\Shopdrawing.Wpf\obj\Debug\Shopdrawing.Wpf.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Wpf\Shopdrawing.Wpf\obj\Debug\Shopdrawing.Wpf.pdb
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Wpf\bin\Debug\Shopdrawing.Wpf.dll
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Wpf\bin\Debug\Shopdrawing.Wpf.pdb
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Wpf\bin\Debug\Shopdrawing.Core.dll
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Wpf\bin\Debug\Shopdrawing.Core.pdb
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Wpf\bin\Debug\Shopdrawing.Core.xml
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Wpf\obj\Debug\Shopdrawing.Wpf.csprojResolveAssemblyReference.cache
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Wpf\obj\Debug\Shopdrawing.Wpf.dll
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdrawing.Wpf\obj\Debug\Shopdrawing.Wpf.pdb

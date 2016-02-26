@@ -1,0 +1,8 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:ui="clr-namespace:Microsoft.VisualStudio.PlatformUI"
+                    x:Uid="ResourceDictionary_1">
+  <Style x:Uid="Style_1" TargetType="{x:Type ui:SplitterPanel}">
+    <Setter x:Uid="Setter_1" Property="UIElement.SnapsToDevicePixels" Value="true"/>
+  </Style>
+</ResourceDictionary>

@@ -1,0 +1,179 @@
+<TabControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:automation="clr-namespace:Microsoft.Expression.Framework.Diagnostics;assembly=Microsoft.Expression.Framework"
+            xmlns:DesignerUserInterface="clr-namespace:Microsoft.Expression.DesignSurface.UserInterface"
+            xmlns:Framework="clr-namespace:Microsoft.Expression.Framework;assembly=Microsoft.Expression.Framework"
+            xmlns:FrameworkControls="clr-namespace:Microsoft.Expression.Framework.Controls;assembly=Microsoft.Expression.Framework"
+            xmlns:FrameworkData="clr-namespace:Microsoft.Expression.Framework.Data;assembly=Microsoft.Expression.Framework"
+            x:Uid="Root" UIElement.Focusable="false">
+  <Control.Template>
+    <ControlTemplate x:Uid="ControlTemplate_67" TargetType="{x:Type TabControl}">
+      <Border x:Uid="Border_1" BorderThickness="0" Background="{DynamicResource ListBackgroundBrush}"
+              CornerRadius="{DynamicResource PaletteCornerRounding}">
+        <Grid x:Uid="Grid_2">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Uid="ColumnDefinition_1" Width="Auto"/>
+            <ColumnDefinition x:Uid="ColumnDefinition_2" Width="*"/>
+          </Grid.ColumnDefinitions>
+          <UniformGrid x:Uid="UniformGrid_1" Grid.Column="0" Rows="1" Panel.IsItemsHost="true"
+                       FrameworkElement.Margin="1,-1,0,1">
+            <FrameworkElement.LayoutTransform>
+              <RotateTransform x:Uid="RotateTransform_1" Angle="-90"/>
+            </FrameworkElement.LayoutTransform>
+          </UniformGrid>
+          <ContentPresenter x:Uid="ContentPresenter_1" Grid.Column="1" Content="{TemplateBinding TabControl.SelectedContent}"/>
+        </Grid>
+      </Border>
+    </ControlTemplate>
+  </Control.Template>
+  <FrameworkElement.Resources>
+    <Style x:Uid="Style_5" TargetType="{x:Type FrameworkControls:ClickControl}">
+      <Setter x:Uid="Setter_17" Property="Control.HorizontalContentAlignment" Value="Left"/>
+      <Setter x:Uid="Setter_18" Property="Control.VerticalContentAlignment" Value="Center"/>
+      <Setter x:Uid="Setter_19" Property="Control.Template">
+        <Setter.Value>
+          <ControlTemplate x:Uid="ControlTemplate_2" TargetType="{x:Type FrameworkControls:ClickControl}">
+            <Grid x:Uid="Grid_3" Panel.Background="Transparent" FrameworkElement.Margin="-6,-2,-6,-2">
+              <ContentPresenter x:Uid="ContentPresenter_2" Content="{TemplateBinding ContentControl.Content}"
+                                FrameworkElement.HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+                                FrameworkElement.VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+                                FrameworkElement.Margin="6,2,6,2"/>
+            </Grid>
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+    </Style>
+    <ControlTemplate x:Key="ResultsTextBoxTemplate" x:Uid="ControlTemplate_66" TargetType="{x:Type TextBox}">
+      <Border x:Uid="Border_17" UIElement.Focusable="false" Background="{TemplateBinding Control.Background}"
+              BorderBrush="{TemplateBinding Control.BorderBrush}" CornerRadius="3">
+        <ScrollViewer x:Name="PART_ContentHost" x:Uid="ScrollViewer_1"
+                      FrameworkElement.Margin="{TemplateBinding Control.Padding}"
+                      FrameworkElement.VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+                      FrameworkElement.HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+                      FrameworkElement.Style="{DynamicResource ExpressionScrollViewer}"/>
+      </Border>
+    </ControlTemplate>
+  </FrameworkElement.Resources>
+  <Selector.SelectedIndex>
+    <Binding x:Uid="Binding_1" Path="View">
+      <Binding.Converter>
+        <DesignerUserInterface:ResultsViewToIntConverter x:Uid="DesignerUserInterface_ResultsViewToIntConverter_1"/>
+      </Binding.Converter>
+    </Binding>
+  </Selector.SelectedIndex>
+  <TabItem FrameworkElement.Name="Output" x:Uid="Output" Control.HorizontalContentAlignment="Stretch">
+    <HeaderedContentControl.Header>
+      <FrameworkControls:PositioningTextBlockContainer x:Uid="FrameworkControls:PositioningTextBlockContainer_1" UIElement.SnapsToDevicePixels="false">
+        <TextBlock x:Uid="TextBlock_1" Text="Output"/>
+      </FrameworkControls:PositioningTextBlockContainer>
+    </HeaderedContentControl.Header>
+    <TextBox FrameworkElement.Name="OutputTextBox" x:Uid="OutputTextBox"
+             Control.Template="{DynamicResource ResultsTextBoxTemplate}"
+             Control.Foreground="{DynamicResource Text1Brush}" FrameworkElement.Height="Auto"
+             TextBoxBase.VerticalScrollBarVisibility="Auto" TextBoxBase.HorizontalScrollBarVisibility="Auto"
+             Control.Padding="0,2,0,0" Control.VerticalContentAlignment="Stretch"
+             Control.Background="{DynamicResource ListBackgroundBrush}" TextBoxBase.IsReadOnly="true"
+             Control.BorderThickness="0"/>
+  </TabItem>
+  <TabItem FrameworkElement.Name="Errors" x:Uid="Errors" Control.HorizontalContentAlignment="Stretch">
+    <HeaderedContentControl.Header>
+      <FrameworkControls:PositioningTextBlockContainer x:Uid="FrameworkControls:PositioningTextBlockContainer_2" UIElement.SnapsToDevicePixels="false">
+        <TextBlock x:Uid="TextBlock_2" Text="Errors"/>
+      </FrameworkControls:PositioningTextBlockContainer>
+    </HeaderedContentControl.Header>
+    <ListView x:Uid="List" automation:AutomationElement.Id="ErrorsList"
+              ItemsControl.ItemsSource="{Binding ErrorManager.Errors}">
+      <FrameworkElement.Resources>
+        <DataTemplate x:Key="ErrorSeverityCellTemplate" x:Uid="DataTemplate_0">
+          <FrameworkControls:ClickControl FrameworkElement.Name="ErrorSeverityDisplayClickControl" x:Uid="ClickControl_0"
+                                          Control.VerticalContentAlignment="Center" Control.HorizontalContentAlignment="Center"
+                                          LeftDoubleClickCommand="{Binding InvokeCommand}">
+            <FrameworkControls:Icon x:Name="Icon" x:Uid="Icon_1" FrameworkElement.Width="12" FrameworkElement.Height="12"/>
+          </FrameworkControls:ClickControl>
+          <DataTemplate.Triggers>
+            <DataTrigger x:Uid="DataTrigger_1" Value="{x:Static Framework:ErrorSeverity.Error}" Binding="{Binding Severity}">
+              <Setter x:Uid="Setter_1" TargetName="Icon" Property="Image.Source"
+                      Value="pack://application:,,,/Microsoft.Expression.Framework;Component/Resources/Icons/shell_error_on_12x12.png"/>
+            </DataTrigger>
+            <DataTrigger x:Uid="DataTrigger_2" Value="{x:Static Framework:ErrorSeverity.Warning}"
+                         Binding="{Binding Severity}">
+              <Setter x:Uid="Setter_2" TargetName="Icon" Property="Image.Source"
+                      Value="pack://application:,,,/Microsoft.Expression.Framework;Component/Resources/Icons/shell_warning_on_12x12.png"/>
+            </DataTrigger>
+          </DataTemplate.Triggers>
+        </DataTemplate>
+        <DataTemplate x:Key="DescriptionCellTemplate" x:Uid="DataTemplate_1">
+          <FrameworkControls:ClickControl x:Uid="ClickControl_1" LeftDoubleClickCommand="{Binding InvokeCommand}"
+                                          ContentControl.Content="{Binding Description}"
+                                          FrameworkElement.ToolTip="{Binding ExtendedDescription}">
+            <Control.Template>
+              <ControlTemplate x:Uid="ControlTemplate_3" TargetType="{x:Type FrameworkControls:ClickControl}">
+                <Grid x:Uid="Grid_4" Panel.Background="Transparent" FrameworkElement.Margin="-6,-2,-6,-2">
+                  <TextBlock x:Uid="TextBlock_3" Text="{TemplateBinding ContentControl.Content}"
+                             FrameworkElement.HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+                             FrameworkElement.VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+                             FrameworkElement.Margin="6,2,6,2" TextWrapping="Wrap"/>
+                </Grid>
+              </ControlTemplate>
+            </Control.Template>
+          </FrameworkControls:ClickControl>
+        </DataTemplate>
+        <DataTemplate x:Key="FileCellTemplate" x:Uid="DataTemplate_2">
+          <FrameworkControls:ClickControl x:Uid="ClickControl_2" LeftDoubleClickCommand="{Binding InvokeCommand}"
+                                          ContentControl.Content="{Binding File}" FrameworkElement.ToolTip="{Binding FullFileName}"/>
+        </DataTemplate>
+        <DataTemplate x:Key="LineCellTemplate" x:Uid="DataTemplate_3">
+          <FrameworkControls:ClickControl x:Uid="ClickControl_3" LeftDoubleClickCommand="{Binding InvokeCommand}"
+                                          ContentControl.Content="{Binding Line}"/>
+        </DataTemplate>
+        <DataTemplate x:Key="ColumnCellTemplate" x:Uid="DataTemplate_4">
+          <FrameworkControls:ClickControl x:Uid="ClickControl_4" LeftDoubleClickCommand="{Binding InvokeCommand}"
+                                          ContentControl.Content="{Binding Column}"/>
+        </DataTemplate>
+        <DataTemplate x:Key="ProjectCellTemplate" x:Uid="DataTemplate_5">
+          <FrameworkControls:ClickControl x:Uid="ClickControl_5" LeftDoubleClickCommand="{Binding InvokeCommand}"
+                                          ContentControl.Content="{Binding Project}"/>
+        </DataTemplate>
+        <Style x:Uid="Style_2" TargetType="{x:Type ListViewItem}" BasedOn="{StaticResource {x:Type ListViewItem}}">
+          <Setter x:Uid="Setter_3" Property="Control.HorizontalContentAlignment" Value="Stretch"/>
+          <Setter x:Uid="Setter_4" Property="Control.VerticalContentAlignment" Value="Stretch"/>
+        </Style>
+      </FrameworkElement.Resources>
+      <ListView.View>
+        <GridView x:Uid="DetailsView_1">
+          <GridViewColumn x:Uid="Column_0" CellTemplate="{StaticResource ErrorSeverityCellTemplate}" Width="30"/>
+          <GridViewColumn x:Uid="Column_1" CellTemplate="{StaticResource DescriptionCellTemplate}" Width="400">
+            <GridViewColumn.Header>
+              <GridViewColumnHeader x:Uid="GridViewColumnHeader_1" ContentControl.Content="Description"
+                                    Control.HorizontalContentAlignment="Left"/>
+            </GridViewColumn.Header>
+          </GridViewColumn>
+          <GridViewColumn x:Uid="Column_2" CellTemplate="{StaticResource FileCellTemplate}" Width="100">
+            <GridViewColumn.Header>
+              <GridViewColumnHeader x:Uid="GridViewColumnHeader_2" ContentControl.Content="File"
+                                    Control.HorizontalContentAlignment="Left"/>
+            </GridViewColumn.Header>
+          </GridViewColumn>
+          <GridViewColumn x:Uid="Column_3" CellTemplate="{StaticResource LineCellTemplate}" Width="50">
+            <GridViewColumn.Header>
+              <GridViewColumnHeader x:Uid="GridViewColumnHeader_3" ContentControl.Content="Line"
+                                    Control.HorizontalContentAlignment="Left"/>
+            </GridViewColumn.Header>
+          </GridViewColumn>
+          <GridViewColumn x:Uid="Column_4" CellTemplate="{StaticResource ColumnCellTemplate}" Width="50">
+            <GridViewColumn.Header>
+              <GridViewColumnHeader x:Uid="GridViewColumnHeader_4" ContentControl.Content="Column"
+                                    Control.HorizontalContentAlignment="Left"/>
+            </GridViewColumn.Header>
+          </GridViewColumn>
+          <GridViewColumn x:Uid="Column_5" CellTemplate="{StaticResource ProjectCellTemplate}" Width="100">
+            <GridViewColumn.Header>
+              <GridViewColumnHeader x:Uid="GridViewColumnHeader_5" ContentControl.Content="Project"
+                                    Control.HorizontalContentAlignment="Left"/>
+            </GridViewColumn.Header>
+          </GridViewColumn>
+        </GridView>
+      </ListView.View>
+    </ListView>
+  </TabItem>
+</TabControl>

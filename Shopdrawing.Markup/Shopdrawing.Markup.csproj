@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files (x86)\Microsoft Expression\Blend 4\Microsoft.Expression.Markup.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{05453E05-826B-4CEB-B940-03870AFD97AD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Shopdrawing.Markup</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <ApplicationVersion>4.0.20525.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.Expression.DesignModel</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="StringTable.cs" />
+    <Compile Include="ExceptionStringTable.cs" />
+    <Compile Include="Metadata\IXmlNamespaceTypeResolver.cs" />
+    <Compile Include="Metadata\IMemberId.cs" />
+    <Compile Include="Metadata\IMember.cs" />
+    <Compile Include="Metadata\IPropertyId.cs" />
+    <Compile Include="Metadata\IProperty.cs" />
+    <Compile Include="Metadata\IAssemblyId.cs" />
+    <Compile Include="Metadata\IAssembly.cs" />
+    <Compile Include="Metadata\ConstructorAccessibility.cs" />
+    <Compile Include="Metadata\IMethod.cs" />
+    <Compile Include="Metadata\IConstructor.cs" />
+    <Compile Include="Metadata\IConstructorArgumentProperties.cs" />
+    <Compile Include="Metadata\IEvent.cs" />
+    <Compile Include="Metadata\IKnownProperties.cs" />
+    <Compile Include="Metadata\IKnownTypes.cs" />
+    <Compile Include="Metadata\IMetadataResolver.cs" />
+    <Compile Include="Metadata\IParameter.cs" />
+    <Compile Include="Metadata\IPlatformMetadata.cs" />
+    <Compile Include="Metadata\ITypeId.cs" />
+    <Compile Include="Metadata\IType.cs" />
+    <Compile Include="Metadata\ITypeMetadata.cs" />
+    <Compile Include="Metadata\IPropertyValueTypeMetadata.cs" />
+    <Compile Include="Metadata\ITargetTypeMetadata.cs" />
+    <Compile Include="Metadata\ITypeResolver.cs" />
+    <Compile Include="Metadata\IXmlNamespace.cs" />
+    <Compile Include="Metadata\MemberAccessType.cs" />
+    <Compile Include="Metadata\MemberAccessTypes.cs" />
+    <Compile Include="Metadata\MemberType.cs" />
+    <Compile Include="Metadata\MemberTypeEnumerable.cs" />
+    <Compile Include="Metadata\PlatformCapability.cs" />
+    <Compile Include="Metadata\PlatformCapabilitySettings.cs" />
+    <Compile Include="Metadata\TypeHelper.cs" />
+    <Compile Include="Metadata\ModificationType.cs" />
+    <Compile Include="Metadata\TypeChangedInfo.cs" />
+    <Compile Include="Metadata\TypesChangedEventArgs.cs" />
+    <Compile Include="Metadata\XmlNamespaceCanonicalization.cs" />
+    <Compile Include="Metadata\XmlNamespace.cs" />
+    <Compile Include="DocumentModel\CanAssignResult.cs" />
+    <Compile Include="DocumentModel\ClassAttributes.cs" />
+    <Compile Include="DocumentModel\IConstructorArgumentNodeCollection.cs" />
+    <Compile Include="DocumentModel\DocumentNode.cs" />
+    <Compile Include="DocumentModel\DocumentCompositeNode.cs" />
+    <Compile Include="DocumentModel\IDescendantEnumerator.cs" />
+    <Compile Include="DocumentModel\IDocumentNodeDictionary.cs" />
+    <Compile Include="DocumentModel\DocumentNodeChangeAction.cs" />
+    <Compile Include="DocumentModel\DocumentNodeChange.cs" />
+    <Compile Include="DocumentModel\DocumentNodeMarkerSortedListBase.cs" />
+    <Compile Include="DocumentModel\DocumentNodeMarkerSortedListOf`1.cs" />
+    <Compile Include="DocumentModel\DocumentNodeChangeList.cs" />
+    <Compile Include="DocumentModel\DocumentNodeEqualityComparer.cs" />
+    <Compile Include="DocumentModel\DocumentNodeHelper.cs" />
+    <Compile Include="DocumentModel\DocumentNodeMarker.cs" />
+    <Compile Include="DocumentModel\DocumentNodeMarkerSortedList.cs" />
+    <Compile Include="DocumentModel\IDocumentNodeValue.cs" />
+    <Compile Include="DocumentModel\DocumentNodeMemberValue.cs" />
+    <Compile Include="DocumentModel\DocumentNodeNameScope.cs" />
+    <Compile Include="DocumentModel\DocumentNodeStringValue.cs" />
+    <Compile Include="DocumentModel\DocumentPrimitiveNode.cs" />
+    <Compile Include="DocumentModel\EmptyList`1.cs" />
+    <Compile Include="DocumentModel\IDocumentRootResolver.cs" />
+    <Compile Include="DocumentModel\IDocumentContext.cs" />
+    <Compile Include="DocumentModel\IDocumentRoot.cs" />
+    <Compile Include="DocumentModel\INodeSourceContext.cs" />
+    <Compile Include="DocumentModel\SourceContextContainer`1.cs" />
+    <Compile Include="Markup\AssemblyNamespace.cs" />
+    <Compile Include="Markup\ClrNamespaceUriParseCache.cs" />
+    <Compile Include="Markup\DocumentEncodingHelper.cs" />
+    <Compile Include="Markup\IXmlNamespaceResolver.cs" />
+    <Compile Include="Markup\DefaultXmlNamespaceResolver.cs" />
+    <Compile Include="Markup\ElementPersistenceSettings.cs" />
+    <Compile Include="Markup\PersistenceSettings.cs" />
+    <Compile Include="Markup\TextBufferHelper.cs" />
+    <Compile Include="Markup\TextRange.cs" />
+    <Compile Include="Markup\TypeReferences.cs" />
+    <Compile Include="Markup\XamlDocument.cs" />
+    <Compile Include="Markup\IDocumentNodeReference.cs" />
+    <Compile Include="Markup\DocumentRootReference.cs" />
+    <Compile Include="Markup\DocumentPropertyContentReference.cs" />
+    <Compile Include="Markup\DocumentCompositeNodeReference.cs" />
+    <Compile Include="Markup\WhitespaceSignificant.cs" />
+    <Compile Include="Markup\WhitespaceTrimming.cs" />
+    <Compile Include="Markup\ElementContentBuilder.cs" />
+    <Compile Include="Markup\IDependencyProperty.cs" />
+    <Compile Include="Markup\MarkupExtensionDescription.cs" />
+    <Compile Include="Markup\MarkupExtensionParser.cs" />
+    <Compile Include="Markup\TextLocation.cs" />
+    <Compile Include="Markup\XamlErrorSeverity.cs" />
+    <Compile Include="Markup\XamlParseError.cs" />
+    <Compile Include="Markup\XamlErrorCode.cs" />
+    <Compile Include="Markup\XamlParseErrors.cs" />
+    <Compile Include="Markup\XamlParser.cs" />
+    <Compile Include="Markup\XamlParserContext.cs" />
+    <Compile Include="Markup\XamlParserPolicy.cs" />
+    <Compile Include="Markup\XamlParserResults.cs" />
+    <Compile Include="Markup\XamlProcessingAttributes.cs" />
+    <Compile Include="Markup\XamlRootNodeSniffer.cs" />
+    <Compile Include="Markup\IndentingBehavior.cs" />
+    <Compile Include="Markup\SourceContextReference.cs" />
+    <Compile Include="Markup\SelfSourceContextReference.cs" />
+    <Compile Include="Markup\ContainerSourceContextReference.cs" />
+    <Compile Include="Markup\UnprocessedNodeSourceContextReference.cs" />
+    <Compile Include="Markup\PreservedAttributeSourceContextReference.cs" />
+    <Compile Include="Markup\DictionaryEntrySourceContextReference.cs" />
+    <Compile Include="Markup\FormattedNode.cs" />
+    <Compile Include="Markup\UnprocessedNode.cs" />
+    <Compile Include="Markup\ContentNode.cs" />
+    <Compile Include="Markup\FormattedNodeCollection.cs" />
+    <Compile Include="Markup\ContainerNode.cs" />
+    <Compile Include="Markup\RootNode.cs" />
+    <Compile Include="Markup\AttributeNode.cs" />
+    <Compile Include="Markup\XmlnsNode.cs" />
+    <Compile Include="Markup\ElementNode.cs" />
+    <Compile Include="Markup\SerializedFormat.cs" />
+    <Compile Include="Markup\IXamlSerializerFilter.cs" />
+    <Compile Include="Markup\ITemplateSerializationType.cs" />
+    <Compile Include="Markup\XamlFormatter.cs" />
+    <Compile Include="Markup\XamlSerializer.cs" />
+    <Compile Include="Markup\XamlSerializerContext.cs" />
+    <Compile Include="Markup\XamlSerializerUtilities.cs" />
+    <Compile Include="Markup\XmlSpace.cs" />
+    <Compile Include="Markup\XamlSourceContext.cs" />
+    <Compile Include="Markup\UnprocessedNodeReference.cs" />
+    <Compile Include="Markup\XmlAttributeReference.cs" />
+    <Compile Include="Markup\XmlContainerReference.cs" />
+    <Compile Include="Markup\XmlDocumentReference.cs" />
+    <Compile Include="Markup\XmlElementReference.cs" />
+    <Compile Include="Markup\RemovedXmlAttributeReference.cs" />
+    <Compile Include="Markup\RemovedXmlElementReference.cs" />
+    <Compile Include="Markup\XamlTokens.cs" />
+    <Compile Include="Markup\XamlTypeHelper.cs" />
+    <Compile Include="Markup\XmlAttributeEnumerable.cs" />
+    <Compile Include="Markup\XmlAttributeEnumerator.cs" />
+    <Compile Include="Markup\XmlNamespaceMap.cs" />
+    <Compile Include="Markup\XmlnsPrefix.cs" />
+    <Compile Include="Markup\XmlnsPrefixAndName.cs" />
+    <Compile Include="Markup\XmlProcessingAttributeType.cs" />
+    <Compile Include="Markup\XmlUtilities.cs" />
+    <Compile Include="Markup\Xml\Node.cs" />
+    <Compile Include="Markup\Xml\ErrorNodeList.cs" />
+    <Compile Include="Markup\Xml\DocumentText.cs" />
+    <Compile Include="Markup\Xml\Document.cs" />
+    <Compile Include="Markup\Xml\SourceContext.cs" />
+    <Compile Include="Markup\Xml\Member.cs" />
+    <Compile Include="Markup\Xml\MemberList.cs" />
+    <Compile Include="Markup\Xml\Identifier.cs" />
+    <Compile Include="Markup\Xml\ComplexIdentifier.cs" />
+    <Compile Include="Markup\Xml\Literal.cs" />
+    <Compile Include="Markup\Xml\Namespace.cs" />
+    <Compile Include="Markup\Xml\NodeType.cs" />
+    <Compile Include="Markup\Xml\WhitespaceLiteral.cs" />
+    <Compile Include="Markup\Xml\StandardXmlIdentifiers.cs" />
+    <Compile Include="Markup\Xml\XmlNamespaceScope.cs" />
+    <Compile Include="Markup\Xml\XmlNode.cs" />
+    <Compile Include="Markup\Xml\SchemaObjectNameComparer.cs" />
+    <Compile Include="Markup\Xml\XmlDocument.cs" />
+    <Compile Include="Markup\Xml\XmlElement.cs" />
+    <Compile Include="Markup\Xml\XmlAttribute.cs" />
+    <Compile Include="Markup\Xml\XmlEntityReference.cs" />
+    <Compile Include="Markup\Xml\XmlComment.cs" />
+    <Compile Include="Markup\Xml\XmlProcessingInstruction.cs" />
+    <Compile Include="Markup\Xml\XmlDeclaration.cs" />
+    <Compile Include="Markup\Xml\XmlCDATA.cs" />
+    <Compile Include="Markup\Xml\XmlError.cs" />
+    <Compile Include="Markup\Xml\Compiler.cs" />
+    <Compile Include="Markup\Xml\Parser.cs" />
+    <Compile Include="Markup\Xml\Scanner.cs" />
+    <Compile Include="Markup\Xml\Token.cs" />
+    <Compile Include="Markup\Xml\Keyword.cs" />
+    <Compile Include="Markup\Xml\Severity.cs" />
+    <Compile Include="Markup\Xml\ErrorNode.cs" />
+    <Compile Include="Markup\Xml\ErrorHandler.cs" />
+    <Compile Include="Markup\Xml\SR.cs" />
+    <Compile Include="Markup\Xml\XmlCharType.cs" />
+    <Compile Include="Text\ITextRange.cs" />
+    <Compile Include="Text\ITextLocation.cs" />
+    <Compile Include="Text\IReadableTextBuffer.cs" />
+    <Compile Include="Text\IReadableSelectableTextBuffer.cs" />
+    <Compile Include="Text\ITextBuffer.cs" />
+    <Compile Include="Text\ITextBufferService.cs" />
+    <Compile Include="Text\ShouldTrackChange.cs" />
+    <Compile Include="Text\ITextChangesTracker.cs" />
+    <Compile Include="Text\IMappingTextRange.cs" />
+    <Compile Include="Text\TextChangedEventArgs.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

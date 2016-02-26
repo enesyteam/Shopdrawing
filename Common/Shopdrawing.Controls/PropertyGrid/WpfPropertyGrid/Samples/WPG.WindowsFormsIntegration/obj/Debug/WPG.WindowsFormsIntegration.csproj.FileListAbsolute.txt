@@ -1,0 +1,11 @@
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.WindowsFormsIntegration\bin\Debug\WindowsFormsIntegration.exe
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.WindowsFormsIntegration\bin\Debug\WindowsFormsIntegration.pdb
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.WindowsFormsIntegration\bin\Debug\System.Windows.Controls.WpfPropertyGrid.dll
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.WindowsFormsIntegration\bin\Debug\System.Windows.Controls.WpfPropertyGrid.pdb
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.WindowsFormsIntegration\bin\Debug\System.Windows.Controls.WpfPropertyGrid.xml
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.WindowsFormsIntegration\obj\Debug\WPG.WindowsFormsIntegration.csprojResolveAssemblyReference.cache
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.WindowsFormsIntegration\obj\Debug\WindowsFormsIntegration.Form1.resources
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.WindowsFormsIntegration\obj\Debug\WindowsFormsIntegration.Properties.Resources.resources
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.WindowsFormsIntegration\obj\Debug\WPG.WindowsFormsIntegration.csproj.GenerateResource.Cache
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.WindowsFormsIntegration\obj\Debug\WindowsFormsIntegration.exe
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.WindowsFormsIntegration\obj\Debug\WindowsFormsIntegration.pdb

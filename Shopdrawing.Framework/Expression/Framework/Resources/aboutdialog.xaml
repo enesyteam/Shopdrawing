@@ -1,0 +1,238 @@
+<Grid xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:data="clr-namespace:Microsoft.Expression.Framework.Data"
+      x:Name="DocumentRoot" x:Uid="Grid1">
+  <FrameworkElement.Resources>
+    <SolidColorBrush x:Key="ButtonDefaultBrush" x:Uid="SolidColorBrush_26" Color="#FFF2F2F2"/>
+    <SolidColorBrush x:Key="ButtonMouseOverBrush" x:Uid="SolidColorBrush_27" Color="#FFE6E6E6"/>
+    <SolidColorBrush x:Key="ButtonPressedBrush" x:Uid="SolidColorBrush_28" Color="#FFCCCCCC"/>
+    <SolidColorBrush x:Key="50pcGrayMainText" x:Uid="SolidColorBrush_30" Color="#FF808080"/>
+    <SolidColorBrush x:Key="ScrollBarDefaultBrush" x:Uid="SolidColorBrush_32" Color="#FF808080"/>
+    <SolidColorBrush x:Key="ScrollBarMouseOverBrush" x:Uid="SolidColorBrush_33" Color="#FFCCCCCC"/>
+    <SolidColorBrush x:Key="ScrollBarPressedBrush" x:Uid="SolidColorBrush_34" Color="#FFE5E5E5"/>
+    <Style x:Uid="Style_98" TargetType="{x:Type ScrollBar}">
+      <Style.Resources>
+        <Style x:Uid="Style_99" x:Key="ExpressionScrollBarRepeatButton" TargetType="{x:Type RepeatButton}">
+          <Style.BasedOn>
+            <x:NullExtension/>
+          </Style.BasedOn>
+          <Setter x:Uid="Setter_288" Property="UIElement.Focusable" Value="false"/>
+          <Setter x:Uid="Setter_1064" Property="Control.Template">
+            <Setter.Value>
+              <ControlTemplate x:Uid="ControlTemplate_26" TargetType="{x:Type RepeatButton}">
+                <Border x:Name="Border" x:Uid="Border_19" Background="Transparent">
+                  <ContentPresenter x:Name="ContentPresenter" x:Uid="ContentPresenter_18" FrameworkElement.HorizontalAlignment="Center"
+                                    FrameworkElement.VerticalAlignment="Center" Content="{TemplateBinding ContentControl.Content}"
+                                    ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}"
+                                    ContentTemplateSelector="{TemplateBinding ContentControl.ContentTemplateSelector}"/>
+                </Border>
+              </ControlTemplate>
+            </Setter.Value>
+          </Setter>
+        </Style>
+      </Style.Resources>
+      <Setter x:Uid="Setter_1065" Property="Stylus.IsFlicksEnabled" Value="false"/>
+      <Setter x:Uid="Setter_1066" Property="Control.Foreground"
+              Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+      <Setter x:Uid="Setter_1067" Property="Control.Background" Value="Transparent"/>
+      <Setter x:Uid="Setter_1068" Property="FrameworkElement.Width" Value="12"/>
+      <Setter x:Uid="Setter_1069" Property="Control.Template">
+        <Setter.Value>
+          <ControlTemplate x:Uid="ControlTemplate_27" TargetType="{x:Type ScrollBar}">
+            <Grid x:Name="GridRoot" x:Uid="Grid_33"
+                  FrameworkElement.Width="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}"
+                  Panel.Background="{TemplateBinding Control.Background}">
+              <Grid.RowDefinitions>
+                <RowDefinition x:Uid="RowDefinition_6" MaxHeight="18"/>
+                <RowDefinition x:Uid="RowDefinition_7" Height="0.00001*"/>
+                <RowDefinition x:Uid="RowDefinition_8" MaxHeight="18"/>
+              </Grid.RowDefinitions>
+              <RepeatButton x:Name="DecreaseRepeat" x:Uid="RepeatButton_1" ButtonBase.Command="ScrollBar.LineUpCommand"
+                            FrameworkElement.Style="{StaticResource ExpressionScrollBarRepeatButton}"
+                            Control.Foreground="{DynamicResource ScrollBarDefaultBrush}">
+                <Path x:Name="DecreaseArrow" x:Uid="Path_1" Data="M 0,7 L 3.5,0 7,7 Z"
+                      FrameworkElement.HorizontalAlignment="Center" FrameworkElement.VerticalAlignment="Center">
+                  <Shape.Fill>
+                    <Binding ElementName="DecreaseRepeat" Path="Foreground"/>
+                  </Shape.Fill>
+                </Path>
+              </RepeatButton>
+              <Track x:Name="PART_Track" x:Uid="Track_1" Grid.Row="1" IsDirectionReversed="true"
+                     UIElement.Focusable="false">
+                <Track.Thumb>
+                  <Thumb x:Name="Thumb" x:Uid="Thumb_1" Control.Background="{DynamicResource ScrollBarDefaultBrush}">
+                    <FrameworkElement.Style>
+                      <Style x:Uid="Style_100" TargetType="{x:Type Thumb}">
+                        <Style.BasedOn>
+                          <x:NullExtension/>
+                        </Style.BasedOn>
+                        <Setter x:Uid="Setter_1070" Property="Control.Template">
+                          <Setter.Value>
+                            <ControlTemplate x:Uid="ControlTemplate_28" TargetType="{x:Type Thumb}">
+                              <Grid x:Name="Grid" x:Uid="Grid_34">
+                                <Rectangle x:Uid="Rectangle_8" FrameworkElement.HorizontalAlignment="Stretch"
+                                           FrameworkElement.VerticalAlignment="Stretch" FrameworkElement.Width="Auto"
+                                           FrameworkElement.Height="Auto" Shape.Fill="Transparent"/>
+                                <Rectangle x:Name="Rectangle1" x:Uid="Rectangle_9" FrameworkElement.HorizontalAlignment="Stretch"
+                                           FrameworkElement.VerticalAlignment="Stretch" FrameworkElement.Width="7"
+                                           FrameworkElement.Height="Auto" RadiusX="4" RadiusY="4"
+                                           Shape.Fill="{TemplateBinding Control.Background}"/>
+                              </Grid>
+                              <ControlTemplate.Triggers>
+                                <Trigger x:Uid="Trigger_1009" Property="FrameworkElement.Tag" Value="Horizontal">
+                                  <Setter x:Uid="Setter_1071" TargetName="Rectangle1" Property="FrameworkElement.Width" Value="Auto"/>
+                                  <Setter x:Uid="Setter_1072" TargetName="Rectangle1" Property="FrameworkElement.Height" Value="7"/>
+                                </Trigger>
+                              </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                          </Setter.Value>
+                        </Setter>
+                      </Style>
+                    </FrameworkElement.Style>
+                  </Thumb>
+                </Track.Thumb>
+                <Track.IncreaseRepeatButton>
+                  <RepeatButton x:Name="PageUp" x:Uid="RepeatButton_2" ButtonBase.Command="ScrollBar.PageDownCommand"
+                                UIElement.Opacity="0" UIElement.Focusable="false"/>
+                </Track.IncreaseRepeatButton>
+                <Track.DecreaseRepeatButton>
+                  <RepeatButton x:Name="PageDown" x:Uid="RepeatButton_3" ButtonBase.Command="ScrollBar.PageUpCommand"
+                                UIElement.Opacity="0" UIElement.Focusable="false"/>
+                </Track.DecreaseRepeatButton>
+              </Track>
+              <RepeatButton x:Name="IncreaseRepeat" x:Uid="RepeatButton_4" Grid.Row="2"
+                            ButtonBase.Command="ScrollBar.LineDownCommand"
+                            FrameworkElement.Style="{StaticResource ExpressionScrollBarRepeatButton}">
+                <Path x:Name="IncreaseArrow" x:Uid="Path_2" Data="M 0,0 L 3.5,7 7,0 Z"
+                      Shape.Fill="{DynamicResource ScrollBarDefaultBrush}" FrameworkElement.HorizontalAlignment="Center"
+                      FrameworkElement.VerticalAlignment="Center"/>
+              </RepeatButton>
+            </Grid>
+            <ControlTemplate.Triggers>
+              <Trigger x:Uid="Trigger_1010" SourceName="IncreaseRepeat" Property="UIElement.IsMouseOver" Value="true">
+                <Setter x:Uid="Setter_1073" Value="{DynamicResource ScrollBarMouseOverBrush}" TargetName="IncreaseArrow"
+                        Property="Shape.Fill"/>
+              </Trigger>
+              <Trigger x:Uid="Trigger_1011" SourceName="DecreaseRepeat" Property="UIElement.IsMouseOver" Value="true">
+                <Setter x:Uid="Setter_1074" Value="{DynamicResource ScrollBarMouseOverBrush}" TargetName="DecreaseArrow"
+                        Property="Shape.Fill"/>
+              </Trigger>
+              <Trigger x:Uid="Trigger_1012" SourceName="Thumb" Property="UIElement.IsMouseOver" Value="true">
+                <Setter x:Uid="Setter_1075" Value="{DynamicResource ScrollBarMouseOverBrush}" TargetName="Thumb"
+                        Property="Control.Background"/>
+              </Trigger>
+              <Trigger x:Uid="Trigger_1013" SourceName="Thumb" Property="Thumb.IsDragging" Value="true">
+                <Setter x:Uid="Setter_1076" Value="{DynamicResource ScrollBarPressedBrush}" TargetName="Thumb"
+                        Property="Control.Background"/>
+              </Trigger>
+              <Trigger x:Uid="Trigger_1014" SourceName="IncreaseRepeat" Property="ButtonBase.IsPressed" Value="true">
+                <Setter x:Uid="Setter_1077" Value="{DynamicResource ScrollBarPressedBrush}" TargetName="IncreaseArrow"
+                        Property="Shape.Fill"/>
+              </Trigger>
+              <Trigger x:Uid="Trigger_1015" SourceName="DecreaseRepeat" Property="ButtonBase.IsPressed" Value="true">
+                <Setter x:Uid="Setter_1078" Value="{DynamicResource ScrollBarPressedBrush}" TargetName="DecreaseArrow"
+                        Property="Shape.Fill"/>
+              </Trigger>
+              <Trigger x:Uid="Trigger_1016" Property="UIElement.IsEnabled" Value="false">
+                <Setter x:Uid="Setter_1079" Value="{DynamicResource LayerChild1Brush}" TargetName="IncreaseArrow"
+                        Property="Shape.Fill"/>
+                <Setter x:Uid="Setter_1080" Value="{DynamicResource LayerChild1Brush}" TargetName="DecreaseArrow"
+                        Property="Shape.Fill"/>
+                <Setter x:Uid="Setter_1081" TargetName="Thumb" Property="UIElement.Visibility" Value="Collapsed"/>
+              </Trigger>
+              <Trigger x:Uid="Trigger_1017" Property="ScrollBar.Orientation" Value="Horizontal">
+                <Setter x:Uid="Setter_1082" TargetName="GridRoot" Property="FrameworkElement.LayoutTransform">
+                  <Setter.Value>
+                    <RotateTransform x:Uid="RotateTransform_1" Angle="-90"/>
+                  </Setter.Value>
+                </Setter>
+                <Setter x:Uid="Setter_1083" TargetName="PART_Track" Property="FrameworkElement.LayoutTransform">
+                  <Setter.Value>
+                    <RotateTransform x:Uid="RotateTransform_2" Angle="-90"/>
+                  </Setter.Value>
+                </Setter>
+                <Setter x:Uid="Setter_1084" Property="FrameworkElement.Width" Value="Auto"/>
+                <Setter x:Uid="Setter_1085" Property="FrameworkElement.Height" Value="12"/>
+                <Setter x:Uid="Setter_1086" TargetName="Thumb" Property="FrameworkElement.Tag" Value="Horizontal"/>
+                <Setter x:Uid="Setter_1087" TargetName="DecreaseRepeat" Property="ButtonBase.Command"
+                        Value="ScrollBar.LineLeftCommand"/>
+                <Setter x:Uid="Setter_1088" TargetName="IncreaseRepeat" Property="ButtonBase.Command"
+                        Value="ScrollBar.LineRightCommand"/>
+                <Setter x:Uid="Setter_1089" TargetName="PageDown" Property="ButtonBase.Command"
+                        Value="ScrollBar.PageLeftCommand"/>
+                <Setter x:Uid="Setter_1090" TargetName="PageUp" Property="ButtonBase.Command"
+                        Value="ScrollBar.PageRightCommand"/>
+              </Trigger>
+            </ControlTemplate.Triggers>
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+    </Style>
+    <data:BoolToVisibilityCollapsedConverter x:Key="VisibleForPreview" x:Uid="data:BoolToVisibilityCollapsedConverter_1" InvertBoolean="true"/>
+  </FrameworkElement.Resources>
+  <Image x:Uid="Image_1" Source="{DynamicResource AboutDialogBackgroundImage}" Stretch="None"/>
+  <Grid x:Uid="Grid_35" FrameworkElement.Width="307" FrameworkElement.Height="469">
+    <StackPanel x:Uid="StackPanel_1" FrameworkElement.Margin="18,145,18,0">
+      <TextBlock x:Name="Title" x:Uid="Title" FrameworkElement.Style="{DynamicResource ExpressionDialogText}">
+        <TextBlock.Text>
+          <Binding Path="ApplicationVersionTitle"/>
+        </TextBlock.Text>
+      </TextBlock>
+      <StackPanel x:Uid="StackPanel_2" FrameworkElement.Margin="0,20,0,10">
+        <TextBlock x:Name="LicensingStatus" TextAlignment="Center" FontWeight="Bold" TextWrapping="Wrap"
+                   x:Uid="TextBlock_1" FrameworkElement.VerticalAlignment="Stretch"
+                   FrameworkElement.Style="{DynamicResource ExpressionDialogText}"/>
+        <TextBlock x:Name="ProductKey" x:Uid="TextBlock_6" TextAlignment="Center" FrameworkElement.Margin="0,8,0,0"
+                   FontWeight="Bold" TextWrapping="NoWrap" Localization.Attributes="Text(Unreadable Unmodifiable)"
+                   Text="00000-000-0000000-00000" FrameworkElement.Style="{DynamicResource ExpressionDialogText}"/>
+        <TextBlock x:Uid="TextBlock_7" TextAlignment="Center" FrameworkElement.Margin="0,8,0,0"
+                   FrameworkElement.Style="{DynamicResource ExpressionDialogText}"
+                   Text="{DynamicResource AboutDialogDisclaimerText}">
+          <UIElement.Visibility>
+            <Binding Path="IsReleaseVersion" Converter="{StaticResource VisibleForPreview}"/>
+          </UIElement.Visibility>
+        </TextBlock>
+      </StackPanel>
+      <ScrollViewer FrameworkElement.Margin="0,10,0,0" x:Uid="ScrollViewer_1" FrameworkElement.MaxHeight="100"
+                    UIElement.ClipToBounds="false" VerticalScrollBarVisibility="Auto">
+        <TextBlock x:Name="textBlock2" x:Uid="TextBlock_3"
+                   FrameworkElement.Style="{DynamicResource ExpressionDialogText}"
+                   ScrollViewer.VerticalScrollBarVisibility="Auto" Text="{Binding AboutDialogWarningText}"/>
+      </ScrollViewer>
+      <TextBlock x:Name="PerformanceLevel" x:Uid="TextBlock_4" FrameworkElement.Margin="0,10,0,0"
+                 Localization.Attributes="Text(Unreadable Unmodifiable)"
+                 Text="Windows Presentation Foundation performance message"
+                 FrameworkElement.Style="{DynamicResource ExpressionDialogText}"
+                 Foreground="{DynamicResource 50pcGrayMainText}"/>
+    </StackPanel>
+    <TextBlock FrameworkElement.Margin="18,0,18,40" FrameworkElement.VerticalAlignment="Bottom"
+               TextAlignment="Left" x:Uid="TextBlock_5"
+               FrameworkElement.Style="{DynamicResource ExpressionDialogText}">
+      <TextBlock.Background>
+        <x:NullExtension/>
+      </TextBlock.Background>
+      <Hyperlink x:Name="WebPageLink" Localization.Attributes="NavigateUri(Unreadable Unmodifiable)"
+                 NavigateUri="http://go.microsoft.com/fwlink/?LinkId=75064" x:Uid="Hyperlink1"
+                 FrameworkContentElement.Style="{DynamicResource ExpressionDialogHyperlink}">
+        Microsoft Expression Online
+      </Hyperlink>
+    </TextBlock>
+    <Grid x:Uid="Grid_8" FrameworkElement.VerticalAlignment="Bottom" FrameworkElement.Margin="16,0,16,0"
+          FrameworkElement.Height="47">
+      <Button x:Name="AcceptButton" IsDefault="true" IsCancel="true" Control.TabIndex="1" x:Uid="AcceptButton"
+              FrameworkElement.HorizontalAlignment="Right" FrameworkElement.VerticalAlignment="Center"
+              Control.FontWeight="Normal" ContentControl.Content="_Close" FrameworkElement.MinWidth="100"
+              FrameworkElement.MinHeight="18"
+              Control.FontFamily="{DynamicResource {x:Static SystemFonts.MessageFontFamilyKey}}"
+              FrameworkElement.Style="{DynamicResource ExpressionDialogButton}"/>
+      <TextBlock x:Uid="TextBlock_8" FrameworkElement.HorizontalAlignment="Left" FrameworkElement.Width="170"
+                 FrameworkElement.VerticalAlignment="Center"
+                 FrameworkElement.Style="{DynamicResource ExpressionDialogText}"
+                 Foreground="{DynamicResource 50pcGrayMainText}">
+        © 2010 Microsoft Corporation.
+        <LineBreak x:Uid="LineBreak_3"/>
+        All rights reserved.
+      </TextBlock>
+    </Grid>
+  </Grid>
+</Grid>

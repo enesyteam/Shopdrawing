@@ -1,0 +1,132 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vs="clr-namespace:Microsoft.VisualStudio.PlatformUI.Shell.Controls"
+                    xmlns:ui="clr-namespace:Microsoft.VisualStudio.PlatformUI"
+                    x:Uid="ResourceDictionary_1">
+  <Style x:Uid="Style_1" TargetType="{x:Type vs:AutoHideWindow}">
+    <Style.Resources>
+      <vs:SubtractionConverter x:Uid="vs:SubtractionConverter_1" x:Key="SubtractionConverter" Subtrahend="20"/>
+    </Style.Resources>
+    <Setter x:Uid="Setter_1" Property="ContentControl.Content">
+      <Setter.Value>
+        <Binding/>
+      </Setter.Value>
+    </Setter>
+    <Setter x:Uid="Setter_2" Property="Control.Background" Value="#F0F0F0"/>
+    <Setter x:Uid="Setter_3" Property="Control.Template">
+      <Setter.Value>
+        <ControlTemplate x:Uid="ControlTemplate_1" TargetType="{x:Type vs:AutoHideWindow}">
+          <vs:AutoHideHwndContentControl x:Name="PART_HwndHost" x:Uid="PART_HwndHost">
+            <Border x:Name="OuterBorder" x:Uid="OuterBorder" Background="{TemplateBinding Control.Background}"
+                    BorderBrush="Black" BorderThickness="0">
+              <Border x:Name="Border" x:Uid="Border" BorderBrush="#A0A0A0" BorderThickness="0">
+                <Grid x:Uid="Grid_1">
+                  <Grid.RowDefinitions>
+                    <RowDefinition x:Uid="RowDefinition_1" Height="Auto"/>
+                    <RowDefinition x:Uid="RowDefinition_2"/>
+                    <RowDefinition x:Uid="RowDefinition_3" Height="Auto"/>
+                  </Grid.RowDefinitions>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition x:Uid="ColumnDefinition_1" Width="Auto"/>
+                    <ColumnDefinition x:Uid="ColumnDefinition_2"/>
+                    <ColumnDefinition x:Uid="ColumnDefinition_3" Width="Auto"/>
+                  </Grid.ColumnDefinitions>
+                  <ContentPresenter x:Uid="ContentPresenter_1" Grid.Row="1" Grid.Column="1" ContentSource="Content"/>
+                  <vs:WindowResizeGrip x:Name="ResizeGrip" x:Uid="ResizeGrip">
+                    <vs:WindowResizeGrip.ResizeTarget>
+                      <Binding RelativeSource="{RelativeSource TemplatedParent}"/>
+                    </vs:WindowResizeGrip.ResizeTarget>
+                  </vs:WindowResizeGrip>
+                </Grid>
+              </Border>
+            </Border>
+          </vs:AutoHideHwndContentControl>
+          <ControlTemplate.Triggers>
+            <Trigger x:Uid="Trigger_1" Property="vs:AutoHideChannelControl.ChannelDock" Value="Left">
+              <Setter x:Uid="Setter_4" TargetName="ResizeGrip" Property="Grid.Column" Value="2"/>
+              <Setter x:Uid="Setter_5" TargetName="ResizeGrip" Property="Grid.RowSpan" Value="3"/>
+              <Setter x:Uid="Setter_6" TargetName="ResizeGrip" Property="FrameworkElement.Width" Value="4"/>
+              <Setter x:Uid="Setter_7" TargetName="ResizeGrip" Property="vs:WindowResizeGrip.ResizeGripDirection"
+                      Value="Right"/>
+              <Setter x:Uid="Setter_8" TargetName="Border" Property="Border.BorderThickness" Value="0,0,1,0"/>
+              <Setter x:Uid="Setter_9" TargetName="OuterBorder" Property="Border.BorderThickness" Value="0,0,1,0"/>
+              <Setter x:Uid="Setter_10" Property="FrameworkElement.Width">
+                <Setter.Value>
+                  <Binding Path="AutoHideWidth" Mode="TwoWay"/>
+                </Setter.Value>
+              </Setter>
+              <Setter x:Uid="Setter_11" Value="{Binding MinimumWidth}" Property="FrameworkElement.MinWidth"/>
+              <Setter x:Uid="Setter_12" Property="FrameworkElement.MaxWidth">
+                <Setter.Value>
+                  <Binding Path="DockRootElement.ActualWidth" RelativeSource="{RelativeSource Self}"
+                           Converter="{StaticResource SubtractionConverter}"/>
+                </Setter.Value>
+              </Setter>
+            </Trigger>
+            <Trigger x:Uid="Trigger_2" Property="vs:AutoHideChannelControl.ChannelDock" Value="Right">
+              <Setter x:Uid="Setter_13" TargetName="ResizeGrip" Property="Grid.RowSpan" Value="3"/>
+              <Setter x:Uid="Setter_14" TargetName="ResizeGrip" Property="FrameworkElement.Width" Value="4"/>
+              <Setter x:Uid="Setter_15" TargetName="ResizeGrip" Property="vs:WindowResizeGrip.ResizeGripDirection"
+                      Value="Left"/>
+              <Setter x:Uid="Setter_16" TargetName="Border" Property="Border.BorderThickness" Value="1,0,0,0"/>
+              <Setter x:Uid="Setter_17" TargetName="OuterBorder" Property="Border.BorderThickness" Value="1,0,0,0"/>
+              <Setter x:Uid="Setter_18" Property="FrameworkElement.Width">
+                <Setter.Value>
+                  <Binding Path="AutoHideWidth" Mode="TwoWay"/>
+                </Setter.Value>
+              </Setter>
+              <Setter x:Uid="Setter_19" Value="{Binding MinimumWidth}" Property="FrameworkElement.MinWidth"/>
+              <Setter x:Uid="Setter_20" Property="FrameworkElement.MaxWidth">
+                <Setter.Value>
+                  <Binding Path="DockRootElement.ActualWidth" RelativeSource="{RelativeSource Self}"
+                           Converter="{StaticResource SubtractionConverter}"/>
+                </Setter.Value>
+              </Setter>
+            </Trigger>
+            <Trigger x:Uid="Trigger_3" Property="vs:AutoHideChannelControl.ChannelDock" Value="Top">
+              <Setter x:Uid="Setter_21" TargetName="ResizeGrip" Property="Grid.Row" Value="2"/>
+              <Setter x:Uid="Setter_22" TargetName="ResizeGrip" Property="Grid.ColumnSpan" Value="3"/>
+              <Setter x:Uid="Setter_23" TargetName="ResizeGrip" Property="FrameworkElement.Height" Value="4"/>
+              <Setter x:Uid="Setter_24" TargetName="ResizeGrip" Property="vs:WindowResizeGrip.ResizeGripDirection"
+                      Value="Bottom"/>
+              <Setter x:Uid="Setter_25" TargetName="Border" Property="Border.BorderThickness" Value="0,0,0,1"/>
+              <Setter x:Uid="Setter_26" TargetName="OuterBorder" Property="Border.BorderThickness" Value="0,0,0,1"/>
+              <Setter x:Uid="Setter_27" Property="FrameworkElement.Height">
+                <Setter.Value>
+                  <Binding Path="AutoHideHeight" Mode="TwoWay"/>
+                </Setter.Value>
+              </Setter>
+              <Setter x:Uid="Setter_28" Value="{Binding MinimumHeight}" Property="FrameworkElement.MinHeight"/>
+              <Setter x:Uid="Setter_29" Property="FrameworkElement.MaxHeight">
+                <Setter.Value>
+                  <Binding Path="DockRootElement.ActualHeight" RelativeSource="{RelativeSource Self}"
+                           Converter="{StaticResource SubtractionConverter}"/>
+                </Setter.Value>
+              </Setter>
+            </Trigger>
+            <Trigger x:Uid="Trigger_4" Property="vs:AutoHideChannelControl.ChannelDock" Value="Bottom">
+              <Setter x:Uid="Setter_30" TargetName="ResizeGrip" Property="Grid.ColumnSpan" Value="3"/>
+              <Setter x:Uid="Setter_31" TargetName="ResizeGrip" Property="FrameworkElement.Height" Value="4"/>
+              <Setter x:Uid="Setter_32" TargetName="ResizeGrip" Property="vs:WindowResizeGrip.ResizeGripDirection"
+                      Value="Top"/>
+              <Setter x:Uid="Setter_33" TargetName="Border" Property="Border.BorderThickness" Value="0,1,0,0"/>
+              <Setter x:Uid="Setter_34" TargetName="OuterBorder" Property="Border.BorderThickness" Value="0,1,0,0"/>
+              <Setter x:Uid="Setter_35" Property="FrameworkElement.Height">
+                <Setter.Value>
+                  <Binding Path="AutoHideHeight" Mode="TwoWay"/>
+                </Setter.Value>
+              </Setter>
+              <Setter x:Uid="Setter_36" Value="{Binding MinimumHeight}" Property="FrameworkElement.MinHeight"/>
+              <Setter x:Uid="Setter_37" Property="FrameworkElement.MaxHeight">
+                <Setter.Value>
+                  <Binding Path="DockRootElement.ActualHeight" RelativeSource="{RelativeSource Self}"
+                           Converter="{StaticResource SubtractionConverter}"/>
+                </Setter.Value>
+              </Setter>
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

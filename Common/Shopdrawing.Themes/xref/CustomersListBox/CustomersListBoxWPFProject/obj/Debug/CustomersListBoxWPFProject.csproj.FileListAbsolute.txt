@@ -1,0 +1,28 @@
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\xref\CustomersListBox\CustomersListBoxWPFProject\bin\Debug\ListBoxSelectionColorChange.exe
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\xref\CustomersListBox\CustomersListBoxWPFProject\bin\Debug\ListBoxSelectionColorChange.pdb
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\xref\CustomersListBox\CustomersListBoxWPFProject\obj\Debug\CustomersListBoxWPFProject.csprojResolveAssemblyReference.cache
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\xref\CustomersListBox\CustomersListBoxWPFProject\obj\Debug\Window1.g.cs
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\xref\CustomersListBox\CustomersListBoxWPFProject\obj\Debug\App.g.cs
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\xref\CustomersListBox\CustomersListBoxWPFProject\obj\Debug\GeneratedInternalTypeHelper.g.cs
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\xref\CustomersListBox\CustomersListBoxWPFProject\obj\Debug\ListBoxSelectionColorChange_MarkupCompile.cache
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\xref\CustomersListBox\CustomersListBoxWPFProject\obj\Debug\ListBoxSelectionColorChange_MarkupCompile.lref
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\xref\CustomersListBox\CustomersListBoxWPFProject\obj\Debug\Window1.baml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\xref\CustomersListBox\CustomersListBoxWPFProject\obj\Debug\ListBoxSelectionColorChange.g.resources
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\xref\CustomersListBox\CustomersListBoxWPFProject\obj\Debug\ListBoxSelectionColorChange.Properties.Resources.resources
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\xref\CustomersListBox\CustomersListBoxWPFProject\obj\Debug\CustomersListBoxWPFProject.csproj.GenerateResource.Cache
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\xref\CustomersListBox\CustomersListBoxWPFProject\obj\Debug\ListBoxSelectionColorChange.exe
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\xref\CustomersListBox\CustomersListBoxWPFProject\obj\Debug\ListBoxSelectionColorChange.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\xref\CustomersListBox\CustomersListBoxWPFProject\bin\Debug\ListBoxSelectionColorChange.exe
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\xref\CustomersListBox\CustomersListBoxWPFProject\bin\Debug\ListBoxSelectionColorChange.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\xref\CustomersListBox\CustomersListBoxWPFProject\obj\Debug\CustomersListBoxWPFProject.csprojResolveAssemblyReference.cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\xref\CustomersListBox\CustomersListBoxWPFProject\obj\Debug\Window1.g.cs
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\xref\CustomersListBox\CustomersListBoxWPFProject\obj\Debug\App.g.cs
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\xref\CustomersListBox\CustomersListBoxWPFProject\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\xref\CustomersListBox\CustomersListBoxWPFProject\obj\Debug\ListBoxSelectionColorChange_MarkupCompile.cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\xref\CustomersListBox\CustomersListBoxWPFProject\obj\Debug\ListBoxSelectionColorChange_MarkupCompile.lref
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\xref\CustomersListBox\CustomersListBoxWPFProject\obj\Debug\Window1.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\xref\CustomersListBox\CustomersListBoxWPFProject\obj\Debug\ListBoxSelectionColorChange.g.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\xref\CustomersListBox\CustomersListBoxWPFProject\obj\Debug\ListBoxSelectionColorChange.Properties.Resources.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\xref\CustomersListBox\CustomersListBoxWPFProject\obj\Debug\CustomersListBoxWPFProject.csproj.GenerateResource.Cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\xref\CustomersListBox\CustomersListBoxWPFProject\obj\Debug\ListBoxSelectionColorChange.exe
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Themes\xref\CustomersListBox\CustomersListBoxWPFProject\obj\Debug\ListBoxSelectionColorChange.pdb

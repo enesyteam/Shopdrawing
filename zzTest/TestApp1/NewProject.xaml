@@ -1,0 +1,237 @@
+﻿<Window x:Class="BridgeFS.NewProject"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:Microsoft.Expression.Framework.Controls;assembly=Shopdrawing.Framework"
+        xmlns:automation="clr-namespace:Microsoft.Expression.Framework.Diagnostics;assembly=Shopdrawing.Framework"
+        xmlns:framework="clr-namespace:Microsoft.Expression.Framework.Data;assembly=Shopdrawing.Framework" WindowStyle="None" 
+        SizeToContent="WidthAndHeight"
+        ResizeMode="NoResize" AllowsTransparency="True"
+        Title="New Project">
+    <Grid>
+        <Border FrameworkElement.Width="388" FrameworkElement.Height="399"
+            FrameworkElement.Style="{DynamicResource DialogRootContainer}" x:Uid="Border1">
+            <Grid x:Uid="Grid1">
+                <FrameworkElement.Resources>
+                    <Style x:Key="ExpressionListBoxItem" x:Uid="Style_29" TargetType="{x:Type ListBoxItem}">
+                        <Setter x:Uid="Setter_1137" Property="Control.FontFamily"
+            Value="{DynamicResource {x:Static SystemFonts.MessageFontFamilyKey}}"/>
+                        <Setter x:Uid="Setter_1138" Property="Control.FontSize"
+            Value="{DynamicResource {x:Static SystemFonts.MessageFontSizeKey}}"/>
+                        <Setter x:Uid="Setter_1139" Property="Control.FontWeight"
+            Value="{DynamicResource {x:Static SystemFonts.MessageFontWeightKey}}"/>
+                        <Setter x:Uid="Setter_1993" Property="Control.Foreground" Value="{DynamicResource Text1Brush}"/>
+                        <Setter x:Uid="Setter_1055" Property="Control.Padding" Value="4,2,4,2"/>
+                        <Setter x:Uid="Setter_1413" Property="FrameworkElement.MinHeight" Value="20"/>
+                        <Setter x:Uid="Setter_1165" Property="Control.IsTabStop" Value="false"/>
+                        <Setter x:Uid="Setter_1654" Property="FrameworkElement.FocusVisualStyle">
+                            <Setter.Value>
+                                <x:NullExtension/>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter x:Uid="Setter_167" Property="Control.Template">
+                            <Setter.Value>
+                                <ControlTemplate x:Uid="ControlTemplate_17" TargetType="{x:Type ListBoxItem}">
+                                    <Border FrameworkElement.Name="ListBoxItemRoot" x:Uid="ListBoxItemRoot"
+                  BorderThickness="{TemplateBinding Control.BorderThickness}"
+                  BorderBrush="{TemplateBinding Control.BorderBrush}"
+                  Background="{TemplateBinding Control.Background}">
+                                        <ContentPresenter FrameworkElement.Name="ListBoxItemContent" x:Uid="ListBoxItemContent"
+                              Content="{TemplateBinding ContentControl.Content}"
+                              ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}"
+                              ContentTemplateSelector="{TemplateBinding ContentControl.ContentTemplateSelector}"
+                              FrameworkElement.HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+                              FrameworkElement.VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+                              FrameworkElement.Margin="{TemplateBinding Control.Padding}"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <MultiTrigger x:Uid="MultiTrigger_30">
+                                <MultiTrigger.Conditions>
+                                    <Condition x:Uid="Condition_71" Property="UIElement.IsMouseOver" Value="true"/>
+                                    <Condition x:Uid="Condition_72" Property="ListBoxItem.IsSelected" Value="false"/>
+                                </MultiTrigger.Conditions>
+                                <Setter x:Uid="Setter_1025" Property="Control.Background" Value="{DynamicResource ListHoverBrush}"/>
+                                <Setter x:Uid="Setter_1024" Property="Control.Foreground" Value="{DynamicResource ListHoverTextBrush}"/>
+                            </MultiTrigger>
+                            <Trigger x:Uid="Trigger_11" Property="ListBoxItem.IsSelected" Value="true">
+                                <Setter x:Uid="Setter_221" Property="Control.Background" Value="{DynamicResource ListSelectedBrush}"/>
+                                <Setter x:Uid="Setter_1994" Property="Control.Foreground" Value="{DynamicResource ListSelectedTextBrush}"/>
+                            </Trigger>
+                            <Trigger x:Uid="Trigger_26" Property="UIElement.IsEnabled" Value="false">
+                                <Setter x:Uid="Setter_1056" Property="Control.Background" Value="{DynamicResource ListBackgroundBrush}"/>
+                                <Setter x:Uid="Setter_1057" Property="Control.Foreground" Value="{DynamicResource DisabledTextBrush}"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                    <Style x:Key="ExpressionDialogListBoxItem" x:Uid="Style_173" TargetType="{x:Type ListBoxItem}"
+         BasedOn="{StaticResource ExpressionListBoxItem}">
+                        <Setter x:Uid="Setter_1655" Property="Control.IsTabStop" Value="true"/>
+                        <Setter x:Uid="Setter_1656" Property="UIElement.Focusable" Value="true"/>
+                        <Setter x:Uid="Setter_1673" Property="UIElement.Opacity" Value="0.8"/>
+                        <Setter x:Uid="Setter_1658" Property="FrameworkElement.FocusVisualStyle">
+                            <Setter.Value>
+                                <Style x:Uid="Style_174">
+                                    <Setter x:Uid="Setter_1659" Property="Control.Template">
+                                        <Setter.Value>
+                                            <ControlTemplate x:Uid="ControlTemplate_104">
+                                                <Rectangle x:Uid="Rectangle_59" UIElement.SnapsToDevicePixels="true"
+                           Shape.Stroke="{DynamicResource ControlFocusBorderBrush}" Shape.StrokeThickness="1"
+                           FrameworkElement.Margin="1" RadiusX="2" RadiusY="2"/>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger x:Uid="Trigger_1132" Property="UIElement.IsFocused" Value="true">
+                                <Setter x:Uid="Setter_1674" Property="UIElement.Opacity" Value="1.0"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                    
+                    <framework:BoolToCheckStateConverter x:Key="BoolToCheckStateConverter" x:Uid="framework:BoolToCheckStateConverter_1"/>
+                    <DataTemplate x:Key="ProjectItemTemplateTemplate" x:Uid="ProjectItemTemplateTemplate">
+                        <controls:ClickControl x:Uid="ClickControl_1" Control.IsTabStop="false">
+                            <!--<controls:ClickControl.LeftDoubleClickCommand>
+                                <Binding Path="SelectAndCloseCommand"
+                         RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type designSurface:CreateProjectItemDialog}}"
+                         Mode="OneTime"/>
+                            </controls:ClickControl.LeftDoubleClickCommand>-->
+                            <automation:AutomationElement.Id>
+                                <Binding Path="DefaultName" Mode="OneTime"/>
+                            </automation:AutomationElement.Id>
+                            <Grid x:Uid="Grid_1" Panel.Background="Transparent">
+                                <FrameworkElement.ToolTip>
+                                    <Binding Path="DisplayName" Mode="OneTime"/>
+                                </FrameworkElement.ToolTip>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition x:Uid="ColumnDefinition_4" Width="Auto"/>
+                                    <ColumnDefinition x:Uid="ColumnDefinition_5" Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Viewbox x:Uid="ProjectTemplateIconViewbox" Grid.Row="0" FrameworkElement.Width="24"
+                         FrameworkElement.Height="24" Stretch="UniformToFill">
+                                    <ContentControl FrameworkElement.Name="ItemTemplateIcon" x:Uid="ItemTemplateIcon" UIElement.Focusable="false">
+                                        <ContentControl.Content>
+                                            <Binding Path="Icon" Mode="OneTime"/>
+                                        </ContentControl.Content>
+                                    </ContentControl>
+                                </Viewbox>
+                                <controls:ToolTipTextBlock FrameworkElement.Name="ProjectItemTypeName" x:Uid="ProjectItemTypeName"
+                                           TextBlock.FontSize="{StaticResource LargeText}" Grid.Column="1" TextBlock.TextAlignment="Left"
+                                           FrameworkElement.HorizontalAlignment="Left" TextBlock.TextTrimming="CharacterEllipsis"
+                                           TextBlock.TextWrapping="NoWrap" FrameworkElement.VerticalAlignment="Center"
+                                           FrameworkElement.Margin="{DynamicResource DefaultLeftMargin}">
+                                    <TextBlock.Text>
+                                        <Binding Path="DisplayName" Mode="OneTime"/>
+                                    </TextBlock.Text>
+                                    <FrameworkElement.ToolTip>
+                                        <Binding Path="DisplayName" Mode="OneTime"/>
+                                    </FrameworkElement.ToolTip>
+                                </controls:ToolTipTextBlock>
+                            </Grid>
+                        </controls:ClickControl>
+                    </DataTemplate>
+
+                    
+                    <!--<Style x:Key="ProjectItemListBoxItem" x:Uid="Style_1" TargetType="{x:Type ListBoxItem}"
+                 BasedOn="{StaticResource ExpressionBlueListBoxItem}">-->
+                    <Style x:Key="ExpressionBlueListBoxItem" x:Uid="Style_196" TargetType="{x:Type ListBoxItem}"
+         BasedOn="{StaticResource ExpressionDialogListBoxItem}">
+                        <Setter x:Uid="Setter_1836" Property="FrameworkElement.MinHeight" Value="29"/>
+                        <Setter x:Uid="Setter_1837" Property="Control.FontSize" Value="15"/>
+                        <Setter x:Uid="Setter_1838" Property="Control.HorizontalContentAlignment" Value="Stretch"/>
+                        <Setter x:Uid="Setter_1839" Property="Control.VerticalContentAlignment" Value="Stretch"/>
+                        <Setter x:Uid="Setter_1844" Property="UIElement.Opacity" Value="1.0"/>
+                        <Setter x:Uid="Setter_1840" Property="FrameworkElement.FocusVisualStyle">
+                            <Setter.Value>
+                                <Style x:Uid="Style_197">
+                                    <Setter x:Uid="Setter_1841" Property="Control.Template">
+                                        <Setter.Value>
+                                            <ControlTemplate x:Uid="ControlTemplate_117">
+                                                <Rectangle x:Uid="Rectangle_69" UIElement.SnapsToDevicePixels="true"
+                           Shape.Stroke="{DynamicResource ButtonDefaultedBrush}" Shape.StrokeThickness="1" RadiusX="2"
+                           RadiusY="2"/>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                    <Style x:Key="ProjectItemListBoxItem" x:Uid="Style_1" TargetType="{x:Type ListBoxItem}"
+                           BasedOn="{StaticResource ExpressionBlueListBoxItem}">
+                        <Setter x:Uid="Setter_1" Property="automation:AutomationElement.Id">
+                            <Setter.Value>
+                                <Binding Path="DefaultName" Mode="OneTime"/>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </FrameworkElement.Resources>
+                <Grid.RowDefinitions>
+                    <RowDefinition x:Uid="RowDefinition_2" Height="*"/>
+                    <RowDefinition x:Uid="RowDefinition_3" Height="Auto"/>
+                    <RowDefinition x:Uid="RowDefinition_4" Height="Auto"/>
+                    <RowDefinition x:Uid="RowDefinition_5" Height="Auto"/>
+                    <RowDefinition x:Uid="RowDefinition_6" Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition x:Uid="ColumnDefinition_2" Width="Auto"/>
+                    <ColumnDefinition x:Uid="ColumnDefinition_3" Width="*"/>
+                </Grid.ColumnDefinitions>
+                <ListBox FrameworkElement.Name="ProjectItemTypeList" Grid.Row="0" Grid.ColumnSpan="2"
+                 x:Uid="ProjectItemTypeList" Selector.IsSynchronizedWithCurrentItem="True"
+                 ItemsControl.ItemContainerStyle="{StaticResource ProjectItemListBoxItem}"
+                 ItemsControl.ItemTemplate="{StaticResource ProjectItemTemplateTemplate}"
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <ItemsControl.ItemsSource>
+                        <Binding Path="ProjectItemTypes"/>
+                    </ItemsControl.ItemsSource>
+                </ListBox>
+                <TextBlock FrameworkElement.Name="DescriptionTextBlock" x:Uid="Description" Grid.Row="1" Grid.ColumnSpan="2"
+                   FrameworkElement.VerticalAlignment="Top" FrameworkElement.HorizontalAlignment="Stretch"
+                   TextWrapping="Wrap" TextTrimming="CharacterEllipsis" FontSize="12" FrameworkElement.Height="48"
+                   FrameworkElement.Margin="{DynamicResource DefaultTopMargin}">
+                    <TextBlock.Text>
+                        <Binding Path="Description" Mode="OneWay" UpdateSourceTrigger="PropertyChanged"/>
+                    </TextBlock.Text>
+                </TextBlock>
+                <Rectangle Grid.Row="2" Grid.ColumnSpan="2" x:Uid="separator_1" Shape.StrokeThickness="0"
+                   FrameworkElement.Height="1" Shape.Fill="{DynamicResource RecessedBrush}"
+                   FrameworkElement.Margin="{DynamicResource DefaultTopMargin}"/>
+                <Label x:Uid="NameLabel" FrameworkElement.HorizontalAlignment="Right"
+               FrameworkElement.Margin="{DynamicResource MediumTopMargin}"
+               FrameworkElement.VerticalAlignment="Center" Grid.Row="3">
+                    <Label.Target>
+                        <Binding ElementName="NameTextBox"/>
+                    </Label.Target> _Name
+                </Label>
+                <TextBox FrameworkElement.Name="NameTextBox" Grid.Column="1" x:Uid="NameTextBox"
+                 FrameworkElement.Margin="4,8,0,0" FrameworkElement.VerticalAlignment="Center"
+                 FrameworkElement.HorizontalAlignment="Stretch" Grid.Row="3" KeyboardNavigation.TabIndex="1">
+                    <TextBox.Text>
+                        <Binding Path="FileName" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"/>
+                    </TextBox.Text>
+                </TextBox>
+                <UniformGrid x:Uid="UniformGrid_1" Rows="1" Grid.ColumnSpan="2" Grid.Row="4"
+                     FrameworkElement.HorizontalAlignment="Right"
+                     FrameworkElement.Margin="{DynamicResource ExtraLargeTopMargin}">
+                    <Button FrameworkElement.Name="AcceptButton" x:Uid="AcceptButton" KeyboardNavigation.TabIndex="2">
+                        <UIElement.IsEnabled>
+                            <Binding Path="InputIsValid" Mode="OneWay"/>
+                        </UIElement.IsEnabled> OK
+                    </Button>
+                    <!--<Button FrameworkElement.Name="CancelButton" IsCancel="true"
+                  FrameworkElement.Style="{DynamicResource DialogButton}"
+                  FrameworkElement.Margin="{StaticResource DefaultLeftMargin}" x:Uid="CancelButton"
+                  KeyboardNavigation.TabIndex="3">Cancel</Button>-->
+                    <Button FrameworkElement.Name="CancelButton" IsCancel="true"
+                  FrameworkElement.Margin="0" x:Uid="CancelButton"
+                  KeyboardNavigation.TabIndex="3">Cancel</Button>
+                </UniformGrid>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

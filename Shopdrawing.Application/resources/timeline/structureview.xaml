@@ -1,0 +1,1240 @@
+<tlui:StructureView xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:automation="clr-namespace:Microsoft.Expression.Framework.Diagnostics;assembly=Microsoft.Expression.Framework"
+                    xmlns:fwctl="clr-namespace:Microsoft.Expression.Framework.Controls;assembly=Microsoft.Expression.Framework"
+                    xmlns:fwve="clr-namespace:Microsoft.Expression.Framework.ValueEditors;assembly=Microsoft.Expression.Framework"
+                    xmlns:fwdata="clr-namespace:Microsoft.Expression.Framework.Data;assembly=Microsoft.Expression.Framework"
+                    xmlns:fwui="clr-namespace:Microsoft.Expression.Framework.UserInterface;assembly=Microsoft.Expression.Framework"
+                    xmlns:sys="clr-namespace:System;assembly=Mscorlib"
+                    xmlns:ctl="clr-namespace:Microsoft.Expression.DesignSurface.UserInterface"
+                    xmlns:tlctl="clr-namespace:Microsoft.Expression.DesignSurface.UserInterface.Timeline"
+                    xmlns:tlui="clr-namespace:Microsoft.Expression.DesignSurface.UserInterface.Timeline.UI"
+                    FrameworkElement.Name="Root" x:Uid="Root" fwui:FocusScopeManager.AllowedFocus="false">
+  <FrameworkElement.Resources>
+    <ResourceDictionary x:Uid="ResourceDictionary_1">
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary x:Uid="ResourceDictionary_2"
+                            Source="pack://application:,,,/Microsoft.Expression.DesignSurface;component/resources/timeline/timelinebrushes.xaml"/>
+      </ResourceDictionary.MergedDictionaries>
+      <sys:Double x:Key="RowMinHeight" x:Uid="sys:Double_1">21</sys:Double>
+      <sys:Double x:Key="IndentMultiplier" x:Uid="sys:Double_2">16</sys:Double>
+      <fwdata:BoolToVisibilityHiddenConverter x:Key="BoolToVisibilityHiddenConverter" x:Uid="fwdata:BoolToVisibilityHiddenConverter_1"/>
+      <fwdata:BoolToVisibilityCollapsedConverter x:Key="BoolToVisibilityCollapsedConverter" x:Uid="fwdata:BoolToVisibilityCollapsedConverter_1"/>
+      <fwdata:BoolToCheckStateConverter x:Key="BoolToCheckStateConverter" x:Uid="fwdata:BoolToCheckStateConverter_1"/>
+      <fwdata:AppendSuffixConverter x:Key="TreeForegroundContentIDConverter" x:Uid="fwdata:AppendSuffixConverter_6"
+                                    Localization.Attributes="Suffix(Unreadable Unmodifiable)" Suffix="TreeForegroundContent"/>
+      <fwdata:MultiplyConverter x:Key="MultiplyConverter" x:Uid="tlctl:MultiplyConverter_1"
+                                MultiplyValue="{StaticResource IndentMultiplier}"/>
+      <fwdata:EqualsMultipleConverter x:Key="EqualsMultipleConverter" x:Uid="fwdata:EqualsMultipleConverter_1"/>
+      <tlui:TypeNameConverter x:Key="TypeNameConverter" x:Uid="tlui:TypeNameConverter_1"/>
+      <Style x:Key="TreeText" x:Uid="Style_26" TargetType="{x:Type TextBlock}">
+        <Setter x:Uid="Setter_136" Property="FrameworkElement.VerticalAlignment" Value="Center"/>
+        <Setter x:Uid="Setter_139" Property="TextBlock.TextWrapping" Value="NoWrap"/>
+      </Style>
+      <Style x:Key="Icon" x:Uid="Style_58" TargetType="{x:Type fwctl:Icon}">
+        <Setter x:Uid="Setter_4" Property="FrameworkElement.Margin" Value="0,2,4,2"/>
+        <Setter x:Uid="Setter_1533" Property="FrameworkElement.Width" Value="12"/>
+        <Setter x:Uid="Setter_1534" Property="FrameworkElement.Height" Value="12"/>
+      </Style>
+      <ctl:StyleStringConverter x:Key="StyleStringConverter" x:Uid="dd:StyleStringConverter_1">
+        <ctl:StyleStringConverter.Resources>
+          <ResourceDictionary x:Uid="ResourceDictionary_5">
+            <LineBreak x:Uid="LineBreak_5" x:Key="LineBreak"/>
+            <Style x:Uid="Style_11158" x:Key="Normal" TargetType="{x:Type Run}"/>
+            <Style x:Uid="Style_11159" x:Key="Dimmed" TargetType="{x:Type Run}">
+              <Setter x:Uid="Setter_111346" Property="TextElement.Foreground" Value="{DynamicResource DimmedTextBrush}"/>
+            </Style>
+            <Style x:Uid="Style_11160" x:Key="Bold" TargetType="{x:Type Bold}"
+                   BasedOn="{StaticResource {x:Type Bold}}"/>
+          </ResourceDictionary>
+        </ctl:StyleStringConverter.Resources>
+      </ctl:StyleStringConverter>
+      <Style x:Key="ToggleCheckBoxStyle" x:Uid="Style_60" TargetType="{x:Type CheckBox}">
+        <Setter x:Uid="Setter_61" Property="FrameworkElement.Width" Value="18"/>
+        <Setter x:Uid="Setter_62" Property="FrameworkElement.Height" Value="16"/>
+        <Setter x:Uid="Setter_63" Property="Control.Background" Value="Transparent"/>
+        <Setter x:Uid="Setter_111340" Property="FrameworkElement.Margin" Value="0,1,0,0"/>
+      </Style>
+      <Style x:Key="LockCheckBox" x:Uid="Style_16" TargetType="{x:Type CheckBox}"
+             BasedOn="{StaticResource ToggleCheckBoxStyle}">
+        <Setter x:Uid="Setter_64" Localization.Attributes="Value (Readable Modifiable)"
+                Property="FrameworkElement.ToolTip" Value="Lock"/>
+        <Setter x:Uid="Setter_65" Property="Control.Template">
+          <Setter.Value>
+            <ControlTemplate x:Uid="ControlTemplate_9" TargetType="{x:Type CheckBox}">
+              <fwctl:Icon x:Name="LockIcon" x:Uid="fwctl:Icon_1" Image.Source="{StaticResource PlaceholderImage}"
+                          RedChroma="{DynamicResource PlaceholderNormalBrush}" FrameworkElement.HorizontalAlignment="Center"
+                          FrameworkElement.VerticalAlignment="Center"/>
+              <ControlTemplate.Triggers>
+                <Trigger x:Uid="Trigger_8" Property="ToggleButton.IsChecked" Value="True">
+                  <Setter x:Uid="Setter_68" TargetName="LockIcon" Property="Image.Source"
+                          Value="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Timeline/timeline_lock_off_16x16.png"/>
+                  <Setter x:Uid="Setter_1507" Localization.Attributes="Value (Readable Modifiable)"
+                          Property="FrameworkElement.ToolTip" Value="Unlock"/>
+                </Trigger>
+                <DataTrigger x:Uid="DataTrigger_8" Value="True" Binding="{Binding IsAncestorLocked}">
+                  <Setter x:Uid="Setter_368" Property="UIElement.Opacity" Value=".5"/>
+                  <Setter x:Uid="Setter_369" TargetName="LockIcon" Property="Image.Source"
+                          Value="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Timeline/timeline_lock_off_16x16.png"/>
+                </DataTrigger>
+                <Trigger x:Uid="Trigger_10" Property="ToggleButton.IsChecked" Value="True">
+                  <Setter x:Uid="Setter_370" Property="UIElement.Opacity" Value="1"/>
+                </Trigger>
+                <MultiTrigger x:Uid="MultiTrigger_2">
+                  <MultiTrigger.Conditions>
+                    <Condition x:Uid="Condition_7" Property="UIElement.IsMouseOver" Value="true"/>
+                    <Condition x:Uid="Condition_8" Property="ToggleButton.IsChecked" Value="True"/>
+                  </MultiTrigger.Conditions>
+                  <Setter x:Uid="Setter_379" TargetName="LockIcon" Property="Image.Source"
+                          Value="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Timeline/timeline_lock_on_16x16.png"/>
+                </MultiTrigger>
+                <MultiDataTrigger x:Uid="MultiDataTrigger_2">
+                  <MultiDataTrigger.Conditions>
+                    <Condition x:Uid="Condition_9" Value="True">
+                      <Condition.Binding>
+                        <Binding Path="IsMouseOver" RelativeSource="{RelativeSource Self}"/>
+                      </Condition.Binding>
+                    </Condition>
+                    <Condition x:Uid="Condition_10" Binding="{Binding IsAncestorLocked}" Value="True"/>
+                  </MultiDataTrigger.Conditions>
+                  <Setter x:Uid="Setter_380" TargetName="LockIcon" Property="Image.Source"
+                          Value="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Timeline/timeline_lock_on_16x16.png"/>
+                </MultiDataTrigger>
+              </ControlTemplate.Triggers>
+            </ControlTemplate>
+          </Setter.Value>
+        </Setter>
+      </Style>
+      <Style x:Key="EyeCheckBox" x:Uid="Style_18" TargetType="{x:Type CheckBox}"
+             BasedOn="{StaticResource ToggleCheckBoxStyle}">
+        <Setter x:Uid="Setter_86" Localization.Attributes="Value (Readable Modifiable)"
+                Property="FrameworkElement.ToolTip" Value="Hide"/>
+        <Setter x:Uid="Setter_87" Property="Control.Template">
+          <Setter.Value>
+            <ControlTemplate x:Uid="ControlTemplate_11" TargetType="{x:Type CheckBox}">
+              <fwctl:Icon x:Name="EyeIcon" x:Uid="fwctl:Icon_2"
+                          Image.Source="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Timeline/timeline_showToggle_off_16x16.png"/>
+              <ControlTemplate.Triggers>
+                <Trigger x:Uid="Trigger_15" Property="ToggleButton.IsChecked" Value="False">
+                  <Setter x:Uid="Setter_88" TargetName="EyeIcon" Value="{StaticResource PlaceholderImage}"
+                          Property="Image.Source"/>
+                  <Setter x:Uid="Setter_1508" Localization.Attributes="Value (Readable Modifiable)"
+                          Property="FrameworkElement.ToolTip" Value="Show"/>
+                  <Setter x:Uid="Setter_242241" TargetName="EyeIcon" Value="{DynamicResource PlaceholderNormalBrush}"
+                          Property="fwctl:Icon.RedChroma"/>
+                </Trigger>
+                <MultiTrigger x:Uid="MultiTrigger_3">
+                  <MultiTrigger.Conditions>
+                    <Condition x:Uid="Condition_11" Property="UIElement.IsMouseOver" Value="true"/>
+                    <Condition x:Uid="Condition_12" Property="ToggleButton.IsChecked" Value="True"/>
+                  </MultiTrigger.Conditions>
+                  <Setter x:Uid="Setter_381" TargetName="EyeIcon" Property="Image.Source"
+                          Value="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Timeline/timeline_showToggle_on_16x16.png"/>
+                </MultiTrigger>
+                <DataTrigger x:Uid="DataTrigger_9" Value="True" Binding="{Binding IsAncestorHidden}">
+                  <Setter x:Uid="Setter_371" Property="UIElement.Opacity" Value=".5"/>
+                </DataTrigger>
+                <DataTrigger x:Uid="DataTrigger_1448" Value="True" Binding="{Binding IsEffectDisabled}">
+                  <Setter x:Uid="Setter_242253" Property="UIElement.IsEnabled" Value="false"/>
+                </DataTrigger>
+              </ControlTemplate.Triggers>
+            </ControlTemplate>
+          </Setter.Value>
+        </Setter>
+      </Style>
+      <Style x:Key="TimelineItemToolTipStyle" x:Uid="Style_11157" TargetType="{x:Type ToolTip}"
+             BasedOn="{StaticResource {x:Type ToolTip}}">
+        <Setter x:Uid="Setter_111342" Property="ToolTip.Placement" Value="Right"/>
+        <Setter x:Uid="Setter_111343" Property="ContentControl.Content">
+          <Setter.Value>
+            <Binding/>
+          </Setter.Value>
+        </Setter>
+        <Setter x:Uid="Setter_242254" Property="ToolTip.VerticalOffset" Value="1"/>
+        <Setter x:Uid="Setter_121344" Property="ContentControl.ContentTemplate">
+          <Setter.Value>
+            <DataTemplate x:Uid="DataTemplate_28">
+              <ContentControl x:Uid="ContentControl_42">
+                <ContentControl.Content>
+                  <Binding/>
+                </ContentControl.Content>
+              </ContentControl>
+              <FrameworkTemplate.Resources>
+                <tlctl:PropertyPathConverter x:Uid="tlctl:PropertyPathConverter_1" x:Key="PropertyPathConverter"/>
+                <Style x:Uid="Style_69" TargetType="{x:Type TextBlock}">
+                  <Setter x:Uid="Setter_1527" Property="TextBlock.TextWrapping" Value="NoWrap"/>
+                  <Setter x:Uid="Setter_1528" Property="TextBlock.TextTrimming" Value="None"/>
+                  <Setter x:Uid="Setter_1530" Property="FrameworkElement.VerticalAlignment" Value="Center"/>
+                  <Setter x:Uid="Setter_1531" Property="FrameworkElement.Margin" Value="0"/>
+                  <Setter x:Uid="Setter_1532" Property="Localization.Attributes" Value="Text(Unreadable Unmodifiable)"/>
+                </Style>
+                <DataTemplate x:Uid="DataTemplate_18" DataType="{x:Type tlctl:TimelineItem}">
+                  <TextBlock x:Uid="TextBlock_5" Text="{Binding DisplayName}"/>
+                </DataTemplate>
+                <DataTemplate x:Uid="DataTemplate_19" DataType="{x:Type tlctl:ElementTimelineItem}">
+                  <TextBlock x:Uid="TextBlock_6">
+                    <TextBlock x:Uid="TextBlock_7" FontWeight="Bold" Text="{Binding ElementType.Name}"/>
+                    <TextBlock x:Uid="TextBlock_8" Text="{Binding DisplayNameNoTextContent}"/>
+                    <TextBlock x:Uid="TextBlock_41" Text="{Binding ExtendedTooltip}"/>
+                  </TextBlock>
+                </DataTemplate>
+                <DataTemplate x:Uid="DataTemplate_20" DataType="{x:Type tlctl:EffectTimelineItem}">
+                  <TextBlock x:Uid="TextBlock_9">
+                    <TextBlock x:Uid="TextBlock_10" FontWeight="Bold" Text="{Binding TargetProperty.PropertyType.Name}"/>
+                    <TextBlock x:Uid="TextBlock_11" Text="{Binding TargetElementTimelineItem.DisplayNameNoTextContent}"/>
+                    <Run x:Uid="Run_1" Text="."/>
+                    <TextBlock x:Uid="TextBlock_12" FontStyle="Italic" Text="{Binding TargetProperty.Name}"/>
+                  </TextBlock>
+                </DataTemplate>
+                <DataTemplate x:Uid="DataTemplate_26" DataType="{x:Type tlctl:ChildPropertyTimelineItem}">
+                  <TextBlock x:Uid="TextBlock_37">
+                    <TextBlock x:Uid="TextBlock_38" FontWeight="Bold" Text="{Binding TargetProperty.PropertyType.Name}"/>
+                    <TextBlock x:Uid="TextBlock_39" Text="{Binding TargetElementTimelineItem.DisplayNameNoTextContent}"/>
+                    <Run x:Uid="Run_6" Text="."/>
+                    <TextBlock x:Uid="TextBlock_40" FontStyle="Italic" Text="{Binding TargetProperty.Name}"/>
+                  </TextBlock>
+                </DataTemplate>
+                <DataTemplate x:Uid="DataTemplate_21" DataType="{x:Type tlctl:TemplateTimelineItem}">
+                  <TextBlock x:Uid="TextBlock_13">
+                    <TextBlock x:Uid="TextBlock_14" FontWeight="Bold" Text="{Binding FrameworkTemplateElement.TargetType.Name}"/>
+                    <TextBlock x:Uid="TextBlock_15" Text="{Binding FrameworkTemplateElement.Key}"/>
+                    <LineBreak x:Uid="LineBreak_1"/>
+                    <TextBlock x:Uid="TextBlock_16" Text="TargetType"/>
+                    <TextBlock x:Uid="TextBlock_17" Text="{Binding FrameworkTemplateElement.TargetElementType.Name}"/>
+                  </TextBlock>
+                </DataTemplate>
+                <DataTemplate x:Uid="DataTemplate_22" DataType="{x:Type tlctl:StyleTimelineItem}">
+                  <TextBlock x:Uid="TextBlock_18">
+                    <TextBlock x:Uid="TextBlock_19" FontWeight="Bold" Text="{Binding StyleNode.Type.Name}"/>
+                    <TextBlock x:Uid="TextBlock_20" Text="{Binding StyleNode.Key}"/>
+                    <LineBreak x:Uid="LineBreak_2"/>
+                    <TextBlock x:Uid="TextBlock_21" Text="TargetType"/>
+                    <TextBlock x:Uid="TextBlock_22" Text="{Binding StyleNode.StyleTargetType.Name}"/>
+                  </TextBlock>
+                </DataTemplate>
+                <DataTemplate x:Uid="DataTemplate_23" DataType="{x:Type tlctl:CompoundPropertyTimelineItem}">
+                  <TextBlock x:Uid="TextBlock_23">
+                    <TextBlock x:Uid="TextBlock_24" FontWeight="Bold" Text="{Binding TargetProperty.ValueType.Name}"/>
+                    <LineBreak x:Uid="LineBreak_3"/>
+                    <TextBlock x:Uid="TextBlock_25" Text="{Binding TargetTimelineItem.DisplayNameNoTextContent}"/>
+                    <Run x:Uid="Run_2" Text="."/>
+                    <TextBlock x:Uid="TextBlock_26" FontStyle="Italic"
+                               Text="{Binding TargetProperty.ShortPath, Converter={StaticResource PropertyPathConverter}}"/>
+                  </TextBlock>
+                </DataTemplate>
+                <DataTemplate x:Uid="DataTemplate_24" DataType="{x:Type tlctl:KeyFramedTimelineItem}">
+                  <TextBlock x:Uid="TextBlock_27">
+                    <TextBlock x:Uid="TextBlock_28" FontWeight="Bold" Text="{Binding TargetProperty.ValueType.Name}"/>
+                    <TextBlock x:Uid="TextBlock_29" FontWeight="Bold" Text="{Binding TargetProperty.LastStep.DeclaringType.Name}"/>
+                    <Run x:Uid="Run_3" Text="."/>
+                    <TextBlock x:Uid="TextBlock_30" Text="{Binding TargetProperty.LastStep.Name}"/>
+                    <LineBreak x:Uid="LineBreak_4"/>
+                    <TextBlock x:Uid="TextBlock_31" Text="{Binding TargetElement.DisplayNameNoTextContent}"/>
+                    <Run x:Uid="Run_4" Text="."/>
+                    <TextBlock x:Uid="TextBlock_32" FontStyle="Italic"
+                               Text="{Binding TargetProperty.ShortPath, Converter={StaticResource PropertyPathConverter}}"/>
+                  </TextBlock>
+                </DataTemplate>
+                <DataTemplate x:Uid="DataTemplate_25" DataType="{x:Type tlctl:BehaviorTimelineItem}">
+                  <TextBlock x:Uid="TextBlock_33">
+                    <TextBlock x:Uid="TextBlock_34" FontWeight="Bold" Text="{Binding ActionNode.Type.Name}"/>
+                    <TextBlock x:Uid="TextBlock_36">
+                      <TextBlock.Text>
+                        <Binding Path="DisplayName"/>
+                      </TextBlock.Text>
+                    </TextBlock>
+                  </TextBlock>
+                </DataTemplate>
+              </FrameworkTemplate.Resources>
+            </DataTemplate>
+          </Setter.Value>
+        </Setter>
+      </Style>
+      <Style x:Key="ElementPartStatusToolTipStyle" x:Uid="Style_11189" TargetType="{x:Type ToolTip}"
+             BasedOn="{StaticResource WrapToolTipStyle}">
+        <Setter x:Uid="Setter_121343" Property="ContentControl.Content">
+          <Setter.Value>
+            <Binding/>
+          </Setter.Value>
+        </Setter>
+        <Setter x:Uid="Setter_242245" Property="ContentControl.ContentTemplate">
+          <Setter.Value>
+            <DataTemplate x:Uid="ControlTemplate_29">
+              <FrameworkTemplate.Resources>
+                <Style x:Uid="Style_11354" TargetType="{x:Type TextBlock}">
+                  <Setter x:Uid="Setter_221310" Property="TextBlock.TextWrapping" Value="Wrap"/>
+                  <Setter x:Uid="Setter_221311" Property="TextBlock.TextTrimming" Value="None"/>
+                  <Setter x:Uid="Setter_221312" Property="FrameworkElement.VerticalAlignment" Value="Center"/>
+                  <Setter x:Uid="Setter_221314" Property="Localization.Attributes" Value="Text(Unreadable Unmodifiable)"/>
+                </Style>
+              </FrameworkTemplate.Resources>
+              <ContentControl x:Name="ContentPresenter" x:Uid="ContentControl_41" FrameworkElement.HorizontalAlignment="Stretch"
+                              FrameworkElement.VerticalAlignment="Stretch">
+                <MultiBinding x:Uid="MultiBinding_994" Converter="{StaticResource StyleStringConverter}">
+                  <Binding x:Uid="Binding_1098" Path="Tag" RelativeSource="{RelativeSource Self}"/>
+                  <Binding x:Uid="Binding_1099" Path="DisplayNameNoTextContent"/>
+                  <Binding x:Uid="Binding_1100" Path="WronglyAssignedPartCorrectType"/>
+                </MultiBinding>
+              </ContentControl>
+              <DataTemplate.Triggers>
+                <DataTrigger x:Uid="DataTrigger_1445" Value="Assigned">
+                  <DataTrigger.Binding>
+                    <Binding Path="CurrentPartStatus"/>
+                  </DataTrigger.Binding>
+                  <Setter x:Uid="Setter_1236" TargetName="ContentPresenter"
+                          Localization.Attributes="Value(Readable Modifiable)" Property="FrameworkElement.Tag"
+                          Value="{Dimmed}{1} is a control part."/>
+                </DataTrigger>
+                <DataTrigger x:Uid="DataTrigger_1443" Value="WrongType">
+                  <DataTrigger.Binding>
+                    <Binding Path="CurrentPartStatus"/>
+                  </DataTrigger.Binding>
+                  <Setter x:Uid="Setter_1237" TargetName="ContentPresenter"
+                          Localization.Attributes="Value(Readable Modifiable)" Property="FrameworkElement.Tag"
+                          Value="{Dimmed}{1} is not a {Normal}{2}{Dimmed}. Right-click and click {Normal}Make Into Part."/>
+                </DataTrigger>
+                <DataTrigger x:Uid="DataTrigger_1444" Value="DescendantAssignedOrWrongType">
+                  <DataTrigger.Binding>
+                    <Binding Path="CurrentPartStatus"/>
+                  </DataTrigger.Binding>
+                  <Setter x:Uid="Setter_1238" TargetName="ContentPresenter"
+                          Localization.Attributes="Value(Readable Modifiable)" Property="FrameworkElement.Tag"
+                          Value="{Dimmed}{1} contains an object that is a part, or that is incorrectly assigned."/>
+                </DataTrigger>
+              </DataTemplate.Triggers>
+            </DataTemplate>
+          </Setter.Value>
+        </Setter>
+      </Style>
+      <Style x:Key="TimelineTreeRowStyle" x:Uid="Style_68" TargetType="{x:Type tlui:TimelineTreeRow}">
+        <Setter x:Uid="Setter_1517" Property="fwctl:DragDropHelper.DragDropHandler"
+                Value="{Binding DragDropHandler, RelativeSource={RelativeSource Self}, Mode=OneTime}"/>
+        <Setter x:Uid="Setter_1518" Property="automation:AutomationElement.Id">
+          <Setter.Value>
+            <Binding Path="FullName" Converter="{StaticResource TreeForegroundContentIDConverter}"/>
+          </Setter.Value>
+        </Setter>
+        <Setter x:Uid="Setter_1519" Property="FrameworkElement.ContextMenu">
+          <Setter.Value>
+            <Binding Path="ContextMenu"/>
+          </Setter.Value>
+        </Setter>
+        <Setter x:Uid="Setter_1521" Property="Panel.Background" Value="Transparent"/>
+      </Style>
+      <Style x:Key="ElementTreeForegroundRow" x:Uid="Style_49" TargetType="{x:Type Control}">
+        <Setter x:Uid="Setter_231" Property="UIElement.Visibility">
+          <Setter.Value>
+            <Binding Path="IsActive" Mode="OneWay" Converter="{StaticResource BoolToVisibilityCollapsedConverter}"/>
+          </Setter.Value>
+        </Setter>
+        <Setter x:Uid="Setter_237" Property="Control.Template">
+          <Setter.Value>
+            <ControlTemplate x:Uid="ControlTemplate_35" TargetType="{x:Type Control}">
+              <tlui:ElementTreeRow FrameworkElement.Name="TreeRow" MouseLeave="OnMouseLeave" x:Uid="Grid_21"
+                                   FrameworkElement.MinHeight="{DynamicResource RowMinHeight}"
+                                   FrameworkElement.HorizontalAlignment="Left"
+                                   FrameworkElement.ToolTip="{DynamicResource CommonToolTip}"
+                                   FrameworkElement.Style="{StaticResource TimelineTreeRowStyle}">
+                <tlui:TimelineTreeRow.RenameCommand>
+                  <Binding ElementName="ItemTitle" Path="EditCommand"/>
+                </tlui:TimelineTreeRow.RenameCommand>
+                <tlui:TimelineTreeRow.Indent>
+                  <Binding Path="Depth" Converter="{StaticResource MultiplyConverter}"/>
+                </tlui:TimelineTreeRow.Indent>
+                <Border x:Name="ItemBorder" x:Uid="Border_12" tlui:TimelineTreeRow.Position="Border" BorderThickness="0"
+                        FrameworkElement.Margin="0,1,0,0" BorderBrush="Transparent"
+                        automation:AutomationElement.Id="SelectRegion"/>
+                <CheckBox FrameworkElement.Name="ExpandCollapseCheckBox" x:Uid="ExpandCollapseCheckBox"
+                          UIElement.Focusable="false" FrameworkElement.Style="{DynamicResource ExpandCollapseCheckBox}">
+                  <UIElement.Visibility>
+                    <Binding Path="HasActiveChild" Mode="OneWay" Converter="{StaticResource BoolToVisibilityHiddenConverter}"/>
+                  </UIElement.Visibility>
+                  <ToggleButton.IsChecked>
+                    <Binding Path="IsExpanded" Mode="TwoWay" Converter="{StaticResource BoolToCheckStateConverter}"/>
+                  </ToggleButton.IsChecked>
+                </CheckBox>
+                <tlui:IconWithOverlay x:Uid="IconWithOverlay_1" FrameworkElement.Width="12" FrameworkElement.Height="12"
+                                      FrameworkElement.Style="{StaticResource Icon}"
+                                      OverlayImageSource="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Timeline/states_record-into-state_on_7.png"
+                                      OverlayRect="0,6,7,7" ShowOverlay="{Binding HasAnimationVisual, Mode=OneWay}">
+                  <fwctl:Icon.SourceBrush>
+                    <Binding Path="IconBrush" Mode="OneWay"/>
+                  </fwctl:Icon.SourceBrush>
+                </tlui:IconWithOverlay>
+                <fwve:InlineStringEditor FrameworkElement.Name="ItemTitle" FrameworkElement.VerticalAlignment="Stretch"
+                                         x:Uid="fwctl:InlineTextBox_1" FrameworkElement.Margin="0,2,0,1"
+                                         IsSelected="{Binding IsSelected, Mode=OneWay}" TextBoxBase.IsReadOnly="{Binding IsAncestorLocked}">
+                  <FrameworkElement.FocusVisualStyle>
+                    <x:NullExtension/>
+                  </FrameworkElement.FocusVisualStyle>
+                  <fwve:StringEditor.Value>
+                    <Binding Path="DisplayName" Mode="TwoWay"/>
+                  </fwve:StringEditor.Value>
+                </fwve:InlineStringEditor>
+                <fwctl:Icon FrameworkElement.Name="PartStatusIcon" x:Uid="Image_91" FrameworkElement.Width="12"
+                            FrameworkElement.Height="12" Image.Stretch="Uniform" tlui:TimelineTreeRow.Position="Right"
+                            FrameworkElement.Margin="2,0,2,0" FrameworkElement.ToolTip="{DynamicResource PartStatusToolTip}">
+                  <Image.Source>
+                    <x:NullExtension/>
+                  </Image.Source>
+                  <UIElement.Visibility>
+                    <Binding Path="ShowPartsList"
+                             RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type tlui:StructureView}}"
+                             Converter="{StaticResource BoolToVisibilityConverter}"/>
+                  </UIElement.Visibility>
+                </fwctl:Icon>
+                <CheckBox FrameworkElement.Name="HideCheckBox" x:Uid="HideCheckBox" UIElement.Focusable="false"
+                          tlui:TimelineTreeRow.Position="Right" FrameworkElement.Style="{StaticResource EyeCheckBox}">
+                  <ToggleButton.IsChecked>
+                    <Binding Path="IsShown" Mode="TwoWay" Converter="{StaticResource BoolToCheckStateConverter}"/>
+                  </ToggleButton.IsChecked>
+                  <UIElement.Visibility>
+                    <Binding Path="CanHide" Mode="OneWay" Converter="{StaticResource BoolToVisibilityCollapsedConverter}"/>
+                  </UIElement.Visibility>
+                </CheckBox>
+                <CheckBox FrameworkElement.Name="LockCheckBox" x:Uid="LockCheckBox" UIElement.Focusable="false"
+                          tlui:TimelineTreeRow.Position="Right" FrameworkElement.Style="{StaticResource LockCheckBox}">
+                  <ToggleButton.IsChecked>
+                    <Binding Path="IsLocked" Mode="TwoWay" Converter="{StaticResource BoolToCheckStateConverter}"/>
+                  </ToggleButton.IsChecked>
+                  <UIElement.Visibility>
+                    <Binding Path="CanLock" Mode="OneWay" Converter="{StaticResource BoolToVisibilityCollapsedConverter}"/>
+                  </UIElement.Visibility>
+                </CheckBox>
+              </tlui:ElementTreeRow>
+              <ControlTemplate.Triggers>
+                <MultiDataTrigger x:Uid="MultiDataTrigger_1">
+                  <MultiDataTrigger.Conditions>
+                    <Condition x:Uid="Condition_5" Binding="{Binding HasSelectedChild}" Value="True"/>
+                    <Condition x:Uid="Condition_6" Binding="{Binding IsExpanded}" Value="False"/>
+                  </MultiDataTrigger.Conditions>
+                  <Setter x:Uid="Setter_334" TargetName="ItemBorder"
+                          Value="{DynamicResource StructureViewChildSelectedBrush}" Property="Border.BorderBrush"/>
+                  <Setter x:Uid="Setter_372" TargetName="ItemBorder" Property="Border.BorderThickness" Value="1,1,1,1"/>
+                </MultiDataTrigger>
+                <MultiDataTrigger x:Uid="MultiDataTrigger_11">
+                  <MultiDataTrigger.Conditions>
+                    <Condition x:Uid="Condition_29" Value="True">
+                      <Condition.Binding>
+                        <Binding Path="IsMouseOver" RelativeSource="{RelativeSource TemplatedParent}"/>
+                      </Condition.Binding>
+                    </Condition>
+                    <Condition x:Uid="Condition_30" Value="False">
+                      <Condition.Binding>
+                        <Binding Path="IsAncestorLocked"/>
+                      </Condition.Binding>
+                    </Condition>
+                  </MultiDataTrigger.Conditions>
+                  <Setter x:Uid="Setter_241" TargetName="ItemBorder" Value="{DynamicResource ListHoverBrush}"
+                          Property="Border.Background"/>
+                </MultiDataTrigger>
+                <Trigger x:Uid="Trigger_1102" SourceName="TreeRow" Property="tlui:TimelineTreeRow.BackgroundHighlighted"
+                         Value="true">
+                  <Setter x:Uid="Setter_242251" TargetName="ItemBorder" Value="{DynamicResource ListHoverBrush}"
+                          Property="Border.Background"/>
+                </Trigger>
+                <DataTrigger x:Uid="DataTrigger_1447" Value="True">
+                  <DataTrigger.Binding>
+                    <MultiBinding x:Uid="MultiBinding_995" Converter="{StaticResource EqualsMultipleConverter}">
+                      <Binding x:Uid="Binding_1101"/>
+                      <Binding x:Uid="Binding_1102" Path="TimelineItemManager.HoverOverrideSelectionItem"
+                               RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type tlui:StructureView}}"/>
+                    </MultiBinding>
+                  </DataTrigger.Binding>
+                  <Setter x:Uid="Setter_242243" TargetName="ItemBorder" Value="{DynamicResource ListHoverBrush}"
+                          Property="Border.Background"/>
+                </DataTrigger>
+                <DataTrigger x:Uid="DataTrigger_38" Value="True">
+                  <DataTrigger.Binding>
+                    <Binding Path="IsSelected" Mode="OneWay"/>
+                  </DataTrigger.Binding>
+                  <Setter x:Uid="Setter_373" TargetName="ItemBorder" Value="{DynamicResource ListSelectedBrush}"
+                          Property="Border.Background"/>
+                  <Setter x:Uid="Setter_374" TargetName="TreeRow" Value="{DynamicResource ListSelectedTextBrush}"
+                          Property="Control.Foreground"/>
+                </DataTrigger>
+                <MultiDataTrigger x:Uid="MultiDataTrigger_5">
+                  <MultiDataTrigger.Conditions>
+                    <Condition x:Uid="Condition_17" Value="True">
+                      <Condition.Binding>
+                        <Binding Path="IsDynamicInsertionPoint"/>
+                      </Condition.Binding>
+                    </Condition>
+                    <Condition x:Uid="Condition_18">
+                      <Condition.Binding>
+                        <Binding Path="DragTipModel"
+                                 RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type tlui:StructureView}}"/>
+                      </Condition.Binding>
+                      <Condition.Value>
+                        <x:NullExtension/>
+                      </Condition.Value>
+                    </Condition>
+                  </MultiDataTrigger.Conditions>
+                  <Setter x:Uid="Setter_246" TargetName="ItemBorder" Property="Border.BorderThickness" Value="1,1,1,1"/>
+                  <Setter x:Uid="Setter_248" TargetName="ItemBorder" Value="{DynamicResource StructureViewBlueBrush}"
+                          Property="Border.BorderBrush"/>
+                </MultiDataTrigger>
+                <MultiDataTrigger x:Uid="MultiDataTrigger_9">
+                  <MultiDataTrigger.Conditions>
+                    <Condition x:Uid="Condition_25" Value="True">
+                      <Condition.Binding>
+                        <Binding Path="IsLockedInsertionPoint"/>
+                      </Condition.Binding>
+                    </Condition>
+                    <Condition x:Uid="Condition_26">
+                      <Condition.Binding>
+                        <Binding Path="DragTipModel"
+                                 RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type tlui:StructureView}}"/>
+                      </Condition.Binding>
+                      <Condition.Value>
+                        <x:NullExtension/>
+                      </Condition.Value>
+                    </Condition>
+                  </MultiDataTrigger.Conditions>
+                  <Setter x:Uid="Setter_1522" TargetName="ItemBorder" Property="Border.BorderThickness" Value="1,1,1,1"/>
+                  <Setter x:Uid="Setter_1523" TargetName="ItemBorder" Property="Border.BorderBrush" Value="Yellow"/>
+                </MultiDataTrigger>
+                <DataTrigger x:Uid="DataTrigger_26" Value="True">
+                  <DataTrigger.Binding>
+                    <MultiBinding x:Uid="MultiBinding_1" Converter="{StaticResource EqualsMultipleConverter}">
+                      <Binding x:Uid="Binding_1"/>
+                      <Binding x:Uid="Binding_2" Path="DragTargetParent"
+                               RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type tlui:StructureView}}"/>
+                    </MultiBinding>
+                  </DataTrigger.Binding>
+                  <Setter x:Uid="Setter_111302" TargetName="ItemBorder" Property="Border.BorderThickness" Value="1,1,1,1"/>
+                  <Setter x:Uid="Setter_111303" TargetName="ItemBorder" Value="{DynamicResource StructureViewBlueBrush}"
+                          Property="Border.BorderBrush"/>
+                </DataTrigger>
+                <DataTrigger x:Uid="DataTrigger_103" Value="Assigned">
+                  <DataTrigger.Binding>
+                    <Binding Path="CurrentPartStatus"/>
+                  </DataTrigger.Binding>
+                  <Setter x:Uid="Setter_865" TargetName="PartStatusIcon" Property="Image.Source"
+                          Value="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Timeline/parts_assigned-part_on_16X16.png"/>
+                  <Setter x:Uid="Setter_866" TargetName="PartStatusIcon" Property="UIElement.Visibility" Value="Visible"/>
+                </DataTrigger>
+                <DataTrigger x:Uid="DataTrigger_104" Value="WrongType">
+                  <DataTrigger.Binding>
+                    <Binding Path="CurrentPartStatus"/>
+                  </DataTrigger.Binding>
+                  <Setter x:Uid="Setter_875" TargetName="PartStatusIcon" Property="Image.Source"
+                          Value="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Timeline/warning_on_12X12.png"/>
+                  <Setter x:Uid="Setter_876" TargetName="PartStatusIcon" Property="UIElement.Visibility" Value="Visible"/>
+                </DataTrigger>
+                <DataTrigger x:Uid="DataTrigger_105" Value="DescendantAssignedOrWrongType">
+                  <DataTrigger.Binding>
+                    <Binding Path="CurrentPartStatus"/>
+                  </DataTrigger.Binding>
+                  <Setter x:Uid="Setter_885" TargetName="PartStatusIcon" Property="Image.Source"
+                          Value="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Timeline/parts_assigned-part_on_16X16.png"/>
+                  <Setter x:Uid="Setter_886" TargetName="PartStatusIcon" Property="UIElement.Visibility" Value="Visible"/>
+                </DataTrigger>
+                <MultiDataTrigger x:Uid="MultiTrigger_1">
+                  <MultiDataTrigger.Conditions>
+                    <Condition x:Uid="Condition_1" Value="True">
+                      <Condition.Binding>
+                        <Binding Path="IsSelected" Mode="OneWay"/>
+                      </Condition.Binding>
+                    </Condition>
+                    <Condition x:Uid="Condition_2" Value="True">
+                      <Condition.Binding>
+                        <Binding Path="IsInStyle"/>
+                      </Condition.Binding>
+                    </Condition>
+                  </MultiDataTrigger.Conditions>
+                  <Setter x:Uid="Setter_253" TargetName="TreeRow" Value="{DynamicResource ListSelectedBrush}"
+                          Property="Panel.Background"/>
+                </MultiDataTrigger>
+              </ControlTemplate.Triggers>
+            </ControlTemplate>
+          </Setter.Value>
+        </Setter>
+      </Style>
+      <ControlTemplate x:Key="EffectControlTemplate" x:Uid="ControlTemplate_11139" TargetType="{x:Type Control}">
+        <tlui:PropertyTreeRow FrameworkElement.Name="TreeRow" MouseLeave="OnMouseLeave" x:Uid="TreeRow"
+                              FrameworkElement.MinHeight="{DynamicResource RowMinHeight}"
+                              FrameworkElement.HorizontalAlignment="Left"
+                              FrameworkElement.ToolTip="{DynamicResource CommonToolTip}"
+                              FrameworkElement.Style="{StaticResource TimelineTreeRowStyle}">
+          <tlui:TimelineTreeRow.Indent>
+            <Binding Path="Depth" Converter="{StaticResource MultiplyConverter}"/>
+          </tlui:TimelineTreeRow.Indent>
+          <Border x:Name="ItemBorder" x:Uid="ItemBorder" tlui:TimelineTreeRow.Position="Border" BorderThickness="0"
+                  FrameworkElement.Margin="0,1,0,0" BorderBrush="Transparent"
+                  automation:AutomationElement.Id="SelectRegion"/>
+          <CheckBox FrameworkElement.Name="ExpandCollapseCheckBox" x:Uid="CheckBox_6" UIElement.Focusable="false"
+                    FrameworkElement.Style="{DynamicResource ExpandCollapseCheckBox}">
+            <UIElement.Visibility>
+              <Binding Path="HasActiveChild" Mode="OneWay" Converter="{StaticResource BoolToVisibilityHiddenConverter}"/>
+            </UIElement.Visibility>
+            <ToggleButton.IsChecked>
+              <Binding Path="IsExpanded" Mode="TwoWay" Converter="{StaticResource BoolToCheckStateConverter}"/>
+            </ToggleButton.IsChecked>
+          </CheckBox>
+          <fwctl:Icon FrameworkElement.Name="Icon" x:Uid="fwctl:Icon_5" FrameworkElement.Width="12"
+                      FrameworkElement.Height="12" FrameworkElement.Style="{StaticResource Icon}">
+            <fwctl:Icon.SourceBrush>
+              <Binding Path="IconBrush" Mode="OneWay"/>
+            </fwctl:Icon.SourceBrush>
+          </fwctl:Icon>
+          <fwve:InlineStringEditor FrameworkElement.Name="ItemTitle" FrameworkElement.VerticalAlignment="Stretch"
+                                   TextBoxBase.IsReadOnly="true" x:Uid="ItemTitle" FrameworkElement.Margin="0,2,0,1"
+                                   IsSelected="{Binding IsSelected, Mode=OneWay}">
+            <FrameworkElement.FocusVisualStyle>
+              <x:NullExtension/>
+            </FrameworkElement.FocusVisualStyle>
+            <fwve:StringEditor.Value>
+              <Binding Path="DisplayName" Mode="OneWay"/>
+            </fwve:StringEditor.Value>
+          </fwve:InlineStringEditor>
+          <CheckBox FrameworkElement.Name="HideCheckBox" x:Uid="CheckBox_7" UIElement.Focusable="false"
+                    tlui:TimelineTreeRow.Position="Right" FrameworkElement.Style="{StaticResource EyeCheckBox}">
+            <ToggleButton.IsChecked>
+              <Binding Path="IsShown" Mode="TwoWay" Converter="{StaticResource BoolToCheckStateConverter}"/>
+            </ToggleButton.IsChecked>
+            <UIElement.Visibility>
+              <Binding Path="CanLockAndHide" Mode="OneWay" Converter="{StaticResource BoolToVisibilityCollapsedConverter}"/>
+            </UIElement.Visibility>
+          </CheckBox>
+          <CheckBox FrameworkElement.Name="LockCheckBox" x:Uid="CheckBox_8" UIElement.Focusable="false"
+                    tlui:TimelineTreeRow.Position="Right" FrameworkElement.Style="{StaticResource LockCheckBox}"
+                    UIElement.Visibility="Hidden" UIElement.IsEnabled="false">
+            <ToggleButton.IsChecked>
+              <Binding Path="IsLocked" Mode="TwoWay" Converter="{StaticResource BoolToCheckStateConverter}"/>
+            </ToggleButton.IsChecked>
+          </CheckBox>
+        </tlui:PropertyTreeRow>
+        <ControlTemplate.Triggers>
+          <Trigger x:Uid="Trigger_1107" Property="UIElement.IsMouseOver" Value="true">
+            <Setter x:Uid="Setter_242255" TargetName="ItemBorder" Value="{DynamicResource ListHoverBrush}"
+                    Property="Border.Background"/>
+          </Trigger>
+          <MultiDataTrigger x:Uid="MultiDataTrigger_12">
+            <MultiDataTrigger.Conditions>
+              <Condition x:Uid="Condition_31" Value="True">
+                <Condition.Binding>
+                  <Binding Path="IsMouseOver" RelativeSource="{RelativeSource TemplatedParent}"/>
+                </Condition.Binding>
+              </Condition>
+              <Condition x:Uid="Condition_32" Value="False">
+                <Condition.Binding>
+                  <Binding Path="IsAncestorLocked"/>
+                </Condition.Binding>
+              </Condition>
+            </MultiDataTrigger.Conditions>
+            <Setter x:Uid="Setter_111291" TargetName="ItemBorder" Value="{DynamicResource ListHoverBrush}"
+                    Property="Border.Background"/>
+          </MultiDataTrigger>
+          <Trigger x:Uid="Trigger_1103" SourceName="TreeRow" Property="tlui:TimelineTreeRow.BackgroundHighlighted"
+                   Value="true">
+            <Setter x:Uid="Setter_242247" TargetName="ItemBorder" Value="{DynamicResource ListHoverBrush}"
+                    Property="Border.Background"/>
+          </Trigger>
+          <DataTrigger x:Uid="DataTrigger_39" Value="True">
+            <DataTrigger.Binding>
+              <Binding Path="IsSelected" Mode="OneWay"/>
+            </DataTrigger.Binding>
+            <Setter x:Uid="Setter_111293" TargetName="ItemBorder" Value="{DynamicResource ListSelectedBrush}"
+                    Property="Border.Background"/>
+            <Setter x:Uid="Setter_111294" TargetName="TreeRow" Value="{DynamicResource ListSelectedTextBrush}"
+                    Property="Control.Foreground"/>
+          </DataTrigger>
+        </ControlTemplate.Triggers>
+      </ControlTemplate>
+      <ControlTemplate x:Key="BehaviorControlTemplate" x:Uid="ControlTemplate_11142">
+        <tlui:BehaviorTreeRow x:Name="BehaviorTreeRow" MouseLeave="OnMouseLeave" x:Uid="tlui:TimelineTreeRow_2"
+                              FrameworkElement.MinHeight="{DynamicResource RowMinHeight}"
+                              FrameworkElement.HorizontalAlignment="Left"
+                              FrameworkElement.ToolTip="{DynamicResource CommonToolTip}"
+                              FrameworkElement.Style="{StaticResource TimelineTreeRowStyle}">
+          <tlui:TimelineTreeRow.RenameCommand>
+            <Binding ElementName="ItemTitle" Path="EditCommand"/>
+          </tlui:TimelineTreeRow.RenameCommand>
+          <tlui:TimelineTreeRow.Indent>
+            <Binding Path="Depth" Converter="{StaticResource MultiplyConverter}"/>
+          </tlui:TimelineTreeRow.Indent>
+          <Border x:Name="ItemBorder" x:Uid="Border_9" tlui:TimelineTreeRow.Position="Border"
+                  automation:AutomationElement.Id="SelectRegion" FrameworkElement.Margin="0,1,0,0"
+                  BorderBrush="Transparent"/>
+          <CheckBox FrameworkElement.Name="ExpandCollapseCheckBox" x:Uid="CheckBox_5" UIElement.Focusable="false"
+                    FrameworkElement.Style="{DynamicResource ExpandCollapseCheckBox}">
+            <UIElement.Visibility>
+              <Binding Path="HasActiveChild" Mode="OneWay" Converter="{StaticResource BoolToVisibilityHiddenConverter}"/>
+            </UIElement.Visibility>
+            <ToggleButton.IsChecked>
+              <Binding Path="IsExpanded" Mode="TwoWay" Converter="{StaticResource BoolToCheckStateConverter}"/>
+            </ToggleButton.IsChecked>
+          </CheckBox>
+          <fwctl:Icon FrameworkElement.Name="Icon" x:Uid="Icon_8" FrameworkElement.Width="12"
+                      FrameworkElement.Height="12" FrameworkElement.Style="{StaticResource Icon}">
+            <fwctl:Icon.SourceBrush>
+              <Binding Path="IconBrush" Mode="OneWay"/>
+            </fwctl:Icon.SourceBrush>
+          </fwctl:Icon>
+          <fwve:InlineStringEditor FrameworkElement.Name="ItemTitle" FrameworkElement.VerticalAlignment="Stretch"
+                                   x:Uid="fwve:InlineStringEditor_1" FrameworkElement.Margin="0,1,0,2"
+                                   IsSelected="{Binding IsSelected, Mode=OneWay}" TextBoxBase.IsReadOnly="{Binding IsAncestorLocked}">
+            <FrameworkElement.FocusVisualStyle>
+              <x:NullExtension/>
+            </FrameworkElement.FocusVisualStyle>
+            <fwve:StringEditor.Value>
+              <Binding Path="DisplayName" Mode="TwoWay"/>
+            </fwve:StringEditor.Value>
+          </fwve:InlineStringEditor>
+        </tlui:BehaviorTreeRow>
+        <ControlTemplate.Triggers>
+          <Trigger x:Uid="Trigger_40" Property="UIElement.IsMouseOver" Value="true">
+            <Setter x:Uid="Setter_375" TargetName="ItemBorder" Value="{DynamicResource ListHoverBrush}"
+                    Property="Border.Background"/>
+          </Trigger>
+          <Trigger x:Uid="Trigger_1104" SourceName="BehaviorTreeRow"
+                   Property="tlui:TimelineTreeRow.BackgroundHighlighted" Value="true">
+            <Setter x:Uid="Setter_242249" TargetName="ItemBorder" Value="{DynamicResource ListHoverBrush}"
+                    Property="Border.Background"/>
+          </Trigger>
+          <DataTrigger x:Uid="Trigger_37" Value="True">
+            <DataTrigger.Binding>
+              <Binding Path="IsSelected" Mode="OneWay"/>
+            </DataTrigger.Binding>
+            <Setter x:Uid="Setter_311" TargetName="ItemBorder" Value="{DynamicResource ListSelectedBrush}"
+                    Property="Border.Background"/>
+            <Setter x:Uid="Setter_377" TargetName="BehaviorTreeRow" Value="{DynamicResource ListSelectedTextBrush}"
+                    Property="Control.Foreground"/>
+          </DataTrigger>
+        </ControlTemplate.Triggers>
+      </ControlTemplate>
+      <ControlTemplate x:Key="PropertyControlTemplate" x:Uid="ControlTemplate_47" TargetType="{x:Type Control}">
+        <Grid x:Name="TreeRow" x:Uid="Grid_25" FrameworkElement.MinHeight="{DynamicResource RowMinHeight}">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Uid="ColumnDefinition_7">
+              <ColumnDefinition.Width>
+                <Binding Path="Depth" Converter="{StaticResource MultiplyConverter}"/>
+              </ColumnDefinition.Width>
+            </ColumnDefinition>
+            <ColumnDefinition x:Uid="ColumnDefinition_8" Width="Auto"/>
+            <ColumnDefinition x:Uid="ColumnDefinition_9" Width="Auto"/>
+            <ColumnDefinition x:Uid="ColumnDefinition_10" Width="*"/>
+          </Grid.ColumnDefinitions>
+          <Border x:Name="ItemBorder" x:Uid="Border_99" automation:AutomationElement.Id="SelectRegion"
+                  Grid.ColumnSpan="4" BorderThickness="0" FrameworkElement.Margin="0,1,0,0" BorderBrush="Transparent"/>
+          <CheckBox FrameworkElement.Name="ExpandCollapseCheckBox" x:Uid="CheckBox_9" Grid.Column="1"
+                    FrameworkElement.Style="{DynamicResource ExpandCollapseCheckBox}">
+            <UIElement.Visibility>
+              <Binding Path="HasActiveChild" Mode="OneWay" Converter="{StaticResource BoolToVisibilityHiddenConverter}"/>
+            </UIElement.Visibility>
+            <ToggleButton.IsChecked>
+              <Binding Path="IsExpanded" Mode="TwoWay" Converter="{StaticResource BoolToCheckStateConverter}"/>
+            </ToggleButton.IsChecked>
+          </CheckBox>
+          <fwctl:Icon FrameworkElement.Name="Icon" x:Uid="Icon" Grid.Column="2" FrameworkElement.Width="12"
+                      FrameworkElement.Height="12" FrameworkElement.Style="{StaticResource Icon}">
+            <fwctl:Icon.SourceBrush>
+              <Binding Path="IconBrush" Mode="OneWay"/>
+            </fwctl:Icon.SourceBrush>
+          </fwctl:Icon>
+          <TextBlock FrameworkElement.Name="DisplayNameText" x:Uid="TextBlock_4" Grid.Column="3"
+                     FrameworkElement.Style="{StaticResource TreeText}" FrameworkElement.Margin="0,2,0,1">
+            <TextBlock.Text>
+              <Binding Path="DisplayName" Mode="OneWay"/>
+            </TextBlock.Text>
+          </TextBlock>
+        </Grid>
+        <ControlTemplate.Triggers>
+          <Trigger x:Uid="Trigger_1101" Property="UIElement.IsMouseOver" Value="true">
+            <Setter x:Uid="Setter_242235" TargetName="ItemBorder" Value="{DynamicResource ListHoverBrush}"
+                    Property="Border.Background"/>
+          </Trigger>
+          <DataTrigger x:Uid="DataTrigger_40" Value="True">
+            <DataTrigger.Binding>
+              <Binding Path="IsSelected" Mode="OneWay"/>
+            </DataTrigger.Binding>
+            <Setter x:Uid="Setter_242237" TargetName="ItemBorder" Value="{DynamicResource ListSelectedBrush}"
+                    Property="Border.Background"/>
+            <Setter x:Uid="Setter_242238" TargetName="TreeRow" Value="{DynamicResource ListSelectedTextBrush}"
+                    Property="Control.Foreground"/>
+          </DataTrigger>
+          <DataTrigger x:Uid="DataTrigger_24" Value="True">
+            <DataTrigger.Binding>
+              <Binding Path="HasSelectedKeyFrame" Mode="OneWay"/>
+            </DataTrigger.Binding>
+            <Setter x:Uid="Setter_1503" TargetName="ItemBorder" Value="{DynamicResource ListSelectedBrush}"
+                    Property="Border.Background"/>
+            <Setter x:Uid="Setter_1504" TargetName="TreeRow" Value="{DynamicResource ListSelectedTextBrush}"
+                    Property="Control.Foreground"/>
+          </DataTrigger>
+          <MultiDataTrigger x:Uid="MultiDataTrigger_8">
+            <MultiDataTrigger.Conditions>
+              <Condition x:Uid="Condition_23" Value="True">
+                <Condition.Binding>
+                  <Binding Path="IsDynamicInsertionPoint"/>
+                </Condition.Binding>
+              </Condition>
+              <Condition x:Uid="Condition_24">
+                <Condition.Binding>
+                  <Binding Path="DragTipModel"
+                           RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type tlui:StructureView}}"/>
+                </Condition.Binding>
+                <Condition.Value>
+                  <x:NullExtension/>
+                </Condition.Value>
+              </Condition>
+            </MultiDataTrigger.Conditions>
+            <Setter x:Uid="Setter_111304" TargetName="ItemBorder" Property="Border.BorderThickness" Value="1,1,1,1"/>
+            <Setter x:Uid="Setter_111305" TargetName="ItemBorder" Value="{DynamicResource StructureViewBlueBrush}"
+                    Property="Border.BorderBrush"/>
+          </MultiDataTrigger>
+          <MultiDataTrigger x:Uid="MultiDataTrigger_10">
+            <MultiDataTrigger.Conditions>
+              <Condition x:Uid="Condition_27" Value="True">
+                <Condition.Binding>
+                  <Binding Path="IsLockedInsertionPoint"/>
+                </Condition.Binding>
+              </Condition>
+              <Condition x:Uid="Condition_28">
+                <Condition.Binding>
+                  <Binding Path="DragTipModel"
+                           RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type tlui:StructureView}}"/>
+                </Condition.Binding>
+                <Condition.Value>
+                  <x:NullExtension/>
+                </Condition.Value>
+              </Condition>
+            </MultiDataTrigger.Conditions>
+            <Setter x:Uid="Setter_1524" TargetName="ItemBorder" Property="Border.BorderThickness" Value="1,1,1,1"/>
+            <Setter x:Uid="Setter_1526" TargetName="ItemBorder" Property="Border.BorderBrush" Value="Yellow"/>
+          </MultiDataTrigger>
+          <DataTrigger x:Uid="DataTrigger_28" Value="True">
+            <DataTrigger.Binding>
+              <MultiBinding x:Uid="MultiBinding_3" Converter="{StaticResource EqualsMultipleConverter}">
+                <Binding x:Uid="Binding_5"/>
+                <Binding x:Uid="Binding_6" Path="DragTargetParent"
+                         RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type tlui:StructureView}}"/>
+              </MultiBinding>
+            </DataTrigger.Binding>
+            <Setter x:Uid="Setter_111306" TargetName="ItemBorder" Property="Border.BorderThickness" Value="1,1,1,1"/>
+            <Setter x:Uid="Setter_111307" TargetName="ItemBorder" Value="{DynamicResource StructureViewBlueBrush}"
+                    Property="Border.BorderBrush"/>
+          </DataTrigger>
+        </ControlTemplate.Triggers>
+      </ControlTemplate>
+      <Style x:Key="StyleTemplateTreeForegroundRow" x:Uid="Style_51"
+             BasedOn="{StaticResource ElementTreeForegroundRow}" TargetType="{x:Type Control}">
+        <Setter x:Uid="Setter_286" Property="UIElement.Visibility">
+          <Setter.Value>
+            <Binding Path="IsActive" Mode="OneWay" Converter="{StaticResource BoolToVisibilityCollapsedConverter}"/>
+          </Setter.Value>
+        </Setter>
+        <Setter x:Uid="Setter_290" Property="Control.Template">
+          <Setter.Value>
+            <ControlTemplate x:Uid="ControlTemplate_38" TargetType="{x:Type Control}">
+              <tlui:TimelineTreeRow MouseLeave="OnMouseLeave" FrameworkElement.Style="{StaticResource TimelineTreeRowStyle}"
+                                    x:Uid="tlui:TimelineTreeRow_4" FrameworkElement.ToolTip="{DynamicResource CommonToolTip}">
+                <Control x:Uid="Control_38" Template="{StaticResource PropertyControlTemplate}"/>
+              </tlui:TimelineTreeRow>
+            </ControlTemplate>
+          </Setter.Value>
+        </Setter>
+      </Style>
+      <Style x:Key="BehaviorTemplateTreeForegroundRow" x:Uid="Style_12160"
+             BasedOn="{StaticResource ElementTreeForegroundRow}" TargetType="{x:Type Control}">
+        <Setter x:Uid="Setter_242239" Property="UIElement.Visibility">
+          <Setter.Value>
+            <Binding Path="IsActive" Mode="OneWay" Converter="{StaticResource BoolToVisibilityCollapsedConverter}"/>
+          </Setter.Value>
+        </Setter>
+        <Setter x:Uid="Setter_242240" Property="Control.Template" Value="{StaticResource BehaviorControlTemplate}"/>
+      </Style>
+      <Style x:Key="PropertyTreeForegroundRow" x:Uid="Style_52" TargetType="{x:Type Control}">
+        <Setter x:Uid="Setter_306" Property="UIElement.Visibility">
+          <Setter.Value>
+            <Binding Path="IsActive" Mode="OneWay" Converter="{StaticResource BoolToVisibilityCollapsedConverter}"/>
+          </Setter.Value>
+        </Setter>
+        <Setter x:Uid="Setter_309" Property="Control.Template">
+          <Setter.Value>
+            <ControlTemplate x:Uid="ControlTemplate_50" TargetType="{x:Type Control}">
+              <tlui:TimelineTreeRow MouseLeave="OnMouseLeave" FrameworkElement.Style="{StaticResource TimelineTreeRowStyle}"
+                                    x:Uid="tlui:TimelineTreeRow_3" FrameworkElement.ToolTip="{DynamicResource CommonToolTip}">
+                <Control x:Uid="Control_40" Template="{StaticResource PropertyControlTemplate}"/>
+              </tlui:TimelineTreeRow>
+            </ControlTemplate>
+          </Setter.Value>
+        </Setter>
+      </Style>
+      <Style x:Key="EffectTimeLineItemRow" x:Uid="Style_11152" TargetType="{x:Type Control}">
+        <Setter x:Uid="Setter_111298" Property="UIElement.Visibility">
+          <Setter.Value>
+            <Binding Path="IsActive" Mode="OneWay" Converter="{StaticResource BoolToVisibilityCollapsedConverter}"/>
+          </Setter.Value>
+        </Setter>
+        <Setter x:Uid="Setter_111299" Property="Control.Template" Value="{StaticResource EffectControlTemplate}"/>
+      </Style>
+      <Style x:Key="VirtualizingListBoxItemContainerStyle" x:Uid="Style_59" TargetType="{x:Type ListBoxItem}">
+        <Setter x:Uid="Setter_352" Property="Control.Template">
+          <Setter.Value>
+            <ControlTemplate x:Uid="ControlTemplate_46" TargetType="{x:Type ListBoxItem}">
+              <ContentPresenter x:Uid="ContentControl_3" Content="{TemplateBinding ContentControl.Content}"
+                                FrameworkElement.HorizontalAlignment="Stretch" FrameworkElement.Width="Auto"/>
+            </ControlTemplate>
+          </Setter.Value>
+        </Setter>
+      </Style>
+      <ControlTemplate x:Key="VirtualizingListBoxTemplate" x:Uid="ControlTemplate_45">
+        <ScrollViewer x:Name="Scroller" x:Uid="ScrollViewer_1" CanContentScroll="true"
+                      HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden">
+          <ItemsPresenter x:Uid="ItemsPresenter_1"/>
+        </ScrollViewer>
+      </ControlTemplate>
+      <Style x:Key="DragTipStyle" x:Uid="Style_11153" TargetType="{x:Type Control}">
+        <Setter x:Uid="Setter_111308" Property="FrameworkElement.DataContext">
+          <Setter.Value>
+            <Binding RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type tlui:StructureView}}"/>
+          </Setter.Value>
+        </Setter>
+        <Setter x:Uid="Setter_111309" Property="Control.Template">
+          <Setter.Value>
+            <ControlTemplate x:Uid="ControlTemplate_11140" TargetType="{x:Type Control}">
+              <Border x:Uid="Border_65" FrameworkElement.Style="{StaticResource DropShadowBorderStyle}">
+                <Border x:Uid="Border_54" FrameworkElement.Style="{StaticResource ToolTipContentBorder}" Padding="5,1,6,2"
+                        UIElement.Opacity="0.9">
+                  <Grid x:Uid="Grid_28" TextElement.Foreground="{DynamicResource Text1Brush}">
+                    <FrameworkElement.Resources>
+                      <Style x:Uid="Style_11154" TargetType="{x:Type TextBlock}">
+                        <Setter x:Uid="Setter_111310" Property="TextBlock.TextWrapping" Value="NoWrap"/>
+                        <Setter x:Uid="Setter_111311" Property="TextBlock.TextTrimming" Value="None"/>
+                        <Setter x:Uid="Setter_111312" Property="FrameworkElement.VerticalAlignment" Value="Center"/>
+                        <Setter x:Uid="Setter_111313" Property="FrameworkElement.Margin" Value="0"/>
+                        <Setter x:Uid="Setter_111314" Property="Localization.Attributes" Value="Text(Unreadable Unmodifiable)"/>
+                      </Style>
+                      <ctl:StyleStringConverter x:Uid="dd:StyleStringConverter_2" x:Key="DragTipConverter">
+                        <ctl:StyleStringConverter.Resources>
+                          <ResourceDictionary x:Uid="ResourceDictionary_4">
+                            <LineBreak x:Uid="LineBreak_145675" x:Key="LineBreak"/>
+                            <Style x:Uid="Style_12158" x:Key="Normal" TargetType="{x:Type Run}"/>
+                            <Style x:Uid="Style_12159" x:Key="Dimmed" TargetType="{x:Type TextBlock}"
+                                   BasedOn="{StaticResource {x:Type TextBlock}}">
+                              <Setter x:Uid="Setter_121346" Property="UIElement.Opacity" Value="0.8"/>
+                            </Style>
+                          </ResourceDictionary>
+                        </ctl:StyleStringConverter.Resources>
+                      </ctl:StyleStringConverter>
+                    </FrameworkElement.Resources>
+                    <Grid.ColumnDefinitions>
+                      <ColumnDefinition x:Uid="ColumnDefinition_11" Width="Auto"/>
+                      <ColumnDefinition x:Uid="ColumnDefinition_12" Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <fwctl:Icon x:Name="Icon" x:Uid="fwctl:Icon_6" Grid.Column="0" FrameworkElement.VerticalAlignment="Center"
+                                FrameworkElement.Width="16" FrameworkElement.Height="16" FrameworkElement.Margin="0,0,4,0"/>
+                    <ContentControl x:Name="InfoTips" x:Uid="InfoTips" Grid.Column="1">
+                      <MultiBinding x:Uid="MultiBinding_4" Converter="{StaticResource DragTipConverter}">
+                        <Binding x:Uid="Binding_7" Path="Tag" RelativeSource="{RelativeSource Self}"/>
+                        <Binding x:Uid="Binding_8" Path="DragTipModel.TargetName"/>
+                        <Binding x:Uid="Binding_9" Path="DragTipModel.SourceName"/>
+                        <Binding x:Uid="Binding_10" Path="DragTipModel.SourceType"/>
+                      </MultiBinding>
+                    </ContentControl>
+                  </Grid>
+                </Border>
+              </Border>
+              <ControlTemplate.Triggers>
+                <DataTrigger x:Uid="DataTrigger_29" Value="None" Binding="{Binding DragTipModel.DropEffectId}">
+                  <Setter x:Uid="Setter_111315" TargetName="Icon" Property="Image.Source"
+                          Value="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/DragDrop/cantdrop_icon_16x16.png"/>
+                  <Setter x:Uid="Setter_111316" TargetName="InfoTips" Localization.Attributes="Value(Readable Modifiable)"
+                          Property="FrameworkElement.Tag" Value="Not a valid drop target"/>
+                </DataTrigger>
+                <DataTrigger x:Uid="DataTrigger_30" Value="Copy" Binding="{Binding DragTipModel.DropEffectId}">
+                  <Setter x:Uid="Setter_111317" TargetName="Icon" Property="Image.Source"
+                          Value="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/DragDrop/copyto_icon_16x16.png"/>
+                  <Setter x:Uid="Setter_111318" TargetName="InfoTips" Localization.Attributes="Value(Readable Modifiable)"
+                          Property="FrameworkElement.Tag" Value="Copy to {Dimmed}{1}{LineBreak}{3} {2}"/>
+                </DataTrigger>
+                <DataTrigger x:Uid="DataTrigger_31" Value="CopyAsParent" Binding="{Binding DragTipModel.DropEffectId}">
+                  <Setter x:Uid="Setter_111319" TargetName="Icon" Property="Image.Source"
+                          Value="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/DragDrop/copyto_icon_16x16.png"/>
+                  <Setter x:Uid="Setter_111320" TargetName="InfoTips" Localization.Attributes="Value(Readable Modifiable)"
+                          Property="FrameworkElement.Tag" Value="Copy as parent of {Dimmed}{1}{LineBreak}{3} {2}"/>
+                </DataTrigger>
+                <DataTrigger x:Uid="DataTrigger_32" Value="Move" Binding="{Binding DragTipModel.DropEffectId}">
+                  <Setter x:Uid="Setter_111321" TargetName="Icon" Property="Image.Source"
+                          Value="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/DragDrop/moveinto_icon_16x16.png"/>
+                  <Setter x:Uid="Setter_111322" TargetName="InfoTips" Localization.Attributes="Value(Readable Modifiable)"
+                          Property="FrameworkElement.Tag" Value="Move to {Dimmed}{1}{LineBreak}{3} {2}"/>
+                </DataTrigger>
+                <DataTrigger x:Uid="DataTrigger_33" Value="MoveAsParent" Binding="{Binding DragTipModel.DropEffectId}">
+                  <Setter x:Uid="Setter_111323" TargetName="Icon" Property="Image.Source"
+                          Value="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/DragDrop/moveinto_icon_16x16.png"/>
+                  <Setter x:Uid="Setter_111324" TargetName="InfoTips" Localization.Attributes="Value(Readable Modifiable)"
+                          Property="FrameworkElement.Tag" Value="Move to become parent of {Dimmed}{1}{LineBreak}{3} {2}"/>
+                </DataTrigger>
+                <DataTrigger x:Uid="DataTrigger_34" Value="Create" Binding="{Binding DragTipModel.DropEffectId}">
+                  <Setter x:Uid="Setter_111325" TargetName="Icon" Property="Image.Source"
+                          Value="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/DragDrop/create_icon_16x16.png"/>
+                  <Setter x:Uid="Setter_111326" TargetName="InfoTips" Localization.Attributes="Value(Readable Modifiable)"
+                          Property="FrameworkElement.Tag" Value="Create in {Dimmed}{1}{LineBreak}{3} {2}"/>
+                </DataTrigger>
+                <DataTrigger x:Uid="DataTrigger_35" Value="CreateAsParent" Binding="{Binding DragTipModel.DropEffectId}">
+                  <Setter x:Uid="Setter_111327" TargetName="Icon" Property="Image.Source"
+                          Value="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/DragDrop/create_icon_16x16.png"/>
+                  <Setter x:Uid="Setter_111328" TargetName="InfoTips" Localization.Attributes="Value(Readable Modifiable)"
+                          Property="FrameworkElement.Tag" Value="Create as parent of {Dimmed}{1}{LineBreak}{3} {2}"/>
+                </DataTrigger>
+                <DataTrigger x:Uid="DataTrigger_36" Value="Replace" Binding="{Binding DragTipModel.DropEffectId}">
+                  <Setter x:Uid="Setter_111329" TargetName="Icon" Property="Image.Source"
+                          Value="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/DragDrop/replace_icon_16x16.png"/>
+                  <Setter x:Uid="Setter_111330" TargetName="InfoTips" Localization.Attributes="Value(Readable Modifiable)"
+                          Property="FrameworkElement.Tag" Value="Replace {Dimmed}{1}{Normal} with{Dimmed}{LineBreak}{3} {2}"/>
+                </DataTrigger>
+                <DataTrigger x:Uid="DataTrigger_37" Value="ReplaceAsCopy" Binding="{Binding DragTipModel.DropEffectId}">
+                  <Setter x:Uid="Setter_111331" TargetName="Icon" Property="Image.Source"
+                          Value="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/DragDrop/replaceplus_icon_16x16.png"/>
+                  <Setter x:Uid="Setter_111332" TargetName="InfoTips" Localization.Attributes="Value(Readable Modifiable)"
+                          Property="FrameworkElement.Tag" Value="Replace {Dimmed}{1}{Normal} with{Dimmed}{LineBreak}{3} {2}"/>
+                </DataTrigger>
+                <DataTrigger x:Uid="DataTrigger_41" Value="SetBinding" Binding="{Binding DragTipModel.DropEffectId}">
+                  <Setter x:Uid="Setter_111501" TargetName="Icon" Property="Image.Source"
+                          Value="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/DragDrop/create_icon_16x16.png"/>
+                  <Setter x:Uid="Setter_111502" TargetName="InfoTips" Localization.Attributes="Value(Readable Modifiable)"
+                          Property="FrameworkElement.Tag" Value="Data bind {Dimmed}{1}{LineBreak} to {3} {2}"/>
+                </DataTrigger>
+                <DataTrigger x:Uid="DataTrigger_42" Value="CreateElementAndBinding"
+                             Binding="{Binding DragTipModel.DropEffectId}">
+                  <Setter x:Uid="Setter_111503" TargetName="Icon" Property="Image.Source"
+                          Value="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/DragDrop/copyto_icon_16x16.png"/>
+                  <Setter x:Uid="Setter_111504" TargetName="InfoTips" Localization.Attributes="Value(Readable Modifiable)"
+                          Property="FrameworkElement.Tag" Value="Create {Dimmed}{1}{LineBreak}{3} {2}"/>
+                </DataTrigger>
+                <DataTrigger x:Uid="DataTrigger_43" Value="CreateDetails" Binding="{Binding DragTipModel.DropEffectId}">
+                  <Setter x:Uid="Setter_111505" TargetName="Icon" Property="Image.Source"
+                          Value="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/DragDrop/copyto_icon_16x16.png"/>
+                  <Setter x:Uid="Setter_111506" TargetName="InfoTips" Localization.Attributes="Value(Readable Modifiable)"
+                          Property="FrameworkElement.Tag" Value="Create Details Visualization"/>
+                </DataTrigger>
+              </ControlTemplate.Triggers>
+            </ControlTemplate>
+          </Setter.Value>
+        </Setter>
+      </Style>
+      <Style x:Key="DropSplitAdornerStyle" x:Uid="Style_11155" TargetType="{x:Type Control}">
+        <Setter x:Uid="Setter_111333" Property="UIElement.IsHitTestVisible" Value="false"/>
+        <Setter x:Uid="Setter_111334" Property="FrameworkElement.HorizontalAlignment" Value="Stretch"/>
+        <Setter x:Uid="Setter_111335" Property="FrameworkElement.VerticalAlignment" Value="Top"/>
+        <Setter x:Uid="Setter_111336" Property="Control.Template">
+          <Setter.Value>
+            <ControlTemplate x:Uid="ControlTemplate_11141" TargetType="{x:Type Control}">
+              <Grid x:Uid="Grid_29">
+                <FrameworkElement.Resources>
+                  <Style x:Uid="Style_11156" TargetType="{x:Type Path}">
+                    <Setter x:Uid="Setter_111337" Property="Shape.Stroke" Value="{DynamicResource StructureViewBlueBrush}"/>
+                    <Setter x:Uid="Setter_111338" Property="Shape.Fill" Value="{DynamicResource StructureViewBlueBrush}"/>
+                    <Setter x:Uid="Setter_111339" Property="FrameworkElement.VerticalAlignment" Value="Center"/>
+                  </Style>
+                </FrameworkElement.Resources>
+                <Path x:Uid="Path_1" FrameworkElement.Height="7" FrameworkElement.Width="7"
+                      FrameworkElement.HorizontalAlignment="Left" Data="M 4,3 L 10,6 4,9 Z" Shape.Stretch="Uniform"/>
+                <Path x:Uid="Path_2" FrameworkElement.Height="1" FrameworkElement.Width="Auto"
+                      FrameworkElement.HorizontalAlignment="Stretch" Data="M 0,0 L 1,0 " Shape.Stretch="Fill"/>
+                <Path x:Uid="Path_3" FrameworkElement.Height="7" FrameworkElement.Width="7"
+                      FrameworkElement.HorizontalAlignment="Right" Data="M 10,3 L 4,6 10,9 Z" Shape.Stretch="Uniform"/>
+              </Grid>
+            </ControlTemplate>
+          </Setter.Value>
+        </Setter>
+      </Style>
+      <ToolTip x:Key="CommonToolTip" x:Uid="ToolTip_1"
+               FrameworkElement.Style="{StaticResource TimelineItemToolTipStyle}"/>
+      <ToolTip x:Key="PartStatusToolTip" x:Uid="ToolTip_2"
+               FrameworkElement.Style="{StaticResource ElementPartStatusToolTipStyle}"/>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <Grid x:Uid="Grid_23"
+        TextElement.FontFamily="{DynamicResource {x:Static SystemFonts.MessageFontFamilyKey}}"
+        TextElement.FontSize="{DynamicResource {x:Static SystemFonts.MessageFontSizeKey}}"
+        TextElement.FontWeight="{DynamicResource {x:Static SystemFonts.MessageFontWeight}}">
+    <FrameworkElement.DataContext>
+      <Binding RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type tlui:StructureView}}"/>
+    </FrameworkElement.DataContext>
+    <Grid.RowDefinitions>
+      <RowDefinition x:Uid="RowDefinition_7" Height="auto"/>
+      <RowDefinition x:Uid="RowDefinition_8" Height="auto"/>
+      <RowDefinition x:Uid="RowDefinition_9" Height="*"/>
+      <RowDefinition x:Uid="RowDefinition_10" Height="auto"/>
+    </Grid.RowDefinitions>
+    <Grid x:Name="StructureRowTwo" x:Uid="Grid_24" FrameworkElement.Margin="0,4,0,0" Row="0">
+      <FrameworkElement.Height>
+        <Binding Path="TimelinePane.RowOneHeight"/>
+      </FrameworkElement.Height>
+      <Button FrameworkElement.Name="ScopeToRootButton" x:Uid="ScopeToRootButton"
+              FrameworkElement.Style="{DynamicResource FlatIconButtonStyle}"
+              FrameworkElement.HorizontalAlignment="Left" FrameworkElement.Width="16"
+              FrameworkElement.Height="16" FrameworkElement.Margin="4,0,4,0"
+              fwctl:Icon.SelectedImage="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Timeline/timeline_scopeRoot_on_16x16.png"
+              fwctl:Icon.DeselectedImage="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Timeline/timeline_scopeRoot_off_16x16.png"
+              ButtonBase.Command="{x:Static tlui:TimelineCommands.ScopeToRootCommand}"
+              FrameworkElement.MinWidth="0" FrameworkElement.MinHeight="0">
+        <UIElement.Visibility>
+          <Binding Path="TimelinePane.HasEditableDocument"
+                   Converter="{StaticResource BoolToVisibilityCollapsedConverter}"/>
+        </UIElement.Visibility>
+        <UIElement.IsEnabled>
+          <Binding Path="TimelinePane.CanReturnScope"/>
+        </UIElement.IsEnabled>
+        <FrameworkElement.ToolTip>
+          <ctl:NoAnimationToolTip x:Uid="ctl:NoAnimationToolTip_1"
+                                  ContentControl.Content="{Binding TimelinePane.ReturnScopeToolTip, Mode=OneWay}"/>
+        </FrameworkElement.ToolTip>
+      </Button>
+      <TextBlock FrameworkElement.Name="FocusedElementText" FrameworkElement.VerticalAlignment="Center"
+                 FrameworkElement.HorizontalAlignment="Left" FrameworkElement.Margin="24,0,0,0"
+                 FontSize="{DynamicResource {x:Static SystemFonts.MessageFontSizeKey}}"
+                 FontFamily="{DynamicResource {x:Static SystemFonts.MessageFontFamilyKey}}"
+                 FontWeight="{DynamicResource {x:Static SystemFonts.MessageFontWeightKey}}"
+                 Foreground="{DynamicResource Text1Brush}" TextTrimming="CharacterEllipsis"
+                 x:Uid="FocusedElementText">
+        <TextBlock.Text>
+          <Binding Path="TimelinePane.FocusedElementName"/>
+        </TextBlock.Text>
+      </TextBlock>
+    </Grid>
+    <StackPanel x:Uid="StackPanel_3" FrameworkElement.HorizontalAlignment="Right" Orientation="Horizontal"
+                Grid.Row="1" FrameworkElement.Margin="0,3,1,1">
+      <FrameworkElement.Height>
+        <Binding Path="TimelinePane.RowOneHeight"/>
+      </FrameworkElement.Height>
+      <Button FrameworkElement.Name="ToggleShowAllButton"
+              ButtonBase.Command="{x:Static tlui:TimelineCommands.ToggleShowAllCommand}"
+              x:Uid="ToggleShowAllButton" FrameworkElement.Width="18" FrameworkElement.Height="16"
+              fwctl:Icon.SelectedImage="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Timeline/timeline_showToggle_on_16x16.png"
+              fwctl:Icon.DeselectedImage="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Timeline/timeline_showToggle_off_16x16.png">
+        <UIElement.Visibility>
+          <Binding Path="TimelinePane.HasEditableDocument"
+                   Converter="{StaticResource BoolToVisibilityCollapsedConverter}"/>
+        </UIElement.Visibility>
+        <FrameworkElement.Style>
+          <Style x:Uid="Style_12161" TargetType="{x:Type Button}" BasedOn="{StaticResource FlatIconButtonStyle}">
+            <Style.Triggers>
+              <DataTrigger x:Uid="DataTrigger_13" Binding="{Binding TimelinePane.HasAnythingHidden}" Value="True">
+                <Setter x:Uid="Setter_1509" Property="FrameworkElement.ToolTip"
+                        Localization.Attributes="Value (Readable Modifiable)" Value="Show all"/>
+              </DataTrigger>
+              <DataTrigger x:Uid="DataTrigger_15" Binding="{Binding TimelinePane.HasAnythingHidden}" Value="False">
+                <Setter x:Uid="Setter_1511" Property="FrameworkElement.ToolTip"
+                        Localization.Attributes="Value (Readable Modifiable)" Value="Hide all"/>
+              </DataTrigger>
+            </Style.Triggers>
+          </Style>
+        </FrameworkElement.Style>
+      </Button>
+      <Button FrameworkElement.Name="ToggleLockAllButton"
+              ButtonBase.Command="{x:Static tlui:TimelineCommands.ToggleLockAllCommand}"
+              x:Uid="ToggleLockAllButton" FrameworkElement.Width="18" FrameworkElement.Height="16"
+              fwctl:Icon.SelectedImage="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Timeline/timeline_lock_on_16x16.png"
+              fwctl:Icon.DeselectedImage="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Timeline/timeline_lock_off_16x16.png">
+        <UIElement.Visibility>
+          <Binding Path="TimelinePane.HasEditableDocument"
+                   Converter="{StaticResource BoolToVisibilityCollapsedConverter}"/>
+        </UIElement.Visibility>
+        <FrameworkElement.Style>
+          <Style x:Uid="Style_67" TargetType="{x:Type Button}" BasedOn="{StaticResource FlatIconButtonStyle}">
+            <Style.Triggers>
+              <DataTrigger x:Uid="DataTrigger_14" Binding="{Binding TimelinePane.HasAnythingLocked}" Value="True">
+                <Setter x:Uid="Setter_1510" Property="FrameworkElement.ToolTip"
+                        Localization.Attributes="Value (Readable Modifiable)" Value="Unlock all"/>
+              </DataTrigger>
+              <DataTrigger x:Uid="DataTrigger_16" Binding="{Binding TimelinePane.HasAnythingLocked}" Value="False">
+                <Setter x:Uid="Setter_1512" Property="FrameworkElement.ToolTip"
+                        Localization.Attributes="Value (Readable Modifiable)" Value="Lock all"/>
+              </DataTrigger>
+            </Style.Triggers>
+          </Style>
+        </FrameworkElement.Style>
+      </Button>
+    </StackPanel>
+    <ScrollViewer FrameworkElement.Name="ElementTreeViewer" x:Uid="ElementTreeViewer" Grid.Row="2"
+                  FrameworkElement.Margin="1,0,1,0" HorizontalScrollBarVisibility="Hidden"
+                  VerticalScrollBarVisibility="Hidden">
+      <ListBox FrameworkElement.Name="ElementTree" Control.Template="{StaticResource VirtualizingListBoxTemplate}"
+               ItemsControl.ItemContainerStyle="{StaticResource VirtualizingListBoxItemContainerStyle}"
+               Control.Background="Transparent" Control.BorderThickness="0" x:Uid="ElementTree"
+               fwctl:DragDropHelper.DragDropHandler="{Binding StructureViewDragDropHandler, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type tlui:StructureView}}, Mode=OneTime}">
+        <FrameworkElement.Height>
+          <Binding ElementName="ElementTreeViewer" Path="ActualHeight"/>
+        </FrameworkElement.Height>
+        <ItemsControl.ItemsSource>
+          <Binding Path="TimelinePane.ItemList"/>
+        </ItemsControl.ItemsSource>
+        <FrameworkElement.Resources>
+          <DataTemplate x:Uid="DataTemplate_9" DataType="{x:Type tlctl:TimelineItem}">
+            <Control x:Uid="Control_5" FrameworkElement.Style="{StaticResource PropertyTreeForegroundRow}"/>
+          </DataTemplate>
+          <DataTemplate x:Uid="DataTemplate_5" DataType="{x:Type tlctl:ElementTimelineItem}">
+            <Control x:Uid="Control_1" FrameworkElement.Style="{StaticResource ElementTreeForegroundRow}"/>
+          </DataTemplate>
+          <DataTemplate x:Uid="DataTemplate_6" DataType="{x:Type tlctl:EffectTimelineItem}">
+            <Control x:Uid="Control_2" FrameworkElement.Style="{StaticResource EffectTimeLineItemRow}"/>
+          </DataTemplate>
+          <DataTemplate x:Uid="DataTemplate_16" DataType="{x:Type tlctl:StyleTimelineItem}">
+            <Control x:Uid="Control_12" FrameworkElement.Style="{StaticResource StyleTemplateTreeForegroundRow}"/>
+          </DataTemplate>
+          <DataTemplate x:Uid="DataTemplate_17" DataType="{x:Type tlctl:TemplateTimelineItem}">
+            <Control x:Uid="Control_13" FrameworkElement.Style="{StaticResource StyleTemplateTreeForegroundRow}"/>
+          </DataTemplate>
+          <DataTemplate x:Uid="DataTemplate_27" DataType="{x:Type tlctl:BehaviorTimelineItem}">
+            <Control x:Uid="Control_42" FrameworkElement.Style="{StaticResource BehaviorTemplateTreeForegroundRow}"/>
+          </DataTemplate>
+        </FrameworkElement.Resources>
+      </ListBox>
+    </ScrollViewer>
+    <ToggleButton FrameworkElement.Name="ToggleSortOrder" x:Uid="ToggleSortOrder" Grid.Row="3"
+                  FrameworkElement.HorizontalAlignment="Left" FrameworkElement.Width="22"
+                  FrameworkElement.Height="17">
+      <ToggleButton.IsChecked>
+        <Binding Path="SortByZOrder" Mode="TwoWay"/>
+      </ToggleButton.IsChecked>
+      <FrameworkElement.Style>
+        <Style x:Uid="Style_43" TargetType="{x:Type ToggleButton}"
+               BasedOn="{StaticResource FlatToggleIconButtonStyle}">
+          <Setter x:Uid="Setter_289" Property="UIElement.Focusable" Value="false"/>
+          <Setter x:Uid="Setter_1365" Property="fwctl:Icon.SelectedImage"
+                  Value="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Timeline/timeline_orderDown_on_16x16.png"/>
+          <Setter x:Uid="Setter_1366" Property="fwctl:Icon.DeselectedImage"
+                  Value="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Timeline/timeline_orderDown_off_16x16.png"/>
+          <Setter x:Uid="Setter_12" Localization.Attributes="Value (Readable Modifiable)"
+                  Property="FrameworkElement.ToolTip" Value="Arrange by Z order"/>
+          <Style.Triggers>
+            <Trigger x:Uid="Trigger_1105" Property="ToggleButton.IsChecked" Value="True">
+              <Setter x:Uid="Setter_1368" Property="fwctl:Icon.SelectedImage"
+                      Value="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Timeline/timeline_orderUp_on_16x16.png"/>
+              <Setter x:Uid="Setter_1500" Property="fwctl:Icon.DeselectedImage"
+                      Value="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Timeline/timeline_orderUp_off_16x16.png"/>
+              <Setter x:Uid="Setter_1369" Localization.Attributes="Value (Readable Modifiable)"
+                      Property="FrameworkElement.ToolTip" Value="Arrange by markup order"/>
+              <Setter x:Uid="Setter_1865" Property="Control.Background"
+                      Value="{DynamicResource FlatToggleNormalBackgroundBrush}"/>
+            </Trigger>
+            <Trigger x:Uid="Trigger_1106" Property="UIElement.IsMouseOver" Value="true">
+              <Setter x:Uid="Setter_242252" Property="Control.Background"
+                      Value="{DynamicResource FlatToggleHoverBackgroundBrush}"/>
+            </Trigger>
+          </Style.Triggers>
+        </Style>
+      </FrameworkElement.Style>
+    </ToggleButton>
+    <ScrollBar FrameworkElement.Name="treeHorizontalScrollBar" x:Uid="TreeHorizontalScrollBar" Grid.Row="3"
+               FrameworkElement.Margin="22,0,0,0" Orientation="Horizontal" RangeBase.SmallChange="5"
+               RangeBase.LargeChange="10">
+      <RangeBase.Maximum>
+        <Binding ElementName="ElementTreeViewer" Path="ScrollableWidth"/>
+      </RangeBase.Maximum>
+      <ScrollBar.ViewportSize>
+        <Binding ElementName="ElementTreeViewer" Path="ViewportWidth"/>
+      </ScrollBar.ViewportSize>
+    </ScrollBar>
+  </Grid>
+  <fwctl:ExpressionPopup x:Name="DragTip" x:Uid="DragTip" Popup.Placement="Relative" Popup.AllowsTransparency="true">
+    <Control x:Uid="Control_41" FrameworkElement.Style="{StaticResource DragTipStyle}"/>
+  </fwctl:ExpressionPopup>
+  <Control x:Name="DropSplitAdorner" x:Uid="DropSplitAdorner"
+           FrameworkElement.Style="{StaticResource DropSplitAdornerStyle}" UIElement.Visibility="Collapsed"/>
+</tlui:StructureView>

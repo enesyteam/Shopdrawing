@@ -1,0 +1,131 @@
+<Border xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:data="clr-namespace:Microsoft.Expression.Framework.Data;assembly=Microsoft.Expression.Framework"
+        xmlns:automation="clr-namespace:Microsoft.Expression.Framework.Diagnostics;assembly=Microsoft.Expression.Framework"
+        xmlns:FrameworkControls="clr-namespace:Microsoft.Expression.Framework.Controls;assembly=Microsoft.Expression.Framework"
+        xmlns:Databinding="clr-namespace:Microsoft.Expression.Framework.Data;assembly=Microsoft.Expression.Framework"
+        FrameworkElement.Name="XmlDataSourceDialog" x:Uid="XmlDataSourceDialog"
+        FrameworkElement.Style="{DynamicResource DialogRootContainer}" FrameworkElement.Width="450">
+  <FrameworkElement.Resources>
+    <Databinding:NotConverter x:Key="NotConverter" x:Uid="Databinding:NotConverter"/>
+    <Thickness x:Key="RadioButtonMargin" x:Uid="Thickness_1" Left="24" Top="{StaticResource DefaultSpacing}"
+               Right="0" Bottom="0"/>
+  </FrameworkElement.Resources>
+  <Grid x:Uid="Grid_1">
+    <Grid.RowDefinitions>
+      <RowDefinition x:Uid="RowDefinition_1" Height="Auto"/>
+      <RowDefinition x:Uid="RowDefinition_2" Height="Auto"/>
+      <RowDefinition x:Uid="RowDefinition_3" Height="Auto"/>
+      <RowDefinition x:Uid="RowDefinition_4" Height="Auto"/>
+    </Grid.RowDefinitions>
+    <Grid x:Uid="Grid_3">
+      <Grid.RowDefinitions>
+        <RowDefinition x:Uid="RowDefinition_5" Height="Auto"/>
+        <RowDefinition x:Uid="RowDefinition_6" Height="Auto"/>
+        <RowDefinition x:Uid="RowDefinition_7" Height="Auto"/>
+        <RowDefinition x:Uid="RowDefinition_8" Height="Auto"/>
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition x:Uid="ColumnDefinition_1" Width="Auto"/>
+        <ColumnDefinition x:Uid="ColumnDefinition_2" Width="*"/>
+        <ColumnDefinition x:Uid="ColumnDefinition_3" Width="Auto"/>
+      </Grid.ColumnDefinitions>
+      <Label x:Uid="TextBlock_1" FrameworkElement.Margin="{DynamicResource DefaultLeftMediumTopMargin}"
+             FrameworkElement.HorizontalAlignment="Right" FrameworkElement.VerticalAlignment="Center"
+             Grid.Row="0" Grid.Column="0">
+        <Label.Target>
+          <Binding ElementName="DataSourceNameTextBox"/>
+        </Label.Target>Data _source name</Label>
+      <TextBox FrameworkElement.Name="DataSourceNameTextBox" x:Uid="DataSourceNameTextBox"
+               FrameworkElement.Margin="{DynamicResource DefaultLeftMediumTopMargin}" Grid.Row="0" Grid.Column="1"
+               FrameworkElement.VerticalAlignment="Center" UIElement.AllowDrop="false">
+        <TextBox.Text>
+          <Binding Path="DataSourceName" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"/>
+        </TextBox.Text>
+      </TextBox>
+      <Label FrameworkElement.Name="XmlDataSourceUrlLabel" x:Uid="TextBlock_2"
+             FrameworkElement.Margin="{DynamicResource DefaultLeftTopMargin}"
+             FrameworkElement.HorizontalAlignment="Right" FrameworkElement.VerticalAlignment="Center"
+             Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="1">
+        <UIElement.Visibility>
+          <Binding Path="XmlImportVisibility" Mode="OneTime"/>
+        </UIElement.Visibility>
+        <Label.Target>
+          <Binding ElementName="XmlDataSourceUrlTextBox"/>
+        </Label.Target>
+        _XML file path or URL
+      </Label>
+      <TextBox FrameworkElement.Name="XmlDataSourceUrlTextBox" x:Uid="XmlDataSourceUrlTextBox"
+               automation:AutomationElement.Id="XmlDataSourceUrlTextBox"
+               FrameworkElement.Margin="{DynamicResource DefaultLeftTopMargin}"
+               FrameworkElement.VerticalAlignment="Center" Grid.Row="1" Grid.Column="1"
+               UIElement.AllowDrop="false">
+        <UIElement.Visibility>
+          <Binding Path="XmlImportVisibility" Mode="OneTime"/>
+        </UIElement.Visibility>
+        <TextBox.Text>
+          <Binding Path="DataSourceUrl" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"/>
+        </TextBox.Text>
+      </TextBox>
+      <Button FrameworkElement.Name="XmlDataSourceUrlBrowseButton" x:Uid="Button_1"
+              FrameworkElement.Margin="{DynamicResource DefaultLeftTopMargin}"
+              FrameworkElement.HorizontalAlignment="Stretch" FrameworkElement.VerticalAlignment="Center"
+              Grid.Row="1" Grid.Column="2" FrameworkElement.Style="{DynamicResource DialogButton}"
+              ButtonBase.Command="{Binding BrowseForXmlFileCommand}">
+        <UIElement.Visibility>
+          <Binding Path="XmlImportVisibility" Mode="OneTime"/>
+        </UIElement.Visibility>_Browse...</Button>
+    </Grid>
+    <StackPanel x:Uid="StackPanel_1" Orientation="Vertical" Grid.Row="1"
+                FrameworkElement.Margin="{StaticResource LargeTopMargin}">
+      <TextBlock x:Uid="TextBlock_4" Text="Define in" FontWeight="Bold"
+                 FrameworkElement.Margin="{DynamicResource LargeTopMargin}"/>
+      <RadioButton x:Name="DefineIn_ProjectRoot" x:Uid="DefineIn_ProjectRoot" GroupName="DefineInRadioButtonGroup"
+                   ContentControl.Content="_Project" FrameworkElement.Margin="{DynamicResource RadioButtonMargin}"
+                   FrameworkElement.VerticalAlignment="Center" Control.VerticalContentAlignment="Center"
+                   UIElement.IsEnabled="{Binding CanDefineInProjectRoot}">
+        <ToggleButton.IsChecked>
+          <Binding Path="IsDefinedInProjectRoot" Mode="TwoWay"/>
+        </ToggleButton.IsChecked>
+        <FrameworkElement.Tag>
+          <Binding Path="ProjectDocument" Mode="OneWay"/>
+        </FrameworkElement.Tag>
+      </RadioButton>
+      <RadioButton x:Name="DefineIn_ThisDocument" x:Uid="DefineIn_ThisDocument" GroupName="DefineInRadioButtonGroup"
+                   FrameworkElement.HorizontalAlignment="Stretch" FrameworkElement.VerticalAlignment="Center"
+                   Control.VerticalContentAlignment="Center"
+                   FrameworkElement.Margin="{DynamicResource RadioButtonMargin}"
+                   ContentControl.Content="This _document" UIElement.IsEnabled="{Binding CanDefineInThisDocument}">
+        <ToggleButton.IsChecked>
+          <Binding Path="IsDefinedInThisDocument" Mode="TwoWay"/>
+        </ToggleButton.IsChecked>
+        <FrameworkElement.Tag>
+          <Binding Path="ThisDocumentResourceDictionaries" Mode="OneWay"/>
+        </FrameworkElement.Tag>
+      </RadioButton>
+    </StackPanel>
+    <CheckBox x:Name="EnableAtRuntime" x:Uid="EnableAtRuntime" Grid.Row="2"
+              FrameworkElement.HorizontalAlignment="Stretch" FrameworkElement.VerticalAlignment="Center"
+              Control.VerticalContentAlignment="Center" FrameworkElement.Margin="{StaticResource LargeTopMargin}"
+              ContentControl.Content="_Enable sample data when application is running">
+      <ToggleButton.IsChecked>
+        <Binding Path="IsEnabledAtRuntime" Mode="TwoWay"/>
+      </ToggleButton.IsChecked>
+      <UIElement.Visibility>
+        <Binding Path="EnabledAtRuntimeVisibility" Mode="OneTime"/>
+      </UIElement.Visibility>
+    </CheckBox>
+    <StackPanel x:Uid="StackPanel_2" Orientation="Horizontal"
+                FrameworkElement.Margin="{StaticResource LargeTopMargin}" Grid.Row="3"
+                FrameworkElement.HorizontalAlignment="Right">
+      <Button FrameworkElement.Name="AcceptButton" x:Uid="AcceptButton"
+              FrameworkElement.Style="{DynamicResource DialogButton}">
+        <UIElement.IsEnabled>
+          <Binding Path="IsAcceptButtonEnabled" Mode="OneWay"/>
+        </UIElement.IsEnabled>OK</Button>
+      <Button FrameworkElement.Name="CancelButton" x:Uid="CancelButton"
+              FrameworkElement.Style="{DynamicResource DialogButton}"
+              FrameworkElement.Margin="{StaticResource DefaultLeftMargin}" IsCancel="true">Cancel</Button>
+    </StackPanel>
+  </Grid>
+</Border>

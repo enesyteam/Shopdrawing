@@ -1,0 +1,9 @@
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Framework\bin\Debug\Shopdrawing.Framework.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Framework\bin\Debug\Shopdrawing.Framework.pdb
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Framework\bin\Debug\Microsoft.Expression.Extensibility.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Framework\bin\Debug\Microsoft.Expression.Licensing.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Framework\obj\Debug\Resources\Controls\messagewindow.baml
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Framework\obj\Debug\Shopdrawing.Framework_MarkupCompile.cache
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Framework\obj\Debug\Shopdrawing.Framework.g.resources
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Framework\obj\Debug\Shopdrawing.Framework.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Framework\obj\Debug\Shopdrawing.Framework.pdb

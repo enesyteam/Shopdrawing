@@ -1,0 +1,400 @@
+<tlui:TimelinePane xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                   xmlns:automation="clr-namespace:Microsoft.Expression.Framework.Diagnostics;assembly=Microsoft.Expression.Framework"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                   xmlns:system="clr-namespace:System;assembly=Mscorlib"
+                   xmlns:ctl="clr-namespace:Microsoft.Expression.DesignSurface.UserInterface"
+                   xmlns:tlctl="clr-namespace:Microsoft.Expression.DesignSurface.UserInterface.Timeline"
+                   xmlns:fwctl="clr-namespace:Microsoft.Expression.Framework.Controls;assembly=Microsoft.Expression.Framework"
+                   xmlns:fwdata="clr-namespace:Microsoft.Expression.Framework.Data;assembly=Microsoft.Expression.Framework"
+                   xmlns:fwve="clr-namespace:Microsoft.Expression.Framework.ValueEditors;assembly=Microsoft.Expression.Framework"
+                   xmlns:SystemWindowsShapes="clr-namespace:System.Windows.Shapes;assembly=PresentationFramework"
+                   xmlns:SystemWindowsControls="clr-namespace:System.Windows.Controls;assembly=PresentationFramework"
+                   xmlns:SystemWindowsMediaMedia3D="clr-namespace:System.Windows.Media.Media3D;assembly=PresentationCore"
+                   xmlns:tlui="clr-namespace:Microsoft.Expression.DesignSurface.UserInterface.Timeline.UI"
+                   xmlns:d="http://schemas.microsoft.com/expression/blend/2006"
+                   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                   x:Name="Root" x:Uid="Root" fwctl:FreezeBehavior.FreezeResources="true"
+                   automation:AutomationElement.Id="Designer_TimelinePane">
+  <FrameworkElement.Resources>
+    <ResourceDictionary x:Uid="ResourceDictionary_1">
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary x:Uid="ResourceDictionary_2"
+                            Source="pack://application:,,,/Microsoft.Expression.DesignSurface;component/resources/timeline/timelinebrushes.xaml"/>
+      </ResourceDictionary.MergedDictionaries>
+      <fwdata:BoolToVisibilityCollapsedConverter x:Key="BoolToVisibilityCollapsedConverter" x:Uid="BoolToVisibilityCollapsedConverter_1"/>
+      <fwdata:BoolToVisibilityHiddenConverter x:Key="BoolToVisibilityHiddenConverter" x:Uid="BoolToVisibilityHiddenConverter_1"/>
+      <fwdata:BoolToVisibilityCollapsedConverter x:Key="NotBoolToVisibilityCollapsedConverter" x:Uid="fwdata:BoolToVisibilityCollapsedConverter_1"
+                                                 InvertBoolean="true"/>
+      <fwdata:NotConverter x:Key="NotConverter" x:Uid="NotConverter_1"/>
+      <ContextMenu x:Key="TimelineContextMenu" x:Uid="ContextMenu_1">
+        <MenuItem x:Uid="MenuItem_1" HeaderedItemsControl.Header="New..."
+                  automation:AutomationElement.Id="NewStoryboardMenuItem"
+                  Command="{Binding CreateNewTimelineCommand}" UIElement.IsEnabled="{Binding CanCreateNewStoryboard}"/>
+        <MenuItem x:Uid="MenuItem_4" HeaderedItemsControl.Header="Duplicate"
+                  automation:AutomationElement.Id="DuplicateStoryboardMenuItem"
+                  Command="{Binding DuplicateStoryboardCommand}"
+                  UIElement.IsEnabled="{Binding CanDuplicateStoryboard}"/>
+        <MenuItem x:Uid="MenuItem_5" HeaderedItemsControl.Header="Reverse"
+                  automation:AutomationElement.Id="ReverseStoryboardMenuItem"
+                  Command="{Binding ReverseStoryboardCommand}" UIElement.IsEnabled="{Binding CanReverseStoryboard}"/>
+        <MenuItem x:Uid="MenuItem_2" HeaderedItemsControl.Header="Delete"
+                  automation:AutomationElement.Id="DeleteStoryboardMenuItem"
+                  Command="{Binding DeleteTimelineCommand}" UIElement.IsEnabled="{Binding CanDeleteStoryboard}"/>
+        <MenuItem x:Uid="MenuItem_3" HeaderedItemsControl.Header="Rename"
+                  automation:AutomationElement.Id="RenameStoryboardMenuItem"
+                  Command="{Binding RenameStoryboardCommand}"/>
+        <MenuItem x:Uid="MenuItem_6" HeaderedItemsControl.Header="Close"
+                  automation:AutomationElement.Id="CloseStoryboardMenuItem"
+                  Command="{Binding CloseStoryboardCommand}" UIElement.IsEnabled="{Binding CanCloseStoryboard}"/>
+      </ContextMenu>
+      <Style x:Key="InlineEditorStyle" x:Uid="Style_61" TargetType="{x:Type fwve:InlineStringEditor}"
+             BasedOn="{StaticResource {x:Type fwve:InlineStringEditor}}">
+        <Setter x:Uid="Setter_1909" Property="Control.Template">
+          <Setter.Value>
+            <ControlTemplate x:Uid="ControlTemplate_116" TargetType="{x:Type fwve:StringEditor}">
+              <fwctl:ToolTipTextBlock x:Uid="TextBlock_14" FrameworkElement.MinWidth="0"
+                                      FrameworkElement.Margin="{TemplateBinding Control.Padding}"
+                                      TextBlock.Text="{TemplateBinding TextBox.Text}" FrameworkElement.VerticalAlignment="Center"
+                                      TextBlock.TextWrapping="NoWrap" TextBlock.TextTrimming="CharacterEllipsis"/>
+            </ControlTemplate>
+          </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+          <Trigger x:Uid="Trigger_42" Property="TextBoxBase.IsReadOnly" Value="true">
+            <Setter x:Uid="Setter_386" Property="TextElement.Foreground" Value="{DynamicResource DisabledTextBrush}"/>
+          </Trigger>
+          <DataTrigger x:Uid="DataTrigger_1" Binding="{Binding IsStoryboardSelected}" Value="False">
+            <Setter x:Uid="Setter_387" Property="FrameworkElement.ContextMenu">
+              <Setter.Value>
+                <x:NullExtension/>
+              </Setter.Value>
+            </Setter>
+          </DataTrigger>
+        </Style.Triggers>
+      </Style>
+      <Style x:Key="StoryboardNameAreaStyle" x:Uid="Style_64" TargetType="{x:Type Border}">
+        <Setter x:Uid="Setter_1030" Property="Border.Background" Value="Transparent"/>
+        <Setter x:Uid="Setter_1026" Property="Control.Foreground" Value="{DynamicResource Text1Brush}"/>
+        <Style.Triggers>
+          <DataTrigger x:Uid="DataTrigger_2" Value="True">
+            <DataTrigger.Binding>
+              <Binding Path="IsStoryboardSelected"/>
+            </DataTrigger.Binding>
+            <Setter x:Uid="Setter_1028" Property="Border.Background" Value="{DynamicResource ListSelectedBrush}"/>
+            <Setter x:Uid="Setter_388" Property="Control.Foreground" Value="{DynamicResource ListSelectedTextBrush}"/>
+          </DataTrigger>
+          <MultiDataTrigger x:Uid="MultiDataTrigger_2">
+            <MultiDataTrigger.Conditions>
+              <Condition x:Uid="Condition_5" Value="True">
+                <Condition.Binding>
+                  <Binding Path="IsMouseOver" RelativeSource="{RelativeSource Self}"/>
+                </Condition.Binding>
+              </Condition>
+              <Condition x:Uid="Condition_6" Binding="{Binding IsStoryboardSelected}" Value="False"/>
+              <Condition x:Uid="Condition_7" Binding="{Binding CurrentTimelineHeader.CanSelect}" Value="True"/>
+            </MultiDataTrigger.Conditions>
+            <Setter x:Uid="Setter_1025" Property="Border.Background" Value="{DynamicResource ListHoverBrush}"/>
+          </MultiDataTrigger>
+        </Style.Triggers>
+      </Style>
+      <ControlTemplate x:Key="RecordButtonTemplate" x:Uid="ControlTemplate_49" TargetType="{x:Type ToggleButton}">
+        <Grid x:Uid="Grid_2" UIElement.IsHitTestVisible="true" Panel.Background="Transparent">
+          <fwctl:Icon x:Name="RecordIcon" x:Uid="RecordIcon" FrameworkElement.HorizontalAlignment="Center"
+                      FrameworkElement.VerticalAlignment="Center" FrameworkElement.Width="10"
+                      FrameworkElement.Height="10"
+                      Image.Source="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Timeline/states_record-into-state_on_7.png"/>
+        </Grid>
+        <ControlTemplate.Triggers>
+          <Trigger x:Uid="Trigger_40" Property="ToggleButton.IsChecked" Value="True">
+            <Setter x:Uid="Setter_3" Localization.Attributes="Value(Readable Modifiable)"
+                    Property="FrameworkElement.ToolTip" Value="Turn off record mode (Ctrl+R)"/>
+          </Trigger>
+          <Trigger x:Uid="Trigger_41" Property="ToggleButton.IsChecked" Value="False">
+            <Setter x:Uid="Setter_1576" TargetName="RecordIcon" Property="Image.Source"
+                    Value="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Timeline/states_record-into-state_off_7.png"/>
+            <Setter x:Uid="Setter_4" Localization.Attributes="Value(Readable Modifiable)"
+                    Property="FrameworkElement.ToolTip" Value="Turn on record mode (Ctrl+R)"/>
+          </Trigger>
+        </ControlTemplate.Triggers>
+      </ControlTemplate>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <Grid x:Name="SplitterGrid" FrameworkElement.VerticalAlignment="Stretch" x:Uid="SplitterGrid">
+    <FrameworkElement.DataContext>
+      <Binding RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type tlui:TimelinePane}}"/>
+    </FrameworkElement.DataContext>
+    <Grid.RowDefinitions>
+      <RowDefinition x:Uid="RowDefinition_1" Height="auto"/>
+      <RowDefinition x:Uid="RowDefinition_2" Height="*"/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition x:Name="StructureColumn" x:Uid="ColumnDefinition_2" Width="250" MinWidth="30"/>
+      <ColumnDefinition x:Uid="ColumnDefinition_17" Width="Auto"/>
+      <ColumnDefinition x:Name="TimelineColumn" x:Uid="ColumnDefinition_3" Width="*" MinWidth="0" MaxWidth="0"/>
+    </Grid.ColumnDefinitions>
+    <Border x:Uid="Border_2" Background="{DynamicResource PaletteTabSelectedBackgroundBrush}"
+            CornerRadius="{DynamicResource PaletteHeaderCornerRounding}"
+            FrameworkElement.Height="{DynamicResource PaletteHeaderHeight}">
+      <Grid x:Name="rowOne" x:Uid="Grid_3" FrameworkElement.Margin="1">
+        <UIElement.IsEnabled>
+          <Binding Path="HasEditableDocument"/>
+        </UIElement.IsEnabled>
+        <Grid x:Name="NormalTimelineUI" x:Uid="NormalTimelineUI">
+          <UIElement.Visibility>
+            <Binding Path="IsEditingStateStoryboard" Converter="{StaticResource NotBoolToVisibilityCollapsedConverter}"/>
+          </UIElement.Visibility>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Uid="ColumnDefinition_8" Width="*"/>
+            <ColumnDefinition x:Uid="ColumnDefinition_9" Width="Auto"/>
+          </Grid.ColumnDefinitions>
+          <Border x:Uid="Border_4" CornerRadius="4" Background="{DynamicResource RecessedBrush}">
+            <Grid x:Uid="Grid_1">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Uid="ColumnDefinition_4" Width="auto"/>
+                <ColumnDefinition x:Uid="ColumnDefinition_5" Width="*"/>
+                <ColumnDefinition x:Uid="ColumnDefinition_6" Width="auto"/>
+                <ColumnDefinition x:Uid="ColumnDefinition_7" Width="auto"/>
+              </Grid.ColumnDefinitions>
+              <ToggleButton x:Name="RecordButton" x:Uid="RecordButton" Control.Template="{StaticResource RecordButtonTemplate}"
+                            FrameworkElement.MinWidth="0" FrameworkElement.MinHeight="0" FrameworkElement.Width="12"
+                            FrameworkElement.Height="18" FrameworkElement.Margin="0"
+                            automation:AutomationElement.Id="RecordButton">
+                <UIElement.Visibility>
+                  <Binding Path="CurrentTimelineHeader.CanRecord" Converter="{StaticResource BoolToVisibilityHiddenConverter}"
+                           BindingBase.FallbackValue="Hidden"/>
+                </UIElement.Visibility>
+                <ToggleButton.IsChecked>
+                  <Binding Path="CurrentTimelineHeader.IsRecording" Mode="TwoWay"/>
+                </ToggleButton.IsChecked>
+              </ToggleButton>
+              <Border x:Uid="Border_5" Grid.Column="1" FrameworkElement.Margin="0,1,0,1"
+                      FrameworkElement.Style="{StaticResource StoryboardNameAreaStyle}"
+                      FrameworkElement.ContextMenu="{StaticResource TimelineContextMenu}">
+                <tlui:ActiveStoryboardControl x:Name="StoryboardNameHost" x:Uid="ContentControl_1" FrameworkElement.HorizontalAlignment="Left"
+                                              FrameworkElement.Margin="3,0,0,0" FrameworkElement.MinHeight="18"
+                                              ContentPresenter.Content="{Binding CurrentTimelineHeader}">
+                  <FrameworkElement.FocusVisualStyle>
+                    <x:NullExtension/>
+                  </FrameworkElement.FocusVisualStyle>
+                  <FrameworkElement.Resources>
+                    <DataTemplate x:Uid="DataTemplate_1" DataType="{x:Type tlui:TimelineHeader}">
+                      <TextBlock x:Uid="TextBlock_1" Foreground="{DynamicResource DisabledTextBrush}"
+                                 automation:AutomationElement.Id="StoryboardName" FrameworkElement.VerticalAlignment="Center">
+                        <TextBlock.Text>
+                          <Binding Path="Name"/>
+                        </TextBlock.Text>
+                      </TextBlock>
+                    </DataTemplate>
+                    <DataTemplate x:Uid="DataTemplate_2" DataType="{x:Type tlui:StoryboardTimelineHeader}">
+                      <fwve:InlineStringEditor x:Name="StoryboardName" x:Uid="StoryboardName"
+                                               FrameworkElement.Style="{StaticResource InlineEditorStyle}"
+                                               automation:AutomationElement.Id="StoryboardName">
+                        <fwve:InlineStringEditor.IsSelected>
+                          <Binding Path="IsSelected" Mode="OneWay"/>
+                        </fwve:InlineStringEditor.IsSelected>
+                        <TextBoxBase.IsReadOnly>
+                          <Binding Path="CanRename" Converter="{StaticResource NotConverter}"/>
+                        </TextBoxBase.IsReadOnly>
+                        <fwve:StringEditor.Value>
+                          <Binding Path="Name" Mode="TwoWay"/>
+                        </fwve:StringEditor.Value>
+                      </fwve:InlineStringEditor>
+                    </DataTemplate>
+                    <DataTemplate x:Uid="DataTemplate_3" DataType="{x:Type tlui:TransitionTimelineHeader}">
+                      <ContentPresenter x:Uid="ContentPresenter_1" ContentTemplate="{DynamicResource SmallTransitionTemplate}"
+                                        FrameworkElement.VerticalAlignment="Center"/>
+                    </DataTemplate>
+                  </FrameworkElement.Resources>
+                </tlui:ActiveStoryboardControl>
+              </Border>
+              <Button x:Name="StoryboardPickerButton" x:Uid="StoryboardPickerButton"
+                      FrameworkElement.Style="{DynamicResource IconButton}" FrameworkElement.Margin="1,1,0,1"
+                      Grid.Column="2" FrameworkElement.MinHeight="0" FrameworkElement.MinWidth="0"
+                      FrameworkElement.Width="15"
+                      fwctl:Icon.SelectedImage="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Timeline/timeline_openpicker_on_11x11.png"
+                      fwctl:Icon.DeselectedImage="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Timeline/timeline_openpicker_off_11x11.png"
+                      automation:AutomationElement.Id="StoryboardPickerButton"
+                      FrameworkElement.ToolTip="Open a Storyboard">
+                <UIElement.IsEnabled>
+                  <Binding Path="StoryboardsExist"/>
+                </UIElement.IsEnabled>
+                <UIElement.Visibility>
+                  <Binding Path="IsEditingTransitionStoryboard"
+                           Converter="{StaticResource NotBoolToVisibilityCollapsedConverter}"/>
+                </UIElement.Visibility>
+              </Button>
+              <Canvas x:Name="StoryboardPopupHost" x:Uid="Canvas_1" FrameworkElement.Margin="0,0,0,1"/>
+              <Button x:Name="CloseStoryboardButton" x:Uid="CloseStoryboardButton"
+                      FrameworkElement.Style="{DynamicResource IconButton}" FrameworkElement.ToolTip="Close Storyboard"
+                      FrameworkElement.Margin="1,1,1,1" Grid.Column="3" FrameworkElement.MinHeight="0"
+                      FrameworkElement.MinWidth="0" FrameworkElement.Width="16"
+                      fwctl:Icon.SelectedImage="/Microsoft.Expression.Framework;Component/Resources/Icons/ux/ux_close_on_11x11.png"
+                      fwctl:Icon.DeselectedImage="/Microsoft.Expression.Framework;Component/Resources/Icons/ux/ux_close_off_11x11.png"
+                      automation:AutomationElement.Id="CloseStoryboardButton">
+                <ButtonBase.Command>
+                  <Binding Path="CloseStoryboardCommand"/>
+                </ButtonBase.Command>
+                <UIElement.IsEnabled>
+                  <Binding Path="CanCloseStoryboard"/>
+                </UIElement.IsEnabled>
+                <UIElement.Visibility>
+                  <Binding Path="IsEditingTransitionStoryboard"
+                           Converter="{StaticResource NotBoolToVisibilityCollapsedConverter}"/>
+                </UIElement.Visibility>
+              </Button>
+            </Grid>
+          </Border>
+          <Border x:Uid="Border_6" Grid.Column="1" CornerRadius="4" FrameworkElement.Margin="3,0,0,0">
+            <UIElement.Visibility>
+              <Binding Path="IsEditingTransitionStoryboard"
+                       Converter="{StaticResource NotBoolToVisibilityCollapsedConverter}"/>
+            </UIElement.Visibility>
+            <FrameworkElement.Resources>
+              <Style x:Key="TimelineSplitButtonStyle" x:Uid="Style_65" TargetType="{x:Type fwctl:MenuButton}"
+                     BasedOn="{StaticResource MenuIconSplitButtonStyle}">
+                <Setter x:Uid="Setter_1029" Property="fwctl:MenuButton.DropDownMenu"
+                        Value="{StaticResource TimelineContextMenu}"/>
+                <Setter x:Uid="Setter_1577" Property="Control.Padding" Value="4,4,3,4"/>
+              </Style>
+            </FrameworkElement.Resources>
+            <fwctl:MenuButton x:Name="StoryboardSplitButton" x:Uid="fwctl:SplitButton_1"
+                              FrameworkElement.Style="{StaticResource TimelineSplitButtonStyle}"
+                              automation:AutomationElement.Id="StoryboardSplitButton" FrameworkElement.ToolTip="New..."
+                              fwctl:Icon.SelectedImage="/Microsoft.Expression.Framework;Component/Resources/Icons/ux/ux_add_on_11x11.png"
+                              fwctl:Icon.DeselectedImage="/Microsoft.Expression.Framework;Component/Resources/Icons/ux/ux_add_off_11x11.png"
+                              ButtonBase.Command="{Binding CreateNewTimelineCommand}"/>
+          </Border>
+        </Grid>
+        <Grid x:Name="StateTimelineUI" x:Uid="StateTimelineUI" FrameworkElement.MinHeight="19">
+          <UIElement.Visibility>
+            <Binding Path="IsEditingStateStoryboard" Converter="{StaticResource BoolToVisibilityCollapsedConverter}"/>
+          </UIElement.Visibility>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Uid="ColumnDefinition_11" Width="*"/>
+            <ColumnDefinition x:Uid="ColumnDefinition_12" Width="Auto"/>
+          </Grid.ColumnDefinitions>
+          <Border x:Uid="Border_7" CornerRadius="4" Background="{DynamicResource RecessedBrush}">
+            <Grid x:Uid="Grid_4" FrameworkElement.Margin="0,0,3,0">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Uid="ColumnDefinition_13" Width="auto"/>
+                <ColumnDefinition x:Uid="ColumnDefinition_14" Width="*"/>
+              </Grid.ColumnDefinitions>
+              <ToggleButton x:Uid="ToggleButton_1" Control.Template="{StaticResource RecordButtonTemplate}"
+                            FrameworkElement.MinWidth="0" FrameworkElement.MinHeight="0" FrameworkElement.Width="12"
+                            FrameworkElement.Height="18" FrameworkElement.Margin="0"
+                            automation:AutomationElement.Id="RecordButton">
+                <UIElement.Visibility>
+                  <Binding Path="IsEditingStateStoryboard" Converter="{StaticResource BoolToVisibilityHiddenConverter}"
+                           BindingBase.FallbackValue="Hidden"/>
+                </UIElement.Visibility>
+                <ToggleButton.IsChecked>
+                  <Binding Path="IsRecordingStateStoryboard" Mode="TwoWay"/>
+                </ToggleButton.IsChecked>
+              </ToggleButton>
+              <Border x:Uid="Border_8" Grid.Column="1" FrameworkElement.Margin="0,1,0,1"
+                      FrameworkElement.Style="{StaticResource StoryboardNameAreaStyle}">
+                <TextBlock x:Uid="StateStoryboardName" FrameworkElement.Margin="3,1,0,1">
+                  <TextBlock.Text>
+                    <Binding Path="StateStoryboardDisplayName"/>
+                  </TextBlock.Text>
+                  <FrameworkElement.ToolTip>
+                    <Binding Path="Text" RelativeSource="{RelativeSource Self}"/>
+                  </FrameworkElement.ToolTip>
+                </TextBlock>
+              </Border>
+            </Grid>
+          </Border>
+          <ToggleButton x:Name="ShowTimelineButton" x:Uid="ShowTimelineButton" FrameworkElement.MinWidth="0"
+                        FrameworkElement.Width="29" FrameworkElement.Margin="1,0,0,0" Grid.Column="1">
+            <ToggleButton.IsChecked>
+              <Binding Path="IsShowingTimeline" Mode="TwoWay"/>
+            </ToggleButton.IsChecked>
+            <UIElement.IsEnabled>
+              <Binding Path="CanShowTimeline"/>
+            </UIElement.IsEnabled>
+            <FrameworkElement.Style>
+              <Style x:Uid="Style_154" BasedOn="{StaticResource FlatIconButtonStyle}" TargetType="{x:Type ToggleButton}">
+                <Style.Triggers>
+                  <Trigger x:Uid="Trigger_93" Property="ToggleButton.IsChecked" Value="True">
+                    <Setter x:Uid="Setter_1503" Property="FrameworkElement.ToolTip"
+                            Localization.Attributes="Value (Readable Modifiable)" Value="Hide Timeline"/>
+                    <Setter x:Uid="Setter_1499" Property="fwctl:Icon.SelectedImage"
+                            Value="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Timeline/timeline_hide-timeline_on_24X24.png"/>
+                    <Setter x:Uid="Setter_1500" Property="fwctl:Icon.DeselectedImage"
+                            Value="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Timeline/timeline_hide-timeline_f_24X24.png"/>
+                  </Trigger>
+                  <Trigger x:Uid="Trigger_94" Property="ToggleButton.IsChecked" Value="False">
+                    <Setter x:Uid="Setter_1504" Property="FrameworkElement.ToolTip"
+                            Localization.Attributes="Value (Readable Modifiable)" Value="Show Timeline"/>
+                    <Setter x:Uid="Setter_1501" Property="fwctl:Icon.SelectedImage"
+                            Value="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Timeline/timeline_show-timeline_on_24.png"/>
+                    <Setter x:Uid="Setter_1502" Property="fwctl:Icon.DeselectedImage"
+                            Value="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Timeline/timeline_show-timeline_off_24X24.png"/>
+                  </Trigger>
+                </Style.Triggers>
+              </Style>
+            </FrameworkElement.Style>
+          </ToggleButton>
+        </Grid>
+      </Grid>
+    </Border>
+    <Border x:Uid="Border_66" Background="{DynamicResource ListBackgroundBrush}"
+            CornerRadius="{DynamicResource PaletteCornerRoundingWithHeader}" Grid.Row="1">
+      <tlui:StructureView x:Name="structureView" x:Uid="tlui:StructureView_1" FrameworkElement.Margin="0,0,0,0" Grid.Row="1">
+        <tlui:StructureView.TimelinePane>
+          <Binding/>
+        </tlui:StructureView.TimelinePane>
+      </tlui:StructureView>
+    </Border>
+    <GridSplitter x:Name="SplitterSlider" x:Uid="SplitterSlider" Grid.RowSpan="2" Grid.Column="1"
+                  FrameworkElement.HorizontalAlignment="Left"
+                  FrameworkElement.Style="{DynamicResource NarrowGridSplitter}" ResizeDirection="Columns"/>
+    <Border x:Uid="Border_65" Grid.RowSpan="2" Grid.Column="2" CornerRadius="4" BorderThickness="1,1,1,0"
+            BorderBrush="{DynamicResource ListBackgroundBrush}"
+            Background="{DynamicResource ListBackgroundBrush}">
+      <tlui:TimelineView x:Name="timelineView" x:Uid="tlui:TimelineView_1" UIElement.Visibility="Collapsed">
+        <tlui:TimelineView.TimelinePane>
+          <Binding Path=""/>
+        </tlui:TimelineView.TimelinePane>
+        <UIElement.IsEnabled>
+          <Binding Path="HasEditableDocument"/>
+        </UIElement.IsEnabled>
+        <tlui:TimelineView.ElementAreaHeight>
+          <Binding Path="ElementAreaHeight" ElementName="structureView"/>
+        </tlui:TimelineView.ElementAreaHeight>
+      </tlui:TimelineView>
+    </Border>
+    <Grid x:Name="VerticalScrollContainer" x:Uid="VerticalScrollContainer"
+          FrameworkElement.HorizontalAlignment="Right" ColumnSpan="3" Row="1"
+          FrameworkElement.Margin="0,4,0,0">
+      <UIElement.Visibility>
+        <Binding ElementName="VerticalScroll" Path="Visibility" Mode="OneWay"/>
+      </UIElement.Visibility>
+      <Grid.RowDefinitions>
+        <RowDefinition x:Uid="RowDefinition_6" Height="*"/>
+        <RowDefinition x:Uid="RowDefinition_7" Height="Auto"/>
+      </Grid.RowDefinitions>
+      <Border x:Uid="VerticalScrollBorder" BorderThickness="1,0,0,0" FrameworkElement.Margin="-1,0,0,0"
+              BorderBrush="{DynamicResource ListBackgroundBrush}">
+        <ScrollBar x:Name="VerticalScroll" x:Uid="VerticalScroll" Orientation="Vertical" RangeBase.SmallChange="1">
+          <UIElement.Visibility>
+            <Binding Path="IsEnabled" Converter="{StaticResource BoolToVisibilityHiddenConverter}"
+                     RelativeSource="{RelativeSource Self}"/>
+          </UIElement.Visibility>
+        </ScrollBar>
+      </Border>
+      <Border x:Name="VerticalScrollCorner" x:Uid="VerticalScrollCorner"
+              CornerRadius="{DynamicResource ScrollViewerCornerRadius}"
+              Background="{DynamicResource ScrollbarBackgroundBrush}"
+              BorderBrush="{DynamicResource ScrollViewerCornerBorderBrush}" BorderThickness="1,1,0,0"
+              Grid.Row="1">
+        <FrameworkElement.Width>
+          <Binding ElementName="VerticalScroll" Path="ActualWidth"/>
+        </FrameworkElement.Width>
+        <FrameworkElement.Height>
+          <Binding ElementName="VerticalScroll" Path="ActualWidth"/>
+        </FrameworkElement.Height>
+      </Border>
+    </Grid>
+  </Grid>
+</tlui:TimelinePane>

@@ -1,0 +1,59 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <!--Framework Controls-->
+        
+        <ResourceDictionary Source="FrameworkControls/FrameworkControls.xaml" />
+        <!--Colors and fonts-->
+        <ResourceDictionary Source="Colors/Colors.xaml" />
+        <ResourceDictionary Source="Colors/Fonts.xaml" />
+        <ResourceDictionary Source="Colors/MenuColors.xaml" />
+        <ResourceDictionary Source="Colors/TextStyle.xaml" />
+        <!--Controls-->
+        <ResourceDictionary Source="Controls/Core.xaml" />
+        <ResourceDictionary Source="Controls/Button.xaml" />
+        <ResourceDictionary Source="Controls/ToggleButton.xaml" />
+        <ResourceDictionary Source="Controls/Search.xaml" />
+        <ResourceDictionary Source="Controls/GridSplitter.xaml" />
+        <!--<ResourceDictionary Source="Controls/DockPanel.xaml" />-->
+        <!--<ResourceDictionary Source="Controls/SdrToolbar.xaml" />-->
+        <ResourceDictionary Source="Controls/TitleLabel.xaml" />
+        <ResourceDictionary Source="Controls/Menu.xaml" />
+        <ResourceDictionary Source="Controls/ContextMenu.xaml" />
+        <ResourceDictionary Source="Controls/ComboBox.xaml" />
+        <!--<ResourceDictionary Source="Controls/ToolTip.xaml" />-->
+        <ResourceDictionary Source="Controls/Treeview.xaml" />
+        <!--<ResourceDictionary Source="Controls/MethodCallerButton.xaml" />-->
+        <!--<ResourceDictionary Source="Controls/PropertyGrid.xaml" />-->
+        <!--<ResourceDictionary Source="Controls/ScrollBar.xaml" />-->
+        <!--<ResourceDictionary Source="Controls/PropertyGridHost.xaml" />-->
+        <ResourceDictionary Source="Controls/TextBox.xaml" />
+        <ResourceDictionary Source="Controls/CheckBox.xaml" />
+        <ResourceDictionary Source="Controls/RadioButton.xaml" />
+        <ResourceDictionary Source="Controls/ListBoxEx.xaml" />
+        <ResourceDictionary Source="Controls/LabeledValueEditor.xaml" />
+        <ResourceDictionary Source="Controls/Expander.xaml" />
+        <ResourceDictionary Source="Controls/ShopDrawingWindow.xaml" />
+        <!--<ResourceDictionary Source="Controls/Window.xaml" />-->
+        <!--<ResourceDictionary Source="Controls/PropertyItemName.xaml" />-->
+        <!--<ResourceDictionary Source="Controls/PropertyUnitLabel.xaml" />-->
+        
+        <ResourceDictionary Source="Controls/StatusBar.xaml" />
+        <ResourceDictionary Source="Controls/NotifycationLabel.xaml" />
+        <ResourceDictionary Source="Controls/ScrollViewer.xaml" />
+        <ResourceDictionary Source="Controls/ScrollBar.xaml" />
+        <ResourceDictionary Source="Controls/Border.xaml" />
+        <ResourceDictionary Source="Controls/TabControl.xaml" />
+        <!--Icons-->
+        <ResourceDictionary Source="Icons/ShopdrawingIcons.xaml" />
+        <ResourceDictionary Source="Icons/FrameworkIcons.xaml" />
+        
+        <!--Drawing-->
+        <ResourceDictionary Source="Drawing/Drawing.xaml" />
+        <!--<ResourceDictionary Source="Controls/NewPropertyGrid.xaml" />-->
+    </ResourceDictionary.MergedDictionaries>
+
+
+</ResourceDictionary>

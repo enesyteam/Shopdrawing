@@ -1,0 +1,2 @@
+E:\Projects\C#\Shopdrawing\LiveGeometry\Utilities\Shopdawing.Utilities\obj\Debug\Shopdawing.Utilities.csprojResolveAssemblyReference.cache
+E:\Projects\C#\ShopdrawingVer2\Common\Shopdawing.Utilities\obj\Debug\Shopdawing.Utilities.csprojResolveAssemblyReference.cache

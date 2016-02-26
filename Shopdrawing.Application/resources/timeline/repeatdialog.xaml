@@ -1,0 +1,51 @@
+<Border xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:fwve="clr-namespace:Microsoft.Expression.Framework.ValueEditors;assembly=Microsoft.Expression.Framework"
+        xmlns:fwctl="clr-namespace:Microsoft.Expression.Framework.Controls;assembly=Microsoft.Expression.Framework"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:automation="clr-namespace:Microsoft.Expression.Framework.Diagnostics;assembly=Microsoft.Expression.Framework"
+        xmlns:ui="clr-namespace:Microsoft.Expression.DesignSurface.UserInterface"
+        x:Uid="Border_1" FrameworkElement.Style="{DynamicResource DialogRootContainer}"
+        FrameworkElement.MinWidth="200">
+  <Grid x:Uid="Grid_1">
+    <Grid.RowDefinitions>
+      <RowDefinition x:Uid="RowDefinition_1" Height="Auto"/>
+      <RowDefinition x:Uid="RowDefinition_2" Height="Auto"/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition x:Uid="ColumnDefinition_1" Width="Auto"/>
+      <ColumnDefinition x:Uid="ColumnDefinition_2" Width="*"/>
+    </Grid.ColumnDefinitions>
+    <Label x:Uid="Label_1" FrameworkElement.VerticalAlignment="Center"
+           FrameworkElement.HorizontalAlignment="Right">
+      <Label.Target>
+        <Binding ElementName="RepeatCount"/>
+      </Label.Target>_Repeat Count</Label>
+    <fwve:NumberEditor FrameworkElement.Name="RepeatCount" x:Uid="RepeatCount" Grid.Column="1"
+                       FrameworkElement.Margin="{DynamicResource DefaultLeftMargin}" FrameworkElement.Width="100"
+                       HardMinimum="1" HardMaximum="Infinity" CanBeAuto="true"
+                       Converter="{x:Static ui:RepeatDialog.RepeatDoubleConverter}">
+      <fwve:NumberEditor.NamedValuePickerTemplate>
+        <DataTemplate x:Uid="DataTemplate_1">
+          <Button x:Name="ForeverButton" x:Uid="Button_3" FrameworkElement.MinWidth="0"
+                  FrameworkElement.ToolTip="Set to forever" FrameworkElement.Style="{DynamicResource IconButton}"
+                  FrameworkElement.Cursor="{x:Static Cursors.Arrow}" UIElement.Focusable="false"
+                  ButtonBase.CommandParameter="Forever"
+                  Localization.Attributes="CommandParameter(Unreadable Unmodifiable)"
+                  automation:AutomationElement.Id="SetToForever"
+                  fwctl:Icon.SelectedImage="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Timeline/shell_repeatForever_on_16x16.png"
+                  fwctl:Icon.DeselectedImage="/Microsoft.Expression.DesignSurface;Component/Resources/Icons/Timeline/shell_repeatForever_off_16x16.png"
+                  ButtonBase.Command="{Binding SetAutoCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type fwve:NumberEditor}}}"/>
+        </DataTemplate>
+      </fwve:NumberEditor.NamedValuePickerTemplate>
+    </fwve:NumberEditor>
+    <UniformGrid x:Uid="StackPanel_3" Grid.Row="1" Grid.ColumnSpan="2"
+                 FrameworkElement.Margin="{DynamicResource ExtraLargeTopMargin}"
+                 FrameworkElement.HorizontalAlignment="Right" Columns="2">
+      <Button FrameworkElement.Name="AcceptButton" FrameworkElement.Style="{DynamicResource DialogButton}"
+              x:Uid="AcceptButton">OK</Button>
+      <Button FrameworkElement.Name="CancelButton" IsCancel="true"
+              FrameworkElement.Style="{DynamicResource DialogButton}"
+              FrameworkElement.Margin="{DynamicResource DefaultLeftMargin}" x:Uid="CancelButton">Cancel</Button>
+    </UniformGrid>
+  </Grid>
+</Border>

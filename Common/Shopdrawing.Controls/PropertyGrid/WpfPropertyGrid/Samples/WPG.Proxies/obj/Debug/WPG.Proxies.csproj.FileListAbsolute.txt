@@ -1,0 +1,52 @@
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\bin\Debug\Sample6.Proxies.exe
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\bin\Debug\Sample6.Proxies.pdb
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\bin\Debug\System.Windows.Controls.WpfPropertyGrid.dll
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\bin\Debug\System.Windows.Controls.WpfPropertyGrid.Themes.dll
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\bin\Debug\System.Windows.Controls.WpfPropertyGrid.Themes.pdb
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\bin\Debug\System.Windows.Controls.WpfPropertyGrid.pdb
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\bin\Debug\System.Windows.Controls.WpfPropertyGrid.xml
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\obj\Debug\WPG.Proxies.csprojResolveAssemblyReference.cache
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\obj\Debug\Window1.baml
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\obj\Debug\Window1.g.cs
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\obj\Debug\App.g.cs
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\obj\Debug\Sample6.Proxies_MarkupCompile.cache
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\obj\Debug\Sample6.Proxies.g.resources
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\obj\Debug\Sample6.Proxies.Properties.Resources.resources
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\obj\Debug\WPG.Proxies.csproj.GenerateResource.Cache
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\obj\Debug\Sample6.Proxies.exe
+F:\Videos Hai\ribbon\Controls\0\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\obj\Debug\Sample6.Proxies.pdb
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\bin\Debug\Sample6.Proxies.exe
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\bin\Debug\Sample6.Proxies.pdb
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\bin\Debug\System.Windows.Controls.WpfPropertyGrid.dll
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\bin\Debug\System.Windows.Controls.WpfPropertyGrid.Themes.dll
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\bin\Debug\System.Windows.Controls.WpfPropertyGrid.Themes.pdb
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\bin\Debug\System.Windows.Controls.WpfPropertyGrid.pdb
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\bin\Debug\System.Windows.Controls.WpfPropertyGrid.xml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\obj\Debug\WPG.Proxies.csprojResolveAssemblyReference.cache
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\obj\Debug\Window1.baml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\obj\Debug\Window1.g.cs
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\obj\Debug\App.g.cs
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\obj\Debug\Sample6.Proxies_MarkupCompile.cache
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\obj\Debug\Sample6.Proxies.g.resources
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\obj\Debug\Sample6.Proxies.Properties.Resources.resources
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\obj\Debug\WPG.Proxies.csproj.GenerateResource.Cache
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\obj\Debug\Sample6.Proxies.exe
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\obj\Debug\Sample6.Proxies.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\bin\Debug\Sample6.Proxies.exe.config
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\bin\Debug\Sample6.Proxies.exe
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\bin\Debug\Sample6.Proxies.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\bin\Debug\System.Windows.Controls.WpfPropertyGrid.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\bin\Debug\System.Windows.Controls.WpfPropertyGrid.Themes.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\bin\Debug\System.Windows.Controls.WpfPropertyGrid.Themes.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\bin\Debug\System.Windows.Controls.WpfPropertyGrid.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\bin\Debug\System.Windows.Controls.WpfPropertyGrid.xml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\obj\Debug\WPG.Proxies.csprojResolveAssemblyReference.cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\obj\Debug\Window1.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\obj\Debug\Window1.g.cs
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\obj\Debug\App.g.cs
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\obj\Debug\Sample6.Proxies_MarkupCompile.cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\obj\Debug\Sample6.Proxies.g.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\obj\Debug\Sample6.Proxies.Properties.Resources.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\obj\Debug\WPG.Proxies.csproj.GenerateResource.Cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\obj\Debug\Sample6.Proxies.exe
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\PropertyGrid\WpfPropertyGrid\Samples\WPG.Proxies\obj\Debug\Sample6.Proxies.pdb

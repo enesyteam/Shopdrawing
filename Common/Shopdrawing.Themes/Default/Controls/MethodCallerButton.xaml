@@ -1,0 +1,452 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:dg="clr-namespace:DynamicGeometry;assembly=DynamicGeometry"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <SolidColorBrush x:Key="InputBackgroundFocused" Color="Orange"></SolidColorBrush>
+
+    <Style x:Key="CheckBoxFocusVisualStyle">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border CornerRadius="2" Margin="0,0,4,3" BorderThickness="2" BorderBrush="{StaticResource InputBackgroundFocused}" Background="Transparent"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Fill Brushes -->
+
+    <LinearGradientBrush x:Key="NormalBrush" StartPoint="0,0" EndPoint="0,1">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="#FFF" Offset="0.0"/>
+                <GradientStop Color="#CCC" Offset="1.0"/>
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="HorizontalNormalBrush" StartPoint="0,0" EndPoint="1,0">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="#FFF" Offset="0.0"/>
+                <GradientStop Color="#CCC" Offset="1.0"/>
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="LightBrush" StartPoint="0,0" EndPoint="0,1">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="#FFF" Offset="0.0"/>
+                <GradientStop Color="#EEE" Offset="1.0"/>
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="HorizontalLightBrush" StartPoint="0,0" EndPoint="1,0">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="#FFF" Offset="0.0"/>
+                <GradientStop Color="#EEE" Offset="1.0"/>
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="DarkBrush" StartPoint="0,0" EndPoint="0,1">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="#FFF" Offset="0.0"/>
+                <GradientStop Color="#AAA" Offset="1.0"/>
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="PressedBrush" StartPoint="0,0" EndPoint="0,1">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="#BBB" Offset="0.0"/>
+                <GradientStop Color="#EEE" Offset="0.1"/>
+                <GradientStop Color="#EEE" Offset="0.9"/>
+                <GradientStop Color="#FFF" Offset="1.0"/>
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="DisabledForegroundBrush" Color="#888" />
+
+    <SolidColorBrush x:Key="DisabledBackgroundBrush" Color="#EEE" />
+
+    <SolidColorBrush x:Key="WindowBackgroundBrush" Color="#FFF" />
+
+    <SolidColorBrush x:Key="SelectedBackgroundBrush" Color="#DDD" />
+
+    <!-- Border Brushes -->
+
+    <LinearGradientBrush x:Key="NormalBorderBrush" StartPoint="0,0" EndPoint="0,1">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="#CCC" Offset="0.0"/>
+                <GradientStop Color="#444" Offset="1.0"/>
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="HorizontalNormalBorderBrush" StartPoint="0,0" EndPoint="1,0">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="#CCC" Offset="0.0"/>
+                <GradientStop Color="#444" Offset="1.0"/>
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="DefaultedBorderBrush" StartPoint="0,0" EndPoint="0,1">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="#777" Offset="0.0"/>
+                <GradientStop Color="#000" Offset="1.0"/>
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="PressedBorderBrush" StartPoint="0,0" EndPoint="0,1">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="#444" Offset="0.0"/>
+                <GradientStop Color="#888" Offset="1.0"/>
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="DisabledBorderBrush" Color="#AAA" />
+
+    <SolidColorBrush x:Key="SolidBorderBrush" Color="#888" />
+
+    <SolidColorBrush x:Key="LightBorderBrush" Color="#AAA" />
+
+    <!-- Miscellaneous Brushes -->
+    <SolidColorBrush x:Key="GlyphBrush" Color="#444" />
+
+    <Style x:Key="MyFocusVisual">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Control}">
+                    <Grid Margin="3 2">
+                        <Rectangle Name="r1" StrokeThickness="1" Stroke="Black" StrokeDashArray="2 2"/>
+                        <Border Name="border" Width="{TemplateBinding ActualWidth}" Height="{TemplateBinding ActualHeight}"  CornerRadius="2" BorderThickness="1" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="ShadowStyle">
+        <Setter Property="Control.Foreground" Value="LightGray" />
+    </Style>
+
+    <!--<Style x:Key="InformButton" TargetType="dg:MethodCallerButton">
+        <Setter Property="OverridesDefaultStyle" Value="True"/>
+        <Setter Property="Margin" Value="2"/>
+        <Setter Property="FontFamily" Value="Verdana"/>
+        <Setter Property="FontSize" Value="11px"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="FocusVisualStyle" Value="{StaticResource MyFocusVisual}" />
+        <Setter Property="Background" >
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1" >
+                    <GradientStop Color="#FFFFD190" Offset="0.2"/>
+                    <GradientStop Color="Orange" Offset="0.85"/>
+                    <GradientStop Color="#FFFFD190" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="dg:MethodCallerButton">
+                    <Border Name="border" 
+        				BorderThickness="1"
+        				Padding="4,2" 
+        				BorderBrush="DarkGray" 
+        				CornerRadius="3" 
+        				Background="{TemplateBinding Background}">
+                        <Grid >
+                            <ContentPresenter HorizontalAlignment="Center" 
+        	                           VerticalAlignment="Center" Name="contentShadow" 
+        					Style="{StaticResource ShadowStyle}">
+                                <ContentPresenter.RenderTransform>
+                                    <TranslateTransform X="1.0" Y="1.0" />
+                                </ContentPresenter.RenderTransform>
+                            </ContentPresenter>
+                            <ContentPresenter HorizontalAlignment="Center" 
+                                    VerticalAlignment="Center" Name="content"/>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="#FF4788c8" />
+                            <Setter Property="Foreground" Value="#FF4788c8" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" >
+                                <Setter.Value>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1" >
+                                        <GradientStop Color="#FFFFD190" Offset="0.35"/>
+                                        <GradientStop Color="Orange" Offset="0.95"/>
+                                        <GradientStop Color="#FFFFD190" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter TargetName="content" Property="RenderTransform" >
+                                <Setter.Value>
+                                    <TranslateTransform Y="1.0" />
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsDefaulted" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="#FF282828" />
+                        </Trigger>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="#FF282828" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="border" Property="Opacity" Value="0.7" />
+                            <Setter Property="Foreground" Value="Gray" />
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>-->
+
+
+
+    <Style TargetType="dg:MethodCallerButton">
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Margin" Value="2"/>
+        <Setter Property="Padding" Value="2"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="dg:MethodCallerButton">
+                    <Border x:Name="border" BorderThickness="1" CornerRadius="1" SnapsToDevicePixels="True">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFAFB6B8" Offset="1"/>
+                                <GradientStop Color="#FFDCE2E3"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Border.BorderBrush>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF767C7E" Offset="1"/>
+                                <GradientStop Color="#FFAFB6B8"/>
+                            </LinearGradientBrush>
+                        </Border.BorderBrush>
+                        <Grid>
+                            <Border x:Name="InnerHighlight" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" BorderThickness="1" BorderBrush="#4CFFFFFF" SnapsToDevicePixels="True" >
+                                <ContentPresenter RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </Border>
+                            <Border x:Name="TopHighlight" BorderThickness="0,1,0,0" BorderBrush="#66FFFFFF" SnapsToDevicePixels="True"/>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" TargetName="TopHighlight" Value="0"/>
+                            <Setter Property="Opacity" TargetName="InnerHighlight" Value="0.3"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="ToolTip" Value="{Binding Path=Description, RelativeSource={x:Static RelativeSource.Self}}"/>
+                            <Setter Property="BorderBrush" TargetName="border">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FF068ACC" Offset="1"/>
+                                        <GradientStop Color="#FF34B2F1"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="Background" TargetName="border">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FF1CA1E3" Offset="1"/>
+                                        <GradientStop Color="#FF6AD4FF"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="BorderBrush" TargetName="border">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FF068ACC" Offset="1"/>
+                                        <GradientStop Color="#FF34B2F1"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="Background" TargetName="border">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FF1CA1E3" Offset="0"/>
+                                        <GradientStop Color="#FF6AD4FF" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="Opacity" TargetName="TopHighlight" Value="0"/>
+                        </Trigger>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter Property="BorderBrush" TargetName="border">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FF068ACC" Offset="1"/>
+                                        <GradientStop Color="#FF34B2F1"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsDefault" Value="True">
+                            <Setter Property="BorderBrush" TargetName="border">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FF068ACC" Offset="1"/>
+                                        <GradientStop Color="#FF34B2F1"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <!--<LinearGradientBrush x:Key="ButtonBackgroundGradient" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Offset="0.0" Color="#FFFFFFFF"/>
+        <GradientStop Offset="0.5" Color="#FFFEFEFE"/>
+        <GradientStop Offset="0.5" Color="#FFF8F8F8"/>
+        <GradientStop Offset="1.0" Color="#FFE4E4E4"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="ButtonDisabledInnerBorderGradient" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Offset="0.0" Color="#FFF0F0F0"/>
+        <GradientStop Offset="1.0" Color="#FFE1E1E1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="ButtonDisabledBackgroundGradient" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Offset="0.0" Color="#FFE1E1E1"/>
+        <GradientStop Offset="0.5" Color="#FFDCDCDC"/>
+        <GradientStop Offset="0.5" Color="#FFD8D8D8"/>
+        <GradientStop Offset="1.0" Color="#FFD2D2D2"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="ButtonDefaultInnerBorderGradient" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Offset="0.0" Color="#FFFEFEFE"/>
+        <GradientStop Offset="1.0" Color="#FFD5DCE4"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="ButtonDefaultBackgroundGradient" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Offset="0.0" Color="#FFE8E8E8"/>
+        <GradientStop Offset="0.5" Color="#FFEBF0F6"/>
+        <GradientStop Offset="0.5" Color="#FFDEE7EF"/>
+        <GradientStop Offset="1.0" Color="#FFC5D3E2"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="ButtonPressedBackgroundGradient" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Offset="0.0" Color="#FFC4C4C4"/>
+        <GradientStop Offset="0.5" Color="#FFC0C0C0"/>
+        <GradientStop Offset="0.5" Color="#FFB9B9B9"/>
+        <GradientStop Offset="1.0" Color="#FFA7A7A7"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="ButtonHoverBackgroundGradient" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Offset="0.0" Color="#FFFCFDFE"/>
+        <GradientStop Offset="0.5" Color="#FFFEFEFE"/>
+        <GradientStop Offset="0.5" Color="#FFFCFCFC"/>
+        <GradientStop Offset="1.0" Color="#FFE8E8E8"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="ButtonHoverDefaultInnerBorderGradient" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Offset="0.0" Color="#FFFFFFFF"/>
+        <GradientStop Offset="1.0" Color="#FFD7E0E8"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="ButtonHoverDefaultBackgroundGradient" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Offset="0.0" Color="#FFFFFFFF"/>
+        <GradientStop Offset="0.5" Color="#FFF2F6FB"/>
+        <GradientStop Offset="0.5" Color="#FFE6EEF6"/>
+        <GradientStop Offset="1.0" Color="#FFC9DAEA"/>
+    </LinearGradientBrush>
+
+    <Style x:Key="ButtonFocusStyle">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border Margin="4" SnapsToDevicePixels="True" BorderBrush="#FF729FCF" BorderThickness="1" Opacity="0.8">
+                        <Border SnapsToDevicePixels="True" Background="#FF729FCF" Opacity="0.2"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="dg:MethodCallerButton">
+        <Setter Property="Foreground" Value="#FF1A1A1A"/>
+        <Setter Property="Focusable" Value="True"/>
+        <Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusStyle}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="dg:MethodCallerButton">
+                    <Border x:Name="OuterBorder" SnapsToDevicePixels="True" BorderBrush="#FFCECECE" BorderThickness="1" CornerRadius="3">
+                        <Border x:Name="ContentBorder" SnapsToDevicePixels="True" BorderBrush="#FF9B9B9B" BorderThickness="1" CornerRadius="2" Background="{StaticResource ButtonBackgroundGradient}">
+                            <Border x:Name="InnerBorder" SnapsToDevicePixels="True" BorderThickness="1" CornerRadius="3">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" SnapsToDevicePixels="True"/>
+                            </Border>
+                        </Border>
+                    </Border>
+
+
+                    <ControlTemplate.Triggers>
+
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Foreground" Value="#FF979797"/>
+                            <Setter Property="BorderBrush" TargetName="OuterBorder" Value="#FFE8E8E8"/>
+                            <Setter Property="BorderBrush" TargetName="InnerBorder" Value="{StaticResource ButtonDisabledInnerBorderGradient}"/>
+                            <Setter Property="BorderBrush" TargetName="ContentBorder" Value="#FFA5A5A5"/>
+                            <Setter Property="Background" TargetName="ContentBorder" Value="{StaticResource ButtonDisabledBackgroundGradient}"/>
+                        </Trigger>
+
+                        <Trigger Property="IsDefault" Value="True">
+                            <Setter Property="BorderBrush" TargetName="InnerBorder" Value="{StaticResource ButtonDefaultInnerBorderGradient}"/>
+                            <Setter Property="BorderBrush" TargetName="ContentBorder" Value="#FF85888C"/>
+                            <Setter Property="Background" TargetName="ContentBorder" Value="{StaticResource ButtonDefaultBackgroundGradient}"/>
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="BorderBrush" TargetName="InnerBorder" Value="{StaticResource ButtonPressedBackgroundGradient}"/>
+                            <Setter Property="BorderBrush" TargetName="OuterBorder" Value="#FFE8E8E8"/>
+                            <Setter Property="Background" TargetName="ContentBorder" Value="{StaticResource ButtonPressedBackgroundGradient}"/>
+                        </Trigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="True"/>
+                                <Condition Property="IsDefault" Value="False"/>
+                                <Condition Property="IsPressed" Value="False"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" TargetName="ContentBorder" Value="{StaticResource ButtonHoverBackgroundGradient}"/>
+                        </MultiTrigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="True"/>
+                                <Condition Property="IsDefault" Value="True"/>
+                                <Condition Property="IsPressed" Value="False"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="BorderBrush" TargetName="InnerBorder" Value="{StaticResource ButtonHoverDefaultInnerBorderGradient}"/>
+                            <Setter Property="Background" TargetName="ContentBorder" Value="{StaticResource ButtonHoverDefaultBackgroundGradient}"/>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>-->
+</ResourceDictionary>

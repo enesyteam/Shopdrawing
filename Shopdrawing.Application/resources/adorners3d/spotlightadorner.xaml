@@ -1,0 +1,14 @@
+<Model3DGroup xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+              x:Uid="SpotLightAdorner">
+  <Model3DGroup.Children>
+    <Model3DGroup x:Uid="Model3DGroup_2">
+      <Model3D.Transform>
+        <RotateTransform3D x:Uid="RotateTransform3D_1"/>
+      </Model3D.Transform>
+      <Model3DGroup.Children>
+        <Model3DCollection x:Uid="Model3DCollection_1"/>
+      </Model3DGroup.Children>
+    </Model3DGroup>
+  </Model3DGroup.Children>
+</Model3DGroup>

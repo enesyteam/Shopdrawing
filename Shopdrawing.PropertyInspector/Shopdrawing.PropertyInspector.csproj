@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{87F09F14-842C-457F-A55A-D64170CB0667}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shopdrawing.PropertyInspector</RootNamespace>
+    <AssemblyName>Shopdrawing.PropertyInspector</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DesignSurface\Core\DefaultProjectContext.cs" />
+    <Compile Include="DesignSurface\Core\DocumentContext.cs" />
+    <Compile Include="DesignSurface\Core\IFontResolver.cs" />
+    <Compile Include="DesignSurface\Core\IProjectContext.cs" />
+    <Compile Include="DesignSurface\Core\IProjectDocument.cs" />
+    <Compile Include="DesignSurface\Core\IProjectFont.cs" />
+    <Compile Include="DesignSurface\Core\ProjectContext.cs" />
+    <Compile Include="DesignSurface\Core\ProjectDocumentEventArgs.cs" />
+    <Compile Include="DesignSurface\Core\ProjectDocumentType.cs" />
+    <Compile Include="DesignSurface\Core\TypeReflectingProjectContext.cs" />
+    <Compile Include="DesignSurface\JoltHelper.cs" />
+    <Compile Include="DesignSurface\Documents\PropertyReferenceChangedEventArgs.cs" />
+    <Compile Include="DesignSurface\Documents\PropertyReferenceChangedEventHandler.cs" />
+    <Compile Include="DesignSurface\Documents\SceneDocument.cs" />
+    <Compile Include="DesignSurface\IPrototypingScreen.cs" />
+    <Compile Include="DesignSurface\Metadata\CustomAssemblyReferencesProjectContext.cs" />
+    <Compile Include="DesignSurface\Metadata\ToolkitHelper.cs" />
+    <Compile Include="DesignSurface\Metadata\ToolkitProjectContext.cs" />
+    <Compile Include="DesignSurface\Selection\AnimationSelectionSet.cs" />
+    <Compile Include="DesignSurface\Selection\AnnotationSelectionSet.cs" />
+    <Compile Include="DesignSurface\Selection\BasicSelectionSetStorageProvider`1.cs" />
+    <Compile Include="DesignSurface\Selection\BehaviorSelectionSet.cs" />
+    <Compile Include="DesignSurface\Selection\ChildPropertySelectionSet.cs" />
+    <Compile Include="DesignSurface\Selection\DependencyObjectSelectionSet.cs" />
+    <Compile Include="DesignSurface\Selection\DesignTimeTextSelection.cs" />
+    <Compile Include="DesignSurface\Selection\GridColumnSelectionSet.cs" />
+    <Compile Include="DesignSurface\Selection\GridRowSelectionSet.cs" />
+    <Compile Include="DesignSurface\Selection\ISceneElementSubpart.cs" />
+    <Compile Include="DesignSurface\Selection\ISelectionSet.cs" />
+    <Compile Include="DesignSurface\Selection\ISelectionSetNamingHelper.cs" />
+    <Compile Include="DesignSurface\Selection\ISelectionSet`1.cs" />
+    <Compile Include="DesignSurface\Selection\KeyFrameSelectionSet.cs" />
+    <Compile Include="DesignSurface\Selection\PathPartSelectionSet.cs" />
+    <Compile Include="DesignSurface\Selection\PropertySelectionSet.cs" />
+    <Compile Include="DesignSurface\Selection\SceneElementSelectionSet.cs" />
+    <Compile Include="DesignSurface\Selection\SceneElementSubpartSelectionSet`1.cs" />
+    <Compile Include="DesignSurface\Selection\SceneNodeSelectionSetStorageProvider`1.cs" />
+    <Compile Include="DesignSurface\Selection\SelectionManager.cs" />
+    <Compile Include="DesignSurface\Selection\SelectionManagerPerformanceHelper.cs" />
+    <Compile Include="DesignSurface\Selection\SelectionSetChangingEventArgs`1.cs" />
+    <Compile Include="DesignSurface\Selection\SelectionSet`2.cs" />
+    <Compile Include="DesignSurface\Selection\StoryboardSelectionSet.cs" />
+    <Compile Include="DesignSurface\Selection\SubpartSelectionSet`2.cs" />
+    <Compile Include="DesignSurface\Selection\TextSelectionComparer.cs" />
+    <Compile Include="DesignSurface\Selection\TextSelectionSet.cs" />
+    <Compile Include="DesignSurface\Selection\TransitionSelectionSet.cs" />
+    <Compile Include="DesignSurface\ViewModel\BehaviorTargetedTriggerActionNode.cs" />
+    <Compile Include="DesignSurface\ViewModel\BehaviorTriggerActionNode.cs" />
+    <Compile Include="DesignSurface\ViewModel\BehaviorBaseNode.cs" />
+    <Compile Include="FileTable.cs" />
+    <Compile Include="DesignSurface\Properties\AmbientPropertyManager.cs" />
+    <Compile Include="DesignSurface\Properties\AnimationEditor.cs" />
+    <Compile Include="DesignSurface\Properties\AnimationProxyManager.cs" />
+    <Compile Include="DesignSurface\Properties\AttachedPropertiesMetadata.cs" />
+    <Compile Include="DesignSurface\Properties\AttachedPropertyMetadata.cs" />
+    <Compile Include="DesignSurface\Properties\AttachedPropertyMetadataFactory.cs" />
+    <Compile Include="DesignSurface\Properties\AutoDialogType.cs" />
+    <Compile Include="DesignSurface\Properties\BindingEditor.cs" />
+    <Compile Include="DesignSurface\Properties\CategoryLocalizationHelper.cs" />
+    <Compile Include="DesignSurface\Properties\DataContextPlacementEvaluator.cs" />
+    <Compile Include="DesignSurface\Properties\DesignSurfaceMetadata.cs" />
+    <Compile Include="DesignSurface\Properties\IAmbientPropertyManager.cs" />
+    <Compile Include="DesignSurface\Properties\IAttachedPropertiesAccessToken.cs" />
+    <Compile Include="DesignSurface\Properties\IAttachedPropertiesMetadata.cs" />
+    <Compile Include="DesignSurface\Properties\IAttachedPropertiesProvider.cs" />
+    <Compile Include="DesignSurface\Properties\IAttachedPropertyMetadata.cs" />
+    <Compile Include="DesignSurface\Properties\IAttachedPropertyMetadataFactory.cs" />
+    <Compile Include="DesignSurface\Properties\IPropertyManager.cs" />
+    <Compile Include="DesignSurface\Properties\KeyframeData.cs" />
+    <Compile Include="DesignSurface\Properties\PropertyManager.cs" />
+    <Compile Include="DesignSurface\Properties\PropertyState.cs" />
+    <Compile Include="DesignSurface\Properties\PropertyUtilities.cs" />
+    <Compile Include="DesignSurface\Properties\RotateTransform3DProperties.cs" />
+    <Compile Include="DesignSurface\Properties\ScaleTransform3DProperties.cs" />
+    <Compile Include="DesignSurface\Properties\TransformProperties.cs" />
+    <Compile Include="DesignSurface\Properties\TranslateTransform3DProperties.cs" />
+    <Compile Include="DesignSurface\Properties\TriggerCreateBehavior.cs" />
+    <Compile Include="DesignSurface\Properties\Triplex`3.cs" />
+    <Compile Include="DesignSurface\Properties\XamlExpressionSerializer.cs" />
+    <Compile Include="Dialogs\GenericDialog.cs" />
+    <Compile Include="Dialogs\IGenericDialogModel.cs" />
+    <Compile Include="Framework\PropertyInspector\CategoryBase.cs" />
+    <Compile Include="Framework\PropertyInspector\CategoryContainer.cs" />
+    <Compile Include="Framework\PropertyInspector\CategoryContainerCommands.cs" />
+    <Compile Include="Framework\PropertyInspector\CategoryLayoutContainer.cs" />
+    <Compile Include="Framework\PropertyInspector\CollectionDialogEditor.cs" />
+    <Compile Include="Framework\PropertyInspector\CollectionDialogEditorModel.cs" />
+    <Compile Include="Framework\PropertyInspector\ExtensibilityMetadataHelper.cs" />
+    <Compile Include="Framework\PropertyInspector\IPropertyInspector.cs" />
+    <Compile Include="Framework\PropertyInspector\IValueValidator.cs" />
+    <Compile Include="Framework\PropertyInspector\NewItemFactoryTypeModel.cs" />
+    <Compile Include="Framework\PropertyInspector\ObjectSet.cs" />
+    <Compile Include="Framework\PropertyInspector\PropertyBase.cs" />
+    <Compile Include="Framework\PropertyInspector\PropertyContainerWorkaroundPopup.cs" />
+    <Compile Include="Framework\PropertyInspector\PropertyEditorNameAreaControl.cs" />
+    <Compile Include="Framework\PropertyInspector\PropertyEditorValueAreaControl.cs" />
+    <Compile Include="Framework\PropertyInspector\PropertyInspectorHelper.cs" />
+    <Compile Include="Framework\PropertyInspector\PropertyValueToTypeNameConverter.cs" />
+    <Compile Include="Framework\PropertyInspector\StandardCategoryLayout.cs" />
+    <Compile Include="Framework\ValueEditors\ValueEditorParameters.cs" />
+    <Compile Include="Pipeline\ISceneEditTransactionFactory.cs" />
+    <Compile Include="Pipeline\SceneEditTransaction.cs" />
+    <Compile Include="Pipeline\SceneEditTransactionType.cs" />
+    <Compile Include="Pipeline\SceneViewUpdateScheduleTask.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PropertyInspector\AddDataStorePropertyDialogModel.cs" />
+    <Compile Include="PropertyInspector\AppearanceCategoryEditor.cs" />
+    <Compile Include="PropertyInspector\AppearanceCategoryEditorFactory.cs" />
+    <Compile Include="PropertyInspector\ArcThicknessEditor.cs" />
+    <Compile Include="PropertyInspector\ArcThicknessEditorLayout.cs" />
+    <Compile Include="PropertyInspector\BehaviorCommandAdvancedCategoryEditor.cs" />
+    <Compile Include="PropertyInspector\BehaviorCommandAdvancedCategoryEditorControl.cs" />
+    <Compile Include="PropertyInspector\BehaviorCommandCategory.cs" />
+    <Compile Include="PropertyInspector\BehaviorCommandCategoryEditor.cs" />
+    <Compile Include="PropertyInspector\BehaviorCommandCategoryEditorControl.cs" />
+    <Compile Include="PropertyInspector\BehaviorCommandCategoryEditorFactory.cs" />
+    <Compile Include="PropertyInspector\BehaviorElementPickerPropertyValueEditor.cs" />
+    <Compile Include="PropertyInspector\BindElementSelectionStrategy.cs" />
+    <Compile Include="PropertyInspector\BrushCategory.cs" />
+    <Compile Include="PropertyInspector\BrushCategoryEditor.cs" />
+    <Compile Include="PropertyInspector\BrushCategoryEditorControl.cs" />
+    <Compile Include="PropertyInspector\BrushCategoryEditorFactory.cs" />
+    <Compile Include="PropertyInspector\BuiltInCategoryEditorFactory.cs" />
+    <Compile Include="PropertyInspector\CameraCategory.cs" />
+    <Compile Include="PropertyInspector\CameraCategoryEditor.cs" />
+    <Compile Include="PropertyInspector\CameraCategoryEditorControl.cs" />
+    <Compile Include="PropertyInspector\CameraCategoryEditorFactory.cs" />
+    <Compile Include="PropertyInspector\CategoryEditorFactory.cs" />
+    <Compile Include="PropertyInspector\CategoryEditorInstanceFactory.cs" />
+    <Compile Include="PropertyInspector\CategoryEditorSet.cs" />
+    <Compile Include="PropertyInspector\CategoryFactory.cs" />
+    <Compile Include="PropertyInspector\CategoryHelpContext.cs" />
+    <Compile Include="PropertyInspector\ClrAssemblyNewObjectModel.cs" />
+    <Compile Include="PropertyInspector\ClrNewObjectDialog.cs" />
+    <Compile Include="PropertyInspector\ComplexValueEditorBase.cs" />
+    <Compile Include="PropertyInspector\ComposedScreenPickerEditor.cs" />
+    <Compile Include="PropertyInspector\ComposedScreenPickerPropertyValueEditor.cs" />
+    <Compile Include="PropertyInspector\ConditionalExpressionBehaviorCategory.cs" />
+    <Compile Include="PropertyInspector\ConditionalExpressionBehaviorCategoryEditor.cs" />
+    <Compile Include="PropertyInspector\ConditionalExpressionBehaviorCategoryEditorControl.cs" />
+    <Compile Include="PropertyInspector\ConditionalExpressionBehaviorCategoryEditorFactory.cs" />
+    <Compile Include="PropertyInspector\ConditionOperandEditor.cs" />
+    <Compile Include="PropertyInspector\ConstrainedElementSelectionStrategy.cs" />
+    <Compile Include="PropertyInspector\ControlPointEditor.cs" />
+    <Compile Include="PropertyInspector\CreatePropertyBindingPickWhipStrategy.cs" />
+    <Compile Include="PropertyInspector\CustomCategorySelector.cs" />
+    <Compile Include="PropertyInspector\CustomExpressionEditor.cs" />
+    <Compile Include="PropertyInspector\DataStoreBindingObjectEditor.cs" />
+    <Compile Include="PropertyInspector\DataStoreBindingObjectPropertyNameEditor.cs" />
+    <Compile Include="PropertyInspector\DataStorePropertiesValueProvider.cs" />
+    <Compile Include="PropertyInspector\DataStorePropertyEntry.cs" />
+    <Compile Include="PropertyInspector\DataStorePropertyEntryConverter.cs" />
+    <Compile Include="PropertyInspector\DataStorePropertyEntrySorter.cs" />
+    <Compile Include="PropertyInspector\DataStorePropertyPickerEditor.cs" />
+    <Compile Include="PropertyInspector\DataStoreReferenceEntry.cs" />
+    <Compile Include="PropertyInspector\DesignerContextPropertyEditingHelper.cs" />
+    <Compile Include="PropertyInspector\DialogValueEditorHost.cs" />
+    <Compile Include="PropertyInspector\DocumentationEntry.cs" />
+    <Compile Include="PropertyInspector\EaseCurveEditor.cs" />
+    <Compile Include="PropertyInspector\EasingBasicCategoryLayout.cs" />
+    <Compile Include="PropertyInspector\EasingCategoryCollection.cs" />
+    <Compile Include="PropertyInspector\EasingCategoryEditor.cs" />
+    <Compile Include="PropertyInspector\EasingCategoryEditorFactory.cs" />
+    <Compile Include="PropertyInspector\EasingEditorPopup.cs" />
+    <Compile Include="PropertyInspector\EasingFunctionComboBox.cs" />
+    <Compile Include="PropertyInspector\EasingFunctionEditor.cs" />
+    <Compile Include="PropertyInspector\EasingFunctionPreviewIcon.cs" />
+    <Compile Include="PropertyInspector\EasingFunctionSelectionButton.cs" />
+    <Compile Include="PropertyInspector\EditingPropertyManager.cs" />
+    <Compile Include="PropertyInspector\ElementBindingPickerEditor.cs" />
+    <Compile Include="PropertyInspector\ElementBindingPickerPropertyValueEditor.cs" />
+    <Compile Include="PropertyInspector\ElementPicker.cs" />
+    <Compile Include="PropertyInspector\ElementPickerEditor.cs" />
+    <Compile Include="PropertyInspector\ElementPickerPropertyValueEditor.cs" />
+    <Compile Include="PropertyInspector\EnumsThatUseButtons.cs" />
+    <Compile Include="PropertyInspector\EventPickerEditor.cs" />
+    <Compile Include="PropertyInspector\EventPickerPropertyValueEditor.cs" />
+    <Compile Include="PropertyInspector\ExpressionPropertyValueEditorCommands.cs" />
+    <Compile Include="PropertyInspector\FallbackPropertyInformation.cs" />
+    <Compile Include="PropertyInspector\FirstNonNullConverter.cs" />
+    <Compile Include="PropertyInspector\FontConverter.cs" />
+    <Compile Include="PropertyInspector\FontEmbedder.cs" />
+    <Compile Include="PropertyInspector\FontEmbeddingDialog.cs" />
+    <Compile Include="PropertyInspector\FontEmbeddingDialogModel.cs" />
+    <Compile Include="PropertyInspector\FontEmbedOption.cs" />
+    <Compile Include="PropertyInspector\FontFamilyEditor.cs" />
+    <Compile Include="PropertyInspector\FontFamilyTextDataTemplateSelector.cs" />
+    <Compile Include="PropertyInspector\FontFamilyValueEditor.cs" />
+    <Compile Include="PropertyInspector\FontResolver.cs" />
+    <Compile Include="PropertyInspector\ForwardChainingType.cs" />
+    <Compile Include="PropertyInspector\ForwardChainingTypeConverter.cs" />
+    <Compile Include="PropertyInspector\GeometryEffectChoicesCollection.cs" />
+    <Compile Include="PropertyInspector\GetLocalValueFlags.cs" />
+    <Compile Include="PropertyInspector\GradientEyedropper.cs" />
+    <Compile Include="PropertyInspector\GridLengthEditor.cs" />
+    <Compile Include="PropertyInspector\IElementSelectionStrategy.cs" />
+    <Compile Include="PropertyInspector\INavigateElementPickerPropertyValueEditor.cs" />
+    <Compile Include="PropertyInspector\InfiniteIntConverter.cs" />
+    <Compile Include="PropertyInspector\IPickWhipHost.cs" />
+    <Compile Include="PropertyInspector\IPropertyInformation.cs" />
+    <Compile Include="PropertyInspector\ItemsLayoutCategoryEditorFactory.cs" />
+    <Compile Include="PropertyInspector\ITransitionEffectSite.cs" />
+    <Compile Include="PropertyInspector\KeyframeSceneNodeProperty.cs" />
+    <Compile Include="PropertyInspector\KeySplineEditor.cs" />
+    <Compile Include="PropertyInspector\LayoutCategoryEditor.cs" />
+    <Compile Include="PropertyInspector\LayoutCategoryEditorFactory.cs" />
+    <Compile Include="PropertyInspector\LayoutPathCollectionEditor.cs" />
+    <Compile Include="PropertyInspector\LayoutPositionBasicCategoryEditor.cs" />
+    <Compile Include="PropertyInspector\LayoutPositionCategory.cs" />
+    <Compile Include="PropertyInspector\LightCategory.cs" />
+    <Compile Include="PropertyInspector\LightCategoryEditor.cs" />
+    <Compile Include="PropertyInspector\LightCategoryEditorControl.cs" />
+    <Compile Include="PropertyInspector\LightCategoryEditorFactory.cs" />
+    <Compile Include="PropertyInspector\LocalValueObjectSet.cs" />
+    <Compile Include="PropertyInspector\MaterialsCategoryEditor.cs" />
+    <Compile Include="PropertyInspector\MaterialsCategoryEditorFactory.cs" />
+    <Compile Include="PropertyInspector\MiscCategoryEditorFactory.cs" />
+    <Compile Include="PropertyInspector\MiscellaneousCategoryEditor.cs" />
+    <Compile Include="PropertyInspector\Modification.cs" />
+    <Compile Include="PropertyInspector\MultiplyDoublesConverter.cs" />
+    <Compile Include="PropertyInspector\NanToNegativeOneConverter.cs" />
+    <Compile Include="PropertyInspector\NavigableScreenPickerEditor.cs" />
+    <Compile Include="PropertyInspector\NavigableScreenPickerPropertyValueEditor.cs" />
+    <Compile Include="PropertyInspector\ObjectEditor.cs" />
+    <Compile Include="PropertyInspector\ObjectEditorView.cs" />
+    <Compile Include="PropertyInspector\ObjectSetBase.cs" />
+    <Compile Include="PropertyInspector\OperandValueType.cs" />
+    <Compile Include="PropertyInspector\PathLayoutCategory.cs" />
+    <Compile Include="PropertyInspector\PathLayoutCategoryCategoryEditor.cs" />
+    <Compile Include="PropertyInspector\PathLayoutCategoryCategoryEditorControl.cs" />
+    <Compile Include="PropertyInspector\PickWhip.cs" />
+    <Compile Include="PropertyInspector\PickWhipEngine.cs" />
+    <Compile Include="PropertyInspector\PickWhipHost.cs" />
+    <Compile Include="PropertyInspector\Point2DEditor.cs" />
+    <Compile Include="PropertyInspector\ProjectFontFamilyItem.cs" />
+    <Compile Include="PropertyInspector\ProjectItemModel.cs" />
+    <Compile Include="PropertyInspector\ProjectItemModelTypeConverter.cs" />
+    <Compile Include="PropertyInspector\PropertyBindingEditor.cs" />
+    <Compile Include="PropertyInspector\PropertyBindingPickerPropertyValueEditor.cs" />
+    <Compile Include="PropertyInspector\PropertyEditingHelper.cs" />
+    <Compile Include="PropertyInspector\PropertyEditorTemplateLookup.cs" />
+    <Compile Include="PropertyInspector\PropertyInspectorContextualHelpCommand.cs" />
+    <Compile Include="PropertyInspector\PropertyInspectorHelpCommand.cs" />
+    <Compile Include="PropertyInspector\PropertyInspectorModel.cs" />
+    <Compile Include="PropertyInspector\PropertyInspectorSearchOnlineHelpCommand.cs" />
+    <Compile Include="PropertyInspector\PropertyLookup.cs" />
+    <Compile Include="PropertyInspector\PropertyMarker.cs" />
+    <Compile Include="PropertyInspector\PropertyMarkerCommands.cs" />
+    <Compile Include="PropertyInspector\PropertyOrderWrapper.cs" />
+    <Compile Include="PropertyInspector\PropertyPickerEditor.cs" />
+    <Compile Include="PropertyInspector\PropertyPickerExtendedEditor.cs" />
+    <Compile Include="PropertyInspector\PropertyPickerPropertyValueEditor.cs" />
+    <Compile Include="PropertyInspector\PropertyReferenceProperty.cs" />
+    <Compile Include="PropertyInspector\PropertyReferencePropertyValue.cs" />
+    <Compile Include="PropertyInspector\PropertyTransactionParameters.cs" />
+    <Compile Include="PropertyInspector\PropertyValueToTypeIdConverter.cs" />
+    <Compile Include="PropertyInspector\PropertyValueToWpfConverter.cs" />
+    <Compile Include="PropertyInspector\PropertyValueTypeConverterBase.cs" />
+    <Compile Include="PropertyInspector\PropertyValueTypeFullNameConverter.cs" />
+    <Compile Include="PropertyInspector\PropertyValueTypeNameConverter.cs" />
+    <Compile Include="PropertyInspector\ReferenceStepPropertyInformation.cs" />
+    <Compile Include="PropertyInspector\ReferenceStepPropertyInformationToStringConverter.cs" />
+    <Compile Include="PropertyInspector\RenameElementSelectionStrategy.cs" />
+    <Compile Include="PropertyInspector\ResourceContainerItem.cs" />
+    <Compile Include="PropertyInspector\ResourceList.cs" />
+    <Compile Include="PropertyInspector\ResourceTypeItem.cs" />
+    <Compile Include="PropertyInspector\ResourceVirtualizingTreeItem.cs" />
+    <Compile Include="PropertyInspector\SceneNodeCategory.cs" />
+    <Compile Include="PropertyInspector\SceneNodeCategoryCollection.cs" />
+    <Compile Include="PropertyInspector\SceneNodeCategoryEditor.cs" />
+    <Compile Include="PropertyInspector\SceneNodeCollectionDialogEditor.cs" />
+    <Compile Include="PropertyInspector\SceneNodeCollectionDialogEditorModel.cs" />
+    <Compile Include="PropertyInspector\SceneNodeCollectionObjectSet.cs" />
+    <Compile Include="PropertyInspector\SceneNodeCollectionProperty.cs" />
+    <Compile Include="PropertyInspector\SceneNodeObjectSet.cs" />
+    <Compile Include="PropertyInspector\SceneNodeObjectSetBase.cs" />
+    <Compile Include="PropertyInspector\SceneNodeProperty.cs" />
+    <Compile Include="PropertyInspector\SceneNodePropertyCollection.cs" />
+    <Compile Include="PropertyInspector\SceneNodePropertyInspectorPane.cs" />
+    <Compile Include="PropertyInspector\SceneNodePropertyLookup.cs" />
+    <Compile Include="PropertyInspector\SceneNodePropertyToNameConverter.cs" />
+    <Compile Include="PropertyInspector\SceneNodePropertyValue.cs" />
+    <Compile Include="PropertyInspector\SceneNodePropertyValueCollection.cs" />
+    <Compile Include="PropertyInspector\ScreenPickerEditor.cs" />
+    <Compile Include="PropertyInspector\SelectablePropertyModel`1.cs" />
+    <Compile Include="PropertyInspector\SelectedElementsObjectSet.cs" />
+    <Compile Include="PropertyInspector\SetupFontEmbeddingCommand.cs" />
+    <Compile Include="PropertyInspector\SilverlightNumberEditor.cs" />
+    <Compile Include="PropertyInspector\SketchFlowAnimationPickerEditor.cs" />
+    <Compile Include="PropertyInspector\SketchFlowAnimationPickerPropertyValueEditor.cs" />
+    <Compile Include="PropertyInspector\SketchFlowPickerDisplayItem.cs" />
+    <Compile Include="PropertyInspector\SketchFlowPickerEditor.cs" />
+    <Compile Include="PropertyInspector\SketchFlowPickerEditor`1.cs" />
+    <Compile Include="PropertyInspector\SketchFlowStatePickerEditor.cs" />
+    <Compile Include="PropertyInspector\SketchFlowStatePickerPropertyValueEditor.cs" />
+    <Compile Include="PropertyInspector\SourcedFontFamilyItem.cs" />
+    <Compile Include="PropertyInspector\StateInfo.cs" />
+    <Compile Include="PropertyInspector\StatePickerEditor.cs" />
+    <Compile Include="PropertyInspector\StatePickerPropertyValueEditor.cs" />
+    <Compile Include="PropertyInspector\StoryboardPickerEditor.cs" />
+    <Compile Include="PropertyInspector\StoryboardPickerPropertyValueEditor.cs" />
+    <Compile Include="PropertyInspector\StringValueEditor.cs" />
+    <Compile Include="PropertyInspector\StringViewOfObjectEditor.cs" />
+    <Compile Include="PropertyInspector\SupportedPropertyCommands.cs" />
+    <Compile Include="PropertyInspector\SystemFontFamily.cs" />
+    <Compile Include="PropertyInspector\SystemFontFamilyItem.cs" />
+    <Compile Include="PropertyInspector\TabbedColorEditorControl.cs" />
+    <Compile Include="PropertyInspector\TextAlignmentEditor.cs" />
+    <Compile Include="PropertyInspector\TextAlignmentValueEditor.cs" />
+    <Compile Include="PropertyInspector\TextCategory.cs" />
+    <Compile Include="PropertyInspector\TextCategoryEditor.cs" />
+    <Compile Include="PropertyInspector\TextCategoryEditorFactory.cs" />
+    <Compile Include="PropertyInspector\TextCategoryLayout.cs" />
+    <Compile Include="PropertyInspector\TextChoiceEditorWrapper.cs" />
+    <Compile Include="PropertyInspector\TextSizeConverter.cs" />
+    <Compile Include="PropertyInspector\ThicknessEditor.cs" />
+    <Compile Include="PropertyInspector\TimerTriggerTickEditor.cs" />
+    <Compile Include="PropertyInspector\TimeSpanSourceCollection.cs" />
+    <Compile Include="PropertyInspector\TransformCategoryEditorFactory.cs" />
+    <Compile Include="PropertyInspector\TransitionEffectEditor.cs" />
+    <Compile Include="PropertyInspector\TransitionEffectInfo.cs" />
+    <Compile Include="PropertyInspector\TransitionEffectNameConverter.cs" />
+    <Compile Include="PropertyInspector\TransitionEffectPickerEditor.cs" />
+    <Compile Include="PropertyInspector\TransitionEffectPickerPopup.cs" />
+    <Compile Include="PropertyInspector\TransitionEffectPickerPropertyValueEditor.cs" />
+    <Compile Include="PropertyInspector\TriggerBasicCategoryEditor.cs" />
+    <Compile Include="PropertyInspector\TriggerCategory.cs" />
+    <Compile Include="PropertyInspector\TriggerCategoryEditor.cs" />
+    <Compile Include="PropertyInspector\TriggerCategoryEditorFactory.cs" />
+    <Compile Include="PropertyInspector\TriggerObjectSet.cs" />
+    <Compile Include="PropertyInspector\TypedSceneNodeProperty.cs" />
+    <Compile Include="PropertyInspector\UnitType.cs" />
+    <Compile Include="PropertyInspector\UnitTypedSize.cs" />
+    <Compile Include="PropertyInspector\UnknownSourceFontFamilyItem.cs" />
+    <Compile Include="PropertyInspector\UriEditor.cs" />
+    <Compile Include="PropertyInspector\ValueIsClassToVisibilityConverter.cs" />
+    <Compile Include="PropertyInspector\Vector3DEditor.cs" />
+    <Compile Include="PropertyInspector\VirtualizingResourceItem`1.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shopdrawing.Design.Interaction\Shopdrawing.Design.Interaction.csproj">
+      <Project>{6724c818-9368-46cb-916e-42456c9b9d9f}</Project>
+      <Name>Shopdrawing.Design.Interaction</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shopdrawing.DesignModel\Shopdrawing.DesignModel.csproj">
+      <Project>{3c5aaf72-beab-4693-b062-77ee3d8105fc}</Project>
+      <Name>Shopdrawing.DesignModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shopdrawing.Framework\Shopdrawing.Framework.csproj">
+      <Project>{886371dd-23b6-434d-bdb6-81606416348f}</Project>
+      <Name>Shopdrawing.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shopdrawing.Markup\Shopdrawing.Markup.csproj">
+      <Project>{05453e05-826b-4ceb-b940-03870afd97ad}</Project>
+      <Name>Shopdrawing.Markup</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

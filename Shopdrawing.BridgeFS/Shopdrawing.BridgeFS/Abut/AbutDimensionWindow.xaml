@@ -1,0 +1,22 @@
+﻿<Window x:Class="Shopdrawing.BridgeFS.Abut.AbutDimensionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:prop="clr-namespace:ChristianMoser.WpfInspector.UserInterface.Controls;assembly=Inspector"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AbutDimensionWindow" Height="300" Width="300">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Inspector;component/UserInterface/VisualResources/Inspector.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <prop:PropertyGrid Grid.Column="0" x:Name="PropertyGrid" Background="Gray" VerticalAlignment="Stretch" 
+                           HorizontalAlignment="Stretch" 
+                           SelectedObject="{Binding Abut}"/>
+    </Grid>
+</Window>

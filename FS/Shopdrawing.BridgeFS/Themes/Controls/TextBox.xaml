@@ -1,0 +1,113 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+                    xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+                    mc:Ignorable="d" xmlns:Microsoft_Windows_Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero"
+                    xmlns:Controls="clr-namespace:Microsoft.Expression.Framework.Controls;assembly=Shopdrawing.Framework"
+                    xmlns:ExpressionExtension="clr-namespace:Microsoft.Expression.Framework.Workspaces.Extension;assembly=Shopdrawing.Framework">
+
+    <ControlTemplate x:Key="BaseTextBoxTemplate" PresentationOptions:Freeze="false" x:Uid="ControlTemplate_1"
+                   TargetType="{x:Type TextBox}">
+        <Border x:Uid="Border_17" UIElement.Focusable="false" Background="{TemplateBinding Control.Background}"
+            BorderBrush="{TemplateBinding Control.BorderBrush}"
+            BorderThickness="{TemplateBinding Control.BorderThickness}" CornerRadius="3">
+            <ScrollViewer x:Name="PART_ContentHost" x:Uid="ScrollViewer_1"
+                    FrameworkElement.Margin="{TemplateBinding Control.Padding}"
+                    FrameworkElement.VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+                    FrameworkElement.HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"/>
+        </Border>
+    </ControlTemplate>
+    <Style x:Key="BaseTextBox" x:Uid="Style_71" TargetType="{x:Type TextBox}">
+        <Setter x:Uid="Setter_11" Property="Border.BorderBrush" Value="{DynamicResource BackgroundBrush}"/>
+        <Setter x:Uid="Setter_180" Property="Control.Foreground" Value="{DynamicResource Text1Brush}"/>
+        <Setter x:Uid="Setter_227" Property="Control.Background" Value="{DynamicResource BackgroundBrush}"/>
+        <Setter x:Uid="Setter_1128" Property="Control.FontFamily"
+            Value="{DynamicResource {x:Static SystemFonts.MessageFontFamilyKey}}"/>
+        <Setter x:Uid="Setter_1129" Property="Control.FontSize"
+            Value="{DynamicResource {x:Static SystemFonts.MessageFontSizeKey}}"/>
+        <Setter x:Uid="Setter_1130" Property="Control.FontWeight"
+            Value="{DynamicResource {x:Static SystemFonts.MessageFontWeightKey}}"/>
+        <Setter x:Uid="Setter_1465" Property="Control.HorizontalContentAlignment" Value="Stretch"/>
+        <Setter x:Uid="Setter_1466" Property="Control.VerticalContentAlignment" Value="Center"/>
+        <Setter x:Uid="Setter_1470" Property="Control.Padding" Value="2,0,0,0"/>
+        <Setter x:Uid="Setter_1471" Property="FrameworkElement.MinHeight" Value="20"/>
+        <Setter x:Uid="Setter_1665" Property="FrameworkElement.FocusVisualStyle">
+            <Setter.Value>
+                <x:NullExtension/>
+            </Setter.Value>
+        </Setter>
+        <Setter x:Uid="Setter_15" Property="Control.Template" Value="{StaticResource BaseTextBoxTemplate}"/>
+        <Style.Triggers>
+            <Trigger x:Uid="Trigger_1002" Property="UIElement.IsEnabled" Value="false">
+                <Setter x:Uid="Setter_1347" Property="Control.Foreground" Value="{DynamicResource DisabledTextBrush}"/>
+                <Setter x:Uid="Setter_1626" Property="Control.Background" Value="{DynamicResource RecessedBrush}"/>
+            </Trigger>
+            <Trigger x:Uid="Trigger_1003" Property="UIElement.IsFocused" Value="true">
+                <Setter x:Uid="Setter_1054" Property="Control.Background" Value="{DynamicResource DarkBrush}"/>
+            </Trigger>
+            <Trigger x:Uid="Trigger_1134" Property="UIElement.IsKeyboardFocused" Value="true">
+                <Setter x:Uid="TextBoxFocusForegroundSetter" Localization.Attributes="Value(Readable Modifiable None)"
+                Property="Control.Foreground" Value="{DynamicResource Text1Brush}"/>
+                <Setter x:Uid="TextBoxFocusBackgroundSetter" Localization.Attributes="Value(Readable Modifiable None)"
+                Property="Control.Background" Value="{DynamicResource BackgroundBrush}"/>
+            </Trigger>
+            <Trigger x:Uid="Trigger_1129" Property="TextBoxBase.IsReadOnly" Value="true">
+                <Setter x:Uid="Setter_1627" Property="Control.Foreground" Value="{DynamicResource DisabledTextBrush}"/>
+                <Setter x:Uid="Setter_1628" Property="Control.Background" Value="{DynamicResource RecessedBrush}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Uid="Style_4" TargetType="{x:Type TextBox}" BasedOn="{StaticResource BaseTextBox}"/>
+    <Style x:Uid="Style_6" TargetType="{x:Type Controls:EditTextBox}"
+         BasedOn="{StaticResource {x:Type TextBox}}">
+        <Setter x:Uid="Setter_19" Property="FrameworkElement.MinWidth" Value="45"/>
+        <Setter x:Uid="Setter_382" Property="Controls:EditTextBox.CommitCommand">
+            <Setter.Value>
+                <Binding Path="CommitCommand"/>
+            </Setter.Value>
+        </Setter>
+        <Setter x:Uid="Setter_383" Property="Controls:EditTextBox.RevertCommand">
+            <Setter.Value>
+                <Binding Path="RevertCommand"/>
+            </Setter.Value>
+        </Setter>
+        <Setter x:Uid="Setter_384" Property="TextBox.Text">
+            <Setter.Value>
+                <Binding Path="UIObject" UpdateSourceTrigger="PropertyChanged"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Uid="Style_58" TargetType="{x:Type Controls:VerifyingEditBox}"
+         BasedOn="{StaticResource {x:Type TextBox}}"/>
+    <Style x:Uid="Style_145" TargetType="{x:Type Controls:OverlayTextBox}"
+         BasedOn="{StaticResource {x:Type TextBox}}">
+        <Setter x:Uid="Setter_1943" Property="Control.Padding" Value="3"/>
+        <Setter x:Uid="Setter_1372" Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate x:Uid="ControlTemplate_126" TargetType="{x:Type Controls:OverlayTextBox}">
+                    <Border x:Uid="Border_4" Background="{TemplateBinding Control.Background}"
+                  BorderBrush="{TemplateBinding Control.BorderBrush}"
+                  BorderThickness="{TemplateBinding Control.BorderThickness}">
+                        <Grid x:Uid="Grid_23">
+                            <ScrollViewer x:Name="PART_ContentHost" x:Uid="PART_ContentHost" FrameworkElement.Margin="0,0,0,1"
+                            FrameworkElement.VerticalAlignment="Center"/>
+                            <TextBlock x:Name="Overlay" x:Uid="Overlay" UIElement.IsHitTestVisible="false"
+                         Text="{TemplateBinding Controls:OverlayTextBox.OverlayText}"
+                         FrameworkElement.HorizontalAlignment="Left" FrameworkElement.VerticalAlignment="Center"
+                         FrameworkElement.Margin="6,0,0,1" FontStyle="Italic" UIElement.Opacity="0.66"
+                         FontFamily="{TemplateBinding Control.FontFamily}" FontWeight="{TemplateBinding Control.FontWeight}"
+                         FontSize="{TemplateBinding Control.FontSize}"/>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger x:Uid="Trigger_74" Property="Controls:OverlayTextBox.HasText" Value="true">
+                            <Setter x:Uid="Setter_1919" TargetName="Overlay" Property="UIElement.Opacity" Value="0"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

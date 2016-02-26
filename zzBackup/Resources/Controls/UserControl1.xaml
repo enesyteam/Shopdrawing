@@ -1,0 +1,254 @@
+﻿<UserControl x:Class="Shopdrawing.Framework.Resources.Controls.UserControl1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+              xmlns:Controls="clr-namespace:Microsoft.Expression.Framework.Controls"
+             xmlns:ValueEditors="clr-namespace:Microsoft.Expression.Framework.ValueEditors"
+ xmlns:Data="clr-namespace:Microsoft.Expression.Framework.Data"
+ xmlns:Automation="clr-namespace:Microsoft.Expression.Framework.Diagnostics"
+ xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:System="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <Data:BoolToVisibilityCollapsedConverter x:Key="BoolToVisibilityCollapsedConverter"/>
+        <System:Double x:Key="DefaultSpacing" x:Uid="System:Double_1">4</System:Double>
+        <Thickness x:Key="DefaultLeftMargin" x:Uid="Thickness_1" Left="{StaticResource DefaultSpacing}" Top="0"
+             Right="0" Bottom="0"/>
+
+        <Style x:Key="DialogButton" x:Uid="Style_142" TargetType="{x:Type Button}"
+         BasedOn="{StaticResource {x:Type Button}}">
+            <Setter x:Uid="Setter_1402" Property="FrameworkElement.HorizontalAlignment" Value="Stretch"/>
+            <Setter x:Uid="Setter_1403" Property="FrameworkElement.MinWidth" Value="75"/>
+            <Setter x:Uid="Setter_1487" Property="FrameworkElement.MinHeight" Value="20"/>
+        </Style>
+        <Style x:Key="IconButton" x:Uid="Style_157" TargetType="{x:Type Button}"
+         BasedOn="{StaticResource {x:Type Button}}">
+            <Setter x:Uid="Setter_1504" Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate x:Uid="ControlTemplate_96" TargetType="{x:Type Button}">
+                        <Border x:Name="ButtonTemplateGrid" x:Uid="Border_66" Background="{TemplateBinding Control.Background}"
+                  CornerRadius="3" BorderBrush="{TemplateBinding Control.BorderBrush}">
+                            <Controls:Icon x:Name="Icon" x:Uid="Controls:Icon_6" FrameworkElement.HorizontalAlignment="Center"
+                           FrameworkElement.VerticalAlignment="Center" FrameworkElement.Margin="1"
+                           Image.Source="{TemplateBinding Controls:Icon.DeselectedImage}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger x:Uid="Trigger_1103" Property="UIElement.IsFocused" Value="true">
+                                <Setter x:Uid="Setter_1505" Value="{DynamicResource PaletteBrush}" Property="Control.Background"/>
+                                <Setter x:Uid="Setter_1506" Value="{DynamicResource Text1Brush}" Property="Control.BorderBrush"/>
+                                <Setter x:Uid="Setter_1507" Value="{DynamicResource Text1Brush}" Property="Control.Foreground"/>
+                            </Trigger>
+                            <Trigger x:Uid="Trigger_1104" Property="Button.IsDefault" Value="true">
+                                <Setter x:Uid="Setter_1508" Value="{DynamicResource PaletteBrush}" Property="Control.Background"/>
+                                <Setter x:Uid="Setter_1509" Value="{DynamicResource ButtonDefaultedBrush}" Property="Control.BorderBrush"/>
+                                <Setter x:Uid="Setter_1510" Value="{DynamicResource Text1Brush}" Property="Control.Foreground"/>
+                                <Setter x:Uid="Setter_1511" Property="Control.BorderThickness" Value="1"/>
+                            </Trigger>
+                            <MultiTrigger x:Uid="MultiTrigger_31">
+                                <MultiTrigger.Conditions>
+                                    <Condition x:Uid="Condition_75" Property="UIElement.IsMouseOver" Value="true"/>
+                                    <Condition x:Uid="Condition_76" Property="Controls:Icon.ShowSelectedIconOnMouseOver" Value="true"/>
+                                </MultiTrigger.Conditions>
+                                <Setter x:Uid="Setter_1517" TargetName="Icon" Property="Image.Source">
+                                    <Setter.Value>
+                                        <Binding Path="(Controls:Icon.SelectedImage)" RelativeSource="{RelativeSource TemplatedParent}"
+                           Mode="OneWay"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </MultiTrigger>
+                            <Trigger x:Uid="Trigger_1105" Property="UIElement.IsMouseOver" Value="true">
+                                <Setter x:Uid="Setter_1513" Value="{DynamicResource ButtonOverBrush}" Property="Control.Background"/>
+                                <Setter x:Uid="Setter_1514" Value="{DynamicResource RecessedBrush}" Property="Control.BorderBrush"/>
+                                <Setter x:Uid="Setter_1515" Value="{DynamicResource WhiteBrush}" Property="Control.Foreground"/>
+                            </Trigger>
+                            <Trigger x:Uid="Trigger_1106" Property="ButtonBase.IsPressed" Value="true">
+                                <Setter x:Uid="Setter_1518" Value="{DynamicResource RecessedBrush}" Property="Control.Background"/>
+                                <Setter x:Uid="Setter_1519" Value="{DynamicResource DarkBrush}" Property="Control.BorderBrush"/>
+                                <Setter x:Uid="Setter_1520" Value="{DynamicResource Text1Brush}" Property="Control.Foreground"/>
+                            </Trigger>
+                            <Trigger x:Uid="Trigger_1107" Property="UIElement.IsEnabled" Value="false">
+                                <Setter x:Uid="Setter_1523" Value="{DynamicResource PaneBrush}" Property="Control.Background"/>
+                                <Setter x:Uid="Setter_1524" Value="{DynamicResource RecessedBrush}" Property="Control.BorderBrush"/>
+                                <Setter x:Uid="Setter_1525" Value="{DynamicResource ButtonDefaultBrush}" Property="Control.Foreground"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="DialogRootContainer" x:Uid="Style_218" TargetType="{x:Type Border}">
+            <Setter x:Uid="Setter_1935" Property="Border.Background" Value="{DynamicResource DialogBackgroundBrush}"/>
+            <Setter x:Uid="Setter_1936" Property="Border.Padding" Value="{DynamicResource LargeMargin}"/>
+            <Setter x:Uid="Setter_1937" Property="Border.BorderBrush" Value="{DynamicResource WindowBorderBrush}"/>
+            <Setter x:Uid="Setter_2001" Property="TextElement.Foreground" Value="{DynamicResource DialogTextBrush}"/>
+            <Setter x:Uid="Setter_1484" Property="TextElement.FontFamily"
+            Value="{DynamicResource {x:Static SystemFonts.MessageFontFamilyKey}}"/>
+            <Setter x:Uid="Setter_1135" Property="TextElement.FontSize"
+            Value="{DynamicResource {x:Static SystemFonts.MessageFontSizeKey}}"/>
+            <Setter x:Uid="Setter_1136" Property="TextElement.FontWeight"
+            Value="{DynamicResource {x:Static SystemFonts.MessageFontWeightKey}}"/>
+            <Setter x:Uid="Setter_1241" Property="UIElement.SnapsToDevicePixels" Value="true"/>
+            <Style.Resources>
+                <Style x:Uid="Style_181" x:Key="DialogTextBoxBaseFocusVisualStyle">
+                    <Setter x:Uid="Setter_1675" Property="Control.Template">
+                        <Setter.Value>
+                            <ControlTemplate x:Uid="ControlTemplate_108">
+                                <Rectangle x:Uid="Rectangle_62" UIElement.SnapsToDevicePixels="true"
+                         Shape.Stroke="{DynamicResource ControlFocusBorderBrush}" Shape.StrokeThickness="1" RadiusX="3"
+                         RadiusY="3"/>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+                <Style x:Uid="Style_182" TargetType="{x:Type TextBox}" BasedOn="{StaticResource {x:Type TextBox}}">
+                    <Setter x:Uid="Setter_1676" Property="FrameworkElement.FocusVisualStyle"
+                Value="{StaticResource DialogTextBoxBaseFocusVisualStyle}"/>
+                </Style>
+                <Style x:Uid="Style_183" TargetType="{x:Type ComboBox}" BasedOn="{StaticResource {x:Type ComboBox}}">
+                    <Setter x:Uid="Setter_1670" Property="FrameworkElement.FocusVisualStyle">
+                        <Setter.Value>
+                            <Style x:Uid="Style_180">
+                                <Setter x:Uid="Setter_1671" Property="Control.Template">
+                                    <Setter.Value>
+                                        <ControlTemplate x:Uid="ControlTemplate_110">
+                                            <Rectangle x:Uid="Rectangle_64" UIElement.SnapsToDevicePixels="true"
+                               Shape.Stroke="{DynamicResource ControlFocusBorderBrush}" Shape.StrokeThickness="1" RadiusX="4"
+                               RadiusY="4"/>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+                <Style x:Uid="Style_184" TargetType="{x:Type ValueEditors:NumberEditor}"
+             >
+                    <Setter x:Uid="Setter_1677" Property="FrameworkElement.FocusVisualStyle"
+                Value="{StaticResource DialogTextBoxBaseFocusVisualStyle}"/>
+                </Style>
+                <Style x:Uid="Style_185" TargetType="{x:Type ValueEditors:StringEditor}"
+             >
+                    <Setter x:Uid="Setter_1678" Property="FrameworkElement.FocusVisualStyle"
+                Value="{StaticResource DialogTextBoxBaseFocusVisualStyle}"/>
+                </Style>
+                <Style x:Uid="Style_189" TargetType="{x:Type ValueEditors:ChoiceEditor}"
+             >
+                    <Setter x:Uid="Setter_1706" Property="FrameworkElement.FocusVisualStyle">
+                        <Setter.Value>
+                            <Style x:Uid="Style_190">
+                                <Setter x:Uid="Setter_1707" Property="Control.Template">
+                                    <Setter.Value>
+                                        <ControlTemplate x:Uid="ControlTemplate_111">
+                                            <Rectangle x:Uid="Rectangle_65" UIElement.SnapsToDevicePixels="true"
+                               Shape.Stroke="{DynamicResource ControlFocusBorderBrush}" Shape.StrokeThickness="1" RadiusX="4"
+                               RadiusY="4"/>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Style.Resources>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+
+        <Border Style="{DynamicResource DialogRootContainer}">
+            <StackPanel Orientation="Vertical">
+                <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <Controls:Icon Width="32"
+                             Height="32"
+                             Margin="0,0,8,0"
+                             VerticalAlignment="Top"
+                             >
+                        <Controls:Icon.Style>
+                            <Style TargetType="{x:Type Controls:Icon}">
+                                <Style.Triggers>
+                                    <DataTrigger Value="{x:Static Controls:MessageIcon.Error}" Binding="{Binding Icon,Mode=OneTime}">
+                                        <!--<Setter Property="Image.Source" />-->
+                                    </DataTrigger>
+                                    <DataTrigger Value="{x:Static Controls:MessageIcon.Warning}" Binding="{Binding Icon,Mode=OneTime}">
+                                        <!--<Setter Property="Image.Source" Value="../Icons/shell_warning_on_32x32.png"/>-->
+                                    </DataTrigger>
+                                    <DataTrigger Value="{x:Static Controls:MessageIcon.Information}" Binding="{Binding Icon,Mode=OneTime}">
+                                        <!--<Setter Property="Image.Source" Value="../Icons/shell_info_on_32x32.png"/>-->
+                                    </DataTrigger>
+                                    <DataTrigger Value="{x:Static Controls:MessageIcon.Question}" Binding="{Binding Icon,Mode=OneTime}">
+                                        <!--<Setter Property="Image.Source" Value="../Icons/shell_help_on_32x32.png"/>-->
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Controls:Icon.Style>
+                    </Controls:Icon>
+                    <TextBlock Automation:AutomationElement.Id="Content"
+                             VerticalAlignment="Center"
+                             TextWrapping="Wrap"
+                             Grid.Column="1"
+                             Text="{Binding Content,Mode=OneTime}"/>
+                </Grid>
+                <Controls:OnDemandControl
+                    x:Name="HyperlinkOnDemand"
+                     Visibility="{Binding ShowHyperlink,Converter={StaticResource BoolToVisibilityCollapsedConverter},Mode=OneTime}">
+                    <Controls:OnDemandControl.OnDemandTemplate>
+                        <ControlTemplate>
+                            <TextBlock Automation:AutomationElement.Id="WebPageLink"
+                                     HorizontalAlignment="Left"
+                                     TextWrapping="Wrap"
+                                     Margin="40,15,0,0">
+                                        <Hyperlink
+                                             Automation:AutomationElement.Id="MessageWindowHyperlink"
+                                             IsEnabled="{Binding ShowHyperlink,Mode=OneTime}"
+                                             NavigateUri="{Binding HyperlinkUri,Mode=OneTime}">
+                                                <TextBlock Text="{Binding HyperlinkMessage,Mode=OneTime}"/>
+                                        </Hyperlink>
+                                </TextBlock>
+                        </ControlTemplate>
+                    </Controls:OnDemandControl.OnDemandTemplate>
+                </Controls:OnDemandControl>
+                <CheckBox Automation:AutomationElement.Id="DontAskAgain"
+                     Margin="40,15,0,0"
+                     Content="{Binding CheckBoxMessage,Mode=OneWay}"
+                     IsChecked="{Binding DontAskAgain,Mode=TwoWay}"
+                     Visibility="{Binding EnableDontAskAgain,Converter={StaticResource BoolToVisibilityCollapsedConverter},Mode=OneTime}">
+                    <CheckBox.Resources>
+                        <DataTemplate x:Key="{DataTemplateKey {x:Type sys:String}}" DataType="{x:Type sys:String}">
+                            <AccessText TextWrapping="Wrap" Text="{Binding Mode=OneTime}"/>
+                        </DataTemplate>
+                    </CheckBox.Resources>
+                </CheckBox>
+                <ItemsControl
+                     Name="ButtonsControl"
+                     HorizontalAlignment="Center"
+                     Focusable="False"
+                     Margin="-4,16,0,0"
+                     ItemsSource="{Binding Choices,Mode=OneTime}">
+                    <ItemsControl.Template>
+                        <ControlTemplate>
+                            <UniformGrid Rows="1" IsItemsHost="True"/>
+                        </ControlTemplate>
+                    </ItemsControl.Template>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Button Margin="{DynamicResource DefaultLeftMargin}"
+                                     Style="{DynamicResource DialogButton}"
+                                     Padding="8,0,8,1"
+                                     Automation:AutomationElement.Id="{Binding AutomationId,Mode=OneTime}"
+                                     IsDefault="{Binding IsDefault,Mode=OneTime}"
+                                     IsCancel="{Binding IsCancel,Mode=OneTime}"
+                                     Content="{Binding Label,Mode=OneTime}"
+                                     Command="{Binding Mode=OneTime}"/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

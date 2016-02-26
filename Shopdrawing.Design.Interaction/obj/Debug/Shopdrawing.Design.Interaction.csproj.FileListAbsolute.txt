@@ -1,0 +1,15 @@
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Design.Interaction\bin\Debug\Shopdrawing.Design.Interaction.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Design.Interaction\bin\Debug\Shopdrawing.Design.Interaction.pdb
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Design.Interaction\bin\Debug\Shopdrawing.Design.Extensibility.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Design.Interaction\bin\Debug\Shopdrawing.Design.Extensibility.pdb
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Design.Interaction\obj\Debug\Shopdrawing.Design.Interaction.csprojResolveAssemblyReference.cache
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Design.Interaction\obj\Debug\MS\Internal\Interaction\adornercolorresourcedictionary.baml
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Design.Interaction\obj\Debug\MS\Internal\Interaction\adornerfontresourcedictionary.baml
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Design.Interaction\obj\Debug\MS\Internal\Interaction\adornercolorresourcedictionary.g.cs
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Design.Interaction\obj\Debug\MS\Internal\Interaction\adornerfontresourcedictionary.g.cs
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Design.Interaction\obj\Debug\Shopdrawing.Design.Interaction_MarkupCompile.cache
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Design.Interaction\obj\Debug\Shopdrawing.Design.Interaction.g.resources
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Design.Interaction\obj\Debug\Shopdrawing.Design.Interaction.Properties.Resource.resources
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Design.Interaction\obj\Debug\Shopdrawing.Design.Interaction.csproj.GenerateResource.Cache
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Design.Interaction\obj\Debug\Shopdrawing.Design.Interaction.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Design.Interaction\obj\Debug\Shopdrawing.Design.Interaction.pdb

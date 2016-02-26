@@ -1,0 +1,11 @@
+E:\Bridge Design\zzOriginal\x\CODE.Framework.Core.Utilities\obj\Debug\CODE.Framework.Core.Utilities.csprojResolveAssemblyReference.cache
+E:\Bridge Design\zzOriginal\x\CODE.Framework.Core.Utilities\obj\Debug\CODE.Framework.Core.Utilities.csproj.GenerateResource.Cache
+E:\Bridge Design\zzOriginal\x\CODE.Framework.Core.Utilities\bin\Debug\STRUCTURES.DESIGN.Core.Utilities.xml
+E:\Bridge Design\zzOriginal\x\CODE.Framework.Core.Utilities\bin\Debug\STRUCTURES.DESIGN.Core.Utilities.dll
+E:\Bridge Design\zzOriginal\x\CODE.Framework.Core.Utilities\bin\Debug\STRUCTURES.DESIGN.Core.Utilities.pdb
+E:\Bridge Design\zzOriginal\x\CODE.Framework.Core.Utilities\bin\Debug\STRUCTURES.DESIGN.Core.dll
+E:\Bridge Design\zzOriginal\x\CODE.Framework.Core.Utilities\bin\Debug\STRUCTURES.DESIGN.Core.pdb
+E:\Bridge Design\zzOriginal\x\CODE.Framework.Core.Utilities\bin\Debug\STRUCTURES.DESIGN.Core.xml
+E:\Bridge Design\zzOriginal\x\CODE.Framework.Core.Utilities\obj\Debug\STRUCTURES.DESIGN.Core.Utilities.Properties.Resources.resources
+E:\Bridge Design\zzOriginal\x\CODE.Framework.Core.Utilities\obj\Debug\STRUCTURES.DESIGN.Core.Utilities.dll
+E:\Bridge Design\zzOriginal\x\CODE.Framework.Core.Utilities\obj\Debug\STRUCTURES.DESIGN.Core.Utilities.pdb

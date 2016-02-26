@@ -1,0 +1,345 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+                    PresentationOptions:Freeze="true" x:Uid="ResourceDictionary_1">
+    <DrawingBrush x:Key="CheckerboardBrush" x:Uid="DrawingBrush_1" TileBrush.ViewportUnits="Absolute"
+                TileBrush.Viewport="0,0,20,20" TileBrush.Stretch="Uniform" TileBrush.TileMode="Tile">
+        <DrawingBrush.Drawing>
+            <DrawingGroup x:Uid="DrawingGroup_105">
+                <DrawingGroup.Children>
+                    <DrawingCollection x:Uid="DrawingCollection_105">
+                        <GeometryDrawing x:Uid="GeometryDrawing_70" Brush="White">
+                            <GeometryDrawing.Geometry>
+                                <RectangleGeometry x:Uid="RectangleGeometry_24" Rect="0 0 20 20"/>
+                            </GeometryDrawing.Geometry>
+                        </GeometryDrawing>
+                        <GeometryDrawing x:Uid="GeometryDrawing_71" Brush="LightGray">
+                            <GeometryDrawing.Geometry>
+                                <RectangleGeometry x:Uid="RectangleGeometry_25" Rect="0 0 10 10"/>
+                            </GeometryDrawing.Geometry>
+                        </GeometryDrawing>
+                        <GeometryDrawing x:Uid="GeometryDrawing_72" Brush="LightGray">
+                            <GeometryDrawing.Geometry>
+                                <RectangleGeometry x:Uid="RectangleGeometry_26" Rect="10 10 10 10"/>
+                            </GeometryDrawing.Geometry>
+                        </GeometryDrawing>
+                    </DrawingCollection>
+                </DrawingGroup.Children>
+            </DrawingGroup>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DrawingImage x:Key="ExpressionComboBoxButtonIcon" PresentationOptions:Freeze="false" x:Uid="DrawingImage_29">
+        <DrawingImage.Drawing>
+            <GeometryDrawing x:Uid="GeometryDrawing_111">
+                <GeometryDrawing.Pen>
+                    <Pen x:Uid="Pen_61" Brush="{DynamicResource Text1Brush}" Thickness="2"/>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry PresentationOptions:Freeze="true" x:Uid="PathGeometry_44">
+                        <PathGeometry.Figures>
+                            <PathFigure x:Uid="PathFigure_44">
+                                <PathFigure.Segments>
+                                    <PolyLineSegment x:Uid="PolyLineSegment_1">
+                                        <PolyLineSegment.Points>
+                                            <Point x:Uid="Point_1" X="0" Y="0"/>
+                                            <Point x:Uid="Point_2" X="4" Y="5"/>
+                                            <Point x:Uid="Point_3" X="8" Y="0"/>
+                                        </PolyLineSegment.Points>
+                                    </PolyLineSegment>
+                                </PathFigure.Segments>
+                            </PathFigure>
+                        </PathGeometry.Figures>
+                    </PathGeometry>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+    <DrawingBrush x:Key="PaneExpanderIcon" x:Uid="DrawingBrush_2">
+        <DrawingBrush.Drawing>
+            <DrawingGroup x:Uid="DrawingGroup_170">
+                <GeometryDrawing x:Uid="GeometryDrawing_112" Brush="#FFFF0000" Geometry="M 1,1 L 7,4 1,7 Z"/>
+                <GeometryDrawing x:Uid="GeometryDrawing_113" Brush="#00000000">
+                    <GeometryDrawing.Geometry>
+                        <RectangleGeometry x:Uid="RectangleGeometry_64" Rect="0,0,8,8"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DrawingBrush x:Key="ItemExpanderIcon" x:Uid="DrawingBrush_3">
+        <DrawingBrush.Drawing>
+            <DrawingGroup x:Uid="DrawingGroup_171">
+                <GeometryDrawing x:Uid="GeometryDrawing_114" Brush="#FF00FF00">
+                    <GeometryDrawing.Geometry>
+                        <EllipseGeometry x:Uid="EllipseGeometry_6" RadiusX="6" RadiusY="6" Center="6,6"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+                <GeometryDrawing x:Uid="GeometryDrawing_115" Brush="#FFFF0000" Geometry="M 4,3 L 10,6 4,9 Z"/>
+                <GeometryDrawing x:Uid="GeometryDrawing_116" Brush="#00000000">
+                    <GeometryDrawing.Geometry>
+                        <RectangleGeometry x:Uid="RectangleGeometry_65" RadiusX="0" RadiusY="0" Rect="0,0,12,12"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DrawingBrush x:Key="ViewListIcon" x:Uid="DrawingBrush_6">
+        <DrawingBrush.Drawing>
+            <DrawingGroup x:Uid="DrawingGroup_196">
+                <GeometryDrawing x:Uid="GeometryDrawing_141" Brush="#FFFF0000">
+                    <GeometryDrawing.Geometry>
+                        <RectangleGeometry x:Uid="RectangleGeometry_66" Rect="0,0,14,14"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+                <GeometryDrawing x:Uid="GeometryDrawing_142" Brush="#FF00FF00" Geometry="M 4,4 L 10,4 7,10 Z"/>
+            </DrawingGroup>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DrawingBrush x:Key="DefaultExpanderToggleButtonBrush" x:Uid="DrawingBrush_9">
+        <DrawingBrush.Drawing>
+            <DrawingGroup x:Uid="DrawingGroup_177">
+                <GeometryDrawing x:Uid="GeometryDrawing_124" Brush="#00000000">
+                    <GeometryDrawing.Geometry>
+                        <RectangleGeometry x:Uid="RectangleGeometry_1" Rect="0,0,12,10"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+                <DrawingGroup x:Uid="DrawingGroup_178">
+                    <DrawingGroup.Transform>
+                        <MatrixTransform x:Uid="MatrixTransform_55" Matrix="1,0,0,1,0,3"/>
+                    </DrawingGroup.Transform>
+                    <GeometryDrawing x:Uid="GeometryDrawing_125">
+                        <GeometryDrawing.Geometry>
+                            <PathGeometry x:Uid="PathGeometry_45" Figures="M1,4 L6,9 11,4">
+                                <Geometry.Transform>
+                                    <MatrixTransform x:Uid="MatrixTransform_56" Matrix="1,0,0,1,0,-3"/>
+                                </Geometry.Transform>
+                            </PathGeometry>
+                        </GeometryDrawing.Geometry>
+                        <GeometryDrawing.Pen>
+                            <Pen x:Uid="Pen_66" Brush="Red" Thickness="2" StartLineCap="Round" EndLineCap="Round" DashCap="Flat"
+                   LineJoin="Round" MiterLimit="10"/>
+                        </GeometryDrawing.Pen>
+                    </GeometryDrawing>
+                </DrawingGroup>
+                <DrawingGroup x:Uid="DrawingGroup_179">
+                    <DrawingGroup.Transform>
+                        <MatrixTransform x:Uid="MatrixTransform_57" Matrix="1,0,0,1,4.515625,2"/>
+                    </DrawingGroup.Transform>
+                    <GeometryDrawing x:Uid="GeometryDrawing_126" Brush="#FFFFFFFF">
+                        <GeometryDrawing.Geometry>
+                            <EllipseGeometry x:Uid="EllipseGeometry_8" RadiusX="0.5" RadiusY="0.5" Center="1.5,1.5"/>
+                        </GeometryDrawing.Geometry>
+                        <GeometryDrawing.Pen>
+                            <Pen x:Uid="Pen_67" Brush="Red" Thickness="2" StartLineCap="Round" EndLineCap="Round" DashCap="Flat"
+                   LineJoin="Round" MiterLimit="10"/>
+                        </GeometryDrawing.Pen>
+                    </GeometryDrawing>
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DrawingBrush x:Key="MoveUpIconBrush" x:Uid="DrawingBrush_10">
+        <DrawingBrush.Drawing>
+            <DrawingGroup x:Uid="DrawingGroup_180">
+                <DrawingGroup.Transform>
+                    <MatrixTransform x:Uid="MatrixTransform_58" Matrix="1,0,0,1,1.5,1.5"/>
+                </DrawingGroup.Transform>
+                <GeometryDrawing x:Uid="GeometryDrawing_127" Brush="#FFDEDEDE"
+                         Geometry="M 8.5,0.5 L 0.5,9.518 5.5,9.518 5.5,16.532 11.5,16.532 11.5,9.518 16.5,9.518 Z"/>
+            </DrawingGroup>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DrawingBrush x:Key="MoveDownIconBrush" x:Uid="DrawingBrush_5">
+        <DrawingBrush.Drawing>
+            <DrawingGroup x:Uid="DrawingGroup_181">
+                <DrawingGroup.Transform>
+                    <MatrixTransform x:Uid="MatrixTransform_59" Matrix="1,0,0,1,1.5,1.5"/>
+                </DrawingGroup.Transform>
+                <GeometryDrawing x:Uid="GeometryDrawing_128" Brush="#FFDEDEDE"
+                         Geometry="M 8.5,16.5 L 16.5,7.5 11.5,7.5 11.5,0.5 5.5,0.5 5.5,7.5 0.5,7.5 Z"/>
+            </DrawingGroup>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DrawingBrush x:Key="PinIconBrush" x:Uid="DrawingBrush_11" TileBrush.Stretch="None">
+        <DrawingBrush.Drawing>
+            <DrawingGroup x:Uid="DrawingGroup_182">
+                <DrawingGroup x:Uid="DrawingGroup_183">
+                    <DrawingGroup.Transform>
+                        <MatrixTransform x:Uid="MatrixTransform_60" Matrix="1,0,0,1,1,1"/>
+                    </DrawingGroup.Transform>
+                    <GeometryDrawing x:Uid="GeometryDrawing_129" Brush="#59000000"
+                           Geometry="F1 M 5.9930262,4.993194 L 5.9930262,3.9929545 8.0070272,3.9929545 8.0120272,-1.6506082E-06 1.0020238,-1.6506082E-06 1.0020238,4.9951945 2.3303658E-05,4.9951945 2.3303658E-05,7.9969133 3.0050248,7.9969133 4.0070253,7.9969133 4.0070253,10.001393 3.9950168,11.007007 4.9950172,11.007007 5.0070257,10.001393 5.9930262,10.001393 5.9930262,7.9969133 9.0080277,7.9969133 9.0080277,4.9951945 Z"/>
+                </DrawingGroup>
+                <GeometryDrawing x:Uid="GeometryDrawing_130" Brush="#FF00FF00"
+                         Geometry="M 1.0029932,0 L 8.0170181,0 8.0170181,4.9960049 9.0139997,4.9960049 9.0139997,8.0000043 6.0020138,8.0000043 6.0020138,9.9969984 5.013014,9.9969984 5.013014,11.002 4.0070139,11.002 4.0070139,9.9969984 3.0020138,9.9969984 3.0020138,8.0000043 0,8.0000043 0,4.9960049 1.0029932,4.9960049 Z"/>
+                <DrawingGroup x:Uid="DrawingGroup_184">
+                    <DrawingGroup.Transform>
+                        <MatrixTransform x:Uid="MatrixTransform_61" Matrix="1,0,0,1,4,8"/>
+                    </DrawingGroup.Transform>
+                    <GeometryDrawing x:Uid="GeometryDrawing_131" Brush="Red"
+                           Geometry="M -7.8125E-06,9.2402344E-06 L 0.99999219,9.2402344E-06 0.99999219,1.9920092 -7.8125E-06,1.9920092 Z"/>
+                </DrawingGroup>
+                <DrawingGroup x:Uid="DrawingGroup_185">
+                    <DrawingGroup.Transform>
+                        <MatrixTransform x:Uid="MatrixTransform_62" Matrix="1,0,0,1,1,0.984"/>
+                    </DrawingGroup.Transform>
+                    <GeometryDrawing x:Uid="GeometryDrawing_132" Brush="Red"
+                           Geometry="M 6.0000005,5.0130043 L 6.0000005,4.3457031E-06 1.0039904,4.3457031E-06 1.0039904,5.0130043 -1.1669945E-05,5.0130043 -1.1669945E-05,6.0000043 6.9980025,6.0000043 6.9980025,5.0130043 Z"/>
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DrawingBrush x:Key="UnpinIconBrush" x:Uid="DrawingBrush_12" TileBrush.Stretch="None">
+        <DrawingBrush.Drawing>
+            <DrawingGroup x:Uid="DrawingGroup_186">
+                <DrawingGroup x:Uid="DrawingGroup_187">
+                    <DrawingGroup.Transform>
+                        <MatrixTransform x:Uid="MatrixTransform_63" Matrix="1,0,0,1,3,0"/>
+                    </DrawingGroup.Transform>
+                    <GeometryDrawing x:Uid="GeometryDrawing_133" Brush="Red"
+                           Geometry="M 0.5,0.5 L 2.5,0.5 2.5,1.5 7.5,1.5 7.5,7.5 2.5,7.5 2.5,8.5 0.5,8.5 Z">
+                        <GeometryDrawing.Pen>
+                            <Pen x:Uid="Pen_68" Brush="#FF00FF00" DashCap="Flat" EndLineCap="Flat" LineJoin="Miter" MiterLimit="10"
+                   StartLineCap="Flat" Thickness="1"/>
+                        </GeometryDrawing.Pen>
+                    </GeometryDrawing>
+                </DrawingGroup>
+                <DrawingGroup x:Uid="DrawingGroup_188">
+                    <DrawingGroup.Transform>
+                        <MatrixTransform x:Uid="MatrixTransform_64" Matrix="1,0,0,1,0,3"/>
+                    </DrawingGroup.Transform>
+                    <GeometryDrawing x:Uid="GeometryDrawing_134" Brush="#FF00FF00">
+                        <GeometryDrawing.Geometry>
+                            <PathGeometry x:Uid="PathGeometry_46"
+                            Figures="M0.98900005,0 L3.989,0 3.989,3 0.98900005,3 0.98900005,2 0,2 0,1 0.98900005,1 z"/>
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                </DrawingGroup>
+                <DrawingGroup x:Uid="DrawingGroup_189">
+                    <DrawingGroup.Transform>
+                        <MatrixTransform x:Uid="MatrixTransform_65" Matrix="1,0,0,1,1,4"/>
+                    </DrawingGroup.Transform>
+                    <GeometryDrawing x:Uid="GeometryDrawing_135" Brush="Red" Geometry="M 0,0 L 2,0 2,1 0,1 Z"/>
+                </DrawingGroup>
+                <DrawingGroup x:Uid="DrawingGroup_190">
+                    <DrawingGroup.Transform>
+                        <MatrixTransform x:Uid="MatrixTransform_66" Matrix="1,0,0,1,0,2"/>
+                    </DrawingGroup.Transform>
+                    <GeometryDrawing x:Uid="GeometryDrawing_136" Brush="#59000000"
+                           Geometry="M 0.99999994,4 L 3,4 3,4.9999999 0.99999994,4.9999999 M 0,3.0000001 L 0.99999994,3.0000001 0.99999994,4 0,4 M 11,0 L 12,0 12,5.9999999 12,7 7,7 7,8 3,8 3,7 6,7 6,5.9999999 11,5.9999999 Z"/>
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DrawingBrush x:Key="close_8x8" x:Uid="DrawingBrush_13" TileBrush.Stretch="None">
+        <DrawingBrush.Drawing>
+            <DrawingGroup x:Uid="DrawingGroup_191">
+                <DrawingGroup x:Uid="DrawingGroup_192">
+                    <GeometryDrawing x:Uid="GeometryDrawing_137" Brush="#FF00FF00">
+                        <GeometryDrawing.Geometry>
+                            <PathGeometry x:Uid="PathGeometry_47"
+                            Figures="M1.7006084,8.0115017E-06 L1.7035767,8.0115017E-06 C1.965786,8.9550333E-06 2.2170978,0.10389091 2.4021206,0.28889342 L4.2019098,2.0835442 6.001699,0.28889342 C6.3876125,-0.096975526 7.0139001,-0.095948546 7.3997765,0.28988274 L8.1210772,1.0111068 C8.3061077,1.1971079 8.4109896,1.4483932 8.4099932,1.7115549 8.4099932,1.9747239 8.3051132,2.2260058 8.119098,2.4110136 L6.3252456,4.1997285 8.1131616,5.9825071 C8.2991789,6.1685098 8.4030673,6.4207778 8.4030673,6.6829553 8.4030673,6.9461357 8.2991653,7.1974144 8.1131616,7.3834036 L7.3918608,8.103638 C7.0040366,8.4894391 6.3806463,8.4894671 5.992794,8.103638 L4.2019098,6.3149231 2.4070678,8.103638 C2.2210604,8.2886325 1.9707398,8.3925235 1.7085239,8.3925235 L1.7055557,8.3925235 C1.4423639,8.3915348 1.1900529,8.2856741 1.005033,8.0996809 L0.29263703,7.379446 C-0.091288121,6.9925893 -0.089255975,6.3683165 0.29659471,5.9825071 L2.0835213,4.1997285 0.29065812,2.4090349 C-0.095230485,2.0241778 -0.097210872,1.3999248 0.28670031,1.0120962 L1.0010751,0.29285067 C1.1861029,0.10586551 1.4374168,8.9550101E-06 1.7006084,8.0115017E-06 z">
+                                <Geometry.Transform>
+                                    <MatrixTransform x:Uid="MatrixTransform_67"
+                                   Matrix="0.951248531137636,0,0,0.953175413338309,-1.71850751874163E-09,-6.10554660937352E-10"/>
+                                </Geometry.Transform>
+                            </PathGeometry>
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                </DrawingGroup>
+                <DrawingGroup x:Uid="DrawingGroup_193">
+                    <DrawingGroup.Transform>
+                        <MatrixTransform x:Uid="MatrixTransform_68" Matrix="1,0,0,1,0.991,0.986"/>
+                    </DrawingGroup.Transform>
+                    <GeometryDrawing x:Uid="GeometryDrawing_138" Brush="Red">
+                        <GeometryDrawing.Pen>
+                            <Pen x:Uid="Pen_69" DashCap="Flat" EndLineCap="Flat" LineJoin="Miter" MiterLimit="10"
+                   StartLineCap="Flat" Thickness="0.2" Brush="Red"/>
+                        </GeometryDrawing.Pen>
+                        <GeometryDrawing.Geometry>
+                            <PathGeometry x:Uid="PathGeometry_48"
+                            Figures="M3.2111252,2.6281242 L5.7423909,0.10000023 6.3280037,0.6886495 3.7996133,3.21198 6.3260868,5.7362691 5.7395155,6.323001 3.2111252,3.7967944 0.68273482,6.3201248 0.10191429,5.7353104 2.6283877,3.21198 0.099997391,0.68673208 0.68081792,0.10095894 z">
+                                <Geometry.Transform>
+                                    <MatrixTransform x:Uid="MatrixTransform_69"
+                                   Matrix="0.932722213716976,0,0,0.934275970109577,0.00673020950114778,0.00657219276991022"/>
+                                </Geometry.Transform>
+                            </PathGeometry>
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DrawingBrush x:Key="close_10x10" x:Uid="DrawingBrush_14" TileBrush.Stretch="None">
+        <DrawingBrush.Drawing>
+            <DrawingGroup x:Uid="DrawingGroup_194">
+                <GeometryDrawing x:Uid="GeometryDrawing_139"
+                         Geometry="M 4.9971855,4.2715004 L 8.268038,0.99998382 9.0000001,1.7355566 5.7319738,5.001415 8.9971832,8.2672733 8.263808,9.000017 4.9971855,5.7313295 1.7277318,8.9957733 1.002835,8.2672733 4.2680495,5.001415 1,1.7327134 1.7263099,1.0027988 4.9971855,4.2715004 Z">
+                    <GeometryDrawing.Pen>
+                        <Pen x:Uid="Pen_70" DashCap="Flat" EndLineCap="Round" LineJoin="Round" MiterLimit="10"
+                 StartLineCap="Round" Thickness="2" Brush="#FF00FF00"/>
+                    </GeometryDrawing.Pen>
+                </GeometryDrawing>
+                <DrawingGroup x:Uid="DrawingGroup_195">
+                    <DrawingGroup.Transform>
+                        <MatrixTransform x:Uid="MatrixTransform_70" Matrix="1,0,0,1,0.766,0.774"/>
+                    </DrawingGroup.Transform>
+                    <GeometryDrawing x:Uid="GeometryDrawing_140"
+                           Geometry="M 4.227695,3.9404042 L 7.6701879,0.49998385 7.9428063,0.77423077 4.5017635,4.2132001 7.9670003,7.6777658 7.6914817,7.9520127 4.227695,4.4845449 0.77261835,7.9389243 0.49999998,7.6675795 3.9550767,4.2132001 0.54168282,0.79749097 0.81430119,0.52469509 4.227695,3.9404042 Z">
+                        <GeometryDrawing.Pen>
+                            <Pen x:Uid="Pen_71" DashCap="Flat" EndLineCap="Round" LineJoin="Round" MiterLimit="10"
+                   StartLineCap="Round" Thickness="1" Brush="Red"/>
+                        </GeometryDrawing.Pen>
+                    </GeometryDrawing>
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DrawingBrush x:Key="ClearSearchIcon" x:Uid="DrawingBrush_15" TileBrush.Stretch="None"
+                TileBrush.Viewbox="0,0,8.374,8.374" TileBrush.ViewboxUnits="Absolute">
+        <DrawingBrush.Drawing>
+            <GeometryDrawing x:Uid="GeometryDrawing_143" Brush="Red">
+                <GeometryDrawing.Geometry>
+                    <PathGeometry x:Uid="PathGeometry_49"
+                        Figures="M1.0046641,0 C1.2577983,0 1.5109327,0.09656262 1.7040676,0.28968786 L4.1870002,2.7724948 6.6699317,0.28968881 C7.0562024,-0.09656262 7.6824695,-0.096562143 8.068739,0.28968834 L8.084297,0.30524508 C8.4705675,0.69149604 8.4705675,1.3177313 8.084297,1.7039827 L5.6013654,4.1867887 8.0842689,6.669567 C8.4705394,7.0558178 8.4705389,7.6820533 8.0842694,8.0683036 L8.0687109,8.0838609 C7.6824414,8.4701112 7.056174,8.4701116 6.6699038,8.0838609 L4.1870002,5.6010826 1.7040961,8.0838614 C1.3178263,8.4701115 0.69155852,8.4701119 0.30528854,8.0838613 L0.28973054,8.0683042 C-0.096539206,7.6820539 -0.096538729,7.0558177 0.28973077,6.6695677 L2.772635,4.1867887 0.2897024,1.7039813 C-0.09656758,1.3177308 -0.096567342,0.69149508 0.2897024,0.30524508 L0.3052604,0.28968738 C0.49839539,0.09656262 0.75152961,0 1.0046641,0 z"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DrawingBrush x:Key="SearchLoopIcon" x:Uid="DrawingBrush_16" TileBrush.Viewbox="0,0,13,13"
+                TileBrush.ViewboxUnits="Absolute" TileBrush.Stretch="None">
+        <DrawingBrush.Drawing>
+            <DrawingGroup x:Uid="DrawingGroup_197">
+                <DrawingGroup x:Uid="DrawingGroup_198">
+                    <DrawingGroup.Transform>
+                        <MatrixTransform x:Uid="MatrixTransform_71" Matrix="1,0,0,1,3.699,0.188"/>
+                    </DrawingGroup.Transform>
+                    <GeometryDrawing x:Uid="GeometryDrawing_144">
+                        <GeometryDrawing.Geometry>
+                            <EllipseGeometry x:Uid="EllipseGeometry_9" Center="4.5,4.5" RadiusX="3.75" RadiusY="3.75"/>
+                        </GeometryDrawing.Geometry>
+                        <GeometryDrawing.Pen>
+                            <Pen x:Uid="Pen_72" Brush="Red" DashCap="Flat" EndLineCap="Flat" LineJoin="Miter" MiterLimit="10"
+                   StartLineCap="Flat" Thickness="1.5"/>
+                        </GeometryDrawing.Pen>
+                    </GeometryDrawing>
+                </DrawingGroup>
+                <DrawingGroup x:Uid="DrawingGroup_199">
+                    <DrawingGroup.Transform>
+                        <MatrixTransform x:Uid="MatrixTransform_72"
+                             Matrix="0.707106781186548,-0.707106781186547,0.707106781186547,0.707106781186548,0.0178537020673732,11.5474327355595"/>
+                    </DrawingGroup.Transform>
+                    <GeometryDrawing x:Uid="GeometryDrawing_145">
+                        <GeometryDrawing.Geometry>
+                            <RectangleGeometry x:Uid="RectangleGeometry_67" RadiusX="0.3" RadiusY="0.3" Rect="0.5,0.5,6.511,1"/>
+                        </GeometryDrawing.Geometry>
+                        <GeometryDrawing.Pen>
+                            <Pen x:Uid="Pen_73" Brush="Red" DashCap="Flat" EndLineCap="Flat" LineJoin="Miter" MiterLimit="10"
+                   StartLineCap="Flat" Thickness="1"/>
+                        </GeometryDrawing.Pen>
+                    </GeometryDrawing>
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+</ResourceDictionary>

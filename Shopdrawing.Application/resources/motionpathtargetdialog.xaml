@@ -1,0 +1,131 @@
+<Border xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:designer="clr-namespace:Microsoft.Expression.DesignSurface.UserInterface.DataPane"
+        xmlns:framework="clr-namespace:Microsoft.Expression.Framework.Controls;assembly=Microsoft.Expression.Framework"
+        xmlns:Databinding="clr-namespace:Microsoft.Expression.Framework.Data;assembly=Microsoft.Expression.Framework"
+        xmlns:automation="clr-namespace:Microsoft.Expression.Framework.Diagnostics;assembly=Microsoft.Expression.Framework"
+        xmlns:Microsoft_Windows_Themes="Microsoft_Windows_Themes"
+        FrameworkElement.Name="DataBindingsDialog" x:Uid="DataBindingsDialog" FrameworkElement.Width="300"
+        FrameworkElement.Height="400" FrameworkElement.Style="{StaticResource DialogRootContainer}">
+  <Grid x:Uid="Grid_4">
+    <FrameworkElement.Resources>
+      <Databinding:BoolToCheckStateConverter x:Key="BoolToCheckStateConverter" x:Uid="Databinding:BoolToCheckStateConverter_1"/>
+      <Databinding:BoolToVisibilityCollapsedConverter x:Key="BoolToVisibilityCollapsedConverter" x:Uid="Databinding:BoolToVisibilityCollapsedConverter_1"/>
+      <Databinding:BoolToVisibilityHiddenConverter x:Key="BoolToVisibilityHiddenConverter" x:Uid="Databinding:BoolToVisibilityHiddenConverter_1"/>
+      <Databinding:NullToBoolConverter x:Key="NullToBoolConverter" x:Uid="Databinding:NullToBoolConverter_1"/>
+      <Databinding:MultiplyConverter x:Key="IndentAmount" x:Uid="framework:MultiplyConverter_1" MultiplyValue="8"/>
+      <Databinding:SingleMarginConverter x:Key="IndentToMargin" x:Uid="framework:SingleMarginConverter_1" TargetSubProperty="Left"
+                                         Databinding:MarginConverter.Converter="{StaticResource IndentAmount}"/>
+      <Style x:Key="RowContainer" x:Uid="Style_3" TargetType="{x:Type ItemsControl}">
+        <Setter x:Uid="Setter_8" Property="Control.Template">
+          <Setter.Value>
+            <ControlTemplate x:Uid="ControlTemplate_2" TargetType="{x:Type ItemsControl}">
+              <StackPanel x:Uid="StackPanel_1" Orientation="Vertical" Panel.IsItemsHost="true"/>
+            </ControlTemplate>
+          </Setter.Value>
+        </Setter>
+      </Style>
+      <ControlTemplate x:Key="HoverableClickControl" x:Uid="ControlTemplate_3"
+                       TargetType="{x:Type framework:ClickControl}">
+        <ContentPresenter x:Uid="ContentPresenter_1" Content="{TemplateBinding ContentControl.Content}"/>
+      </ControlTemplate>
+      <DataTemplate x:Uid="DataTemplate_1" DataType="{x:Type designer:ElementNode}">
+        <StackPanel x:Uid="StackPanel_13" Orientation="Vertical">
+          <automation:AutomationElement.Id>
+            <Binding Path="UniqueId"/>
+          </automation:AutomationElement.Id>
+          <framework:ClickControl FrameworkElement.Name="SelectClickControl" x:Uid="SelectClickControl"
+                                  Control.Template="{StaticResource HoverableClickControl}"
+                                  FrameworkElement.VerticalAlignment="Center" UIElement.Focusable="false">
+            <framework:ClickControl.LeftClickCommand>
+              <Binding Path="SelectCommand" Mode="OneWay"/>
+            </framework:ClickControl.LeftClickCommand>
+            <framework:ClickControl.LeftDoubleClickCommand>
+              <Binding Path="DoubleClickCommand" Mode="OneWay"/>
+            </framework:ClickControl.LeftDoubleClickCommand>
+            <UIElement.IsEnabled>
+              <Binding Path="IsSelectable"/>
+            </UIElement.IsEnabled>
+            <Border x:Name="BackgroundBorder" x:Uid="Border_1" BorderThickness="0,0,0,1"
+                    Background="{DynamicResource LayerChild0Brush}" BorderBrush="Transparent"
+                    UIElement.IsHitTestVisible="{Binding IsSelectable}">
+              <StackPanel x:Uid="StackPanel_14" Orientation="Horizontal"
+                          FrameworkElement.Margin="{Binding TreeDepth, Mode=OneTime, Converter={StaticResource IndentToMargin}}">
+                <CheckBox FrameworkElement.Name="ExpandCollapseCheckBox" x:Uid="ExpandCollapseCheckBox"
+                          FrameworkElement.Style="{DynamicResource ExpandCollapseCheckBox}"
+                          FrameworkElement.VerticalAlignment="Center" UIElement.Focusable="false">
+                  <ToggleButton.IsChecked>
+                    <Binding Path="IsExpanded" Mode="TwoWay" Converter="{StaticResource BoolToCheckStateConverter}"/>
+                  </ToggleButton.IsChecked>
+                  <UIElement.Visibility>
+                    <Binding Path="HasChildren" Mode="OneWay" Converter="{StaticResource BoolToVisibilityHiddenConverter}"/>
+                  </UIElement.Visibility>
+                </CheckBox>
+                <TextBlock x:Name="ElementNameText" x:Uid="TextBlock_1">
+                  <TextBlock.Text>
+                    <Binding Path="Name"/>
+                  </TextBlock.Text>
+                </TextBlock>
+              </StackPanel>
+            </Border>
+          </framework:ClickControl>
+          <ItemsControl x:Uid="ItemsControl_1" FrameworkElement.Style="{StaticResource RowContainer}"
+                        UIElement.Focusable="false">
+            <ItemsControl.ItemsSource>
+              <Binding Path="Children"/>
+            </ItemsControl.ItemsSource>
+            <UIElement.Visibility>
+              <Binding Path="IsExpanded" Mode="OneWay" Converter="{StaticResource BoolToVisibilityCollapsedConverter}"/>
+            </UIElement.Visibility>
+          </ItemsControl>
+        </StackPanel>
+        <DataTemplate.Triggers>
+          <Trigger x:Uid="Trigger_1" SourceName="BackgroundBorder" Property="UIElement.IsMouseOver" Value="true">
+            <Setter x:Uid="Setter_9" TargetName="BackgroundBorder" Value="{DynamicResource ListHoverBrush}"
+                    Property="Border.Background"/>
+          </Trigger>
+          <DataTrigger x:Uid="DataTrigger_1" Value="True" Binding="{Binding IsSelected}">
+            <Setter x:Uid="Setter_11" TargetName="BackgroundBorder" Value="{DynamicResource ListSelectedBrush}"
+                    Property="Border.Background"/>
+            <Setter x:Uid="Setter_12" TargetName="BackgroundBorder" Value="{DynamicResource ListSelectedTextBrush}"
+                    Property="TextElement.Foreground"/>
+          </DataTrigger>
+          <DataTrigger x:Uid="DataTrigger_2" Value="False" Binding="{Binding IsSelectable}">
+            <Setter x:Uid="Setter_13" TargetName="SelectClickControl" Property="UIElement.Opacity" Value="0.5"/>
+          </DataTrigger>
+        </DataTemplate.Triggers>
+      </DataTemplate>
+    </FrameworkElement.Resources>
+    <Grid.RowDefinitions>
+      <RowDefinition x:Uid="RowDefinition_21" Height="Auto"/>
+      <RowDefinition x:Uid="RowDefinition_23" Height="*"/>
+      <RowDefinition x:Uid="RowDefinition_22" Height="Auto"/>
+    </Grid.RowDefinitions>
+    <TextBlock x:Uid="TextBlock_2" TextWrapping="Wrap">
+      <TextBlock.Text>
+        <Binding Path="InfoText"/>
+      </TextBlock.Text>
+    </TextBlock>
+    <ScrollViewer Grid.Row="1" x:Uid="ScrollViewer_1" HorizontalScrollBarVisibility="Auto"
+                  VerticalScrollBarVisibility="Auto" FrameworkElement.Style="{DynamicResource RoundedScrollViewer}"
+                  Control.Background="{DynamicResource BackgroundBrush}" UIElement.Focusable="false"
+                  FrameworkElement.Margin="{StaticResource DefaultTopMargin}">
+      <ContentControl x:Uid="ContentControl_1" UIElement.Focusable="false">
+        <ContentControl.Content>
+          <Binding Path="Root"/>
+        </ContentControl.Content>
+      </ContentControl>
+    </ScrollViewer>
+    <UniformGrid x:Uid="StackPanel_12" Rows="1" FrameworkElement.HorizontalAlignment="Right"
+                 FrameworkElement.Margin="{DynamicResource ExtraLargeTopMargin}" Grid.Row="2">
+      <Button FrameworkElement.Name="AcceptButton" x:Uid="AcceptButton"
+              FrameworkElement.Style="{DynamicResource DialogButton}">
+        <UIElement.IsEnabled>
+          <Binding Path="SelectedElement" Converter="{StaticResource NullToBoolConverter}"/>
+        </UIElement.IsEnabled>OK</Button>
+      <Button FrameworkElement.Name="CancelButton" x:Uid="CancelButton"
+              FrameworkElement.Style="{DynamicResource DialogButton}"
+              FrameworkElement.Margin="{StaticResource DefaultLeftMargin}" IsCancel="true">Cancel</Button>
+    </UniformGrid>
+  </Grid>
+</Border>

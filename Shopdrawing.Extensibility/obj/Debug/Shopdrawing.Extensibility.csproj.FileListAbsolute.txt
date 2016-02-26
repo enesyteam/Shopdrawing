@@ -1,0 +1,5 @@
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Extensibility\bin\Debug\Shopdrawing.Extensibility.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Extensibility\bin\Debug\Shopdrawing.Extensibility.pdb
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Extensibility\obj\Debug\Shopdrawing.Extensibility.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Extensibility\obj\Debug\Shopdrawing.Extensibility.pdb
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Extensibility\obj\Debug\Shopdrawing.Extensibility.csprojResolveAssemblyReference.cache

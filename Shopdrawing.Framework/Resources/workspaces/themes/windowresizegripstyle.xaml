@@ -1,0 +1,40 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vs="clr-namespace:Microsoft.VisualStudio.PlatformUI.Shell.Controls"
+                    x:Uid="ResourceDictionary_1">
+  <Style x:Uid="Style_1" TargetType="{x:Type vs:WindowResizeGrip}">
+    <Setter x:Uid="Setter_1" Property="Control.Template">
+      <Setter.Value>
+        <ControlTemplate x:Uid="ControlTemplate_1" TargetType="{x:Type vs:WindowResizeGrip}">
+          <Border x:Uid="Border_1" Background="Transparent"/>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+    <Style.Triggers>
+      <Trigger x:Uid="Trigger_1" Property="vs:WindowResizeGrip.ResizeGripDirection" Value="Left">
+        <Setter x:Uid="Setter_2" Property="FrameworkElement.Cursor" Value="SizeWE"/>
+      </Trigger>
+      <Trigger x:Uid="Trigger_2" Property="vs:WindowResizeGrip.ResizeGripDirection" Value="Right">
+        <Setter x:Uid="Setter_3" Property="FrameworkElement.Cursor" Value="SizeWE"/>
+      </Trigger>
+      <Trigger x:Uid="Trigger_3" Property="vs:WindowResizeGrip.ResizeGripDirection" Value="Top">
+        <Setter x:Uid="Setter_4" Property="FrameworkElement.Cursor" Value="SizeNS"/>
+      </Trigger>
+      <Trigger x:Uid="Trigger_4" Property="vs:WindowResizeGrip.ResizeGripDirection" Value="Bottom">
+        <Setter x:Uid="Setter_5" Property="FrameworkElement.Cursor" Value="SizeNS"/>
+      </Trigger>
+      <Trigger x:Uid="Trigger_5" Property="vs:WindowResizeGrip.ResizeGripDirection" Value="TopLeft">
+        <Setter x:Uid="Setter_6" Property="FrameworkElement.Cursor" Value="SizeNWSE"/>
+      </Trigger>
+      <Trigger x:Uid="Trigger_6" Property="vs:WindowResizeGrip.ResizeGripDirection" Value="BottomRight">
+        <Setter x:Uid="Setter_7" Property="FrameworkElement.Cursor" Value="SizeNWSE"/>
+      </Trigger>
+      <Trigger x:Uid="Trigger_7" Property="vs:WindowResizeGrip.ResizeGripDirection" Value="TopRight">
+        <Setter x:Uid="Setter_8" Property="FrameworkElement.Cursor" Value="SizeNESW"/>
+      </Trigger>
+      <Trigger x:Uid="Trigger_8" Property="vs:WindowResizeGrip.ResizeGripDirection" Value="BottomLeft">
+        <Setter x:Uid="Setter_9" Property="FrameworkElement.Cursor" Value="SizeNESW"/>
+      </Trigger>
+    </Style.Triggers>
+  </Style>
+</ResourceDictionary>

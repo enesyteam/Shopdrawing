@@ -1,0 +1,46 @@
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock.Themes.Aero\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock.Themes.Aero\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.pdb
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock.Themes.Aero\bin\Debug\Xceed.Wpf.AvalonDock.dll
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock.Themes.Aero\bin\Debug\Xceed.Wpf.AvalonDock.pdb
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock.Themes.Aero\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock.Themes.Aero\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock.Themes.Aero\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock.Themes.Aero\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock.Themes.Aero\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock.Themes.Aero\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock.Themes.Aero\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock.Themes.Aero\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock.Themes.Aero\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock.Themes.Aero\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock.Themes.Aero\obj\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.csprojResolveAssemblyReference.cache
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock.Themes.Aero\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock.Themes.Aero\obj\Debug\Xceed.Wpf.AvalonDock.Themes.Aero_MarkupCompile.cache
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock.Themes.Aero\obj\Debug\Xceed.Wpf.AvalonDock.Themes.Aero_MarkupCompile.lref
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock.Themes.Aero\obj\Debug\Brushes.baml
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock.Themes.Aero\obj\Debug\Theme.baml
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock.Themes.Aero\obj\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.g.resources
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock.Themes.Aero\obj\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+E:\Temp\C# Examples\Dock\Version2.0\Xceed.Wpf.AvalonDock.Themes.Aero\obj\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock.Themes.Aero\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock.Themes.Aero\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock.Themes.Aero\bin\Debug\Xceed.Wpf.AvalonDock.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock.Themes.Aero\bin\Debug\Xceed.Wpf.AvalonDock.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock.Themes.Aero\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock.Themes.Aero\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock.Themes.Aero\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock.Themes.Aero\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock.Themes.Aero\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock.Themes.Aero\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock.Themes.Aero\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock.Themes.Aero\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock.Themes.Aero\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock.Themes.Aero\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock.Themes.Aero\obj\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.csprojResolveAssemblyReference.cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock.Themes.Aero\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock.Themes.Aero\obj\Debug\Xceed.Wpf.AvalonDock.Themes.Aero_MarkupCompile.cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock.Themes.Aero\obj\Debug\Xceed.Wpf.AvalonDock.Themes.Aero_MarkupCompile.lref
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock.Themes.Aero\obj\Debug\Brushes.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock.Themes.Aero\obj\Debug\Theme.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock.Themes.Aero\obj\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.g.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock.Themes.Aero\obj\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock.Themes.Aero\obj\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.pdb

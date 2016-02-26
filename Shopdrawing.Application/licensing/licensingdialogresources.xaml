@@ -1,0 +1,13 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:System="clr-namespace:System;assembly=System"
+                    xmlns:Mscorlib="clr-namespace:System;assembly=Mscorlib"
+                    x:Uid="ResourceDictionary_1">
+  <BitmapImage x:Key="LicenseDialogImage" x:Uid="BitmapImage_1" UriSource="License.png"/>
+  <!--<Uri x:Key="PrivacyStatementUri" x:Uid="System:Uri_3">
+    http://go.microsoft.com/fwlink/?LinkId=185090
+  </Uri>-->
+  <Mscorlib:String x:Key="LicensingDialogText" x:Uid="Mscorlib:String_1">
+    I have a product key and want to license Microsoft Expression Blend:
+  </Mscorlib:String>
+</ResourceDictionary>

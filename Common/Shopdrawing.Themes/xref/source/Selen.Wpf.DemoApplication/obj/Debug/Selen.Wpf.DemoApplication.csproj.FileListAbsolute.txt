@@ -1,0 +1,11 @@
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\xref\source\Selen.Wpf.DemoApplication\obj\Debug\Selen.Wpf.DemoApplication.csprojResolveAssemblyReference.cache
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\xref\source\Selen.Wpf.DemoApplication\obj\Debug\AddRocketDialog.baml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\xref\source\Selen.Wpf.DemoApplication\obj\Debug\MainWindow.baml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\xref\source\Selen.Wpf.DemoApplication\obj\Debug\App.baml
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\xref\source\Selen.Wpf.DemoApplication\obj\Debug\AddRocketDialog.g.cs
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\xref\source\Selen.Wpf.DemoApplication\obj\Debug\MainWindow.g.cs
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\xref\source\Selen.Wpf.DemoApplication\obj\Debug\App.g.cs
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\xref\source\Selen.Wpf.DemoApplication\obj\Debug\Selen.Wpf.DemoApplication_MarkupCompile.cache
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\xref\source\Selen.Wpf.DemoApplication\obj\Debug\Selen.Wpf.DemoApplication.g.resources
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\xref\source\Selen.Wpf.DemoApplication\obj\Debug\Selen.Wpf.DemoApplication.Properties.Resources.resources
+F:\Videos Hai\ribbon\LiveGeometry\Shopdrawing.Themes\xref\source\Selen.Wpf.DemoApplication\obj\Debug\Selen.Wpf.DemoApplication.csproj.GenerateResource.Cache

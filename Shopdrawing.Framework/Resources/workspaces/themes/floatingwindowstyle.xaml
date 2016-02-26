@@ -1,0 +1,70 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vs="clr-namespace:Microsoft.VisualStudio.PlatformUI.Shell.Controls"
+                    x:Uid="ResourceDictionary_1">
+  <LinearGradientBrush x:Key="GlyphButtonBackgroundBrush" x:Uid="LinearGradientBrush_1" StartPoint="0,0" EndPoint="0,1">
+    <GradientStop x:Uid="GradientStop_1" Color="#C3E6F4" Offset="0"/>
+    <GradientStop x:Uid="GradientStop_2" Color="#C3E6F4" Offset="0.5"/>
+    <GradientStop x:Uid="GradientStop_3" Color="#B6E4F7" Offset="0.5"/>
+    <GradientStop x:Uid="GradientStop_4" Color="#B6E4F7" Offset="1"/>
+  </LinearGradientBrush>
+  <LinearGradientBrush x:Key="GlyphButtonPressedBackgroundBrush" x:Uid="LinearGradientBrush_2" StartPoint="0,0"
+                       EndPoint="0,1">
+    <GradientStop x:Uid="GradientStop_5" Color="#D2E9F2" Offset="0"/>
+    <GradientStop x:Uid="GradientStop_6" Color="#D2E9F2" Offset="0.5"/>
+    <GradientStop x:Uid="GradientStop_7" Color="#C3E6F4" Offset="0.5"/>
+    <GradientStop x:Uid="GradientStop_8" Color="#C3E6F4" Offset="1"/>
+  </LinearGradientBrush>
+  <Style x:Uid="Style_1" TargetType="{x:Type vs:FloatingWindow}" BasedOn="{StaticResource {x:Type Window}}">
+    <Setter x:Uid="Setter_1" Property="InputMethod.IsInputMethodSuspended" Value="true"/>
+    <Setter x:Uid="Setter_2" Property="Window.Left" Value="{Binding FloatingLeft, Mode=TwoWay}"/>
+    <Setter x:Uid="Setter_3" Property="Window.Top" Value="{Binding FloatingTop, Mode=TwoWay}"/>
+    <Setter x:Uid="Setter_4" Property="FrameworkElement.Width" Value="{Binding FloatingWidth, Mode=TwoWay}"/>
+    <Setter x:Uid="Setter_5" Property="FrameworkElement.Height" Value="{Binding FloatingHeight, Mode=TwoWay}"/>
+    <Setter x:Uid="Setter_6" Property="FrameworkElement.MinWidth" Value="50"/>
+    <Setter x:Uid="Setter_7" Property="FrameworkElement.MinHeight" Value="50"/>
+    <Setter x:Uid="Setter_9" Property="ContentControl.Content">
+      <Setter.Value>
+        <Binding/>
+      </Setter.Value>
+    </Setter>
+    <Setter x:Uid="Setter_11" Property="Window.ShowInTaskbar" Value="false"/>
+    <Setter x:Uid="Setter_12" Property="vs:FloatingWindow.HasMultipleOnScreenViews"
+            Value="{Binding HasMultipleOnScreenViews}"/>
+    <Setter x:Uid="Setter_13" Property="Control.Background" Value="#6a80a0"/>
+    <Setter x:Uid="Setter_14" Property="Control.Template">
+      <Setter.Value>
+        <ControlTemplate x:Uid="ControlTemplate_1" TargetType="{x:Type vs:FloatingWindow}">
+          <Grid x:Uid="Grid_1" Panel.Background="{TemplateBinding Control.Background}">
+            <DockPanel x:Uid="DockPanel_1">
+              <vs:DragUndockHeader x:Name="TitleBar" x:Uid="TitleBar" IsWindowTitleBar="true" UIElement.Visibility="Collapsed"
+                                   DockPanel.Dock="Top" ViewElement="{Binding Child}">
+                <Border x:Uid="Border_1" FrameworkElement.Height="16">
+                  <vs:WindowTitleBarButton x:Uid="vs:WindowTitleBarButton_1" FrameworkElement.HorizontalAlignment="Right"
+                                           ButtonBase.Command="{x:Static vs:ViewCommands.HideViewCommand}" Control.BorderBrush="#4a6090"
+                                           Control.BorderThickness="1,0,1,1"
+                                           vs:GlyphButton.HoverBackground="{StaticResource GlyphButtonBackgroundBrush}"
+                                           vs:GlyphButton.HoverBorderBrush="#3399FF" vs:GlyphButton.HoverBorderThickness="1,0,1,1"
+                                           vs:GlyphButton.PressedBackground="{StaticResource GlyphButtonPressedBackgroundBrush}"
+                                           vs:GlyphButton.PressedBorderBrush="#006CD8" vs:GlyphButton.PressedBorderThickness="1,0,1,1"
+                                           FrameworkElement.Margin="0,0,4,0" FrameworkElement.Width="20" FrameworkElement.Height="14"
+                                           ButtonBase.CommandParameter="{Binding Child}">
+                    <Path x:Uid="Path_1" Shape.Fill="#222222" FrameworkElement.Width="10" FrameworkElement.Height="8"
+                          Shape.Stretch="Uniform" Data="F1 M 0,0 L 2,0 5,3 8,0 10,0 6,4 10,8 8,8 5,5 2,8 0,8 4,4 0,0 Z"/>
+                  </vs:WindowTitleBarButton>
+                </Border>
+              </vs:DragUndockHeader>
+              <ContentPresenter x:Uid="ContentPresenter_1" ContentSource="Content" FrameworkElement.Margin="4"/>
+            </DockPanel>
+            <vs:WindowResizeFrame x:Uid="vs:WindowResizeFrame_1"/>
+          </Grid>
+          <ControlTemplate.Triggers>
+            <Trigger x:Uid="Trigger_1" Property="vs:FloatingWindow.HasMultipleOnScreenViews" Value="true">
+              <Setter x:Uid="Setter_15" TargetName="TitleBar" Property="UIElement.Visibility" Value="Visible"/>
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

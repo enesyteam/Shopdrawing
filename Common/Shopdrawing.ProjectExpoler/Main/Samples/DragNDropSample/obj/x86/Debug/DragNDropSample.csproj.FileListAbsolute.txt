@@ -1,0 +1,17 @@
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\DragNDropSample\bin\Debug\DragNDropSample.exe.config
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\DragNDropSample\bin\Debug\DragNDropSample.exe
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\DragNDropSample\bin\Debug\DragNDropSample.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\DragNDropSample\bin\Debug\TreeViewEx.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\DragNDropSample\bin\Debug\TreeViewEx.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\DragNDropSample\obj\x86\Debug\PathsAndGradients.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\DragNDropSample\obj\x86\Debug\MainWindow.g.cs
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\DragNDropSample\obj\x86\Debug\App.g.cs
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\DragNDropSample\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\DragNDropSample\obj\x86\Debug\DragNDropSample_MarkupCompile.cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\DragNDropSample\obj\x86\Debug\DragNDropSample_MarkupCompile.lref
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\DragNDropSample\obj\x86\Debug\MainWindow.baml
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\DragNDropSample\obj\x86\Debug\DragNDropSample.g.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\DragNDropSample\obj\x86\Debug\DragNDropSample.Properties.Resources.resources
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\DragNDropSample\obj\x86\Debug\DragNDropSample.csproj.GenerateResource.Cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\DragNDropSample\obj\x86\Debug\DragNDropSample.exe
+E:\Projects\C#\Shopdrawing\LiveGeometry\Shopdrawing.Controls\Shopdrawing.ProjectExpoler\Main\Samples\DragNDropSample\obj\x86\Debug\DragNDropSample.pdb

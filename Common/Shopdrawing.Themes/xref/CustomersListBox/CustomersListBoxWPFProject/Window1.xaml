@@ -1,0 +1,187 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:ListBoxSelectionColorChange"
+	x:Class="ListBoxSelectionColorChange.Window1"
+	x:Name="Window"
+	Title="Customers Listbox"
+	Width="1000" Height="480">
+    <Window.Resources>
+        
+        <Style x:Key="ListBoxItemStyle1" TargetType="{x:Type ListBoxItem}">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+            <Setter Property="VerticalContentAlignment" Value="{Binding Path=VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
+            <Setter Property="Padding" Value="2,2,2,2"/>
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                        <Border x:Name="Bd" Margin="1" SnapsToDevicePixels="true" CornerRadius="3" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" >
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsSelected" Value="true">
+                                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                                <Setter Property="Background" TargetName="Bd">
+                                    <Setter.Value>
+                                        #E1E1E1
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="IsSelected" Value="true"/>
+                                    <Condition Property="Selector.IsSelectionActive" Value="false"/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="Background" TargetName="Bd" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
+                                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+                            </MultiTrigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                            </Trigger>
+
+                            <Trigger  Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" TargetName="Bd">
+                                    <Setter.Value>
+                                        #F2F2F2
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="TextBlockContentStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="Foreground" Value="#191F5D"/>
+            <Setter Property="FontSize"   Value="13"/>
+            <Setter Property="TextAlignment" Value="Left"/>
+            <Setter Property="Margin" Value="3,3,10,3"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+        </Style>
+        <Style x:Key="TextBlockLabelStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="Foreground" Value="#515151"/>
+            <Setter Property="FontSize"   Value="12"/>
+            <Setter Property="TextAlignment" Value="Right"/>
+            <Setter Property="Margin" Value="15,3,3,3"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+        </Style>
+        <local:ByteArrayToImageConverter x:Key="LocalByteArrayToImageConverter"/>
+        <local:AddressToFullAddressConverter x:Key="LocalAddressToFullAddressConverter"/>      
+        <DataTemplate x:Key="ItemTemplateStyle1">
+            
+                     
+            <Border Name="GridBorder" BorderThickness="2" BorderBrush="silver" CornerRadius="3" Padding="4">
+                
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="8*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+
+                        <Grid Name="ResultsGrid" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+
+                            <StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Left" Margin="18,0,0,0">
+                                <TextBlock  Foreground="#174E8F"
+                           FontSize="15" 
+                           FontWeight="Bold"
+                           TextAlignment="Center"
+                           VerticalAlignment="Center"
+                           >
+                            <TextBlock.Text>
+                                <MultiBinding StringFormat=" {0} {1} {2}">
+                                    <Binding Path="Title"/>
+                                    <Binding Path="Firstname"/>
+                                    <Binding Path="Lastname"/>
+                                </MultiBinding>                         
+                            </TextBlock.Text>
+                                </TextBlock>
+
+                                <TextBlock  Foreground="#174E8F"
+                               FontSize="13" 
+                               TextAlignment="Center"
+                               VerticalAlignment="Center"
+                               Margin="5,0,0,0">
+                            <TextBlock.Text>
+                                <MultiBinding StringFormat="({0})">
+                                    <Binding Path="CustomerId"/>
+                                </MultiBinding>
+                            </TextBlock.Text>
+
+                                </TextBlock>
+
+                            </StackPanel>
+
+
+                            <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Left" Margin="10,0,0,0">
+
+                                <TextBlock Text="Date of Birth:" Style="{StaticResource TextBlockLabelStyle}" />
+
+                                <TextBlock Text="{Binding DOB}"  Style="{StaticResource TextBlockContentStyle}"/>
+
+                                <TextBlock Text="Status:" Style="{StaticResource TextBlockLabelStyle}" />
+
+                                <TextBlock Text="{Binding Status}"  Style="{StaticResource TextBlockContentStyle}" />
+
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Left" Margin="10,0,0,0">
+                                
+                                <TextBlock Text="Address:" Style="{StaticResource TextBlockLabelStyle}"/>
+
+                                <TextBlock Text="{Binding Path=FullAddress, Converter={StaticResource LocalAddressToFullAddressConverter}}"  Style="{StaticResource TextBlockContentStyle}" />
+
+                            </StackPanel>
+
+                        </Grid>
+                    
+                    <Border Grid.Column="1" BorderThickness="2" BorderBrush="#ECF0F6" CornerRadius="3" Margin="5" Height="80" HorizontalAlignment="Center">
+                            <Image  Margin="2" Stretch="Uniform"  Source="{Binding Path=Image,Converter={StaticResource LocalByteArrayToImageConverter}}">
+                            </Image>
+                    </Border>
+
+                </Grid>
+               
+            </Border>
+
+        </DataTemplate>
+
+    </Window.Resources>
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*"></RowDefinition>
+            <RowDefinition Height="3*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border BorderBrush="#E1E1E1" BorderThickness="2" CornerRadius="5" Margin="10">
+            <ListBox Name="listBox_Results"  
+                 HorizontalAlignment="Stretch"
+                 VerticalAlignment="Stretch"
+                 BorderThickness="0"
+                 Margin="2"
+                 Grid.Row="0"
+                 ItemTemplate="{StaticResource ItemTemplateStyle1}"
+                 ItemContainerStyle="{DynamicResource ListBoxItemStyle1}"
+                 ItemsSource="{Binding}" >
+                
+            </ListBox>
+        </Border>
+        <Button Click="Button_Click" Grid.Row="1" Width="100" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center">
+            Get Customers
+        </Button>
+
+    </Grid>
+</Window>

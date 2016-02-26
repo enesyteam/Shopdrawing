@@ -1,0 +1,75 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+ xmlns:vs="clr-namespace:Microsoft.VisualStudio.PlatformUI.Shell.Controls">
+    <Style x:Key="{x:Type vs:AutoHideChannelControl}" TargetType="{x:Type vs:AutoHideChannelControl}">
+        <Setter Property="Control.Background" Value="#00FFFFFF"/>
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type vs:AutoHideChannelControl}">
+                    <Grid Background="{TemplateBinding Control.Background}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="0"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="0"/>
+                        </Grid.ColumnDefinitions>
+                        <Canvas Name="PART_AutoHideSlideout"
+                                     Grid.Row="1"
+                                     Grid.Column="1">
+                            <ContentPresenter Name="Presenter" Content="{TemplateBinding vs:AutoHideChannelControl.AutoHideSlideout}"/>
+                        </Canvas>
+                        <StackPanel Name="ItemsPresenter"
+                                     Grid.Row="1"
+                                     Grid.Column="1"
+                                     Orientation="{TemplateBinding vs:AutoHideChannelControl.Orientation}"
+                                     IsItemsHost="True"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="vs:AutoHideChannelControl.ChannelDock" Value="Left">
+                            <Setter TargetName="PART_AutoHideSlideout"
+                                             Property="Grid.Column"
+                                             Value="2"/>
+                            <Setter TargetName="Presenter"
+                                             Value="{Binding ElementName=PART_AutoHideSlideout,Path=ActualHeight}"
+                                             Property="FrameworkElement.Height"/>
+                        </Trigger>
+                        <Trigger Property="vs:AutoHideChannelControl.ChannelDock" Value="Right">
+                            <Setter TargetName="PART_AutoHideSlideout"
+                                             Property="Grid.Column"
+                                             Value="0"/>
+                            <Setter TargetName="Presenter"
+                                             Property="Canvas.Right"
+                                             Value="0"/>
+                            <Setter TargetName="Presenter"
+                                             Value="{Binding ElementName=PART_AutoHideSlideout,Path=ActualHeight}"
+                                             Property="FrameworkElement.Height"/>
+                        </Trigger>
+                        <Trigger Property="vs:AutoHideChannelControl.ChannelDock" Value="Top">
+                            <Setter TargetName="PART_AutoHideSlideout"
+                                             Property="Grid.Row"
+                                             Value="2"/>
+                            <Setter TargetName="Presenter"
+                                             Value="{Binding ElementName=PART_AutoHideSlideout,Path=ActualWidth}"
+                                             Property="FrameworkElement.Width"/>
+                        </Trigger>
+                        <Trigger Property="vs:AutoHideChannelControl.ChannelDock" Value="Bottom">
+                            <Setter TargetName="PART_AutoHideSlideout"
+                                             Property="Grid.Row"
+                                             Value="0"/>
+                            <Setter TargetName="Presenter"
+                                             Property="Canvas.Bottom"
+                                             Value="0"/>
+                            <Setter TargetName="Presenter"
+                                             Value="{Binding ElementName=PART_AutoHideSlideout,Path=ActualWidth}"
+                                             Property="FrameworkElement.Width"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

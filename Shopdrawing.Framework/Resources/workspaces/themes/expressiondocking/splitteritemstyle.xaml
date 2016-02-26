@@ -1,0 +1,50 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vs="clr-namespace:Microsoft.VisualStudio.PlatformUI"
+                    xmlns:fwdata="clr-namespace:Microsoft.Expression.Framework.Data"
+                    x:Uid="ResourceDictionary_1">
+  <Style x:Uid="Style_1" TargetType="{x:Type vs:SplitterItem}">
+    <Style.Resources>
+      <fwdata:NegateIntegerConverter x:Uid="NegateIntegerConverter" x:Key="NegateIntegerConverter"/>
+    </Style.Resources>
+    <Setter x:Uid="Setter_9" Property="Panel.ZIndex">
+      <Setter.Value>
+        <Binding Path="(vs:SplitterPanel.Index)" RelativeSource="{RelativeSource Self}"
+                 Converter="{StaticResource NegateIntegerConverter}"/>
+      </Setter.Value>
+    </Setter>
+    <Setter x:Uid="Setter_1" Property="Control.Template">
+      <Setter.Value>
+        <ControlTemplate x:Uid="ControlTemplate_1" TargetType="{x:Type vs:SplitterItem}">
+          <DockPanel x:Uid="DockPanel_1" LastChildFill="true">
+            <vs:SplitterGrip x:Name="Splitter" x:Uid="Splitter" Control.Background="Transparent" Panel.ZIndex="1"
+                             FrameworkElement.Width="{TemplateBinding vs:SplitterItemsControl.SplitterGripSize}"
+                             FrameworkElement.Height="{TemplateBinding vs:SplitterItemsControl.SplitterGripSize}">
+              <vs:SplitterGrip.Orientation>
+                <Binding Path="Orientation">
+                  <Binding.RelativeSource>
+                    <RelativeSource Mode="FindAncestor" AncestorType="{x:Type vs:SplitterPanel}"/>
+                  </Binding.RelativeSource>
+                </Binding>
+              </vs:SplitterGrip.Orientation>
+            </vs:SplitterGrip>
+            <ContentPresenter x:Uid="ContentPresenter_1" ContentSource="{TemplateBinding ContentControl.Content}"/>
+          </DockPanel>
+          <ControlTemplate.Triggers>
+            <Trigger x:Uid="Trigger_1" SourceName="Splitter" Property="vs:SplitterGrip.Orientation" Value="Horizontal">
+              <Setter x:Uid="Setter_3" TargetName="Splitter" Property="FrameworkElement.Height" Value="Auto"/>
+              <Setter x:Uid="Setter_4" TargetName="Splitter" Property="DockPanel.Dock" Value="Right"/>
+            </Trigger>
+            <Trigger x:Uid="Trigger_2" SourceName="Splitter" Property="vs:SplitterGrip.Orientation" Value="Vertical">
+              <Setter x:Uid="Setter_5" TargetName="Splitter" Property="FrameworkElement.Width" Value="Auto"/>
+              <Setter x:Uid="Setter_7" TargetName="Splitter" Property="DockPanel.Dock" Value="Bottom"/>
+            </Trigger>
+            <Trigger x:Uid="Trigger_3" Property="vs:SplitterPanel.IsLast" Value="true">
+              <Setter x:Uid="Setter_8" TargetName="Splitter" Property="UIElement.Visibility" Value="Collapsed"/>
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

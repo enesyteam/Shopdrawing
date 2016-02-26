@@ -1,0 +1,15 @@
+F:\Videos Hai\ribbon\LiveGeometry\Lib\Utilities\Utilities\bin\Debug\Shopdrawing.Utilities.dll
+F:\Videos Hai\ribbon\LiveGeometry\Lib\Utilities\Utilities\bin\Debug\Shopdrawing.Utilities.pdb
+F:\Videos Hai\ribbon\LiveGeometry\Lib\Utilities\Utilities\obj\Debug\Shopdrawing.Utilities.dll
+F:\Videos Hai\ribbon\LiveGeometry\Lib\Utilities\Utilities\obj\Debug\Shopdrawing.Utilities.pdb
+F:\Videos Hai\ribbon\LiveGeometry\Lib\Utilities\Utilities\obj\Debug\Utilities.csprojResolveAssemblyReference.cache
+E:\Projects\C#\Shopdrawing\LiveGeometry\Lib\Utilities\Utilities\bin\Debug\Shopdrawing.Utilities.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Lib\Utilities\Utilities\bin\Debug\Shopdrawing.Utilities.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Lib\Utilities\Utilities\obj\Debug\Shopdrawing.Utilities.dll
+E:\Projects\C#\Shopdrawing\LiveGeometry\Lib\Utilities\Utilities\obj\Debug\Shopdrawing.Utilities.pdb
+E:\Projects\C#\Shopdrawing\LiveGeometry\Lib\Utilities\Utilities\obj\Debug\Utilities.csprojResolveAssemblyReference.cache
+E:\Projects\C#\ShopdrawingVer2\Common\Utilities\bin\Debug\Shopdrawing.Utilities.dll
+E:\Projects\C#\ShopdrawingVer2\Common\Utilities\bin\Debug\Shopdrawing.Utilities.pdb
+E:\Projects\C#\ShopdrawingVer2\Common\Utilities\obj\Debug\Utilities.csprojResolveAssemblyReference.cache
+E:\Projects\C#\ShopdrawingVer2\Common\Utilities\obj\Debug\Shopdrawing.Utilities.dll
+E:\Projects\C#\ShopdrawingVer2\Common\Utilities\obj\Debug\Shopdrawing.Utilities.pdb

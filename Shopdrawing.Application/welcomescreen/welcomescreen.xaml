@@ -1,0 +1,653 @@
+<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Welcome="clr-namespace:Shopdrawing.App"
+        xmlns:Controls="clr-namespace:Microsoft.Expression.Framework.Controls;assembly=Microsoft.Expression.Framework"
+        xmlns:d="http://schemas.microsoft.com/expression/interactivedesigner/2006"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        x:Name="Window" x:Uid="Window_1" Title="Welcome to Microsoft Expression Blend"
+        FrameworkElement.Width="350" FrameworkElement.Height="504" ResizeMode="NoResize"
+        AllowsTransparency="true" WindowStyle="None" Control.FontSize="14" Control.FontWeight="Normal"
+        Control.FontFamily="{DynamicResource {x:Static SystemFonts.MessageFontFamilyKey}}"
+        UIElement.SnapsToDevicePixels="true" FrameworkElement.HorizontalAlignment="Right">
+  <Control.Background>
+    <x:NullExtension/>
+  </Control.Background>
+  <Control.Foreground>
+    <x:NullExtension/>
+  </Control.Foreground>
+  <FrameworkElement.Resources>
+    <SolidColorBrush x:Key="ButtonDefaultBrush" x:Uid="SolidColorBrush_30" Color="#FFF2F2F2"/>
+    <SolidColorBrush x:Key="ButtonMouseOverBrush" x:Uid="SolidColorBrush_31" Color="#FFE6E6E6"/>
+    <SolidColorBrush x:Key="ButtonPressedBrush" x:Uid="SolidColorBrush_32" Color="#FFCCCCCC"/>
+    <SolidColorBrush x:Key="30pcGrayBrush" x:Uid="SolidColorBrush_33" Color="#FFB2B2B2"/>
+    <SolidColorBrush x:Key="50pcGrayMainText" x:Uid="SolidColorBrush_35" Color="#FF808080"/>
+    <SolidColorBrush x:Key="80pcGrayMainText" x:Uid="SolidColorBrush_36" Color="#FF333333"/>
+    <SolidColorBrush x:Key="SelectedTextBrush" x:Uid="SolidColorBrush_37" Color="#FF333333"/>
+    <LinearGradientBrush x:Key="ButtonShineBrush" x:Uid="LinearGradientBrush_39" StartPoint="0,0" EndPoint="0,1">
+      <GradientStop x:Uid="GradientStop_127" Color="#7FF2F2F2" Offset="1"/>
+      <GradientStop x:Uid="GradientStop_128" Color="#80FFFFFF" Offset="0.006"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="DividerBrush" x:Uid="LinearGradientBrush_40" StartPoint="0,0.5" EndPoint="1,0.5">
+      <Brush.RelativeTransform>
+        <TransformGroup x:Uid="TransformGroup_1">
+          <ScaleTransform x:Uid="ScaleTransform_1" CenterX="0.5" CenterY="0.5" ScaleX="1.028" ScaleY="1.028"/>
+          <SkewTransform x:Uid="SkewTransform_1" AngleX="0" AngleY="0" CenterX="0.5" CenterY="0.5"/>
+          <RotateTransform x:Uid="RotateTransform_1" CenterX="0.5" CenterY="0.5" Angle="88.973"/>
+          <TranslateTransform x:Uid="TranslateTransform_1" X="0.234" Y="-0.005"/>
+        </TransformGroup>
+      </Brush.RelativeTransform>
+      <GradientStop x:Uid="GradientStop_129" Color="#1AD0D0D0" Offset="1"/>
+      <GradientStop x:Uid="GradientStop_130" Color="#32000000" Offset="0"/>
+    </LinearGradientBrush>
+    <Style x:Key="TabItemStyle" x:Uid="Style_1" TargetType="{x:Type TabItem}">
+      <Setter x:Uid="Setter_1134" Property="Control.Padding" Value="0,14,0,14"/>
+      <Setter x:Uid="Setter_1135" Property="Control.BorderBrush">
+        <Setter.Value>
+          <x:NullExtension x:Uid="x:Null_1"/>
+        </Setter.Value>
+      </Setter>
+      <Setter x:Uid="Setter_1136" Property="Control.Foreground">
+        <Setter.Value>
+          <DynamicResourceExtension x:Uid="DynamicResource_1" ResourceKey="30pcGrayBrush"/>
+        </Setter.Value>
+      </Setter>
+      <Setter x:Uid="Setter_1137" Property="Control.HorizontalContentAlignment" Value="Center"/>
+      <Setter x:Uid="Setter_1138" Property="Control.VerticalContentAlignment" Value="Center"/>
+      <Setter x:Uid="Setter_1139" Property="Control.Background" Value="{DynamicResource DefaultTabBack}"/>
+      <Setter x:Uid="Setter_1140" Property="Control.FontSize" Value="14"/>
+      <Setter x:Uid="Setter_1141" Property="Control.FontWeight" Value="Bold"/>
+      <Setter x:Uid="Setter_1142" Property="UIElement.Opacity" Value="1"/>
+      <Setter x:Uid="Setter_1143" Property="Control.BorderThickness" Value="0,0,0,0"/>
+      <Setter x:Uid="Setter_1144" Property="Control.Template">
+        <Setter.Value>
+          <ControlTemplate x:Uid="ControlTemplate_9" TargetType="{x:Type TabItem}">
+            <FrameworkTemplate.Resources>
+              <Storyboard x:Uid="Storyboard_1" x:Key="SelectedOn">
+                <DoubleAnimationUsingKeyFrames x:Uid="DoubleAnimationUsingKeyFrames_1" Timeline.BeginTime="00:00:00"
+                                               Storyboard.TargetName="SelectedRectangle" Storyboard.TargetProperty="(UIElement.Opacity)">
+                  <SplineDoubleKeyFrame x:Uid="SplineDoubleKeyFrame_1" KeySpline="0.5,0.5,0.5,0.5" DoubleKeyFrame.Value="1"
+                                        DoubleKeyFrame.KeyTime="00:00:00.2920000"/>
+                </DoubleAnimationUsingKeyFrames>
+              </Storyboard>
+              <Storyboard x:Uid="Storyboard_2" x:Key="SelectedOff">
+                <DoubleAnimationUsingKeyFrames x:Uid="DoubleAnimationUsingKeyFrames_2" Timeline.BeginTime="00:00:00"
+                                               Storyboard.TargetName="SelectedRectangle" Storyboard.TargetProperty="(UIElement.Opacity)">
+                  <SplineDoubleKeyFrame x:Uid="SplineDoubleKeyFrame_2" KeySpline="0.5,0.5,0.5,0.5" DoubleKeyFrame.Value="0"
+                                        DoubleKeyFrame.KeyTime="00:00:00.2920000"/>
+                </DoubleAnimationUsingKeyFrames>
+              </Storyboard>
+              <Storyboard x:Uid="Storyboard_3" x:Key="MouseoverOn">
+                <DoubleAnimationUsingKeyFrames x:Uid="DoubleAnimationUsingKeyFrames_3" Timeline.BeginTime="00:00:00"
+                                               Storyboard.TargetName="MouseoverRectangle" Storyboard.TargetProperty="(UIElement.Opacity)">
+                  <SplineDoubleKeyFrame x:Uid="SplineDoubleKeyFrame_3" KeySpline="0.5,0.5,0.5,0.5" DoubleKeyFrame.Value="1"
+                                        DoubleKeyFrame.KeyTime="00:00:00.2920000"/>
+                </DoubleAnimationUsingKeyFrames>
+              </Storyboard>
+              <Storyboard x:Uid="Storyboard_4" x:Key="MouseoverOff">
+                <DoubleAnimationUsingKeyFrames x:Uid="DoubleAnimationUsingKeyFrames_4" Timeline.BeginTime="00:00:00"
+                                               Storyboard.TargetName="MouseoverRectangle" Storyboard.TargetProperty="(UIElement.Opacity)">
+                  <SplineDoubleKeyFrame x:Uid="SplineDoubleKeyFrame_4" KeySpline="0.5,0.5,0.5,0.5" DoubleKeyFrame.Value="0"
+                                        DoubleKeyFrame.KeyTime="00:00:00.2920000"/>
+                </DoubleAnimationUsingKeyFrames>
+              </Storyboard>
+            </FrameworkTemplate.Resources>
+            <Grid x:Name="grid" x:Uid="Grid_38" Panel.Background="{TemplateBinding Control.Background}">
+              <TextElement.Foreground>
+                <x:NullExtension/>
+              </TextElement.Foreground>
+              <Rectangle x:Name="SelectedRectangle" x:Uid="Rectangle_12" UIElement.Opacity="0"
+                         Shape.Fill="{DynamicResource SelectedTabBack}">
+                <Shape.Stroke>
+                  <x:NullExtension/>
+                </Shape.Stroke>
+              </Rectangle>
+              <Rectangle x:Name="MouseoverRectangle" x:Uid="Rectangle_13" Shape.Fill="{DynamicResource RolloverTabBack}"
+                         UIElement.Opacity="0">
+                <Shape.Stroke>
+                  <x:NullExtension/>
+                </Shape.Stroke>
+              </Rectangle>
+              <Border x:Name="Border" x:Uid="Border_17" BorderBrush="{TemplateBinding Control.BorderBrush}"
+                      BorderThickness="{TemplateBinding Control.BorderThickness}"
+                      Padding="{TemplateBinding Control.Padding}" FrameworkElement.HorizontalAlignment="Stretch"
+                      FrameworkElement.VerticalAlignment="Stretch">
+                <TextElement.Foreground>
+                  <x:NullExtension/>
+                </TextElement.Foreground>
+                <Grid x:Uid="Grid_39">
+                  <ContentPresenter x:Name="ContentPresenter" x:Uid="ContentPresenter_22"
+                                    UIElement.SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+                                    Content="{TemplateBinding HeaderedContentControl.Header}"
+                                    ContentTemplate="{TemplateBinding HeaderedContentControl.HeaderTemplate}"
+                                    RecognizesAccessKey="true"
+                                    ContentTemplateSelector="{TemplateBinding HeaderedContentControl.HeaderTemplateSelector}"
+                                    ContentSource="Header" TextElement.Foreground="{TemplateBinding Control.Foreground}"
+                                    UIElement.Opacity="1" FrameworkElement.HorizontalAlignment="Center"
+                                    FrameworkElement.VerticalAlignment="Center"/>
+                </Grid>
+              </Border>
+            </Grid>
+            <ControlTemplate.Triggers>
+              <Trigger x:Uid="Trigger_15" Property="TabItem.IsSelected" Value="true">
+                <TriggerBase.EnterActions>
+                  <BeginStoryboard x:Uid="BeginStoryboard_1" Storyboard="{StaticResource SelectedOn}"/>
+                </TriggerBase.EnterActions>
+                <TriggerBase.ExitActions>
+                  <BeginStoryboard x:Name="SelectedOff_BeginStoryboard" x:Uid="BeginStoryboard_2"
+                                   Storyboard="{StaticResource SelectedOff}"/>
+                </TriggerBase.ExitActions>
+                <Setter x:Uid="Setter_1145" Property="Panel.ZIndex" Value="1"/>
+                <Setter x:Uid="Setter_1146" Property="Control.Foreground">
+                  <Setter.Value>
+                    <DynamicResourceExtension x:Uid="DynamicResource_2" ResourceKey="SelectedTextBrush"/>
+                  </Setter.Value>
+                </Setter>
+              </Trigger>
+              <MultiTrigger x:Uid="MultiTrigger_1">
+                <MultiTrigger.Conditions>
+                  <Condition x:Uid="Condition_1" Property="UIElement.IsMouseOver" Value="true"/>
+                  <Condition x:Uid="Condition_2" Property="Selector.IsSelected" Value="false"/>
+                </MultiTrigger.Conditions>
+                <TriggerBase.EnterActions>
+                  <BeginStoryboard x:Name="MouseoverOn_BeginStoryboard" x:Uid="BeginStoryboard_3"
+                                   Storyboard="{StaticResource MouseoverOn}"/>
+                </TriggerBase.EnterActions>
+                <TriggerBase.ExitActions>
+                  <BeginStoryboard x:Name="MouseoverOff_BeginStoryboard" x:Uid="BeginStoryboard_4"
+                                   Storyboard="{StaticResource MouseoverOff}"/>
+                </TriggerBase.ExitActions>
+                <Setter x:Uid="Setter_1147" Property="Control.Foreground">
+                  <Setter.Value>
+                    <DynamicResourceExtension x:Uid="DynamicResource_3" ResourceKey="50pcGrayMainText"/>
+                  </Setter.Value>
+                </Setter>
+              </MultiTrigger>
+            </ControlTemplate.Triggers>
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+    </Style>
+    <Style x:Key="TabControlStyle1" x:Uid="Style_3" TargetType="{x:Type TabControl}">
+      <Setter x:Uid="Setter_1149" Property="Control.Foreground"
+              Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+      <Setter x:Uid="Setter_1150" Property="Control.HorizontalContentAlignment" Value="Center"/>
+      <Setter x:Uid="Setter_1151" Property="Control.VerticalContentAlignment" Value="Center"/>
+      <Setter x:Uid="Setter_1152" Property="Control.Template">
+        <Setter.Value>
+          <ControlTemplate x:Uid="ControlTemplate_11" TargetType="{x:Type TabControl}">
+            <Grid x:Name="Grid" x:Uid="Grid_40" UIElement.SnapsToDevicePixels="true" UIElement.ClipToBounds="true"
+                  KeyboardNavigation.TabNavigation="Local" FrameworkElement.HorizontalAlignment="Stretch"
+                  FrameworkElement.VerticalAlignment="Stretch" Panel.Background="#FFFFFFFF">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Name="ColumnDefinition0" x:Uid="ColumnDefinition_1"/>
+                <ColumnDefinition x:Name="ColumnDefinition1" x:Uid="ColumnDefinition_2" Width="0"/>
+              </Grid.ColumnDefinitions>
+              <Grid.RowDefinitions>
+                <RowDefinition x:Name="RowDefinition0" x:Uid="RowDefinition_6" Height="Auto"/>
+                <RowDefinition x:Name="RowDefinition1" x:Uid="RowDefinition_7" Height="*"/>
+              </Grid.RowDefinitions>
+              <Welcome:UniformTabPanel x:Name="HeaderPanel" x:Uid="UniformGrid_1" Grid.Column="0" Grid.Row="0" UniformGrid.Rows="1"
+                                       Panel.IsItemsHost="true" Panel.ZIndex="1" KeyboardNavigation.TabIndex="1"
+                                       FrameworkElement.VerticalAlignment="Stretch" FrameworkElement.Margin="0,1,0,0"/>
+              <Border x:Name="ContentPanel" x:Uid="Border_18" Grid.Column="0" Grid.Row="1" BorderBrush="#FFD0CEBF"
+                      KeyboardNavigation.TabNavigation="Local" KeyboardNavigation.DirectionalNavigation="Contained"
+                      KeyboardNavigation.TabIndex="2" FrameworkElement.Margin="16,14,16,0">
+                <Welcome:CrossFader x:Name="PART_SelectedContentHost" x:Uid="Welcome:CrossFader_1"
+                                    UIElement.SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+                                    Content="{TemplateBinding TabControl.SelectedContent}"
+                                    ContentTemplate="{TemplateBinding TabControl.SelectedContentTemplate}"/>
+              </Border>
+            </Grid>
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+      <Setter x:Uid="Setter_1153" Property="Control.Padding" Value="0,0,0,0"/>
+    </Style>
+    <Style x:Key="ListBoxStyle1" x:Uid="Style_4" TargetType="{x:Type ListBox}">
+      <Setter x:Uid="Setter_1154" Property="Control.Background"
+              Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
+      <Setter x:Uid="Setter_1155" Property="Control.BorderBrush" Value="#FF7F9DB9"/>
+      <Setter x:Uid="Setter_1156" Property="Control.BorderThickness" Value="1,1,1,1"/>
+      <Setter x:Uid="Setter_1157" Property="Control.Foreground"
+              Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+      <Setter x:Uid="Setter_1158" Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled"/>
+      <Setter x:Uid="Setter_1159" Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+      <Setter x:Uid="Setter_1160" Property="ScrollViewer.CanContentScroll" Value="true"/>
+      <Setter x:Uid="Setter_1161" Property="Control.VerticalContentAlignment" Value="Center"/>
+      <Setter x:Uid="Setter_1162" Property="Control.Template">
+        <Setter.Value>
+          <ControlTemplate x:Uid="ControlTemplate_12" TargetType="{x:Type ListBox}">
+            <ScrollViewer x:Name="ScrollViewer" x:Uid="ScrollViewer_1" UIElement.Focusable="false"
+                          Control.Padding="{TemplateBinding Control.Padding}">
+              <ItemsPresenter x:Name="ItemsPresenter" x:Uid="ItemsPresenter_1"
+                              UIElement.SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"/>
+            </ScrollViewer>
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+    </Style>
+    <Style x:Key="LinkStyle" x:Uid="Style_5" TargetType="{x:Type Button}">
+      <Setter x:Uid="Setter_1163" Property="FrameworkElement.FocusVisualStyle">
+        <Setter.Value>
+          <Style x:Uid="Style_6">
+            <Setter x:Uid="Setter_1164" Property="Control.Template">
+              <Setter.Value>
+                <ControlTemplate x:Uid="ControlTemplate_13">
+                  <Rectangle x:Name="Rectangle" x:Uid="Rectangle_14" UIElement.SnapsToDevicePixels="true"
+                             Shape.Stroke="#FF000000" Shape.StrokeThickness="1" FrameworkElement.Margin="3,3,3,3"
+                             Shape.StrokeDashArray="1 2"/>
+                </ControlTemplate>
+              </Setter.Value>
+            </Setter>
+          </Style>
+        </Setter.Value>
+      </Setter>
+      <Setter x:Uid="Setter_1165" Property="Control.Background">
+        <Setter.Value>
+          <LinearGradientBrush x:Uid="LinearGradientBrush_42" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop x:Uid="GradientStop_133" Color="#FFFFFFFF" Offset="0"/>
+            <GradientStop x:Uid="GradientStop_134" Color="#FFF0F0EA" Offset="0.9"/>
+          </LinearGradientBrush>
+        </Setter.Value>
+      </Setter>
+      <Setter x:Uid="Setter_1166" Property="Control.BorderBrush" Value="#FF003C74"/>
+      <Setter x:Uid="Setter_1167" Property="Control.Foreground"
+              Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+      <Setter x:Uid="Setter_1168" Property="Control.HorizontalContentAlignment" Value="Center"/>
+      <Setter x:Uid="Setter_1169" Property="Control.VerticalContentAlignment" Value="Center"/>
+      <Setter x:Uid="Setter_1170" Property="Control.Template">
+        <Setter.Value>
+          <ControlTemplate x:Uid="ControlTemplate_14" TargetType="{x:Type ButtonBase}">
+            <ContentPresenter x:Name="ContentPresenter" x:Uid="ContentPresenter_23"
+                              UIElement.SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"
+                              Content="{TemplateBinding ContentControl.Content}"
+                              ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}" RecognizesAccessKey="true"
+                              ContentTemplateSelector="{TemplateBinding ContentControl.ContentTemplateSelector}"/>
+            <ControlTemplate.Triggers>
+              <Trigger x:Uid="Trigger_16" Property="UIElement.IsKeyboardFocused" Value="true"/>
+              <Trigger x:Uid="Trigger_17" Property="ToggleButton.IsChecked" Value="True"/>
+              <Trigger x:Uid="Trigger_18" Property="UIElement.IsEnabled" Value="false">
+                <Setter x:Uid="Setter_1171" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"
+                        Property="Control.Foreground"/>
+              </Trigger>
+            </ControlTemplate.Triggers>
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+    </Style>
+    <Style x:Uid="Style_15" TargetType="{x:Type Label}">
+      <Setter x:Uid="Setter_1205" Property="FrameworkElement.OverridesDefaultStyle" Value="true"/>
+      <Setter x:Uid="Setter_1206" Property="Control.Background" Value="Transparent"/>
+      <Setter x:Uid="Setter_1207" Property="Control.Padding" Value="5"/>
+      <Setter x:Uid="Setter_1208" Property="Control.HorizontalContentAlignment" Value="Left"/>
+      <Setter x:Uid="Setter_1209" Property="Control.VerticalContentAlignment" Value="Top"/>
+      <Setter x:Uid="Setter_1210" Property="Control.FontSize" Value="14"/>
+      <Setter x:Uid="Setter_1211" Property="Control.Template">
+        <Setter.Value>
+          <ControlTemplate x:Uid="ControlTemplate_20" TargetType="{x:Type Label}">
+            <Border x:Uid="Border_25" Background="{TemplateBinding Control.Background}"
+                    BorderThickness="{TemplateBinding Control.BorderThickness}"
+                    BorderBrush="{TemplateBinding Control.BorderBrush}" Padding="{TemplateBinding Control.Padding}"
+                    UIElement.SnapsToDevicePixels="true">
+              <ContentPresenter x:Uid="ContentPresenter_27"
+                                FrameworkElement.HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+                                FrameworkElement.VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+                                RecognizesAccessKey="true"
+                                UIElement.SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"/>
+            </Border>
+            <ControlTemplate.Triggers>
+              <Trigger x:Uid="Trigger_28" Property="UIElement.IsEnabled" Value="false">
+                <Setter x:Uid="Setter_1212" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"
+                        Property="Control.Foreground"/>
+              </Trigger>
+            </ControlTemplate.Triggers>
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+    </Style>
+    <Style x:Uid="Style_8" TargetType="{x:Type Welcome:ImageButton}">
+      <Setter x:Uid="Setter_1193" Property="Control.Template">
+        <Setter.Value>
+          <ControlTemplate x:Uid="ControlTemplate_19" TargetType="{x:Type Welcome:ImageButton}">
+            <Border x:Uid="ButtonImageBorder" Background="{TemplateBinding Control.Background}">
+              <StackPanel x:Name="ButtonImageStackPanel" x:Uid="ButtonImageStackPanel" Orientation="Horizontal"
+                          FrameworkElement.VerticalAlignment="Center" FrameworkElement.Margin="0,4,0,4">
+                <Controls:Icon x:Name="ButtonImage" x:Uid="ButtonImage" Image.Stretch="Uniform"
+                               FrameworkElement.VerticalAlignment="Center"
+                               Image.Source="{TemplateBinding Welcome:ImageButton.DefaultImage}" FrameworkElement.Width="32"
+                               FrameworkElement.Height="32" FrameworkElement.Margin="3,0,0,0"/>
+                <Label x:Uid="Label_1" Control.Foreground="{DynamicResource 50pcGrayMainText}"
+                       ContentControl.Content="{TemplateBinding ContentControl.Content}"
+                       Control.VerticalContentAlignment="Center" Control.Padding="8,0,5,0"/>
+              </StackPanel>
+            </Border>
+            <ControlTemplate.Triggers>
+              <Trigger x:Uid="Trigger_26" Property="UIElement.IsMouseOver" Value="true">
+                <Setter x:Uid="Setter_1194" Property="Control.Background" Value="#FFD8D8D8"/>
+                <Setter x:Uid="Setter_1204" TargetName="ButtonImage" Property="Image.Source">
+                  <Setter.Value>
+                    <Binding Path="HoverImage" RelativeSource="{RelativeSource TemplatedParent}" Mode="OneWay"/>
+                  </Setter.Value>
+                </Setter>
+              </Trigger>
+              <Trigger x:Uid="Trigger_27" Property="UIElement.IsMouseOver" Value="false">
+                <Setter x:Uid="Setter_1195" Property="Control.Background" Value="Transparent"/>
+              </Trigger>
+              <Trigger x:Uid="SmallImageTrigger" Property="Welcome:ImageButton.ImageButtonSize" Value="Small">
+                <Setter x:Uid="SmallImageHeight" TargetName="ButtonImage" Property="FrameworkElement.Height" Value="16"/>
+                <Setter x:Uid="SmallImageWidth" TargetName="ButtonImage" Property="FrameworkElement.Width" Value="16"/>
+                <Setter x:Uid="SmallImageStackPanelHeight" Property="FrameworkElement.Height" Value="23"/>
+                <Setter x:Uid="SmallImageBorderMargin" TargetName="ButtonImageStackPanel"
+                        Property="FrameworkElement.Margin" Value="0,2,0,2"/>
+              </Trigger>
+            </ControlTemplate.Triggers>
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+      <Setter x:Uid="Setter_1197" Property="FrameworkElement.Cursor" Value="Hand"/>
+      <Setter x:Uid="Setter_1199" Property="Control.BorderBrush">
+        <Setter.Value>
+          <x:NullExtension/>
+        </Setter.Value>
+      </Setter>
+      <Setter x:Uid="Setter_1200" Property="Control.HorizontalContentAlignment" Value="Left"/>
+      <Setter x:Uid="Setter_1201" Property="Control.FontWeight" Value="Normal"/>
+      <Setter x:Uid="Setter_1202" Property="FrameworkElement.Width" Value="Auto"/>
+    </Style>
+    <Style x:Uid="Style_10" TargetType="{x:Type ListBoxItem}">
+      <Setter x:Uid="Setter_1179" Property="FrameworkElement.Cursor" Value="Hand"/>
+      <Setter x:Uid="Setter_1180" Property="Control.FontWeight" Value="Normal"/>
+      <Setter x:Uid="Setter_1181" Property="Control.Template">
+        <Setter.Value>
+          <ControlTemplate x:Uid="ControlTemplate_17" TargetType="{x:Type ListBoxItem}">
+            <Grid x:Uid="Grid_41">
+              <Rectangle x:Name="Border" x:Uid="Rectangle_15" Shape.Stroke="#FF9E9E9E" Shape.StrokeThickness="0" RadiusX="2"
+                         RadiusY="2"/>
+              <ContentPresenter x:Uid="ContentPresenter_25" FrameworkElement.Margin="2"/>
+            </Grid>
+            <ControlTemplate.Triggers>
+              <Trigger x:Uid="Trigger_20" Property="ListBoxItem.IsSelected" Value="true">
+                <Setter x:Uid="Setter_1182" TargetName="Border" Property="Shape.StrokeThickness" Value="1"/>
+              </Trigger>
+              <Trigger x:Uid="Trigger_21" Property="UIElement.IsMouseOver" Value="true">
+                <Setter x:Uid="Setter_1183" TargetName="Border" Property="Shape.Fill" Value="#FFD8D8D8"/>
+              </Trigger>
+            </ControlTemplate.Triggers>
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+    </Style>
+    <Style x:Uid="Style_11" TargetType="{x:Type Button}">
+      <Setter x:Uid="Setter_493" Property="Control.Background">
+        <Setter.Value>
+          <DynamicResourceExtension x:Uid="DynamicResource_4" ResourceKey="ButtonDefaultBrush"/>
+        </Setter.Value>
+      </Setter>
+      <Setter x:Uid="Setter_494" Property="Control.BorderBrush">
+        <Setter.Value>
+          <DynamicResourceExtension x:Uid="DynamicResource_5" ResourceKey="30pcGrayBrush"/>
+        </Setter.Value>
+      </Setter>
+      <Setter x:Uid="Setter_1003" Property="Control.Foreground">
+        <Setter.Value>
+          <DynamicResourceExtension x:Uid="DynamicResource_6" ResourceKey="50pcGrayMainText"/>
+        </Setter.Value>
+      </Setter>
+      <Setter x:Uid="Setter_229" Property="FrameworkElement.HorizontalAlignment" Value="Center"/>
+      <Setter x:Uid="Setter_239" Property="FrameworkElement.MinWidth" Value="50"/>
+      <Setter x:Uid="Setter_240" Property="FrameworkElement.MinHeight" Value="18"/>
+      <Setter x:Uid="Setter_1131" Property="Control.FontFamily"
+              Value="{DynamicResource {x:Static SystemFonts.MessageFontFamilyKey}}"/>
+      <Setter x:Uid="Setter_1132" Property="Control.FontSize"
+              Value="{DynamicResource {x:Static SystemFonts.MessageFontSizeKey}}"/>
+      <Setter x:Uid="Setter_1133" Property="Control.FontWeight"
+              Value="{DynamicResource {x:Static SystemFonts.MessageFontWeightKey}}"/>
+      <Setter x:Uid="Setter_25" Property="Control.Template">
+        <Setter.Value>
+          <ControlTemplate x:Uid="ControlTemplate_2" TargetType="{x:Type Button}">
+            <Border x:Name="ButtonTemplateGrid" x:Uid="Grid_2" Background="{TemplateBinding Control.Background}"
+                    CornerRadius="4" BorderThickness="1" BorderBrush="{TemplateBinding Control.BorderBrush}"
+                    FrameworkElement.MinHeight="{TemplateBinding FrameworkElement.MinHeight}"
+                    FrameworkElement.MinWidth="{TemplateBinding FrameworkElement.MinWidth}">
+              <Grid x:Uid="Grid_7">
+                <Grid.RowDefinitions>
+                  <RowDefinition x:Uid="RowDefinition_4" Height="0.593*"/>
+                  <RowDefinition x:Uid="RowDefinition_5" Height="0.407*"/>
+                </Grid.RowDefinitions>
+                <Border x:Name="HighlightBackground" x:Uid="Border_16" CornerRadius="3" Grid.Row="0"
+                        FrameworkElement.Margin="1,1,1,1" UIElement.Opacity="1">
+                  <Border.Background>
+                    <DynamicResourceExtension x:Uid="DynamicResource_7" ResourceKey="ButtonShineBrush"/>
+                  </Border.Background>
+                </Border>
+                <ContentPresenter x:Name="Content" x:Uid="ContentPresenter_1" Grid.RowSpan="2"
+                                  Content="{TemplateBinding ContentControl.Content}"
+                                  ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}"
+                                  ContentTemplateSelector="{TemplateBinding ContentControl.ContentTemplateSelector}"
+                                  FrameworkElement.HorizontalAlignment="Center" FrameworkElement.VerticalAlignment="Center"
+                                  FrameworkElement.Margin="0,0,0,0" RecognizesAccessKey="true"/>
+              </Grid>
+            </Border>
+            <ControlTemplate.Triggers>
+              <Trigger x:Uid="Trigger_22" Property="UIElement.IsMouseOver" Value="true">
+                <Setter x:Uid="Setter_495" Value="{DynamicResource ButtonMouseOverBrush}" Property="Control.Background"/>
+                <Setter x:Uid="Setter_1010" Value="{DynamicResource 80pcGrayMainText}" Property="Control.Foreground"/>
+                <Setter x:Uid="Setter_1184" TargetName="HighlightBackground" Property="UIElement.Opacity" Value="0.8"/>
+              </Trigger>
+              <Trigger x:Uid="Trigger_23" Property="ButtonBase.IsPressed" Value="true">
+                <Setter x:Uid="Setter_364" Value="{DynamicResource ButtonPressedBrush}" Property="Control.Background"/>
+                <Setter x:Uid="Setter_1013" Value="{DynamicResource WhiteBrush}" Property="Control.Foreground"/>
+                <Setter x:Uid="Setter_1185" TargetName="HighlightBackground" Property="UIElement.Opacity" Value="0.3"/>
+              </Trigger>
+            </ControlTemplate.Triggers>
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+    </Style>
+    <Style x:Key="TextBlockStyle1" x:Uid="Style_12" TargetType="{x:Type TextBlock}">
+      <Setter x:Uid="Setter_1186" Property="TextBlock.TextWrapping" Value="NoWrap"/>
+      <Setter x:Uid="Setter_1187" Property="TextBlock.TextTrimming" Value="None"/>
+      <Setter x:Uid="Setter_1188" Property="TextBlock.Foreground" Value="{DynamicResource 50pcGrayMainText}"/>
+    </Style>
+    <LinearGradientBrush x:Key="DefaultTabBack" x:Uid="LinearGradientBrush_43" EndPoint="0,0" StartPoint="0,1">
+      <GradientStop x:Uid="GradientStop_135" Color="#FFD8D8D8" Offset="1"/>
+      <GradientStop x:Uid="GradientStop_136" Color="#FFFAFAFA" Offset="0"/>
+      <GradientStop x:Uid="GradientStop_137" Color="#FFECECEC" Offset="0.74"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="RolloverTabBack" x:Uid="LinearGradientBrush_44" EndPoint="0,0" StartPoint="0,1">
+      <GradientStop x:Uid="GradientStop_138" Color="#FFC2C2C2" Offset="1"/>
+      <GradientStop x:Uid="GradientStop_139" Color="#FFFAFAFA" Offset="0"/>
+      <GradientStop x:Uid="GradientStop_140" Color="#FFDDDDDD" Offset="0.815"/>
+      <GradientStop x:Uid="GradientStop_141" Color="#FFD5D5D5" Offset="0.832"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="SelectedTabBack" x:Uid="LinearGradientBrush_45" EndPoint="0,0" StartPoint="0,1">
+      <GradientStop x:Uid="GradientStop_142" Color="#FFF2F2F2" Offset="1"/>
+      <GradientStop x:Uid="GradientStop_143" Color="#FFFFFFFF" Offset="0.532"/>
+    </LinearGradientBrush>
+    <Style x:Key="SimpleCheckBox" x:Uid="Style_13" TargetType="{x:Type CheckBox}">
+      <Setter x:Uid="Setter_1189" Property="Control.Template">
+        <Setter.Value>
+          <ControlTemplate x:Uid="ControlTemplate_18" TargetType="{x:Type CheckBox}">
+            <Grid x:Uid="Grid_42">
+              <BulletDecorator x:Uid="BulletDecorator_2" Background="Transparent">
+                <BulletDecorator.Bullet>
+                  <Grid x:Uid="Grid_43" FrameworkElement.Width="Auto" FrameworkElement.Height="Auto">
+                    <Grid x:Uid="Grid_44" FrameworkElement.Width="12" FrameworkElement.Height="12"
+                          FrameworkElement.Margin="0,0,0,0">
+                      <Border x:Name="Border" x:Uid="Border_19" Background="{TemplateBinding Control.Background}"
+                              BorderBrush="{DynamicResource 30pcGrayBrush}"
+                              BorderThickness="{TemplateBinding Control.BorderThickness}" FrameworkElement.Width="Auto"
+                              FrameworkElement.Height="Auto" CornerRadius="2,2,2,2"/>
+                    </Grid>
+                  </Grid>
+                </BulletDecorator.Bullet>
+                <ContentPresenter x:Uid="ContentPresenter_26"
+                                  FrameworkElement.HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+                                  FrameworkElement.Margin="{TemplateBinding Control.Padding}"
+                                  FrameworkElement.VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+                                  RecognizesAccessKey="true"/>
+              </BulletDecorator>
+              <Path x:Name="CheckMark" x:Uid="Path_1" Shape.StrokeThickness="2" UIElement.SnapsToDevicePixels="false"
+                    Data="M 2.3235174E-09,7 L 4,12 12,2 9,-3.8208896E-08 4,9 2,6 Z"
+                    Shape.Fill="{TemplateBinding Control.Foreground}" FrameworkElement.Margin="1.584,-1.542,0,0"
+                    FrameworkElement.HorizontalAlignment="Left" FrameworkElement.VerticalAlignment="Top"
+                    FrameworkElement.Width="12" FrameworkElement.Height="12"/>
+            </Grid>
+            <ControlTemplate.Triggers>
+              <Trigger x:Uid="Trigger_24" Property="ToggleButton.IsChecked" Value="false">
+                <Setter x:Uid="Setter_1190" TargetName="CheckMark" Property="UIElement.Visibility" Value="Hidden"/>
+              </Trigger>
+              <Trigger x:Uid="Trigger_25" Property="UIElement.IsMouseOver" Value="true">
+                <Setter x:Uid="Setter_1191" Value="{DynamicResource 50pcGrayMainText}" TargetName="Border"
+                        Property="Border.BorderBrush"/>
+              </Trigger>
+            </ControlTemplate.Triggers>
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+      <Setter x:Uid="Setter_1192" Property="Control.Foreground" Value="{DynamicResource 50pcGrayMainText}"/>
+    </Style>
+  </FrameworkElement.Resources>
+  <Grid x:Name="DocumentRoot" x:Uid="Grid_45">
+    <Image x:Uid="Image_1" Source="/WelcomeScreen/WelcomeScreen.png"
+           Stretch="None"/>
+    <Grid x:Uid="Grid_47" FrameworkElement.Margin="21,145,22,18">
+      <Grid.RowDefinitions>
+        <RowDefinition x:Uid="RowDefinition_9" Height="*"/>
+        <RowDefinition x:Uid="RowDefinition_10" Height="Auto"/>
+      </Grid.RowDefinitions>
+      <TabControl x:Uid="TabControl_1" FrameworkElement.Margin="1,0,1,0" TabStripPlacement="Top"
+                  FrameworkElement.Style="{DynamicResource TabControlStyle1}"
+                  Selector.IsSynchronizedWithCurrentItem="True" UIElement.SnapsToDevicePixels="true">
+        <Selector.SelectedIndex>
+          <Binding Path="SelectedTab" Mode="TwoWay"/>
+        </Selector.SelectedIndex>
+        <TabItem x:Name="ProjectsTabItem" x:Uid="TabItem_1" FrameworkElement.Style="{DynamicResource TabItemStyle}"
+                 FrameworkElement.VerticalAlignment="Stretch" Control.HorizontalContentAlignment="Stretch"
+                 Control.VerticalContentAlignment="Stretch">
+          <HeaderedContentControl.Header>
+            <Label x:Uid="Label_6">_Projects</Label>
+          </HeaderedContentControl.Header>
+          <StackPanel x:Uid="StackPanel_1">
+            <FrameworkElement.Resources>
+              <Welcome:ZeroToCollapsedConverter x:Key="ZeroToCollapsedConverter" x:Uid="Welcome:ZeroToCollapsedConverter_1"/>
+            </FrameworkElement.Resources>
+            <Welcome:ItemActivateListBox x:Name="ProjectsListBox" x:Uid="ListBox_1" FrameworkElement.Style="{DynamicResource ListBoxStyle1}"
+                                         Control.Foreground="#FF7B7B7B" Selector.SelectedIndex="0">
+              <ItemsControl.ItemsSource>
+                <Binding Path="Projects" Mode="Default"/>
+              </ItemsControl.ItemsSource>
+              <Selector.SelectedItem>
+                <Binding Path="SelectedProject" Mode="TwoWay"/>
+              </Selector.SelectedItem>
+              <UIElement.Visibility>
+                <Binding Path="Projects.Count" Converter="{StaticResource ZeroToCollapsedConverter}"/>
+              </UIElement.Visibility>
+              <ItemsControl.ItemContainerStyle>
+                <Style x:Uid="Style_14" TargetType="{x:Type ListBoxItem}" BasedOn="{StaticResource {x:Type ListBoxItem}}">
+                  <Setter x:Uid="Setter_1203" Property="FrameworkElement.ToolTip"
+                          Localization.Attributes="Value(Readable Modifiable)">
+                    <Setter.Value>
+                      <Binding Path="Name"/>
+                    </Setter.Value>
+                  </Setter>
+                </Style>
+              </ItemsControl.ItemContainerStyle>
+              <ItemsControl.ItemTemplate>
+                <DataTemplate x:Uid="DataTemplate_1">
+                  <TextBlock x:Uid="TextBlock_1" TextTrimming="CharacterEllipsis">
+                    <TextBlock.Text>
+                      <Binding Path="NameWithoutExtension"/>
+                    </TextBlock.Text>
+                  </TextBlock>
+                </DataTemplate>
+              </ItemsControl.ItemTemplate>
+            </Welcome:ItemActivateListBox>
+            <Rectangle x:Uid="Rectangle_16" FrameworkElement.Height="1" Shape.Fill="{DynamicResource DividerBrush}"
+                       FrameworkElement.Margin="0,10,0,10">
+              <UIElement.Visibility>
+                <Binding Path="Projects.Count" Converter="{StaticResource ZeroToCollapsedConverter}"/>
+              </UIElement.Visibility>
+            </Rectangle>
+            <StackPanel x:Uid="StackPanel_3" FrameworkElement.Width="Auto" FrameworkElement.Height="Auto"
+                        FrameworkElement.VerticalAlignment="Center" FrameworkElement.Margin="5,0,5,0">
+              <Welcome:ImageButton x:Name="NewProjectButton" x:Uid="Button_7" DefaultImage="welcome_samples_off_32x32.png"
+                                   HoverImage="welcome_samples_on_32x32.png" ContentControl.Content="_New Project..."
+                                   ButtonBase.Command="{Binding NewProjectDialogCommand}"/>
+              <Welcome:ImageButton x:Name="OpenProjectButton" x:Uid="Button_8" DefaultImage="welcome_samples_off_32x32.png"
+                                   HoverImage="welcome_samples_on_32x32.png" ContentControl.Content="_Open Project..."
+                                   ButtonBase.Command="{Binding OpenProjectDialogCommand}"/>
+            </StackPanel>
+          </StackPanel>
+        </TabItem>
+        <TabItem x:Name="HelpTabItem" x:Uid="TabItem_2" FrameworkElement.Style="{DynamicResource TabItemStyle}"
+                 Control.BorderThickness="1,0,1,0">
+          <HeaderedContentControl.Header>
+            <Label x:Uid="Label_7">_Help</Label>
+          </HeaderedContentControl.Header>
+          <Control.BorderBrush>
+            <LinearGradientBrush x:Uid="LinearGradientBrush_46" EndPoint="0.5,1" StartPoint="0.5,0">
+              <GradientStop x:Uid="GradientStop_144" Color="#FFA1A1A1" Offset="0"/>
+              <GradientStop x:Uid="GradientStop_145" Color="#00A1A1A1" Offset="1"/>
+            </LinearGradientBrush>
+          </Control.BorderBrush>
+          <StackPanel x:Uid="StackPanel_4">
+            <Welcome:ImageButton x:Name="UserGuideButton" x:Uid="Button_9" DefaultImage="welcome_userGuide_off_32x32.png"
+                                 HoverImage="welcome_userGuide_on_32x32.png" ContentControl.Content="_User Guide"
+                                 ButtonBase.Command="{Binding HelpCommand}"/>
+            <Welcome:ImageButton x:Name="TutorialsButton" x:Uid="Button_10" DefaultImage="welcome_tutorials_off_32x32.png"
+                                 HoverImage="welcome_tutorials_on_32x32.png" ContentControl.Content="Online _Tutorials"
+                                 ButtonBase.Command="{Binding TutorialCommand}"/>
+            <Welcome:ImageButton x:Name="OnlineCommunityButton" x:Uid="Button_11" DefaultImage="welcome_online_off_32x32.png"
+                                 HoverImage="welcome_online_on_32x32.png" ContentControl.Content="_Online Community"
+                                 ButtonBase.Command="{Binding CommunityCommand}"/>
+          </StackPanel>
+        </TabItem>
+        <TabItem x:Name="SamplesTabItem" x:Uid="TabItem_3" FrameworkElement.Style="{DynamicResource TabItemStyle}">
+          <HeaderedContentControl.Header>
+            <Label x:Uid="Label_8">_Samples</Label>
+          </HeaderedContentControl.Header>
+          <StackPanel x:Uid="StackPanel_5">
+            <FrameworkElement.Resources>
+              <SolidColorBrush x:Key="ScrollbarBackgroundBrush" x:Uid="SolidColorBrush_156" Color="#FFFFFFFF"/>
+              <SolidColorBrush x:Key="ButtonDefaultBrush" x:Uid="SolidColorBrush_157" Color="#FF808080"/>
+              <SolidColorBrush x:Key="ScrollbarMouseOverBrush" x:Uid="SolidColorBrush_158" Color="#FF606060"/>
+              <SolidColorBrush x:Key="ScrollbarPressedBrush" x:Uid="SolidColorBrush_159" Color="#FF404040"/>
+            </FrameworkElement.Resources>
+            <Welcome:ItemActivateListBox x:Name="SamplesListBox" x:Uid="ListBox_2" FrameworkElement.Height="225"
+                                         FrameworkElement.MaxHeight="225" Selector.IsSynchronizedWithCurrentItem="True"
+                                         FrameworkElement.Style="{DynamicResource ListBoxStyle1}" Control.Foreground="#FF7B7B7B"
+                                         ItemsControl.DisplayMemberPath="DisplayName" Control.FontSize="14"
+                                         Localization.Attributes="DisplayMemberPath (Unreadable Unmodifiable)">
+              <ItemsControl.ItemsSource>
+                <Binding Path="Samples" Mode="Default"/>
+              </ItemsControl.ItemsSource>
+              <Selector.SelectedItem>
+                <Binding Path="SelectedSample" Mode="Default"/>
+              </Selector.SelectedItem>
+            </Welcome:ItemActivateListBox>
+          </StackPanel>
+        </TabItem>
+      </TabControl>
+      <Grid x:Uid="Grid_46" Row="1" FrameworkElement.Height="32">
+        <CheckBox x:Name="ShowWelcomeCheckBox" x:Uid="CheckBox_1" FrameworkElement.HorizontalAlignment="Left"
+                  FrameworkElement.VerticalAlignment="Center"
+                  FrameworkElement.Style="{DynamicResource SimpleCheckBox}" Control.FontSize="10"
+                  ContentControl.Content="_Run at startup" FrameworkElement.Margin="10,0,0,0"
+                  Control.Padding="2,0,0,0" Control.BorderBrush="{DynamicResource 30pcGrayBrush}"
+                  Control.Foreground="#595959" ToggleButton.IsChecked="{Binding ShowWelcomeScreen}">
+          <Control.Background>
+            <x:NullExtension/>
+          </Control.Background>
+        </CheckBox>
+        <Button x:Name="StartButton" x:Uid="Button_6" FrameworkElement.HorizontalAlignment="Right"
+                FrameworkElement.Margin="0,0,7,0" FrameworkElement.VerticalAlignment="Center"
+                Control.FontWeight="Normal" ContentControl.Content="_Close" IsDefault="true" IsCancel="true"
+                FrameworkElement.MinWidth="100" FrameworkElement.MinHeight="18"
+                Control.FontFamily="{DynamicResource {x:Static SystemFonts.MessageFontFamilyKey}}"
+                FrameworkElement.Style="{DynamicResource ExpressionDialogButton}"
+                ButtonBase.Command="{Binding StartBlendCommand}"/>
+      </Grid>
+    </Grid>
+  </Grid>
+</Window>

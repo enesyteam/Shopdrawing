@@ -1,0 +1,239 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:automation="clr-namespace:Microsoft.Expression.Framework.Diagnostics;assembly=Microsoft.Expression.Framework"
+                    xmlns:dspi="clr-namespace:Microsoft.Expression.DesignSurface.UserInterface.PropertyInspector"
+                    xmlns:PropertyEditing="clr-namespace:Microsoft.Windows.Design.PropertyEditing;assembly=Microsoft.Windows.Design.Interaction"
+                    xmlns:fwpi="clr-namespace:Microsoft.Expression.Framework.PropertyInspector"
+                    xmlns:fwdata="clr-namespace:Microsoft.Expression.Framework.Data;assembly=Microsoft.Expression.Framework"
+                    xmlns:fwve="clr-namespace:Microsoft.Expression.Framework.ValueEditors;assembly=Microsoft.Expression.Framework"
+                    xmlns:fwctl="clr-namespace:Microsoft.Expression.Framework.Controls;assembly=Microsoft.Expression.Framework"
+                    x:Uid="ResourceDictionary_1">
+  <ResourceDictionary.MergedDictionaries>
+    <ResourceDictionary x:Uid="ResourceDictionary_2"
+                        Source="pack://application:,,,/Microsoft.Expression.DesignSurface;Component/UserInterface/PropertyInspector/PropertyInspectorResources.xaml"/>
+  </ResourceDictionary.MergedDictionaries>
+  <fwdata:ComposingConverter x:Key="NotNullToVisibilityConverter" x:Uid="fwdata:ComposingConverter_1">
+    <fwdata:ComposingConverter.Converters>
+      <fwdata:IsNullConverter x:Uid="fwdata:IsNullConverter_2"/>
+      <fwdata:NotConverter x:Uid="fwdata:NotConverter_1"/>
+      <fwdata:BoolToVisibilityConverter x:Uid="fwdata:BoolToVisibilityConverter_2"/>
+    </fwdata:ComposingConverter.Converters>
+  </fwdata:ComposingConverter>
+  <DataTemplate x:Key="CategorySection" x:Uid="DataTemplate_2">
+    <fwpi:CategoryContainer x:Uid="fwpi:CategoryEditor_1">
+      <fwpi:CategoryContainer.Category>
+        <Binding/>
+      </fwpi:CategoryContainer.Category>
+    </fwpi:CategoryContainer>
+  </DataTemplate>
+  <fwpi:PropertyValueToTypeNameConverter x:Key="PropertyValueToTypeNameConverter" x:Uid="fwpi:PropertyValueToTypeNameConverter_1"/>
+  <DataTemplate x:Key="CollectionPropertyTemplate" x:Uid="DataTemplate_1">
+    <TextBlock x:Uid="TextBlock_1">
+      <TextBlock.Text>
+        <Binding Converter="{StaticResource PropertyValueToTypeNameConverter}"/>
+      </TextBlock.Text>
+    </TextBlock>
+  </DataTemplate>
+  <Style x:Key="CollapsableListBoxItem" x:Uid="Style_2" TargetType="{x:Type ListBoxItem}"
+         BasedOn="{StaticResource ExpressionListBoxItem}">
+    <Setter x:Uid="Setter_176" Property="Control.IsTabStop" Value="true"/>
+    <Setter x:Uid="Setter_177" Property="UIElement.Focusable" Value="true"/>
+    <Setter x:Uid="Setter_175" Property="FrameworkElement.ToolTip" Value="{Binding StringValue}"/>
+  </Style>
+  <DataTemplate x:Key="QuickTypeItemTemplate" x:Uid="DataTemplate_7">
+    <StackPanel x:Uid="StackPanel_12" Orientation="Horizontal" FrameworkElement.ToolTip="{Binding Description}">
+      <ContentControl x:Uid="Image_1" FrameworkElement.Height="16" FrameworkElement.Width="16" Content="{Binding Image}">
+        <UIElement.Visibility>
+          <Binding Path="Image" Converter="{StaticResource NotNullToVisibilityConverter}"/>
+        </UIElement.Visibility>
+      </ContentControl>
+      <TextBlock x:Uid="TextBlock_2" Text="{Binding DisplayName}" automation:AutomationElement.Id="{Binding Name}"/>
+    </StackPanel>
+  </DataTemplate>
+  <DataTemplate x:Key="StaticQuickTypeItemTemplate" x:Uid="DataTemplate_8">
+    <TextBlock x:Uid="TextBlock_17" Text="Add another item"/>
+  </DataTemplate>
+  <DrawingBrush x:Key="DeleteIconBrush" x:Uid="DrawingBrush_4">
+    <DrawingBrush.Drawing>
+      <GeometryDrawing x:Uid="GeometryDrawing_4" Brush="Red">
+        <GeometryDrawing.Geometry>
+          <PathGeometry x:Uid="PathGeometry_1"
+                        Figures="M0.884,0.5 L2.487,0.5 C2.6990774,0.5 2.8710001,0.67192268 2.8710001,0.884 L2.8710001,6.8144999 L8.8015003,6.8144999 C9.0135775,6.8144999 9.1855001,6.9864225 9.1855001,7.1985002 L9.1855001,8.8015003 C9.1855001,9.0135775 9.0135775,9.1855001 8.8015003,9.1855001 L2.8710001,9.1855001 L2.8710001,15.116 C2.8710001,15.328077 2.6990774,15.5 2.487,15.5 L0.884,15.5 C0.67192268,15.5 0.5,15.328077 0.49999997,15.116 L0.49999997,9.1855001 L-5.4305,9.1855001 C-5.6425772,9.1855001 -5.8144999,9.0135775 -5.8144999,8.8015003 L-5.8144999,7.1985002 C-5.8144999,6.9864225 -5.6425772,6.8144999 -5.4305,6.8144999 L0.49999997,6.8144999 L0.49999997,0.884 C0.5,0.67192268 0.67192268,0.5 0.884,0.5 z"
+                        FillRule="Nonzero">
+            <Geometry.Transform>
+              <MatrixTransform x:Uid="MatrixTransform_1" Matrix="1,0,0,1,6.3144998550415,0"/>
+            </Geometry.Transform>
+          </PathGeometry>
+        </GeometryDrawing.Geometry>
+      </GeometryDrawing>
+    </DrawingBrush.Drawing>
+  </DrawingBrush>
+  <Thickness x:Key="LargeLeftDefaultTopMargin" x:Uid="Thickness_2" Left="{StaticResource LargeSpacing}"
+             Top="{StaticResource DefaultSpacing}" Right="0" Bottom="0"/>
+  <Style x:Key="BlendCollectionEditorStyle" x:Uid="Style_3"
+         TargetType="{x:Type fwpi:CollectionDialogEditor}">
+    <Style.Setters>
+      <Setter x:Uid="Setter_178" Property="Control.Template">
+        <Setter.Value>
+          <ControlTemplate x:Uid="ControlTemplate_4" TargetType="{x:Type fwpi:CollectionDialogEditor}">
+            <Grid x:Uid="Grid_13">
+              <Grid.RowDefinitions>
+                <RowDefinition x:Uid="RowDefinition_1" Height="Auto"/>
+                <RowDefinition x:Uid="RowDefinition_3" Height="*"/>
+                <RowDefinition x:Uid="RowDefinition_5" Height="Auto"/>
+              </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Uid="ColumnDefinition_4" Width="*"/>
+                <ColumnDefinition x:Uid="ColumnDefinition_5" Width="*"/>
+              </Grid.ColumnDefinitions>
+              <TextBlock x:Uid="TextBlock_18" FrameworkElement.HorizontalAlignment="Left">Items</TextBlock>
+              <ListBox x:Uid="ListBox_1" Grid.Row="1" FrameworkElement.Margin="{DynamicResource DefaultTopMargin}"
+                       ItemsControl.ItemTemplate="{StaticResource CollectionPropertyTemplate}"
+                       ItemsControl.ItemContainerStyle="{StaticResource CollapsableListBoxItem}" SelectionMode="Single"
+                       Selector.IsSynchronizedWithCurrentItem="true" automation:AutomationElement.Id="CollectionList"
+                       FrameworkElement.MinWidth="0">
+                <ItemsControl.ItemsSource>
+                  <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="ChildrenView" Mode="OneWay"/>
+                </ItemsControl.ItemsSource>
+              </ListBox>
+              <Grid x:Uid="Grid_11" Row="2" FrameworkElement.Margin="{DynamicResource LargeTopMargin}">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition x:Uid="ColumnDefinition_15" Width="Auto"/>
+                  <ColumnDefinition x:Uid="ColumnDefinition_14" Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Border x:Uid="Border_4" CornerRadius="3" Background="{DynamicResource DarkBrush}">
+                  <StackPanel x:Uid="StackPanel_13" Orientation="Horizontal">
+                    <Button x:Uid="Button_2" FrameworkElement.Height="24" FrameworkElement.Width="24"
+                            FrameworkElement.MinHeight="0" FrameworkElement.MinWidth="0"
+                            automation:AutomationElement.Id="RemoveItemButton" FrameworkElement.ToolTip="Remove item">
+                      <ButtonBase.Command>
+                        <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="RemoveItemCommand" Mode="OneWay"/>
+                      </ButtonBase.Command>
+                      <Rectangle x:Uid="Rectangle_1" Shape.Fill="{StaticResource DeleteIconBrush}" FrameworkElement.Height="18"
+                                 FrameworkElement.Width="18" UIElement.RenderTransformOrigin="0.5,0.5">
+                        <UIElement.RenderTransform>
+                          <RotateTransform x:Uid="RotateTransform_1" Angle="45"/>
+                        </UIElement.RenderTransform>
+                      </Rectangle>
+                    </Button>
+                    <Button x:Uid="Button_3" FrameworkElement.Height="24" FrameworkElement.Width="24"
+                            FrameworkElement.MinHeight="0" FrameworkElement.MinWidth="0"
+                            automation:AutomationElement.Id="MoveUpButton" FrameworkElement.ToolTip="Move item up">
+                      <ButtonBase.Command>
+                        <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="MoveUpCommand" Mode="OneWay"/>
+                      </ButtonBase.Command>
+                      <Rectangle x:Uid="Rectangle_2" Shape.Fill="{StaticResource MoveUpIconBrush}" FrameworkElement.Height="18"
+                                 FrameworkElement.Width="18"/>
+                    </Button>
+                    <Button x:Uid="Button_4" FrameworkElement.Height="24" FrameworkElement.Width="24"
+                            FrameworkElement.MinHeight="0" FrameworkElement.MinWidth="0"
+                            automation:AutomationElement.Id="MoveDownButton" FrameworkElement.ToolTip="Move item down">
+                      <ButtonBase.Command>
+                        <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="MoveDownCommand" Mode="OneWay"/>
+                      </ButtonBase.Command>
+                      <Rectangle x:Uid="Rectangle_3" Shape.Fill="{StaticResource MoveDownIconBrush}" FrameworkElement.Height="18"
+                                 FrameworkElement.Width="18"/>
+                    </Button>
+                  </StackPanel>
+                </Border>
+                <fwve:SplitComboBox x:Uid="ComboBox_1" Grid.Column="1" FrameworkElement.Margin="{StaticResource DefaultLeftMargin}"
+                                    ItemsControl.ItemTemplate="{StaticResource QuickTypeItemTemplate}"
+                                    SelectedItemTemplate="{StaticResource StaticQuickTypeItemTemplate}"
+                                    Selector.IsSynchronizedWithCurrentItem="true" UIElement.Focusable="true" RememberLastItem="false"
+                                    FrameworkElement.VerticalAlignment="Stretch" FrameworkElement.HorizontalAlignment="Stretch"
+                                    automation:AutomationElement.Id="QuickTypeComboBox">
+                  <ItemsControl.ItemsSource>
+                    <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="QuickTypes" Mode="OneWay"/>
+                  </ItemsControl.ItemsSource>
+                  <fwve:SplitComboBox.LastActionCommand>
+                    <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="AddItemCommand" Mode="OneWay"/>
+                  </fwve:SplitComboBox.LastActionCommand>
+                </fwve:SplitComboBox>
+              </Grid>
+              <TextBlock x:Uid="TextBlock_19" Grid.Column="2" FrameworkElement.HorizontalAlignment="Left"
+                         FrameworkElement.Margin="{StaticResource LargeLeftMargin}">Properties</TextBlock>
+              <Border x:Uid="Border_5" Grid.Row="1" Grid.Column="2" Grid.RowSpan="2"
+                      Background="{DynamicResource BackgroundBrush}" CornerRadius="4"
+                      FrameworkElement.Margin="{StaticResource LargeLeftDefaultTopMargin}">
+                <Grid x:Uid="Grid_12">
+                  <ItemsControl x:Name="PropertyGrid" x:Uid="PropertyGrid" automation:AutomationElement.Id="CategoriesItemsControl"
+                                ItemTemplate="{StaticResource CategorySection}" FrameworkElement.Margin="4"
+                                UIElement.Focusable="false">
+                    <ItemsControl.ItemsSource>
+                      <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="Categories"/>
+                    </ItemsControl.ItemsSource>
+                    <Control.Template>
+                      <ControlTemplate x:Uid="ControlTemplate_3">
+                        <ScrollViewer x:Uid="ScrollViewer_3" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                          <StackPanel x:Name="CategoryContainer" x:Uid="StackPanel_14" Panel.IsItemsHost="true"/>
+                        </ScrollViewer>
+                      </ControlTemplate>
+                    </Control.Template>
+                  </ItemsControl>
+                  <PropertyEditing:PropertyContainer x:Uid="PropertyEditing:PropertyContainer_1" FrameworkElement.VerticalAlignment="Top">
+                    <UIElement.Visibility>
+                      <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="PrimitiveEditorVisibility" Mode="OneWay"/>
+                    </UIElement.Visibility>
+                    <PropertyEditing:PropertyContainer.PropertyEntry>
+                      <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="PrimitiveEditorContent.ParentProperty"/>
+                    </PropertyEditing:PropertyContainer.PropertyEntry>
+                    <PropertyEditing:PropertyContainer.InlineRowTemplate>
+                      <ControlTemplate x:Uid="ControlTemplate_5">
+                        <ContentControl x:Uid="ContentControl_1">
+                          <ContentControl.Content>
+                            <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="PropertyEntry.PropertyValue" Mode="OneWay"/>
+                          </ContentControl.Content>
+                          <ContentControl.ContentTemplate>
+                            <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="TemplatedParent.PrimitiveEditorTemplate"
+                                     Mode="OneWay"/>
+                          </ContentControl.ContentTemplate>
+                        </ContentControl>
+                      </ControlTemplate>
+                    </PropertyEditing:PropertyContainer.InlineRowTemplate>
+                  </PropertyEditing:PropertyContainer>
+                </Grid>
+              </Border>
+            </Grid>
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+    </Style.Setters>
+  </Style>
+  <Style x:Uid="Style_6" TargetType="{x:Type PropertyEditing:PropertyContainer}"
+         BasedOn="{StaticResource {x:Type PropertyEditing:PropertyContainer}}">
+    <Setter x:Uid="Setter_45" Property="automation:AutomationElement.Id">
+      <Setter.Value>
+        <Binding Path="PropertyEntry.PropertyName" RelativeSource="{RelativeSource Self}"/>
+      </Setter.Value>
+    </Setter>
+    <Setter x:Uid="Setter_9" Property="PropertyEditing:PropertyContainer.InlineRowTemplate">
+      <Setter.Value>
+        <ControlTemplate x:Uid="DataTemplate_3">
+          <Grid x:Uid="Grid_9">
+            <Grid.RowDefinitions>
+              <RowDefinition x:Uid="RowDefinition_4" MaxHeight="24" MinHeight="24"/>
+              <RowDefinition x:Uid="RowDefinition_6"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition x:Uid="ColumnDefinition_7" MinWidth="100" MaxWidth="180" Width="0.4*"
+                                DefinitionBase.SharedSizeGroup="Left"/>
+              <ColumnDefinition x:Uid="ColumnDefinition_6" Width="0.6*" DefinitionBase.SharedSizeGroup="Middle"/>
+              <ColumnDefinition x:Uid="ColumnDefinition_12" Width="12" DefinitionBase.SharedSizeGroup="Right"/>
+            </Grid.ColumnDefinitions>
+            <fwpi:PropertyEditorNameAreaControl x:Uid="fwpi:PropertyEditorNameAreaControl_1" FrameworkElement.VerticalAlignment="Center">
+              <FrameworkElement.ToolTip>
+                <Binding Path="PropertyEntry.ToolTip" RelativeSource="{RelativeSource TemplatedParent}"/>
+              </FrameworkElement.ToolTip>
+            </fwpi:PropertyEditorNameAreaControl>
+            <Rectangle x:Uid="Rectangle_4" Grid.RowSpan="2" Grid.Column="1" FrameworkElement.Margin="4,1,0,1"
+                       FrameworkElement.Style="{DynamicResource ValueAreaWrapper}"/>
+            <fwpi:PropertyEditorValueAreaControl x:Name="ValueArea" x:Uid="fwpi:PropertyEditorValueAreaControl_1" Grid.RowSpan="2" Grid.Column="1"
+                                                 FrameworkElement.Margin="4,2,0,2"/>
+            <dspi:PropertyMarker x:Name="Marker" x:Uid="Marker" Grid.RowSpan="2" Grid.Column="2"
+                                 FrameworkElement.HorizontalAlignment="Right"/>
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

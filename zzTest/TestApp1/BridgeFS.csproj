@@ -1,0 +1,925 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{17BF3C89-24FC-4AE1-88EB-9C026D3E5344}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BridgeFS</RootNamespace>
+    <AssemblyName>BridgeFS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>BridgeFS.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.Composition.Registration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContextMenuEntry.cs" />
+    <Compile Include="Dialogs\ProjectTreeViewModel.cs" />
+    <Compile Include="Dialogs\ProjectDialog.cs" />
+    <Compile Include="Dialogs\CreateNewProjectDialog.xaml.cs">
+      <DependentUpon>CreateNewProjectDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\ProjectPathHelper.cs" />
+    <Compile Include="Images\AccessOverlayIcon.cs" />
+    <Compile Include="Images\Images.cs" />
+    <Compile Include="Images\MemberIcon.cs" />
+    <Compile Include="Images\TypeIcon.cs" />
+    <Compile Include="NewProject.xaml.cs">
+      <DependentUpon>NewProject.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Nodes\AbutmentNode.cs" />
+    <Compile Include="Nodes\AbutmentsListNode.cs" />
+    <Compile Include="Nodes\BridgeListNode.cs" />
+    <Compile Include="Nodes\BridgeNode.cs" />
+    <Compile Include="Nodes\FilterResult.cs" />
+    <Compile Include="Nodes\FilterSettings.cs" />
+    <Compile Include="Nodes\PierNode.cs" />
+    <Compile Include="Nodes\PiersListNode.cs" />
+    <Compile Include="Nodes\ShopdrawingTreeNode.cs" />
+    <Compile Include="Nodes\SubstructuresNode.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Resources\StringTable.cs" />
+    <Compile Include="Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window2.xaml.cs">
+      <DependentUpon>Window2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window3.xaml.cs">
+      <DependentUpon>Window3.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Colors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Converters.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogs\CreateNewProjectDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Icons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="icons\designsurfaceicons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="NewProject.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Images\Bride.psd" />
+    <None Include="Images\ILSpy.pdn" />
+    <None Include="Images\Untitled-1.psd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock.Themes.Aero\Xceed.Wpf.AvalonDock.Themes.Aero.csproj">
+      <Project>{ba72cce0-a9fb-4995-b496-7fec5c87b85b}</Project>
+      <Name>Xceed.Wpf.AvalonDock.Themes.Aero</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock.Themes.Expression\Xceed.Wpf.AvalonDock.Themes.Expression.csproj">
+      <Project>{488dd8f7-9d3c-4f53-bd1f-84a095d9bc10}</Project>
+      <Name>Xceed.Wpf.AvalonDock.Themes.Expression</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock.Themes.Metro\Xceed.Wpf.AvalonDock.Themes.Metro.csproj">
+      <Project>{89286eb4-b4a1-418c-839a-067b00f442d8}</Project>
+      <Name>Xceed.Wpf.AvalonDock.Themes.Metro</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock.Themes.VS2010\Xceed.Wpf.AvalonDock.Themes.VS2010.csproj">
+      <Project>{b3fc3e21-5f2d-4581-aea2-59f671cffc21}</Project>
+      <Name>Xceed.Wpf.AvalonDock.Themes.VS2010</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Shopdrawing\LiveGeometry\DockingManager\Xceed.Wpf.AvalonDock\Xceed.Wpf.AvalonDock.csproj">
+      <Project>{db81988f-e0f2-45a0-a1fd-8c37f3d35244}</Project>
+      <Name>Xceed.Wpf.AvalonDock</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Shopdrawing\LiveGeometry\Lib\Structures\Culvert\Culvert.csproj">
+      <Project>{dd3df687-33fa-4c16-bd14-43df7acc4f38}</Project>
+      <Name>Culvert</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Mono.Cecil\Mono.Cecil.csproj">
+      <Project>{d68133bd-1e63-496e-9ede-4fbdbf77b486}</Project>
+      <Name>Mono.Cecil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Reinforcement\Reinforcement.csproj">
+      <Project>{ae61953d-cc4e-43ee-a72d-9fd8c871f86b}</Project>
+      <Name>Reinforcement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Shopdrawing.Controls\Shopdrawing.Controls.csproj">
+      <Project>{de678f62-cb9b-4b5e-ae08-9fd4e34c5872}</Project>
+      <Name>Shopdrawing.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Shopdrawing.Core.Utilities\Shopdrawing.Core.Utilities.csproj">
+      <Project>{049507b3-c1de-4f0a-a4c8-72add78fdce9}</Project>
+      <Name>Shopdrawing.Core.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Shopdrawing.Core\Shopdrawing.Core.csproj">
+      <Project>{b5c5d3e2-79db-4839-8375-c0d1b5d832c8}</Project>
+      <Name>Shopdrawing.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Shopdrawing.DXF\netDxf\xref.NETdxf.csproj">
+      <Project>{785380e0-ceb9-4c34-82e5-60d0e33e848e}</Project>
+      <Name>xref.NETdxf</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Shopdrawing.ProjectExpoler\ProjectExplorer.csproj">
+      <Project>{2854814f-ea3c-41d4-aa94-460c4694f430}</Project>
+      <Name>ProjectExplorer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Shopdrawing.Resources\Shopdrawing.Resources.csproj">
+      <Project>{9dff9a1d-52fb-4956-af25-5d2a18dcb466}</Project>
+      <Name>Shopdrawing.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Shopdrawing.Settings\Shopdrawing.Settings.csproj">
+      <Project>{9734feab-8e59-4bb1-825b-99bf85db61ae}</Project>
+      <Name>Shopdrawing.Settings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Shopdrawing.Themes\Shopdrawing.Themes.csproj">
+      <Project>{c585aad0-b51c-4fb8-8b77-091cbed5b141}</Project>
+      <Name>Shopdrawing.Themes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Shopdrawing.Wpf\Shopdrawing.Wpf.csproj">
+      <Project>{a0dcbd9d-7e4c-41a0-a3d1-599a422abd27}</Project>
+      <Name>Shopdrawing.Wpf</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\UndoFramework\UndoFramework.csproj">
+      <Project>{211753fc-8c4d-4f05-ab4b-130fabecf30e}</Project>
+      <Name>UndoFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Utilities\Utilities.csproj">
+      <Project>{d407185b-9606-4a5f-a1b1-6657fdcd8ecd}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Drawing\DynamicGeometry.2010.csproj">
+      <Project>{c8694ce9-c8fc-4a2d-94fe-0fb9ac01d16c}</Project>
+      <Name>DynamicGeometry.2010</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\FS\BridgeProject\BridgeProject.csproj">
+      <Project>{d918d756-c3b5-45f9-b0a0-b4cf33c0a5cd}</Project>
+      <Name>BridgeProject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Inspector\Inspector.csproj">
+      <Project>{20c048f8-7ca0-4ffb-9431-af55e9f4d6b6}</Project>
+      <Name>Inspector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SharpTreeView\ICSharpCode.TreeView.csproj">
+      <Project>{dde2a481-8271-4eac-a330-8fa6a38d13d1}</Project>
+      <Name>ICSharpCode.TreeView</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shopdrawing.Application\Shopdrawing.Application.csproj">
+      <Project>{f2406163-f7b0-419c-961d-d88a4c184315}</Project>
+      <Name>Shopdrawing.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shopdrawing.Code\Shopdrawing.Code.csproj">
+      <Project>{264c1558-58ac-4149-a5b3-0c5bd777c8af}</Project>
+      <Name>Shopdrawing.Code</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shopdrawing.Design.Extensibility\Shopdrawing.Design.Extensibility.csproj">
+      <Project>{cab662e1-637c-4f61-8ab3-b16ffa935ff5}</Project>
+      <Name>Shopdrawing.Design.Extensibility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shopdrawing.Design.Interaction\Shopdrawing.Design.Interaction.csproj">
+      <Project>{6724c818-9368-46cb-916e-42456c9b9d9f}</Project>
+      <Name>Shopdrawing.Design.Interaction</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shopdrawing.DesignModel\Shopdrawing.DesignModel.csproj">
+      <Project>{3c5aaf72-beab-4693-b062-77ee3d8105fc}</Project>
+      <Name>Shopdrawing.DesignModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shopdrawing.Extensibility.Designer\Shopdrawing.Extensibility.Designer.csproj">
+      <Project>{7670b69e-7b39-43ae-bda8-94767fec6256}</Project>
+      <Name>Shopdrawing.Extensibility.Designer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shopdrawing.Extensibility.Project\Shopdrawing.Extensibility.Project.csproj">
+      <Project>{e51eb890-57c9-423a-98e1-059a0448d922}</Project>
+      <Name>Shopdrawing.Extensibility.Project</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shopdrawing.Extensibility\Shopdrawing.Extensibility.csproj">
+      <Project>{430dc17e-7541-4198-b8b2-f4d4529934a8}</Project>
+      <Name>Shopdrawing.Extensibility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shopdrawing.Framework.Resources\Shopdrawing.Framework.Resources.csproj">
+      <Project>{e2a328c9-5269-4734-8202-2fd733526779}</Project>
+      <Name>Shopdrawing.Framework.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shopdrawing.Framework\Shopdrawing.Framework.csproj">
+      <Project>{886371dd-23b6-434d-bdb6-81606416348f}</Project>
+      <Name>Shopdrawing.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shopdrawing.Markup\Shopdrawing.Markup.csproj">
+      <Project>{05453e05-826b-4ceb-b940-03870afd97ad}</Project>
+      <Name>Shopdrawing.Markup</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Test.Resources\Test.Resources.csproj">
+      <Project>{8b2542ab-af3a-4d42-a8cb-e265a9123728}</Project>
+      <Name>Test.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\M4600\tr\ComplexDataTemplates\ComplexDataTemplates\ComplexDataTemplates.csproj">
+      <Project>{11440e2a-0411-4d7d-b23b-ec29d0ba6ca0}</Project>
+      <Name>ComplexDataTemplates</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\adorners\adorner_auto_off_12x12.png" />
+    <Resource Include="icons\adorners\adorner_auto_on_12x12.png" />
+    <Resource Include="icons\adorners\adorner_lock_off_16x16.png" />
+    <Resource Include="icons\adorners\adorner_lock_on_16x16.png" />
+    <Resource Include="icons\adorners\adorner_marginlockh_off_16x16.png" />
+    <Resource Include="icons\adorners\adorner_marginlockh_on_16x16.png" />
+    <Resource Include="icons\adorners\adorner_marginlockv_off_16x16.png" />
+    <Resource Include="icons\adorners\adorner_marginlockv_on_16x16.png" />
+    <Resource Include="icons\adorners\adorner_marginunlockh_off_16x16.png" />
+    <Resource Include="icons\adorners\adorner_marginunlockh_on_16x16.png" />
+    <Resource Include="icons\adorners\adorner_marginunlockv_off_16x16.png" />
+    <Resource Include="icons\adorners\adorner_marginunlockv_on_16x16.png" />
+    <Resource Include="icons\adorners\adorner_unlock_off_16x16.png" />
+    <Resource Include="icons\adorners\adorner_unlock_on_16x16.png" />
+    <Resource Include="icons\ambientlighticon.png" />
+    <Resource Include="icons\annotations\showatruntimeoff.png" />
+    <Resource Include="icons\annotations\showatruntimeon.png" />
+    <Resource Include="icons\appearance\appearancetab_lineargradient_off_18x16.png" />
+    <Resource Include="icons\appearance\appearancetab_lineargradient_on_18x16.png" />
+    <Resource Include="icons\appearance\appearancetab_none_off_18x16.png" />
+    <Resource Include="icons\appearance\appearancetab_none_on_18x16.png" />
+    <Resource Include="icons\appearance\appearancetab_radialgradient_off_18x16.png" />
+    <Resource Include="icons\appearance\appearancetab_radialgradient_on_18x16.png" />
+    <Resource Include="icons\appearance\appearancetab_solid_off_18x16.png" />
+    <Resource Include="icons\appearance\appearancetab_solid_on_18x16.png" />
+    <Resource Include="icons\appearance\appearancetab_visual_off_18x16.png" />
+    <Resource Include="icons\appearance\appearancetab_visual_on_18x16.png" />
+    <Resource Include="icons\appearance\properties_brushcreate_off_16x16.png" />
+    <Resource Include="icons\appearance\properties_brushcreate_on_16x16.png" />
+    <Resource Include="icons\appearance\properties_brushresource_off_16x16.png" />
+    <Resource Include="icons\appearance\properties_brushresource_on_16x16.png" />
+    <Resource Include="icons\appearance\resource_converter_off_16x16.png" />
+    <Resource Include="icons\appearance\resource_converter_on_16x16.png" />
+    <Resource Include="icons\appearance\reverse-gradient-stop_off_16x16.png" />
+    <Resource Include="icons\appearance\reverse-gradient-stop_on_16x16.png" />
+    <Resource Include="icons\artboard\artboard_annotations_off_18x15.png" />
+    <Resource Include="icons\artboard\artboard_annotations_on_18x15.png" />
+    <Resource Include="icons\artboard\artboard_effects_disabled_on_16x16.png" />
+    <Resource Include="icons\artboard\artboard_effects_enabled_on_16x16.png" />
+    <Resource Include="icons\artboard\artboard_grid_off_18x15.png" />
+    <Resource Include="icons\artboard\artboard_grid_on_18x15.png" />
+    <Resource Include="icons\artboard\artboard_snapgridoff_on_18x15.png" />
+    <Resource Include="icons\artboard\artboard_snapgridon_on_18x15.png" />
+    <Resource Include="icons\artboard\artboard_snaplineoff_on_18x15.png" />
+    <Resource Include="icons\artboard\artboard_snaplineon_on_18x15.png" />
+    <Resource Include="icons\assethelpers\asset_action_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_action_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_ambientlight_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_ambientlight_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_arc_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_arc_off_24x24.png" />
+    <Resource Include="icons\assethelpers\asset_arc_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_arc_on_24x24.png" />
+    <Resource Include="icons\assethelpers\asset_behavior_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_behavior_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_blockarrow_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_blockarrow_off_24x24.png" />
+    <Resource Include="icons\assethelpers\asset_blockarrow_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_blockarrow_on_24x24.png" />
+    <Resource Include="icons\assethelpers\asset_border_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_border_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_bulletpanel_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_bulletpanel_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_button_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_button_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_calendar_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_calendar_off_24x24.png" />
+    <Resource Include="icons\assethelpers\asset_calendar_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_calendar_on_24x24.png" />
+    <Resource Include="icons\assethelpers\asset_callout_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_callout_off_24x24.png" />
+    <Resource Include="icons\assethelpers\asset_callout_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_callout_on_24x24.png" />
+    <Resource Include="icons\assethelpers\asset_canvas_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_canvas_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_checkbox_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_checkbox_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_comboboxitem_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_comboboxitem_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_combobox_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_combobox_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_contentpresenter_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_contentpresenter_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_contextmenu_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_contextmenu_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_datagridcolumn_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_datagridcolumn_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_datagrid_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_datagrid_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_datepicker_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_datepicker_off_24x24.png" />
+    <Resource Include="icons\assethelpers\asset_datepicker_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_datepicker_on_24x24.png" />
+    <Resource Include="icons\assethelpers\asset_directionlight_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_directionlight_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_dockpanel_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_dockpanel_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_documentviewer_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_documentviewer_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_effect_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_effect_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_element_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_element_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_ellipse_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_ellipse_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_expander_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_expander_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_gridsplitter_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_gridsplitter_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_grid_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_grid_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_groupbox_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_groupbox_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_hyperlinkbutton_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_hyperlinkbutton_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_image_documentviewer.png" />
+    <Resource Include="icons\assethelpers\asset_image_image.png" />
+    <Resource Include="icons\assethelpers\asset_image_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_image_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_inkcanvas_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_inkcanvas_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_inkpresenter_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_inkpresenter_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_label_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_label_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_linearrow_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_linearrow_off_24x24.png" />
+    <Resource Include="icons\assethelpers\asset_linearrow_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_linearrow_on_24x24.png" />
+    <Resource Include="icons\assethelpers\asset_listbox_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_listbox_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_listview_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_listview_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_mediaelement_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_mediaelement_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_menuitem_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_menuitem_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_menu_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_menu_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_model3d_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_model3d_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_multiscaleimage_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_multiscaleimage_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_orthographiccam_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_orthographiccam_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_panel_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_panel_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_passwordbox_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_passwordbox_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_pathlistboxitem_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_pathlistboxitem_off_24x24.png" />
+    <Resource Include="icons\assethelpers\asset_pathlistboxitem_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_pathlistboxitem_on_24x24.png" />
+    <Resource Include="icons\assethelpers\asset_pathlistbox_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_pathlistbox_off_24x24.png" />
+    <Resource Include="icons\assethelpers\asset_pathlistbox_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_pathlistbox_on_24x24.png" />
+    <Resource Include="icons\assethelpers\asset_path_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_path_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_perspectivecam_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_perspectivecam_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_pointlight_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_pointlight_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_polygon_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_polygon_off_24x24.png" />
+    <Resource Include="icons\assethelpers\asset_polygon_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_polygon_on_24x24.png" />
+    <Resource Include="icons\assethelpers\asset_popup_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_popup_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_progressbar_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_progressbar_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_radiobutton_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_radiobutton_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_rectangle_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_rectangle_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_resizegrip_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_resizegrip_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_richtextbox-image_off.png" />
+    <Resource Include="icons\assethelpers\asset_richtextbox-image_on.png" />
+    <Resource Include="icons\assethelpers\asset_richtextbox_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_richtextbox_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_scrollbar_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_scrollbar_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_scrollviewer-image_off.png" />
+    <Resource Include="icons\assethelpers\asset_scrollviewer-image_on.png" />
+    <Resource Include="icons\assethelpers\asset_scrollviewer_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_scrollviewer_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_separator_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_separator_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_slider_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_slider_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_spotlight_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_spotlight_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_stackpanel_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_stackpanel_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_style_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_style_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_tabcontrol_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_tabcontrol_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_textblock_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_textblock_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_textbox_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_textbox_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_togglebutton_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_togglebutton_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_toolbar_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_toolbar_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_tooltip_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_tooltip_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_treeview_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_treeview_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_uniformgrid_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_uniformgrid_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_usercontrol_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_usercontrol_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_viewbox_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_viewbox_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_webbrowser_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_webbrowser_on_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_wrappanel_off_12x12.png" />
+    <Resource Include="icons\assethelpers\asset_wrappanel_on_12x12.png" />
+    <Resource Include="icons\assets\asset_canvas_12x12_off.png" />
+    <Resource Include="icons\assets\asset_canvas_12x12_on.png" />
+    <Resource Include="icons\assets\asset_grid_12x12_off.png" />
+    <Resource Include="icons\assets\asset_grid_12x12_on.png" />
+    <Resource Include="icons\asset_details_off_16x16.png" />
+    <Resource Include="icons\asset_details_on_16x16.png" />
+    <Resource Include="icons\asset_thumb_off_16x16.png" />
+    <Resource Include="icons\asset_thumb_on_16x16.png" />
+    <Resource Include="icons\bordericon.png" />
+    <Resource Include="icons\bulletpanelicon.png" />
+    <Resource Include="icons\buttonicon.png" />
+    <Resource Include="icons\canvasicon.png" />
+    <Resource Include="icons\categories\pane_appearance_24x24_off.png" />
+    <Resource Include="icons\categories\pane_appearance_24x24_on.png" />
+    <Resource Include="icons\categories\pane_attachedprops_24x24_off.png" />
+    <Resource Include="icons\categories\pane_attachedprops_24x24_on.png" />
+    <Resource Include="icons\categories\pane_brushes_24x24_off.png" />
+    <Resource Include="icons\categories\pane_brushes_24x24_on.png" />
+    <Resource Include="icons\categories\pane_camera_24x24_off.png" />
+    <Resource Include="icons\categories\pane_camera_24x24_on.png" />
+    <Resource Include="icons\categories\pane_commonprops_24x24_off.png" />
+    <Resource Include="icons\categories\pane_commonprops_24x24_on.png" />
+    <Resource Include="icons\categories\pane_easing_24x24_off.png" />
+    <Resource Include="icons\categories\pane_easing_24x24_on.png" />
+    <Resource Include="icons\categories\pane_layout_24x24_off.png" />
+    <Resource Include="icons\categories\pane_layout_24x24_on.png" />
+    <Resource Include="icons\categories\pane_light_24x24_off.png" />
+    <Resource Include="icons\categories\pane_light_24x24_on.png" />
+    <Resource Include="icons\categories\pane_materials_24x24_off.png" />
+    <Resource Include="icons\categories\pane_materials_24x24_on.png" />
+    <Resource Include="icons\categories\pane_misc_24x24_off.png" />
+    <Resource Include="icons\categories\pane_misc_24x24_on.png" />
+    <Resource Include="icons\categories\pane_text_24x24_off.png" />
+    <Resource Include="icons\categories\pane_text_24x24_on.png" />
+    <Resource Include="icons\categories\pane_thirdparty_24x24_off.png" />
+    <Resource Include="icons\categories\pane_thirdparty_24x24_on.png" />
+    <Resource Include="icons\categories\pane_transform_24x24_off.png" />
+    <Resource Include="icons\categories\pane_transform_24x24_on.png" />
+    <Resource Include="icons\checkboxicon.png" />
+    <Resource Include="icons\comboboxicon.png" />
+    <Resource Include="icons\contextmenuicon.png" />
+    <Resource Include="icons\controlicon.png" />
+    <Resource Include="icons\data\collection_editor_off_16x16.png" />
+    <Resource Include="icons\data\collection_editor_on_16x16.png" />
+    <Resource Include="icons\data\collection_property_16x16.png" />
+    <Resource Include="icons\data\complex_property_16x16.png" />
+    <Resource Include="icons\data\data_bool_off_16x16.png" />
+    <Resource Include="icons\data\data_bool_on_16x16.png" />
+    <Resource Include="icons\data\data_host_16x16.png" />
+    <Resource Include="icons\data\data_image_off_16x16.png" />
+    <Resource Include="icons\data\data_image_on_16x16.png" />
+    <Resource Include="icons\data\data_number_off_16x16.png" />
+    <Resource Include="icons\data\data_number_on_16x16.png" />
+    <Resource Include="icons\data\data_string_off_16x16.png" />
+    <Resource Include="icons\data\data_string_on_16x16.png" />
+    <Resource Include="icons\data\data_tree_16x16.png" />
+    <Resource Include="icons\data\designdataicon_off_20x16.png" />
+    <Resource Include="icons\data\details_mode_toggle_off_16x16.png" />
+    <Resource Include="icons\data\details_mode_toggle_on_16x16.png" />
+    <Resource Include="icons\data\linkicon_20x16_off.png" />
+    <Resource Include="icons\data\linkicon_20x16_on.png" />
+    <Resource Include="icons\data\livedata_off.png" />
+    <Resource Include="icons\data\livedata_on.png" />
+    <Resource Include="icons\data\liveicon_20x16_off.png" />
+    <Resource Include="icons\data\master_mode_toggle_off_16x16.png" />
+    <Resource Include="icons\data\master_mode_toggle_on_16x16.png" />
+    <Resource Include="icons\data\sampledata_off.png" />
+    <Resource Include="icons\data\sampledata_on.png" />
+    <Resource Include="icons\data\sampleicon_20x16_off.png" />
+    <Resource Include="icons\directionallighticon.png" />
+    <Resource Include="icons\dockpanelicon.png" />
+    <Resource Include="icons\dragdrop\cantdrop_icon_16x16.png" />
+    <Resource Include="icons\dragdrop\copyto_icon_16x16.png" />
+    <Resource Include="icons\dragdrop\create_icon_16x16.png" />
+    <Resource Include="icons\dragdrop\moveinto_icon_16x16.png" />
+    <Resource Include="icons\dragdrop\replaceplus_icon_16x16.png" />
+    <Resource Include="icons\dragdrop\replace_icon_16x16.png" />
+    <Resource Include="icons\elementicon.png" />
+    <Resource Include="icons\ellipseicon.png" />
+    <Resource Include="icons\expandericon.png" />
+    <Resource Include="icons\gridicon.png" />
+    <Resource Include="icons\gridsplittericon.png" />
+    <Resource Include="icons\groupboxicon.png" />
+    <Resource Include="icons\imageicon.png" />
+    <Resource Include="icons\labelicon.png" />
+    <Resource Include="icons\layout\align_bottom_off_16x16.png" />
+    <Resource Include="icons\layout\align_bottom_on_16x16.png" />
+    <Resource Include="icons\layout\align_centerh_off_16x16.png" />
+    <Resource Include="icons\layout\align_centerh_on_16x16.png" />
+    <Resource Include="icons\layout\align_centerv_off_16x16.png" />
+    <Resource Include="icons\layout\align_centerv_on_16x16.png" />
+    <Resource Include="icons\layout\align_left_off_16x16.png" />
+    <Resource Include="icons\layout\align_left_on_16x16.png" />
+    <Resource Include="icons\layout\align_right_off_16x16.png" />
+    <Resource Include="icons\layout\align_right_on_16x16.png" />
+    <Resource Include="icons\layout\align_stretchh_off_16x16.png" />
+    <Resource Include="icons\layout\align_stretchh_on_16x16.png" />
+    <Resource Include="icons\layout\align_stretchv_off_16x16.png" />
+    <Resource Include="icons\layout\align_stretchv_on_16x16.png" />
+    <Resource Include="icons\layout\align_top_off_16x16.png" />
+    <Resource Include="icons\layout\align_top_on_16x16.png" />
+    <Resource Include="icons\listboxicon.png" />
+    <Resource Include="icons\listviewicon.png" />
+    <Resource Include="icons\materialeditor\materialeditor_bringforward_off_16x16.png" />
+    <Resource Include="icons\materialeditor\materialeditor_bringforward_on_16x16.png" />
+    <Resource Include="icons\materialeditor\materialeditor_diffuse_off_16x16.png" />
+    <Resource Include="icons\materialeditor\materialeditor_diffuse_on_16x16.png" />
+    <Resource Include="icons\materialeditor\materialeditor_emmisive_off_16x16.png" />
+    <Resource Include="icons\materialeditor\materialeditor_emmisive_on_16x16.png" />
+    <Resource Include="icons\materialeditor\materialeditor_sendback_off_16x16.png" />
+    <Resource Include="icons\materialeditor\materialeditor_sendback_on_16x16.png" />
+    <Resource Include="icons\materialeditor\materialeditor_specular_off_16x16.png" />
+    <Resource Include="icons\materialeditor\materialeditor_specular_on_16x16.png" />
+    <Resource Include="icons\menuicon.png" />
+    <Resource Include="icons\menuitemicon.png" />
+    <Resource Include="icons\minus_off.png" />
+    <Resource Include="icons\minus_on.png" />
+    <Resource Include="icons\model3dicon.png" />
+    <Resource Include="icons\newobjectdialog\assembly.png" />
+    <Resource Include="icons\newobjectdialog\namespace.png" />
+    <Resource Include="icons\newobjectdialog\type.png" />
+    <Resource Include="icons\options_off_16x16.png" />
+    <Resource Include="icons\options_on_16x16.png" />
+    <Resource Include="icons\orthographiccameraicon.png" />
+    <Resource Include="icons\panelicon.png" />
+    <Resource Include="icons\passwordboxicon.png" />
+    <Resource Include="icons\pathicon.png" />
+    <Resource Include="icons\perspectivecameraicon.png" />
+    <Resource Include="icons\pointlighticon.png" />
+    <Resource Include="icons\popupicon.png" />
+    <Resource Include="icons\progressbaricon.png" />
+    <Resource Include="icons\properties\arrow_move_down_off_12x12.png" />
+    <Resource Include="icons\properties\arrow_move_down_on_12x12.png" />
+    <Resource Include="icons\properties\arrow_move_up_off_12x12.png" />
+    <Resource Include="icons\properties\arrow_move_up_on_12x12.png" />
+    <Resource Include="icons\properties\data_binding_off_16x16.png" />
+    <Resource Include="icons\properties\data_binding_on_16x16.png" />
+    <Resource Include="icons\properties\orient_to_path_none_off_16x16.png" />
+    <Resource Include="icons\properties\orient_to_path_none_on_16x16.png" />
+    <Resource Include="icons\properties\orient_to_path_normal_off_16x16.png" />
+    <Resource Include="icons\properties\orient_to_path_normal_on_16x16.png" />
+    <Resource Include="icons\properties\pickwhip_off_16x16.png" />
+    <Resource Include="icons\properties\pickwhip_on_16x16.png" />
+    <Resource Include="icons\properties\properties_colorgradpickdropper_off_16x16.png" />
+    <Resource Include="icons\properties\properties_colorgradpickdropper_on_16x16.png" />
+    <Resource Include="icons\properties\properties_displayevents_off_16x16.png" />
+    <Resource Include="icons\properties\properties_displayevents_on_16x16.png" />
+    <Resource Include="icons\properties\properties_displayproperties_off_16x16.png" />
+    <Resource Include="icons\properties\properties_displayproperties_on_16x16.png" />
+    <Resource Include="icons\properties\property_picker_off_16x16.png" />
+    <Resource Include="icons\properties\property_picker_on_16x16.png" />
+    <Resource Include="icons\properties\textcategorypane\bold_off_16x16.png" />
+    <Resource Include="icons\properties\textcategorypane\bold_on_16x16.png" />
+    <Resource Include="icons\properties\textcategorypane\font_silverlight_on_16x16.png" />
+    <Resource Include="icons\properties\textcategorypane\italic_off_16x16.png" />
+    <Resource Include="icons\properties\textcategorypane\italic_on_16x16.png" />
+    <Resource Include="icons\properties\textcategorypane\text_bold_off_16x16.png" />
+    <Resource Include="icons\properties\textcategorypane\text_bold_on_16x16.png" />
+    <Resource Include="icons\properties\textcategorypane\text_embedded_font_16x16.png" />
+    <Resource Include="icons\properties\textcategorypane\text_firstindent_on_16x16.png" />
+    <Resource Include="icons\properties\textcategorypane\text_fonttab_off_20x12.png" />
+    <Resource Include="icons\properties\textcategorypane\text_fonttab_on_20x12.png" />
+    <Resource Include="icons\properties\textcategorypane\text_hyperlink_on_24x24.png" />
+    <Resource Include="icons\properties\textcategorypane\text_italic_off_16x16.png" />
+    <Resource Include="icons\properties\textcategorypane\text_italic_on_16x16.png" />
+    <Resource Include="icons\properties\textcategorypane\text_leftindent_on_16x16.png" />
+    <Resource Include="icons\properties\textcategorypane\text_lineheight_on_16x16.png" />
+    <Resource Include="icons\properties\textcategorypane\text_lineindenttab_off_20x12.png" />
+    <Resource Include="icons\properties\textcategorypane\text_lineindenttab_on_20x12.png" />
+    <Resource Include="icons\properties\textcategorypane\text_listtab_off_20x12.png" />
+    <Resource Include="icons\properties\textcategorypane\text_listtab_on_20x12.png" />
+    <Resource Include="icons\properties\textcategorypane\text_paragraphtab_off_20x12.png" />
+    <Resource Include="icons\properties\textcategorypane\text_paragraphtab_on_20x12.png" />
+    <Resource Include="icons\properties\textcategorypane\text_ppspaceafter_on_16x16.png" />
+    <Resource Include="icons\properties\textcategorypane\text_ppspacebefore_on_16x16.png" />
+    <Resource Include="icons\properties\textcategorypane\text_rightindent_on_16x16.png" />
+    <Resource Include="icons\properties\textcategorypane\text_textalign_on_18x16.png" />
+    <Resource Include="icons\properties\textcategorypane\text_underline_off_16x16.png" />
+    <Resource Include="icons\properties\textcategorypane\text_underline_on_16x16.png" />
+    <Resource Include="icons\properties\textcategorypane\underline_off_16x16.png" />
+    <Resource Include="icons\properties\textcategorypane\underline_on_16x16.png" />
+    <Resource Include="icons\properties_auto_off_12x12.png" />
+    <Resource Include="icons\properties_auto_on_12x12.png" />
+    <Resource Include="icons\propertyicon.png" />
+    <Resource Include="icons\radiobuttonicon.png" />
+    <Resource Include="icons\rectangleicon.png" />
+    <Resource Include="icons\resizegripicon.png" />
+    <Resource Include="icons\resources\addnewdictionary_off.png" />
+    <Resource Include="icons\resources\addnewdictionary_on.png" />
+    <Resource Include="icons\resources\filterusedresources_off.png" />
+    <Resource Include="icons\resources\filterusedresources_on.png" />
+    <Resource Include="icons\resources\resource_dictionary_on_12x12.png" />
+    <Resource Include="icons\resources\resource_externaldictionary_on_12x12.png" />
+    <Resource Include="icons\resources\showallresources_off.png" />
+    <Resource Include="icons\resources\showallresources_on.png" />
+    <Resource Include="icons\richtextboxicon.png" />
+    <Resource Include="icons\scrollbaricon.png" />
+    <Resource Include="icons\scrollviewericon.png" />
+    <Resource Include="icons\slidericon.png" />
+    <Resource Include="icons\spotlighticon.png" />
+    <Resource Include="icons\stackpanelicon.png" />
+    <Resource Include="icons\styleicon.png" />
+    <Resource Include="icons\tabcontrolicon.png" />
+    <Resource Include="icons\textblockicon.png" />
+    <Resource Include="icons\textboxicon.png" />
+    <Resource Include="icons\timeline\hasrecordedchanges.png" />
+    <Resource Include="icons\timeline\parts_assigned-part_on_16x16.png" />
+    <Resource Include="icons\timeline\shell_mediaelement_off_32x32.png" />
+    <Resource Include="icons\timeline\shell_repeatforever_off_16x16.png" />
+    <Resource Include="icons\timeline\shell_repeatforever_on_16x16.png" />
+    <Resource Include="icons\timeline\states_record-into-state_off_7.png" />
+    <Resource Include="icons\timeline\states_record-into-state_on_7.png" />
+    <Resource Include="icons\timeline\timeline_action_off_12x12.png" />
+    <Resource Include="icons\timeline\timeline_action_on_12x12.png" />
+    <Resource Include="icons\timeline\timeline_behavior_off_12x12.png" />
+    <Resource Include="icons\timeline\timeline_behavior_on_12x12.png" />
+    <Resource Include="icons\timeline\timeline_delete_off_11x11.png" />
+    <Resource Include="icons\timeline\timeline_delete_on_11x11.png" />
+    <Resource Include="icons\timeline\timeline_duplicate_off_11x11.png" />
+    <Resource Include="icons\timeline\timeline_duplicate_on_11x11.png" />
+    <Resource Include="icons\timeline\timeline_effect_off_12x12.png" />
+    <Resource Include="icons\timeline\timeline_hide-timeline_f_24x24.png" />
+    <Resource Include="icons\timeline\timeline_hide-timeline_on_24x24.png" />
+    <Resource Include="icons\timeline\timeline_lock_off_16x16.png" />
+    <Resource Include="icons\timeline\timeline_lock_on_16x16.png" />
+    <Resource Include="icons\timeline\timeline_openpicker_off_11x11.png" />
+    <Resource Include="icons\timeline\timeline_openpicker_on_11x11.png" />
+    <Resource Include="icons\timeline\timeline_orderdown_off_16x16.png" />
+    <Resource Include="icons\timeline\timeline_orderdown_on_16x16.png" />
+    <Resource Include="icons\timeline\timeline_orderup_off_16x16.png" />
+    <Resource Include="icons\timeline\timeline_orderup_on_16x16.png" />
+    <Resource Include="icons\timeline\timeline_property_off_12x12.png" />
+    <Resource Include="icons\timeline\timeline_property_off_16x16.png" />
+    <Resource Include="icons\timeline\timeline_record-keyframe_off_16x16.png" />
+    <Resource Include="icons\timeline\timeline_record-keyframe_on_16x16.png" />
+    <Resource Include="icons\timeline\timeline_recordled_off_16x16.png" />
+    <Resource Include="icons\timeline\timeline_recordled_on_16x16.png" />
+    <Resource Include="icons\timeline\timeline_reverse_off_11x11.png" />
+    <Resource Include="icons\timeline\timeline_reverse_on_11x11.png" />
+    <Resource Include="icons\timeline\timeline_scoperoot_off_16x16.png" />
+    <Resource Include="icons\timeline\timeline_scoperoot_on_16x16.png" />
+    <Resource Include="icons\timeline\timeline_show-timeline_off_24x24.png" />
+    <Resource Include="icons\timeline\timeline_show-timeline_on_24.png" />
+    <Resource Include="icons\timeline\timeline_showtoggle_off_16x16.png" />
+    <Resource Include="icons\timeline\timeline_showtoggle_on_16x16.png" />
+    <Resource Include="icons\timeline\timeline_snapresolution_off_16x16.png" />
+    <Resource Include="icons\timeline\timeline_snapresolution_on_16x16.png" />
+    <Resource Include="icons\timeline\timeline_timesnap_off_16x16.png" />
+    <Resource Include="icons\timeline\timeline_timesnap_on_16x16.png" />
+    <Resource Include="icons\timeline\warning_on_12x12.png" />
+    <Resource Include="icons\toolbaricon.png" />
+    <Resource Include="icons\tooltipicon.png" />
+    <Resource Include="icons\transform\properties_flipx_off_16x16.png" />
+    <Resource Include="icons\transform\properties_flipx_on_16x16.png" />
+    <Resource Include="icons\transform\properties_flipy_off_16x16.png" />
+    <Resource Include="icons\transform\properties_flipy_on_16x16.png" />
+    <Resource Include="icons\transform\properties_flipz_off_16x16.png" />
+    <Resource Include="icons\transform\properties_flipz_on_16x16.png" />
+    <Resource Include="icons\transform\transform_centerpointtab_off_20x12.png" />
+    <Resource Include="icons\transform\transform_centerpointtab_on_20x12.png" />
+    <Resource Include="icons\transform\transform_fliptab_off_20x12.png" />
+    <Resource Include="icons\transform\transform_fliptab_on_20x12.png" />
+    <Resource Include="icons\transform\transform_positionglobaltab_off_20x12.png" />
+    <Resource Include="icons\transform\transform_positionglobaltab_on_20x12.png" />
+    <Resource Include="icons\transform\transform_positiontab_off_20x12.png" />
+    <Resource Include="icons\transform\transform_positiontab_on_20x12.png" />
+    <Resource Include="icons\transform\transform_rotationtab_off_20x12.png" />
+    <Resource Include="icons\transform\transform_rotationtab_on_20x12.png" />
+    <Resource Include="icons\transform\transform_scaletab_off_20x12.png" />
+    <Resource Include="icons\transform\transform_scaletab_on_20x12.png" />
+    <Resource Include="icons\transform\transform_skewtab_off_20x12.png" />
+    <Resource Include="icons\transform\transform_skewtab_on_20x12.png" />
+    <Resource Include="icons\transitioneffect_off_16x16.png" />
+    <Resource Include="icons\transitioneffect_on_16x16.png" />
+    <Resource Include="icons\treeviewicon.png" />
+    <Resource Include="icons\triggers\triggers_actionsactivate_on_16x16.png" />
+    <Resource Include="icons\triggers\triggers_actionsdeactivate_on_16x16.png" />
+    <Resource Include="icons\triggers\triggers_activewhen_on_16x16.png" />
+    <Resource Include="icons\triggers\triggers_haseffect_12x12.png" />
+    <Resource Include="icons\triggers\triggers_propertiesactive_on_16x16.png" />
+    <Resource Include="icons\uniformgridicon.png" />
+    <Resource Include="icons\wrappanelicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dialogs\Project\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BridgeFS.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\abut.png" />
+    <Resource Include="Images\Assembly.png" />
+    <Resource Include="Images\AssemblyList.png" />
+    <Resource Include="Images\AssemblyListGAC.png" />
+    <Resource Include="Images\AssemblyWarning.png" />
+    <Resource Include="Images\Back.png" />
+    <Resource Include="Images\Break.png" />
+    <Resource Include="Images\Breakpoint.png" />
+    <Resource Include="Images\Bridge.png" />
+    <Resource Include="Images\Class.png" />
+    <Resource Include="Images\ClassA.png" />
+    <Resource Include="Images\ClassB.png" />
+    <Resource Include="Images\ClassBs.png" />
+    <Resource Include="Images\ClassC.png" />
+    <Resource Include="Images\ClassCs.png" />
+    <Resource Include="Images\ClearSearch.png" />
+    <Resource Include="Images\Constructor.png" />
+    <Resource Include="Images\CurrentLine.png" />
+    <Resource Include="Images\Delegate.png" />
+    <Resource Include="Images\Delete.png" />
+    <Resource Include="Images\DisabledBreakpoint.png" />
+    <Resource Include="Images\Enum.png" />
+    <Resource Include="Images\EnumValue.png" />
+    <Resource Include="Images\Event.png" />
+    <Resource Include="Images\ExtensionMethod.png" />
+    <Resource Include="Images\Field.png" />
+    <Resource Include="Images\FieldReadOnly.png" />
+    <Resource Include="Images\Find.png" />
+    <Resource Include="Images\FindAssembly.png" />
+    <Resource Include="Images\Folder.Closed.png" />
+    <Resource Include="Images\Folder.Open.png" />
+    <Resource Include="Images\Forward.png" />
+    <Resource Include="Images\icecream.png" />
+    <Resource Include="Images\ILSpy-Large.ico" />
+    <Resource Include="Images\ILSpy.ico" />
+    <Resource Include="Images\ILSpyNewIconList.txt" />
+    <Resource Include="Images\Indexer.png" />
+    <Resource Include="Images\Interface.png" />
+    <Resource Include="Images\Item.png" />
+    <Resource Include="Images\Library.png" />
+    <Resource Include="Images\Literal.png" />
+    <Resource Include="Images\Method.png" />
+    <Resource Include="Images\NameSpace.png" />
+    <Resource Include="Images\OK.png" />
+    <Resource Include="Images\Open.png" />
+    <Resource Include="Images\Operator.png" />
+    <Resource Include="Images\OverlayCompilerControlled.png" />
+    <Resource Include="Images\OverlayInternal.png" />
+    <Resource Include="Images\OverlayPrivate.png" />
+    <Resource Include="Images\OverlayProtected.png" />
+    <Resource Include="Images\OverlayProtectedInternal.png" />
+    <Resource Include="Images\OverlayStatic.png" />
+    <Resource Include="Images\pickle.png" />
+    <Resource Include="Images\PInvokeMethod.png" />
+    <Resource Include="Images\PrivateInternal.png" />
+    <Resource Include="Images\Property.png" />
+    <Resource Include="Images\ReferenceFolder.Closed.png" />
+    <Resource Include="Images\ReferenceFolder.Open.png" />
+    <Resource Include="Images\Refresh.png" />
+    <Resource Include="Images\Resource.png" />
+    <Resource Include="Images\ResourceImage.png" />
+    <Resource Include="Images\ResourceResourcesFile.png" />
+    <Resource Include="Images\ResourceXml.png" />
+    <Resource Include="Images\ResourceXsd.png" />
+    <Resource Include="Images\ResourceXsl.png" />
+    <Resource Include="Images\ResourceXslt.png" />
+    <Resource Include="Images\SaveFile.png" />
+    <Resource Include="Images\Search.png" />
+    <Resource Include="Images\StaticClass.png" />
+    <Resource Include="Images\Struct.png" />
+    <Resource Include="Images\sub.png" />
+    <Resource Include="Images\SubTypes.png" />
+    <Resource Include="Images\SuperTypes.png" />
+    <Resource Include="Images\ViewCode.png" />
+    <Resource Include="Images\VirtualMethod.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

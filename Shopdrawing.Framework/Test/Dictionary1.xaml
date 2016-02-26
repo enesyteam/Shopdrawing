@@ -1,0 +1,219 @@
+﻿<WindowProfile
+  xmlns="clr-namespace:Microsoft.VisualStudio.PlatformUI.Shell"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:ExpressionExtension="clr-namespace:Microsoft.Expression.Framework.Workspaces.Extension"
+   xmlns:DesignSurface="Shopdrawing.Framework.Design" >
+    <MainSite IsVisible="True">
+        <AutoHideRoot IsVisible="True">
+            <AutoHideChannel
+        Dock="Left"
+        Orientation="Vertical"/>
+            <AutoHideChannel
+        Dock="Right"
+        Orientation="Vertical"/>
+            <AutoHideChannel
+        Dock="Top"
+        Orientation="Horizontal"/>
+            <AutoHideChannel
+        Dock="Bottom"
+        Orientation="Horizontal"/>
+            <ExpressionExtension:ExpressionDockRoot
+        IsVisible="True"
+        DockedHeight="*"
+        DockedWidth="*">
+                <ExpressionExtension:ExpressionDockGroup
+          Orientation="Horizontal"
+          IsVisible="True"
+          DockedHeight="*"
+          DockedWidth="*">
+                    <ExpressionExtension:StandaloneView
+            Name="Designer_ToolPane"
+            IsDesiredVisible="True"
+            DockedHeight="{x:Static DesignSurface:DesignerPaletteSizes.ToolPaneHorizontalHeightSplitterLength}"
+            DockedWidth="{x:Static DesignSurface:DesignerPaletteSizes.ToolPaneVerticalWidthSplitterLength}"
+            MinimumWidth="{x:Static DesignSurface:DesignerPaletteSizes.ToolPaneVerticalWidth}"
+            MinimumHeight="{x:Static DesignSurface:DesignerPaletteSizes.ToolPaneHorizontalHeight}"
+            FloatingHeight="{x:Static DesignSurface:DesignerPaletteSizes.ToolPaneFloatingHeight}"
+            FloatingWidth="{x:Static DesignSurface:DesignerPaletteSizes.ToolPaneVerticalWidth}" />
+                    <ExpressionExtension:ExpressionDockGroup
+            Orientation="Vertical"
+            IsVisible="True"
+            DockedHeight="*"
+            DockedWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneHorizontalHeightSplitterLength}">
+                        <!-- Note: DockedHeight is set to 100 to ensure the 1:2 correspondance between the TabGroup and Objects and Timeline Pane TabGroup below it. -->
+                        <TabGroup 
+              IsVisible="True" 
+              DockedHeight="100" 
+              DockedWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneVerticalWidthSplitterLength}"
+              AutoHideWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneVerticalWidth}" 
+              AutoHideHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneHorizontalHeight}"
+              FloatingHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneFloatingHeight}" 
+              FloatingWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneFloatingWidth}">
+                            <ExpressionExtension:ExpressionView
+                Name="Designer_ProjectPane"
+                IsDesiredVisible="True"
+                DockedHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneHorizontalHeightSplitterLength}" 
+                DockedWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneVerticalWidthSplitterLength}"  
+                AutoHideWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneVerticalWidth}" 
+                AutoHideHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneHorizontalHeight}"
+                FloatingHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneFloatingHeight}" 
+                FloatingWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneFloatingWidth}" />
+                            <ExpressionExtension:ExpressionView
+                Name="Designer_AssetPane"
+                IsDesiredVisible="True"
+                IsSelected="True"
+                DockedHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneHorizontalHeightSplitterLength}"
+                DockedWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneVerticalWidthSplitterLength}"
+                AutoHideWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneVerticalWidth}"
+                AutoHideHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneHorizontalHeight}"
+                FloatingHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneFloatingHeight}"
+                FloatingWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneFloatingWidth}" />
+                            <ExpressionExtension:ExpressionView 
+                Name="Designer_TriggersPane" 
+                IsDesiredVisible="True"
+                DockedHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneHorizontalHeightSplitterLength}" 
+                DockedWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneVerticalWidthSplitterLength}" 
+                AutoHideWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneVerticalWidth}" 
+                AutoHideHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneHorizontalHeight}"
+                FloatingHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneFloatingHeight}" 
+                FloatingWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneFloatingWidth}" />
+                            <ExpressionExtension:ExpressionView 
+                Name="Interaction_Skin"
+                IsDesiredVisible="True" 
+                DockedHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneHorizontalHeightSplitterLength}" 
+                DockedWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneVerticalWidthSplitterLength}" 
+                AutoHideWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneVerticalWidth}" 
+                AutoHideHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneHorizontalHeight}"
+                FloatingHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneFloatingHeight}" 
+                FloatingWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneFloatingWidth}" />
+                            <ExpressionExtension:ExpressionView 
+                Name="Interaction_Parts"
+                DockedHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneHorizontalHeightSplitterLength}" 
+                DockedWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneVerticalWidthSplitterLength}"  
+                AutoHideWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneVerticalWidth}" 
+                AutoHideHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneHorizontalHeight}"
+                FloatingHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneFloatingHeight}" 
+                FloatingWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneFloatingWidth}" />
+                        </TabGroup>
+                        <!-- In the Design Workspace Default the Objects and Timeline Pane behaves as a NarrowPane.
+                 Note: DockedHeight is set to 200 to ensure the 2:1 correspondance between Objects and Timeline Pane TabGroup and the TabGroup above it. -->
+                        <TabGroup
+              IsVisible="True" 
+                DockedHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneHorizontalHeightSplitterLength}" 
+                DockedWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneVerticalWidthSplitterLength}"  
+                AutoHideWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneVerticalWidth}" 
+                AutoHideHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneHorizontalHeight}"
+                FloatingHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneFloatingHeight}" 
+                FloatingWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneFloatingWidth}">
+                            <ExpressionExtension:ExpressionView
+                Name="Designer_TimelinePane"
+                IsDesiredVisible="True"
+                IsSelected="True"
+                DockedHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneHorizontalHeightSplitterLength}" 
+                DockedWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneVerticalWidthSplitterLength}"  
+                AutoHideWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneVerticalWidth}" 
+                AutoHideHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneHorizontalHeight}"
+                FloatingHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneFloatingHeight}" 
+                FloatingWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneFloatingWidth}" />
+                            <ExpressionExtension:ExpressionView 
+                Name="Designer_FeedbackPane"
+                DockedHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneHorizontalHeightSplitterLength}" 
+                DockedWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneVerticalWidthSplitterLength}"  
+                AutoHideWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneVerticalWidth}" 
+                AutoHideHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneHorizontalHeight}"
+                FloatingHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneFloatingHeight}" 
+                FloatingWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneFloatingWidth}" />
+                        </TabGroup>
+                    </ExpressionExtension:ExpressionDockGroup>
+                    <ExpressionExtension:ExpressionDockGroup
+            Orientation="Vertical"
+            IsVisible="True"
+            DockedHeight="*"
+            DockedWidth="*">
+                        <ExpressionExtension:ExpressionView
+              Name="Designer_SketchFlowAnimationPane"
+              IsDesiredVisible="True"
+              IsSelected="True"
+              DockedHeight="{x:Static DesignSurface:DesignerPaletteSizes.ShortWidePaneHorizontalHeightSplitterLength}"
+              DockedWidth="{x:Static DesignSurface:DesignerPaletteSizes.WidePaneVerticalWidthSplitterLength}"
+              AutoHideWidth="{x:Static DesignSurface:DesignerPaletteSizes.WidePaneVerticalWidth}"
+              AutoHideHeight="{x:Static DesignSurface:DesignerPaletteSizes.ShortWidePaneHorizontalHeight}"
+              FloatingHeight="{x:Static DesignSurface:DesignerPaletteSizes.ShortWidePaneFloatingHeight}"
+              FloatingWidth="{x:Static DesignSurface:DesignerPaletteSizes.WidePaneFloatingWidth}" />
+                        <DocumentGroupContainer
+              Orientation="Horizontal"
+              IsVisible="True"
+              DockedHeight="*"
+              DockedWidth="*">
+                            <ExpressionExtension:ExpressionDocumentGroup IsVisible="True"/>
+                        </DocumentGroupContainer>
+                        <TabGroup
+              IsVisible="True"
+              DockedHeight="{x:Static DesignSurface:DesignerPaletteSizes.WidePaneHorizontalHeightSplitterLength}" 
+              DockedWidth="200"  
+              AutoHideWidth="{x:Static DesignSurface:DesignerPaletteSizes.WidePaneVerticalWidth}" 
+              AutoHideHeight="{x:Static DesignSurface:DesignerPaletteSizes.WidePaneHorizontalHeight}"
+              FloatingHeight="{x:Static DesignSurface:DesignerPaletteSizes.WidePaneFloatingHeight}" 
+              FloatingWidth="{x:Static DesignSurface:DesignerPaletteSizes.WidePaneFloatingWidth}">
+                            <ExpressionExtension:ExpressionView
+                Name="Designer_ApplicationFlowPane"
+                IsDesiredVisible="True"
+                IsSelected="True"
+                DockedHeight="{x:Static DesignSurface:DesignerPaletteSizes.WidePaneHorizontalHeightSplitterLength}" 
+                DockedWidth="{x:Static DesignSurface:DesignerPaletteSizes.WidePaneVerticalWidthSplitterLength}"   
+                AutoHideWidth="{x:Static DesignSurface:DesignerPaletteSizes.WidePaneVerticalWidth}" 
+                AutoHideHeight="{x:Static DesignSurface:DesignerPaletteSizes.WidePaneHorizontalHeight}"
+                FloatingHeight="{x:Static DesignSurface:DesignerPaletteSizes.WidePaneFloatingHeight}" 
+                FloatingWidth="{x:Static DesignSurface:DesignerPaletteSizes.WidePaneFloatingWidth}" />
+                            <ExpressionExtension:ExpressionView
+                Name="Designer_ResultsPane" 
+                DockedHeight="{x:Static DesignSurface:DesignerPaletteSizes.WidePaneHorizontalHeightSplitterLength}"
+                DockedWidth="{x:Static DesignSurface:DesignerPaletteSizes.WidePaneVerticalWidthSplitterLength}"
+                AutoHideWidth="{x:Static DesignSurface:DesignerPaletteSizes.WidePaneVerticalWidth}"
+                AutoHideHeight="{x:Static DesignSurface:DesignerPaletteSizes.WidePaneHorizontalHeight}"
+                FloatingHeight="{x:Static DesignSurface:DesignerPaletteSizes.WidePaneFloatingHeight}"
+                FloatingWidth="{x:Static DesignSurface:DesignerPaletteSizes.WidePaneFloatingWidth}" />
+                        </TabGroup>
+                    </ExpressionExtension:ExpressionDockGroup>
+                    <TabGroup
+            IsVisible="True"
+            DockedHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneHorizontalHeightSplitterLength}" 
+            DockedWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneVerticalWidthSplitterLength}" 
+            AutoHideWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneVerticalWidth}" 
+            AutoHideHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneHorizontalHeight}"
+            FloatingHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneFloatingHeight}" 
+            FloatingWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneFloatingWidth}">
+                        <ExpressionExtension:ExpressionView
+              Name="Designer_PropertyInspector"
+              IsDesiredVisible="True"
+              IsSelected="True"
+              DockedHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneHorizontalHeightSplitterLength}" 
+              DockedWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneVerticalWidthSplitterLength}"  
+              AutoHideWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneVerticalWidth}" 
+              AutoHideHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneHorizontalHeight}"
+              FloatingHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneFloatingHeight}" 
+              FloatingWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneFloatingWidth}" />
+                        <ExpressionExtension:ExpressionView
+              Name="Designer_ResourcePane"
+              IsDesiredVisible="True"
+              DockedHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneHorizontalHeightSplitterLength}" 
+              DockedWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneVerticalWidthSplitterLength}"  
+              AutoHideWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneVerticalWidth}" 
+              AutoHideHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneHorizontalHeight}"
+              FloatingHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneFloatingHeight}" 
+              FloatingWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneFloatingWidth}" />
+                        <ExpressionExtension:ExpressionView
+              Name="Designer_DataPane"
+              IsDesiredVisible="True"
+              DockedHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneHorizontalHeightSplitterLength}" 
+              DockedWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneVerticalWidthSplitterLength}" 
+              AutoHideWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneVerticalWidth}" 
+              AutoHideHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneHorizontalHeight}"
+              FloatingHeight="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneFloatingHeight}" 
+              FloatingWidth="{x:Static DesignSurface:DesignerPaletteSizes.NarrowPaneFloatingWidth}" />
+                    </TabGroup>
+                </ExpressionExtension:ExpressionDockGroup>
+            </ExpressionExtension:ExpressionDockRoot>
+        </AutoHideRoot>
+    </MainSite>
+</WindowProfile>

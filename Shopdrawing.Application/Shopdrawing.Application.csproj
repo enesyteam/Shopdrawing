@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files (x86)\Microsoft Expression\Blend 4\Microsoft.Expression.Blend.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F2406163-F7B0-419C-961D-D88A4C184315}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Shopdrawing.Application</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <ApplicationVersion>4.0.20525.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.Expression.Blend</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Expression.Code, Version=5.0.30709.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Microsoft.Expression.Code.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.DesignModel">
+      <HintPath>lib\Microsoft.Expression.DesignModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.DesignSurface">
+      <HintPath>lib\Microsoft.Expression.DesignSurface.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Expression.DesignSurface.resources">
+      <HintPath>..\zzTest\Test2\en\Microsoft.Expression.DesignSurface.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Extensibility, Version=5.0.30709.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Shopdrawing.Code\lib\Microsoft.Expression.Extensibility.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Extensibility.Project, Version=5.0.30709.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Microsoft.Expression.Extensibility.Project.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Framework, Version=5.0.30709.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Microsoft.Expression.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Markup, Version=5.0.30709.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Microsoft.Expression.Markup.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Project.resources">
+      <HintPath>..\zzTest\Test2\en\Microsoft.Expression.Project.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.Expression.Project">
+      <HintPath>lib\Microsoft.Expression.Project.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="StringTable.cs" />
+    <Compile Include="ExceptionStringTable.cs" />
+    <Compile Include="ActionProcessor.cs" />
+    <Compile Include="ApplicationCommandTarget.cs" />
+    <Compile Include="BlendApplication.cs" />
+    <Compile Include="BlendFeedbackValues.cs" />
+    <Compile Include="BlendEnterProductKeyCommand.cs" />
+    <Compile Include="IBlendServer.cs" />
+    <Compile Include="BlendServer.cs" />
+    <Compile Include="DebugCommands.cs" />
+    <Compile Include="FileTable.cs" />
+    <Compile Include="FrameworkPackage.cs" />
+    <Compile Include="Help.cs" />
+    <Compile Include="BlendHelp.cs" />
+    <Compile Include="BlendSdkHelp.cs" />
+    <Compile Include="BlendSDKHelpProvider.cs" />
+    <Compile Include="NativeMethods.cs" />
+    <Compile Include="ShowControlStylingTipsCommand.cs" />
+    <Compile Include="SketchFlowLicenseHelper.cs" />
+    <Compile Include="SplashService.cs" />
+    <Compile Include="MenuBar.cs" />
+    <Compile Include="PerformanceTester.cs" />
+    <Compile Include="CrossFader.cs" />
+    <Compile Include="StringTable.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StringTable.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UniformTabPanel.cs" />
+    <Compile Include="ImageButton.cs" />
+    <Compile Include="ItemActivateListBox.cs" />
+    <Compile Include="RecentProject.cs" />
+    <Compile Include="WelcomeScreen.cs" />
+    <Compile Include="ZeroToCollapsedConverter.cs" />
+    <Compile Include="XamlGeneratedNamespace\GeneratedInternalTypeHelper.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="licensing\aboutdialog.png" />
+    <Resource Include="licensing\license.png" />
+    <Resource Include="licensing\licensesketchflow.png" />
+    <Resource Include="licensing\splashscreen.png" />
+    <Resource Include="licensing\splashscreensketchflow.png" />
+    <Content Include="welcomescreen\welcomescreen.png" />
+    <Content Include="welcomescreen\welcome_online_off_32x32.png" />
+    <Content Include="welcomescreen\welcome_online_on_32x32.png" />
+    <Content Include="welcomescreen\welcome_samples_off_16x16.png" />
+    <Content Include="welcomescreen\welcome_samples_off_32x32.png" />
+    <Content Include="welcomescreen\welcome_samples_on_16x16.png" />
+    <Content Include="welcomescreen\welcome_samples_on_32x32.png" />
+    <Content Include="welcomescreen\welcome_tutorials_off_32x32.png" />
+    <Content Include="welcomescreen\welcome_tutorials_on_32x32.png" />
+    <Content Include="welcomescreen\welcome_userguide_off_32x32.png" />
+    <Content Include="welcomescreen\welcome_userguide_on_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="mainwindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="resources\blenddarktheme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="resources\blendlighttheme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Resource Include="licensing\aboutdialogresources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="licensing\aboutdialogresourcessketchflow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="licensing\licensingdialogresources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="licensing\licensingdialogresourcessketchflow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Page Include="resources\workspaces\animation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="resources\workspaces\design.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="welcomescreen\welcomescreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ExceptionStringTable\en.resx" />
+    <EmbeddedResource Include="StringTable.resx">
+      <DependentUpon>StringTable.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StringTable.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StringTable\en.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

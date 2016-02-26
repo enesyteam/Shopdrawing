@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CAB662E1-637C-4F61-8AB3-B16FFA935FF5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shopdrawing.Design.Extensibility</RootNamespace>
+    <AssemblyName>Shopdrawing.Design.Extensibility</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Microsoft\Windows\Design\AssemblyReferences.cs" />
+    <Compile Include="Microsoft\Windows\Design\ContextItem.cs" />
+    <Compile Include="Microsoft\Windows\Design\ContextItemManager.cs" />
+    <Compile Include="Microsoft\Windows\Design\EditingContext.cs" />
+    <Compile Include="Microsoft\Windows\Design\Features\FeatureAttribute.cs" />
+    <Compile Include="Microsoft\Windows\Design\Features\FeatureAvailableEventArgs.cs" />
+    <Compile Include="Microsoft\Windows\Design\Features\FeatureConnectorAttribute.cs" />
+    <Compile Include="Microsoft\Windows\Design\Features\FeatureConnectorInformation.cs" />
+    <Compile Include="Microsoft\Windows\Design\Features\FeatureConnector`1.cs" />
+    <Compile Include="Microsoft\Windows\Design\Features\FeatureManager.cs" />
+    <Compile Include="Microsoft\Windows\Design\Features\FeatureProvider.cs" />
+    <Compile Include="Microsoft\Windows\Design\Features\IFeatureConnectorMarker.cs" />
+    <Compile Include="Microsoft\Windows\Design\Features\MetadataProviderCallback.cs" />
+    <Compile Include="Microsoft\Windows\Design\Metadata\AttributeCallback.cs" />
+    <Compile Include="Microsoft\Windows\Design\Metadata\AttributeCallbackBuilder.cs" />
+    <Compile Include="Microsoft\Windows\Design\Metadata\AttributeTable.cs" />
+    <Compile Include="Microsoft\Windows\Design\Metadata\AttributeTableBuilder.cs" />
+    <Compile Include="Microsoft\Windows\Design\Metadata\AttributeTableContainer.cs" />
+    <Compile Include="Microsoft\Windows\Design\Metadata\AttributeTableValidationException.cs" />
+    <Compile Include="Microsoft\Windows\Design\Metadata\EventIdentifier.cs" />
+    <Compile Include="Microsoft\Windows\Design\Metadata\IProvideAttributeTable.cs" />
+    <Compile Include="Microsoft\Windows\Design\Metadata\PropertyIdentifier.cs" />
+    <Compile Include="Microsoft\Windows\Design\Metadata\ProvideMetadataAttribute.cs" />
+    <Compile Include="Microsoft\Windows\Design\Metadata\TypeIdentifier.cs" />
+    <Compile Include="Microsoft\Windows\Design\PublishServiceCallback.cs" />
+    <Compile Include="Microsoft\Windows\Design\PublishServiceCallback`1.cs" />
+    <Compile Include="Microsoft\Windows\Design\RequirementAttribute.cs" />
+    <Compile Include="Microsoft\Windows\Design\RequirementSubscription.cs" />
+    <Compile Include="Microsoft\Windows\Design\RequirementValidator.cs" />
+    <Compile Include="Microsoft\Windows\Design\RequiresContextItemAttribute.cs" />
+    <Compile Include="Microsoft\Windows\Design\RequiresServiceAttribute.cs" />
+    <Compile Include="Microsoft\Windows\Design\ServiceManager.cs" />
+    <Compile Include="Microsoft\Windows\Design\SubscribeContextCallback.cs" />
+    <Compile Include="Microsoft\Windows\Design\SubscribeContextCallback`1.cs" />
+    <Compile Include="Microsoft\Windows\Design\SubscribeServiceCallback.cs" />
+    <Compile Include="Microsoft\Windows\Design\SubscribeServiceCallback`1.cs" />
+    <Compile Include="MS\Internal\EqualityArray.cs" />
+    <Compile Include="MS\Internal\Identifier.cs" />
+    <Compile Include="MS\Internal\MemberEqualityComparer.cs" />
+    <Compile Include="MS\Internal\Metadata\AttributeData.cs" />
+    <Compile Include="MS\Internal\Metadata\AttributeDataCache.cs" />
+    <Compile Include="MS\Internal\Metadata\MutableAttributeTable.cs" />
+    <Compile Include="MS\Internal\Properties\Resources.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MS\Internal\Properties\Resources.resx">
+      <DependentUpon>Resources.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,46 @@
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Rebuild thanh cong\Microsoft.Expression.Blend\bin\Debug\Shopdrawing.Application.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Rebuild thanh cong\Microsoft.Expression.Blend\bin\Debug\Shopdrawing.Application.pdb
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Rebuild thanh cong\Microsoft.Expression.Blend\bin\Debug\Microsoft.Expression.Code.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Rebuild thanh cong\Microsoft.Expression.Blend\bin\Debug\Microsoft.Expression.DesignModel.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Rebuild thanh cong\Microsoft.Expression.Blend\bin\Debug\Microsoft.Expression.DesignSurface.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Rebuild thanh cong\Microsoft.Expression.Blend\bin\Debug\Microsoft.Expression.Extensibility.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Rebuild thanh cong\Microsoft.Expression.Blend\bin\Debug\Microsoft.Expression.Framework.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Rebuild thanh cong\Microsoft.Expression.Blend\bin\Debug\Microsoft.Expression.Markup.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Rebuild thanh cong\Microsoft.Expression.Blend\bin\Debug\Microsoft.Expression.Project.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Rebuild thanh cong\Microsoft.Expression.Blend\bin\Debug\Microsoft.Windows.Design.Interaction.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Rebuild thanh cong\Microsoft.Expression.Blend\bin\Debug\Microsoft.Windows.Design.Extensibility.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Rebuild thanh cong\Microsoft.Expression.Blend\bin\Debug\ActiproSoftware.SyntaxEditor.Net20.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Rebuild thanh cong\Microsoft.Expression.Blend\bin\Debug\ActiproSoftware.SyntaxEditor.Addons.DotNet.Net20.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Rebuild thanh cong\Microsoft.Expression.Blend\bin\Debug\ActiproSoftware.WinUICore.Net20.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Rebuild thanh cong\Microsoft.Expression.Blend\bin\Debug\ActiproSoftware.Shared.Net20.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Rebuild thanh cong\Microsoft.Expression.Blend\obj\Debug\Shopdrawing.Application.csprojResolveAssemblyReference.cache
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Rebuild thanh cong\Microsoft.Expression.Blend\obj\Debug\Shopdrawing.Application.dll
+E:\Projects\C#\Shopdrawing\Tham khao\0Blend\Rebuild thanh cong\Microsoft.Expression.Blend\obj\Debug\Shopdrawing.Application.pdb
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Application\bin\Debug\Shopdrawing.Application.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Application\bin\Debug\Shopdrawing.Application.pdb
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Application\bin\Debug\Microsoft.Expression.Code.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Application\bin\Debug\Microsoft.Expression.DesignModel.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Application\bin\Debug\Microsoft.Expression.DesignSurface.resources.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Application\bin\Debug\Microsoft.Expression.Extensibility.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Application\bin\Debug\Microsoft.Expression.Extensibility.Project.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Application\bin\Debug\Microsoft.Expression.Framework.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Application\bin\Debug\Microsoft.Expression.Markup.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Application\bin\Debug\Microsoft.Expression.Project.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Application\bin\Debug\Microsoft.Expression.Project.resources.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Application\obj\Debug\Shopdrawing.Application.csprojResolveAssemblyReference.cache
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Application\obj\Debug\mainwindow.baml
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Application\obj\Debug\resources\workspaces\animation.baml
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Application\obj\Debug\resources\workspaces\design.baml
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Application\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Application\obj\Debug\Shopdrawing.Application_MarkupCompile.cache
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Application\obj\Debug\Shopdrawing.Application_MarkupCompile.lref
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Application\obj\Debug\resources\blenddarktheme.baml
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Application\obj\Debug\resources\blendlighttheme.baml
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Application\obj\Debug\welcomescreen\welcomescreen.baml
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Application\obj\Debug\Shopdrawing.Application.g.resources
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Application\obj\Debug\Microsoft.Expression.Blend.ExceptionStringTable.en.resources
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Application\obj\Debug\StringTable.resources
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Application\obj\Debug\Microsoft.Expression.Blend.StringTable.en.resources
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Application\obj\Debug\Shopdrawing.Application.csproj.GenerateResource.Cache
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Application\obj\Debug\Shopdrawing.Application.dll
+E:\Projects\C#\ShopdrawingVer2\Shopdrawing.Application\obj\Debug\Shopdrawing.Application.pdb

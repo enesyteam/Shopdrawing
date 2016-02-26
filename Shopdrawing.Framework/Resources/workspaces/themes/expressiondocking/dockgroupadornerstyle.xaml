@@ -1,0 +1,105 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:System="clr-namespace:System;assembly=Mscorlib"
+                    xmlns:vs="clr-namespace:Microsoft.VisualStudio.PlatformUI.Shell.Controls"
+                    xmlns:Extension="clr-namespace:Microsoft.Expression.Framework.Workspaces.Extension"
+                    x:Uid="ResourceDictionary_1">
+  <System:Double x:Key="AdornerMinSize" x:Uid="System:Double_1">11</System:Double>
+  <Extension:PaletteScaledAdornerSizeConverter x:Key="PaletteScaledAdornerHeightConverter" x:Uid="PaletteScaledAdornerHeightConverter"
+                                               MinSize="50"/>
+  <Extension:PaletteScaledAdornerSizeConverter x:Key="PaletteScaledAdornerWidthConverter" x:Uid="PaletteScaledAdornerWidthConverter" MinSize="30"/>
+  <Extension:LeftRightPaletteAdornerSizeConverter x:Key="LeftRightPaletteAdornerSizeConverter" x:Uid="LeftRightPaletteAdornerSizeConverter"/>
+  <Style x:Uid="Style_1" TargetType="{x:Type vs:DockGroupAdorner}">
+    <Setter x:Uid="Setter_9" Property="FrameworkElement.Width">
+      <Setter.Value>
+        <Binding Path="AdornedElement.ActualWidth" RelativeSource="{RelativeSource Self}"/>
+      </Setter.Value>
+    </Setter>
+    <Setter x:Uid="Setter_10" Property="FrameworkElement.Height">
+      <Setter.Value>
+        <Binding Path="AdornedElement.ActualHeight" RelativeSource="{RelativeSource Self}"/>
+      </Setter.Value>
+    </Setter>
+    <Setter x:Uid="Setter_1" Property="Control.Template">
+      <Setter.Value>
+        <ControlTemplate x:Uid="ControlTemplate_1" TargetType="{x:Type vs:DockGroupAdorner}">
+          <Grid x:Uid="Grid_1">
+            <Grid.RowDefinitions>
+              <RowDefinition x:Uid="RowDefinition_2" Height="Auto"/>
+              <RowDefinition x:Uid="RowDefinition_3" Height="*"/>
+              <RowDefinition x:Uid="RowDefinition_4" Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition x:Uid="ColumnDefinition_1" Width="Auto"/>
+              <ColumnDefinition x:Uid="ColumnDefinition_2" Width="*"/>
+              <ColumnDefinition x:Uid="ColumnDefinition_3" Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <vs:DockSiteAdorner x:Name="LeftAdorner" x:Uid="LeftAdorner" vs:DockAdorner.DockDirection="Left" Grid.RowSpan="3"
+                                FrameworkElement.VerticalAlignment="Bottom"
+                                FrameworkElement.MinWidth="{StaticResource AdornerMinSize}">
+              <FrameworkElement.Width>
+                <Binding Path="AdornedElement.ActualWidth" RelativeSource="{RelativeSource TemplatedParent}"
+                         Converter="{StaticResource PaletteScaledAdornerWidthConverter}"/>
+              </FrameworkElement.Width>
+              <FrameworkElement.Height>
+                <Binding Path="AdornedElement.ActualHeight" RelativeSource="{RelativeSource TemplatedParent}"/>
+              </FrameworkElement.Height>
+            </vs:DockSiteAdorner>
+            <vs:DockSiteAdorner x:Name="RightAdorner" x:Uid="RightAdorner" vs:DockAdorner.DockDirection="Right" Grid.Column="2"
+                                Grid.RowSpan="3" FrameworkElement.VerticalAlignment="Bottom"
+                                FrameworkElement.MinWidth="{StaticResource AdornerMinSize}">
+              <FrameworkElement.Width>
+                <Binding Path="AdornedElement.ActualWidth" RelativeSource="{RelativeSource TemplatedParent}"
+                         Converter="{StaticResource PaletteScaledAdornerWidthConverter}"/>
+              </FrameworkElement.Width>
+              <FrameworkElement.Height>
+                <Binding Path="AdornedElement.ActualHeight" RelativeSource="{RelativeSource TemplatedParent}"/>
+              </FrameworkElement.Height>
+            </vs:DockSiteAdorner>
+            <vs:DockSiteAdorner x:Name="TopAdorner" x:Uid="TopAdorner" vs:DockAdorner.DockDirection="Top" Grid.ColumnSpan="3"
+                                FrameworkElement.MinHeight="{StaticResource AdornerMinSize}">
+              <FrameworkElement.Height>
+                <Binding Path="AdornedElement.ActualHeight" RelativeSource="{RelativeSource TemplatedParent}"
+                         Converter="{StaticResource PaletteScaledAdornerHeightConverter}"/>
+              </FrameworkElement.Height>
+            </vs:DockSiteAdorner>
+            <vs:DockSiteAdorner x:Name="BottomAdorner" x:Uid="BottomAdorner" vs:DockAdorner.DockDirection="Bottom" Grid.Row="2"
+                                Grid.ColumnSpan="3" FrameworkElement.MinHeight="{StaticResource AdornerMinSize}">
+              <FrameworkElement.Height>
+                <Binding Path="AdornedElement.ActualHeight" RelativeSource="{RelativeSource TemplatedParent}"
+                         Converter="{StaticResource PaletteScaledAdornerHeightConverter}"/>
+              </FrameworkElement.Height>
+            </vs:DockSiteAdorner>
+          </Grid>
+          <ControlTemplate.Triggers>
+            <Trigger x:Uid="Trigger_1" Property="vs:DockAdorner.IsInnerCenterTargetEnabled" Value="true">
+              <Setter x:Uid="Setter_4" TargetName="TopAdorner" Property="FrameworkElement.Height">
+                <Setter.Value>
+                  <Binding ElementName="TopAdorner" Path="MinHeight"/>
+                </Setter.Value>
+              </Setter>
+              <Setter x:Uid="Setter_11" TargetName="LeftAdorner" Property="FrameworkElement.Height">
+                <Setter.Value>
+                  <Binding Path="AdornedElement.ActualHeight" RelativeSource="{RelativeSource TemplatedParent}"
+                           Converter="{StaticResource LeftRightPaletteAdornerSizeConverter}"/>
+                </Setter.Value>
+              </Setter>
+              <Setter x:Uid="Setter_12" TargetName="RightAdorner" Property="FrameworkElement.Height">
+                <Setter.Value>
+                  <Binding Path="AdornedElement.ActualHeight" RelativeSource="{RelativeSource TemplatedParent}"
+                           Converter="{StaticResource LeftRightPaletteAdornerSizeConverter}"/>
+                </Setter.Value>
+              </Setter>
+            </Trigger>
+            <Trigger x:Uid="Trigger_2" Property="vs:DockAdorner.AreInnerSideTargetsEnabled" Value="false">
+              <Setter x:Uid="Setter_5" TargetName="LeftAdorner" Property="UIElement.IsEnabled" Value="false"/>
+              <Setter x:Uid="Setter_6" TargetName="RightAdorner" Property="UIElement.IsEnabled" Value="false"/>
+              <Setter x:Uid="Setter_7" TargetName="TopAdorner" Property="UIElement.IsEnabled" Value="false"/>
+              <Setter x:Uid="Setter_8" TargetName="BottomAdorner" Property="UIElement.IsEnabled" Value="false"/>
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

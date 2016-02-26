@@ -1,0 +1,126 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vs="clr-namespace:Microsoft.VisualStudio.PlatformUI.Shell.Controls"
+                    xmlns:userinterface="clr-namespace:Microsoft.Expression.Framework.UserInterface"
+                    xmlns:FrameworkData="clr-namespace:Microsoft.Expression.Framework.Data"
+                    xmlns:automation="clr-namespace:Microsoft.Expression.Framework.Diagnostics"
+                    x:Uid="ResourceDictionary_1">
+  <FrameworkData:NullToVisibilityCollapsedConverter x:Key="NullToVisibilityConverter" x:Uid="FrameworkData:NullToVisibilityCollapsedConverter_1"/>
+  <FrameworkData:BoolToVisibilityCollapsedConverter x:Key="BoolToVisibilityCollapsedConverter"
+                                                    x:Uid="FrameworkData:BoolToVisibilityCollapsedConverter_1"/>
+  <FrameworkData:BoolToVisibilityCollapsedConverter x:Key="InvertedBoolToVisibilityCollapsedConverter"
+                                                    x:Uid="FrameworkData:BoolToVisibilityCollapsedConverter_2" InvertBoolean="true"/>
+  <Style x:Uid="Style_1" TargetType="{x:Type vs:ViewFrame}">
+    <Setter x:Uid="Setter_10" Property="Control.FontFamily"
+            Value="{DynamicResource {x:Static SystemFonts.MessageFontFamilyKey}}"/>
+    <Setter x:Uid="Setter_11" Property="Control.FontSize"
+            Value="{DynamicResource {x:Static SystemFonts.MessageFontSizeKey}}"/>
+    <Setter x:Uid="Setter_12" Property="Control.FontWeight"
+            Value="{DynamicResource {x:Static SystemFonts.MessageFontWeightKey}}"/>
+    <Setter x:Uid="Setter_4" Property="FocusManager.IsFocusScope" Value="true"/>
+    <Setter x:Uid="Setter_5" Property="userinterface:FocusScopeManager.FocusScopePriority" Value="1"/>
+    <Setter x:Uid="Setter_1" Property="Control.Template">
+      <Setter.Value>
+        <ControlTemplate x:Uid="ControlTemplate_1" TargetType="{x:Type vs:ViewFrame}">
+          <vs:DockTarget x:Name="PaletteFrameDockTarget" x:Uid="PaletteFrameDockTarget"
+                         automation:AutomationElement.Id="PaletteFrameDockTarget" DockTargetType="Inside"
+                         Border.Background="Transparent">
+            <FrameworkElement.DataContext>
+              <Binding/>
+            </FrameworkElement.DataContext>
+            <Grid x:Name="PaletteContainerLayoutRoot" x:Uid="PaletteContainerLayoutRoot"
+                  Panel.Background="{DynamicResource MainWindowBackgroundBrush}"
+                  automation:AutomationElement.Id="PaletteContainerLayoutRoot">
+              <Grid.RowDefinitions>
+                <RowDefinition x:Uid="RowDefinition_1" Height="Auto"/>
+                <RowDefinition x:Uid="RowDefinition_4" Height="Auto"/>
+                <RowDefinition x:Uid="RowDefinition_2" Height="Auto"/>
+                <RowDefinition x:Uid="RowDefinition_3" Height="*"/>
+              </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Uid="ColumnDefinition_1" Width="Auto"/>
+                <ColumnDefinition x:Uid="ColumnDefinition_2" Width="*"/>
+              </Grid.ColumnDefinitions>
+              <vs:DockTarget x:Uid="vs:DockTarget_2" DockTargetType="FillPreview"
+                             automation:AutomationElement.Id="PaletteHeaderDockTarget" Grid.Column="1"
+                             UIElement.Visibility="{Binding IsTitleHidden, Converter={StaticResource InvertedBoolToVisibilityCollapsedConverter}}">
+                <vs:DockTarget.AdornmentTarget>
+                  <Binding ElementName="PaletteContainerLayoutRoot"/>
+                </vs:DockTarget.AdornmentTarget>
+                <vs:ViewHeader x:Uid="vs:ViewHeader_1" View="{TemplateBinding vs:ViewPresenter.View}"
+                               ContainingElement="{TemplateBinding vs:ViewPresenter.ContainingElement}"/>
+              </vs:DockTarget>
+              <vs:DragUndockHeader x:Name="DragUndockHeaderHorizontal" x:Uid="DragUndockHeaderHorizontal"
+                                   ViewElement="{TemplateBinding vs:ViewPresenter.ContainingElement}"
+                                   vs:MouseCommands.MouseCommandAction="LeftDoubleClick"
+                                   vs:MouseCommands.MouseCommand="{x:Static vs:ViewCommands.ToggleDocked}"
+                                   vs:MouseCommands.MouseCommandParameter="{TemplateBinding vs:ViewPresenter.ContainingElement}"
+                                   IsWindowTitleBar="false" FrameworkElement.Cursor="SizeAll" Grid.Column="1" Grid.Row="1"
+                                   automation:AutomationElement.Id="{Binding GripperAutomationId}"
+                                   UIElement.Visibility="{Binding IsHorizontalGripperVisible, Converter={StaticResource BoolToVisibilityCollapsedConverter}}">
+                <Border x:Name="HorizontalToolbarGripper" x:Uid="Border_2" FrameworkElement.Height="8"
+                        FrameworkElement.Margin="0,2,0,0" Background="{DynamicResource PaletteBrush}"
+                        CornerRadius="{DynamicResource GripperCornerRoundingTop}">
+                  <Path x:Uid="Path_1" Shape.Fill="{DynamicResource ToolbarRecessedBrush}" Shape.Stretch="Fill"
+                        FrameworkElement.Width="18" FrameworkElement.Height="2" FrameworkElement.VerticalAlignment="Center"
+                        Data="M 0,0 L 1,0 1,1 0,1 M 2,0 L 3,0 3,1 2,1 M 4,0 L 5,0 5,1 4,1 M 6,0 L 7,0 7,1 6,1 M 8,0 L 9,0 9,1 8,1 Z"/>
+                </Border>
+              </vs:DragUndockHeader>
+              <vs:DragUndockHeader x:Name="DragUndockHeaderVertical" x:Uid="DragUndockHeaderVertical"
+                                   ViewElement="{TemplateBinding vs:ViewPresenter.ContainingElement}"
+                                   vs:MouseCommands.MouseCommandAction="LeftDoubleClick"
+                                   vs:MouseCommands.MouseCommand="{x:Static vs:ViewCommands.ToggleDocked}"
+                                   vs:MouseCommands.MouseCommandParameter="{TemplateBinding vs:ViewPresenter.ContainingElement}"
+                                   IsWindowTitleBar="false" FrameworkElement.Cursor="SizeAll" Grid.Column="0" Grid.Row="1"
+                                   Grid.RowSpan="3" automation:AutomationElement.Id="{Binding GripperAutomationId}"
+                                   UIElement.Visibility="{Binding IsVerticalGripperVisible, Converter={StaticResource BoolToVisibilityCollapsedConverter}}">
+                <Border x:Uid="Border_3" FrameworkElement.Width="8" Background="{DynamicResource PaletteBrush}"
+                        CornerRadius="{DynamicResource GripperCornerRoundingLeft}">
+                  <Path x:Uid="Path_2" Shape.Fill="{DynamicResource ToolbarRecessedBrush}" Shape.Stretch="Fill"
+                        FrameworkElement.Width="2" FrameworkElement.Height="18" FrameworkElement.VerticalAlignment="Center"
+                        Data="M 0,0 L 0,1 1,1 1,0 M 0,2 L 0,3 1,3 1,2 M 0,4 L 0,5 1,5 1,4 M 0,6 L 0,7 1,7 1,6 M 0,8 L 0,9 1,9 1,8 Z"/>
+                </Border>
+              </vs:DragUndockHeader>
+              <Border x:Uid="Border_1" Background="{DynamicResource PaletteTabSelectedBackgroundBrush}" Grid.Row="2"
+                      Grid.Column="1" CornerRadius="{DynamicResource PaletteHeaderCornerRounding}">
+                <ContentControl x:Uid="ContentControl_1" FrameworkElement.Height="{DynamicResource PaletteHeaderHeight}">
+                  <ContentControl.Content>
+                    <Binding RelativeSource="{RelativeSource TemplatedParent}"
+                             Path="Content.(userinterface:PaletteRegistry.PaletteHeaderContent)"/>
+                  </ContentControl.Content>
+                  <FrameworkElement.DataContext>
+                    <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="Content.DataContext"/>
+                  </FrameworkElement.DataContext>
+                  <UIElement.Visibility>
+                    <Binding RelativeSource="{RelativeSource TemplatedParent}"
+                             Path="Content.(userinterface:PaletteRegistry.PaletteHeaderContent)"
+                             Converter="{StaticResource NullToVisibilityConverter}"/>
+                  </UIElement.Visibility>
+                </ContentControl>
+              </Border>
+              <ContentPresenter x:Name="Presenter" x:Uid="Presenter" Content="{TemplateBinding ContentControl.Content}"
+                                Grid.Row="3" Grid.Column="1"/>
+            </Grid>
+          </vs:DockTarget>
+          <ControlTemplate.Triggers>
+            <Trigger x:Uid="Trigger_1" Property="vs:FloatingWindow.IsFloating" Value="true">
+              <Setter x:Uid="Setter_2" TargetName="PaletteFrameDockTarget" Property="vs:DockTarget.DockTargetType"
+                      Value="CenterOnly"/>
+              <Setter x:Uid="Setter_9" TargetName="HorizontalToolbarGripper" Property="FrameworkElement.Margin" Value="0"/>
+            </Trigger>
+            <MultiTrigger x:Uid="MultiTrigger_1">
+              <MultiTrigger.Conditions>
+                <Condition x:Uid="Condition_1" Property="vs:FloatingWindow.IsFloating" Value="true"/>
+                <Condition x:Uid="Condition_2" Property="vs:FloatingWindow.HasMultipleOnScreenViews" Value="false"/>
+              </MultiTrigger.Conditions>
+              <Setter x:Uid="Setter_7" TargetName="DragUndockHeaderHorizontal"
+                      Property="vs:DragUndockHeader.IsWindowTitleBar" Value="true"/>
+              <Setter x:Uid="Setter_8" TargetName="DragUndockHeaderVertical"
+                      Property="vs:DragUndockHeader.IsWindowTitleBar" Value="true"/>
+            </MultiTrigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

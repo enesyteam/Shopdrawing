@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6724C818-9368-46CB-916E-42456C9B9D9F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shopdrawing.Design.Interaction</RootNamespace>
+    <AssemblyName>Shopdrawing.Design.Interaction</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Design\DataContextValueSourceAttribute.cs" />
+    <Compile Include="Design\DisplayPropertyAttribute.cs" />
+    <Compile Include="Design\EnumValidator.cs" />
+    <Compile Include="Design\Interaction\Adapter.cs" />
+    <Compile Include="Design\Interaction\AdornerColors.cs" />
+    <Compile Include="Design\Interaction\AdornerCoordinateSpace.cs" />
+    <Compile Include="Design\Interaction\AdornerCoordinateSpaces.cs" />
+    <Compile Include="Design\Interaction\AdornerFonts.cs" />
+    <Compile Include="Design\Interaction\AdornerHorizontalAlignment.cs" />
+    <Compile Include="Design\Interaction\AdornerLayout.cs" />
+    <Compile Include="Design\Interaction\AdornerOrder.cs" />
+    <Compile Include="Design\Interaction\AdornerPanel.cs" />
+    <Compile Include="Design\Interaction\AdornerPlacementCollection.cs" />
+    <Compile Include="Design\Interaction\AdornerPlacementDimension.cs" />
+    <Compile Include="Design\Interaction\AdornerPlacementValue.cs" />
+    <Compile Include="Design\Interaction\AdornerProperties.cs" />
+    <Compile Include="Design\Interaction\AdornerProvider.cs" />
+    <Compile Include="Design\Interaction\AdornerResources.cs" />
+    <Compile Include="Design\Interaction\AdornerStretch.cs" />
+    <Compile Include="Design\Interaction\AdornerVerticalAlignment.cs" />
+    <Compile Include="Design\Interaction\CanExecuteToolEventArgs.cs" />
+    <Compile Include="Design\Interaction\CanExecuteToolEventHandler.cs" />
+    <Compile Include="Design\Interaction\CommandExceptionEventArgs.cs" />
+    <Compile Include="Design\Interaction\ContextMenuProvider.cs" />
+    <Compile Include="Design\Interaction\CreationCommands.cs" />
+    <Compile Include="Design\Interaction\CreationTool.cs" />
+    <Compile Include="Design\Interaction\CreationToolAttribute.cs" />
+    <Compile Include="Design\Interaction\CurrentDesignerView.cs" />
+    <Compile Include="Design\Interaction\DesignerCommands.cs" />
+    <Compile Include="Design\Interaction\DesignerView.cs" />
+    <Compile Include="Design\Interaction\DragGestureData.cs" />
+    <Compile Include="Design\Interaction\EnumValidator.cs" />
+    <Compile Include="Design\Interaction\ExecutedToolEventArgs.cs" />
+    <Compile Include="Design\Interaction\ExecutedToolEventHandler.cs" />
+    <Compile Include="Design\Interaction\FocusedTask.cs" />
+    <Compile Include="Design\Interaction\GestureData.cs" />
+    <Compile Include="Design\Interaction\IAdornerPlacement.cs" />
+    <Compile Include="Design\Interaction\LoadResourcesCallback.cs" />
+    <Compile Include="Design\Interaction\MatchGestureEventArgs.cs" />
+    <Compile Include="Design\Interaction\MenuAction.cs" />
+    <Compile Include="Design\Interaction\MenuActionEventArgs.cs" />
+    <Compile Include="Design\Interaction\MenuBase.cs" />
+    <Compile Include="Design\Interaction\MenuGroup.cs" />
+    <Compile Include="Design\Interaction\ModelHitTestFilterCallback.cs" />
+    <Compile Include="Design\Interaction\MouseGestureData.cs" />
+    <Compile Include="Design\Interaction\NudgeIntent.cs" />
+    <Compile Include="Design\Interaction\ParentAdapter.cs" />
+    <Compile Include="Design\Interaction\PlacementAdapter.cs" />
+    <Compile Include="Design\Interaction\PlacementIntent.cs" />
+    <Compile Include="Design\Interaction\PrimarySelectionAdornerProvider.cs" />
+    <Compile Include="Design\Interaction\PrimarySelectionContextMenuProvider.cs" />
+    <Compile Include="Design\Interaction\PrimarySelectionTaskProvider.cs" />
+    <Compile Include="Design\Interaction\RelativePoint.cs" />
+    <Compile Include="Design\Interaction\RelativePosition.cs" />
+    <Compile Include="Design\Interaction\RelativePositions.cs" />
+    <Compile Include="Design\Interaction\RelativeValue.cs" />
+    <Compile Include="Design\Interaction\RelativeValueCollection.cs" />
+    <Compile Include="Design\Interaction\RootPlacementAdapter.cs" />
+    <Compile Include="Design\Interaction\Selection.cs" />
+    <Compile Include="Design\Interaction\SelectionCommands.cs" />
+    <Compile Include="Design\Interaction\SelectionOperations.cs" />
+    <Compile Include="Design\Interaction\SelectionTool.cs" />
+    <Compile Include="Design\Interaction\Task.cs" />
+    <Compile Include="Design\Interaction\TaskProvider.cs" />
+    <Compile Include="Design\Interaction\Tool.cs" />
+    <Compile Include="Design\Interaction\ToolAction.cs" />
+    <Compile Include="Design\Interaction\ToolActionEventArgs.cs" />
+    <Compile Include="Design\Interaction\ToolCommand.cs" />
+    <Compile Include="Design\Interaction\ToolCommandBinding.cs" />
+    <Compile Include="Design\Interaction\ToolCommandBindingCollection.cs" />
+    <Compile Include="Design\Interaction\ToolGesture.cs" />
+    <Compile Include="Design\Interaction\ViewHitTestFilterCallback.cs" />
+    <Compile Include="Design\Interaction\ViewHitTestResult.cs" />
+    <Compile Include="Design\Interaction\ViewHitTestResultCallback.cs" />
+    <Compile Include="Design\Interaction\ViewItem.cs" />
+    <Compile Include="Design\Interaction\WheelGestureData.cs" />
+    <Compile Include="Design\IToolboxExample.cs" />
+    <Compile Include="Design\IToolboxExampleFactory.cs" />
+    <Compile Include="Design\Model\CreateOptions.cs" />
+    <Compile Include="Design\Model\DefaultInitializer.cs" />
+    <Compile Include="Design\Model\DesignModeValueProvider.cs" />
+    <Compile Include="Design\Model\EnumValidator.cs" />
+    <Compile Include="Design\Model\FeatureExtensions.cs" />
+    <Compile Include="Design\Model\ModelEditingScope.cs" />
+    <Compile Include="Design\Model\ModelEvent.cs" />
+    <Compile Include="Design\Model\ModelEventCollection.cs" />
+    <Compile Include="Design\Model\ModelFactory.cs" />
+    <Compile Include="Design\Model\ModelItem.cs" />
+    <Compile Include="Design\Model\ModelItemCollection.cs" />
+    <Compile Include="Design\Model\ModelItemDictionary.cs" />
+    <Compile Include="Design\Model\ModelItemEventArgs.cs" />
+    <Compile Include="Design\Model\ModelMemberCollection`2.cs" />
+    <Compile Include="Design\Model\ModelParent.cs" />
+    <Compile Include="Design\Model\ModelProperty.cs" />
+    <Compile Include="Design\Model\ModelPropertyCollection.cs" />
+    <Compile Include="Design\Model\PropertyIdentifierCollection.cs" />
+    <Compile Include="Design\Model\PropertyInvalidatedEventArgs.cs" />
+    <Compile Include="Design\OrderToken.cs" />
+    <Compile Include="Design\OrderTokenConflictResolution.cs" />
+    <Compile Include="Design\OrderTokenPrecedence.cs" />
+    <Compile Include="Design\Policies\ItemPolicy.cs" />
+    <Compile Include="Design\Policies\PolicyAddedEventArgs.cs" />
+    <Compile Include="Design\Policies\PolicyDrivenFeatureConnector`1.cs" />
+    <Compile Include="Design\Policies\PolicyItemsChangedEventArgs.cs" />
+    <Compile Include="Design\Policies\PrimarySelectionPolicy.cs" />
+    <Compile Include="Design\Policies\SecondarySelectionPolicy.cs" />
+    <Compile Include="Design\Policies\SelectionParentPolicy.cs" />
+    <Compile Include="Design\Policies\SelectionPolicy.cs" />
+    <Compile Include="Design\Policies\UsesItemPolicyAttribute.cs" />
+    <Compile Include="Design\Services\AdapterService.cs" />
+    <Compile Include="Design\Services\BinaryResource.cs" />
+    <Compile Include="Design\Services\ContextMenuService.cs" />
+    <Compile Include="Design\Services\EventBindingService.cs" />
+    <Compile Include="Design\Services\EventHandlerGeneratedEventArgs.cs" />
+    <Compile Include="Design\Services\ExternalMarkupService.cs" />
+    <Compile Include="Design\Services\ExternalResourceService.cs" />
+    <Compile Include="Design\Services\ICodeInjectionService.cs" />
+    <Compile Include="Design\Services\ItemPolicyService.cs" />
+    <Compile Include="Design\Services\ModelChangedEventArgs.cs" />
+    <Compile Include="Design\Services\ModelResource.cs" />
+    <Compile Include="Design\Services\ModelService.cs" />
+    <Compile Include="Design\Services\ValueTranslationService.cs" />
+    <Compile Include="Design\Services\ViewService.cs" />
+    <Compile Include="Design\ThumbnailAttribute.cs" />
+    <Compile Include="Design\ToolboxBrowsableAttribute.cs" />
+    <Compile Include="Design\ToolboxCategoryAttribute.cs" />
+    <Compile Include="Design\ToolboxExampleAttribute.cs" />
+    <Compile Include="Design\ToolboxTabNameAttribute.cs" />
+    <Compile Include="Internal\Performance\CodeMarkerEvent.cs" />
+    <Compile Include="Internal\Performance\CodeMarkers.cs" />
+    <Compile Include="Internal\Performance\CodeMarkerStartEnd.cs" />
+    <Compile Include="MS\Internal\AutomationPeerCache.cs" />
+    <Compile Include="MS\Internal\Automation\AdornerAutomationPeer.cs" />
+    <Compile Include="MS\Internal\Automation\AdornerNodeAutomationPeer.cs" />
+    <Compile Include="MS\Internal\Automation\DesignerItemAutomationPeer.cs" />
+    <Compile Include="MS\Internal\Automation\DesignerViewAutomationPeer.cs" />
+    <Compile Include="MS\Internal\DesignerUtilities.cs" />
+    <Compile Include="MS\Internal\ElementUtilities.cs" />
+    <Compile Include="MS\Internal\EqualityArray.cs" />
+    <Compile Include="MS\Internal\ExtensibleIconLookup.cs" />
+    <Compile Include="MS\Internal\ExternDll.cs" />
+    <Compile Include="MS\Internal\Features\AdapterFeatureConnector.cs" />
+    <Compile Include="MS\Internal\Features\AdornerProviderFeatureConnector.cs" />
+    <Compile Include="MS\Internal\Features\ContextMenuFeatureConnector.cs" />
+    <Compile Include="MS\Internal\Features\DesignModeValueProviderConnector.cs" />
+    <Compile Include="MS\Internal\Features\ItemPolicyConnector.cs" />
+    <Compile Include="MS\Internal\Features\ParentAdapterFeatureConnector.cs" />
+    <Compile Include="MS\Internal\Features\PolicyDrivenToolFeatureConnector`1.cs" />
+    <Compile Include="MS\Internal\Features\TaskProviderFeatureConnector.cs" />
+    <Compile Include="MS\Internal\FloatingPointArithmetic.cs" />
+    <Compile Include="MS\Internal\HitTestHelper.cs" />
+    <Compile Include="MS\Internal\Interaction\AdornerLayer.cs" />
+    <Compile Include="MS\Internal\Interaction\AdornerResourceKey.cs" />
+    <Compile Include="MS\Internal\Interaction\BaseAdornerLayout.cs" />
+    <Compile Include="MS\Internal\Interaction\ContainerHitTestProvider.cs" />
+    <Compile Include="MS\Internal\Interaction\HitTestProvider.cs" />
+    <Compile Include="MS\Internal\Interaction\ModelHitTestHelper.cs" />
+    <Compile Include="MS\Internal\Interaction\PositionRelativeToAdornerHeight.cs" />
+    <Compile Include="MS\Internal\Interaction\PositionRelativeToAdornerWidth.cs" />
+    <Compile Include="MS\Internal\Interaction\PositionRelativeToContentHeight.cs" />
+    <Compile Include="MS\Internal\Interaction\PositionRelativeToContentWidth.cs" />
+    <Compile Include="MS\Internal\Interaction\ScaledSpace.cs" />
+    <Compile Include="MS\Internal\Interaction\SizeRelativeToAdornerDesiredHeight.cs" />
+    <Compile Include="MS\Internal\Interaction\SizeRelativeToAdornerDesiredWidth.cs" />
+    <Compile Include="MS\Internal\Interaction\SizeRelativeToContentHeight.cs" />
+    <Compile Include="MS\Internal\Interaction\SizeRelativeToContentWidth.cs" />
+    <Compile Include="MS\Internal\Interaction\TransformAwareAdornerLayout.cs" />
+    <Compile Include="MS\Internal\Interaction\VisualHitTestArgs.cs" />
+    <Compile Include="MS\Internal\IPerformanceTracker.cs" />
+    <Compile Include="MS\Internal\KeyboardHelper.cs" />
+    <Compile Include="MS\Internal\MathUtilities.cs" />
+    <Compile Include="MS\Internal\MenuUtilities.cs" />
+    <Compile Include="MS\Internal\NativeMethods.cs" />
+    <Compile Include="MS\Internal\ObservableCollectionAggregate`1.cs" />
+    <Compile Include="MS\Internal\Performance.cs" />
+    <Compile Include="MS\Internal\PerformanceMark.cs" />
+    <Compile Include="MS\Internal\PerformanceMarks.cs" />
+    <Compile Include="MS\Internal\PropertyEditing\KeyAttributeMap`1.cs" />
+    <Compile Include="MS\Internal\SafeNativeMethods.cs" />
+    <Compile Include="MS\Internal\SelectionImplementation.cs" />
+    <Compile Include="MS\Internal\SharedUnsafeNativeMethods.cs" />
+    <Compile Include="MS\Internal\Themes\GenericTheme.cs" />
+    <Compile Include="MS\Internal\Transforms\CanonicalDecomposition.cs" />
+    <Compile Include="MS\Internal\Transforms\CanonicalTransform.cs" />
+    <Compile Include="MS\Internal\Transforms\Tolerances.cs" />
+    <Compile Include="MS\Internal\Transforms\TransformUtil.cs" />
+    <Compile Include="MS\Internal\UnsafeNativeMethods.cs" />
+    <Compile Include="MS\Internal\VectorUtilities.cs" />
+    <Compile Include="Properties\Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources.cs" />
+    <Compile Include="Design\PropertyEditing\AlternateContentPropertyAttribute.cs" />
+    <Compile Include="Design\PropertyEditing\CategoryEditor.cs" />
+    <Compile Include="Design\PropertyEditing\CategoryEntry.cs" />
+    <Compile Include="Design\PropertyEditing\DependencyPropertyValueSource.cs" />
+    <Compile Include="Design\PropertyEditing\DialogPropertyValueEditor.cs" />
+    <Compile Include="Design\PropertyEditing\EditModeSwitchButton.cs" />
+    <Compile Include="Design\PropertyEditing\EnumValidator.cs" />
+    <Compile Include="Design\PropertyEditing\ExtendedPropertyValueEditor.cs" />
+    <Compile Include="Design\PropertyEditing\IIndexableAttribute.cs" />
+    <Compile Include="Design\PropertyEditing\IPropertyFilterTarget.cs" />
+    <Compile Include="Design\PropertyEditing\KeyAttributePair`1.cs" />
+    <Compile Include="Design\PropertyEditing\NewItemFactory.cs" />
+    <Compile Include="Design\PropertyEditing\NewItemTypesAttribute.cs" />
+    <Compile Include="Design\PropertyEditing\NumberFormatAttribute.cs" />
+    <Compile Include="Design\PropertyEditing\NumberIncrementsAttribute.cs" />
+    <Compile Include="Design\PropertyEditing\NumberRangesAttribute.cs" />
+    <Compile Include="Design\PropertyEditing\PropertyContainer.cs" />
+    <Compile Include="Design\PropertyEditing\PropertyContainerEditMode.cs" />
+    <Compile Include="Design\PropertyEditing\PropertyEntry.cs" />
+    <Compile Include="Design\PropertyEditing\PropertyEntryCollection.cs" />
+    <Compile Include="Design\PropertyEditing\PropertyFilter.cs" />
+    <Compile Include="Design\PropertyEditing\PropertyFilterAppliedEventArgs.cs" />
+    <Compile Include="Design\PropertyEditing\PropertyFilterPredicate.cs" />
+    <Compile Include="Design\PropertyEditing\PropertyMarker.cs" />
+    <Compile Include="Design\PropertyEditing\PropertyOrder.cs" />
+    <Compile Include="Design\PropertyEditing\PropertyOrderAttribute.cs" />
+    <Compile Include="Design\PropertyEditing\PropertyValue.cs" />
+    <Compile Include="Design\PropertyEditing\PropertyValueCollection.cs" />
+    <Compile Include="Design\PropertyEditing\PropertyValueEditor.cs" />
+    <Compile Include="Design\PropertyEditing\PropertyValueEditorCommands.cs" />
+    <Compile Include="Design\PropertyEditing\PropertyValueExceptionEventArgs.cs" />
+    <Compile Include="Design\PropertyEditing\PropertyValueExceptionSource.cs" />
+    <Compile Include="Design\PropertyEditing\PropertyValueSource.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shopdrawing.Design.Extensibility\Shopdrawing.Design.Extensibility.csproj">
+      <Project>{cab662e1-637c-4f61-8ab3-b16ffa935ff5}</Project>
+      <Name>Shopdrawing.Design.Extensibility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MS\Internal\Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="MS\Internal\Interaction\adornercolorresourcedictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MS\Internal\Interaction\adornerfontresourcedictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

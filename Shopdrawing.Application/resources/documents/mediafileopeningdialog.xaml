@@ -1,0 +1,15 @@
+<Border xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Uid="Border_1" FrameworkElement.Style="{DynamicResource DialogRootContainer}">
+  <Grid x:Uid="Grid_1">
+    <StackPanel x:Uid="StackPanel_1">
+      <TextBlock FrameworkElement.Name="Label" FrameworkElement.Margin="{DynamicResource DefaultMargin}"
+                 x:Uid="Label">
+        A media file is opening.
+      </TextBlock>
+      <Button FrameworkElement.Name="CancelButton" FrameworkElement.Style="{DynamicResource DialogButton}"
+              FrameworkElement.Margin="{DynamicResource ExtraLargeTopMargin}" IsCancel="true"
+              x:Uid="CancelButton">Cancel</Button>
+    </StackPanel>
+  </Grid>
+</Border>

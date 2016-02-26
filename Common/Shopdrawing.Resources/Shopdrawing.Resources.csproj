@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9DFF9A1D-52FB-4956-AF25-5D2A18DCB466}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shopdrawing.Resources</RootNamespace>
+    <AssemblyName>Shopdrawing.Resources</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Languages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Languages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Shopdrawing.cs" />
+    <EmbeddedResource Include="Languages.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Languages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\Shopdrawing.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Icons\Icons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Icons\ProjectIcons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Icons\ToolbarButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cursors\cursor_addarrow.cur" />
+    <Resource Include="cursors\cursor_centerpoint.cur" />
+    <Resource Include="cursors\cursor_convert.cur" />
+    <Resource Include="cursors\cursor_convertpoint.cur" />
+    <Resource Include="cursors\cursor_convertsegment.cur" />
+    <Resource Include="cursors\cursor_converttangent.cur" />
+    <Resource Include="cursors\cursor_crosshair.cur" />
+    <Resource Include="cursors\cursor_databinding_detail.cur" />
+    <Resource Include="cursors\cursor_databinding_detail_add.cur" />
+    <Resource Include="cursors\cursor_databinding_master.cur" />
+    <Resource Include="cursors\cursor_databinding_master_add.cur" />
+    <Resource Include="cursors\cursor_designtimeresize1.cur" />
+    <Resource Include="cursors\cursor_designtimeresize2.cur" />
+    <Resource Include="cursors\cursor_designtimeresize3.cur" />
+    <Resource Include="cursors\cursor_dupwedge.cur" />
+    <Resource Include="cursors\cursor_eyedropper.cur" />
+    <Resource Include="cursors\cursor_gradientredefine.cur" />
+    <Resource Include="cursors\cursor_gridrowselect.cur" />
+    <Resource Include="cursors\cursor_marqueeselect.cur" />
+    <Resource Include="cursors\cursor_minusarrow.cur" />
+    <Resource Include="cursors\cursor_nodrop.cur" />
+    <Resource Include="cursors\cursor_numericadjust2.cur" />
+    <Resource Include="cursors\cursor_numericaladjust.cur" />
+    <Resource Include="cursors\cursor_orbit.cur" />
+    <Resource Include="cursors\cursor_paintbucket.cur" />
+    <Resource Include="cursors\cursor_pan.cur" />
+    <Resource Include="cursors\cursor_pen.cur" />
+    <Resource Include="cursors\cursor_penadjust.cur" />
+    <Resource Include="cursors\cursor_pencil.cur" />
+    <Resource Include="cursors\cursor_penclose.cur" />
+    <Resource Include="cursors\cursor_pendelete.cur" />
+    <Resource Include="cursors\cursor_penextent.cur" />
+    <Resource Include="cursors\cursor_peninsert.cur" />
+    <Resource Include="cursors\cursor_penjoin.cur" />
+    <Resource Include="cursors\cursor_penstart.cur" />
+    <Resource Include="cursors\cursor_pentangent.cur" />
+    <Resource Include="cursors\cursor_propertypicker.cur" />
+    <Resource Include="cursors\cursor_relocate.cur" />
+    <Resource Include="cursors\cursor_resize1.cur" />
+    <Resource Include="cursors\cursor_resize2.cur" />
+    <Resource Include="cursors\cursor_resize3.cur" />
+    <Resource Include="cursors\cursor_resize4.cur" />
+    <Resource Include="cursors\cursor_rotate1.cur" />
+    <Resource Include="cursors\cursor_rotate10.cur" />
+    <Resource Include="cursors\cursor_rotate11.cur" />
+    <Resource Include="cursors\cursor_rotate12.cur" />
+    <Resource Include="cursors\cursor_rotate13.cur" />
+    <Resource Include="cursors\cursor_rotate14.cur" />
+    <Resource Include="cursors\cursor_rotate15.cur" />
+    <Resource Include="cursors\cursor_rotate16.cur" />
+    <Resource Include="cursors\cursor_rotate2.cur" />
+    <Resource Include="cursors\cursor_rotate3.cur" />
+    <Resource Include="cursors\cursor_rotate4.cur" />
+    <Resource Include="cursors\cursor_rotate5.cur" />
+    <Resource Include="cursors\cursor_rotate6.cur" />
+    <Resource Include="cursors\cursor_rotate7.cur" />
+    <Resource Include="cursors\cursor_rotate8.cur" />
+    <Resource Include="cursors\cursor_rotate9.cur" />
+    <Resource Include="cursors\cursor_roundedrect.cur" />
+    <Resource Include="cursors\cursor_selectelement.cur" />
+    <Resource Include="cursors\cursor_selection.cur" />
+    <Resource Include="cursors\cursor_skew1.cur" />
+    <Resource Include="cursors\cursor_skew2.cur" />
+    <Resource Include="cursors\cursor_skew3.cur" />
+    <Resource Include="cursors\cursor_skew4.cur" />
+    <Resource Include="cursors\cursor_skew5.cur" />
+    <Resource Include="cursors\cursor_skew6.cur" />
+    <Resource Include="cursors\cursor_skew7.cur" />
+    <Resource Include="cursors\cursor_skew8.cur" />
+    <Resource Include="cursors\cursor_subselectbezier.cur" />
+    <Resource Include="cursors\cursor_subselectelement.cur" />
+    <Resource Include="cursors\cursor_subselection.cur" />
+    <Resource Include="cursors\cursor_subselectmove.cur" />
+    <Resource Include="cursors\cursor_subselectpoint.cur" />
+    <Resource Include="cursors\cursor_subselectsegment.cur" />
+    <Resource Include="cursors\cursor_xrotate.cur" />
+    <Resource Include="cursors\cursor_xtranslate.cur" />
+    <Resource Include="cursors\cursor_yrotate.cur" />
+    <Resource Include="cursors\cursor_ytranslate.cur" />
+    <Resource Include="cursors\cursor_zoomin.cur" />
+    <Resource Include="cursors\cursor_zoomout.cur" />
+    <Resource Include="cursors\cursor_zrotate.cur" />
+    <Resource Include="cursors\cursor_ztranslate.cur" />
+    <Resource Include="cursors\pickwhip_cursor.cur" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
